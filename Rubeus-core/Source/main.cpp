@@ -7,7 +7,7 @@
 int main()
 {
 	std::cout << "Hello world"<< std::endl;
-	system("PAUSE");
+	system("PAUSE"); // Windows only
 	glewInit();
 
 	return 0;
