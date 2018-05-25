@@ -1,7 +1,7 @@
 /**
  * @file	Source\c_Logger\logger.h.
  *
- * @brief	Declares the logger class
+ * @brief	Declares the logger macro
  */
 
 #pragma once
