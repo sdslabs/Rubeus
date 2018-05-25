@@ -1,14 +1,18 @@
-/*
-	This is the entry point for Rubeus-core
-*/
+/**
+ * @file	Source\main.cpp.
+ *
+ * @brief	Implements the main class
+ */
+
+#pragma once
+
 #include <iostream>
-#include <GL/glew.h>
+#include "c_Logger\logger.h"
+#include "c_Window\window.h"
 
 int main()
 {
-	std::cout << "Hello world"<< std::endl;
-	system("PAUSE"); // Windows only
-	glewInit();
+	RWindowComponent GameWindow;
 
 	return 0;
 }
