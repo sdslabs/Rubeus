@@ -1,7 +1,7 @@
 /**
  * @file	Source\c_Window\window.cpp.
  *
- * @brief	Implements the window class
+ * @brief	Implements the R  WindowComponent class
  */
 
 #pragma once
@@ -36,6 +36,37 @@ RWindowComponent::RWindowComponent(const char *title, int width, int height)
 bool RWindowComponent::closed()
 {
 	return glfwWindowShouldClose(m_Window);
+}
+
+void RWindowComponent::setWindowTitle(RWindowComponent GameWindow, const char * title)
+{
+	glfwSetWindowTitle(GameWindow.m_Window, title);
+}
+
+/**
+ * @fn	void RWindowComponent::setWindowIcon(RWindowComponent GameWindow, std::string names[])
+ *
+ * @brief	Sets the window icon
+ *
+ * @author	Twarit
+ * @date	26-05-2018
+ *
+ * @param	GameWindow	The game window.
+ * @param	names	  	The array consisting fullnames of all icons.
+ */
+void RWindowComponent::setWindowIcon(RWindowComponent GameWindow, std::string names[])
+{
+	//GLFWimage * images = new GLFWimage[names->length];
+
+	//for(int i = 0; i < names->length; i++)
+	//{
+	//	images[i] = LoaderComponent::LoadImageWindows(names[i]);
+	//}
+
+	// TODO: Remove this when LoaderComponent::LoadImageWindows() is completed
+	LOGEXTENDED("ABORT! Incomplete code used");
+
+	//delete[] images;
 }
 
 RWindowComponent::~RWindowComponent()

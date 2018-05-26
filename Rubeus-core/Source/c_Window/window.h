@@ -10,6 +10,8 @@
 #include <GLFW/glfw3.h>
 
 #include "../c_logger/logger.h"
+#include "../u_FileIO/loader.h"
+#include "../c_Master_Component/master.h"
 
 void getGLFWErrorLog(int error, const char *description);
 
@@ -21,7 +23,7 @@ void getGLFWErrorLog(int error, const char *description);
  * @author	Twarit
  * @date	26-05-2018
  */
-class RWindowComponent
+class RWindowComponent : public MasterComponent
 {
 private:
 	/** @brief	GLFW Window object */
@@ -99,6 +101,24 @@ public:
 	 * @return	m_Closed.
 	 */
 	bool closed();
+
+	/**
+	 * @fn	void RWindowComponent::setWindowTitle(GLFWwindow * window, std::string title);
+	 *
+	 * @brief	Sets window title
+	 *
+	 * @author	Twarit
+	 * @date	26-05-2018
+	 *
+	 * @param [in,out]	window	Pointer to GLFWwindow being altered.
+	 * @param 		  	title 	The title.
+	 */
+	void setWindowTitle(RWindowComponent GameWindow, const char * title);
+
+	void setWindowIcon(RWindowComponent GameWindow, std::string names[]);
+
+	void setWindowIconToDefault();
+
 
 	/**
 	 * @fn	virtual friend static void RWindowComponent::windowCloseCallback(GLFWwindow * window);
