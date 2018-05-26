@@ -91,6 +91,19 @@ public:
 	void clearWindow();
 
 	/**
+	 * @fn	void RWindowComponent::update();
+	 *
+	 * @brief	Updates the window
+	 * 			Polls GLFW for any changes
+	 * 			Then swaps the buffers
+	 *
+	 * @author	Twarit
+	 * @date	26-05-2018
+	 */
+
+	void update();
+
+	/**
 	 * @fn	bool RWindowComponent::closed();
 	 *
 	 * @brief	Queries if the window is closed

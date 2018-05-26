@@ -1,7 +1,7 @@
 /**
  * @file	Source\c_Window\window.cpp.
  *
- * @brief	Implements the R  WindowComponent class
+ * @brief	Implements the RWindowComponent class
  */
 
 #pragma once
@@ -77,6 +77,12 @@ RWindowComponent::~RWindowComponent()
 void RWindowComponent::clearWindow()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+}
+
+void RWindowComponent::update()
+{
+	glfwPollEvents();
+	glfwSwapBuffers(m_Window);
 }
 
 bool RWindowComponent::initWindow(const char * title, int width, int height)

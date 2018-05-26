@@ -16,7 +16,7 @@ int main()
 
 	while(!GameWindow.closed())
 	{
-		
+		GameWindow.update();
 	}
 
 	return 0;
