@@ -6,8 +6,6 @@
 
 #pragma once
 
-#include <string.h>
-
 #include "window.h"
 
 void getGLFWErrorLog(int error, const char * description)
@@ -113,7 +111,7 @@ bool RWindowComponent::initWindow(const char * title, int width, int height)
 	
 	if(glewInit() != GLEW_OK)
 	{
-		LOGEXTENDED("Glew initialisation failed");
+		LOGEXTENDED("GLEW initialisation failed");
 
 		return false;
 	}

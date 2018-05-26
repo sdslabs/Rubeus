@@ -8,20 +8,20 @@
 
 #include "master.h"
 
-unsigned int MasterComponent::componentsInitialised = 0;
+unsigned int RMasterComponent::componentsInitialised = 0;
 
-MasterComponent::MasterComponent()
+RMasterComponent::RMasterComponent()
 {
 	componentsInitialised++;
 
 	const int m_ComponentID = componentsInitialised;
 }
 
-MasterComponent::~MasterComponent()
+RMasterComponent::~RMasterComponent()
 {
 }
 
-unsigned int MasterComponent::getComponentID()
+unsigned int RMasterComponent::getComponentID() const
 {
 	return m_ComponentID;
 }

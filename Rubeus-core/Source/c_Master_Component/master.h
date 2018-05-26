@@ -17,12 +17,12 @@
  * @author	Twarit
  * @date	26-05-2018
  */
-class MasterComponent
+class RMasterComponent
 {
 private:
-	/** @brief	The components initialised */
+	/** @brief	The number of components initialised */
 	static unsigned int componentsInitialised;
-	/** @brief	Identifier for the component */
+	/** @brief	Identifier for this component */
 	unsigned int m_ComponentID;
 
 public:
@@ -35,7 +35,7 @@ public:
 	 * @author	Twarit
 	 * @date	26-05-2018
 	 */
-	MasterComponent();
+	RMasterComponent();
 
 	/**
 	 * @fn	virtual MasterComponent::~MasterComponent();
@@ -45,7 +45,7 @@ public:
 	 * @author	Twarit
 	 * @date	26-05-2018
 	 */
-	virtual ~MasterComponent();
+	virtual ~RMasterComponent();
 
 	/**
 	 * @fn	unsigned int MasterComponent::getComponentID();
@@ -57,7 +57,7 @@ public:
 	 *
 	 * @return	The component identifier.
 	 */
-	unsigned int getComponentID();
+	unsigned int getComponentID() const;
 
 protected:
 };

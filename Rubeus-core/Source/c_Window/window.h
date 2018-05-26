@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <string.h>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
@@ -23,7 +24,7 @@ void getGLFWErrorLog(int error, const char *description);
  * @author	Twarit
  * @date	26-05-2018
  */
-class RWindowComponent : public MasterComponent
+class RWindowComponent : public RMasterComponent
 {
 private:
 	/** @brief	GLFW Window object */
@@ -100,7 +101,6 @@ public:
 	 * @author	Twarit
 	 * @date	26-05-2018
 	 */
-
 	void update();
 
 	/**
@@ -132,17 +132,16 @@ public:
 
 	void setWindowIconToDefault();
 
-
 	/**
-	 * @fn	virtual friend static void RWindowComponent::windowCloseCallback(GLFWwindow * window);
+	 * @fn	friend void RWindowComponent::windowCloseCallback(GLFWwindow * window);
 	 *
-	 * @brief	User definable callback, called when the game window closes. Create a
-	 * 			class deriving from RWindowComponent that overrides this function
+	 * @brief	Callback function, called when the game window closes. Create a class deriving from
+	 * 			RWindowComponent that overrides this function
 	 *
 	 * @author	Twarit
 	 * @date	26-05-2018
 	 *
-	 * @param [in]	window	The pointer to the window that just got closed.
+	 * @param	window	The pointer to the window that just got closed.
 	 */
 	friend void windowCloseCallback(GLFWwindow * window);
 

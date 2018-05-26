@@ -19,7 +19,7 @@
  * @author	Twarit
  * @date	26-05-2018
  */
-class LoaderComponent : MasterComponent
+class RLoaderComponent : RMasterComponent
 {
 private:
 public:
@@ -36,7 +36,6 @@ public:
 	 *
 	 * @return	The image file.
 	 */
-
 	static auto LoadImageWindows(std::string path);
 protected:
 };
