@@ -12,7 +12,12 @@
 
 int main()
 {
-	RWindowComponent GameWindow;
+	RWindowComponent GameWindow("My game", 1280, 720);
+
+	while(!GameWindow.closed())
+	{
+		
+	}
 
 	return 0;
 }
