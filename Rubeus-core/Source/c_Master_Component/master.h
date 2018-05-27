@@ -24,6 +24,7 @@ namespace Rubeus
 	private:
 		/** @brief	The number of components initialised */
 		static unsigned int componentsInitialised;
+
 		/** @brief	Identifier for this component */
 		unsigned int m_ComponentID;
 

@@ -128,6 +128,8 @@
   <ItemGroup>
     <ClCompile Include="Source\c_Master_Component\master.cpp" />
     <ClCompile Include="Source\c_Window\window.cpp" />
+    <ClCompile Include="Source\lib_Math\vector2d.cpp" />
+    <ClCompile Include="Source\lib_Math\vector3d.cpp" />
     <ClCompile Include="Source\main.cpp" />
     <ClCompile Include="Source\u_FileIO\loader.cpp" />
   </ItemGroup>
@@ -135,6 +137,8 @@
     <ClInclude Include="Source\c_Logger\logger.h" />
     <ClInclude Include="Source\c_Master_Component\master.h" />
     <ClInclude Include="Source\c_Window\window.h" />
+    <ClInclude Include="Source\lib_Math\vector2d.h" />
+    <ClInclude Include="Source\lib_Math\vector3d.h" />
     <ClInclude Include="Source\u_fileIO\loader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
