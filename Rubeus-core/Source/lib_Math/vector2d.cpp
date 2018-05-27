@@ -5,6 +5,7 @@
  */
 
 #pragma once
+
 #include "vector2d.h"
 
 namespace Rubeus
@@ -21,6 +22,11 @@ namespace Rubeus
 		{
 			this->x = x;
 			this->y = y;
+		}
+
+		float Vector2D::getLength(Vector2D & vector) const
+		{
+			return sqrt((vector.x * vector.x) + (vector.y * vector.y));
 		}
 
 		Vector2D & Vector2D::add(const Vector2D & other)

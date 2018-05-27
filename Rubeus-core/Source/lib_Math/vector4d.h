@@ -60,6 +60,20 @@ namespace Rubeus
 			Vector4D(const float &x, const float &y, const float &z, const float &w);
 
 			/**
+			 * @fn	float getLength(Vector4D& vector) const;
+			 *
+			 * @brief	Gets length of vector
+			 *
+			 * @author	Twarit
+			 * @date	27-05-2018
+			 *
+			 * @param [in,out]	vector	The vector.
+			 *
+			 * @return	The length.
+			 */
+			float getLength(Vector4D& vector) const;
+
+			/**
 			 * @fn	Vector4D& add(const Vector4D &other);
 			 *
 			 * @brief	Adds other

@@ -26,6 +26,11 @@ namespace Rubeus
 			this->z = z;
 		}
 
+		float Vector3D::getLength(Vector3D & vector) const
+		{
+			return sqrt((vector.x * vector.x) + (vector.y * vector.y) + (vector.z * vector.z));
+		}
+
 		Vector3D & Vector3D::add(const Vector3D & other)
 		{
 			x += other.x;

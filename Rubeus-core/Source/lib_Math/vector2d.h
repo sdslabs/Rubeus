@@ -53,6 +53,20 @@ namespace Rubeus
 			Vector2D(const float &x, const float &y);
 
 			/**
+			 * @fn	float getLength(Vector2D& vector) const;
+			 *
+			 * @brief	Gets length of vector
+			 *
+			 * @author	Twarit
+			 * @date	27-05-2018
+			 *
+			 * @param [in,out]	vector	The vector.
+			 *
+			 * @return	The length.
+			 */
+			float getLength(Vector2D& vector) const;
+
+			/**
 			 * @fn	Vector2D& add(const Vector2D &other);
 			 *
 			 * @brief	Adds other

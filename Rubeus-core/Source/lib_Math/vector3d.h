@@ -48,6 +48,20 @@ namespace Rubeus
 			Vector3D(const float &x, const float &y, const float &z);
 
 			/**
+			 * @fn	float getLength(Vector3D& vector) const;
+			 *
+			 * @brief	Gets length of vector
+			 *
+			 * @author	Twarit
+			 * @date	27-05-2018
+			 *
+			 * @param [in,out]	vector	The vector.
+			 *
+			 * @return	The length.
+			 */
+			float getLength(Vector3D& vector) const;
+
+			/**
 			 * @fn	Vector3D& add(const Vector3D &other);
 			 *
 			 * @brief	Adds other

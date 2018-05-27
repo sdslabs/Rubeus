@@ -20,6 +20,11 @@ namespace Rubeus
 			this->w = w;
 		}
 
+		float Vector4D::getLength(Vector4D & vector) const
+		{
+			return sqrt((vector.x * vector.x) + (vector.y * vector.y) + (vector.z * vector.z) + (vector.w * vector.w));
+		}
+
 		Vector4D & Vector4D::add(const Vector4D & other)
 		{
 			x += other.x;
