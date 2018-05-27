@@ -17,6 +17,7 @@ int main()
 	Rubeus::GraphicComponents::RWindowComponent GameWindow("My game", 1280, 720);
 	glClearColor(0.5f, 0.2f, 0.1f, 1.0f);
 
+	// Creates a rectangle, just as a test
 	while(!GameWindow.closed())
 	{
 		GameWindow.clearWindow();
