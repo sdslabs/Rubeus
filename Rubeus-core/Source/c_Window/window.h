@@ -18,6 +18,17 @@ namespace Rubeus
 {
 	namespace GraphicComponents
 	{
+		/**
+		 * @fn	void getGLFWErrorLog(int error, const char *description);
+		 *
+		 * @brief	Gets GLFW error logs
+		 *
+		 * @author	Twarit
+		 * @date	27-05-2018
+		 *
+		 * @param	error	   	The error.
+		 * @param	description	The description.
+		 */
 		void getGLFWErrorLog(int error, const char *description);
 
 		/**
@@ -137,17 +148,30 @@ namespace Rubeus
 			void setWindowIconToDefault();
 
 			/**
-			* @fn	friend void RWindowComponent::windowCloseCallback(GLFWwindow * window);
-			*
-			* @brief	Callback function, called when the game window closes. Create a class deriving from
-			* 			RWindowComponent that overrides this function
-			*
-			* @author	Twarit
-			* @date	26-05-2018
-			*
-			* @param	window	The pointer to the window that just got closed.
-			*/
+			 * @fn	friend void RWindowComponent::windowCloseCallback(GLFWwindow * window);
+			 *
+			 * @brief	Callback, called when the window closes
+			 *
+			 * @author	Twarit
+			 * @date	27-05-2018
+			 *
+			 * @param [in,out]	window	Pointer to GLFWwindow object being closed.
+			 */
 			friend void windowCloseCallback(GLFWwindow * window);
+
+			/**
+			 * @fn	friend void RWindowComponent::windowResizeCallback(GLFWwindow * window, int width, int height);
+			 *
+			 * @brief	Callback, called when the window resize
+			 *
+			 * @author	Twarit
+			 * @date	27-05-2018
+			 *
+			 * @param [in,out]	window	Pointer to GLFWwindow object being resized.
+			 * @param 		  	width 	The width of the resized window.
+			 * @param 		  	height	The height of the resized window.
+			 */
+			friend void windowResizeCallback(GLFWwindow * window, int width, int height);
 
 		protected:
 		};

@@ -12,6 +12,7 @@ namespace Rubeus
 {
 	namespace GraphicComponents
 	{
+
 		void getGLFWErrorLog(int error, const char * description)
 		{
 			LOG(description);
@@ -20,6 +21,12 @@ namespace Rubeus
 		void windowCloseCallback(GLFWwindow * window)
 		{
 			LOG("Window close callback was evoked");
+		}
+
+		void windowResizeCallback(GLFWwindow * window, int width, int height)
+		{
+			LOG("Window resize callback was evoked");
+			glViewport(0, 0, width, height);
 		}
 
 		RWindowComponent::RWindowComponent(const char *title, int width, int height)
@@ -45,17 +52,6 @@ namespace Rubeus
 			glfwSetWindowTitle(GameWindow.m_Window, title);
 		}
 
-		/**
-		* @fn	void RWindowComponent::setWindowIcon(RWindowComponent GameWindow, std::string names[])
-		*
-		* @brief	Sets the window icon
-		*
-		* @author	Twarit
-		* @date	26-05-2018
-		*
-		* @param	GameWindow	The game window.
-		* @param	names	  	The array consisting fullnames of all icons.
-		*/
 		void RWindowComponent::setWindowIcon(RWindowComponent GameWindow, std::string names[])
 		{
 			//GLFWimage * images = new GLFWimage[names->length];
@@ -112,6 +108,7 @@ namespace Rubeus
 
 			glfwSetErrorCallback(getGLFWErrorLog);
 			glfwSetWindowCloseCallback(m_Window, windowCloseCallback);
+			glfwSetFramebufferSizeCallback(m_Window, windowResizeCallback);
 
 			if(glewInit() != GLEW_OK)
 			{
