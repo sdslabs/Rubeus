@@ -1,6 +1,12 @@
 #include "loader.h"
 
-auto RLoaderComponent::LoadImageWindows(std::string path)
+namespace Rubeus
 {
-	// TODO: Write Windows specific image loader
+	namespace UtilityComponents
+	{
+		auto RLoaderComponent::LoadImageWindows(std::string path)
+		{
+			// TODO: Write Windows specific image loader
+		}
+	}
 }

@@ -8,20 +8,23 @@
 
 #include "master.h"
 
-unsigned int RMasterComponent::componentsInitialised = 0;
-
-RMasterComponent::RMasterComponent()
+namespace Rubeus
 {
-	componentsInitialised++;
+		unsigned int RMasterComponent::componentsInitialised = 0;
 
-	const int m_ComponentID = componentsInitialised;
-}
+		RMasterComponent::RMasterComponent()
+		{
+			componentsInitialised++;
 
-RMasterComponent::~RMasterComponent()
-{
-}
+			const int m_ComponentID = componentsInitialised;
+		}
 
-unsigned int RMasterComponent::getComponentID() const
-{
-	return m_ComponentID;
+		RMasterComponent::~RMasterComponent()
+		{
+		}
+
+		unsigned int RMasterComponent::getComponentID() const
+		{
+			return m_ComponentID;
+		}
 }
