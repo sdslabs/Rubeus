@@ -83,6 +83,21 @@ namespace Rubeus
 			Matrix4& multiply(const Matrix4& other);
 
 			/**
+			 * @fn	std::ostream& operator<<(std::ostream& stream, const Matrix4& matrix)
+			 *
+			 * @brief	Put to operator
+			 *
+			 * @author	Twarit
+			 * @date	27-05-2018
+			 *
+			 * @param	stream	The output stream.
+			 * @param	matrix	The matrix to be put to stream.
+			 *
+			 * @return	The result of the operation.
+			 */
+			friend std::ostream& operator<<(std::ostream& stream, const Matrix4& matrix);
+
+			/**
 			 * @fn	friend Matrix4 operator+(Matrix4 left, const Matrix4& right);
 			 *
 			 * @brief	Addition operator

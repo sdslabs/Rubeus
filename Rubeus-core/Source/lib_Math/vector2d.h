@@ -130,7 +130,7 @@ namespace Rubeus
 			 * @author	Twarit
 			 * @date	27-05-2018
 			 *
-			 * @param	ostream	The output stream.
+			 * @param	stream	The output stream.
 			 * @param	vector	The vector to be put to stream.
 			 *
 			 * @return	The result of the operation.

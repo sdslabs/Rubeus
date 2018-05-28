@@ -61,6 +61,16 @@ namespace Rubeus
 			return multiply(other);
 		}
 		
+		std::ostream& operator<<(std::ostream & stream, const Matrix4 & matrix)
+		{
+			stream << "C3: " << matrix.columns[3] << std::endl;
+			stream << "C2: " << matrix.columns[2] << std::endl;
+			stream << "C1: " << matrix.columns[1] << std::endl;
+			stream << "C0: " << matrix.columns[0] << std::endl;
+
+			return stream;
+		}
+
 		Matrix4 operator+(Matrix4 left, const Matrix4 & right)
 		{
 			return left.multiply(right);
