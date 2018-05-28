@@ -8,7 +8,6 @@
 
 #include <GL/glew.h>
 #include <iostream>
-#include <iostream>
 #include "c_Logger\logger.h"
 #include "c_Window\window.h"
 #include "lib_Math\maths.h"
