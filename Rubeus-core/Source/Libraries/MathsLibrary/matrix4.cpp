@@ -21,13 +21,14 @@ namespace Rubeus
 		{
 			for(int i = 0; i < 16; i++)
 			{
+				if((i % 5) == 0)
+				{
+					elements[i] = diagonal;
+					continue;
+				}
+
 				elements[i] = 0.0f;
 			}
-
-			elements[0 + 0 * 4] = diagonal;
-			elements[1 + 1 * 4] = diagonal;
-			elements[2 + 2 * 4] = diagonal;
-			elements[3 + 3 * 4] = diagonal;
 		}
 
 		Matrix4 Matrix4::identity()
