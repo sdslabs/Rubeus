@@ -118,7 +118,8 @@ namespace Rubeus
 			/**
 			 * @fn	Vector4D& divide(const Vector4D &other);
 			 *
-			 * @brief	Divides the given other
+			 * @brief	Divides the given other.
+			 * 			Returns [a/x , b/y , c/z , d/w] if [a , b , c , d] is divided by [x , y , z , w]
 			 *
 			 * @author	Twarit
 			 * @date	27-05-2018

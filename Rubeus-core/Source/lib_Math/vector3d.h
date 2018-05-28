@@ -106,7 +106,8 @@ namespace Rubeus
 			/**
 			 * @fn	Vector3D& divide(const Vector3D &other);
 			 *
-			 * @brief	Divides the given other
+			 * @brief	Divides the given other.
+			 * 			Returns [a/x , b/y , c/z] if [a , b , c] is divided by [x , y , z]
 			 *
 			 * @author	Twarit
 			 * @date	27-05-2018

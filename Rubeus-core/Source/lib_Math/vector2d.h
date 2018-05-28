@@ -111,7 +111,9 @@ namespace Rubeus
 			/**
 			 * @fn	Vector2D& divide(const Vector2D &other);
 			 *
-			 * @brief	Divides the given other
+			 * @brief	Divides each element of this vector one by one by the corresponding vector of the
+			 * 			other vector.
+			 * 			Returns [a/x , b/y] if [a , b] is divided by [x , y]
 			 *
 			 * @author	Twarit
 			 * @date	27-05-2018
@@ -120,6 +122,7 @@ namespace Rubeus
 			 *
 			 * @return	A reference to a Vector2D.
 			 */
+
 			Vector2D& divide(const Vector2D &other);
 
 			/**
