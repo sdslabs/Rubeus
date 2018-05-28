@@ -28,6 +28,9 @@
     <ClCompile Include="Source\lib_Math\vector4d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\lib_Math\matrix4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\c_Window\window.h" />
@@ -38,5 +41,7 @@
     <ClInclude Include="Source\lib_Math\vector3d.h" />
     <ClInclude Include="Source\lib_Math\vector4d.h" />
     <ClInclude Include="Source\lib_Math\maths.h" />
+    <ClInclude Include="Source\lib_Math\matrix4.h" />
+    <ClInclude Include="Source\lib_Math\functions.h" />
   </ItemGroup>
 </Project>
