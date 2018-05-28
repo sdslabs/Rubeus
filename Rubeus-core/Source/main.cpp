@@ -8,9 +8,9 @@
 
 #include <GL/glew.h>
 #include <iostream>
-#include "c_Logger\logger.h"
-#include "c_Window\window.h"
-#include "lib_Math\maths.h"
+#include "logger_component.h"
+#include "GraphicComponents\window.h"
+#include "Libraries\MathsLibrary\maths.h"
 
 int main()
 {
