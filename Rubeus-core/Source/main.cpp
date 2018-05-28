@@ -11,6 +11,7 @@
 #include <iostream>
 #include "c_Logger\logger.h"
 #include "c_Window\window.h"
+#include "lib_Math\vector2d.h"
 
 int main()
 {

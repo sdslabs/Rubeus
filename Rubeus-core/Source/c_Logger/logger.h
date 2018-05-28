@@ -10,9 +10,8 @@
 #include <string.h>
 
 // TODO: Remove logger before shipping
-#define DEBUGBUILD 1
 
-#if DEBUGBUILD
+#ifdef _DEBUG
 
 	// Prints to the console anything that is passed in
 	#define LOG(x) std::cout << x << std::endl
