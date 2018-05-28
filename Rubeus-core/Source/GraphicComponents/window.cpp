@@ -90,6 +90,9 @@ namespace Rubeus
 				LOGEXTENDED("Error: GLFW Initialisation failed");
 			}
 
+			// Set window hints
+			glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+			glfwWindowHint(GLFW_FOCUSED, GLFW_TRUE);
 
 			// Create a window of specified title, width and height
 			m_Window = glfwCreateWindow(width, height, title, NULL, NULL);
@@ -105,6 +108,7 @@ namespace Rubeus
 			// Set the new window as the current context
 			glfwMakeContextCurrent(m_Window);
 			glfwSetWindowUserPointer(m_Window, this);
+
 
 			glfwSetErrorCallback(getGLFWErrorLog);
 			glfwSetWindowCloseCallback(m_Window, windowCloseCallback);
