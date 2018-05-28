@@ -10,20 +10,41 @@
     <ClCompile Include="Source\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\c_Window\window.cpp">
+    <ClCompile Include="Source\master_component.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\c_Master_Component\master.cpp">
+    <ClCompile Include="Source\GraphicComponents\window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\u_FileIO\loader.cpp">
+    <ClCompile Include="Source\Libraries\MathsLibrary\matrix4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Libraries\MathsLibrary\vector2d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Libraries\MathsLibrary\vector3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Libraries\MathsLibrary\vector4d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\UtilityComponents\loader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\c_Window\window.h" />
-    <ClInclude Include="Source\c_Logger\logger.h" />
-    <ClInclude Include="Source\u_fileIO\loader.h" />
-    <ClInclude Include="Source\c_Master_Component\master.h" />
+    <ClInclude Include="Source\master_component.h" />
+    <ClInclude Include="Source\GraphicComponents\window.h" />
+    <ClInclude Include="Source\Libraries\MathsLibrary\functions.h" />
+    <ClInclude Include="Source\Libraries\MathsLibrary\maths.h" />
+    <ClInclude Include="Source\Libraries\MathsLibrary\matrix4.h" />
+    <ClInclude Include="Source\Libraries\MathsLibrary\vector2d.h" />
+    <ClInclude Include="Source\Libraries\MathsLibrary\vector3d.h" />
+    <ClInclude Include="Source\Libraries\MathsLibrary\vector4d.h" />
+    <ClInclude Include="Source\logger_component.h" />
+    <ClInclude Include="Source\UtilityComponents\loader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
   </ItemGroup>
 </Project>

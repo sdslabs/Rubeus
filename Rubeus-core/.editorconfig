@@ -1,0 +1,23 @@
+root = true
+
+# Unix-style newlines with a newline ending every file
+end_of_file = crlf
+
+# Character encoding
+[*.{cpp,h}]
+charset = utf-8
+
+# Denotes whether whitespace is allowed at the end of lines
+trim_trailing_whitespace = true
+
+# Denotes whether file should end with a newline
+insert_final_newline = true
+
+# Denotes whether the left part of the curly bracket should be on the next line or not
+curly_bracket_next_line = true
+
+# Indentation Size
+indent_size = tab
+
+# No. of spaces that are equivalent to a tab shift
+tab_width = 4

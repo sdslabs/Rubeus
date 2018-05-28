@@ -6,9 +6,7 @@
 
 #pragma once
 
-#include <Windows.h>
-
-#include "../c_Master_Component/master.h"
+#include "../master_component.h"
 
 namespace Rubeus
 {

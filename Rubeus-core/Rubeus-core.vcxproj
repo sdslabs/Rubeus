@@ -126,16 +126,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Source\c_Master_Component\master.cpp" />
-    <ClCompile Include="Source\c_Window\window.cpp" />
+    <ClCompile Include="Source\GraphicComponents\window.cpp" />
+    <ClCompile Include="Source\Libraries\MathsLibrary\matrix4.cpp" />
+    <ClCompile Include="Source\Libraries\MathsLibrary\vector2d.cpp" />
+    <ClCompile Include="Source\Libraries\MathsLibrary\vector3d.cpp" />
+    <ClCompile Include="Source\Libraries\MathsLibrary\vector4d.cpp" />
     <ClCompile Include="Source\main.cpp" />
-    <ClCompile Include="Source\u_FileIO\loader.cpp" />
+    <ClCompile Include="Source\master_component.cpp" />
+    <ClCompile Include="Source\UtilityComponents\loader.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\c_Logger\logger.h" />
-    <ClInclude Include="Source\c_Master_Component\master.h" />
-    <ClInclude Include="Source\c_Window\window.h" />
-    <ClInclude Include="Source\u_fileIO\loader.h" />
+    <ClInclude Include="Source\GraphicComponents\window.h" />
+    <ClInclude Include="Source\Libraries\MathsLibrary\functions.h" />
+    <ClInclude Include="Source\Libraries\MathsLibrary\maths.h" />
+    <ClInclude Include="Source\Libraries\MathsLibrary\matrix4.h" />
+    <ClInclude Include="Source\Libraries\MathsLibrary\vector2d.h" />
+    <ClInclude Include="Source\Libraries\MathsLibrary\vector3d.h" />
+    <ClInclude Include="Source\Libraries\MathsLibrary\vector4d.h" />
+    <ClInclude Include="Source\logger_component.h" />
+    <ClInclude Include="Source\master_component.h" />
+    <ClInclude Include="Source\UtilityComponents\loader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
