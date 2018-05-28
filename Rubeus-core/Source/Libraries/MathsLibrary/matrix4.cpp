@@ -14,10 +14,7 @@ namespace Rubeus
 	{
 		Matrix4::Matrix4()
 		{
-			for(int i = 0; i < 16; i++)
-			{
-				elements[i] = 0.0f;
-			}
+				memset((char*) elements, 0.0f, sizeof(elements));
 		}
 
 		Matrix4::Matrix4(float diagonal)
