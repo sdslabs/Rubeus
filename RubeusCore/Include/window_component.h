@@ -18,6 +18,14 @@ namespace Rubeus
 {
 	namespace GraphicComponents
 	{
+		enum class EWindowParameters
+		{
+			WINDOWED_MODE,
+			FULLSCREEN_MODE,
+			NON_RESIZABLE_WINDOW,
+			RESIZABLE_WINDOW
+		};
+
 		/**
 		 * @enum	EWindowParameters
 		 *
