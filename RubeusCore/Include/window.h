@@ -33,20 +33,6 @@ namespace Rubeus
 		};
 
 		/**
-		 * @enum	EWindowParameters
-		 *
-		 * @brief	Values that represent window parameters.
-		 * 			Use while constructing a RWindowComponent object
-		 */
-		enum class EWindowParameters
-		{
-			WINDOWED_MODE,
-			FULLSCREEN_MODE,
-			NON_RESIZABLE_WINDOW,
-			RESIZABLE_WINDOW
-		};
-
-		/**
 		 * @fn	void getGLFWErrorLog(int error, const char *description);
 		 *
 		 * @brief	Gets GLFW error logs
