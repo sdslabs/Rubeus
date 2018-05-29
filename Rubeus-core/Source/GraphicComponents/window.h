@@ -18,6 +18,12 @@ namespace Rubeus
 {
 	namespace GraphicComponents
 	{
+		/**
+		 * @enum	EWindowParameters
+		 *
+		 * @brief	Values that represent window parameters.
+		 * 			Use while constructing a RWindowComponent object
+		 */
 		enum class EWindowParameters
 		{
 			WINDOWED_MODE,

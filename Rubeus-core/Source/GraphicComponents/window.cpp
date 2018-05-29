@@ -101,6 +101,10 @@ namespace Rubeus
 				{
 					glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 				}
+				else
+				{
+					LOGEXTENDED("Syntax error: Use valid Enum values");
+				}
 			}
 
 			glfwWindowHint(GLFW_FOCUSED, GLFW_TRUE);
@@ -118,7 +122,7 @@ namespace Rubeus
 				}
 				else
 				{
-					LOG("Syntax error: Use valid Enum values");
+					LOGEXTENDED("Syntax error: Use valid Enum values");
 				}
 			}
 
