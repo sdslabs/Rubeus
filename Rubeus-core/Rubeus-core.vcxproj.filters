@@ -16,18 +16,6 @@
     <ClCompile Include="Source\GraphicComponents\window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Libraries\MathsLibrary\matrix4.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Libraries\MathsLibrary\vector2d.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Libraries\MathsLibrary\vector3d.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Libraries\MathsLibrary\vector4d.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Source\UtilityComponents\loader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -35,12 +23,6 @@
   <ItemGroup>
     <ClInclude Include="Source\master_component.h" />
     <ClInclude Include="Source\GraphicComponents\window.h" />
-    <ClInclude Include="Source\Libraries\MathsLibrary\functions.h" />
-    <ClInclude Include="Source\Libraries\MathsLibrary\maths.h" />
-    <ClInclude Include="Source\Libraries\MathsLibrary\matrix4.h" />
-    <ClInclude Include="Source\Libraries\MathsLibrary\vector2d.h" />
-    <ClInclude Include="Source\Libraries\MathsLibrary\vector3d.h" />
-    <ClInclude Include="Source\Libraries\MathsLibrary\vector4d.h" />
     <ClInclude Include="Source\logger_component.h" />
     <ClInclude Include="Source\UtilityComponents\loader.h" />
   </ItemGroup>

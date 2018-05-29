@@ -70,8 +70,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\GLFW\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependencies\GLFW\lib-vc2015;$(SolutionDir)Dependencies\GLEW\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\RML\include;$(SolutionDir)Dependencies\GLFW\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Dependencies\RML\lib;$(SolutionDir)Dependencies\GLFW\lib-vc2015;$(SolutionDir)Dependencies\GLEW\lib;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)bin\$(Configuration)\Intermediate\</IntDir>
     <EnableCppCoreCheck>true</EnableCppCoreCheck>
@@ -85,7 +85,7 @@
       <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>glfw3.lib;glew32s.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>RMaths.lib;glfw3.lib;glew32s.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -127,22 +127,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source\GraphicComponents\window.cpp" />
-    <ClCompile Include="Source\Libraries\MathsLibrary\matrix4.cpp" />
-    <ClCompile Include="Source\Libraries\MathsLibrary\vector2d.cpp" />
-    <ClCompile Include="Source\Libraries\MathsLibrary\vector3d.cpp" />
-    <ClCompile Include="Source\Libraries\MathsLibrary\vector4d.cpp" />
     <ClCompile Include="Source\main.cpp" />
     <ClCompile Include="Source\master_component.cpp" />
     <ClCompile Include="Source\UtilityComponents\loader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\GraphicComponents\window.h" />
-    <ClInclude Include="Source\Libraries\MathsLibrary\functions.h" />
-    <ClInclude Include="Source\Libraries\MathsLibrary\maths.h" />
-    <ClInclude Include="Source\Libraries\MathsLibrary\matrix4.h" />
-    <ClInclude Include="Source\Libraries\MathsLibrary\vector2d.h" />
-    <ClInclude Include="Source\Libraries\MathsLibrary\vector3d.h" />
-    <ClInclude Include="Source\Libraries\MathsLibrary\vector4d.h" />
     <ClInclude Include="Source\logger_component.h" />
     <ClInclude Include="Source\master_component.h" />
     <ClInclude Include="Source\UtilityComponents\loader.h" />
