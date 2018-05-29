@@ -14,9 +14,9 @@
 
 int main()
 {
-	using namespace Rubeus;
+	using namespace Rubeus::GraphicComponents;
 	using namespace Rubeus::MathsLibrary;
-	Rubeus::GraphicComponents::RWindowComponent GameWindow("My game", 1280, 720);
+	Rubeus::GraphicComponents::RWindowComponent GameWindow("Hello World", 1280, 720);
 	glClearColor(0.5f, 0.2f, 0.1f, 1.0f);
 
 	Matrix4 test(1);

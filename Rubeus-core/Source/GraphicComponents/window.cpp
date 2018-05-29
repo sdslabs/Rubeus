@@ -29,9 +29,9 @@ namespace Rubeus
 			glViewport(0, 0, width, height);
 		}
 
-		RWindowComponent::RWindowComponent(const char *title, int width, int height)
+		RWindowComponent::RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode, EWindowParameters windowType)
 		{
-			if(!initWindow(title, width, height))
+			if(!initWindow(title, width, height, windowMode, windowType))
 			{
 				LOGEXTENDED("WindowComponent Initialisation failed");
 				glfwTerminate();
@@ -83,19 +83,44 @@ namespace Rubeus
 			glfwSwapBuffers(m_Window);
 		}
 
-		bool RWindowComponent::initWindow(const char * title, int width, int height)
+		bool RWindowComponent::initWindow(const char * title, int width, int height, EWindowParameters windowMode, EWindowParameters windowType)
 		{
 			if(!glfwInit())
 			{
 				LOGEXTENDED("Error: GLFW Initialisation failed");
 			}
 
-			// Set window hints
-			glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+			// Set window hints if any
+			if (windowType == EWindowParameters::RESIZABLE_WINDOW)
+			{
+				glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
+			}
+			else
+			{
+				if(windowType == EWindowParameters::NON_RESIZABLE_WINDOW)
+				{
+					glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+				}
+			}
+
 			glfwWindowHint(GLFW_FOCUSED, GLFW_TRUE);
 
-			// Create a window of specified title, width and height
-			m_Window = glfwCreateWindow(width, height, title, NULL, NULL);
+			// Create a window of specified mode, title, width and height
+			if(windowMode == EWindowParameters::WINDOWED_MODE)
+			{
+				m_Window = glfwCreateWindow(width, height, title, NULL, NULL);
+			}
+			else
+			{
+				if(windowMode == EWindowParameters::FULLSCREEN_MODE)
+				{
+					m_Window = glfwCreateWindow(width, height, title, glfwGetPrimaryMonitor(), NULL);
+				}
+				else
+				{
+					LOG("Syntax error: Use valid Enum values");
+				}
+			}
 
 			if(!m_Window)
 			{
