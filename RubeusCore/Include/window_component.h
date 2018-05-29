@@ -11,21 +11,13 @@
 #include <GLFW/glfw3.h>
 
 #include <logger_component.h>
-#include <loader.h>
+#include <loader_component.h>
 #include <master_component.h>
 
 namespace Rubeus
 {
 	namespace GraphicComponents
 	{
-		enum class EWindowParameters
-		{
-			WINDOWED_MODE,
-			FULLSCREEN_MODE,
-			NON_RESIZABLE_WINDOW,
-			RESIZABLE_WINDOW
-		};
-
 		/**
 		 * @enum	EWindowParameters
 		 *
@@ -134,7 +126,7 @@ namespace Rubeus
 			void clearWindow();
 
 			/**
-			* @fn	void RWindowComponent::update();
+			* @fn	void RWindowComponent::updateWindow();
 			*
 			* @brief	Updates the window
 			* 			Polls GLFW for any changes
@@ -143,7 +135,7 @@ namespace Rubeus
 			* @author	Twarit
 			* @date	26-05-2018
 			*/
-			void update();
+			void updateWindow();
 
 			/**
 			* @fn	bool RWindowComponent::closed();
