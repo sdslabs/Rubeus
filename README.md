@@ -7,5 +7,5 @@ A 2D game engine written in C++17 using OpenGL 3.3
 ```shell
 git clone https://github.com/sdslabs/Rubeus
 ```
-4. All libraries are relatively linked thus your project is ready to boot up in Visual Studio.
-5. Remember to go through the code conventions [Here](https://1drv.ms/f/s!AsFPvDFrZ9iShQpWe_rBZgVLPmlY) before contributing/reading.
+1. All libraries are relatively linked thus your project is ready to boot up in Visual Studio. Open `/CMakeMigration/RubeusCore/RubeusCore.sln` to get started.
+2. Remember to go through the code conventions [Here](https://1drv.ms/f/s!AsFPvDFrZ9iShQpWe_rBZgVLPmlY) before contributing/reading.

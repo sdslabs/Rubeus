@@ -10,9 +10,9 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-#include "../logger_component.h"
-#include "../UtilityComponents/loader.h"
-#include "../master_component.h"
+#include <logger_component.h>
+#include <UtilityComponents/loader.h>
+#include <master_component.h>
 
 namespace Rubeus
 {
