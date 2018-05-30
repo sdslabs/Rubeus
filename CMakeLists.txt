@@ -3,6 +3,8 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
+FIND_PACKAGE(OpenGL REQUIRED)
+
 project ("RubeusCore")
 
 # Include sub-projects.
