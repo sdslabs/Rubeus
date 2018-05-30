@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{9A8A0322-9132-394E-B652-0DFA686F059C}</ProjectGuid>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectGuid>{C6B66745-D761-36D4-B7D6-DE1D9B22E1F2}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>RubeusCore</ProjectName>
@@ -56,58 +56,54 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)bin\$(Configuration)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)bin\$(Configuration)Intermediate\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">RubeusCore.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">RubeusCore</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\RubeusCore\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">RubeusCore.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">RubeusCore</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\RubeusCore\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">RubeusCore.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">RubeusCore</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\RubeusCore\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">RubeusCore.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">RubeusCore</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\RML\include;$(SolutionDir)Dependencies\GLFW\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependencies\GLEW\lib;$(SolutionDir)Dependencies\RML\lib;$(SolutionDir)Dependencies\GLFW\lib-vc2015;$(IncludePath);$(LibraryPath)</LibraryPath>
-  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <AdditionalIncludeDirectories>D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLEW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLFW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\RML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <CompileAs>Default</CompileAs>
-      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
-      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\RML\include;$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)RubeusCore\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLEW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLFW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\RML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLEW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLFW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\RML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -115,25 +111,22 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>RMaths.lib;glfw3.lib;glew32s.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;kernel32.lib;opengl32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(ProjectDir)Dependencies\RML\lib;$(ProjectDir)Dependencies\GLFW\lib-vc2015;$(ProjectDir)Dependencies\GLEW\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Dependencies\GLEW\lib\glew32.lib;Dependencies\GLFW\lib-vc2015\glfw3.lib;Dependencies\RML\lib\RMaths.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Dependencies;D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Dependencies/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <IgnoreSpecificDefaultLibraries>
-      </IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>
-      </ImportLibrary>
-      <ProgramDataBaseFile>$(OutDir)$(TargetName).pdb</ProgramDataBaseFile>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Debug/RubeusCore.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Debug/RubeusCore.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
-      <ImageHasSafeExceptionHandlers />
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
-      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
+      <AdditionalIncludeDirectories>D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLEW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLFW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\RML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -150,9 +143,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLEW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLFW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\RML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLEW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLFW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\RML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -160,13 +154,13 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Dependencies\GLEW\lib\glew32.lib;Dependencies\GLFW\lib-vc2015\glfw3.lib;Dependencies\RML\lib\RMaths.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Dependencies;D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Dependencies/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore/RubeusCore/Release/RubeusCore.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore/RubeusCore/Release/RubeusCore.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Release/RubeusCore.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Release/RubeusCore.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -175,6 +169,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <ClCompile>
+      <AdditionalIncludeDirectories>D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLEW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLFW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\RML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -191,9 +186,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLEW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLFW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\RML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLEW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLFW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\RML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -201,13 +197,13 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Dependencies\GLEW\lib\glew32.lib;Dependencies\GLFW\lib-vc2015\glfw3.lib;Dependencies\RML\lib\RMaths.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Dependencies;D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Dependencies/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore/RubeusCore/MinSizeRel/RubeusCore.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore/RubeusCore/MinSizeRel/RubeusCore.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/MinSizeRel/RubeusCore.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/MinSizeRel/RubeusCore.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -216,6 +212,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <ClCompile>
+      <AdditionalIncludeDirectories>D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLEW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLFW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\RML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -231,9 +228,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLEW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLFW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\RML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLEW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLFW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\RML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -241,13 +239,13 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Dependencies\GLEW\lib\glew32.lib;Dependencies\GLFW\lib-vc2015\glfw3.lib;Dependencies\RML\lib\RMaths.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Dependencies;D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Dependencies/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore/RubeusCore/RelWithDebInfo/RubeusCore.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore/RubeusCore/RelWithDebInfo/RubeusCore.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/RelWithDebInfo/RubeusCore.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/RelWithDebInfo/RubeusCore.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -255,10 +253,10 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore/CMakeLists.txt</Message>
+    <CustomBuild Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-HD:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration" "-BD:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore" --check-stamp-file "D:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore/RubeusCore/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-HD:/CPP Projects/Rubeus Project/Rubeus" "-BD:/CPP Projects/Rubeus Project/Rubeus" --check-stamp-file "D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -266,12 +264,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore/CMakeLists.txt;D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\CMakeLists.txt;D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\RubeusCore\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/CMakeLists.txt;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\CMakeLists.txt;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\config.h.in;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-HD:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration" "-BD:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore" --check-stamp-file "D:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore/RubeusCore/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-HD:/CPP Projects/Rubeus Project/Rubeus" "-BD:/CPP Projects/Rubeus Project/Rubeus" --check-stamp-file "D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -279,12 +277,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore/CMakeLists.txt;D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\CMakeLists.txt;D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\RubeusCore\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/CMakeLists.txt;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\CMakeLists.txt;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\config.h.in;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-HD:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration" "-BD:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore" --check-stamp-file "D:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore/RubeusCore/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-HD:/CPP Projects/Rubeus Project/Rubeus" "-BD:/CPP Projects/Rubeus Project/Rubeus" --check-stamp-file "D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -292,12 +290,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore/CMakeLists.txt;D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\CMakeLists.txt;D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\RubeusCore\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/CMakeLists.txt;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\CMakeLists.txt;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\config.h.in;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-HD:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration" "-BD:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore" --check-stamp-file "D:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore/RubeusCore/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" "-HD:/CPP Projects/Rubeus Project/Rubeus" "-BD:/CPP Projects/Rubeus Project/Rubeus" --check-stamp-file "D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -305,30 +303,20 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/CPP Projects/Rubeus Project/Rubeus/CMakeMigration/RubeusCore/CMakeLists.txt;D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\CMakeLists.txt;D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\RubeusCore\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/CMakeLists.txt;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\CMakeLists.txt;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\config.h.in;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\RubeusCore.cpp" />
-    <ClCompile Include="Include\GraphicComponents\window.cpp" />
-    <ClCompile Include="Include\master_component.cpp" />
-    <ClCompile Include="Include\UtilityComponents\loader.cpp" />
-    <ClInclude Include="D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\RubeusCore.h" />
-    <ClInclude Include="Include\GraphicComponents\window.h" />
-    <ClInclude Include="Include\logger_component.h" />
-    <ClInclude Include="Include\master_component.h" />
-    <ClInclude Include="Include\UtilityComponents\loader.h" />
+    <ClCompile Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\RubeusCore.cpp" />
+    <ClInclude Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\RubeusCore.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\CPP Projects\Rubeus Project\Rubeus\CMakeMigration\RubeusCore\ZERO_CHECK.vcxproj">
-      <Project>{B432D1CD-82BF-3246-9747-7019436B4CB0}</Project>
+    <ProjectReference Include="D:\CPP Projects\Rubeus Project\Rubeus\ZERO_CHECK.vcxproj">
+      <Project>{37939412-DBEB-3568-8BDB-FD0A5BFEE789}</Project>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include=".editorconfig" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
