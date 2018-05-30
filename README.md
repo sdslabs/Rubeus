@@ -15,6 +15,6 @@ git clone https://github.com/sdslabs/Rubeus
 	cmake ./
 ```
 8. You will find VS solution files present in the same directory now. Double click to open.
-9. All `.h` files are present in `/RubeusCore/Include` and all of their implementations(if any) are present in `/RubeusCore/Source` as `.cpp` files. No need to edit CMakeLists.text anywhere unless there are any linking errors popping up.
+9. All `.h` files are present in `/RubeusCore/Include` and all of their implementations(if any) are present in `/RubeusCore/Source` as `.cpp` files. No need to edit CMakeLists.txt anywhere unless there are any linking errors popping up.
 
 All libraries are relatively linked thus your project is ready to boot up in Visual Studio. Remember to go through the code conventions [Here](https://1drv.ms/f/s!AsFPvDFrZ9iShQpWe_rBZgVLPmlY) before contributing/reading.
