@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "logger_component.h"
+#include <logger_component.h>
 
 namespace Rubeus
 {

@@ -10,14 +10,28 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-#include "../logger_component.h"
-#include "../UtilityComponents/loader.h"
-#include "../master_component.h"
+#include <logger_component.h>
+#include <loader.h>
+#include <master_component.h>
 
 namespace Rubeus
 {
 	namespace GraphicComponents
 	{
+		/**
+		 * @enum	EWindowParameters
+		 *
+		 * @brief	Values that represent window parameters.
+		 * 			Use while constructing a RWindowComponent object
+		 */
+		enum class EWindowParameters
+		{
+			WINDOWED_MODE,
+			FULLSCREEN_MODE,
+			NON_RESIZABLE_WINDOW,
+			RESIZABLE_WINDOW
+		};
+
 		/**
 		 * @fn	void getGLFWErrorLog(int error, const char *description);
 		 *
@@ -55,36 +69,41 @@ namespace Rubeus
 			const char * m_Title;
 
 			/**
-			* @fn	bool RWindowComponent::initWindow(const char *title, int width, int height);
-			*
-			* @brief	Initializes the Rubeus game window
-			*
-			* @author	Twarit
-			* @date	26-05-2018
-			*
-			* @param	title 	The title of the window to be formed.
-			* @param	width 	The width of the window to be formed.
-			* @param	height	The height of the window to be formed.
-			*
-			* @return	True if it succeeds, false if it fails.
-			*/
-			bool initWindow(const char *title, int width, int height);
+			 * @fn	bool RWindowComponent::initWindow(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW);
+			 *
+			 * @brief	Initializes the Rubeus game window.
+			 * 			Use enum EWindowParameters for windowMode and windowType
+			 *
+			 * @author	Twarit
+			 * @date	26-05-2018
+			 *
+			 * @param	title	  	The title of the window to be formed.
+			 * @param	width	  	The width of the window to be formed.
+			 * @param	height	  	The height of the window to be formed.
+			 * @param	windowMode	(Optional) The window mode. Default is windowed mode
+			 * @param	windowType	(Optional) Type of the window. Default is resizable window
+			 *
+			 * @return	True if it succeeds, false if it fails.
+			 */
+			bool initWindow(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW);
 
 		public:
 
 			/**
-			* @fn	RWindowComponent::RWindowComponent(const char *title, int width, int height);
-			*
-			* @brief	Constructor
-			*
-			* @author	Twarit
-			* @date	26-05-2018
-			*
-			* @param	title 	The title of the window to be formed.
-			* @param	width 	The width of the window to be formed.
-			* @param	height	The height of the window to be formed.
-			*/
-			RWindowComponent(const char *title, int width, int height);
+			 * @fn	RWindowComponent::RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW);
+			 *
+			 * @brief	Constructor. Use enum EWindowParameters for windowMode and windowType
+			 *
+			 * @author	Twarit
+			 * @date	26-05-2018
+			 *
+			 * @param	title	  	The title of the window to be formed.
+			 * @param	width	  	The width of the window to be formed in pixels.
+			 * @param	height	  	The height of the window to be formed in pixels.
+			 * @param	windowMode	(Optional) The window mode. Default is windowed mode
+			 * @param	windowType	(Optional) Type of the window. Default is resizable window
+			 */
+			RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW);
 
 			/**
 			* @fn	RWindowComponent::~RWindowComponent();
