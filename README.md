@@ -11,7 +11,7 @@ git clone https://github.com/sdslabs/Rubeus
 5. For VS 2017 project files, press `⊞ Win + X` and choose `Command Prompt(Admin)` from the dialog box.
 6. Navigate to the cloned repository. Quick-tips: `X:` command will navigate to the X: drive. `dir` command works the same as the Unix `ls -la` and `cd` still works the same.
 7. Run CMake ```shell cmake ./ ```
-8. Open `RubeusCore.sln` in VS and right click on `RubeusCore` and `Set as StartUp project`. ![alt text](https://imgur.com/a/xadxwsG "Screenshot from Microsoft VS 15 2017")
+8. Open `RubeusCore.sln` in VS and right click on `RubeusCore` and `Set as StartUp project`. [Screenshot](https://imgur.com/a/xadxwsG)
 9. Place `glew32.dll` from `/RubeusCore/Dependencies/GLEW/lib/` to `/RubeusCore/Debug`.
 10. All `.h` files will be present in `/RubeusCore/Include` and all of their implementations(if any) will be present in `/RubeusCore/Source` as `.cpp` files. No need to edit CMakeLists.txt anywhere unless there are any linking errors popping up.
 
