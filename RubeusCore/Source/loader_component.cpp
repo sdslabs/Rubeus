@@ -41,7 +41,6 @@ namespace Rubeus
 				ERROR("Failed reading file");
 				perror(filePath);
 			}
-
 			fclose(file);
 
 			std::string result(data);
@@ -50,7 +49,6 @@ namespace Rubeus
 			SUCCESS("Read successful");
 			return result;
 		}
-
 		auto RLoaderComponent::LoadImageWindows(std::string path)
 		{
 			// TODO: Write Windows specific image loader

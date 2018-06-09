@@ -17,7 +17,7 @@ namespace Rubeus
 			GLCall(GLuint program = glCreateProgram());
 			GLCall(GLuint vertexShaderID = glCreateShader(GL_VERTEX_SHADER));
 			GLCall(GLuint fragmentShaderID = glCreateShader(GL_FRAGMENT_SHADER));
-			
+
 			std::string v_save = LoadFile(m_VertPath);
 			std::string f_save = LoadFile(m_FragPath);
 

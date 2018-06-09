@@ -18,4 +18,3 @@
 
 #include <simple_renderer_component.h>
 #include <renderable_object.h>
-
