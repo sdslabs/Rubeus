@@ -95,11 +95,11 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;GLEW_STATIC;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;GLEW_STATIC;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLEW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLFW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\RML\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -111,7 +111,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>Dependencies\GLEW\lib\glew32.lib;Dependencies\GLFW\lib-vc2015\glfw3.lib;Dependencies\RML\lib\RMaths.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>Dependencies\GLEW\lib\glew32s.lib;Dependencies\GLFW\lib-vc2015\glfw3.lib;Dependencies\RML\lib\RMaths.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Dependencies;D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Dependencies/$(Configuration);D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Source;D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Source/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -136,13 +136,13 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLEW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLFW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\RML\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -154,7 +154,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>Dependencies\GLEW\lib\glew32.lib;Dependencies\GLFW\lib-vc2015\glfw3.lib;Dependencies\RML\lib\RMaths.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>Dependencies\GLEW\lib\glew32s.lib;Dependencies\GLFW\lib-vc2015\glfw3.lib;Dependencies\RML\lib\RMaths.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Dependencies;D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Dependencies/$(Configuration);D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Source;D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Source/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -179,13 +179,13 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLEW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLFW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\RML\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -197,7 +197,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>Dependencies\GLEW\lib\glew32.lib;Dependencies\GLFW\lib-vc2015\glfw3.lib;Dependencies\RML\lib\RMaths.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>Dependencies\GLEW\lib\glew32s.lib;Dependencies\GLFW\lib-vc2015\glfw3.lib;Dependencies\RML\lib\RMaths.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Dependencies;D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Dependencies/$(Configuration);D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Source;D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Source/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -223,11 +223,11 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLEW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\GLFW\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Dependencies\RML\include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Include;D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\.\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
@@ -239,7 +239,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>Dependencies\GLEW\lib\glew32.lib;Dependencies\GLFW\lib-vc2015\glfw3.lib;Dependencies\RML\lib\RMaths.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>Dependencies\GLEW\lib\glew32s.lib;Dependencies\GLFW\lib-vc2015\glfw3.lib;Dependencies\RML\lib\RMaths.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Dependencies;D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Dependencies/$(Configuration);D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Source;D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Source/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -321,6 +321,17 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\Source\simple_renderer_component.cpp" />
     <ClCompile Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\Source\vertex_array.cpp" />
     <ClCompile Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\Source\window_component.cpp" />
+    <ClInclude Include="Include\buffer.h" />
+    <ClInclude Include="Include\index_buffer.h" />
+    <ClInclude Include="Include\loader_component.h" />
+    <ClInclude Include="Include\logger_component.h" />
+    <ClInclude Include="Include\master_component.h" />
+    <ClInclude Include="Include\renderable_object.h" />
+    <ClInclude Include="Include\renderer_component.h" />
+    <ClInclude Include="Include\shader_component.h" />
+    <ClInclude Include="Include\simple_renderer_component.h" />
+    <ClInclude Include="Include\vertex_array.h" />
+    <ClInclude Include="Include\window_component.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="D:\CPP Projects\Rubeus Project\Rubeus\ZERO_CHECK.vcxproj">

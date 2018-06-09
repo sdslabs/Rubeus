@@ -65,7 +65,6 @@ namespace Rubeus
 				ERROR(&error[0]);
 
 				GLCall(glDeleteShader(fragmentShaderID));
-
 				return 0;
 			}
 
