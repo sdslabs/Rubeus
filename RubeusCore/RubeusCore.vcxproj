@@ -311,9 +311,15 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\RubeusCore.cpp" />
     <ClInclude Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\RubeusCore.h" />
-    <ClCompile Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\Source\loader.cpp" />
+    <ClCompile Include="Source\loader_component.cpp" />
     <ClCompile Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\Source\master_component.cpp" />
-    <ClCompile Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\Source\window.cpp" />
+    <ClCompile Include="Source\shader_component.cpp" />
+    <ClCompile Include="Source\window_component.cpp" />
+    <ClInclude Include="Include\loader_component.h" />
+    <ClInclude Include="Include\logger_component.h" />
+    <ClInclude Include="Include\master_component.h" />
+    <ClInclude Include="Include\shader_component.h" />
+    <ClInclude Include="Include\window_component.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="D:\CPP Projects\Rubeus Project\Rubeus\ZERO_CHECK.vcxproj">

@@ -21,6 +21,7 @@ namespace Rubeus
 
 		RMasterComponent::~RMasterComponent()
 		{
+			componentsInitialised--;
 		}
 
 		unsigned int RMasterComponent::getComponentID() const

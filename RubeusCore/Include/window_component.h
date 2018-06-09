@@ -11,7 +11,7 @@
 #include <GLFW/glfw3.h>
 
 #include <logger_component.h>
-#include <loader.h>
+#include <loader_component.h>
 #include <master_component.h>
 
 namespace Rubeus

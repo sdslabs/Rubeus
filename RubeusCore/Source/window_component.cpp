@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <window.h>
+#include <window_component.h>
 #include <GL\glew.h>
 #include <GLFW\glfw3.h>
 

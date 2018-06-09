@@ -11,4 +11,4 @@
 #include <RML\RMaths.h>
 
 #include <logger_component.h>
-#include <window.h>
+#include <window_component.h>
