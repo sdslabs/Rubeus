@@ -80,7 +80,6 @@ int main()
 
 		renderer.submit(&sprite);
 		renderer.flush();
-
 		GameWindow.updateWindow();
 	}
 
