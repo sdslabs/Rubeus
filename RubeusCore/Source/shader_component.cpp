@@ -57,10 +57,10 @@ namespace Rubeus
 			if(result == GL_FALSE)
 			{
 				GLint length;
-				glGetShaderiv(vertexShaderID, GL_INFO_LOG_LENGTH, &length);
+				glGetShaderiv(fragmentShaderID, GL_INFO_LOG_LENGTH, &length);
 				std::vector<char> error(length);
 
-				glGetShaderInfoLog(vertexShaderID, length, &length, &error[0]);
+				glGetShaderInfoLog(fragmentShaderID, length, &length, &error[0]);
 				LOG("Fragment shader compilation failed");
 				LOG(&error[0]);
 

@@ -27,7 +27,7 @@ namespace Rubeus
 		 */
 		class RShaderComponent : public RMasterComponent
 		{
-		private:
+		public:
 			/** @brief	Identifier for the shader being added */
 			GLuint m_ShaderID;
 

@@ -327,6 +327,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\basic.fragmentshader" />
+    <None Include="Shaders\basic.vertexshader" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
