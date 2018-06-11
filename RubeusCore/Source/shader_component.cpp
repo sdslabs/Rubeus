@@ -37,7 +37,6 @@ namespace Rubeus
 				GLint length;
 				GLCall(glGetShaderiv(vertexShaderID, GL_INFO_LOG_LENGTH, &length));
 				std::vector<char> error(length);
-
 				GLCall(glGetShaderInfoLog(vertexShaderID, length, &length, &error[0]));
 				ERROR("Vertex shader compilation failed");
 				ERROR(&error[0]);
@@ -61,7 +60,6 @@ namespace Rubeus
 				GLint length;
 				GLCall(glGetShaderiv(fragmentShaderID, GL_INFO_LOG_LENGTH, &length));
 				std::vector<char> error(length);
-
 				GLCall(glGetShaderInfoLog(fragmentShaderID, length, &length, &error[0]));
 				ERROR("Fragment shader compilation failed");
 				ERROR(&error[0]);
