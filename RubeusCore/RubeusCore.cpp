@@ -10,39 +10,50 @@ int main()
 	using namespace Rubeus;
 	using namespace GraphicComponents;
 	using namespace RML;
-	RWindowComponent GameWindow("Hello World", 1280, 720, EWindowParameters::WINDOWED_MODE, EWindowParameters::NON_RESIZABLE_WINDOW);
-	glClearColor(0.5f, 0.2f, 0.1f, 1.0f);
-
-	GLuint vbo;
+	RWindowComponent GameWindow("Hello World",
+								1280, 720,
+								EWindowParameters::WINDOWED_MODE,
+								EWindowParameters::NON_RESIZABLE_WINDOW);
 
 	GLfloat vertices[] =
 	{
-		4, 3, 0,
-		12, 3, 0,
-		4, 6, 0,
-		4, 6, 0,
-		12, 6, 0,
-		4, 3, 0
+		-0.5f, -0.5f,
+		-0.5f, +0.5f,
+		+0.5f, +0.5f,
+		+0.5f, -0.5f
 	};
 
+	unsigned int indices[] =
+	{
+		0, 1, 2,
+		2, 3, 0
+	};
+
+	unsigned int vbo;
 	glGenBuffers(1, &vbo);
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
-	glEnableVertexAttribArray(0);
+	glBufferData(GL_ARRAY_BUFFER, 8 * sizeof(GLfloat), vertices, GL_STATIC_DRAW);
 
-	Matrix4 ortho = Matrix4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f);
+	unsigned int ibo;
+	glGenBuffers(1, &ibo);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, 6 * sizeof(unsigned int), indices, GL_STATIC_DRAW);
+
+	glEnableVertexAttribArray(0);
+	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, 0);
 
 	RShaderComponent shader("Shaders/basic.vertexshader", "Shaders/basic.fragmentshader");
 	shader.enableShader();
-	glUniformMatrix4fv(glGetUniformLocation(shader.m_ShaderID, "proj_matrix"), 1, GL_FALSE, ortho.elements);
 
+	ERROR("NO");
+	LOG("YES");
+	ASSERT("Maybe");
 
 	while(!GameWindow.closed())
 	{
 		GameWindow.clearWindow();
-		
-		glDrawArrays(GL_TRIANGLES, 0, 6);
+
+		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 		GameWindow.updateWindow();
 	}

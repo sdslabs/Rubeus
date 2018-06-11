@@ -9,9 +9,6 @@
 #include <iostream>
 #include <string.h>
 
-#ifdef WIN32
-#endif
-
 // TODO: Remove logger before shipping
 
 #ifdef _DEBUG
