@@ -17,7 +17,7 @@ namespace Rubeus
 
 		void getGLFWErrorLog(int error, const char * description)
 		{
-			LOG(description);
+			ERROR(description);
 		}
 
 		void windowCloseCallback(GLFWwindow * window)
@@ -28,16 +28,18 @@ namespace Rubeus
 		void windowResizeCallback(GLFWwindow * window, int width, int height)
 		{
 			LOG("Window resize callback was evoked");
-			glViewport(0, 0, width, height);
+			GLCall(glViewport(0, 0, width, height));
 		}
 
 		RWindowComponent::RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode, EWindowParameters windowType)
 		{
 			if(!initWindow(title, width, height, windowMode, windowType))
 			{
-				LOGEXTENDED("WindowComponent Initialisation failed");
+				ERROR("WindowComponent Initialisation failed");
 				glfwTerminate();
 			}
+
+			ASSERT("Window initialisation successful");
 
 			m_Height = height;
 			m_Width = width;
@@ -52,6 +54,8 @@ namespace Rubeus
 		void RWindowComponent::setWindowTitle(RWindowComponent GameWindow, const char * title)
 		{
 			glfwSetWindowTitle(GameWindow.m_Window, title);
+			ASSERT("Window title set to...");
+			ASSERT(title);
 		}
 
 		void RWindowComponent::setWindowIcon(RWindowComponent GameWindow, std::string names[])
@@ -64,18 +68,20 @@ namespace Rubeus
 			//}
 
 			// TODO: Remove this when LoaderComponent::LoadImageWindows() is completed
-			LOGEXTENDED("ABORT! Incomplete code used");
+			ERROR("ABORT! Incomplete code used");
 
 			//delete[] images;
 		}
 
 		RWindowComponent::~RWindowComponent()
 		{
+			ASSERT("Terminating GLFW Window");
 			glfwTerminate();
 		}
 
 		void RWindowComponent::clearWindow()
 		{
+			// No GLCall() used for maintaining performance
 			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		}
 
@@ -89,8 +95,10 @@ namespace Rubeus
 		{
 			if(!glfwInit())
 			{
-				LOGEXTENDED("Error: GLFW Initialisation failed");
+				ERROR("Error: GLFW initialisation failed");
 			}
+
+			ASSERT("GLFW initialisation successful");
 
 			// Set window hints if any
 			if (windowType == EWindowParameters::RESIZABLE_WINDOW)
@@ -105,7 +113,7 @@ namespace Rubeus
 				}
 				else
 				{
-					LOGEXTENDED("Syntax error: Use valid Enum values");
+					ERROR("Semantics error: Use valid Enum values");
 				}
 			}
 
@@ -124,22 +132,24 @@ namespace Rubeus
 				}
 				else
 				{
-					LOGEXTENDED("Syntax error: Use valid Enum values");
+					ERROR("Semantics error: Use valid Enum values");
 				}
 			}
 
 			if(!m_Window)
 			{
 				glfwTerminate();
-				LOGEXTENDED("Failed to create window");
+				ERROR("Failed to create window");
 
 				return false;
 			}
+
 
 			// Set the new window as the current context
 			glfwMakeContextCurrent(m_Window);
 			glfwSetWindowUserPointer(m_Window, this);
 
+			ASSERT("Window creation successful");
 
 			glfwSetErrorCallback(getGLFWErrorLog);
 			glfwSetWindowCloseCallback(m_Window, windowCloseCallback);
@@ -147,12 +157,13 @@ namespace Rubeus
 
 			if(glewInit() != GLEW_OK)
 			{
-				LOGEXTENDED("GLEW initialisation failed");
+				ERROR("GLEW initialisation failed");
 
 				return false;
 			}
 
-			LOG(glGetString(GL_VERSION));
+			ASSERT("GLEW initialisation successful");
+			ASSERT(glGetString(GL_VERSION));
 
 			return true;
 		}

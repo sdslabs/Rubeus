@@ -45,15 +45,13 @@ int main()
 	RShaderComponent shader("Shaders/basic.vertexshader", "Shaders/basic.fragmentshader");
 	shader.enableShader();
 
-	ERROR("NO");
-	LOG("YES");
-	ASSERT("Maybe");
+	LOG(toHex(9));
 
 	while(!GameWindow.closed())
 	{
 		GameWindow.clearWindow();
 
-		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+		GLCall(glDrawElements(GL_TRIANGLES, 6, GL_INT, 0));
 
 		GameWindow.updateWindow();
 	}

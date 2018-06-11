@@ -14,9 +14,9 @@ namespace Rubeus
 	{
 		GLuint RShaderComponent::loadShader()
 		{
-			GLuint program = glCreateProgram();
-			GLuint vertexShaderID = glCreateShader(GL_VERTEX_SHADER);
-			GLuint fragmentShaderID = glCreateShader(GL_FRAGMENT_SHADER);
+			GLCall(GLuint program = glCreateProgram());
+			GLCall(GLuint vertexShaderID = glCreateShader(GL_VERTEX_SHADER));
+			GLCall(GLuint fragmentShaderID = glCreateShader(GL_FRAGMENT_SHADER));
 			
 			std::string v_save = LoadFile(m_VertPath);
 			std::string f_save = LoadFile(m_FragPath);
@@ -26,59 +26,64 @@ namespace Rubeus
 
 			/* Compiling vertex shader */
 
-			glShaderSource(vertexShaderID, 1, &vertSource, NULL);
-			glCompileShader(vertexShaderID);
+			GLCall(glShaderSource(vertexShaderID, 1, &vertSource, NULL));
+			GLCall(glCompileShader(vertexShaderID));
 
 			GLint result;
-			glGetShaderiv(vertexShaderID, GL_COMPILE_STATUS, &result);
+			GLCall(glGetShaderiv(vertexShaderID, GL_COMPILE_STATUS, &result));
 
 			if(result == GL_FALSE)
 			{
 				GLint length;
-				glGetShaderiv(vertexShaderID, GL_INFO_LOG_LENGTH, &length);
+				GLCall(glGetShaderiv(vertexShaderID, GL_INFO_LOG_LENGTH, &length));
 				std::vector<char> error(length);
 
-				glGetShaderInfoLog(vertexShaderID, length, &length, &error[0]);
+				GLCall(glGetShaderInfoLog(vertexShaderID, length, &length, &error[0]));
 				LOG("Vertex shader compilation failed");
-				LOG(&error[0]);
+				ERROR(&error[0]);
 
-				glDeleteShader(vertexShaderID);
+				GLCall(glDeleteShader(vertexShaderID));
 
 				return 0;
 			}
+
+			ASSERT("Vertex shader compilation successful");
 
 			/* Compiling fragment shader */
 
-			glShaderSource(fragmentShaderID, 1, &fragSource, NULL);
-			glCompileShader(fragmentShaderID);
+			GLCall(glShaderSource(fragmentShaderID, 1, &fragSource, NULL));
+			GLCall(glCompileShader(fragmentShaderID));
 
-			glGetShaderiv(fragmentShaderID, GL_COMPILE_STATUS, &result);
+			GLCall(glGetShaderiv(fragmentShaderID, GL_COMPILE_STATUS, &result));
 
 			if(result == GL_FALSE)
 			{
 				GLint length;
-				glGetShaderiv(fragmentShaderID, GL_INFO_LOG_LENGTH, &length);
+				GLCall(glGetShaderiv(fragmentShaderID, GL_INFO_LOG_LENGTH, &length));
 				std::vector<char> error(length);
 
-				glGetShaderInfoLog(fragmentShaderID, length, &length, &error[0]);
+				GLCall(glGetShaderInfoLog(fragmentShaderID, length, &length, &error[0]));
 				LOG("Fragment shader compilation failed");
-				LOG(&error[0]);
+				ERROR(&error[0]);
 
-				glDeleteShader(fragmentShaderID);
+				GLCall(glDeleteShader(fragmentShaderID));
 
 				return 0;
 			}
 
-			glAttachShader(program, vertexShaderID);
-			glAttachShader(program, fragmentShaderID);
+			ASSERT("Fragment shader compilation successful");
 
-			glLinkProgram(program);
-			glValidateProgram(program);
 
-			glDeleteShader(vertexShaderID);
-			glDeleteShader(fragmentShaderID);
+			GLCall(glAttachShader(program, vertexShaderID));
+			GLCall(glAttachShader(program, fragmentShaderID));
 
-			LOG("Shaders added successfully");
+			GLCall(glLinkProgram(program));
+			GLCall(glValidateProgram(program));
+
+			GLCall(glDeleteShader(vertexShaderID));
+			GLCall(glDeleteShader(fragmentShaderID));
+
+			ASSERT("Shader addition successful");
 
 			return program;
 		}
@@ -96,47 +101,47 @@ namespace Rubeus
 
 		RShaderComponent::~RShaderComponent()
 		{
-			glDeleteProgram(m_ShaderID);
+			GLCall(glDeleteProgram(m_ShaderID));
 		}
 
 		void RShaderComponent::setUniform1f(const GLchar * name, float value)
 		{
-			glUniform1f(getUniformLocation(name), value);
+			GLCall(glUniform1f(getUniformLocation(name), value));
 		}
 
 		void RShaderComponent::setUniform1i(const GLchar * name, int value)
 		{
-			glUniform1i(getUniformLocation(name), value);
+			GLCall(glUniform1i(getUniformLocation(name), value));
 		}
 
 		void RShaderComponent::setUniform2f(const GLchar * name, const RML::Vector2D & vector)
 		{
-			glUniform2f(getUniformLocation(name), vector.x, vector.y);
+			GLCall(glUniform2f(getUniformLocation(name), vector.x, vector.y));
 		}
 
 		void RShaderComponent::setUniform3f(const GLchar * name, const RML::Vector3D & vector)
 		{
-			glUniform3f(getUniformLocation(name), vector.x, vector.y, vector.z);
+			GLCall(glUniform3f(getUniformLocation(name), vector.x, vector.y, vector.z));
 		}
 
 		void RShaderComponent::setUniform4f(const GLchar * name, const RML::Vector4D & vector)
 		{
-			glUniform4f(getUniformLocation(name), vector.x, vector.y, vector.z, vector.w);
+			GLCall(glUniform4f(getUniformLocation(name), vector.x, vector.y, vector.z, vector.w));
 		}
 
 		void RShaderComponent::setUniformMat4(const GLchar * name, const RML::Matrix4 & matrix)
 		{
-			glUniformMatrix4fv(getUniformLocation(name), 1, GL_FALSE, matrix.elements);
+			GLCall(glUniformMatrix4fv(getUniformLocation(name), 1, GL_FALSE, matrix.elements));
 		}
 
 		void RShaderComponent::enableShader() const
 		{
-			glUseProgram(m_ShaderID);
+			GLCall(glUseProgram(m_ShaderID));
 		}
 
 		void RShaderComponent::disableShader() const
 		{
-			glUseProgram(0);
+			GLCall(glUseProgram(0));
 		}
 	}
 }
