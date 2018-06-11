@@ -11,6 +11,9 @@
 #include <string>
 #include <GL\glew.h>
 
+#ifdef WIN32
+#endif
+
 // TODO: Remove logger before shipping
 
 #ifndef LOG(x)
@@ -18,7 +21,6 @@
 
 		// Prints to the console anything that is passed in
 		#define LOG(x) std::cout << (x) << std::endl
-
 		// Prints to console with file name and line number
 		// Use LOG() for shorter version
 		#define LOGEXTENDED(x) std::cout << "RubeusLog:" << __FILE__ << ":" << __LINE__ << ":" << (x) << "\n"
