@@ -11,6 +11,9 @@
 #include <string>
 #include <GL\glew.h>
 
+#ifdef WIN32
+#endif
+
 // TODO: Remove logger before shipping
 
 #ifndef LOG(x)
