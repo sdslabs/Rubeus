@@ -61,7 +61,6 @@
 
 		#endif
 
-
 	#else
 		// In case the build configuration is not "Debug"
 

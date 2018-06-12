@@ -77,12 +77,19 @@ int main()
 	RRenderableObject sprite(RML::Vector3D(5, 5, 0), RML::Vector2D(3, 3), RML::Vector4D(1, 0, 1, 1), shader);
 	RSimpleRendererComponent renderer;
 
+	LOG(toHex(9));
+
 	while(!GameWindow.closed())
 	{
 		GameWindow.clearWindow();
 
+<<<<<<< HEAD
 		renderer.submit(&sprite);
 		renderer.flush();
+=======
+		GLCall(glDrawElements(GL_TRIANGLES, 6, GL_INT, 0));
+
+>>>>>>> e8b111e... Add OpenGL error handling
 		GameWindow.updateWindow();
 	}
 

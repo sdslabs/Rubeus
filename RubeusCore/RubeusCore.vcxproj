@@ -321,27 +321,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\Source\simple_renderer_component.cpp" />
     <ClCompile Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\Source\vertex_array.cpp" />
     <ClCompile Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\Source\window_component.cpp" />
-    <ClInclude Include="Include\buffer.h" />
-    <ClInclude Include="Include\index_buffer.h" />
-    <ClInclude Include="Include\loader_component.h" />
-    <ClInclude Include="Include\logger_component.h" />
-    <ClInclude Include="Include\master_component.h" />
-    <ClInclude Include="Include\renderable_object.h" />
-    <ClInclude Include="Include\renderer_component.h" />
-    <ClInclude Include="Include\shader_component.h" />
-    <ClInclude Include="Include\simple_renderer_component.h" />
-    <ClInclude Include="Include\vertex_array.h" />
-    <ClInclude Include="Include\window_component.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="D:\CPP Projects\Rubeus Project\Rubeus\ZERO_CHECK.vcxproj">
       <Project>{37939412-DBEB-3568-8BDB-FD0A5BFEE789}</Project>
       <Name>ZERO_CHECK</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Shaders\basic.fragmentshader" />
-    <None Include="Shaders\basic.vertexshader" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
