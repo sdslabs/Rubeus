@@ -83,13 +83,9 @@ int main()
 	{
 		GameWindow.clearWindow();
 
-<<<<<<< HEAD
 		renderer.submit(&sprite);
 		renderer.flush();
-=======
-		GLCall(glDrawElements(GL_TRIANGLES, 6, GL_INT, 0));
 
->>>>>>> e8b111e... Add OpenGL error handling
 		GameWindow.updateWindow();
 	}
 
