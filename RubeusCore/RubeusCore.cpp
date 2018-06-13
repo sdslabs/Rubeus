@@ -77,7 +77,8 @@ int main()
 	RRenderableObject sprite(RML::Vector3D(5, 5, 0), RML::Vector2D(3, 3), RML::Vector4D(1, 0, 1, 1), shader);
 	RSimpleRendererComponent renderer;
 
-	LOG(toHex(9));
+	sprite2.addBuffer(new RBuffer(vertices, 4 * 3, 3), 0);
+	sprite2.addBuffer(new RBuffer(colorsB, 4 * 4, 4), 1);
 
 	while(!GameWindow.closed())
 	{
