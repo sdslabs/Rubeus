@@ -72,7 +72,6 @@
 
 		//  Deprecated for non-debug builds
 		#define ERROR(x)
-
 		// Deprecated for non-debug builds
 		#define ASSERT(x)
 
