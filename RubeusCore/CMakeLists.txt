@@ -10,6 +10,8 @@ file(GLOB_RECURSE SOURCES
     Source/*.cpp
 )
 
+add_definitions(-DGLEW_STATIC)
+
 set(_COMPILE_UNIT_TESTS_ ON CACHE BOOL "Compile unit tests") # Configurable by user 
 set(OTHER_CONSTANT OFF) # Not configurable by user
 configure_file(config.h.in config.h)
@@ -19,7 +21,7 @@ add_executable (RubeusCore "RubeusCore.cpp" "RubeusCore.h" ${SOURCES})
 
 add_library(glew32s STATIC IMPORTED)
 set_target_properties(glew32s PROPERTIES
-    IMPORTED_LOCATION Dependencies/GLEW/lib/glew32.lib)
+    IMPORTED_LOCATION Dependencies/GLEW/lib/glew32s.lib)
 
 add_library(glfw STATIC IMPORTED)
 set_target_properties(glfw PROPERTIES
@@ -36,8 +38,6 @@ target_include_directories(RubeusCore PUBLIC ./Include)
 target_include_directories(RubeusCore PUBLIC ./Source)
 include_directories(${OPENGL_INCLUDE_DIRS})
 
-target_link_libraries(RubeusCore PUBLIC glew32s glfw rml ${OPENGL_LIBRARIES})
-
-set(HEADERFILES glew.h glfw3.h RMaths.h opengl32.lib)
+target_link_libraries(RubeusCore glew32s glfw rml ${OPENGL_LIBRARIES})
 
 # TODO: Add tests and install targets if needed.
