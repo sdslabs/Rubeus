@@ -49,6 +49,7 @@ namespace Rubeus
 			SUCCESS("Read successful");
 			return result;
 		}
+
 		auto RLoaderComponent::LoadImageWindows(std::string path)
 		{
 			// TODO: Write Windows specific image loader
