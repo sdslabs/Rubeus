@@ -7,6 +7,9 @@
 #pragma once
 
 #include <string.h>
+#include <string>
+#include <cstdlib>
+#include <logger_component.h>
 
 #include <master_component.h>
 
@@ -24,14 +27,13 @@ namespace Rubeus
 	namespace UtilityComponents
 	{
 		/**
-		* @class	LoaderComponent
-		*
-		* @brief	A loader component.
-		* 			Useful for file I/O
-		*
-		* @author	Twarit
-		* @date	26-05-2018
-		*/
+		 * @class	RLoaderComponent
+		 *
+		 * @brief	A loader component. Useful for file I/O
+		 *
+		 * @author	Twarit
+		 * @date	26-05-2018
+		 */
 		class RLoaderComponent : RMasterComponent
 		{
 		private:
@@ -52,17 +54,17 @@ namespace Rubeus
 			static std::string LoadTextFileStream(const char * filePath);
 
 			/**
-			* @fn	auto LoaderComponent::LoadImageWindows(std::string path);
-			*
-			* @brief	Loads image for Windows platform
-			*
-			* @author	Twarit
-			* @date	26-05-2018
-			*
-			* @param	path	Full pathname of the file.
-			*
-			* @return	The image file.
-			*/
+			 * @fn	static auto RLoaderComponent::LoadImageWindows(std::string path);
+			 *
+			 * @brief	Loads image for Windows platform
+			 *
+			 * @author	Twarit
+			 * @date	26-05-2018
+			 *
+			 * @param	path	Full pathname of the file.
+			 *
+			 * @return	The image file.
+			 */
 			static auto LoadImageWindows(std::string path);
 		protected:
 		};

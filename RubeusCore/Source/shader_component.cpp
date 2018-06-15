@@ -39,7 +39,7 @@ namespace Rubeus
 				std::vector<char> error(length);
 
 				GLCall(glGetShaderInfoLog(vertexShaderID, length, &length, &error[0]));
-				LOG("Vertex shader compilation failed");
+				ERROR("Vertex shader compilation failed");
 				ERROR(&error[0]);
 
 				GLCall(glDeleteShader(vertexShaderID));
@@ -47,7 +47,7 @@ namespace Rubeus
 				return 0;
 			}
 
-			ASSERT("Vertex shader compilation successful");
+			SUCCESS("Vertex shader compilation successful");
 
 			/* Compiling fragment shader */
 
@@ -63,7 +63,7 @@ namespace Rubeus
 				std::vector<char> error(length);
 
 				GLCall(glGetShaderInfoLog(fragmentShaderID, length, &length, &error[0]));
-				LOG("Fragment shader compilation failed");
+				ERROR("Fragment shader compilation failed");
 				ERROR(&error[0]);
 
 				GLCall(glDeleteShader(fragmentShaderID));
@@ -71,7 +71,7 @@ namespace Rubeus
 				return 0;
 			}
 
-			ASSERT("Fragment shader compilation successful");
+			SUCCESS("Fragment shader compilation successful");
 
 
 			GLCall(glAttachShader(program, vertexShaderID));
@@ -83,7 +83,7 @@ namespace Rubeus
 			GLCall(glDeleteShader(vertexShaderID));
 			GLCall(glDeleteShader(fragmentShaderID));
 
-			ASSERT("Shader addition successful");
+			SUCCESS("Shader addition successful");
 
 			return program;
 		}

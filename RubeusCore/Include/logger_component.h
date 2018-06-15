@@ -20,7 +20,7 @@
 
 	// Prints to console with file name and line number
 	// Use LOG() for shorter version
-	#define LOGEXTENDED(x) std::cout << "RubeusLogger: " << (x) << " <" << __FILE__ << ":" << __LINE__ << ">" << "\n"
+	#define LOGEXTENDED(x) std::cout << "RubeusLog:" << __FILE__ << ":" << __LINE__ << ":" << (x) << "\n"
 
 	#ifdef WIN32
 			#include <Windows.h>
@@ -32,6 +32,10 @@
 
 			// Prints to console an assertion that is passed in, in yellow
 			#define ASSERT(x) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 6);\
+								LOG((x));\
+								SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7)
+			// Prints success message passed in, in green			
+			#define SUCCESS(x) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_INTENSITY);\
 								LOG((x));\
 								SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7)
 			// Pass in OpenGL calls for debugging errors while executing OpenGL code
@@ -48,11 +52,13 @@
 		// In case non Windows system is the build target
 
 		// DO NOT USE
-		#define ERROR(x) LOGEXTENDED("REMOVE ERROR STATEMENT")
+		#define ERROR(x) LOGEXTENDED((x))
 
 		// DO NOT USE
-		#define ASSERT(x) LOGEXTENDED("REMOVE ASSERTION STATEMENT")
+		#define ASSERT(x) LOGEXTENDED((x))
 
+		// DO NOT USE
+		#define SUCCESS(x) LOGEXTENDED((x))
 
 	#endif
 
@@ -71,6 +77,9 @@
 
 	// Deprecated for non-debug builds
 	#define ASSERT(x)
+
+	// Deprecated for non-debug builds
+	#define SUCCESS(x)
 
 	// No error reporting in non-debug builds
 	#define GLCall(x) (x)

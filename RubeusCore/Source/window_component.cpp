@@ -39,7 +39,7 @@ namespace Rubeus
 				glfwTerminate();
 			}
 
-			ASSERT("Window initialisation successful");
+			SUCCESS("Window initialisation successful");
 
 			m_Height = height;
 			m_Width = width;
@@ -98,7 +98,7 @@ namespace Rubeus
 				ERROR("Error: GLFW initialisation failed");
 			}
 
-			ASSERT("GLFW initialisation successful");
+			SUCCESS("GLFW initialisation successful");
 
 			// Set window hints if any
 			if (windowType == EWindowParameters::RESIZABLE_WINDOW)
@@ -149,7 +149,7 @@ namespace Rubeus
 			glfwMakeContextCurrent(m_Window);
 			glfwSetWindowUserPointer(m_Window, this);
 
-			ASSERT("Window creation successful");
+			SUCCESS("Window creation successful");
 
 			glfwSetErrorCallback(getGLFWErrorLog);
 			glfwSetWindowCloseCallback(m_Window, windowCloseCallback);
@@ -162,7 +162,7 @@ namespace Rubeus
 				return false;
 			}
 
-			ASSERT("GLEW initialisation successful");
+			SUCCESS("GLEW initialisation successful");
 			ASSERT(glGetString(GL_VERSION));
 
 			return true;
