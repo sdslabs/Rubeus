@@ -11,7 +11,7 @@
 #include <GLFW/glfw3.h>
 
 #include <logger_component.h>
-#include <loader.h>
+#include <loader_component.h>
 #include <master_component.h>
 #include <input_component.h>
 
@@ -127,7 +127,7 @@ namespace Rubeus
 			void clearWindow();
 
 			/**
-			* @fn	void RWindowComponent::update();
+			* @fn	void RWindowComponent::updateWindow();
 			*
 			* @brief	Updates the window
 			* 			Polls GLFW for any changes
@@ -136,7 +136,7 @@ namespace Rubeus
 			* @author	Twarit
 			* @date	26-05-2018
 			*/
-			void update();
+			void updateWindow();
 
 			/**
 			* @fn	bool RWindowComponent::closed();
