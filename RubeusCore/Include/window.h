@@ -13,6 +13,7 @@
 #include <logger_component.h>
 #include <loader.h>
 #include <master_component.h>
+#include <input_component.h>
 
 namespace Rubeus
 {
@@ -192,6 +193,11 @@ namespace Rubeus
 			 */
 			friend void windowResizeCallback(GLFWwindow * window, int width, int height);
 
+			//friend class RInputComponent;
+			friend void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos);
+			friend void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods);
+			friend void scrollCallback(GLFWwindow *window, double xoffset, double yoffset);
+			friend void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);
 		protected:
 		};
 	}
