@@ -15,12 +15,25 @@ namespace Rubeus
 		RMasterComponent::RMasterComponent()
 		{
 			componentsInitialised++;
+			m_ComponentID = componentsInitialised;
 
-			const int m_ComponentID = componentsInitialised;
+			add();
 		}
 
 		RMasterComponent::~RMasterComponent()
 		{
+			remove();
+		}
+
+		void RMasterComponent::add()
+		{
+			m_ComponentMap[m_ComponentID] = this;
+		}
+
+		void RMasterComponent::remove()
+		{
+			m_ComponentMap.erase(m_ComponentID);
+
 			componentsInitialised--;
 		}
 

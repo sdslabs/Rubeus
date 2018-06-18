@@ -150,17 +150,18 @@ namespace Rubeus
 			bool closed();
 
 			/**
-			* @fn	void RWindowComponent::setWindowTitle(GLFWwindow * window, std::string title);
-			*
-			* @brief	Sets window title
-			*
-			* @author	Twarit
-			* @date	26-05-2018
-			*
-			* @param [in,out]	window	Pointer to GLFWwindow being altered.
-			* @param 		  	title 	The title.
-			*/
-			void setWindowTitle(RWindowComponent GameWindow, const char * title);
+			 * @fn	void RWindowComponent::setWindowTitle(const char * title);
+			 *
+			 * @brief	Sets window title
+			 *
+			 * @author	Twarit
+			 * @date	26-05-2018
+			 *
+			 * @param 		  	title	The title.
+			 *
+			 * ### param [in,out]	window	Pointer to GLFWwindow being altered.
+			 */
+			void setWindowTitle(const char * title);
 
 			void setWindowIcon(RWindowComponent GameWindow, std::string names[]);
 

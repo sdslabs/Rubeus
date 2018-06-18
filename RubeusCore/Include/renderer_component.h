@@ -23,7 +23,7 @@ namespace Rubeus
 		 * @author	Twarit
 		 * @date	14-06-2018
 		 */
-		class RRendererComponent
+		class RRendererComponent : public RMasterComponent
 		{
 		public:
 

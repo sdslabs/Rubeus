@@ -51,9 +51,9 @@ namespace Rubeus
 			return glfwWindowShouldClose(m_Window);
 		}
 
-		void RWindowComponent::setWindowTitle(RWindowComponent GameWindow, const char * title)
+		void RWindowComponent::setWindowTitle(const char * title)
 		{
-			glfwSetWindowTitle(GameWindow.m_Window, title);
+			glfwSetWindowTitle(m_Window, title);
 			ASSERT("Window title set to...");
 			ASSERT(title);
 		}

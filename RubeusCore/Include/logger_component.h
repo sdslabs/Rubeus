@@ -44,7 +44,7 @@
 									while(GLenum error = glGetError())\
 									{\
 									int z = toHex(error);\
-									ERROR("OpenGL Error: 0x" + ((z < 1000)? "0" + std::to_string(z) : std::to_string(z)));\
+									ERROR("OpenGL Error: 0x" + ((z < 0x1000)? "0" + std::to_string(z) : std::to_string(z)));\
 									std::cin.get();\
 									}
 		#else
