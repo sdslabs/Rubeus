@@ -4,20 +4,27 @@
     <ClCompile Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\RubeusCore.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\Source\loader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\Source\master_component.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\Source\window.cpp">
+    <ClCompile Include="Source\window_component.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\loader_component.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\shader_component.cpp" />
+    <ClCompile Include="Source\logger_component.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\RubeusCore.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Include\logger_component.h" />
+    <ClInclude Include="Include\master_component.h" />
+    <ClInclude Include="Include\shader_component.h" />
+    <ClInclude Include="Include\window_component.h" />
+    <ClInclude Include="Include\loader_component.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\CPP Projects\Rubeus Project\Rubeus\RubeusCore\CMakeLists.txt" />
@@ -29,5 +36,9 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{AF93C803-9A2F-31D9-B03F-0479D730A1DC}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\basic.fragmentshader" />
+    <None Include="Shaders\basic.vertexshader" />
   </ItemGroup>
 </Project>
