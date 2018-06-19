@@ -18,7 +18,7 @@ namespace Rubeus
 			GLCall(GLuint vertexShaderID = glCreateShader(GL_VERTEX_SHADER));
 			GLCall(GLuint fragmentShaderID = glCreateShader(GL_FRAGMENT_SHADER));
 
-			std::string v_save = LoadFile(m_VertPath);
+            std::string v_save = LoadFile(m_VertPath);
 			std::string f_save = LoadFile(m_FragPath);
 
 			const char * vertSource = v_save.c_str();
@@ -37,6 +37,7 @@ namespace Rubeus
 				GLint length;
 				GLCall(glGetShaderiv(vertexShaderID, GL_INFO_LOG_LENGTH, &length));
 				std::vector<char> error(length);
+
 				GLCall(glGetShaderInfoLog(vertexShaderID, length, &length, &error[0]));
 				ERROR("Vertex shader compilation failed");
 				ERROR(&error[0]);
@@ -60,11 +61,13 @@ namespace Rubeus
 				GLint length;
 				GLCall(glGetShaderiv(fragmentShaderID, GL_INFO_LOG_LENGTH, &length));
 				std::vector<char> error(length);
+
 				GLCall(glGetShaderInfoLog(fragmentShaderID, length, &length, &error[0]));
 				ERROR("Fragment shader compilation failed");
 				ERROR(&error[0]);
 
 				GLCall(glDeleteShader(fragmentShaderID));
+
 				return 0;
 			}
 

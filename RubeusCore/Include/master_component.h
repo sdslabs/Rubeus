@@ -90,7 +90,7 @@ namespace Rubeus
 		*/
 		unsigned int getComponentID() const;
 
-		/**
+        /**
 		 * @fn	inline std::string getName()
 		 *
 		 * @brief	Gets the fully qualified name of this component

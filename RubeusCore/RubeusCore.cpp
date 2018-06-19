@@ -32,7 +32,7 @@ int main()
 	{
 		GameWindow.clearWindow();
 
-		renderer.submit(&sprite);
+        renderer.submit(&sprite);
 		renderer.flush();
 
 		GameWindow.updateWindow();
