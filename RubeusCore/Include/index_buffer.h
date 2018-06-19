@@ -41,6 +41,16 @@ namespace Rubeus
 			RIndexBuffer(GLushort * data, GLsizei count);
 
 			/**
+			 * @fn	RIndexBuffer::~RIndexBuffer();
+			 *
+			 * @brief	Destructor
+			 *
+			 * @author	Twarit
+			 * @date	20-06-2018
+			 */
+			~RIndexBuffer();
+
+			/**
 			 * @fn	void RIndexBuffer::bindIndexBuffer() const;
 			 *
 			 * @brief	Binds this index buffer

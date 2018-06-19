@@ -54,8 +54,7 @@ namespace Rubeus
 		void RWindowComponent::setWindowTitle(const char * title)
 		{
 			glfwSetWindowTitle(m_Window, title);
-			ASSERT("Window title set to...");
-			ASSERT(title);
+			ASSERT("Window title set to: " + (std::string) title);
 		}
 
 		void RWindowComponent::setWindowIcon(RWindowComponent GameWindow, std::string names[])

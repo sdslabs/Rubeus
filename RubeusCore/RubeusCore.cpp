@@ -22,8 +22,9 @@ int main()
 	shader.enableShader();
 	shader.setUniformMat4("proj_matrix", Matrix4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f));
 
-	RRenderableObject sprite(RML::Vector3D(5, 5, 0), RML::Vector2D(3, 3), RML::Vector4D(1, 0, 1, 1), shader);
-	RSimpleRendererComponent renderer;
+	RSprite sprite1(5, 5, 4, 4, RML::Vector4D(1, 0, 1, 1));
+	RSprite sprite2(7, 1, 2, 3, RML::Vector4D(0.2f, 0, 1, 1));
+	RGuerrillaRendererComponent renderer;
 
 	auto x = ((RWindowComponent *) (RMasterComponent::m_ComponentMap[GameWindow.getComponentID()]));
 	x->setWindowTitle("Hey I just changed the title");
@@ -32,7 +33,10 @@ int main()
 	{
 		GameWindow.clearWindow();
 
-        renderer.submit(&sprite);
+		renderer.begin();
+		renderer.submit(&sprite1);
+		renderer.submit(&sprite2);
+		renderer.end();
 		renderer.flush();
 
 		GameWindow.updateWindow();

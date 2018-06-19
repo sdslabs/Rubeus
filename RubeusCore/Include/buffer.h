@@ -48,6 +48,16 @@ namespace Rubeus
 			RBuffer(GLfloat * data, GLsizei count, GLuint elementCount);
 
 			/**
+			 * @fn	RBuffer::~RBuffer();
+			 *
+			 * @brief	Destructor
+			 *
+			 * @author	Twarit
+			 * @date	20-06-2018
+			 */
+			~RBuffer();
+
+			/**
 			 * @fn	void RBuffer::bindBuffer() const;
 			 *
 			 * @brief	Binds this buffer

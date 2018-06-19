@@ -23,6 +23,8 @@ namespace Rubeus
 			{
 				delete m_Buffers[i];
 			}
+
+			GLCall(glDeleteVertexArrays(1, &m_ArrayID));
 		}
 
 		void RVertexArray::addBuffer(RBuffer * buffer, GLuint index)

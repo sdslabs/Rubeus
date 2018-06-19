@@ -19,6 +19,23 @@ namespace Rubeus
 	namespace GraphicComponents
 	{
 		/**
+		 * @struct	VertexData
+		 *
+		 * @brief	A structure holding vertex data to be sent to OpenGL.
+		 *
+		 * @author	Twarit
+		 * @date	20-06-2018
+		 */
+		struct VertexData
+		{
+			/** @brief	The vertex position */
+			RML::Vector3D vertex;
+
+			/** @brief	The color of this vertex */
+			RML::Vector4D color;
+		};
+
+		/**
 		 * @class	RRenderableObject
 		 *
 		 * @brief	A renderable object.
@@ -39,17 +56,8 @@ namespace Rubeus
 			/** @brief	The color of the sprite */
 			RML::Vector4D m_Color;
 
-			/** @brief	Array of vertices attributes */
-			RVertexArray * m_VertexArray;
-
-			/** @brief	Buffer for index data */
-			RIndexBuffer * m_IndexBuffer;
-
-			/** @brief	The shader */
-			RShaderComponent& m_Shader;
-
 			/**
-			 * @fn	RRenderableObject::RRenderableObject(RML::Vector3D position, RML::Vector2D size, RML::Vector4D color, RShaderComponent * shader);
+			 * @fn	RRenderableObject::RRenderableObject(RML::Vector3D position, RML::Vector2D size, RML::Vector4D color);
 			 *
 			 * @brief	Constructor. Sets position, size, color of the sprite to be used for in the given
 			 * 			shader
@@ -60,9 +68,8 @@ namespace Rubeus
 			 * @param 		  	position	The position.
 			 * @param 		  	size		The size.
 			 * @param 		  	color   	The color.
-			 * @param [in,out]	shader  	If non-null, the shader.
 			 */
-			RRenderableObject(RML::Vector3D position, RML::Vector2D size, RML::Vector4D color, RShaderComponent & shader);
+			RRenderableObject(RML::Vector3D position, RML::Vector2D size, RML::Vector4D color);
 
 			/**
 			 * @fn	virtual RRenderableObject::~RRenderableObject();
@@ -73,44 +80,6 @@ namespace Rubeus
 			 * @date	14-06-2018
 			 */
 			virtual ~RRenderableObject();
-
-		public:
-
-			/**
-			 * @fn	inline const RVertexArray* RRenderableObject::getVAO()
-			 *
-			 * @brief	Gets the Vertex Array Object
-			 *
-			 * @author	Twarit
-			 * @date	14-06-2018
-			 *
-			 * @return	Null if it fails, else the vao.
-			 */
-			inline RVertexArray* getVAO() const { return m_VertexArray; }
-
-			/**
-			 * @fn	inline const RIndexBuffer* RRenderableObject::getIBO()
-			 *
-			 * @brief	Gets the Index Buffer Object
-			 *
-			 * @author	Twarit
-			 * @date	14-06-2018
-			 *
-			 * @return	Null if it fails, else the ibo.
-			 */
-			inline RIndexBuffer* getIBO() const { return m_IndexBuffer; }
-
-			/**
-			 * @fn	inline const RShaderComponent& RRenderableObject::getShader()
-			 *
-			 * @brief	Gets the shader
-			 *
-			 * @author	Twarit
-			 * @date	14-06-2018
-			 *
-			 * @return	The shader.
-			 */
-			inline RShaderComponent& getShader() const { return m_Shader; }
 
 			/**
 			 * @fn	inline const RML::Vector3D& RRenderableObject::getPosition()

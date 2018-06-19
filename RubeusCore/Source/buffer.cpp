@@ -20,6 +20,11 @@ namespace Rubeus
 			GLCall(glBindBuffer(GL_ARRAY_BUFFER, 0));
 		}
 
+		RBuffer::~RBuffer()
+		{
+			GLCall(glDeleteBuffers(1, &m_BufferID));
+		}
+
 		void RBuffer::bindBuffer() const
 		{
 			GLCall(glBindBuffer(GL_ARRAY_BUFFER, m_BufferID));

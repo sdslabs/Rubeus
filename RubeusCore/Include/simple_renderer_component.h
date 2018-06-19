@@ -3,6 +3,7 @@
 #include <deque>
 
 #include <renderer_component.h>
+#include <static_sprite.h>
 
 namespace Rubeus
 {
@@ -20,7 +21,7 @@ namespace Rubeus
 		{
 		private:
 			/** @brief	Queue of renderable objects */
-			std::deque<const RRenderableObject*> m_RenderQueue;
+			std::deque<const RStaticSprite *> m_RenderQueue;
 
 		public:
 

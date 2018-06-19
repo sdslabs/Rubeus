@@ -13,7 +13,10 @@
 
 // TODO: Remove logger before shipping
 
-#ifndef LOG(x)
+#ifndef LOGS
+
+	#define LOGS
+
 	#ifdef _DEBUG
 
 		// Prints to the console anything that is passed in
