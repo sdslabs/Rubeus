@@ -1,9 +1,17 @@
+/**
+ * @file	Source\timer_component.cpp.
+ *
+ * @brief	Implements the timer component class
+ */
+
 #include <timer_component.h>
 
 namespace Rubeus
 {
 	namespace UtilityComponents
 	{
+#define ONESECONDINMILLISECONDS 1000000000
+
 		std::chrono::steady_clock RTimer::m_Clock;
 
 		RTimer::RTimer(int numberOfTimePoints)
@@ -37,7 +45,7 @@ namespace Rubeus
 		{
 			addTimePoint(1);
 
-			if((getRelativeTime(0, 1)) >= 1000000000)
+			if((getRelativeTime(0, 1)) >= ONESECONDINMILLISECONDS)
 			{
 				LOG(std::to_string(m_Frames) + " fps");
 				addTimePoint(0);
