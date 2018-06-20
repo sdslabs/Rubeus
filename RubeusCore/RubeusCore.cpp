@@ -1,5 +1,6 @@
 // RubeusCore.cpp : Defines the entry point for the application.
 //
+#include <chrono>
 
 #include "RubeusCore.h"
 
@@ -9,14 +10,12 @@ int main()
 {
 	using namespace Rubeus;
 	using namespace GraphicComponents;
+	using namespace UtilityComponents;
 	using namespace RML;
 	RWindowComponent GameWindow("Hello World",
 								1280, 720,
 								EWindowParameters::WINDOWED_MODE,
 								EWindowParameters::NON_RESIZABLE_WINDOW);
-
-	glEnableVertexAttribArray(0);
-	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, 0);
 
 	RShaderComponent shader("Shaders/basic.vertexshader", "Shaders/basic.fragmentshader");
 	shader.enableShader();
@@ -29,6 +28,9 @@ int main()
 	auto x = ((RWindowComponent *) (RMasterComponent::m_ComponentMap[GameWindow.getComponentID()]));
 	x->setWindowTitle("Hey I just changed the title");
 
+	RTimer timer(2);
+	timer.setFrameCounter();
+
 	while(!GameWindow.closed())
 	{
 		GameWindow.clearWindow();
@@ -40,6 +42,8 @@ int main()
 		renderer.flush();
 
 		GameWindow.updateWindow();
+
+		timer.evaluateFrames();
 	}
 
 	return 0;

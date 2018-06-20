@@ -21,3 +21,4 @@
 #include <renderable_object.h>
 #include <sprite.h>
 #include <static_sprite.h>
+#include <timer_component.h>

@@ -26,8 +26,8 @@
 		#define LOGEXTENDED(x) std::cout << "RubeusLog:" << __FILE__ << ":" << __LINE__ << ":" << (x) << "\n"
 
 		#ifdef WIN32
-				#include <Windows.h>
 
+				#include <Windows.h>
 				// Prints to console an error message that is passed in, in red
 				#define ERROR(x) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 12);\
 									LOGEXTENDED((x));\
