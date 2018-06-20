@@ -2,13 +2,14 @@
 
 #include <chrono>
 
+#include <master_component.h>
 #include <logger_component.h>
 
 namespace Rubeus
 {
 	namespace UtilityComponents
 	{
-		class RTimer
+		class RTimer : public RMasterComponent
 		{
 		private:
 			static std::chrono::steady_clock m_Clock;
