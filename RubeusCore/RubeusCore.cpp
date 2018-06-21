@@ -35,6 +35,8 @@ int main()
 	{
 		GameWindow.clearWindow();
 
+		shader.setUniformMat4("model_matrix", Matrix4::rotation(1, Vector3D(0, 0, 1)) * Matrix4::translation(5, 5, 0));
+
 		renderer.begin();
 		renderer.submit(&sprite1);
 		renderer.submit(&sprite2);

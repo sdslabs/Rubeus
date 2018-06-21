@@ -386,7 +386,7 @@ namespace RML
 		return stream;
 	}
 
-	Matrix4 operator+(Matrix4 left, const Matrix4 & right)
+	Matrix4 operator*(Matrix4 left, const Matrix4 & right)
 	{
 		return left.multiply(right);
 	}
