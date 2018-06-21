@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include <cstddef>
+
 #include <renderer_component.h>
 #include <index_buffer.h>
 

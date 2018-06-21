@@ -39,8 +39,8 @@ namespace Rubeus
 				std::vector<char> error(length);
 
 				GLCall(glGetShaderInfoLog(vertexShaderID, length, &length, &error[0]));
-				ERROR("Vertex shader compilation failed");
-				ERROR(&error[0]);
+				ERRORLOG("Vertex shader compilation failed");
+				ERRORLOG(&error[0]);
 
 				GLCall(glDeleteShader(vertexShaderID));
 
@@ -63,8 +63,8 @@ namespace Rubeus
 				std::vector<char> error(length);
 
 				GLCall(glGetShaderInfoLog(fragmentShaderID, length, &length, &error[0]));
-				ERROR("Fragment shader compilation failed");
-				ERROR(&error[0]);
+				ERRORLOG("Fragment shader compilation failed");
+				ERRORLOG(&error[0]);
 
 				GLCall(glDeleteShader(fragmentShaderID));
 

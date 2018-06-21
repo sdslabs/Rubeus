@@ -9,7 +9,7 @@
 // TODO: Reference additional headers your program requires here.
 #include <GL\glew.h>
 #include <GLFW\glfw3.h>
-#include <RML\RMaths.h>
+#include <rubeus_maths_library.h>
 
 #include <loader_component.h>
 #include <logger_component.h>

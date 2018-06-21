@@ -7,7 +7,7 @@
 #pragma once
 
 #include <GL/glew.h>
-#include <RML/RMaths.h>
+#include <rubeus_maths_library.h>
 
 #include <buffer.h>
 #include <index_buffer.h>
@@ -32,7 +32,7 @@ namespace Rubeus
 			RML::Vector3D vertex;
 
 			/** @brief	The color of this vertex */
-			RML::Vector4D color;
+			unsigned int color;
 		};
 
 		/**

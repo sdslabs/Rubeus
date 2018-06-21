@@ -21,8 +21,8 @@ namespace Rubeus
 
 			glBufferData(GL_ARRAY_BUFFER, BUFFER_SIZE, NULL, GL_STATIC_DRAW);
 
-			glVertexAttribPointer(SHADER_VERTEX_LOCATION, 3, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) 0);
-			glVertexAttribPointer(SHADER_COLOR_LOCATION, 4, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (3 * sizeof(GLfloat)));
+			glVertexAttribPointer(SHADER_VERTEX_LOCATION, 3, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::vertex)));
+			glVertexAttribPointer(SHADER_COLOR_LOCATION, 4, GL_UNSIGNED_BYTE, GL_TRUE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::color)));
 
 			glEnableVertexAttribArray(SHADER_VERTEX_LOCATION);
 			glEnableVertexAttribArray(SHADER_COLOR_LOCATION);
@@ -78,20 +78,27 @@ namespace Rubeus
 			const RML::Vector2D & size = renderable->getSize();
 			const RML::Vector4D & color = renderable->getColor();
 
+			int g = color.y * 255.0f;
+			int b = color.z * 255.0f;
+			int r = color.x * 255.0f;
+			int a = color.w * 255.0f;
+
+			int c = a << 24 | b << 16 | g << 8 | r;
+
 			m_Buffer->vertex = position;
-			m_Buffer->color = color;
+			m_Buffer->color = c;
 			m_Buffer++;
 
 			m_Buffer->vertex = RML::Vector3D(position.x, position.y + size.y, position.z);
-			m_Buffer->color = color;
+			m_Buffer->color = c;
 			m_Buffer++;
 
 			m_Buffer->vertex = RML::Vector3D(position.x + size.x, position.y + size.y, position.z);
-			m_Buffer->color = color;
+			m_Buffer->color = c;
 			m_Buffer++;
 
 			m_Buffer->vertex = RML::Vector3D(position.x + size.x, position.y, position.z);
-			m_Buffer->color = color;
+			m_Buffer->color = c;
 			m_Buffer++;
 
 			m_IndexCount += 6;
