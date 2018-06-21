@@ -31,7 +31,7 @@ namespace Rubeus
 			GLCall(glViewport(0, 0, width, height));
 		}
 
-		RWindowComponent::RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode, EWindowParameters windowType)
+		RWindowComponent::RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode, EWindowParameters windowType, int setFPS)
 		{
 			if(!initWindow(title, width, height, windowMode, windowType))
 			{
@@ -40,6 +40,9 @@ namespace Rubeus
 			}
 
 			SUCCESS("Window initialisation successful");
+
+			glfwSwapInterval(setFPS);
+			ASSERT("FPS set to " + std::to_string((1.0f / ((float) setFPS)) * 60.0f));
 
 			m_Height = height;
 			m_Width = width;

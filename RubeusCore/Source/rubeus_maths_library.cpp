@@ -355,6 +355,8 @@ namespace RML
 
 	Matrix4 & Matrix4::multiply(const Matrix4 & other)
 	{
+		float result[16];
+
 		for(int y = 0; y < 4; y++)
 		{
 			for(int x = 0; x < 4; x++)
@@ -364,9 +366,11 @@ namespace RML
 				{
 					sum += elements[x + e * 4] * other.elements[e + y * 4];
 				}
-				elements[x + y * 4] = sum;
+				result[x + y * 4] = sum;
 			}
 		}
+
+		memcpy(elements, result, 16 * 4);
 
 		return *this;
 	}

@@ -15,27 +15,28 @@ int main()
 	RWindowComponent GameWindow("Hello World",
 								1280, 720,
 								EWindowParameters::WINDOWED_MODE,
-								EWindowParameters::NON_RESIZABLE_WINDOW);
+								EWindowParameters::NON_RESIZABLE_WINDOW,
+								1);
 
 	RShaderComponent shader("Shaders/basic.vertexshader", "Shaders/basic.fragmentshader");
 	shader.enableShader();
 	shader.setUniformMat4("proj_matrix", Matrix4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f));
 
-	RSprite sprite1(5, 5, 4, 4, RML::Vector4D(1, 0, 1, 1));
+	RSprite sprite1(0, 0, 4, 4, RML::Vector4D(1, 0, 1, 1));
 	RSprite sprite2(7, 1, 2, 3, RML::Vector4D(0.2f, 0, 1, 1));
 	RGuerrillaRendererComponent renderer;
 
 	auto x = ((RWindowComponent *) (RMasterComponent::m_ComponentMap[GameWindow.getComponentID()]));
 	x->setWindowTitle("Hey I just changed the title");
 
-	RTimer timer(2);
+	RTimer timer(4);
 	timer.setFrameCounter();
-
+	timer.addTimePoint(2);
 	while(!GameWindow.closed())
 	{
 		GameWindow.clearWindow();
-
-		shader.setUniformMat4("model_matrix", Matrix4::rotation(1, Vector3D(0, 0, 1)) * Matrix4::translation(5, 5, 0));
+		timer.addTimePoint(3);
+		shader.setUniformMat4("model_matrix", Matrix4::translation(Vector3D(5, 5, 0)) * Matrix4::rotation(timer.getRelativeTime(2, 3) / 10000000, Vector3D(0, 0, 1)));
 
 		renderer.begin();
 		renderer.submit(&sprite1);

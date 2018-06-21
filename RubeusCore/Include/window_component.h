@@ -90,7 +90,7 @@ namespace Rubeus
 		public:
 
 			/**
-			 * @fn	RWindowComponent::RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW);
+			 * @fn	RWindowComponent::RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW, int setFPS);
 			 *
 			 * @brief	Constructor. Use enum EWindowParameters for windowMode and windowType
 			 *
@@ -100,10 +100,12 @@ namespace Rubeus
 			 * @param	title	  	The title of the window to be formed.
 			 * @param	width	  	The width of the window to be formed in pixels.
 			 * @param	height	  	The height of the window to be formed in pixels.
-			 * @param	windowMode	(Optional) The window mode. Default is windowed mode
-			 * @param	windowType	(Optional) Type of the window. Default is resizable window
+			 * @param	windowMode	(Optional) The window mode. Default is windowed mode.
+			 * @param	windowType	(Optional) Type of the window. Default is resizable window.
+			 * @param	setFPS	  	The FPS. Default is 60fps.
+			 * 						Use 0 for unbound FPS, 1 for 60 FPS, 2 for 30 FPS, and likewise
 			 */
-			RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW);
+			RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW, int setFPS = 1);
 
 			/**
 			* @fn	RWindowComponent::~RWindowComponent();
