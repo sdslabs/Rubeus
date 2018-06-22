@@ -9,6 +9,19 @@
 #include <logger_component.h>
 #include <math.h>
 
+/**
+ * @fn	int toHex(int decimal)
+ *
+ * @brief	Converts a decimal to a hexadecimal
+ *
+ * @author	Nikita
+ * @date	22-06-2018
+ *
+ * @param	decimal	The decimal.
+ *
+ * @return	Decimal as an int.
+ */
+
 int toHex(int decimal)
 {
 	int hex = 0;
@@ -21,6 +34,15 @@ int toHex(int decimal)
 
 	return hex;
 }
+
+/**
+ * @fn	void GLClearError()
+ *
+ * @brief	Gl clear error
+ *
+ * @author	Nikita
+ * @date	22-06-2018
+ */
 
 void GLClearError()
 {
