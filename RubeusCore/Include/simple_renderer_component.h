@@ -13,6 +13,7 @@ namespace Rubeus
 		 * @class	RSimpleRendererComponent
 		 *
 		 * @brief	A simple renderer.
+		 * 			Only for testing purposes.
 		 *
 		 * @author	Twarit
 		 * @date	14-06-2018

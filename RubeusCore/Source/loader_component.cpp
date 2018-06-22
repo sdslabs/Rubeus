@@ -42,7 +42,7 @@ namespace Rubeus
 				perror(filePath);
 			}
 
-            fclose(file);
+			fclose(file);
 
 			std::string result(data);
 			delete[] data;

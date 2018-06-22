@@ -27,6 +27,7 @@ namespace Rubeus
 		 * @class	RGuerrillaRendererComponent
 		 *
 		 * @brief	A guerrilla renderer component. Made for increased performance.
+		 * 			Default renderer. Use instead of simple renderer
 		 *
 		 * @author	Twarit
 		 * @date	20-06-2018

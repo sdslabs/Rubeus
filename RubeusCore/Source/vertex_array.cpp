@@ -19,9 +19,11 @@ namespace Rubeus
 
 		RVertexArray::~RVertexArray()
 		{
-			for(int i = 0; i < m_Buffers.size(); i++)
+			int size = m_Buffers.size();
+			int i = size;
+			while(i >= 0)
 			{
-				delete m_Buffers[i];
+				delete m_Buffers[i--];
 			}
 
 			GLCall(glDeleteVertexArrays(1, &m_ArrayID));
