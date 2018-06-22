@@ -22,7 +22,6 @@ namespace Rubeus
 			int size = m_Buffers.size();
 			int i = size;
 			while(i >= 0)
-			for(unsigned int i = 0; i < m_Buffers.size(); i++)
 			{
 				delete m_Buffers[i--];
 			}

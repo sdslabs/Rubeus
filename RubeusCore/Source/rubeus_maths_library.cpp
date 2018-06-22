@@ -233,6 +233,12 @@ namespace RML
 		return sqrt((vector.x * vector.x) + (vector.y * vector.y) + (vector.z * vector.z) + (vector.w * vector.w));
 	}
 
+	Vector4D Vector4D::normaliseToRGBA()
+	{
+		*this = *this / Vector4D(255, 255, 255, 255);
+		return *this;
+	}
+
 	Vector4D & Vector4D::add(const Vector4D & other)
 	{
 		x += other.x;

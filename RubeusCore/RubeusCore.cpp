@@ -22,7 +22,7 @@ int main()
 	shader.enableShader();
 	shader.setUniformMat4("proj_matrix", Matrix4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f));
 
-	RSprite sprite1(0, 0, 4, 4, RML::Vector4D(1, 0, 1, 1));
+	RSprite sprite1(0, 0, 4, 4, RML::Vector4D(255, 255, 255, 255).normaliseToRGBA());
 	RSprite sprite2(7, 1, 2, 3, RML::Vector4D(0.2f, 0, 1, 1));
 	RGuerrillaRendererComponent renderer;
 

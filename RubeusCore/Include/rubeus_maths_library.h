@@ -632,6 +632,18 @@ namespace RML
 		float getLength(Vector4D& vector) const;
 
 		/**
+		 * @fn	void normaliseToRGBA();
+		 *
+		 * @brief	Normalise color values to OpenGL supporting RGBA. Eg. (128, 128, 128, 255) => (0.5f,
+		 * 			0.5f, 0.5f, 1.0f)
+		 *
+		 * @author	Twarit
+		 * @date	22-06-2018
+		 *
+		 */
+		Vector4D normaliseToRGBA();
+
+		/**
 			* @fn	Vector4D& add(const Vector4D &other);
 			*
 			* @brief	Adds other

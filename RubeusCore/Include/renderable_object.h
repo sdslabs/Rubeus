@@ -32,7 +32,7 @@ namespace Rubeus
 			RML::Vector3D vertex;
 
 			/** @brief	The color of this vertex */
-			unsigned int color;
+			RML::Vector4D color;
 		};
 
 		/**
