@@ -101,6 +101,18 @@ namespace Rubeus
 		 * @return	The name.
 		 */
 		inline std::string getName() { return typeid(*this).name(); }
+
+		/**
+		 * @fn		friend std::ostream & operator<<(std::ostream & stream, RMasterComponent & component)
+		 *
+		 * @brief	Prints the name of this component
+		 *
+		 * @author	Twarit
+		 * @date	19-06-2018
+		 *
+		 * @return	The name.
+		 */
+		friend std::ostream & operator<<(std::ostream & stream, RMasterComponent & component);
 	protected:
 	};
 }

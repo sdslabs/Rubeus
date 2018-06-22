@@ -17,7 +17,7 @@ namespace Rubeus
 
 		void getGLFWErrorLog(int error, const char * description)
 		{
-			ERROR(description);
+			ERRORLOG(description);
 		}
 
 		void windowCloseCallback(GLFWwindow * window)
@@ -31,15 +31,18 @@ namespace Rubeus
 			GLCall(glViewport(0, 0, width, height));
 		}
 
-		RWindowComponent::RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode, EWindowParameters windowType)
+		RWindowComponent::RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode, EWindowParameters windowType, int setFPS)
 		{
 			if(!initWindow(title, width, height, windowMode, windowType))
 			{
-				ERROR("WindowComponent Initialisation failed");
+				ERRORLOG("WindowComponent Initialisation failed");
 				glfwTerminate();
 			}
 
 			SUCCESS("Window initialisation successful");
+
+			glfwSwapInterval(setFPS);
+			ASSERT("FPS set to " + std::to_string((1.0f / ((float) setFPS)) * 60.0f));
 
 			m_Height = height;
 			m_Width = width;
@@ -67,7 +70,7 @@ namespace Rubeus
 			//}
 
 			// TODO: Remove this when LoaderComponent::LoadImageWindows() is completed
-			ERROR("ABORT! Incomplete code used");
+			ERRORLOG("ABORT! Incomplete code used");
 
 			//delete[] images;
 		}
@@ -94,7 +97,7 @@ namespace Rubeus
 		{
 			if(!glfwInit())
 			{
-				ERROR("Error: GLFW initialisation failed");
+				ERRORLOG("Error: GLFW initialisation failed");
 			}
 
 			SUCCESS("GLFW initialisation successful");
@@ -112,7 +115,7 @@ namespace Rubeus
 				}
 				else
 				{
-					ERROR("Semantics error: Use valid Enum values");
+					ERRORLOG("Semantics error: Use valid Enum values");
 				}
 			}
 
@@ -134,14 +137,14 @@ namespace Rubeus
 				}
 				else
 				{
-					ERROR("Semantics error: Use valid Enum values");
+					ERRORLOG("Semantics error: Use valid Enum values");
 				}
 			}
 
 			if(!m_Window)
 			{
 				glfwTerminate();
-				ERROR("Failed to create window");
+				ERRORLOG("Failed to create window");
 
 				return false;
 			}
@@ -159,7 +162,7 @@ namespace Rubeus
 
 			if(glewInit() != GLEW_OK)
 			{
-				ERROR("GLEW initialisation failed");
+				ERRORLOG("GLEW initialisation failed");
 
 				return false;
 			}

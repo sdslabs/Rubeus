@@ -41,4 +41,10 @@ namespace Rubeus
 		{
 			return m_ComponentID;
 		}
+
+		std::ostream & operator<<(std::ostream & stream, RMasterComponent & component)
+		{
+			stream << component.getName();
+			return stream;
+		}
 }

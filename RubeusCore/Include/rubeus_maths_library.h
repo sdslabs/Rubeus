@@ -632,6 +632,18 @@ namespace RML
 		float getLength(Vector4D& vector) const;
 
 		/**
+		 * @fn	void normaliseToRGBA();
+		 *
+		 * @brief	Normalise color values to OpenGL supporting RGBA. Eg. (128, 128, 128, 255) => (0.5f,
+		 * 			0.5f, 0.5f, 1.0f)
+		 *
+		 * @author	Twarit
+		 * @date	22-06-2018
+		 *
+		 */
+		Vector4D normaliseToRGBA();
+
+		/**
 			* @fn	Vector4D& add(const Vector4D &other);
 			*
 			* @brief	Adds other
@@ -939,19 +951,19 @@ namespace RML
 		friend std::ostream& operator<<(std::ostream& stream, const Matrix4& matrix);
 
 		/**
-			* @fn	friend Matrix4 operator+(Matrix4 left, const Matrix4& right);
+			* @fn	friend Matrix4 operator*(Matrix4 left, const Matrix4& right);
 			*
 			* @brief	Addition operator
 			*
 			* @author	Twarit
-			* @date	28-05-2018
+			* @date		28-05-2018
 			*
 			* @param	left 	The first value.
 			* @param	right	A value to add to it.
 			*
 			* @return	The result of the operation.
 			*/
-		friend Matrix4 operator+(Matrix4 left, const Matrix4& right);
+		friend Matrix4 operator*(Matrix4 left, const Matrix4& right);
 
 		/**
 			* @fn	Matrix4& operator*=(const Matrix4 &other);

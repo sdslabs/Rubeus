@@ -11,7 +11,7 @@
 #include <master_component.h>
 #include <loader_component.h>
 #include <GL\glew.h>
-#include <RML\RMaths.h>
+#include <rubeus_maths_library.h>
 
 namespace Rubeus
 {

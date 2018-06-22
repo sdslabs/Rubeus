@@ -7,7 +7,7 @@
 #pragma once
 
 #include <GL/glew.h>
-#include <RML/RMaths.h>
+#include <rubeus_maths_library.h>
 
 #include <renderable_object.h>
 

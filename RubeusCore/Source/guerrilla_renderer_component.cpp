@@ -21,8 +21,8 @@ namespace Rubeus
 
 			glBufferData(GL_ARRAY_BUFFER, BUFFER_SIZE, NULL, GL_STATIC_DRAW);
 
-			glVertexAttribPointer(SHADER_VERTEX_LOCATION, 3, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) 0);
-			glVertexAttribPointer(SHADER_COLOR_LOCATION, 4, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (3 * sizeof(GLfloat)));
+			glVertexAttribPointer(SHADER_VERTEX_LOCATION, 3, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::vertex)));
+			glVertexAttribPointer(SHADER_COLOR_LOCATION, 4, GL_UNSIGNED_INT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::color)));
 
 			glEnableVertexAttribArray(SHADER_VERTEX_LOCATION);
 			glEnableVertexAttribArray(SHADER_COLOR_LOCATION);

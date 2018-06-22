@@ -26,10 +26,10 @@
 		#define LOGEXTENDED(x) std::cout << "RubeusLog:" << __FILE__ << ":" << __LINE__ << ":" << (x) << "\n"
 
 		#ifdef WIN32
-				#include <Windows.h>
 
+				#include <Windows.h>
 				// Prints to console an error message that is passed in, in red
-				#define ERROR(x) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 12);\
+				#define ERRORLOG(x) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 12);\
 									LOGEXTENDED((x));\
 									SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7)
 
@@ -47,14 +47,14 @@
 									while(GLenum error = glGetError())\
 									{\
 									int z = toHex(error);\
-									ERROR("OpenGL Error: 0x" + ((z < 0x1000)? "0" + std::to_string(z) : std::to_string(z)));\
+									ERRORLOG("OpenGL Error: 0x" + ((z < 0x1000)? "0" + std::to_string(z) : std::to_string(z)));\
 									std::cin.get();\
 									}
 		#else
 			// In case non Windows system is the build target
 
 			// DO NOT USE
-			#define ERROR(x) LOGEXTENDED((x))
+			#define ERRORLOG(x) LOGEXTENDED((x))
 
 			// DO NOT USE
 			#define ASSERT(x) LOGEXTENDED((x))
@@ -74,7 +74,7 @@
 		#define LOGEXTENDED(x)
 
 		//  Deprecated for non-debug builds
-		#define ERROR(x)
+		#define ERRORLOG(x)
 		// Deprecated for non-debug builds
 		#define ASSERT(x)
 

@@ -27,17 +27,11 @@ add_library(glfw STATIC IMPORTED)
 set_target_properties(glfw PROPERTIES
     IMPORTED_LOCATION Dependencies/GLFW/lib-vc2015/glfw3.lib)
 
-add_library(rml STATIC IMPORTED)
-set_target_properties(rml PROPERTIES
-    IMPORTED_LOCATION Dependencies/RML/lib/RMaths.lib)
-
 target_include_directories(RubeusCore PUBLIC ./Dependencies/GLEW/include)
 target_include_directories(RubeusCore PUBLIC ./Dependencies/GLFW/include)
-target_include_directories(RubeusCore PUBLIC ./Dependencies/RML/include)
 target_include_directories(RubeusCore PUBLIC ./Include)
-target_include_directories(RubeusCore PUBLIC ./Source)
 include_directories(${OPENGL_INCLUDE_DIRS})
 
-target_link_libraries(RubeusCore glew32s glfw rml ${OPENGL_LIBRARIES})
+target_link_libraries(RubeusCore glew32s glfw ${OPENGL_LIBRARIES})
 
 # TODO: Add tests and install targets if needed.
