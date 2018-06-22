@@ -15,3 +15,9 @@
 #include <logger_component.h>
 #include <window_component.h>
 #include <shader_component.h>
+#include <master_component.h>
+#include <simple_renderer_component.h>
+#include <guerrilla_renderer_component.h>
+#include <renderable_object.h>
+#include <sprite.h>
+#include <static_sprite.h>

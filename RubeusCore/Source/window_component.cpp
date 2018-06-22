@@ -51,11 +51,10 @@ namespace Rubeus
 			return glfwWindowShouldClose(m_Window);
 		}
 
-		void RWindowComponent::setWindowTitle(RWindowComponent GameWindow, const char * title)
+		void RWindowComponent::setWindowTitle(const char * title)
 		{
-			glfwSetWindowTitle(GameWindow.m_Window, title);
-			ASSERT("Window title set to...");
-			ASSERT(title);
+			glfwSetWindowTitle(m_Window, title);
+			ASSERT("Window title set to: " + (std::string) title);
 		}
 
 		void RWindowComponent::setWindowIcon(RWindowComponent GameWindow, std::string names[])
@@ -118,6 +117,9 @@ namespace Rubeus
 			}
 
 			glfwWindowHint(GLFW_FOCUSED, GLFW_TRUE);
+			glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+			glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+			glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 			// Create a window of specified mode, title, width and height
 			if(windowMode == EWindowParameters::WINDOWED_MODE)
