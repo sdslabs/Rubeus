@@ -5,11 +5,22 @@
 
 using namespace std;
 
+/**
+ * @fn	int main()
+ *
+ * @brief	Main entry-point for this application
+ *
+ * @author	Nikita
+ * @date	22-06-2018
+ *
+ * @return	Exit-code for the process - 0 for success, else an error code.
+ */
+
 int main()
 {
 	using namespace Rubeus;
 	using namespace GraphicComponents;
-	using namespace RML;
+	//using namespace RML;
 	RWindowComponent GameWindow("Hello World",
 								1280, 720,
 								EWindowParameters::WINDOWED_MODE,
@@ -42,11 +53,12 @@ int main()
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, 0);
 
-	RShaderComponent shader("Shaders/basic.vertexshader", "Shaders/basic.fragmentshader");
-	shader.enableShader();
+	//RShaderComponent shader("Shaders/basic.vertexshader", "Shaders/basic.fragmentshader");
+	//shader.enableShader();
 
 	LOG(toHex(9));
 
+	/*
 	while(!GameWindow.closed())
 	{
 		GameWindow.clearWindow();
@@ -55,6 +67,20 @@ int main()
 
 		GameWindow.updateWindow();
 	}
+	*/
 
+	while (!GameWindow.closed())
+	{
+
+		GameWindow.clearWindow();
+
+		if (GameWindow.isKeyPressed(GLFW_KEY_A))
+		{
+			std::cout << "PRESSED" << std::endl;
+		}
+
+		GameWindow.updateWindow();
+
+	}
 	return 0;
 }

@@ -6,9 +6,6 @@
 
 #pragma once
 
-#include <window.h>
-#include <input_component.h>
-
 #include <window_component.h>
 #include <GL\glew.h>
 #include <GLFW\glfw3.h>
@@ -17,16 +14,51 @@ namespace Rubeus
 {
 	namespace GraphicComponents
 	{
+		/**
+		 * @fn	void getGLFWErrorLog(int error, const char * description)
+		 *
+		 * @brief	Gets glfw error log
+		 *
+		 * @author	Nikita
+		 * @date	22-06-2018
+		 *
+		 * @param	error	   	The error.
+		 * @param	description	The description.
+		 */
 
 		void getGLFWErrorLog(int error, const char * description)
 		{
 			ERROR(description);
 		}
 
+		/**
+		 * @fn	void windowCloseCallback(GLFWwindow * window)
+		 *
+		 * @brief	Callback, called when the window close
+		 *
+		 * @author	Nikita
+		 * @date	22-06-2018
+		 *
+		 * @param [in,out]	window	If non-null, the window.
+		 */
+
 		void windowCloseCallback(GLFWwindow * window)
 		{
 			LOG("Window close callback was evoked");
 		}
+
+		/**
+		 * @fn	void windowResizeCallback(GLFWwindow * window, int width, int height)
+		 *
+		 * @brief	Callback, called when the window resize
+		 *
+		 * @author	Nikita
+		 * @date	22-06-2018
+		 *
+		 * @param [in,out]	window	If non-null, the window.
+		 * @param 		  	width 	The width.
+		 * @param 		  	height	The height.
+		 */
 
 		void windowResizeCallback(GLFWwindow * window, int width, int height)
 		{
@@ -47,6 +79,16 @@ namespace Rubeus
 			m_Height = height;
 			m_Width = width;
 			m_Title = title;
+
+			for (int i = 0; i < MAX_KEYS; i++)
+			{
+				m_Keys[i] = false;
+			}
+
+			for (int i = 0; i < MAX_BUTTONS; i++)
+			{
+				m_MouseButtons[i] = false;
+			}
 		}
 
 		bool RWindowComponent::closed()
@@ -161,12 +203,11 @@ namespace Rubeus
 
 			glfwSetCursorPosCallback(m_Window, cursorPositionCallback);
 			glfwSetMouseButtonCallback(m_Window, mouseButtonCallback);
-			glfwSetInputMode(m_Window, GLFW_STICKY_MOUSE_BUTTONS, 1);
-			glfwSetScrollCallback(m_Window, scrollCallback);
+			//glfwSetInputMode(m_Window, GLFW_STICKY_MOUSE_BUTTONS, 1);
 
 			glfwSetKeyCallback(m_Window, keyCallback);
-			glfwSetInputMode(m_Window, GLFW_STICKY_KEYS, 1);
-			
+			//glfwSetInputMode(m_Window, GLFW_STICKY_KEYS, 1);
+		
 
 			if(glewInit() != GLEW_OK)
 			{
@@ -174,6 +215,8 @@ namespace Rubeus
 
 				return false;
 			}
+
+
 
 			SUCCESS("GLEW initialisation successful");
 			ASSERT(glGetString(GL_VERSION));

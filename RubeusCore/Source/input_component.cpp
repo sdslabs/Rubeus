@@ -1,6 +1,12 @@
+/**
+ * @file	Source\input_component.cpp.
+ *
+ * @brief	Implements the input component class
+ */
+
 #pragma once
 
-#include <window.h>
+
 #include <input_component.h>
 #include <GL\glew.h>
 #include <GLFW\glfw3.h>
@@ -10,37 +16,91 @@ namespace Rubeus
 	namespace GraphicComponents
 	{
 
-	
+		bool RWindowComponent::isKeyPressed(unsigned int keycode)
+		{
+			//TODO: Log This
+			if (keycode >= MAX_KEYS)
+				return false;
+			return m_Keys[keycode];
+		}
+
+		bool RWindowComponent::isMouseButtonPressed(unsigned int button)
+		{
+			//TODO: Log This
+			if (button >= MAX_BUTTONS)
+				return false;
+			return m_MouseButtons[button];
+		}
+
+		void RWindowComponent::getMousePosition(double& x, double& y)
+		{
+			x = mx;
+			y = my;
+		}
+
+		/**
+		 * @fn	void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos)
+		 *
+		 * @brief	Callback, called when the cursor position
+		 *
+		 * @author	Nikita
+		 * @date	22-06-2018
+		 *
+		 * @param [in,out]	window	If non-null, the window.
+		 * @param 		  	xpos  	The xpos.
+		 * @param 		  	ypos  	The ypos.
+		 */
+
 		void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos)
 		
 		{
 			
-			std::cout << xpos << " : " << ypos << std::endl;
+			RWindowComponent* win = (RWindowComponent*)glfwGetWindowUserPointer(window);
+			win->mx = xpos;
+			win->my = ypos;
 		}
+
+		/**
+		 * @fn	void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods)
+		 *
+		 * @brief	Callback, called when the mouse button
+		 *
+		 * @author	Nikita
+		 * @date	22-06-2018
+		 *
+		 * @param [in,out]	window	If non-null, the window.
+		 * @param 		  	button	The button.
+		 * @param 		  	action	The action.
+		 * @param 		  	mods  	The mods.
+		 */
 
 		void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods)
 		{
-			if (button == GLFW_MOUSE_BUTTON_RIGHT && action == GLFW_PRESS)
-			{
-				std::cout << "Right button pressed" << std::endl;
-			}
+			
+			RWindowComponent* win = (RWindowComponent*)glfwGetWindowUserPointer(window);
+			win->m_MouseButtons[button] = action != GLFW_RELEASE;
 		}
 
-		void scrollCallback(GLFWwindow *window, double xoffset, double yoffset)
-		{
-			std::cout << xoffset << " : " << yoffset << std::endl;
-		}
-
+		/**
+		 * @fn	void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods)
+		 *
+		 * @brief	Callback, called when the key
+		 *
+		 * @author	Nikita
+		 * @date	22-06-2018
+		 *
+		 * @param [in,out]	window  	If non-null, the window.
+		 * @param 		  	key			The key.
+		 * @param 		  	scancode	The scancode.
+		 * @param 		  	action  	The action.
+		 * @param 		  	mods		The mods.
+		 */
 
 		void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods)
 		{
-			std::cout << key << std::endl;
-
-			// actions are GLFW_PRESS, GLFW_RELEASE or GLFW_REPEAT
-			if (key == GLFW_KEY_SPACE && action == GLFW_REPEAT)
-			{
-				std::cout << "Space Key Pressed" << std::endl;
-			}
+			
+			RWindowComponent* win = (RWindowComponent*)glfwGetWindowUserPointer(window);
+			win->m_Keys[key] = action != GLFW_RELEASE;
 		}
 
 

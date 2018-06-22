@@ -9,5 +9,4 @@
 #include <GL\glew.h>
 #include <GLFW\glfw3.h>
 #include <logger_component.h>
-//#include <window.h>
-#include <input_component.h>
+#include <window_component.h>
