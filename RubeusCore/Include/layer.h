@@ -11,18 +11,13 @@ namespace Rubeus
 	{
 		class RLayer
 		{
-		private:
-			std::map<int, RRenderableObject *> m_SpriteMap;
-			RGuerrillaRendererComponent m_Renderer;
-
 		public:
-			Rlayer();
-			virtual ~RLayer();
+			RLayer() = default;
+			virtual ~RLayer() = default;
 
-			void addSprite(const RRenderableObject & renderable) = 0;
-			void removeSprite(const RRenderableObject & sprite) = 0;
-
-		protected:
+			virtual void addSprite(RRenderableObject * renderable) = 0;
+			virtual void draw() = 0;
+			virtual void removeSprite(RRenderableObject * renderable) = 0;
 		};
 	}
 }

@@ -17,36 +17,30 @@ int main()
 								EWindowParameters::WINDOWED_MODE,
 								EWindowParameters::NON_RESIZABLE_WINDOW,
 								1);
+	RShaderComponent shader0(RShaderComponent("Shaders/basic.vertexshader", "Shaders/basic.fragmentshader"));
+	RStaticLayer layer0(shader0);
+	layer0.m_Shader.setUniformMat4("proj_matrix", Matrix4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f));
 
-	RShaderComponent shader("Shaders/basic.vertexshader", "Shaders/basic.fragmentshader");
-	shader.enableShader();
-	shader.setUniformMat4("proj_matrix", Matrix4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f));
+	RShaderComponent shader1(RShaderComponent("Shaders/basic.vertexshader", "Shaders/basic.fragmentshader"));
+	RStaticLayer layer1(shader1);
+	layer1.m_Shader.setUniformMat4("proj_matrix", Matrix4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f));
 
 	RSprite sprite1(0, 0, 4, 4, RML::Vector4D(255, 255, 255, 255).normaliseToRGBA());
 	RSprite sprite2(7, 1, 2, 3, RML::Vector4D(0.2f, 0, 1, 1));
-	RGuerrillaRendererComponent renderer;
+	RSprite sprite3(1, 1, 4, 4, RML::Vector4D(0, 255, 255, 255).normaliseToRGBA());
 
-	auto x = ((RWindowComponent *) (RMasterComponent::m_ComponentMap[GameWindow.getComponentID()]));
-	x->setWindowTitle("Hey I just changed the title");
+	layer0.addSprite(&sprite1);
+	layer0.addSprite(&sprite2);
+	layer1.addSprite(&sprite3);
 
-	RTimer timer(4);
-	timer.setFrameCounter();
-	timer.addTimePoint(2);
 	while(!GameWindow.closed())
 	{
 		GameWindow.clearWindow();
-		timer.addTimePoint(3);
-		shader.setUniformMat4("model_matrix", Matrix4::translation(Vector3D(5, 5, 0)) * Matrix4::rotation(timer.getRelativeTime(2, 3) / 10000000, Vector3D(0, 0, 1)));
 
-		renderer.begin();
-		renderer.submit(&sprite1);
-		renderer.submit(&sprite2);
-		renderer.end();
-		renderer.flush();
+		layer0.draw();
+		layer1.draw();
 
 		GameWindow.updateWindow();
-
-		timer.evaluateFrames();
 	}
 
 	return 0;

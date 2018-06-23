@@ -37,7 +37,7 @@ namespace Rubeus
 			 *
 			 * @param	renderable	The renderable.
 			 */
-			virtual void submit(const RRenderableObject* renderable) = 0;
+			virtual void submit(const RRenderableObject * renderable) = 0;
 
 			/**
 			 * @fn	virtual void RRendererComponent::flush() = 0;
