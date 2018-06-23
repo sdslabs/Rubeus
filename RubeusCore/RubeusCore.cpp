@@ -17,6 +17,17 @@ std::map<unsigned int, Rubeus::RMasterComponent *> Rubeus::RMasterComponent::m_C
  * @return	Exit-code for the process - 0 for success, else an error code.
  */
 
+/**
+ * @fn	int main()
+ *
+ * @brief	Main entry-point for this application
+ *
+ * @author	Nikita
+ * @date	22-06-2018
+ *
+ * @return	Exit-code for the process - 0 for success, else an error code.
+ */
+
 int main()
 {
 	using namespace Rubeus;
@@ -61,8 +72,7 @@ int main()
 
 		timer.evaluateFrames();
 	}
-	*/
-
+	
 	while (!GameWindow.closed())
 	{
 
@@ -76,5 +86,6 @@ int main()
 		GameWindow.updateWindow();
 
 	}
+
 	return 0;
 }
