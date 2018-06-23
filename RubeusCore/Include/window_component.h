@@ -91,7 +91,7 @@ namespace Rubeus
 		public:
 
 			/**
-			 * @fn	RWindowComponent::RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW);
+			 * @fn	RWindowComponent::RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW, int setFPS);
 			 *
 			 * @brief	Constructor. Use enum EWindowParameters for windowMode and windowType
 			 *
@@ -101,10 +101,12 @@ namespace Rubeus
 			 * @param	title	  	The title of the window to be formed.
 			 * @param	width	  	The width of the window to be formed in pixels.
 			 * @param	height	  	The height of the window to be formed in pixels.
-			 * @param	windowMode	(Optional) The window mode. Default is windowed mode
-			 * @param	windowType	(Optional) Type of the window. Default is resizable window
+			 * @param	windowMode	(Optional) The window mode. Default is windowed mode.
+			 * @param	windowType	(Optional) Type of the window. Default is resizable window.
+			 * @param	setFPS	  	The FPS. Default is 60fps.
+			 * 						Use 0 for unbound FPS, 1 for 60 FPS, 2 for 30 FPS, and likewise
 			 */
-			RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW);
+			RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW, int setFPS = 1);
 
 			/**
 			* @fn	RWindowComponent::~RWindowComponent();
@@ -151,17 +153,18 @@ namespace Rubeus
 			bool closed();
 
 			/**
-			* @fn	void RWindowComponent::setWindowTitle(GLFWwindow * window, std::string title);
-			*
-			* @brief	Sets window title
-			*
-			* @author	Twarit
-			* @date	26-05-2018
-			*
-			* @param [in,out]	window	Pointer to GLFWwindow being altered.
-			* @param 		  	title 	The title.
-			*/
-			void setWindowTitle(RWindowComponent GameWindow, const char * title);
+			 * @fn	void RWindowComponent::setWindowTitle(const char * title);
+			 *
+			 * @brief	Sets window title
+			 *
+			 * @author	Twarit
+			 * @date	26-05-2018
+			 *
+			 * @param 		  	title	The title.
+			 *
+			 * ### param [in,out]	window	Pointer to GLFWwindow being altered.
+			 */
+			void setWindowTitle(const char * title);
 
 			void setWindowIcon(RWindowComponent GameWindow, std::string names[]);
 

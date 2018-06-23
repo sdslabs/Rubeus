@@ -15,7 +15,7 @@ int toHex(int decimal)
 
 	for(int i = 0; decimal != 0; i++)
 	{
-		hex = hex + (pow(10,i))*(decimal % 16);
+		hex = hex + (int) ((pow(10,i))*(decimal % 16));
 		decimal /= 16;
 	}
 

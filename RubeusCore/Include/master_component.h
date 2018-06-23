@@ -6,7 +6,13 @@
 
 #pragma once
 
+#include <string>
+#include <map>
+#include <typeinfo>
+
 #include <logger_component.h>
+
+#define GetVariableName(x) #x
 
 namespace Rubeus
 {
@@ -21,14 +27,26 @@ namespace Rubeus
 	*/
 	class RMasterComponent
 	{
-	private:
-		/** @brief	The number of components initialised */
-		static unsigned int componentsInitialised;
-
+	protected:
 		/** @brief	Identifier for this component */
 		unsigned int m_ComponentID;
 
+		/**
+		 * @fn	void RMasterComponent::add();
+		 *
+		 * @brief	Adds this component to component table
+		 *
+		 * @author	Twarit
+		 * @date	19-06-2018
+		 */
+		void add();
+
 	public:
+		/** @brief	The number of components initialised */
+		static unsigned int componentsInitialised;
+
+		/** @brief	The component table */
+		static std::map<unsigned int, RMasterComponent *> m_ComponentMap;
 
 		/**
 		* @fn	MasterComponent::MasterComponent();
@@ -51,6 +69,16 @@ namespace Rubeus
 		virtual ~RMasterComponent();
 
 		/**
+		 * @fn	void RMasterComponent::remove();
+		 *
+		 * @brief	Removes this component from component table
+		 *
+		 * @author	Twarit
+		 * @date	19-06-2018
+		 */
+		void remove();
+
+		/**
 		* @fn	unsigned int MasterComponent::getComponentID();
 		*
 		* @brief	Gets component identifier
@@ -62,6 +90,29 @@ namespace Rubeus
 		*/
 		unsigned int getComponentID() const;
 
+        /**
+		 * @fn	inline std::string getName()
+		 *
+		 * @brief	Gets the fully qualified name of this component
+		 *
+		 * @author	Twarit
+		 * @date	19-06-2018
+		 *
+		 * @return	The name.
+		 */
+		inline std::string getName() { return typeid(*this).name(); }
+
+		/**
+		 * @fn		friend std::ostream & operator<<(std::ostream & stream, RMasterComponent & component)
+		 *
+		 * @brief	Prints the name of this component
+		 *
+		 * @author	Twarit
+		 * @date	19-06-2018
+		 *
+		 * @return	The name.
+		 */
+		friend std::ostream & operator<<(std::ostream & stream, RMasterComponent & component);
 	protected:
 	};
 }

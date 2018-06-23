@@ -20,7 +20,7 @@ namespace Rubeus
 
 			if(!file)
 			{
-				ERROR("File opening failed");
+				ERRORLOG("File opening failed");
 				perror(filePath);
 
 				return "Invalid_Path";
@@ -38,7 +38,7 @@ namespace Rubeus
 			
 			if(ferror(file))
 			{
-				ERROR("Failed reading file");
+				ERRORLOG("Failed reading file");
 				perror(filePath);
 			}
 
