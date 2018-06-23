@@ -21,3 +21,4 @@
 #include <sprite.h>
 #include <static_sprite.h>
 #include <timer_component.h>
+#include <static_layer.h>

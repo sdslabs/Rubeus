@@ -47,6 +47,9 @@ namespace Rubeus
 		class RRenderableObject
 		{
 		public:
+			/** @brief	Identifier for the object */
+			unsigned int m_ObjectID;
+
 			/** @brief	The position of the sprite */
 			RML::Vector3D m_Position;
 
