@@ -13,6 +13,10 @@
 #include <logger_component.h>
 #include <loader_component.h>
 #include <master_component.h>
+#include <input_component.h>
+
+#define MAX_KEYS    1024
+#define MAX_BUTTONS 32
 
 
 #define MAX_KEYS    1024
@@ -81,7 +85,6 @@ namespace Rubeus
 			bool m_MouseButtons[MAX_BUTTONS];
 
 			double mx, my;
-
 
 			/**
 			 * @fn	bool RWindowComponent::initWindow(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW);
@@ -209,7 +212,6 @@ namespace Rubeus
 			 * @param 		  	height	The height of the resized window.
 			 */
 			friend void windowResizeCallback(GLFWwindow * window, int width, int height);
-
 
 			bool isKeyPressed(unsigned int keycode);
 			bool isMouseButtonPressed(unsigned int button);

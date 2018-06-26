@@ -6,6 +6,11 @@
 
 std::map<unsigned int, Rubeus::RMasterComponent *> Rubeus::RMasterComponent::m_ComponentMap;
 
+void print()
+{
+	std::cout << "PRESSED" << std::endl;
+}
+
 /**
  * @fn	int main()
  *
@@ -16,11 +21,6 @@ std::map<unsigned int, Rubeus::RMasterComponent *> Rubeus::RMasterComponent::m_C
  *
  * @return	Exit-code for the process - 0 for success, else an error code.
  */
-void print()
-{
-	std::cout << "PRESSED" << std::endl;
-}
-
 int main()
 {
 	using namespace Rubeus;
@@ -54,8 +54,10 @@ int main()
 		GameWindow.clearWindow();
 		timer.addTimePoint(3);
 		shader.setUniformMat4("model_matrix", Matrix4::translation(Vector3D(5, 5, 0)) * Matrix4::rotation(timer.getRelativeTime(2, 3) / 10000000, Vector3D(0, 0, 1)));
-
-		renderer.begin();
+    
+    GameWindow.doWhileKeyIsPressed(KEY_A,print);
+		
+    renderer.begin();
 		renderer.submit(&sprite1);
 		renderer.submit(&sprite2);
 		renderer.end();
@@ -64,14 +66,7 @@ int main()
 		GameWindow.updateWindow();
 
 		timer.evaluateFrames();
-	}
-	
-	while (!GameWindow.closed())
-	{
-		GameWindow.clearWindow();
-		GameWindow.doWhileKeyIsPressed(KEY_A,print);
-		GameWindow.updateWindow();
-	}
-
+  }
+  
 	return 0;
 }
