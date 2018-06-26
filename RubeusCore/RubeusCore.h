@@ -6,7 +6,10 @@
 #include <iostream>
 
 // TODO: Reference additional headers your program requires here.
+#ifdef _DEBUG
 #include <vld.h>
+#endif
+
 #include <GL\glew.h>
 #include <GLFW\glfw3.h>
 #include <rubeus_maths_library.h>
