@@ -17,6 +17,7 @@ int main()
 								EWindowParameters::WINDOWED_MODE,
 								EWindowParameters::NON_RESIZABLE_WINDOW,
 								1);
+
 	RShaderComponent shader0(RShaderComponent("Shaders/basic.vertexshader", "Shaders/basic.fragmentshader"));
 	RStaticLayer layer0(shader0);
 	layer0.m_Shader.setUniformMat4("proj_matrix", Matrix4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f));
