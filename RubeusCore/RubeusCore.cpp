@@ -25,7 +25,7 @@ int main()
 	RStaticLayer layer1(shader1);
 
 	RSprite sprite1(0, 0, 4, 4, RML::Vector4D(255, 255, 255, 255).normaliseToRGBA());
-	RSprite sprite2(7, 1, 2, 3, RML::Vector4D(0.2f, 0, 1, 1));
+	RSprite sprite2(0.5, 0.5, 0.5, 0.5, RML::Vector4D(0.2f, 0, 1, 1));
 	RSprite sprite3(1, 1, 4, 4, RML::Vector4D(0, 255, 255, 255).normaliseToRGBA());
 
 	layer0.addGroup("group1", Group().addRenderable(&sprite1).addRenderable(&sprite2).addRenderable(&sprite3));

@@ -7,17 +7,14 @@ namespace Rubeus
 		RStaticLayer::RStaticLayer(RShaderComponent& shader)
 			: m_ObjectCount(0), m_Renderer(new RGuerrillaRendererComponent()), m_Shader(shader)
 		{
+			m_Shader.enableShader();
 			m_Shader.setUniformMat4("proj_matrix", (const RML::Matrix4) RML::Matrix4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f));
+			m_Shader.disableShader();
 		}
 	
 		RStaticLayer::~RStaticLayer()
 		{
 			delete m_Renderer;
-
-			for(auto i : m_Groups)
-			{
-				delete m_Groups[i.first];
-			}
 		}
 
 		RLayer & RStaticLayer::addGroup(std::string name, Group & group)
