@@ -6,6 +6,11 @@
 
 std::map<unsigned int, Rubeus::RMasterComponent *> Rubeus::RMasterComponent::m_ComponentMap;
 
+void print()
+{
+	std::cout << "PRESSED" << std::endl;
+}
+
 int main()
 {
 	using namespace Rubeus;
@@ -32,6 +37,7 @@ int main()
 	RTimer timer(4);
 	timer.setFrameCounter();
 	timer.addTimePoint(2);
+
 	while(!GameWindow.closed())
 	{
 		GameWindow.clearWindow();
@@ -47,6 +53,13 @@ int main()
 		GameWindow.updateWindow();
 
 		timer.evaluateFrames();
+	}
+
+	while (!GameWindow.closed())
+	{
+		GameWindow.clearWindow();
+		GameWindow.doWhileKeyIsPressed(KEY_A,print);
+		GameWindow.updateWindow();
 	}
 
 	return 0;

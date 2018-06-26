@@ -6,9 +6,6 @@
 
 #pragma once
 
-#include <window.h>
-#include <input_component.h>
-
 #include <window_component.h>
 #include <GL\glew.h>
 #include <GLFW\glfw3.h>
@@ -166,12 +163,7 @@ namespace Rubeus
 
 			glfwSetCursorPosCallback(m_Window, cursorPositionCallback);
 			glfwSetMouseButtonCallback(m_Window, mouseButtonCallback);
-			glfwSetInputMode(m_Window, GLFW_STICKY_MOUSE_BUTTONS, 1);
-			glfwSetScrollCallback(m_Window, scrollCallback);
-
 			glfwSetKeyCallback(m_Window, keyCallback);
-			glfwSetInputMode(m_Window, GLFW_STICKY_KEYS, 1);
-			
 
 			if(glewInit() != GLEW_OK)
 			{
@@ -186,6 +178,5 @@ namespace Rubeus
 			return true;
 		}
 
-		
 	}
 }
