@@ -7,15 +7,12 @@ namespace Rubeus
 		RStaticLayer::RStaticLayer(RShaderComponent& shader)
 			: m_ObjectCount(0), m_Shader(shader)
 		{
-			m_Renderer = new RGuerrillaRendererComponent();
 			m_Shader.enableShader();
 		}
-
+	
 		RStaticLayer::~RStaticLayer()
 		{
 			m_Shader.disableShader();
-
-			delete m_Renderer;
 		}
 
 		void RStaticLayer::addSprite(RRenderableObject * sprite)
@@ -25,37 +22,35 @@ namespace Rubeus
 			if(result)
 			{
 				result->m_ObjectID = m_ObjectCount++;
-				m_ObjectMap[result->m_ObjectID] = result;
+				m_ObjectMap[result->m_ObjectID] = *result;
 			}
 			else
 			{
 				// TODO: Add the name of the invalid object in error message 
 				ERRORLOG("Invalid renderable object type used");
 			}
-
-			result = nullptr;
 		}
 
 		void RStaticLayer::draw()
 		{
-			std::map<unsigned int, RSprite *>::iterator iter = m_ObjectMap.begin(), end = m_ObjectMap.end();
+			auto iter = m_ObjectMap.begin(), end = m_ObjectMap.end();
 
-			m_Renderer->begin();
+			m_Renderer.begin();
 
 			while(iter != end)
 			{
-				m_Renderer->submit(dynamic_cast<RRenderableObject *>(iter->second));
+				m_Renderer.submit(&iter->second);
 
 				++iter;
 			}
 
-			m_Renderer->end();
-			m_Renderer->flush();
+			m_Renderer.end();
+			m_Renderer.flush();
 		}
 
 		void RStaticLayer::removeSprite(RRenderableObject * sprite)
 		{
-			m_ObjectMap[sprite->m_ObjectID] = &RSprite(0, 0, 0, 0, RML::Vector4D(0, 0, 0, 0));
+			m_ObjectMap[sprite->m_ObjectID] = RSprite(0, 0, 0, 0, RML::Vector4D(0, 0, 0, 0));
 		}
 	}
 }
