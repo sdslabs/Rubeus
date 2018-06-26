@@ -9,7 +9,7 @@
 #include <GL/glew.h>
 #include <vector>
 
-#include <buffer.h>
+#include <buffer_object.h>
 
 namespace Rubeus
 {

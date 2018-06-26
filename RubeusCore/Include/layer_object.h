@@ -3,6 +3,7 @@
 #include <map>
 
 #include <renderable_object.h>
+#include <group_object.h>
 #include <guerrilla_renderer_component.h>
 
 namespace Rubeus
@@ -15,9 +16,9 @@ namespace Rubeus
 			RLayer() = default;
 			virtual ~RLayer() = default;
 
-			virtual void addSprite(RRenderableObject * renderable) = 0;
+			virtual RLayer & addGroup(std::string name, Group & group) = 0;
 			virtual void draw() = 0;
-			virtual void removeSprite(RRenderableObject * renderable) = 0;
+			virtual void removeGroup(std::string name) = 0;
 		};
 	}
 }

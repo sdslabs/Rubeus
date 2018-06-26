@@ -6,6 +6,7 @@
 #include <iostream>
 
 // TODO: Reference additional headers your program requires here.
+#include <vld.h>
 #include <GL\glew.h>
 #include <GLFW\glfw3.h>
 #include <rubeus_maths_library.h>
@@ -18,7 +19,7 @@
 #include <simple_renderer_component.h>
 #include <guerrilla_renderer_component.h>
 #include <renderable_object.h>
-#include <sprite.h>
-#include <static_sprite.h>
+#include <sprite_object.h>
+#include <static_sprite_object.h>
 #include <timer_component.h>
-#include <static_layer.h>
+#include <static_layer_object.h>

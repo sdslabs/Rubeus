@@ -1,13 +1,12 @@
 #pragma once
 
-#include <layer.h>
-#include <sprite.h>
+#include <layer_object.h>
+#include <sprite_object.h>
 #include <shader_component.h>
 #include <logger_component.h>
 #include <rubeus_maths_library.h>
 
 // TODO: Add docs
-// TODO: Fix memory leaks
 namespace Rubeus
 {
 	namespace GraphicComponents
@@ -16,18 +15,18 @@ namespace Rubeus
 		{
 		private:
 			unsigned int m_ObjectCount;
-			std::map<unsigned int, RSprite> m_ObjectMap;
-			RGuerrillaRendererComponent m_Renderer;
+			std::map<std::string, Group *> m_Groups;
+			RGuerrillaRendererComponent * m_Renderer;
+			RShaderComponent & m_Shader;
 
 		public:
-			RShaderComponent& m_Shader;
 
 			RStaticLayer(RShaderComponent& shader);
 			virtual ~RStaticLayer();
 
-			void addSprite(RRenderableObject * sprite) override;
+			RLayer & addGroup(std::string name, Group & group) override;
 			void draw() override;
-			void removeSprite(RRenderableObject * sprite) override;
+			void removeGroup(std::string name) override;
 
 		protected:
 		};

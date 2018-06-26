@@ -3,7 +3,7 @@
 #include <deque>
 
 #include <renderer_component.h>
-#include <static_sprite.h>
+#include <static_sprite_object.h>
 
 namespace Rubeus
 {

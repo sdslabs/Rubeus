@@ -9,7 +9,7 @@
 #include <cstddef>
 
 #include <renderer_component.h>
-#include <index_buffer.h>
+#include <index_buffer_object.h>
 
 namespace Rubeus
 {
