@@ -7,8 +7,6 @@
 #pragma once
 
 #include <window_component.h>
-#include <GL\glew.h>
-#include <GLFW\glfw3.h>
 
 namespace Rubeus
 {
@@ -216,8 +214,6 @@ namespace Rubeus
 
 				return false;
 			}
-
-
 
 			SUCCESS("GLEW initialisation successful");
 			ASSERT(glGetString(GL_VERSION));
