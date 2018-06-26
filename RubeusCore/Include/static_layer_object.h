@@ -14,7 +14,6 @@ namespace Rubeus
 		class RStaticLayer : public RLayer
 		{
 		private:
-			unsigned int m_ObjectCount;
 			std::map<std::string, Group *> m_Groups;
 			RGuerrillaRendererComponent * m_Renderer;
 			RShaderComponent & m_Shader;
