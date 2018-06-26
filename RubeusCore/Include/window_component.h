@@ -18,6 +18,9 @@
 #define MAX_KEYS    1024
 #define MAX_BUTTONS 32
 
+#define MAX_KEYS    1024
+#define MAX_BUTTONS 32
+
 namespace Rubeus
 {
 	namespace GraphicComponents
@@ -49,6 +52,7 @@ namespace Rubeus
 		 */
 		void getGLFWErrorLog(int error, const char *description);
 
+		extern char KEY_A;
 		/**
 		* @class	RWindowComponent
 		*
@@ -207,16 +211,15 @@ namespace Rubeus
 			friend void windowResizeCallback(GLFWwindow * window, int width, int height);
 
 
-			 bool isKeyPressed(unsigned int keycode);
+			bool isKeyPressed(unsigned int keycode);
+			bool isMouseButtonPressed(unsigned int button);
+			void getMousePosition(double& x, double& y);
+			void doWhileKeyIsPressed(char key, void(*ptr)());
 
-			 bool isMouseButtonPressed(unsigned int button);
-
-			 void getMousePosition(double& x, double& y);
-			
 			friend void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos);
 			friend void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods);
 			friend void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);
-
+			
 		protected:
 		};
 	}

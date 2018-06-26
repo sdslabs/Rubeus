@@ -208,11 +208,7 @@ namespace Rubeus
 
 			glfwSetCursorPosCallback(m_Window, cursorPositionCallback);
 			glfwSetMouseButtonCallback(m_Window, mouseButtonCallback);
-			//glfwSetInputMode(m_Window, GLFW_STICKY_MOUSE_BUTTONS, 1);
-
 			glfwSetKeyCallback(m_Window, keyCallback);
-			//glfwSetInputMode(m_Window, GLFW_STICKY_KEYS, 1);
-		
 
 			if(glewInit() != GLEW_OK)
 			{
@@ -229,6 +225,5 @@ namespace Rubeus
 			return true;
 		}
 
-		
 	}
 }
