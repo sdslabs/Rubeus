@@ -5,7 +5,7 @@ namespace Rubeus
 	namespace GraphicComponents
 	{
 		RStaticLayer::RStaticLayer(RShaderComponent& shader)
-			: m_ObjectCount(0), m_Renderer(new RGuerrillaRendererComponent()), m_Shader(shader)
+			: m_Renderer(new RGuerrillaRendererComponent()), m_Shader(shader)
 		{
 			m_Shader.enableShader();
 			m_Shader.setUniformMat4("proj_matrix", (const RML::Matrix4) RML::Matrix4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f));
@@ -29,11 +29,11 @@ namespace Rubeus
 			m_Shader.enableShader();
 			m_Renderer->begin();
 
-			for(auto item : m_Groups)
+			for(auto group = m_Groups.begin(); group != m_Groups.end(); group++)
 			{
-				for(auto renderable : item.second->renderables)
+				for(auto renderable = group->second->renderables.begin(); renderable != group->second->renderables.end(); ++renderable)
 				{
-					m_Renderer->submit(renderable);
+					m_Renderer->submit(*renderable);
 				}
 			}
 
