@@ -4,7 +4,7 @@
  * @brief	Implements the sprite class
  */
 
-#include <sprite.h>
+#include <sprite_object.h>
 
 namespace Rubeus
 {

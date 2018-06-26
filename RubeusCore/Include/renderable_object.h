@@ -9,9 +9,9 @@
 #include <GL/glew.h>
 #include <rubeus_maths_library.h>
 
-#include <buffer.h>
-#include <index_buffer.h>
-#include <vertex_array.h>
+#include <buffer_object.h>
+#include <index_buffer_object.h>
+#include <vertex_array_object.h>
 #include <shader_component.h>
 
 namespace Rubeus

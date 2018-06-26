@@ -4,7 +4,7 @@
  * @brief	Implements the vertex array class
  */
 
-#include <vertex_array.h>
+#include <vertex_array_object.h>
 
 #include <vector>
 

@@ -4,7 +4,7 @@
  * @brief	Implements the buffer class
  */
 
-#include <buffer.h>
+#include <buffer_object.h>
 
 namespace Rubeus
 {
