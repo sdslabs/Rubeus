@@ -27,8 +27,8 @@ namespace Rubeus
 		void RStaticLayer::draw()
 		{
 			m_Shader.enableShader();
-			m_Renderer->begin();
 
+			m_Renderer->begin();
 			for(auto group = m_Groups.begin(); group != m_Groups.end(); group++)
 			{
 				for(auto renderable = group->second->renderables.begin(); renderable != group->second->renderables.end(); ++renderable)
@@ -36,10 +36,9 @@ namespace Rubeus
 					m_Renderer->submit(*renderable);
 				}
 			}
-
 			m_Renderer->end();
-
 			m_Renderer->flush();
+
 			m_Shader.disableShader();
 		}
 

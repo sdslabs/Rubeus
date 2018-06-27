@@ -12,22 +12,21 @@ namespace Rubeus
 	{
 		void RGuerrillaRendererComponent::init()
 		{
-			// TODO: Add GLCall() to GL calls
-			glGenVertexArrays(1, &m_VAO);
-			glBindVertexArray(m_VAO);
+			GLCall(glGenVertexArrays(1, &m_VAO));
+			GLCall(glBindVertexArray(m_VAO));
 
-			glGenBuffers(1, &m_VBO);
-			glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
+			GLCall(glGenBuffers(1, &m_VBO));
+			GLCall(glBindBuffer(GL_ARRAY_BUFFER, m_VBO));
 
-			glBufferData(GL_ARRAY_BUFFER, BUFFER_SIZE, NULL, GL_STATIC_DRAW);
+			GLCall(glBufferData(GL_ARRAY_BUFFER, BUFFER_SIZE, NULL, GL_STATIC_DRAW));
 
-			glVertexAttribPointer(SHADER_VERTEX_LOCATION, 3, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::vertex)));
-			glVertexAttribPointer(SHADER_COLOR_LOCATION, 4, GL_UNSIGNED_INT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::color)));
+			GLCall(glVertexAttribPointer(SHADER_VERTEX_LOCATION, 3, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::vertex))));
+			GLCall(glVertexAttribPointer(SHADER_COLOR_LOCATION, 4, GL_UNSIGNED_INT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::color))));
 
-			glEnableVertexAttribArray(SHADER_VERTEX_LOCATION);
-			glEnableVertexAttribArray(SHADER_COLOR_LOCATION);
+			GLCall(glEnableVertexAttribArray(SHADER_VERTEX_LOCATION));
+			GLCall(glEnableVertexAttribArray(SHADER_COLOR_LOCATION));
 
-			glBindBuffer(GL_ARRAY_BUFFER, 0);
+			GLCall(glBindBuffer(GL_ARRAY_BUFFER, 0));
 
 			GLushort indices[INDICES_SIZE];
 
@@ -49,11 +48,12 @@ namespace Rubeus
 
 			m_IBO = new RIndexBuffer(indices, INDICES_SIZE);
 
-			glBindVertexArray(0);
+			GLCall(glBindVertexArray(0));
 		}
 
 		RGuerrillaRendererComponent::RGuerrillaRendererComponent()
 		{
+			m_IndexCount = 0;
 			init();
 		}
 
@@ -66,10 +66,9 @@ namespace Rubeus
 
 		void RGuerrillaRendererComponent::begin()
 		{
-			// TODO: Add GLCall() calls
-			glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
-			m_Buffer = (VertexData *) glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
-
+			GLCall(glBindBuffer(GL_ARRAY_BUFFER, m_VBO));
+			GLCall(m_Buffer = (VertexData *) glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY));
+			m_IndexCount = 0;
 		}
 
 		void RGuerrillaRendererComponent::submit(const RRenderableObject * renderable)
@@ -99,20 +98,19 @@ namespace Rubeus
 
 		void RGuerrillaRendererComponent::end()
 		{
-			// TODO: Add GLCall() calls
- 			glUnmapBuffer(GL_ARRAY_BUFFER);
-			glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
+ 			GLCall(glUnmapBuffer(GL_ARRAY_BUFFER));
+			GLCall(glBindBuffer(GL_ARRAY_BUFFER, m_VBO));
 		}
 
 		void RGuerrillaRendererComponent::flush()
 		{
-			glBindVertexArray(m_VAO);
+			GLCall(glBindVertexArray(m_VAO));
 			m_IBO->bindIndexBuffer();
 
-			glDrawElements(GL_TRIANGLES, m_IndexCount, GL_UNSIGNED_SHORT, NULL);
+			GLCall(glDrawElements(GL_TRIANGLES, m_IndexCount, GL_UNSIGNED_SHORT, NULL));
 
 			m_IBO->unbindIndexBuffer();
-			glBindVertexArray(0);
+			GLCall(glBindVertexArray(0));
 
 			m_IndexCount = 0;
 		}
