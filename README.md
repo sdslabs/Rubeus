@@ -4,7 +4,7 @@ A 2D game engine written in C++17 using OpenGL 3.3
 1. Be on Windows
 2. Install Microsoft Visual Studio 2017 [here](https://www.visualstudio.com/)
 3. Install CMake 3.11.2 [here](https://cmake.org/files/v3.11/cmake-3.11.2.zip)
-4. Rubeus uses Visual Leak Detector v2.5.1 for catching memory leaks. Get it [here](https://github.com/KindDragon/vld/releases/tag/v2.5.1). However, if you wish to not use this tool, just remove any mentions of `#include <vld.h>` from the code base (_good luck with that_).
+4. Rubeus uses Visual Leak Detector v2.5.1 for catching memory leaks. Get it [here](https://github.com/KindDragon/vld/releases/tag/v2.5.1). However, if you wish to not use this tool, just remove `add_definitions(-DVLD)` from /RubeusCore/CMakeLists.txt.
 5. Clone this repository wherever you like:
 ```shell
 git clone https://github.com/sdslabs/Rubeus
