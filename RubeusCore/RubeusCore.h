@@ -8,7 +8,9 @@
 
 // TODO: Reference additional headers your program requires here.
 #ifdef _DEBUG
+#ifdef VLD
 #include <vld.h>
+#endif
 #endif
 
 #include <GL\glew.h>

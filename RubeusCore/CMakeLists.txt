@@ -10,9 +10,14 @@ file(GLOB_RECURSE SOURCES
     Source/*.cpp
 )
 
+# Keep this in for letting GLEW initialise its function pointers
 add_definitions(-DGLEW_STATIC)
 
-set(_COMPILE_UNIT_TESTS_ ON CACHE BOOL "Compile unit tests") # Configurable by user 
+# Remove this line if you want to remove Visual Leak Detection(VLD) reports in Debug mode.
+# Keep this line if you want to have VLD reports to detect memory leaks
+add_definitions(-DVLD)
+
+set(_COMPILE_UNIT_TESTS_ ON CACHE BOOL "Compile unit tests") # Configurable by user
 set(OTHER_CONSTANT OFF) # Not configurable by user
 configure_file(config.h.in config.h)
 
