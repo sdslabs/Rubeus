@@ -21,11 +21,11 @@ int main()
 	RShaderComponent shader0(RShaderComponent("Shaders/basic.vertexshader", "Shaders/basic.fragmentshader"));
 	RStaticLayer layer0(shader0);
 
-	RSprite sprite1(0, 0, 4, 4, RML::Vector4D(255, 255, 255, 255).normaliseToRGBA());
-	RSprite sprite2(0.5, 0.5, 0.5, 0.5, RML::Vector4D(0.2f, 0, 1, 1));
+	RSprite sprite1(0, 0, 4, 4, RML::Vector4D(0.75f, 0.047f, 0.9f, 1.0f));
+	RSprite sprite2(0.5, 0.5, 0.5, 0.5, RML::Vector4D(0.6f, 0.0f, 1.0f, 1.0f));
 	RSprite sprite3(1, 1, 4, 4, RML::Vector4D(0, 255, 255, 255).normaliseToRGBA());
 	Group * g = new Group();
-	g->addRenderable(&sprite1).addRenderable(&sprite2).addRenderable(&sprite3);
+	g->addRenderable(&sprite2).addRenderable(&sprite1).addRenderable(&sprite3);
 	layer0.addGroup("group1", *g);
 
 	while(!GameWindow.closed())

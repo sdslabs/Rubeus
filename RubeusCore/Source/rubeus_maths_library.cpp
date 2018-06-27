@@ -235,7 +235,7 @@ namespace RML
 
 	Vector4D Vector4D::normaliseToRGBA()
 	{
-		*this = *this / Vector4D(255, 255, 255, 255);
+		*this = *this / Vector4D(255.0f, 255.0f, 255.0f, 255.0f);
 		return *this;
 	}
 
@@ -271,10 +271,10 @@ namespace RML
 
 	Vector4D & Vector4D::divide(const Vector4D & other)
 	{
-		x /= other.x;
-		y /= other.y;
-		z /= other.z;
-		w /= other.w;
+		x /= (float) other.x;
+		y /= (float) other.y;
+		z /= (float) other.z;
+		w /= (float) other.w;
 
 		return *this;
 	}

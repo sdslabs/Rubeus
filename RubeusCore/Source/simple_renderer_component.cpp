@@ -19,7 +19,7 @@ namespace Rubeus
 				sprite->getIBO()->bindIndexBuffer();
 
 				sprite->getShader().setUniformMat4("model_matrix", RML::Matrix4::translation(sprite->getPosition()));
-				glDrawElements(GL_TRIANGLES, sprite->getIBO()->getIndexCount(), GL_UNSIGNED_SHORT, 0);
+				GLCall(glDrawElements(GL_TRIANGLES, sprite->getIBO()->getIndexCount(), GL_UNSIGNED_SHORT, 0));
 
 				sprite->getIBO()->unbindIndexBuffer();
 				sprite->getVAO()->unbindVertexArray();
