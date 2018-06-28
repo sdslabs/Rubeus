@@ -1,5 +1,5 @@
 /**
- * @file	Include\vertex_array.h.
+ * @file		Include\vertex_array_object.h.
  *
  * @brief	Declares the vertex array class
  */

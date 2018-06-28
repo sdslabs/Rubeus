@@ -1,5 +1,5 @@
 /**
- * @file	Source\loader_component.cpp.
+ * @file		Source\loader_component.cpp.
  *
  * @brief	Implements the loader component class
  */

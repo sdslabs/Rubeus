@@ -1,5 +1,5 @@
 /**
- * @file	Source\c_Master_Component\master.h.
+ * @file		Source\master_component.h.
  *
  * @brief	Declares the master class
  */
@@ -7,7 +7,7 @@
 #pragma once
 
 #include <string>
-#include <map>
+#include <unordered_map>
 #include <typeinfo>
 
 #include <logger_component.h>
@@ -46,7 +46,7 @@ namespace Rubeus
 		static unsigned int componentsInitialised;
 
 		/** @brief	The component table */
-		static std::map<unsigned int, RMasterComponent *> m_ComponentMap;
+		static std::unordered_map<unsigned int, RMasterComponent *> m_ComponentMap;
 
 		/**
 		* @fn	MasterComponent::MasterComponent();

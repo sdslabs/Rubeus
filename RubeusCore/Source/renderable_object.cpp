@@ -1,5 +1,5 @@
 /**
- * @file	Source\renderable_object.cpp.
+ * @file		Source\renderable_object.cpp.
  *
  * @brief	Implements the renderable object class
  */

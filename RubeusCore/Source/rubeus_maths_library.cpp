@@ -1,3 +1,9 @@
+/**
+ * @file		Source\rubeus_maths_library.cpp.
+ *
+ * @brief	Implements the RML (Rubeus Maths Library)
+ */
+
 #pragma once
 
 #include <rubeus_maths_library.h>

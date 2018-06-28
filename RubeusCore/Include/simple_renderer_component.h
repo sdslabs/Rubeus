@@ -1,3 +1,9 @@
+/**
+ * @file		Include\simple_renderer_component.h.
+ *
+ * @brief	Declares the simple renderer
+ */
+
 #pragma once
 
 #include <deque>

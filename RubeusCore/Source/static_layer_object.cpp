@@ -1,3 +1,9 @@
+/**
+ * @file		Source\static_layer_object.cpp.
+ *
+ * @brief	Implements the static layer object class
+ */
+
 #include <static_layer_object.h>
 
 namespace Rubeus
@@ -17,9 +23,9 @@ namespace Rubeus
 			delete m_Renderer;
 		}
 
-		RLayer & RStaticLayer::addGroup(std::string name, Group & group)
+		RLayer & RStaticLayer::addGroup(Group & group)
 		{
-			m_Groups[name] = &group;
+			m_Groups.push_back(&group);
 
 			return *this;
 		}
@@ -29,22 +35,18 @@ namespace Rubeus
 			m_Shader.enableShader();
 
 			m_Renderer->begin();
-			for(auto group = m_Groups.begin(); group != m_Groups.end(); group++)
+			for(int i= 0; i < m_Groups.size(); i++)
 			{
-				for(auto renderable = group->second->renderables.begin(); renderable != group->second->renderables.end(); ++renderable)
+				auto temp = m_Groups[i]->renderables;
+				for(int p = 0; p < temp.size(); p++)
 				{
-					m_Renderer->submit(*renderable);
+					m_Renderer->submit(&temp[p]);
 				}
 			}
 			m_Renderer->end();
 			m_Renderer->flush();
 
 			m_Shader.disableShader();
-		}
-
-		void RStaticLayer::removeGroup(std::string name)
-		{
-			m_Groups.erase(name);
 		}
 	}
 }

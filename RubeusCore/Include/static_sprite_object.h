@@ -1,5 +1,5 @@
 /**
- * @file	Include\static_sprite.h.
+ * @file		Include\static_sprite_object.h.
  *
  * @brief	Declares the static sprite class
  */

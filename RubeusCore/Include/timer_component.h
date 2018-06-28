@@ -1,5 +1,5 @@
 /**
- * @file	Include\timer_component.h.
+ * @file		Include\timer_component.h.
  *
  * @brief	Declares the timer component class
  */
