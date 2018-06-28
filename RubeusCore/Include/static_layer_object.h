@@ -47,7 +47,7 @@ namespace Rubeus
 			RStaticLayer(RShaderComponent& shader);
 
 			/**
-			 * @fn	virtual ~RStaticLayer()
+			 * @fn		virtual ~RStaticLayer()
 			 *
 			 * @brief	Destructor
 			 */
