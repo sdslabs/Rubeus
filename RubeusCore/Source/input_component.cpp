@@ -1,16 +1,11 @@
 #pragma once
 
-#include <window.h>
 #include <input_component.h>
-#include <GL\glew.h>
-#include <GLFW\glfw3.h>
 
 namespace Rubeus
 {
 	namespace GraphicComponents
 	{
-
-	
 		void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos)
 		
 		{
@@ -42,10 +37,6 @@ namespace Rubeus
 				std::cout << "Space Key Pressed" << std::endl;
 			}
 		}
-
-
-
-
 	}
 		
 }
