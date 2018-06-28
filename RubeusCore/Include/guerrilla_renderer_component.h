@@ -1,7 +1,7 @@
 /**
- * @file	Include\guerrilla_renderer_component.h.
+ * @file		Include\guerrilla_renderer_component.h.
  *
- * @brief	Declares the guerrilla renderer component class
+ * @brief	Declares the guerrilla renderer component class.
  */
 
 #pragma once

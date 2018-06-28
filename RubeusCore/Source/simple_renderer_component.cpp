@@ -1,3 +1,9 @@
+/**
+ * @file		Source\simple_renderer_component.cpp.
+ *
+ * @brief	Implements the simple renderer
+ */
+
 #include <simple_renderer_component.h>
 
 namespace Rubeus

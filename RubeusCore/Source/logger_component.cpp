@@ -1,5 +1,5 @@
 /**
- * @file	Source\logger_component.cpp.
+ * @file		Source\logger_component.cpp.
  *
  * @brief	Implements the logger component functions
  */

@@ -1,3 +1,9 @@
+/**
+ * @file		Include\group_object.h
+ *
+ * @brief	Declares the group structure.
+ */
+
 #pragma once
 
 #include <vector>
@@ -9,7 +15,7 @@ namespace Rubeus
 	{
 		struct Group
 		{
-			std::vector<RRenderableObject *> renderables;
+			std::vector<RRenderableObject> renderables;
 
 			Group & addRenderable(RRenderableObject * renderable);
 		};

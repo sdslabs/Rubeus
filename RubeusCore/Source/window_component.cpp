@@ -1,5 +1,5 @@
 /**
- * @file	Source\c_Window\window.cpp.
+ * @file		Source\window_component.cpp.
  *
  * @brief	Implements the RWindowComponent class
  */

@@ -1,5 +1,5 @@
 /**
- * @file	Source\sprite.cpp.
+ * @file		Source\sprite.cpp.
  *
  * @brief	Implements the sprite class
  */

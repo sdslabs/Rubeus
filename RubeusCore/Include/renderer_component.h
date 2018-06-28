@@ -1,5 +1,5 @@
 /**
- * @file	Include\renderer_component.h.
+ * @file		Include\renderer_component.h.
  *
  * @brief	Declares the renderer component abstract class
  */

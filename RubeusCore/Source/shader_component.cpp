@@ -1,5 +1,5 @@
 /**
- * @file	Source\shader_component.cpp.
+ * @file		Source\shader_component.cpp.
  *
  * @brief	Implements the shader component class
  */
@@ -136,12 +136,12 @@ namespace Rubeus
 
 		void RShaderComponent::enableShader() const
 		{
-			GLCall(glUseProgram(m_ShaderID));
+			glUseProgram(m_ShaderID);
 		}
 
 		void RShaderComponent::disableShader() const
 		{
-			GLCall(glUseProgram(0));
+			glUseProgram(0);
 		}
 	}
 }

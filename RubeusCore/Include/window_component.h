@@ -1,5 +1,5 @@
 /**
- * @file	Source\c_Window\window.h.
+ * @file		Include\window_component.h.
  *
  * @brief	Declares the window class and error callbacks for GLFW
  */
