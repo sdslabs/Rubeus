@@ -23,16 +23,7 @@ int main()
 	RStaticLayer * layer0 = new RStaticLayer(shader0);
 
 	Group * g = new Group();
-	long int count = 0;
-	for(float x = 0; x < 16.0f; x+=0.2f)
-		for(float y = 0; y < 9.0f; y+=0.08f)
-		{
-			count++;
-			RSprite * p = new RSprite(x, y, 0.07, 0.07, Vector4D(0, 0.2, 1, 1));
-			g->addRenderable(p);
-			delete p;
-		}
-	LOG(count);
+	g->addRenderable(&RSprite(1, 1, 14, 7, Vector4D(0.7, 0.3, 0.5, 1)));
 
 	layer0->addGroup(*g);
 
