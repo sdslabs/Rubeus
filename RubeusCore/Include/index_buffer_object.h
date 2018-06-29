@@ -18,9 +18,6 @@ namespace Rubeus
 		 * @class	RIndexBuffer
 		 *
 		 * @brief	A buffer class that handles generating and binding OpenGL index buffers.
-		 *
-		 * @author	Twarit
-		 * @date	13-06-2018
 		 */
 		class RIndexBuffer
 		{
@@ -38,9 +35,6 @@ namespace Rubeus
 			 *
 			 * @brief	Constructor. Generates a buffer object and applies its layout.
 			 *
-			 * @author	Twarit
-			 * @date	13-06-2018
-			 *
 			 * @param [in,out]	data 	If non-null, the data.
 			 * @param 		  	count	Number of indices specified.
 			 */
@@ -50,9 +44,6 @@ namespace Rubeus
 			 * @fn	RIndexBuffer::~RIndexBuffer();
 			 *
 			 * @brief	Destructor
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 */
 			~RIndexBuffer();
 
@@ -60,9 +51,6 @@ namespace Rubeus
 			 * @fn	void RIndexBuffer::bindIndexBuffer() const;
 			 *
 			 * @brief	Binds this index buffer
-			 *
-			 * @author	Twarit
-			 * @date	13-06-2018
 			 */
 			void bindIndexBuffer() const;
 
@@ -70,9 +58,6 @@ namespace Rubeus
 			 * @fn	void RIndexBuffer::unbindIndexBuffer() const;
 			 *
 			 * @brief	Unbinds this index buffer
-			 *
-			 * @author	Twarit
-			 * @date	13-06-2018
 			 */
 			void unbindIndexBuffer() const;
 
@@ -80,9 +65,6 @@ namespace Rubeus
 			 * @fn	inline GLuint RIndexBuffer::getElementCount()
 			 *
 			 * @brief	Gets number of indices in this buffer
-			 *
-			 * @author	Twarit
-			 * @date	13-06-2018
 			 *
 			 * @return	The index count.
 			 */

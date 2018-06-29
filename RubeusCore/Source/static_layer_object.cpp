@@ -23,7 +23,7 @@ namespace Rubeus
 			delete m_Renderer;
 		}
 
-		RLayer & RStaticLayer::addGroup(Group & group)
+		RLayer & RStaticLayer::addGroup(RGroup & group)
 		{
 			m_Groups.push_back(&group);
 
@@ -40,7 +40,7 @@ namespace Rubeus
 				auto temp = m_Groups[i]->renderables;
 				for(size_t p = 0; p < temp.size(); p++)
 				{
-					m_Renderer->submit(&temp[p]);
+					temp[p].submit(*m_Renderer);
 				}
 			}
 			m_Renderer->end();

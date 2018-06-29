@@ -18,9 +18,6 @@ namespace Rubeus
 		 * @class	RBuffer
 		 *
 		 * @brief	A buffer class that handles generating and binding OpenGL buffers.
-		 *
-		 * @author	Twarit
-		 * @date	13-06-2018
 		 */
 		class RBuffer
 		{
@@ -38,11 +35,8 @@ namespace Rubeus
 			 *
 			 * @brief	Constructor. Generates a buffer object and applies its layout.
 			 *
-			 * @author	Twarit
-			 * @date	13-06-2018
-			 *
 			 * @param [in,out]	data			If non-null, the data.
-			 * @param 		  	count			Number of total units of data values.
+			 * @param 		  	count		Number of total units of data values.
 			 * @param 		  	elementCount	Number of elements.
 			 */
 			RBuffer(GLfloat * data, GLsizei count, GLuint elementCount);
@@ -51,9 +45,6 @@ namespace Rubeus
 			 * @fn	RBuffer::~RBuffer();
 			 *
 			 * @brief	Destructor
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 */
 			~RBuffer();
 
@@ -61,9 +52,6 @@ namespace Rubeus
 			 * @fn	void RBuffer::bindBuffer() const;
 			 *
 			 * @brief	Binds this buffer
-			 *
-			 * @author	Twarit
-			 * @date	13-06-2018
 			 */
 			void bindBuffer() const;
 
@@ -71,9 +59,6 @@ namespace Rubeus
 			 * @fn	void RBuffer::unbindBuffer() const;
 			 *
 			 * @brief	Unbinds buffer
-			 *
-			 * @author	Twarit
-			 * @date	13-06-2018
 			 */
 			void unbindBuffer() const;
 
@@ -81,9 +66,6 @@ namespace Rubeus
 			 * @fn	inline GLuint RBuffer::getElementCount()
 			 *
 			 * @brief	Gets number of elements in this buffer
-			 *
-			 * @author	Twarit
-			 * @date	13-06-2018
 			 *
 			 * @return	The element count.
 			 */

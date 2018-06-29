@@ -19,9 +19,6 @@ namespace Rubeus
 		 * @class	RVertexArray
 		 *
 		 * @brief	A vertex array class that handles vertex and index buffer bindings.
-		 *
-		 * @author	Twarit
-		 * @date	13-06-2018
 		 */
 		class RVertexArray
 		{
@@ -38,9 +35,6 @@ namespace Rubeus
 			 * @fn	RVertexArray::RVertexArray();
 			 *
 			 * @brief	Default constructor. Acquires a vertex array object ID from OpenGL
-			 *
-			 * @author	Twarit
-			 * @date	13-06-2018
 			 */
 			RVertexArray();
 
@@ -48,9 +42,6 @@ namespace Rubeus
 			 * @fn	RVertexArray::~RVertexArray();
 			 *
 			 * @brief	Destructor
-			 *
-			 * @author	Twarit
-			 * @date	13-06-2018
 			 */
 			~RVertexArray();
 
@@ -58,9 +49,6 @@ namespace Rubeus
 			 * @fn	void RVertexArray::addBuffer(RBuffer * buffer, GLuint index);
 			 *
 			 * @brief	Adds a buffer to the specified shader ID
-			 *
-			 * @author	Twarit
-			 * @date	13-06-2018
 			 *
 			 * @param [in,out]	buffer	If non-null, the buffer.
 			 * @param 		  	index 	The location specified in shader to add a buffer to.
@@ -71,9 +59,6 @@ namespace Rubeus
 			 * @fn	void RVertexArray::bindVertexArray();
 			 *
 			 * @brief	Bind this vertex array
-			 *
-			 * @author	Twarit
-			 * @date	13-06-2018
 			 */
 			void bindVertexArray() const;
 
@@ -81,9 +66,6 @@ namespace Rubeus
 			 * @fn	void RVertexArray::unbindVertexArray();
 			 *
 			 * @brief	Unbind this vertex array
-			 *
-			 * @author	Twarit
-			 * @date	13-06-2018
 			 */
 			void unbindVertexArray() const;
 

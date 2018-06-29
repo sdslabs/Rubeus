@@ -8,6 +8,7 @@
 
 #include <vector>
 #include <renderable_object.h>
+#include <guerrilla_renderer_component.h>
 
 namespace Rubeus
 {
@@ -18,10 +19,16 @@ namespace Rubeus
 		 *
 		 * @brief	A group of objects in a family based hierarchy.
 		 */
-		struct Group
+		class RGroup : public RRenderableObject
 		{
+		public:
+			RGroup(RRenderableObject renderable);
+			~RGroup();
+
 			/** @brief	Vector array of renderables. */
 			std::vector<RRenderableObject> renderables;
+
+			void submit(RRendererComponent & renderer);
 
 			/**
 			 * @fn		Group & addRenderable(RRenderableObject * renderable)
@@ -33,7 +40,7 @@ namespace Rubeus
 			 *
 			 * @return	Reference to this group object. Allows chaining addRenderable() calls. E.g. group.addRenderable(r1).addRenderable(r2);
 			 */
-			Group & addRenderable(RRenderableObject * renderable);
+			RGroup & addRenderable(RRenderableObject * renderable);
 		};
 	}
 }

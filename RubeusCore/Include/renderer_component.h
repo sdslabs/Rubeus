@@ -9,19 +9,16 @@
 #include <GL/glew.h>
 #include <rubeus_maths_library.h>
 
-#include <renderable_object.h>
-
 namespace Rubeus
 {
 	namespace GraphicComponents
 	{
+		class RRenderableObject;
+
 		/**
 		 * @class	RRendererComponent
 		 *
 		 * @brief	A renderer component abstraction.
-		 *
-		 * @author	Twarit
-		 * @date	14-06-2018
 		 */
 		class RRendererComponent : public RMasterComponent
 		{
@@ -32,9 +29,6 @@ namespace Rubeus
 			 *
 			 * @brief	Submits the given renderable object to render queue
 			 *
-			 * @author	Twarit
-			 * @date	14-06-2018
-			 *
 			 * @param	renderable	The renderable.
 			 */
 			virtual void submit(const RRenderableObject * renderable) = 0;
@@ -43,9 +37,6 @@ namespace Rubeus
 			 * @fn	virtual void RRendererComponent::flush() = 0;
 			 *
 			 * @brief	Flushes the render objects' queue after displaying them
-			 *
-			 * @author	Twarit
-			 * @date	14-06-2018
 			 */
 			virtual void flush() = 0;
 		};

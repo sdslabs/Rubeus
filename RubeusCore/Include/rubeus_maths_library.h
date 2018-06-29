@@ -17,9 +17,6 @@ namespace RML
 		*
 		* @brief	Converts degree to radians
 		*
-		* @author	Twarit
-		* @date	28-05-2018
-		*
 		* @param	degree	The degree.
 		*
 		* @return	Radians in float.
@@ -33,9 +30,6 @@ namespace RML
 		* @struct	Vector2D
 		*
 		* @brief	A vector in 2D.
-		*
-		* @author	Twarit
-		* @date	27-05-2018
 		*/
 	struct Vector2D
 	{
@@ -49,10 +43,7 @@ namespace RML
 			* @fn	Vector2D();
 			*
 			* @brief	Default constructor
-			* 			Initialises a Vector2D with (0,0)
-			*
-			* @author	Twarit
-			* @date	27-05-2018
+			* 		Initialises a Vector2D with (0,0)
 			*/
 		Vector2D();
 
@@ -60,9 +51,6 @@ namespace RML
 			* @fn	Vector2D(const float &x, const float &y);
 			*
 			* @brief	Constructor
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	x	The x coordinate.
 			* @param	y	The y coordinate.
@@ -73,9 +61,6 @@ namespace RML
 			* @fn	float getLength(Vector2D& vector) const;
 			*
 			* @brief	Gets length of vector
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param [in,out]	vector	The vector.
 			*
@@ -88,9 +73,6 @@ namespace RML
 			*
 			* @brief	Adds other
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	other	The other to add.
 			*
 			* @return	A reference to a Vector2D.
@@ -102,9 +84,6 @@ namespace RML
 			*
 			* @brief	Subtracts the given other
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	other	The other.
 			*
 			* @return	A reference to a Vector2D.
@@ -115,9 +94,6 @@ namespace RML
 			* @fn	Vector2D& multiply(const Vector2D &other);
 			*
 			* @brief	Multiplies the given other
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	other	The other.
 			*
@@ -132,9 +108,6 @@ namespace RML
 			* 			other vector.
 			* 			Returns [a/x , b/y] if [a , b] is divided by [x , y]
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	other	The other.
 			*
 			* @return	A reference to a Vector2D.
@@ -146,9 +119,6 @@ namespace RML
 			* @fn	std::ostream& operator<<(std::ostream& stream, const Vector2D& vector)
 			*
 			* @brief	Put to operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	stream	The output stream.
 			* @param	vector	The vector to be put to stream.
@@ -162,9 +132,6 @@ namespace RML
 			*
 			* @brief	Addition operator
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	left	The left operand.
 			* @param	right	The right operand.
 			*
@@ -176,9 +143,6 @@ namespace RML
 			* @fn	Vector2D& operator-(Vector2D left, const Vector2D &right);
 			*
 			* @brief	Subtraction operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	left	The left operand.
 			* @param	right	The right operand.
@@ -192,9 +156,6 @@ namespace RML
 			*
 			* @brief	Multiplication operator
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	left	The left operand.
 			* @param	right	The right operand.
 			* 					
@@ -206,9 +167,6 @@ namespace RML
 			* @fn	Vector2D& operator/(Vector2D left, const Vector2D &right);
 			*
 			* @brief	Division operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	left	The left operand.
 			* @param	right	The right operand.
@@ -222,9 +180,6 @@ namespace RML
 			*
 			* @brief	Equality operator
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	other	The other.
 			*
 			* @return	True if the parameters are considered equivalent.
@@ -235,9 +190,6 @@ namespace RML
 			* @fn	bool operator!=(const Vector2D &other);
 			*
 			* @brief	Inequality operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	other	The other.
 			*
@@ -250,9 +202,6 @@ namespace RML
 			*
 			* @brief	Addition assignment operator
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	other	The other.
 			*
 			* @return	The result of the operation.
@@ -263,9 +212,6 @@ namespace RML
 			* @fn	Vector2D& operator-=(const Vector2D &other);
 			*
 			* @brief	Subtraction assignment operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	other	The other.
 			*
@@ -278,9 +224,6 @@ namespace RML
 			*
 			* @brief	Multiplication assignment operator
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	other	The other.
 			*
 			* @return	The result of the operation.
@@ -291,9 +234,6 @@ namespace RML
 			* @fn	Vector2D& operator/=(const Vector2D &other);
 			*
 			* @brief	Division assignment operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	other	The other.
 			*
@@ -306,9 +246,6 @@ namespace RML
 	 * @struct	Vector3D
 	 *
 	 * @brief	A vector 3d.
-	 *
-	 * @author	Twarit
-	 * @date	29-05-2018
 	 */
 	struct Vector3D
 	{
@@ -325,9 +262,6 @@ namespace RML
 			* @fn	Vector3D();
 			*
 			* @brief	Default constructor
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*/
 		Vector3D();
 
@@ -335,9 +269,6 @@ namespace RML
 			* @fn	Vector3D(const float &x, const float &y, const float &z);
 			*
 			* @brief	Constructor
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	x	The x coordinate.
 			* @param	y	The y coordinate.
@@ -350,9 +281,6 @@ namespace RML
 			*
 			* @brief	Gets length of vector
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param [in,out]	vector	The vector.
 			*
 			* @return	The length.
@@ -363,9 +291,6 @@ namespace RML
 			* @fn	Vector3D& add(const Vector3D &other);
 			*
 			* @brief	Adds other
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	other	The other to add.
 			*
@@ -378,9 +303,6 @@ namespace RML
 			*
 			* @brief	Subtracts the given other
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	other	The other.
 			*
 			* @return	A reference to a Vector3D.
@@ -391,9 +313,6 @@ namespace RML
 			* @fn	Vector3D& multiply(const Vector3D &other);
 			*
 			* @brief	Multiplies the given other
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	other	The other.
 			*
@@ -407,9 +326,6 @@ namespace RML
 			* @brief	Divides the given other.
 			* 			Returns [a/x , b/y , c/z] if [a , b , c] is divided by [x , y , z]
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	other	The other.
 			*
 			* @return	A reference to a Vector3D.
@@ -420,9 +336,6 @@ namespace RML
 			* @fn	std::ostream& operator<<(std::ostream& stream, const Vector3D& vector);
 			*
 			* @brief	Put to operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	stream	Reference to the stream to be put to.
 			* @param	vector	Vector3D to be put to stream object.
@@ -436,9 +349,6 @@ namespace RML
 			*
 			* @brief	Addition operator
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	left	The left operand.
 			* @param	right	The right operand.
 			*
@@ -450,9 +360,6 @@ namespace RML
 			* @fn	Vector3D& operator-(Vector3D left, const Vector3D &right);
 			*
 			* @brief	Subtraction operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	left	The left operand.
 			* @param	right	The right operand.
@@ -466,9 +373,6 @@ namespace RML
 			*
 			* @brief	Multiplication operator
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	left	The left operand.
 			* @param	right	The right operand.
 			*
@@ -480,9 +384,6 @@ namespace RML
 			* @fn	Vector3D& operator/(Vector3D left, const Vector3D &right);
 			*
 			* @brief	Division operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	left	The left operand.
 			* @param	right	The right operand.
@@ -496,9 +397,6 @@ namespace RML
 			*
 			* @brief	Equality operator
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	other	The other.
 			*
 			* @return	True if the parameters are considered equivalent.
@@ -509,9 +407,6 @@ namespace RML
 			* @fn	bool operator!=(const Vector3D &other);
 			*
 			* @brief	Inequality operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	other	The other.
 			*
@@ -524,9 +419,6 @@ namespace RML
 			*
 			* @brief	Addition assignment operator
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	other	The other.
 			*
 			* @return	The result of the operation.
@@ -537,9 +429,6 @@ namespace RML
 			* @fn	Vector3D& operator-=(const Vector3D &other);
 			*
 			* @brief	Subtraction assignment operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	other	The other.
 			*
@@ -552,9 +441,6 @@ namespace RML
 			*
 			* @brief	Multiplication assignment operator
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	other	The other.
 			*
 			* @return	The result of the operation.
@@ -565,9 +451,6 @@ namespace RML
 			* @fn	Vector3D& operator/=(const Vector3D &other);
 			*
 			* @brief	Division assignment operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	other	The other.
 			*
@@ -580,9 +463,6 @@ namespace RML
 		* @struct	Vector4D
 		*
 		* @brief	A vector in 4d.
-		*
-		* @author	Twarit
-		* @date	27-05-2018
 		*/
 	struct Vector4D
 	{
@@ -602,9 +482,6 @@ namespace RML
 			* @fn	Vector4D() = default;
 			*
 			* @brief	Default constructor
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*/
 		Vector4D() = default;
 
@@ -612,9 +489,6 @@ namespace RML
 			* @fn	Vector4D(const float &x, const float &y, const float &z, const float &w);
 			*
 			* @brief	Constructor
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	x	The x coordinate.
 			* @param	y	The y coordinate.
@@ -628,9 +502,6 @@ namespace RML
 			*
 			* @brief	Gets length of vector
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param [in,out]	vector	The vector.
 			*
 			* @return	The length.
@@ -643,9 +514,7 @@ namespace RML
 		 * @brief	Normalise color values to OpenGL supporting RGBA. Eg. (128, 128, 128, 255) => (0.5f,
 		 * 			0.5f, 0.5f, 1.0f)
 		 *
-		 * @author	Twarit
-		 * @date	22-06-2018
-		 *
+		 * @return	Color Vector4D with normalised values
 		 */
 		Vector4D normaliseToRGBA();
 
@@ -653,9 +522,6 @@ namespace RML
 			* @fn	Vector4D& add(const Vector4D &other);
 			*
 			* @brief	Adds other
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	other	The other to add.
 			*
@@ -668,9 +534,6 @@ namespace RML
 			*
 			* @brief	Subtracts the given other
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	other	The other.
 			*
 			* @return	A reference to a Vector4D.
@@ -681,9 +544,6 @@ namespace RML
 			* @fn	Vector4D& multiply(const Vector4D &other);
 			*
 			* @brief	Multiplies the given other
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	other	The other.
 			*
@@ -697,9 +557,6 @@ namespace RML
 			* @brief	Divides the given other.
 			* 			Returns [a/x , b/y , c/z , d/w] if [a , b , c , d] is divided by [x , y , z , w]
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	other	The other.
 			*
 			* @return	A reference to a Vector4D.
@@ -710,9 +567,6 @@ namespace RML
 			* @fn	std::ostream& operator<<(std::ostream& stream, const Vector4D& vector);
 			*
 			* @brief	Put to operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	stream	Reference to the stream to be put to.
 			* @param	vector	Vector4D to be put to stream object.
@@ -726,9 +580,6 @@ namespace RML
 			*
 			* @brief	Addition operator
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	left	The left operand.
 			* @param	right	The right operand.
 			*
@@ -740,9 +591,6 @@ namespace RML
 			* @fn	Vector4D& operator-(Vector4D left, const Vector4D &right);
 			*
 			* @brief	Subtraction operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	left	The left operand.
 			* @param	right	The right operand.
@@ -756,9 +604,6 @@ namespace RML
 			*
 			* @brief	Multiplication operator
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	left	The left operand.
 			* @param	right	The right operand.
 			*
@@ -770,9 +615,6 @@ namespace RML
 			* @fn	Vector4D& operator/(Vector4D left, const Vector4D &right);
 			*
 			* @brief	Division operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	left	The left operand.
 			* @param	right	The right operand.
@@ -786,9 +628,6 @@ namespace RML
 			*
 			* @brief	Equality operator
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	other	The other.
 			*
 			* @return	True if the parameters are considered equivalent.
@@ -799,9 +638,6 @@ namespace RML
 			* @fn	bool operator!=(const Vector4D &other);
 			*
 			* @brief	Inequality operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	other	The other.
 			*
@@ -814,9 +650,6 @@ namespace RML
 			*
 			* @brief	Addition assignment operator
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	other	The other.
 			*
 			* @return	The result of the operation.
@@ -827,9 +660,6 @@ namespace RML
 			* @fn	Vector4D& operator-=(const Vector4D &other);
 			*
 			* @brief	Subtraction assignment operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	other	The other.
 			*
@@ -842,9 +672,6 @@ namespace RML
 			*
 			* @brief	Multiplication assignment operator
 			*
-			* @author	Twarit
-			* @date	27-05-2018
-			*
 			* @param	other	The other.
 			*
 			* @return	The result of the operation.
@@ -855,9 +682,6 @@ namespace RML
 			* @fn	Vector4D& operator/=(const Vector4D &other);
 			*
 			* @brief	Division assignment operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	other	The other.
 			*
@@ -870,9 +694,6 @@ namespace RML
 	 * @struct	Matrix4
 	 *
 	 * @brief	A matrix 4.
-	 *
-	 * @author	Twarit
-	 * @date	29-05-2018
 	 */
 	struct Matrix4
 	{
@@ -880,9 +701,6 @@ namespace RML
 			* @union	Unnamed
 			*
 			* @brief	An unnamed union. Used to refer to Matrix4 columns as an array of Vector4Ds
-			*
-			* @author	Twarit
-			* @date	28-05-2018
 			*/
 		union
 		{
@@ -897,9 +715,6 @@ namespace RML
 			* @fn	Matrix4();
 			*
 			* @brief	Default constructor
-			*
-			* @author	Twarit
-			* @date	28-05-2018
 			*/
 		Matrix4();
 
@@ -907,9 +722,6 @@ namespace RML
 			* @fn	Matrix4(float diagonal);
 			*
 			* @brief	Constructor. Initialises Matrix4 with a diagonal matrix
-			*
-			* @author	Twarit
-			* @date	28-05-2018
 			*
 			* @param	diagonal	The diagonal.
 			*/
@@ -920,9 +732,6 @@ namespace RML
 			*
 			* @brief	Gets an identity Matrix4
 			*
-			* @author	Twarit
-			* @date	28-05-2018
-			*
 			* @return	A Matrix4.
 			*/
 		static Matrix4 identity();
@@ -931,9 +740,6 @@ namespace RML
 			* @fn	Matrix4& multiply(const Matrix4& other);
 			*
 			* @brief	Multiplies the given other
-			*
-			* @author	Twarit
-			* @date	28-05-2018
 			*
 			* @param	other	The other.
 			*
@@ -945,9 +751,6 @@ namespace RML
 			* @fn	std::ostream& operator<<(std::ostream& stream, const Matrix4& matrix)
 			*
 			* @brief	Put to operator
-			*
-			* @author	Twarit
-			* @date	27-05-2018
 			*
 			* @param	stream	The output stream.
 			* @param	matrix	The matrix to be put to stream.
@@ -961,9 +764,6 @@ namespace RML
 			*
 			* @brief	Addition operator
 			*
-			* @author	Twarit
-			* @date		28-05-2018
-			*
 			* @param	left 	The first value.
 			* @param	right	A value to add to it.
 			*
@@ -976,9 +776,6 @@ namespace RML
 			*
 			* @brief	Multiplication assignment operator
 			*
-			* @author	Twarit
-			* @date	28-05-2018
-			*
 			* @param	other	The other.
 			*
 			* @return	The result of the operation.
@@ -989,9 +786,6 @@ namespace RML
 			* @fn	static Matrix4 orthographic(float left, float right, float bottom, float top, float near, float far);
 			*
 			* @brief	Returns an orthographic matrix.
-			*
-			* @author	Twarit
-			* @date	28-05-2018
 			*
 			* @param	left  	The left parameter.
 			* @param	right 	The right parameter.
@@ -1009,9 +803,6 @@ namespace RML
 			*
 			* @brief	Returns a perspective matrix.
 			*
-			* @author	Twarit
-			* @date	28-05-2018
-			*
 			* @param	fov		   	The field of view.
 			* @param	aspectRatio	The aspect ratio.
 			* @param	near	   	The near parameter.
@@ -1027,9 +818,6 @@ namespace RML
 			* @brief	Returns a translation matrix, which translates by amounts defined by the translation
 			* 			vector parameter
 			*
-			* @author	Twarit
-			* @date	28-05-2018
-			*
 			* @param	translation	The translation vector.
 			*
 			* @return	A Matrix4.
@@ -1042,9 +830,6 @@ namespace RML
 			* @brief	Returns a rotation matrix, which rotates by amount defined by angle parameter about
 			* 			the axis defined by the axis parameter
 			*
-			* @author	Twarit
-			* @date	28-05-2018
-			*
 			* @param	angle	The angle to be rotated by.
 			* @param	axis 	The axis to be rotated about.
 			*
@@ -1056,9 +841,6 @@ namespace RML
 			* @fn	static Matrix4 scale(const Vector3D scale);
 			*
 			* @brief	Returns a scaling matrix, that scales by amounts defined by scale parameter.
-			*
-			* @author	Twarit
-			* @date	28-05-2018
 			*
 			* @param	scale	The scale vector.
 			*

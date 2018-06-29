@@ -30,9 +30,6 @@ namespace Rubeus
 		 * @class	RLoaderComponent
 		 *
 		 * @brief	A loader component. Useful for file I/O
-		 *
-		 * @author	Twarit
-		 * @date	26-05-2018
 		 */
 		class RLoaderComponent : RMasterComponent
 		{
@@ -44,9 +41,6 @@ namespace Rubeus
 			 *
 			 * @brief	Loads text file to a string using streams
 			 *
-			 * @author	Twarit
-			 * @date	09-06-2018
-			 *
 			 * @param	filePath	Full pathname of the file.
 			 *
 			 * @return	The text file stream.
@@ -57,9 +51,6 @@ namespace Rubeus
 			 * @fn	static auto RLoaderComponent::LoadImageWindows(std::string path);
 			 *
 			 * @brief	Loads image for Windows platform
-			 *
-			 * @author	Twarit
-			 * @date	26-05-2018
 			 *
 			 * @param	path	Full pathname of the file.
 			 *

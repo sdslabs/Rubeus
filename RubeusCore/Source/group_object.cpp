@@ -10,7 +10,21 @@ namespace Rubeus
 {
 	namespace GraphicComponents
 	{
-		Group & Group::addRenderable(RRenderableObject * renderable)
+		RGroup::RGroup(RRenderableObject renderable)
+			: RRenderableObject(renderable)
+		{
+		}
+
+		RGroup::~RGroup()
+		{
+		}
+
+		void RGroup::submit(RGuerrillaRendererComponent & renderer)
+		{
+			renderer.push()
+		}
+
+		RGroup & RGroup::addRenderable(RRenderableObject * renderable)
 		{
 			renderables.push_back(*renderable);
 
