@@ -38,9 +38,6 @@ namespace Rubeus
 		 *
 		 * @brief	Gets GLFW error logs
 		 *
-		 * @author	Twarit
-		 * @date	27-05-2018
-		 *
 		 * @param	error	   	The error.
 		 * @param	description	The description.
 		 */
@@ -50,9 +47,6 @@ namespace Rubeus
 		* @class	RWindowComponent
 		*
 		* @brief	A window component that bridges GLFW function calls to handle Rubeus game window.
-		*
-		* @author	Twarit
-		* @date	26-05-2018
 		*/
 		class RWindowComponent : public RMasterComponent
 		{
@@ -79,9 +73,6 @@ namespace Rubeus
 			 * @brief	Initializes the Rubeus game window.
 			 * 			Use enum EWindowParameters for windowMode and windowType
 			 *
-			 * @author	Twarit
-			 * @date	26-05-2018
-			 *
 			 * @param	title	  	The title of the window to be formed.
 			 * @param	width	  	The width of the window to be formed.
 			 * @param	height	  	The height of the window to be formed.
@@ -99,9 +90,6 @@ namespace Rubeus
 			 *
 			 * @brief	Constructor. Use enum EWindowParameters for windowMode and windowType
 			 *
-			 * @author	Twarit
-			 * @date	26-05-2018
-			 *
 			 * @param	title	  	The title of the window to be formed.
 			 * @param	width	  	The width of the window to be formed in pixels.
 			 * @param	height	  	The height of the window to be formed in pixels.
@@ -116,9 +104,6 @@ namespace Rubeus
 			* @fn	RWindowComponent::~RWindowComponent();
 			*
 			* @brief	Destructor
-			*
-			* @author	Twarit
-			* @date	26-05-2018
 			*/
 			~RWindowComponent();
 
@@ -126,9 +111,6 @@ namespace Rubeus
 			* @fn	void RWindowComponent::clearWindow();
 			*
 			* @brief	Clears the window with a color buffer
-			*
-			* @author	Twarit
-			* @date	26-05-2018
 			*/
 			void clearWindow();
 
@@ -138,9 +120,6 @@ namespace Rubeus
 			* @brief	Updates the window
 			* 			Polls GLFW for any changes
 			* 			Then swaps the buffers
-			*
-			* @author	Twarit
-			* @date	26-05-2018
 			*/
 			void updateWindow();
 
@@ -148,9 +127,6 @@ namespace Rubeus
 			* @fn	bool RWindowComponent::closed();
 			*
 			* @brief	Queries if the window is closed
-			*
-			* @author	Twarit
-			* @date	26-05-2018
 			*
 			* @return	m_Closed.
 			*/
@@ -161,15 +137,11 @@ namespace Rubeus
 			 *
 			 * @brief	Sets window title
 			 *
-			 * @author	Twarit
-			 * @date	26-05-2018
-			 *
-			 * @param 		  	title	The title.
-			 *
-			 * ### param [in,out]	window	Pointer to GLFWwindow being altered.
+			 * @param 	title	The title.
 			 */
 			void setWindowTitle(const char * title);
 
+			// TODO: Add docs
 			void setWindowIcon(RWindowComponent GameWindow, std::string names[]);
 
 			void setWindowIconToDefault();
@@ -178,9 +150,6 @@ namespace Rubeus
 			 * @fn	friend void RWindowComponent::windowCloseCallback(GLFWwindow * window);
 			 *
 			 * @brief	Callback, called when the window closes
-			 *
-			 * @author	Twarit
-			 * @date	27-05-2018
 			 *
 			 * @param [in,out]	window	Pointer to GLFWwindow object being closed.
 			 */
@@ -191,9 +160,6 @@ namespace Rubeus
 			 *
 			 * @brief	Callback, called when the window resize
 			 *
-			 * @author	Twarit
-			 * @date	27-05-2018
-			 *
 			 * @param [in,out]	window	Pointer to GLFWwindow object being resized.
 			 * @param 		  	width 	The width of the resized window.
 			 * @param 		  	height	The height of the resized window.
@@ -201,6 +167,7 @@ namespace Rubeus
 			friend void windowResizeCallback(GLFWwindow * window, int width, int height);
 		public:
 			//friend class RInputComponent;
+			// TODO: Add docs
 			static void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos);
 			friend void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods);
 			friend void scrollCallback(GLFWwindow *window, double xoffset, double yoffset);

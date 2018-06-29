@@ -51,7 +51,7 @@ namespace Rubeus
 			 *
 			 * @return	Reference to this layer. Provides chaining group additions. E.g. layer.addgroup(g1).addgroup(g2);
 			 */
-			virtual RLayer & addGroup(Group & group) = 0;
+			virtual RLayer & addGroup(RGroup & group) = 0;
 
 			/**
 			 * @fn		virtual void draw() = 0

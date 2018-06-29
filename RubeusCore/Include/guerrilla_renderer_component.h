@@ -30,9 +30,6 @@ namespace Rubeus
 		 *
 		 * @brief	A guerrilla renderer component. Made for increased performance.
 		 * 			Default renderer. Use instead of simple renderer
-		 *
-		 * @author	Twarit
-		 * @date	20-06-2018
 		 */
 		class RGuerrillaRendererComponent : public RRendererComponent
 		{
@@ -52,13 +49,13 @@ namespace Rubeus
 			/** @brief	The vertex buffer */
 			VertexData * m_Buffer;
 
+			/** @brief	Vector of transform matrices */
+			std::vector<RML::Matrix4> m_TransformationStack;
+
 			/**
 			 * @fn	void RGuerrillaRendererComponent::init();
 			 *
 			 * @brief	Initializes vertex objects
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 */
 			void init();
 
@@ -68,9 +65,6 @@ namespace Rubeus
 			 * @fn	RGuerrillaRendererComponent::RGuerrillaRendererComponent();
 			 *
 			 * @brief	Default constructor
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 */
 			RGuerrillaRendererComponent();
 
@@ -78,9 +72,6 @@ namespace Rubeus
 			 * @fn	RGuerrillaRendererComponent::~RGuerrillaRendererComponent();
 			 *
 			 * @brief	Destructor
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 */
 			~RGuerrillaRendererComponent();
 
@@ -88,9 +79,6 @@ namespace Rubeus
 			 * @fn	void RGuerrillaRendererComponent::begin();
 			 *
 			 * @brief	Begins the rendering task
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 */
 			void begin();
 
@@ -98,9 +86,6 @@ namespace Rubeus
 			 * @fn	void RGuerrillaRendererComponent::submit(const RRenderableObject * renderable) override;
 			 *
 			 * @brief	Submits the given renderable object
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 *
 			 * @param	renderable	The renderable.
 			 */
@@ -110,9 +95,6 @@ namespace Rubeus
 			 * @fn	void RGuerrillaRendererComponent::end();
 			 *
 			 * @brief	Ends the rendering task
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 */
 			void end();
 
@@ -120,11 +102,12 @@ namespace Rubeus
 			 * @fn	void RGuerrillaRendererComponent::flush() override;
 			 *
 			 * @brief	Flushes the render objects
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 */
 			void flush() override;
+
+			void push(RML::Matrix4 matrix);
+
+			void pop();
 
 		protected:
 		};

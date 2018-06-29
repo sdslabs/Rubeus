@@ -5,6 +5,7 @@
  */
 
 #include <renderable_object.h>
+#include "..\Include\renderable_object.h"
 
 namespace Rubeus
 {
@@ -17,6 +18,11 @@ namespace Rubeus
 
 		RRenderableObject::~RRenderableObject()
 		{
+		}
+
+		void RRenderableObject::submit(RRendererComponent & renderer)
+		{
+			renderer.submit(this);
 		}
 	}
 }

@@ -92,9 +92,6 @@
  *
  * @brief	Converts a decimal to a hexadecimal
  *
- * @author	Twarit
- * @date	12-06-2018
- *
  * @param	decimal	The decimal.
  *
  * @return	Decimal as an int.
@@ -105,8 +102,5 @@ int toHex(int decimal);
  * @fn	static void GLClearError();
  *
  * @brief	Clear all OpenGL error flags
- *
- * @author	Twarit
- * @date	12-06-2018
  */
 void GLClearError();

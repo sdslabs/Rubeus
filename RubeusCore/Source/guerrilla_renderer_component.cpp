@@ -53,6 +53,8 @@ namespace Rubeus
 
 		RGuerrillaRendererComponent::RGuerrillaRendererComponent()
 		{
+			m_TransformationStack.push_back(RML::Matrix4::identity());
+
 			m_IndexCount = 0;
 			init();
 		}
@@ -118,6 +120,19 @@ namespace Rubeus
 			glBindVertexArray(0);
 
 			m_IndexCount = 0;
+		}
+
+		void RGuerrillaRendererComponent::push(RML::Matrix4 matrix)
+		{
+			m_TransformationStack.push_back(m_TransformationStack.back() * matrix);
+		}
+
+		void RGuerrillaRendererComponent::pop()
+		{
+			if(m_TransformationStack.size() > 1)
+			{
+				m_TransformationStack.pop_back();
+			}
 		}
 	}
 }

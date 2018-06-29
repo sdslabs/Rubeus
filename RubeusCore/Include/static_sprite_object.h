@@ -16,9 +16,6 @@ namespace Rubeus
 		 * @class	RStaticSprite
 		 *
 		 * @brief	A static sprite.
-		 *
-		 * @author	Twarit
-		 * @date	20-06-2018
 		 */
 		class RStaticSprite : public RRenderableObject
 		{
@@ -39,9 +36,6 @@ namespace Rubeus
 			 *
 			 * @brief	Constructor
 			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
-			 *
 			 * @param 		  	x	  	The x offset.
 			 * @param 		  	y	  	The y offset.
 			 * @param 		  	width 	The width.
@@ -55,9 +49,6 @@ namespace Rubeus
 			 * @fn	RStaticSprite::~RStaticSprite();
 			 *
 			 * @brief	Destructor
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 */
 			~RStaticSprite();
 
@@ -65,9 +56,6 @@ namespace Rubeus
 			 * @fn	inline RVertexArray* RStaticSprite::getVAO() const
 			 *
 			 * @brief	Gets the vao
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 *
 			 * @return	Null if it fails, else the vao.
 			 */
@@ -78,9 +66,6 @@ namespace Rubeus
 			 *
 			 * @brief	Gets the ibo
 			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
-			 *
 			 * @return	Null if it fails, else the ibo.
 			 */
 			inline RIndexBuffer* getIBO() const { return m_IndexBuffer; }
@@ -89,9 +74,6 @@ namespace Rubeus
 			 * @fn	inline RShaderComponent& RStaticSprite::getShader() const
 			 *
 			 * @brief	Gets the shader
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 *
 			 * @return	The shader.
 			 */

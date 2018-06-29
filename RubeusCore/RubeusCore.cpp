@@ -22,7 +22,7 @@ int main()
 
 	RStaticLayer * layer0 = new RStaticLayer(shader0);
 
-	Group * g = new Group();
+	RGroup * g = new RGroup(RSprite(1, 1, 14, 7, Vector4D(0.7, 0.3, 0.5, 1)));
 	g->addRenderable(&RSprite(1, 1, 14, 7, Vector4D(0.7, 0.3, 0.5, 1)));
 
 	layer0->addGroup(*g);
