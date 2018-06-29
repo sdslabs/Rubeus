@@ -6,18 +6,15 @@
 
 #pragma once
 
-#include <window.h>
-#include <input_component.h>
-
-#include <window_component.h>
 #include <GL\glew.h>
 #include <GLFW\glfw3.h>
+#include <input_component.h>
+#include <window_component.h>
 
 namespace Rubeus
 {
 	namespace GraphicComponents
 	{
-
 		void getGLFWErrorLog(int error, const char * description)
 		{
 			ERRORLOG(description);
