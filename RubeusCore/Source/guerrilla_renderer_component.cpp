@@ -67,7 +67,12 @@ namespace Rubeus
 		void RGuerrillaRendererComponent::begin()
 		{
 			glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
-			m_Buffer = (VertexData *) glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
+
+			if(!(m_Buffer = (VertexData *) glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY)))
+			{
+				ERRORLOG("glMapBuffer() returned NULL");
+			}
+
 			m_IndexCount = 0;
 		}
 

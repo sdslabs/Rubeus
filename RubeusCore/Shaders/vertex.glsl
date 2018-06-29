@@ -7,6 +7,8 @@ uniform mat4 proj_matrix;
 uniform mat4 view_matrix = mat4(1.0);
 uniform mat4 model_matrix = mat4(1.0);
 
+out vec4 pos;
+
 out DATA
 {
 	vec4 position;
@@ -15,6 +17,7 @@ out DATA
 
 void main()
 {
+	pos = position;
 	gl_Position = proj_matrix * view_matrix * model_matrix * position;
 	vs_out.position = model_matrix * position;
 	vs_out.color = color;
