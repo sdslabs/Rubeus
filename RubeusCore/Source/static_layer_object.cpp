@@ -38,7 +38,7 @@ namespace Rubeus
 			for(int i= 0; i < m_Groups.size(); i++)
 			{
 				auto temp = m_Groups[i]->renderables;
-				for(int p = 0; p < temp.size(); p++)
+				for(size_t p = 0; p < temp.size(); p++)
 				{
 					m_Renderer->submit(&temp[p]);
 				}

@@ -68,7 +68,7 @@
 		// In case the build configuration is not "Debug"
 
 		// Deprecated for non-debug builds
-		#define LOG(x)
+#define LOG(x) std::cout << x <<std::endl;
 
 		// Deprecated for non-debug builds
 		#define LOGEXTENDED(x)
