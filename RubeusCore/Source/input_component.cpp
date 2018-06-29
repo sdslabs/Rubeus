@@ -8,8 +8,7 @@ namespace Rubeus
 	{
 		void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos)
 		
-		{
-			
+		{	
 			std::cout << xpos << " : " << ypos << std::endl;
 		}
 
