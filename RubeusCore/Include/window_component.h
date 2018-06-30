@@ -15,6 +15,9 @@
 #include <master_component.h>
 #include <input_component.h>
 
+#define MAX_KEYS    1024
+#define MAX_BUTTONS 32
+
 namespace Rubeus
 {
 	namespace GraphicComponents
@@ -46,6 +49,7 @@ namespace Rubeus
 		 */
 		void getGLFWErrorLog(int error, const char *description);
 
+		extern char KEY_A;
 		/**
 		* @class	RWindowComponent
 		*
@@ -68,6 +72,12 @@ namespace Rubeus
 
 			/** @brief	The title of the window */
 			const char * m_Title;
+
+			bool m_Keys[MAX_KEYS];
+
+			bool m_MouseButtons[MAX_BUTTONS];
+
+			double mx, my;
 
 			/**
 			 * @fn	bool RWindowComponent::initWindow(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW);
@@ -196,11 +206,15 @@ namespace Rubeus
 			 */
 			friend void windowResizeCallback(GLFWwindow * window, int width, int height);
 
-			//friend class RInputComponent;
+			bool isKeyPressed(unsigned int keycode);
+			bool isMouseButtonPressed(unsigned int button);
+			void getMousePosition(double& x, double& y);
+			void doWhileKeyIsPressed(char key, void(*ptr)());
+
 			friend void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos);
 			friend void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods);
-			friend void scrollCallback(GLFWwindow *window, double xoffset, double yoffset);
 			friend void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);
+			
 		protected:
 		};
 	}

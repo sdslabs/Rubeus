@@ -6,12 +6,28 @@
 
 std::map<unsigned int, Rubeus::RMasterComponent *> Rubeus::RMasterComponent::m_ComponentMap;
 
+void print()
+{
+	std::cout << "PRESSED" << std::endl;
+}
+
+/**
+ * @fn	int main()
+ *
+ * @brief	Main entry-point for this application
+ *
+ * @author	Nikita
+ * @date	22-06-2018
+ *
+ * @return	Exit-code for the process - 0 for success, else an error code.
+ */
 int main()
 {
 	using namespace Rubeus;
 	using namespace GraphicComponents;
 	using namespace UtilityComponents;
 	using namespace RML;
+
 	RWindowComponent GameWindow("Hello World",
 								1280, 720,
 								EWindowParameters::WINDOWED_MODE,
@@ -32,13 +48,16 @@ int main()
 	RTimer timer(4);
 	timer.setFrameCounter();
 	timer.addTimePoint(2);
+
 	while(!GameWindow.closed())
 	{
 		GameWindow.clearWindow();
 		timer.addTimePoint(3);
 		shader.setUniformMat4("model_matrix", Matrix4::translation(Vector3D(5, 5, 0)) * Matrix4::rotation(timer.getRelativeTime(2, 3) / 10000000, Vector3D(0, 0, 1)));
-
-		renderer.begin();
+    
+    GameWindow.doWhileKeyIsPressed(KEY_A,print);
+		
+    renderer.begin();
 		renderer.submit(&sprite1);
 		renderer.submit(&sprite2);
 		renderer.end();
@@ -47,7 +66,7 @@ int main()
 		GameWindow.updateWindow();
 
 		timer.evaluateFrames();
-	}
-
+  }
+  
 	return 0;
 }
