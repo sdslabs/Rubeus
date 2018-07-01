@@ -14,12 +14,13 @@
 #endif
 #endif
 
+#include <nvidia_enable.h>
 #include <GL\glew.h>
 #include <GLFW\glfw3.h>
 #include <rubeus_maths_library.h>
 
-#include <loader_component.h>
 #include <logger_component.h>
+#include <loader_component.h>
 #include <window_component.h>
 #include <shader_component.h>
 #include <master_component.h>

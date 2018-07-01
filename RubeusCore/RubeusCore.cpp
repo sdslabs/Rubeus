@@ -7,7 +7,6 @@ std::unordered_map<unsigned int, Rubeus::RMasterComponent *> Rubeus::RMasterComp
 
 int main()
 {
-	srand(NULL);
 	using namespace Rubeus;
 	using namespace GraphicComponents;
 	using namespace UtilityComponents;
@@ -18,18 +17,20 @@ int main()
 								EWindowParameters::NON_RESIZABLE_WINDOW,
 								0);
 
-	RShaderComponent shader0(RShaderComponent("Shaders/vertex.glsl", "Shaders/fragment.glsl"));
+	RShaderComponent shader0(RShaderComponent("Shaders/basic.vert", "Shaders/basic.frag"));
 
 	RStaticLayer * layer0 = new RStaticLayer(shader0);
 
-	RGroup * g = new RGroup(RSprite(1, 1, 14, 7, Vector4D(0.7, 0.3, 0.5, 1)));
-	g->addRenderable(&RSprite(1, 1, 14, 7, Vector4D(0.7, 0.3, 0.5, 1)));
+	RGroup * g = new RGroup(RSprite(1.0f, 1.0f, 14.0f, 7.0f, Vector4D(0.7f, 0.3f, 0.5f, 1.0f)));
+	g->addRenderable(&RSprite(1, 1, 14, 7, Vector4D(0.7f, 0.3f, 0.5f, 1.0f)));
 
 	layer0->addGroup(*g);
 
 	RTimer timer(2);
 
 	timer.setFrameCounter();
+
+	LOG(glGetString(GL_VENDOR));
 
 	// See if maps are slowing things down. Also have a performance check
 	while(!GameWindow.closed())
@@ -47,5 +48,6 @@ int main()
 
 	delete g;
 	delete layer0;
+
 	return 0;
 }

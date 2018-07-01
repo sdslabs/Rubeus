@@ -21,7 +21,7 @@ namespace Rubeus
 
 		void RGroup::submit(RGuerrillaRendererComponent & renderer)
 		{
-			renderer.push()
+			renderer.submit(this);
 		}
 
 		RGroup & RGroup::addRenderable(RRenderableObject * renderable)

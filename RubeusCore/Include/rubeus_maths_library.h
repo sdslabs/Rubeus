@@ -23,7 +23,7 @@ namespace RML
 		*/
 	inline float degreeToRadians(float degree)
 	{
-		return degree * (M_PI / 180.0f);
+		return degree * (float) (M_PI / 180.0f);
 	}
 
 	/**
@@ -748,6 +748,17 @@ namespace RML
 		Matrix4& multiply(const Matrix4& other);
 
 		/**
+			* @fn	Vector3D multiply(const Vector3D& vector)
+			*
+			* @brief	Multiplies the given Vector3D
+			*
+			* @param	vector	The Vector3D to multiply.
+			*
+			* @return	The Vector3D result.
+			*/
+		Vector3D multiply(const Vector3D & vector);
+
+		/**
 			* @fn	std::ostream& operator<<(std::ostream& stream, const Matrix4& matrix)
 			*
 			* @brief	Put to operator
@@ -762,14 +773,26 @@ namespace RML
 		/**
 			* @fn	friend Matrix4 operator*(Matrix4 left, const Matrix4& right);
 			*
-			* @brief	Addition operator
+			* @brief	Multiplication operator
 			*
 			* @param	left 	The first value.
-			* @param	right	A value to add to it.
+			* @param	right	A matrix to multiply to it.
 			*
 			* @return	The result of the operation.
 			*/
 		friend Matrix4 operator*(Matrix4 left, const Matrix4& right);
+
+		/**
+			 * @fn	friend Vector3D operator*(Matrix4 matrix, Vector3D & vector)
+			 *
+			 * @brief	Multiplication operator for Matrix4 * Vector3D
+			 *
+			 * @param	matrix	The first operand.
+			 * @param	vector	The second operand.
+			 *
+			 * @return	The_return_value.
+			 */
+		friend Vector3D operator*(Matrix4 & matrix, const Vector3D & vector);
 
 		/**
 			* @fn	Matrix4& operator*=(const Matrix4 &other);

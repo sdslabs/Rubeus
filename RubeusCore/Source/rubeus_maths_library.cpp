@@ -365,6 +365,26 @@ namespace RML
 		return Matrix4(1.0f);
 	}
 
+	Vector3D Matrix4::multiply(const Vector3D & vector)
+	{
+		return Vector3D(
+			(columns[0].x * vector.x) +
+			(columns[1].x * vector.y) +
+			(columns[2].x * vector.z) +
+			(columns[3].x * 1),
+
+			(columns[0].y * vector.x) +
+			(columns[1].y * vector.y) +
+			(columns[2].y * vector.z) +
+			(columns[3].y * 1),
+
+			(columns[0].z * vector.x) +
+			(columns[1].z * vector.y) +
+			(columns[2].z * vector.z) +
+			(columns[3].z * 1)
+		);
+	}
+
 	Matrix4 & Matrix4::multiply(const Matrix4 & other)
 	{
 		float result[16];
@@ -405,6 +425,11 @@ namespace RML
 	Matrix4 operator*(Matrix4 left, const Matrix4 & right)
 	{
 		return left.multiply(right);
+	}
+
+	Vector3D operator*(Matrix4 & matrix, const Vector3D & vector)
+	{
+		return matrix.multiply(vector);
 	}
 
 	Matrix4 Matrix4::orthographic(float left, float right, float bottom, float top, float near, float far)
