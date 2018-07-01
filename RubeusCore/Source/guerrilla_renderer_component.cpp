@@ -54,6 +54,7 @@ namespace Rubeus
 		RGuerrillaRendererComponent::RGuerrillaRendererComponent()
 		{
 			m_TransformationStack.push_back(RML::Matrix4::identity());
+			m_TransformationBack = &m_TransformationStack.back();
 
 			m_IndexCount = 0;
 			init();
@@ -84,19 +85,19 @@ namespace Rubeus
 			const RML::Vector2D & size = renderable->getSize();
 			const RML::Vector4D & color = renderable->getColor();
 
-			m_Buffer->vertex = position;
+			m_Buffer->vertex = *m_TransformationBack * position;
 			m_Buffer->color = color;
 			m_Buffer++;
 
-			m_Buffer->vertex = RML::Vector3D(position.x, position.y + size.y, position.z);
+			m_Buffer->vertex = *m_TransformationBack * RML::Vector3D(position.x, position.y + size.y, position.z);
 			m_Buffer->color = color;
 			m_Buffer++;
 
-			m_Buffer->vertex = RML::Vector3D(position.x + size.x, position.y + size.y, position.z);
+			m_Buffer->vertex = *m_TransformationBack * RML::Vector3D(position.x + size.x, position.y + size.y, position.z);
 			m_Buffer->color = color;
 			m_Buffer++;
 
-			m_Buffer->vertex = RML::Vector3D(position.x + size.x, position.y, position.z);
+			m_Buffer->vertex = *m_TransformationBack * RML::Vector3D(position.x + size.x, position.y, position.z);
 			m_Buffer->color = color;
 			m_Buffer++;
 
@@ -122,9 +123,16 @@ namespace Rubeus
 			m_IndexCount = 0;
 		}
 
-		void RGuerrillaRendererComponent::push(RML::Matrix4 matrix)
+		void RGuerrillaRendererComponent::push(const RML::Matrix4 & matrix)
 		{
 			m_TransformationStack.push_back(m_TransformationStack.back() * matrix);
+			m_TransformationBack = &m_TransformationStack.back();
+		}
+
+		void RGuerrillaRendererComponent::pushOverride(RML::Matrix4 matrix)
+		{
+			m_TransformationStack.push_back(matrix);
+			m_TransformationBack = &m_TransformationStack.back();
 		}
 
 		void RGuerrillaRendererComponent::pop()
@@ -132,6 +140,11 @@ namespace Rubeus
 			if(m_TransformationStack.size() > 1)
 			{
 				m_TransformationStack.pop_back();
+				m_TransformationBack = &m_TransformationStack.back();
+			}
+			else
+			{
+				ERRORLOG("Tried to throw identity matrix from transformation stack");
 			}
 		}
 	}

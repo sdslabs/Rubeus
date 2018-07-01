@@ -9,6 +9,7 @@
 #include <cstddef>
 
 #include <renderer_component.h>
+#include <renderable_object.h>
 #include <index_buffer_object.h>
 
 namespace Rubeus
@@ -52,8 +53,11 @@ namespace Rubeus
 			/** @brief	Vector of transform matrices */
 			std::vector<RML::Matrix4> m_TransformationStack;
 
+			/** @brief	Cache for last element of trasnformation stack */
+			RML::Matrix4 * m_TransformationBack;
+
 			/**
-			 * @fn	void RGuerrillaRendererComponent::init();
+			 * @fn		void RGuerrillaRendererComponent::init();
 			 *
 			 * @brief	Initializes vertex objects
 			 */
@@ -62,28 +66,28 @@ namespace Rubeus
 		public:
 
 			/**
-			 * @fn	RGuerrillaRendererComponent::RGuerrillaRendererComponent();
+			 * @fn		RGuerrillaRendererComponent::RGuerrillaRendererComponent();
 			 *
 			 * @brief	Default constructor
 			 */
 			RGuerrillaRendererComponent();
 
 			/**
-			 * @fn	RGuerrillaRendererComponent::~RGuerrillaRendererComponent();
+			 * @fn		RGuerrillaRendererComponent::~RGuerrillaRendererComponent();
 			 *
 			 * @brief	Destructor
 			 */
 			~RGuerrillaRendererComponent();
 
 			/**
-			 * @fn	void RGuerrillaRendererComponent::begin();
+			 * @fn		void RGuerrillaRendererComponent::begin();
 			 *
 			 * @brief	Begins the rendering task
 			 */
 			void begin();
 
 			/**
-			 * @fn	void RGuerrillaRendererComponent::submit(const RRenderableObject * renderable) override;
+			 * @fn		void RGuerrillaRendererComponent::submit(const RRenderableObject * renderable) override;
 			 *
 			 * @brief	Submits the given renderable object
 			 *
@@ -92,21 +96,43 @@ namespace Rubeus
 			void submit(const RRenderableObject * renderable) override;
 
 			/**
-			 * @fn	void RGuerrillaRendererComponent::end();
+			 * @fn		void RGuerrillaRendererComponent::end();
 			 *
 			 * @brief	Ends the rendering task
 			 */
 			void end();
 
 			/**
-			 * @fn	void RGuerrillaRendererComponent::flush() override;
+			 * @fn		void RGuerrillaRendererComponent::flush() override;
 			 *
 			 * @brief	Flushes the render objects
 			 */
 			void flush() override;
 
-			void push(RML::Matrix4 matrix);
+			/**
+			 * @fn		void push(const RML::Matrix4 & matrix)
+			 *
+			 * @brief	Push matrix into render transformation matrix stack
+			 *
+			 * @param	matrix	The matrix to add.
+			 */
+			void push(const RML::Matrix4 & matrix);
 
+			/**
+			 * @fn		void pushOverride(const RML::Matrix4 & matrix)
+			 *
+			 * @brief	Push matrix into render transformation matrix stack
+			 *
+			 * @param	matrix	The matrix to add.
+			 */
+			void pushOverride(RML::Matrix4 matrix);
+
+			/**
+			 * @fn		void pop()
+			 *
+			 * @brief	Pop a matrix from the render stack
+			 * @warning	Avoid excessive popping.
+			 */
 			void pop();
 
 		protected:

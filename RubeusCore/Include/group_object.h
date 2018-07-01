@@ -28,7 +28,7 @@ namespace Rubeus
 			/** @brief	Vector array of renderables. */
 			std::vector<RRenderableObject> renderables;
 
-			void submit(RRendererComponent & renderer);
+			void submit(RGuerrillaRendererComponent & renderer);
 
 			/**
 			 * @fn		Group & addRenderable(RRenderableObject * renderable)

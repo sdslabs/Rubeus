@@ -8,6 +8,7 @@
 
 #include <GL/glew.h>
 #include <rubeus_maths_library.h>
+#include <master_component.h>
 
 namespace Rubeus
 {
