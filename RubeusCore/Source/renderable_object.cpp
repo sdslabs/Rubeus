@@ -20,9 +20,13 @@ namespace Rubeus
 		{
 		}
 
-		void RRenderableObject::submit(RRendererComponent & renderer)
+		void RRenderableObject::submit(RRendererComponent & renderer) const
 		{
 			renderer.submit(this);
+		}
+
+		RRenderableObject::RRenderableObject()
+		{
 		}
 	}
 }

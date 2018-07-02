@@ -73,7 +73,7 @@ namespace Rubeus
 			 */
 			virtual ~RRenderableObject();
 
-			void submit(RRendererComponent & renderer);
+			virtual void submit(RRendererComponent & renderer) const;
 
 			/**
 			 * @fn	inline const RML::Vector3D& RRenderableObject::getPosition()
@@ -101,6 +101,9 @@ namespace Rubeus
 			 * @return	The color.
 			 */
 			inline const RML::Vector4D& getColor() const { return m_Color; }
+
+		protected:
+			RRenderableObject();
 		};
 	}
 }

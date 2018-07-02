@@ -9,6 +9,7 @@
 #include <vector>
 #include <renderable_object.h>
 #include <guerrilla_renderer_component.h>
+#include <rubeus_maths_library.h>
 
 namespace Rubeus
 {
@@ -21,14 +22,17 @@ namespace Rubeus
 		 */
 		class RGroup : public RRenderableObject
 		{
+		private:
+			RML::Matrix4 m_TransformationMatrix;
+
 		public:
-			RGroup(RRenderableObject renderable);
+			RGroup(const RML::Matrix4 & transform);
 			~RGroup();
 
 			/** @brief	Vector array of renderables. */
-			std::vector<RRenderableObject> renderables;
+			std::vector<RRenderableObject> m_Renderables;
 
-			void submit(RGuerrillaRendererComponent & renderer);
+			void submit(RRendererComponent & renderer) const override;
 
 			/**
 			 * @fn		Group & addRenderable(RRenderableObject * renderable)

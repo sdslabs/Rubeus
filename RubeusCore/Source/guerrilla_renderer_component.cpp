@@ -129,7 +129,7 @@ namespace Rubeus
 			m_TransformationBack = &m_TransformationStack.back();
 		}
 
-		void RGuerrillaRendererComponent::pushOverride(RML::Matrix4 matrix)
+		void RGuerrillaRendererComponent::pushOverride(RML::Matrix4 & matrix)
 		{
 			m_TransformationStack.push_back(matrix);
 			m_TransformationBack = &m_TransformationStack.back();
@@ -144,7 +144,7 @@ namespace Rubeus
 			}
 			else
 			{
-				ERRORLOG("Tried to throw identity matrix from transformation stack");
+				ERRORLOG("Tried to pop identity matrix from transformation stack");
 			}
 		}
 	}

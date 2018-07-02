@@ -10,8 +10,8 @@ namespace Rubeus
 {
 	namespace GraphicComponents
 	{
-		RGroup::RGroup(RRenderableObject renderable)
-			: RRenderableObject(renderable)
+		RGroup::RGroup(const RML::Matrix4 & transform)
+			: m_TransformationMatrix(transform)
 		{
 		}
 
@@ -19,14 +19,21 @@ namespace Rubeus
 		{
 		}
 
-		void RGroup::submit(RGuerrillaRendererComponent & renderer)
+		void RGroup::submit(RRendererComponent & renderer) const
 		{
-			renderer.submit(this);
+			renderer.push(m_TransformationMatrix);
+
+			for(auto item : m_Renderables)
+			{
+				renderer.submit(&item);
+			}
+
+			renderer.pop();
 		}
 
 		RGroup & RGroup::addRenderable(RRenderableObject * renderable)
 		{
-			renderables.push_back(*renderable);
+			m_Renderables.push_back(*renderable);
 
 			return *this;
 		}

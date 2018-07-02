@@ -35,16 +35,12 @@ namespace Rubeus
 			m_Shader.enableShader();
 
 			m_Renderer->begin();
-			m_Renderer->push(RML::Matrix4::translation(RML::Vector3D(5.0f, 5.0f, 0)));
+
 			for(size_t i= 0; i < m_Groups.size(); i++)
 			{
-				auto temp = m_Groups[i]->renderables;
-				for(size_t p = 0; p < temp.size(); p++)
-				{
-					temp[p].submit(*m_Renderer);
-				}
+				m_Groups[i]->submit(*m_Renderer);
 			}
-			m_Renderer->pop();
+
 			m_Renderer->end();
 			m_Renderer->flush();
 
