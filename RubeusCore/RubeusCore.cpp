@@ -21,10 +21,21 @@ int main()
 
 	RStaticLayer * layer0 = new RStaticLayer(shader0);
 
-	RGroup * g = new RGroup(Matrix4::translation(Vector3D(2.0f, 3.0f, 0.0f)));
+	RGroup * g = new RGroup(Matrix4::translation(Vector3D(8.0f, 3.0f, 0.0f)) * Matrix4::rotation(45, Vector3D(0, 0, 1)));
 
-	g->addRenderable(&RSprite(0.0f, 0.0f, 1.0f, 1.0f, Vector4D(0.3f, 0.5f, 1.0f, 1.0f)));
-	g->addRenderable(&RSprite(0.2f, 0.2f, 0.6f, 0.6f, Vector4D(0.5f, 0.1f, 0.6f, 1.0f)));
+	RSprite * s1 = new RSprite(0.0f, 0.0f, 1.0f, 1.0f, Vector4D(0.3f, 0.5f, 1.0f, 1.0f));
+	RSprite * s2 = new RSprite(0.2f, 0.2f, 0.6f, 0.6f, Vector4D(0.5f, 0.1f, 0.6f, 1.0f));
+
+	g->add(s1);
+	g->add(s2);
+
+	RGroup * childg = new RGroup(Matrix4::translation(Vector3D(1.0f, 0.0f, 0.0f)));
+
+	RSprite * sc1 = new RSprite(5.0f, 0.5f, 1.0f, 1.0f, Vector4D(1.0f, 1.0f, 0.0f, 1.0f));
+	childg->add(sc1);
+
+	g->add(childg);
+
 	layer0->addGroup(*g);
 
 	RTimer timer(2);

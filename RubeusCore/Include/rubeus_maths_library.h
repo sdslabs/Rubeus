@@ -853,7 +853,7 @@ namespace RML
 			* @brief	Returns a rotation matrix, which rotates by amount defined by angle parameter about
 			* 			the axis defined by the axis parameter
 			*
-			* @param	angle	The angle to be rotated by.
+			* @param	angle	The angle(in degree) to be rotated by.
 			* @param	axis 	The axis to be rotated about.
 			*
 			* @return	A Matrix4.
