@@ -116,7 +116,7 @@ namespace Rubeus
 			 *
 			 * @param	matrix	The matrix to add.
 			 */
-			void push(const RML::Matrix4 & matrix);
+			void push(const RML::Matrix4 & matrix) override;
 
 			/**
 			 * @fn		void pushOverride(const RML::Matrix4 & matrix)
@@ -125,7 +125,7 @@ namespace Rubeus
 			 *
 			 * @param	matrix	The matrix to add.
 			 */
-			void pushOverride(RML::Matrix4 matrix);
+			void pushOverride(RML::Matrix4 & matrix) override;
 
 			/**
 			 * @fn		void pop()
@@ -133,7 +133,7 @@ namespace Rubeus
 			 * @brief	Pop a matrix from the render stack
 			 * @warning	Avoid excessive popping.
 			 */
-			void pop();
+			void pop() override;
 
 		protected:
 		};

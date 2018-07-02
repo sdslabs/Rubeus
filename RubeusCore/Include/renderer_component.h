@@ -40,6 +40,12 @@ namespace Rubeus
 			 * @brief	Flushes the render objects' queue after displaying them
 			 */
 			virtual void flush() = 0;
+
+			virtual void push(const RML::Matrix4 & matrix) { }
+
+			virtual void pushOverride(RML::Matrix4 & matrix) { }
+
+			virtual void pop() { }
 		};
 	}
 }

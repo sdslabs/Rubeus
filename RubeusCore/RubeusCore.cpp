@@ -21,16 +21,14 @@ int main()
 
 	RStaticLayer * layer0 = new RStaticLayer(shader0);
 
-	RGroup * g = new RGroup(RSprite(1.0f, 1.0f, 14.0f, 7.0f, Vector4D(0.7f, 0.3f, 0.5f, 1.0f)));
-	g->addRenderable(&RSprite(1, 1, 14, 7, Vector4D(0.7f, 0.3f, 0.5f, 1.0f)));
+	RGroup * g = new RGroup(Matrix4::translation(Vector3D(2.0f, 3.0f, 0.0f)));
 
+	g->addRenderable(&RSprite(0.0f, 0.0f, 1.0f, 1.0f, Vector4D(0.3f, 0.5f, 1.0f, 1.0f)));
+	g->addRenderable(&RSprite(0.2f, 0.2f, 0.6f, 0.6f, Vector4D(0.5f, 0.1f, 0.6f, 1.0f)));
 	layer0->addGroup(*g);
 
 	RTimer timer(2);
-
 	timer.setFrameCounter();
-
-	LOG(glGetString(GL_VENDOR));
 
 	// See if maps are slowing things down. Also have a performance check
 	while(!GameWindow.closed())
