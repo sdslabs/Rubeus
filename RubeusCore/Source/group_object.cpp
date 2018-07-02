@@ -17,23 +17,27 @@ namespace Rubeus
 
 		RGroup::~RGroup()
 		{
+			for(const RRenderableObject * item : m_Renderables)
+			{
+				delete item;
+			}
 		}
 
 		void RGroup::submit(RRendererComponent & renderer) const
 		{
 			renderer.push(m_TransformationMatrix);
 
-			for(auto item : m_Renderables)
+			for(const RRenderableObject * child : m_Renderables)
 			{
-				renderer.submit(&item);
+				child->submit(renderer);
 			}
 
 			renderer.pop();
 		}
 
-		RGroup & RGroup::addRenderable(RRenderableObject * renderable)
+		RGroup & RGroup::add(RRenderableObject * renderable)
 		{
-			m_Renderables.push_back(*renderable);
+			m_Renderables.push_back(renderable);
 
 			return *this;
 		}

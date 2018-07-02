@@ -36,7 +36,7 @@ namespace Rubeus
 
 			m_Renderer->begin();
 
-			for(size_t i= 0; i < m_Groups.size(); i++)
+			for(size_t i = 0; i < m_Groups.size(); i++)
 			{
 				m_Groups[i]->submit(*m_Renderer);
 			}
