@@ -17,6 +17,10 @@ int main()
 								EWindowParameters::NON_RESIZABLE_WINDOW,
 								0);
 
+	RLoaderComponent loader;
+
+	loader.loadImageFile("Assets/Twarit.jpg", 100, 100, 1);
+
 	RShaderComponent shader0(RShaderComponent("Shaders/basic.vert", "Shaders/basic.frag"));
 
 	RStaticLayer * layer0 = new RStaticLayer(shader0);

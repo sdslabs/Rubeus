@@ -8,9 +8,10 @@
 
 #include <vector>
 
+#include <GL\glew.h>
+
 #include <master_component.h>
 #include <loader_component.h>
-#include <GL\glew.h>
 #include <rubeus_maths_library.h>
 
 namespace Rubeus
@@ -33,6 +34,9 @@ namespace Rubeus
 
 			/** @brief	Full pathname of the fragment shader code file */
 			const char *m_FragPath;
+
+			/** @brief	The loader component for shader loading */
+			UtilityComponents::RLoaderComponent * m_Loader;
 
 			/**
 			 * @fn	GLuint RShader::loadShader();

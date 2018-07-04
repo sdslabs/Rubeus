@@ -9,7 +9,10 @@
 #include <iostream>
 #include <string.h>
 #include <string>
-#include <GL\glew.h>
+
+#include <GL/glew.h>
+#include <IL/il.h>
+#include <IL/ilu.h>
 
 // TODO: Remove logger before shipping
 
@@ -48,6 +51,15 @@
 									{\
 									int z = toHex(error);\
 									ERRORLOG("OpenGL Error: 0x" + ((z < 0x1000)? "0" + std::to_string(z) : std::to_string(z)));\
+									std::cin.get();\
+									}
+				// Pass in DevIL calls for checking for errors in image management
+				#define DevILCall(x) DevILClearError();\
+									x;\
+									while(ILenum error = ilGetError())\
+									{\
+									ERRORLOG(iluErrorString(error));\
+									if(error == ILU_OUT_OF_MEMORY)\
 									std::cin.get();\
 									}
 		#else
@@ -104,3 +116,10 @@ int toHex(int decimal);
  * @brief	Clear all OpenGL error flags
  */
 void GLClearError();
+
+/**
+ * @fn	void DevILClearError()
+ *
+ * @brief	Clears the DevIL error stack
+ */
+void DevILClearError();
