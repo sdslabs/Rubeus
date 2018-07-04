@@ -1,10 +1,10 @@
 /**
- * @file	Source\vertex_array.cpp.
+ * @file		Source\vertex_array_object.cpp.
  *
  * @brief	Implements the vertex array class
  */
 
-#include <vertex_array.h>
+#include <vertex_array_object.h>
 
 #include <vector>
 

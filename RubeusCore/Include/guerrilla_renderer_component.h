@@ -1,7 +1,7 @@
 /**
- * @file	Include\guerrilla_renderer_component.h.
+ * @file		Include\guerrilla_renderer_component.h.
  *
- * @brief	Declares the guerrilla renderer component class
+ * @brief	Declares the guerrilla renderer component class.
  */
 
 #pragma once
@@ -9,7 +9,8 @@
 #include <cstddef>
 
 #include <renderer_component.h>
-#include <index_buffer.h>
+#include <renderable_object.h>
+#include <index_buffer_object.h>
 
 namespace Rubeus
 {
@@ -30,9 +31,6 @@ namespace Rubeus
 		 *
 		 * @brief	A guerrilla renderer component. Made for increased performance.
 		 * 			Default renderer. Use instead of simple renderer
-		 *
-		 * @author	Twarit
-		 * @date	20-06-2018
 		 */
 		class RGuerrillaRendererComponent : public RRendererComponent
 		{
@@ -52,79 +50,90 @@ namespace Rubeus
 			/** @brief	The vertex buffer */
 			VertexData * m_Buffer;
 
+			/** @brief	Vector of transform matrices */
+			std::vector<RML::Matrix4> m_TransformationStack;
+
+			/** @brief	Cache for last element of trasnformation stack */
+			RML::Matrix4 * m_TransformationBack;
+
 			/**
-			 * @fn	void RGuerrillaRendererComponent::init();
+			 * @fn		void RGuerrillaRendererComponent::init();
 			 *
 			 * @brief	Initializes vertex objects
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 */
 			void init();
 
 		public:
 
 			/**
-			 * @fn	RGuerrillaRendererComponent::RGuerrillaRendererComponent();
+			 * @fn		RGuerrillaRendererComponent::RGuerrillaRendererComponent();
 			 *
 			 * @brief	Default constructor
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 */
 			RGuerrillaRendererComponent();
 
 			/**
-			 * @fn	RGuerrillaRendererComponent::~RGuerrillaRendererComponent();
+			 * @fn		RGuerrillaRendererComponent::~RGuerrillaRendererComponent();
 			 *
 			 * @brief	Destructor
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 */
 			~RGuerrillaRendererComponent();
 
 			/**
-			 * @fn	void RGuerrillaRendererComponent::begin();
+			 * @fn		void RGuerrillaRendererComponent::begin();
 			 *
 			 * @brief	Begins the rendering task
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 */
 			void begin();
 
 			/**
-			 * @fn	void RGuerrillaRendererComponent::submit(const RRenderableObject * renderable) override;
+			 * @fn		void RGuerrillaRendererComponent::submit(const RRenderableObject * renderable) override;
 			 *
 			 * @brief	Submits the given renderable object
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 *
 			 * @param	renderable	The renderable.
 			 */
 			void submit(const RRenderableObject * renderable) override;
 
 			/**
-			 * @fn	void RGuerrillaRendererComponent::end();
+			 * @fn		void RGuerrillaRendererComponent::end();
 			 *
 			 * @brief	Ends the rendering task
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 */
 			void end();
 
 			/**
-			 * @fn	void RGuerrillaRendererComponent::flush() override;
+			 * @fn		void RGuerrillaRendererComponent::flush() override;
 			 *
 			 * @brief	Flushes the render objects
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 */
 			void flush() override;
+
+			/**
+			 * @fn		void push(const RML::Matrix4 & matrix)
+			 *
+			 * @brief	Push matrix into render transformation matrix stack
+			 *
+			 * @param	matrix	The matrix to add.
+			 */
+			void push(const RML::Matrix4 & matrix) override;
+
+			/**
+			 * @fn		void pushOverride(const RML::Matrix4 & matrix)
+			 *
+			 * @brief	Push matrix into render transformation matrix stack
+			 *
+			 * @param	matrix	The matrix to add.
+			 */
+			void pushOverride(RML::Matrix4 & matrix) override;
+
+			/**
+			 * @fn		void pop()
+			 *
+			 * @brief	Pop a matrix from the render stack
+			 * @warning	Avoid excessive popping.
+			 */
+			void pop() override;
 
 		protected:
 		};

@@ -1,10 +1,9 @@
 // RubeusCore.cpp : Defines the entry point for the application.
 //
-#include <chrono>
 
 #include "RubeusCore.h"
 
-std::map<unsigned int, Rubeus::RMasterComponent *> Rubeus::RMasterComponent::m_ComponentMap;
+std::unordered_map<unsigned int, Rubeus::RMasterComponent *> Rubeus::RMasterComponent::m_ComponentMap;
 
 int main()
 {
@@ -16,38 +15,52 @@ int main()
 								1280, 720,
 								EWindowParameters::WINDOWED_MODE,
 								EWindowParameters::NON_RESIZABLE_WINDOW,
-								1);
+								0);
 
-	RShaderComponent shader("Shaders/basic.vertexshader", "Shaders/basic.fragmentshader");
-	shader.enableShader();
-	shader.setUniformMat4("proj_matrix", Matrix4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f));
+	RLoaderComponent loader;
 
-	RSprite sprite1(0, 0, 4, 4, RML::Vector4D(255, 255, 255, 255).normaliseToRGBA());
-	RSprite sprite2(7, 1, 2, 3, RML::Vector4D(0.2f, 0, 1, 1));
-	RGuerrillaRendererComponent renderer;
+	loader.loadImageFile("Assets/Twarit.jpg", 100, 100, 1);
 
-	auto x = ((RWindowComponent *) (RMasterComponent::m_ComponentMap[GameWindow.getComponentID()]));
-	x->setWindowTitle("Hey I just changed the title");
+	RShaderComponent shader0(RShaderComponent("Shaders/basic.vert", "Shaders/basic.frag"));
 
-	RTimer timer(4);
+	RStaticLayer * layer0 = new RStaticLayer(shader0);
+
+	RGroup * g = new RGroup(Matrix4::translation(Vector3D(8.0f, 3.0f, 0.0f)) * Matrix4::rotation(45, Vector3D(0, 0, 1)));
+
+	RSprite * s1 = new RSprite(0.0f, 0.0f, 1.0f, 1.0f, Vector4D(0.3f, 0.5f, 1.0f, 1.0f));
+	RSprite * s2 = new RSprite(0.2f, 0.2f, 0.6f, 0.6f, Vector4D(0.5f, 0.1f, 0.6f, 1.0f));
+
+	g->add(s1);
+	g->add(s2);
+
+	RGroup * childg = new RGroup(Matrix4::translation(Vector3D(1.0f, 0.0f, 0.0f)));
+
+	RSprite * sc1 = new RSprite(5.0f, 0.5f, 1.0f, 1.0f, Vector4D(1.0f, 1.0f, 0.0f, 1.0f));
+	childg->add(sc1);
+
+	g->add(childg);
+
+	layer0->addGroup(*g);
+
+	RTimer timer(2);
 	timer.setFrameCounter();
-	timer.addTimePoint(2);
+
+	// See if maps are slowing things down. Also have a performance check
 	while(!GameWindow.closed())
 	{
 		GameWindow.clearWindow();
-		timer.addTimePoint(3);
-		shader.setUniformMat4("model_matrix", Matrix4::translation(Vector3D(5, 5, 0)) * Matrix4::rotation(timer.getRelativeTime(2, 3) / 10000000, Vector3D(0, 0, 1)));
 
-		renderer.begin();
-		renderer.submit(&sprite1);
-		renderer.submit(&sprite2);
-		renderer.end();
-		renderer.flush();
+		shader0.enableShader();
+		shader0.setUniform2f("light_position", Vector2D(GameWindow.m_X * 16.0f / 1280.0f, (720.0f - GameWindow.m_Y) * 9.0f / 720.0f));
+
+		layer0->draw();
 
 		GameWindow.updateWindow();
-
 		timer.evaluateFrames();
 	}
+
+	delete g;
+	delete layer0;
 
 	return 0;
 }

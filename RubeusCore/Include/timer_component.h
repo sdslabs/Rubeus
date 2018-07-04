@@ -1,5 +1,5 @@
 /**
- * @file	Include\timer_component.h.
+ * @file		Include\timer_component.h.
  *
  * @brief	Declares the timer component class
  */
@@ -20,10 +20,7 @@ namespace Rubeus
 		 *
 		 * @brief	A timer component.
 		 * 			Allows marking timepoints at runtime.
-		 * 			Allows frame counting
-		 *
-		 * @author	Twarit
-		 * @date	20-06-2018
+		 * 			Allows frame counting.
 		 */
 		class RTimer : public RMasterComponent
 		{
@@ -44,9 +41,6 @@ namespace Rubeus
 			 *
 			 * @brief	Constructor
 			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
-			 *
 			 * @param	numberOfTimePoints	Number of time points required.
 			 */
 			RTimer(int numberOfTimePoints);
@@ -55,9 +49,6 @@ namespace Rubeus
 			 * @fn	RTimer::~RTimer();
 			 *
 			 * @brief	Destructor
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 */
 			~RTimer();
 
@@ -65,9 +56,6 @@ namespace Rubeus
 			 * @fn	long long int RTimer::getRelativeTime(int sinceThisSlotIndex, int tillThisSlotIndex);
 			 *
 			 * @brief	Gets relative time between two timepoints, referred to by their indices
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 *
 			 * @param	sinceThisSlotIndex	Zero-based index of the timepoint at this slot number, to
 			 * 								calculate time duration from.
@@ -83,9 +71,6 @@ namespace Rubeus
 			 *
 			 * @brief	Adds a time point at specified index
 			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
-			 *
 			 * @param	index	Zero-based index of the timepoint.
 			 */
 			void addTimePoint(int index);
@@ -95,9 +80,6 @@ namespace Rubeus
 			 *
 			 * @brief	Sets the frame counter.
 			 * 			Use just before game loop.
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 */
 			void setFrameCounter();
 
@@ -106,9 +88,6 @@ namespace Rubeus
 			 *
 			 * @brief	Evaluate frames.
 			 * 			Use at the end of game loop.
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 */
 			void evaluateFrames();
 		};

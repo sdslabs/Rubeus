@@ -1,22 +1,21 @@
 /**
- * @file	Source\c_Window\window.cpp.
+ * @file		Source\window_component.cpp.
  *
  * @brief	Implements the RWindowComponent class
  */
 
 #pragma once
 
-#include <window.h>
-#include <input_component.h>
-
-#include <window_component.h>
 #include <GL\glew.h>
 #include <GLFW\glfw3.h>
+#include <window_component.h>
 
 namespace Rubeus
 {
 	namespace GraphicComponents
 	{
+		int RWindowComponent::m_X;
+		int RWindowComponent::m_Y;
 
 		void getGLFWErrorLog(int error, const char * description)
 		{
@@ -46,6 +45,8 @@ namespace Rubeus
 
 			glfwSwapInterval(setFPS);
 			ASSERT("FPS set to " + std::to_string((1.0f / ((float) setFPS)) * 60.0f));
+
+			ASSERT(glGetString(GL_VENDOR));
 
 			m_Height = height;
 			m_Width = width;

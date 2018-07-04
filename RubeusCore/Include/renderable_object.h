@@ -1,5 +1,5 @@
 /**
- * @file	Include\renderable_object.h.
+ * @file		Include\renderable_object.h.
  *
  * @brief	Declares the renderable object class
  */
@@ -9,10 +9,11 @@
 #include <GL/glew.h>
 #include <rubeus_maths_library.h>
 
-#include <buffer.h>
-#include <index_buffer.h>
-#include <vertex_array.h>
+#include <buffer_object.h>
+#include <index_buffer_object.h>
+#include <vertex_array_object.h>
 #include <shader_component.h>
+#include <renderer_component.h>
 
 namespace Rubeus
 {
@@ -22,9 +23,6 @@ namespace Rubeus
 		 * @struct	VertexData
 		 *
 		 * @brief	A structure holding vertex data to be sent to OpenGL.
-		 *
-		 * @author	Twarit
-		 * @date	20-06-2018
 		 */
 		struct VertexData
 		{
@@ -40,13 +38,13 @@ namespace Rubeus
 		 *
 		 * @brief	A renderable object.
 		 * 			Allows specifying the position, size and color of the renderable object.
-		 *
-		 * @author	Twarit
-		 * @date	14-06-2018
 		 */
 		class RRenderableObject
 		{
 		public:
+			/** @brief	Identifier for the object */
+			unsigned int m_ObjectID;
+
 			/** @brief	The position of the sprite */
 			RML::Vector3D m_Position;
 
@@ -62,9 +60,6 @@ namespace Rubeus
 			 * @brief	Constructor. Sets position, size, color of the sprite to be used for in the given
 			 * 			shader
 			 *
-			 * @author	Twarit
-			 * @date	14-06-2018
-			 *
 			 * @param 		  	position	The position.
 			 * @param 		  	size		The size.
 			 * @param 		  	color   	The color.
@@ -75,19 +70,15 @@ namespace Rubeus
 			 * @fn	virtual RRenderableObject::~RRenderableObject();
 			 *
 			 * @brief	Destructor.
-			 *
-			 * @author	Twarit
-			 * @date	14-06-2018
 			 */
 			virtual ~RRenderableObject();
+
+			virtual void submit(RRendererComponent & renderer) const;
 
 			/**
 			 * @fn	inline const RML::Vector3D& RRenderableObject::getPosition()
 			 *
 			 * @brief	Gets the position
-			 *
-			 * @author	Twarit
-			 * @date	14-06-2018
 			 *
 			 * @return	The position.
 			 */
@@ -98,9 +89,6 @@ namespace Rubeus
 			 *
 			 * @brief	Gets the size
 			 *
-			 * @author	Twarit
-			 * @date	14-06-2018
-			 *
 			 * @return	The size.
 			 */
 			inline const RML::Vector2D& getSize() const { return m_Size; }
@@ -110,12 +98,12 @@ namespace Rubeus
 			 *
 			 * @brief	Gets the color
 			 *
-			 * @author	Twarit
-			 * @date	14-06-2018
-			 *
 			 * @return	The color.
 			 */
 			inline const RML::Vector4D& getColor() const { return m_Color; }
+
+		protected:
+			RRenderableObject();
 		};
 	}
 }

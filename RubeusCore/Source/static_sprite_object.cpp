@@ -1,10 +1,10 @@
 /**
- * @file	Source\static_sprite.cpp.
+ * @file		Source\static_sprite_object.cpp.
  *
  * @brief	Implements the static sprite class
  */
 
-#include <static_sprite.h>
+#include <static_sprite_object.h>
 
 namespace Rubeus
 {

@@ -1,5 +1,5 @@
 /**
- * @file	Source\loader_component.h.
+ * @file		Source\loader_component.h.
  *
  * @brief	Declares the loader component class
  */
@@ -9,18 +9,9 @@
 #include <string.h>
 #include <string>
 #include <cstdlib>
-#include <logger_component.h>
 
 #include <master_component.h>
-
-// Short-hand for loading text files at path x
-// See LoadTextFileStream() for more information
-#define LoadFile(x) Rubeus::UtilityComponents::RLoaderComponent::LoadTextFileStream(x)
-
-// Short-hand for loading image files in Windows at path x
-// See LoadImageWindows() for more information
-#define LoadWinImage(x) Rubeus::UtilityComponents::RLoaderComponent::LoadImageWindows(x)
-
+#include <logger_component.h>
 
 namespace Rubeus
 {
@@ -30,42 +21,57 @@ namespace Rubeus
 		 * @class	RLoaderComponent
 		 *
 		 * @brief	A loader component. Useful for file I/O
-		 *
-		 * @author	Twarit
-		 * @date	26-05-2018
 		 */
 		class RLoaderComponent : RMasterComponent
 		{
 		private:
-		public:
+			/** @brief	Image name used by DevIL */
+			ILuint image;
 
 			/**
-			 * @fn	static std::string RLoaderComponent::LoadTextFileStream(const char * filePath);
+			 * @fn		void initImageLoader()
+			 *
+			 * @brief	Initialise OpenIL/DevIL library for image loading
+			 */
+			void initImageLoader();
+
+		public:
+			/**
+			 * @fn	RLoaderComponent()
+			 *		
+			 * @brief	Default constructor.
+			 */
+			RLoaderComponent();
+
+			/**
+			 * @fn	~RLoaderComponent()
+			 *		
+			 * @brief	Default destructor.
+			 */
+			~RLoaderComponent();
+
+			/**
+			 * @fn	std::string RLoaderComponent::LoadTextFileStream(const char * filePath)
 			 *
 			 * @brief	Loads text file to a string using streams
 			 *
-			 * @author	Twarit
-			 * @date	09-06-2018
+			 * @warning	Use only after initialising the image loader through initImageLoader()
 			 *
 			 * @param	filePath	Full pathname of the file.
 			 *
 			 * @return	The text file stream.
 			 */
-			static std::string LoadTextFileStream(const char * filePath);
+			std::string loadTextFileStream(const char * filePath);
 
 			/**
-			 * @fn	static auto RLoaderComponent::LoadImageWindows(std::string path);
+			 * @fn		ILubyte * LoadImageFile(std::string path, ILuint width, ILuint height, ILuint depth)
 			 *
-			 * @brief	Loads image for Windows platform
+			 * @brief	Loads image
 			 *
-			 * @author	Twarit
-			 * @date	26-05-2018
-			 *
-			 * @param	path	Full pathname of the file.
-			 *
-			 * @return	The image file.
+			 * @return	Pointer to the image data.
 			 */
-			static auto LoadImageWindows(std::string path);
+			ILubyte * loadImageFile(std::string path);
+
 		protected:
 		};
 	}

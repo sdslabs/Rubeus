@@ -1,5 +1,5 @@
 /**
- * @file	Source\logger_component.cpp.
+ * @file		Source\logger_component.cpp.
  *
  * @brief	Implements the logger component functions
  */
@@ -25,5 +25,11 @@ int toHex(int decimal)
 void GLClearError()
 {
 	while(glGetError() != GL_NO_ERROR)
+		;
+}
+
+void DevILClearError()
+{
+	while(ilGetError() != IL_NO_ERROR)
 		;
 }

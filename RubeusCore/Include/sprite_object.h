@@ -1,5 +1,5 @@
 /**
- * @file	Include\sprite.h.
+ * @file		Include\sprite_object.h.
  *
  * @brief	Declares the sprite class
  */
@@ -16,22 +16,18 @@ namespace Rubeus
 		 * @class	RSprite
 		 *
 		 * @brief	A sprite compatible with guerrilla renderer.
-		 *
-		 * @author	Twarit
-		 * @date	20-06-2018
 		 */
 		class RSprite : public RRenderableObject
 		{
 		private:
 		public:
+			RSprite();
+			virtual ~RSprite();
 
 			/**
 			 * @fn	RSprite::RSprite(float x, float y, float width, float height, const RML::Vector4D & color);
 			 *
 			 * @brief	Constructor
-			 *
-			 * @author	Twarit
-			 * @date	20-06-2018
 			 *
 			 * @param	x	  	The x offset.
 			 * @param	y	  	The y offset.

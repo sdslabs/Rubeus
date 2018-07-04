@@ -1,5 +1,5 @@
 /**
- * @file	Source\guerrilla_renderer_component.cpp.
+ * @file		Source\guerrilla_renderer_component.cpp.
  *
  * @brief	Implements the guerrilla renderer component class
  */
@@ -12,22 +12,21 @@ namespace Rubeus
 	{
 		void RGuerrillaRendererComponent::init()
 		{
-			// TODO: Add GLCall() to GL calls
-			glGenVertexArrays(1, &m_VAO);
-			glBindVertexArray(m_VAO);
+			GLCall(glGenVertexArrays(1, &m_VAO));
+			GLCall(glBindVertexArray(m_VAO));
 
-			glGenBuffers(1, &m_VBO);
-			glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
+			GLCall(glGenBuffers(1, &m_VBO));
+			GLCall(glBindBuffer(GL_ARRAY_BUFFER, m_VBO));
 
-			glBufferData(GL_ARRAY_BUFFER, BUFFER_SIZE, NULL, GL_STATIC_DRAW);
+			GLCall(glBufferData(GL_ARRAY_BUFFER, BUFFER_SIZE, NULL, GL_STATIC_DRAW));
 
-			glVertexAttribPointer(SHADER_VERTEX_LOCATION, 3, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::vertex)));
-			glVertexAttribPointer(SHADER_COLOR_LOCATION, 4, GL_UNSIGNED_INT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::color)));
+			GLCall(glVertexAttribPointer(SHADER_VERTEX_LOCATION, 3, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::vertex))));
+			GLCall(glVertexAttribPointer(SHADER_COLOR_LOCATION, 4, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::color))));
 
-			glEnableVertexAttribArray(SHADER_VERTEX_LOCATION);
-			glEnableVertexAttribArray(SHADER_COLOR_LOCATION);
+			GLCall(glEnableVertexAttribArray(SHADER_VERTEX_LOCATION));
+			GLCall(glEnableVertexAttribArray(SHADER_COLOR_LOCATION));
 
-			glBindBuffer(GL_ARRAY_BUFFER, 0);
+			GLCall(glBindBuffer(GL_ARRAY_BUFFER, 0));
 
 			GLushort indices[INDICES_SIZE];
 
@@ -49,11 +48,15 @@ namespace Rubeus
 
 			m_IBO = new RIndexBuffer(indices, INDICES_SIZE);
 
-			glBindVertexArray(0);
+			GLCall(glBindVertexArray(0));
 		}
 
 		RGuerrillaRendererComponent::RGuerrillaRendererComponent()
 		{
+			m_TransformationStack.push_back(RML::Matrix4::identity());
+			m_TransformationBack = &m_TransformationStack.back();
+
+			m_IndexCount = 0;
 			init();
 		}
 
@@ -66,10 +69,14 @@ namespace Rubeus
 
 		void RGuerrillaRendererComponent::begin()
 		{
-			// TODO: Add GLCall() calls
 			glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
-			m_Buffer = (VertexData *) glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
 
+			if(!(m_Buffer = (VertexData *) glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY)))
+			{
+				ERRORLOG("glMapBuffer() returned NULL");
+			}
+
+			m_IndexCount = 0;
 		}
 
 		void RGuerrillaRendererComponent::submit(const RRenderableObject * renderable)
@@ -78,19 +85,19 @@ namespace Rubeus
 			const RML::Vector2D & size = renderable->getSize();
 			const RML::Vector4D & color = renderable->getColor();
 
-			m_Buffer->vertex = position;
+			m_Buffer->vertex = *m_TransformationBack * position;
 			m_Buffer->color = color;
 			m_Buffer++;
 
-			m_Buffer->vertex = RML::Vector3D(position.x, position.y + size.y, position.z);
+			m_Buffer->vertex = *m_TransformationBack * RML::Vector3D(position.x, position.y + size.y, position.z);
 			m_Buffer->color = color;
 			m_Buffer++;
 
-			m_Buffer->vertex = RML::Vector3D(position.x + size.x, position.y + size.y, position.z);
+			m_Buffer->vertex = *m_TransformationBack * RML::Vector3D(position.x + size.x, position.y + size.y, position.z);
 			m_Buffer->color = color;
 			m_Buffer++;
 
-			m_Buffer->vertex = RML::Vector3D(position.x + size.x, position.y, position.z);
+			m_Buffer->vertex = *m_TransformationBack * RML::Vector3D(position.x + size.x, position.y, position.z);
 			m_Buffer->color = color;
 			m_Buffer++;
 
@@ -99,7 +106,6 @@ namespace Rubeus
 
 		void RGuerrillaRendererComponent::end()
 		{
-			// TODO: Add GLCall() calls
  			glUnmapBuffer(GL_ARRAY_BUFFER);
 			glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
 		}
@@ -115,6 +121,31 @@ namespace Rubeus
 			glBindVertexArray(0);
 
 			m_IndexCount = 0;
+		}
+
+		void RGuerrillaRendererComponent::push(const RML::Matrix4 & matrix)
+		{
+			m_TransformationStack.push_back(m_TransformationStack.back() * matrix);
+			m_TransformationBack = &m_TransformationStack.back();
+		}
+
+		void RGuerrillaRendererComponent::pushOverride(RML::Matrix4 & matrix)
+		{
+			m_TransformationStack.push_back(matrix);
+			m_TransformationBack = &m_TransformationStack.back();
+		}
+
+		void RGuerrillaRendererComponent::pop()
+		{
+			if(m_TransformationStack.size() > 1)
+			{
+				m_TransformationStack.pop_back();
+				m_TransformationBack = &m_TransformationStack.back();
+			}
+			else
+			{
+				ERRORLOG("Tried to pop identity matrix from transformation stack");
+			}
 		}
 	}
 }
