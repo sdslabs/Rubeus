@@ -12,7 +12,18 @@ namespace Rubeus
 {
 	namespace UtilityComponents
 	{
-		std::string RLoaderComponent::LoadTextFileStream(const char * filePath)
+		RLoaderComponent::RLoaderComponent()
+		{
+			ilInit();
+			iluInit();
+		}
+
+		RLoaderComponent::~RLoaderComponent()
+		{
+			ilDeleteImages(1, &image);
+		}
+
+		std::string RLoaderComponent::loadTextFileStream(const char * filePath)
 		{
 			FILE* file = fopen(filePath, "rt");
 
@@ -51,9 +62,23 @@ namespace Rubeus
 			return result;
 		}
 
-		auto RLoaderComponent::LoadImageWindows(std::string path)
+		ILubyte * RLoaderComponent::loadImageFile(std::string path)
 		{
-			// TODO: Write Windows specific image loader
+			initImageLoader();
+
+			ASSERT("Loading image: " + path);
+
+			DevILCall(ilLoadImage(path.c_str()));
+
+			// TODO: Complete this after Message Bus is done
+
+			return ilGetData();		
+		}
+
+		void RLoaderComponent::initImageLoader()
+		{
+			DevILCall(ilGenImages(1, &image));
+			DevILCall(ilBindImage(image));
 		}
 	}
 }

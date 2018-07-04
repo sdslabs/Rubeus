@@ -18,8 +18,8 @@ namespace Rubeus
 			GLCall(GLuint vertexShaderID = glCreateShader(GL_VERTEX_SHADER));
 			GLCall(GLuint fragmentShaderID = glCreateShader(GL_FRAGMENT_SHADER));
 
-			std::string v_save = LoadFile(m_VertPath);
-			std::string f_save = LoadFile(m_FragPath);
+			std::string v_save = m_Loader->loadTextFileStream(m_VertPath);
+			std::string f_save = m_Loader->loadTextFileStream(m_FragPath);
 
 			const char * vertSource = v_save.c_str();
 			const char * fragSource = f_save.c_str();
@@ -94,13 +94,14 @@ namespace Rubeus
 		}
 
 		RShaderComponent::RShaderComponent(const char * vertPath, const char * fragPath)
-			: m_VertPath(vertPath), m_FragPath(fragPath)
+			: m_VertPath(vertPath), m_FragPath(fragPath), m_Loader(new UtilityComponents::RLoaderComponent())
 		{
 			m_ShaderID = loadShader();
 		}
 
 		RShaderComponent::~RShaderComponent()
 		{
+			delete m_Loader;
 			GLCall(glDeleteProgram(m_ShaderID));
 		}
 
