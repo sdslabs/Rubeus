@@ -11,6 +11,7 @@
 #include <typeinfo>
 
 #include <logger_component.h>
+#include <message_system.h>
 
 #define GetVariableName(x) #x
 
@@ -25,6 +26,8 @@ namespace Rubeus
 	class RMasterComponent
 	{
 	protected:
+		static RMessageSystem m_MessageSystem;
+
 		/** @brief	Identifier for this component */
 		unsigned int m_ComponentID;
 
@@ -89,6 +92,8 @@ namespace Rubeus
 		 * @return	The name.
 		 */
 		friend std::ostream & operator<<(std::ostream & stream, RMasterComponent & component);
+
+		virtual void onMessage();
 	protected:
 	};
 }

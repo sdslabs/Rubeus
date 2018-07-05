@@ -11,15 +11,15 @@ int main()
 	using namespace GraphicComponents;
 	using namespace UtilityComponents;
 	using namespace RML;
-	RWindowComponent GameWindow("Hello World",
+	RWindowComponent * GameWindow = new RWindowComponent("Hello World",
 								1280, 720,
 								EWindowParameters::WINDOWED_MODE,
 								EWindowParameters::NON_RESIZABLE_WINDOW,
 								0);
 
-	RShaderComponent shader0(RShaderComponent("Shaders/basic.vert", "Shaders/basic.frag"));
+	RShaderComponent * shader0 = new RShaderComponent("Shaders/basic.vert", "Shaders/basic.frag");
 
-	RStaticLayer * layer0 = new RStaticLayer(shader0);
+	RStaticLayer * layer0 = new RStaticLayer(*shader0);
 
 	RGroup * g = new RGroup(Matrix4::translation(Vector3D(8.0f, 3.0f, 0.0f)) * Matrix4::rotation(45, Vector3D(0, 0, 1)));
 
@@ -38,25 +38,29 @@ int main()
 
 	layer0->addGroup(*g);
 
-	RTimer timer(2);
-	timer.setFrameCounter();
+	RTimer * timer = new RTimer(2);
+	timer->setFrameCounter();
 
 	// See if maps are slowing things down. Also have a performance check
-	while(!GameWindow.closed())
+	while(!GameWindow->closed())
 	{
-		GameWindow.clearWindow();
+		// TODO: Message bus needs references to all systems here
+		GameWindow->clearWindow();
 
-		shader0.enableShader();
-		shader0.setUniform2f("light_position", Vector2D(GameWindow.m_X * 16.0f / 1280.0f, (720.0f - GameWindow.m_Y) * 9.0f / 720.0f));
+		shader0->enableShader();
+		shader0->setUniform2f("light_position", Vector2D(GameWindow->m_X * 16.0f / 1280.0f, (720.0f - GameWindow->m_Y) * 9.0f / 720.0f));
 
 		layer0->draw();
 
-		GameWindow.updateWindow();
-		timer.evaluateFrames();
+		GameWindow->updateWindow();
+		timer->evaluateFrames();
 	}
 
+	delete timer;
 	delete g;
 	delete layer0;
+	delete shader0;
+	delete GameWindow;
 
 	return 0;
 }

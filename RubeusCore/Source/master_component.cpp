@@ -10,41 +10,47 @@
 
 namespace Rubeus
 {
-		unsigned int RMasterComponent::componentsInitialised = 0;
+	RMessageSystem RMasterComponent::m_MessageSystem;
+	unsigned int RMasterComponent::componentsInitialised = 0;
 
-		RMasterComponent::RMasterComponent()
-		{
-			componentsInitialised++;
-			m_ComponentID = componentsInitialised;
+	RMasterComponent::RMasterComponent()
+	{
+		componentsInitialised++;
+		m_ComponentID = componentsInitialised;
 
-			add();
-		}
+		add();
+	}
 
-		RMasterComponent::~RMasterComponent()
-		{
-			remove();
-		}
+	RMasterComponent::~RMasterComponent()
+	{
+		remove();
+	}
 
-		void RMasterComponent::add()
-		{
-			m_ComponentMap[m_ComponentID] = this;
-		}
+	void RMasterComponent::add()
+	{
+		m_ComponentMap[m_ComponentID] = this;
+	}
 
-		void RMasterComponent::remove()
-		{
-			m_ComponentMap.erase(m_ComponentID);
+	void RMasterComponent::remove()
+	{
+		m_ComponentMap.erase(m_ComponentID);
 
-			componentsInitialised--;
-		}
+		componentsInitialised--;
+	}
 
-		unsigned int RMasterComponent::getComponentID() const
-		{
-			return m_ComponentID;
-		}
+	unsigned int RMasterComponent::getComponentID() const
+	{
+		return m_ComponentID;
+	}
 
-		std::ostream & operator<<(std::ostream & stream, RMasterComponent & component)
-		{
-			stream << component.getName();
-			return stream;
-		}
+	void RMasterComponent::onMessage()
+	{
+		ERRORLOG("Master component was messaged");
+	}
+
+	std::ostream & operator<<(std::ostream & stream, RMasterComponent & component)
+	{
+		stream << component.getName();
+		return stream;
+	}
 }
