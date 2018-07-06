@@ -23,8 +23,9 @@ namespace Rubeus
 		}
 	}
 
-	void RMessageSystem::addMessage(Message * message)
+	void RMessageSystem::addMessage(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, void * data)
 	{
+		Message * message = new Message(sender, receiver, type, data);
 		m_MessageBus.post(message);
 	}
 }

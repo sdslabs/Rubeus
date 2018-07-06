@@ -36,10 +36,12 @@ namespace Rubeus
 		 * @fn		void addMessage(Message * message)
 		 *
 		 * @brief	Adds a message to the message queue
-		 * @warning	Do not delete the message pointer. The message queue intends to take responsibility of the message object passed in.
 		 *
-		 * @param	message	Pointer to the message object to be sent.
+		 * @param	sender	Pointer to the sender.
+		 * @param	receiver	Pointer to the receiver.
+		 * @param	type		Type of message command.
+		 * @param	data		Pointer to the data object to be sent.
 		 */
-		void addMessage(Message * message);
+		void addMessage(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, void * data = NULL);
 	};
 }
