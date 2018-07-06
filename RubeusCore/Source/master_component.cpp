@@ -43,7 +43,7 @@ namespace Rubeus
 		return m_ComponentID;
 	}
 
-	void RMasterComponent::onMessage(RMessage * msg)
+	void RMasterComponent::onMessage(Message * msg)
 	{
 		ERRORLOG("Master component was messaged");
 	}

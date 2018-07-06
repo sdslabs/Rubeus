@@ -1,3 +1,9 @@
+/**
+ * @file		Source/message_bus.cpp
+ *
+ * @brief	Implements the mesage bus class.
+ */
+
 #include <message_bus.h>
 
 namespace Rubeus
@@ -14,12 +20,12 @@ namespace Rubeus
 		}
 	}
 
-	void RMessageBus::post(RMessage * message)
+	void RMessageBus::post(Message * message)
 	{
 		m_MessageQueue.push_back(message);
 	}
 
-	RMessage * RMessageBus::pop()
+	Message * RMessageBus::pop()
 	{
 		auto temp = m_MessageQueue.back();
 		m_MessageQueue.pop_back();

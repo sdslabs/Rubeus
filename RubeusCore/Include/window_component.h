@@ -173,7 +173,7 @@ namespace Rubeus
 			friend void scrollCallback(GLFWwindow *window, double xoffset, double yoffset);
 			friend void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);
 
-			void onMessage(RMessage * msg) override;
+			void onMessage(Message * msg) override;
 
 		protected:
 		};

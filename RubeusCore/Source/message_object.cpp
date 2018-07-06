@@ -1,13 +1,19 @@
+/**
+ * @file		Source/message_object.cpp
+ *
+ * @brief	Implements the mesage object structure.
+ */
+
 #include <message_object.h>
 
 namespace Rubeus
 {
-	RMessage::RMessage(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, void * data)
+	Message::Message(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, void * data)
 		: m_Sender(sender), m_Receiver(receiver), m_Type(type), m_Data(data)
 	{
 	}
 
-	RMessage::~RMessage()
+	Message::~Message()
 	{
 	}
 }

@@ -5,7 +5,7 @@
 
 std::unordered_map<unsigned int, Rubeus::RMasterComponent *> Rubeus::RMasterComponent::m_ComponentMap;
 
-#define MSG_SYSTEM 1
+#define MSG_SYSTEM 0
 
 int main()
 {
@@ -77,7 +77,7 @@ int main()
 	);
 
 	MessageSystem.m_MessageBus.addSystem(GameWindow);
-	MessageSystem.addMessage(new RMessage(GameWindow, GameWindow, change_window_title, "chal raha hain bro :*)"));
+	MessageSystem.addMessage(new Message(GameWindow, GameWindow, change_window_title, "chal raha hain bro :*)"));
 
 	while(!GameWindow->closed())
 	{

@@ -13,7 +13,7 @@ namespace Rubeus
 			RWindowComponent::m_Y = ypos;
 		}
 
-		void RWindowComponent::onMessage(RMessage * msg)
+		void RWindowComponent::onMessage(Message * msg)
 		{
 			switch(msg->m_Type)
 			{

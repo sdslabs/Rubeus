@@ -1,3 +1,9 @@
+/**
+ * @file		Source/message_system.cpp
+ *
+ * @brief	Implements the mesage system class.
+ */
+
 #include <message_system.h>
 #include <master_component.h>
 
@@ -17,7 +23,7 @@ namespace Rubeus
 		}
 	}
 
-	void RMessageSystem::addMessage(RMessage * message)
+	void RMessageSystem::addMessage(Message * message)
 	{
 		m_MessageBus.post(message);
 	}
