@@ -9,13 +9,10 @@ namespace Rubeus
 {
 	class RMessageSystem
 	{
-	private:
-
 	public:
+		static RMessageBus m_MessageBus;
+
 		void evaluateMessages();
 		void addMessage(RMessage * message);
-
-	protected:
-		static RMessageBus m_MessageBus;
 	};
 }

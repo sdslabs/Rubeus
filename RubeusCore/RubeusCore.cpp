@@ -5,12 +5,15 @@
 
 std::unordered_map<unsigned int, Rubeus::RMasterComponent *> Rubeus::RMasterComponent::m_ComponentMap;
 
+#define MSG_SYSTEM 1
+
 int main()
 {
 	using namespace Rubeus;
 	using namespace GraphicComponents;
 	using namespace UtilityComponents;
 	using namespace RML;
+#if !MSG_SYSTEM
 	RWindowComponent * GameWindow = new RWindowComponent("Hello World",
 								1280, 720,
 								EWindowParameters::WINDOWED_MODE,
@@ -62,5 +65,31 @@ int main()
 	delete shader0;
 	delete GameWindow;
 
+#else
+
+	RMessageSystem MessageSystem;
+	RWindowComponent * GameWindow = new RWindowComponent(
+		"Hello World",
+		1280, 720,
+		EWindowParameters::WINDOWED_MODE,
+		EWindowParameters::NON_RESIZABLE_WINDOW,
+		1
+	);
+
+	MessageSystem.m_MessageBus.addSystem(GameWindow);
+	MessageSystem.addMessage(new RMessage(GameWindow, GameWindow, change_window_title, "chal raha hain bro :*)"));
+
+	while(!GameWindow->closed())
+	{
+		GameWindow->clearWindow();
+
+		MessageSystem.evaluateMessages();
+
+		GameWindow->updateWindow();
+	}
+
+	delete GameWindow;
+
+#endif
 	return 0;
 }

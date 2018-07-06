@@ -93,7 +93,7 @@ namespace Rubeus
 		 */
 		friend std::ostream & operator<<(std::ostream & stream, RMasterComponent & component);
 
-		virtual void onMessage();
+		virtual void onMessage(RMessage * msg);
 	protected:
 	};
 }

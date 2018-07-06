@@ -35,3 +35,4 @@
 #include <static_sprite_object.h>
 #include <timer_component.h>
 #include <static_layer_object.h>
+#include <message_system.h>
