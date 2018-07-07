@@ -4,22 +4,19 @@
 
 #include <IL/il.h>
 
-#include <loader_component.h>
-
 namespace Rubeus
 {
 	namespace GraphicComponents
 	{
-		class RImage
+		struct Image
 		{
-		private:
 			ILubyte * m_Image;
+			const unsigned int m_Height;
+			const unsigned int m_Width;
+			const unsigned int m_BPP;
 
-		public:
-			RImage(std::string path);
-			~RImage();
-
-		protected:
+			Image(ILubyte imageData[ ], unsigned int height, unsigned int width, unsigned int bpp);
+			~Image();
 		};
 	}
 }

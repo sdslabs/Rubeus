@@ -48,6 +48,14 @@ namespace Rubeus
 		ERRORLOG("Master component was messaged");
 	}
 
+	void RMasterComponent::DeleteComponents()
+	{
+		for(unsigned int i = 0; i < m_ComponentMap.size(); ++i)
+		{
+			delete m_ComponentMap[i];
+		}
+	}
+
 	std::ostream & operator<<(std::ostream & stream, RMasterComponent & component)
 	{
 		stream << component.getName();

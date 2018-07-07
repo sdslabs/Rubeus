@@ -10,9 +10,13 @@
 #include <string>
 #include <cstdlib>
 
+#include <IL/il.h>
+#include <IL/ilu.h>
+
 #include <logger_component.h>
 #include <master_component.h>
 #include <logger_component.h>
+#include <image_object.h>
 
 namespace Rubeus
 {
@@ -23,9 +27,11 @@ namespace Rubeus
 		 *
 		 * @brief	A loader component. Useful for file I/O
 		 */
-		class RLoaderComponent : RMasterComponent
+		class RLoaderComponent : public RMasterComponent
 		{
 		private:
+			ILuint m_ImageID;
+
 			/**
 			 * @fn		void initImageLoader()
 			 *
@@ -42,6 +48,13 @@ namespace Rubeus
 			RLoaderComponent();
 
 			/**
+			 * @fn	~RLoaderComponent()
+			 *		
+			 * @brief	Default destructor.
+			 */
+			~RLoaderComponent();
+
+			/**
 			 * @fn	std::string RLoaderComponent::LoadTextFileStream(const char * filePath)
 			 *
 			 * @brief	Loads text file to a string using streams
@@ -52,16 +65,20 @@ namespace Rubeus
 			 *
 			 * @return	The text file stream.
 			 */
-			std::string LoadTextFileStream(const char * filePath);
+			std::string loadTextFileStream(const char * filePath);
 
 			/**
-			 * @fn		ILubyte * LoadImageFile(std::string path, ILuint width, ILuint height, ILuint depth)
+			 * @fn		GraphicComponents::Image LoadImageFile(const char * path)
 			 *
 			 * @brief	Loads image
 			 *
-			 * @return	Pointer to the image data.
+			 * @param	path		The image file path
+			 *
+			 * @return	Pointer to the image object.
 			 */
-			static auto LoadImageWindows(std::string path);
+			GraphicComponents::Image loadImageFile(const char * path);
+
+			void onMessage(Message * msg) override;
 
 		protected:
 		};

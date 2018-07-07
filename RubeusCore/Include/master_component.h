@@ -26,7 +26,6 @@ namespace Rubeus
 	class RMasterComponent
 	{
 	protected:
-		static RMessageSystem m_MessageSystem;
 
 		/** @brief	Identifier for this component */
 		unsigned int m_ComponentID;
@@ -39,6 +38,9 @@ namespace Rubeus
 		void add();
 
 	public:
+		/** @brief	The message system to send messages */
+		static RMessageSystem m_MessageSystem;
+
 		/** @brief	The number of components initialised */
 		static unsigned int componentsInitialised;
 
@@ -102,6 +104,14 @@ namespace Rubeus
 		 * @param	msg	The message object received.
 		 */
 		virtual void onMessage(Message * msg);
+
+		/**
+		 * @fn		static void deleteComponents()
+		 *
+		 * @brief	Deletes the component map pointers
+		 * @warning	Deletes all allocated components
+		 */
+		static void DeleteComponents();
 	protected:
 	};
 }

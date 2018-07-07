@@ -1,6 +1,5 @@
 // RubeusCore.cpp : Defines the entry point for the application.
 //
-
 #include "RubeusCore.h"
 
 std::unordered_map<unsigned int, Rubeus::RMasterComponent *> Rubeus::RMasterComponent::m_ComponentMap;
@@ -79,6 +78,11 @@ int main()
 	MessageSystem.m_MessageBus.addSystem(GameWindow);
 	MessageSystem.addMessage(GameWindow, GameWindow, change_window_title, "chal raha hain bro :*)");
 
+	RLoaderComponent * loader = new RLoaderComponent();
+	MessageSystem.m_MessageBus.addSystem(loader);
+
+	GameWindow->m_MessageSystem.addMessage(GameWindow, loader, EMessageCode::load_image, "Assets/test8.png");
+
 	while(!GameWindow->closed())
 	{
 		GameWindow->clearWindow();
@@ -88,8 +92,10 @@ int main()
 		GameWindow->updateWindow();
 	}
 
+	delete loader;
 	delete GameWindow;
 
+	RMasterComponent::DeleteComponents();
 #endif
   
 	return 0;

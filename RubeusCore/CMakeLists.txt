@@ -47,6 +47,7 @@ set_target_properties(devILUT PROPERTIES
 target_include_directories(RubeusCore PUBLIC ./Dependencies/GLEW/include)
 target_include_directories(RubeusCore PUBLIC ./Dependencies/GLFW/include)
 target_include_directories(RubeusCore PUBLIC ./Dependencies/DevIL/include)
+target_include_directories(RubeusCore PUBLIC ./Dependencies/Boost_libraries)
 target_include_directories(RubeusCore PUBLIC ./Include)
 include_directories(${OPENGL_INCLUDE_DIRS})
 

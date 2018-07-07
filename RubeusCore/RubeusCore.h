@@ -16,6 +16,9 @@
 #endif
 #endif
 
+// Library specific defines
+#define ILUT_USE_OPENGL
+
 // Dependencies
 #include <nvidia_enable.h>
 #include <GL\glew.h>

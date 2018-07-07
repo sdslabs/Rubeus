@@ -8,6 +8,12 @@
 
 #include <string>
 
+#include <boost/any.hpp>
+
+#include <image_object.h>
+
+typedef boost::any var;
+
 namespace Rubeus
 {
 	class RMasterComponent;
@@ -20,7 +26,9 @@ namespace Rubeus
 	enum EMessageCode
 	{
 		system_ok,
-		change_window_title
+		change_window_title,
+		load_image,
+		get_loaded_image
 	};
 
 	/**
@@ -39,11 +47,11 @@ namespace Rubeus
 		/** @brief	The type of this message */
 		EMessageCode m_Type;
 
-		/** @brief	The data to be sent with this message */
-		void * m_Data;
+		/** @brief	The data union to be sent with this message */
+		var m_Data;
 
 		/**
-		 * @fn		Message(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, void * data = NULL)
+		 * @fn		Message(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, var data = NULL)
 		 *
 		 * @brief	Constructor
 		 * @warning	
@@ -53,7 +61,7 @@ namespace Rubeus
 		 * @param	type		The type of message.
 		 * @param	data		The data to be transmitted.
 		 */
-		Message(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, void * data = NULL);
+		Message(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, var data = NULL);
 
 		/**
 		 * @fn	~Message()

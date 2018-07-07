@@ -13,20 +13,6 @@ namespace Rubeus
 			RWindowComponent::m_Y = ypos;
 		}
 
-		void RWindowComponent::onMessage(Message * msg)
-		{
-			switch(msg->m_Type)
-			{
-				case system_ok:
-					ASSERT("Message system OK");
-				case change_window_title:
-					setWindowTitle((const char *) (msg->m_Data));
-					break;
-				default:
-					break;
-			}
-		}
-
 		void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods)
 		{
 			if (button == GLFW_MOUSE_BUTTON_RIGHT && action == GLFW_PRESS)

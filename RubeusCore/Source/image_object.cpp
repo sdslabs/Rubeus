@@ -4,15 +4,13 @@ namespace Rubeus
 {
 	namespace GraphicComponents
 	{
-		RImage::RImage(std::string path)
+		Image::Image(ILubyte imageData[ ], unsigned int height, unsigned int width, unsigned int bpp)
+			: m_Image(imageData), m_Height(height), m_Width(width), m_BPP(bpp)
 		{
-			// TODO: Complete this after Message bus is completed
-			//m_Image = UtilityComponents::RLoaderComponent::loadImageFile(path);
 		}
 
-		RImage::~RImage()
+		Image::~Image()
 		{
-			delete m_Image;
 		}
 	}
 }

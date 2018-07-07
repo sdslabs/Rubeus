@@ -96,6 +96,9 @@
 
 		// No error reporting in non-debug builds
 		#define GLCall(x) x
+
+		// No error reporting in non-debug builds
+		#define DevILCall(x) x
 	#endif
 #endif
 
