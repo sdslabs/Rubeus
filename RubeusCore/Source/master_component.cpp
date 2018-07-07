@@ -12,6 +12,7 @@ namespace Rubeus
 {
 	RMessageSystem RMasterComponent::m_MessageSystem;
 	unsigned int RMasterComponent::componentsInitialised = 0;
+	std::unordered_map<unsigned int, std::unique_ptr<Rubeus::RMasterComponent>> Rubeus::RMasterComponent::m_ComponentMap;
 
 	RMasterComponent::RMasterComponent()
 	{
@@ -23,19 +24,11 @@ namespace Rubeus
 
 	RMasterComponent::~RMasterComponent()
 	{
-		remove();
 	}
 
 	void RMasterComponent::add()
 	{
-		m_ComponentMap[m_ComponentID] = this;
-	}
-
-	void RMasterComponent::remove()
-	{
-		m_ComponentMap.erase(m_ComponentID);
-
-		componentsInitialised--;
+		m_ComponentMap[m_ComponentID] = std::make_unique<RMasterComponent>(*this);
 	}
 
 	unsigned int RMasterComponent::getComponentID() const
@@ -46,14 +39,6 @@ namespace Rubeus
 	void RMasterComponent::onMessage(Message * msg)
 	{
 		ERRORLOG("Master component was messaged");
-	}
-
-	void RMasterComponent::DeleteComponents()
-	{
-		for(unsigned int i = 0; i < m_ComponentMap.size(); ++i)
-		{
-			delete m_ComponentMap[i];
-		}
 	}
 
 	std::ostream & operator<<(std::ostream & stream, RMasterComponent & component)

@@ -26,7 +26,6 @@ namespace Rubeus
 	class RMasterComponent
 	{
 	protected:
-
 		/** @brief	Identifier for this component */
 		unsigned int m_ComponentID;
 
@@ -45,7 +44,7 @@ namespace Rubeus
 		static unsigned int componentsInitialised;
 
 		/** @brief	The component table */
-		static std::unordered_map<unsigned int, RMasterComponent *> m_ComponentMap;
+		static std::unordered_map<unsigned int, std::unique_ptr<RMasterComponent>> m_ComponentMap;
 
 		/**
 		* @fn	MasterComponent::MasterComponent();
@@ -105,13 +104,6 @@ namespace Rubeus
 		 */
 		virtual void onMessage(Message * msg);
 
-		/**
-		 * @fn		static void deleteComponents()
-		 *
-		 * @brief	Deletes the component map pointers
-		 * @warning	Deletes all allocated components
-		 */
-		static void DeleteComponents();
 	protected:
 	};
 }

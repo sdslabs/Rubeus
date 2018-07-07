@@ -2,8 +2,6 @@
 //
 #include "RubeusCore.h"
 
-std::unordered_map<unsigned int, Rubeus::RMasterComponent *> Rubeus::RMasterComponent::m_ComponentMap;
-
 #define MSG_SYSTEM 1
 
 int main()
@@ -94,8 +92,6 @@ int main()
 
 	delete loader;
 	delete GameWindow;
-
-	RMasterComponent::DeleteComponents();
 #endif
   
 	return 0;
