@@ -69,7 +69,6 @@ namespace Rubeus
 			ASSERT("Loading image: " + std::string(path));
 
 			DevILCall(ilLoadImage(path));
-			DevILCall(ilConvertImage(IL_RGBA, IL_UNSIGNED_BYTE));
 
 			return GraphicComponents::Image(
 				ilGetData(),

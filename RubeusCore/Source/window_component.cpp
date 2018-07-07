@@ -8,6 +8,7 @@
 
 #include <GL\glew.h>
 #include <GLFW\glfw3.h>
+
 #include <window_component.h>
 
 namespace Rubeus
@@ -204,7 +205,7 @@ namespace Rubeus
 					ASSERT("Image received");
 					Image & image = boost::any_cast<Image &>(msg->m_Data);
 
-					for(unsigned int i = 0; i < image.m_Height * image.m_Width * 4; i+=4)
+					for(unsigned int i = 0; i < image.m_Height * image.m_Width * 3; i+=3)
 					{
 						LOG("Red:");
 						LOG((int) image.m_Image[i]);
@@ -212,8 +213,6 @@ namespace Rubeus
 						LOG((int) image.m_Image[i+1]);
 						LOG("Blue:");
 						LOG((int) image.m_Image[i+2]);
-						LOG("Alpha:");
-						LOG((int) image.m_Image[i+3]);
 					}
 				}
 					break;

@@ -18,9 +18,10 @@ namespace Rubeus
 	};
 
 	// Define any functions needed to be sent as message data below. Make sure to mark them as inline for performance.
-
-	void dummyFunction()
-	{
-		LOG("Dummy function was called");
-	}
+	// Example:
+	//
+	// inline void dummyFunction()
+	// {
+	//   	LOG("Dummy function was called");
+	// }
 }
