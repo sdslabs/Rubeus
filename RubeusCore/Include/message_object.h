@@ -11,25 +11,13 @@
 #include <boost/any.hpp>
 
 #include <image_object.h>
+#include <message_codes.h>
 
 typedef boost::any var;
 
 namespace Rubeus
 {
 	class RMasterComponent;
-
-	/**
-	 * @enum		EMessageCode
-	 *
-	 * @brief	Defines all message codes the game requires.
-	 */
-	enum EMessageCode
-	{
-		system_ok,
-		change_window_title,
-		load_image,
-		get_loaded_image
-	};
 
 	/**
 	 * @struct	Message
@@ -54,7 +42,6 @@ namespace Rubeus
 		 * @fn		Message(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, var data = NULL)
 		 *
 		 * @brief	Constructor
-		 * @warning	
 		 *
 		 * @param	sender	The sender's address.
 		 * @param	receiver	The receiver's address.
