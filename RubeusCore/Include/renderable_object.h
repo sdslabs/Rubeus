@@ -29,6 +29,9 @@ namespace Rubeus
 			/** @brief	The vertex position */
 			RML::Vector3D vertex;
 
+			/** @brief	UV coordinates for this vertex */
+			RML::Vector2D uv;
+
 			/** @brief	The color of this vertex */
 			RML::Vector4D color;
 		};
@@ -53,6 +56,8 @@ namespace Rubeus
 			
 			/** @brief	The color of the sprite */
 			RML::Vector4D m_Color;
+
+			std::vector<RML::Vector2D> m_UV;
 
 			/**
 			 * @fn	RRenderableObject::RRenderableObject(RML::Vector3D position, RML::Vector2D size, RML::Vector4D color);
@@ -82,7 +87,7 @@ namespace Rubeus
 			 *
 			 * @return	The position.
 			 */
-			inline const RML::Vector3D& getPosition() const { return m_Position; }
+			inline const RML::Vector3D & getPosition() const { return m_Position; }
 
 			/**
 			 * @fn	inline const RML::Vector2D& RRenderableObject::getSize()
@@ -91,7 +96,7 @@ namespace Rubeus
 			 *
 			 * @return	The size.
 			 */
-			inline const RML::Vector2D& getSize() const { return m_Size; }
+			inline const RML::Vector2D & getSize() const { return m_Size; }
 
 			/**
 			 * @fn	inline const RML::Vector4D& RRenderableObject::getColor()
@@ -100,10 +105,14 @@ namespace Rubeus
 			 *
 			 * @return	The color.
 			 */
-			inline const RML::Vector4D& getColor() const { return m_Color; }
+			inline const RML::Vector4D & getColor() const { return m_Color; }
+
+			inline const std::vector<RML::Vector2D> & getUV() const { return m_UV; }
 
 		protected:
 			RRenderableObject();
+			void setUV();
+
 		};
 	}
 }

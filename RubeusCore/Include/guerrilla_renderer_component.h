@@ -24,7 +24,8 @@ namespace Rubeus
 #define INDICES_SIZE MAX_SPRITES * 6
 
 #define SHADER_VERTEX_LOCATION 0
-#define SHADER_COLOR_LOCATION 1
+#define SHADER_UV_LOCATION 1
+#define SHADER_COLOR_LOCATION 2
 
 		/**
 		 * @class	RGuerrillaRendererComponent

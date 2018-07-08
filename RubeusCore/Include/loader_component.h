@@ -30,14 +30,14 @@ namespace Rubeus
 		class RLoaderComponent : public RMasterComponent
 		{
 		private:
-			ILuint m_ImageID;
+			static ILuint m_ImageID;
 
 			/**
-			 * @fn		void initImageLoader()
+			 * @fn		static void initImageLoader()
 			 *
 			 * @brief	Initialise OpenIL/DevIL library for image loading
 			 */
-			void initImageLoader();
+			static void initImageLoader();
 
 		public:
 			/**
@@ -68,7 +68,7 @@ namespace Rubeus
 			std::string loadTextFileStream(const char * filePath);
 
 			/**
-			 * @fn		GraphicComponents::Image LoadImageFile(const char * path)
+			 * @fn		static GraphicComponents::Image LoadImageFile(const char * path)
 			 *
 			 * @brief	Loads image
 			 *
@@ -76,7 +76,14 @@ namespace Rubeus
 			 *
 			 * @return	Pointer to the image object.
 			 */
-			GraphicComponents::Image loadImageFile(const char * path);
+			static GraphicComponents::Image loadImageFile(const char * path);
+
+			/**
+			 * @fn		static void deleteImage()
+			 *
+			 * @brief	Frees the image data
+			 */
+			static void deleteImage();
 
 			void onMessage(Message * msg) override;
 

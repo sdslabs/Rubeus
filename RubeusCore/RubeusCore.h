@@ -39,3 +39,4 @@
 #include <timer_component.h>
 #include <static_layer_object.h>
 #include <message_system.h>
+#include <texture_object.h>

@@ -12,6 +12,8 @@ namespace Rubeus
 {
 	namespace UtilityComponents
 	{
+		ILuint RLoaderComponent::m_ImageID;
+
 		RLoaderComponent::RLoaderComponent()
 		{
 			ilInit();
@@ -20,7 +22,6 @@ namespace Rubeus
 
 		RLoaderComponent::~RLoaderComponent()
 		{
-			ilDeleteImages(1, &m_ImageID);
 		}
 
 		std::string RLoaderComponent::loadTextFileStream(const char * filePath)
@@ -69,6 +70,7 @@ namespace Rubeus
 			ASSERT("Loading image: " + std::string(path));
 
 			DevILCall(ilLoadImage(path));
+			DevILCall(iluFlipImage());
 
 			return GraphicComponents::Image(
 				ilGetData(),
@@ -97,6 +99,11 @@ namespace Rubeus
 		{
 			DevILCall(ilGenImages(1, &m_ImageID));
 			DevILCall(ilBindImage(m_ImageID));
+		}
+
+		void RLoaderComponent::deleteImage()
+		{
+			ilDeleteImages(1, &m_ImageID);
 		}
 	}
 }
