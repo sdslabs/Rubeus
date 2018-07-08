@@ -15,15 +15,15 @@ namespace Rubeus
 			m_Width = image->m_Width;
 
 			GLuint result;
-			glGenTextures(1, &result);
-			glBindTexture(GL_TEXTURE_2D, result);
+			GLCall(glGenTextures(1, &result));
+			GLCall(glBindTexture(GL_TEXTURE_2D, result));
 
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-			glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+			GLCall(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST));
+			GLCall(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST));
 
-			glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, m_Width, m_Height, 0, GL_RGB, GL_UNSIGNED_BYTE, image->m_Image);
+			GLCall(glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, m_Width, m_Height, 0, GL_RGB, GL_UNSIGNED_BYTE, image->m_Image));
 
-			glBindTexture(GL_TEXTURE_2D, 0);
+			GLCall(glBindTexture(GL_TEXTURE_2D, 0));
 
 			return result;
 		}
@@ -40,12 +40,12 @@ namespace Rubeus
 
 		void RTexture::bindTexture() const
 		{
-			glBindTexture(GL_TEXTURE_2D, m_TextureID);
+			GLCall(glBindTexture(GL_TEXTURE_2D, m_TextureID));
 		}
 
 		void RTexture::unbindTexture() const
 		{
-			glBindTexture(GL_TEXTURE_2D, 0);
+			GLCall(glBindTexture(GL_TEXTURE_2D, 0));
 		}
 	}
 }
