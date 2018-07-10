@@ -58,7 +58,7 @@
 									x;\
 									while(ILenum error = ilGetError())\
 									{\
-									ERRORLOG(iluErrorString(error));\
+									ERRORLOG("DevIL Error: " + iluErrorString(error));\
 									if(error == ILU_OUT_OF_MEMORY)\
 									std::cin.get();\
 									}

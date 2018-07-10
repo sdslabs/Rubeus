@@ -39,7 +39,7 @@ namespace Rubeus
 			UtilityComponents::RLoaderComponent * m_Loader;
 
 			/**
-			 * @fn	GLuint RShader::loadShader();
+			 * @fn		GLuint RShader::loadShader();
 			 *
 			 * @brief	Loads the shader.
 			 *
@@ -48,7 +48,7 @@ namespace Rubeus
 			GLuint loadShader();
 
 			/**
-			 * @fn	GLint RShader::getUniformLocation(const GLchar * name);
+			 * @fn		GLint RShader::getUniformLocation(const GLchar * name);
 			 *
 			 * @brief	(OpenGL abstraction) Returns an integer that represents the location of a specific
 			 * 			uniform variable within a program object
@@ -63,7 +63,7 @@ namespace Rubeus
 		public:
 
 			/**
-			 * @fn	RShader::RShader(const char * vertPath, const char * fragPath);
+			 * @fn		RShader::RShader(const char * vertPath, const char * fragPath);
 			 *
 			 * @brief	Constructor
 			 *
@@ -73,14 +73,14 @@ namespace Rubeus
 			RShaderComponent(const char * vertPath, const char * fragPath);
 
 			/**
-			 * @fn	RShader::~RShader();
+			 * @fn		RShader::~RShader();
 			 *
 			 * @brief	Destructor
 			 */
 			~RShaderComponent();
 
 			/**
-			 * @fn	void RShader::setUniform1f(const GLchar* name, float value);
+			 * @fn		void RShader::setUniform1f(const GLchar* name, float value);
 			 *
 			 * @brief	Sets uniform float value required in the shader code
 			 *
@@ -90,7 +90,7 @@ namespace Rubeus
 			void setUniform1f(const GLchar* name, float value);
 
 			/**
-			 * @fn	void RShader::setUniform1i(const GLchar* name, int value);
+			 * @fn		void RShader::setUniform1i(const GLchar* name, int value);
 			 *
 			 * @brief	Sets uniform int value required in the shader code
 			 *
@@ -100,7 +100,7 @@ namespace Rubeus
 			void setUniform1i(const GLchar* name, int value);
 
 			/**
-			 * @fn	void RShader::setUniform2f(const GLchar* name, const RML::Vector2D & vector);
+			 * @fn		void RShader::setUniform2f(const GLchar* name, const RML::Vector2D & vector);
 			 *
 			 * @brief	Sets uniform float Vector2D required in the shader code
 			 *
@@ -110,7 +110,7 @@ namespace Rubeus
 			void setUniform2f(const GLchar* name, const RML::Vector2D & vector);
 
 			/**
-			 * @fn	void RShader::setUniform3f(const GLchar* name, const RML::Vector3D & vector);
+			 * @fn		void RShader::setUniform3f(const GLchar* name, const RML::Vector3D & vector);
 			 *
 			 * @brief	Sets uniform float Vector3D required in the shader code
 			 *
@@ -120,7 +120,7 @@ namespace Rubeus
 			void setUniform3f(const GLchar* name, const RML::Vector3D & vector);
 
 			/**
-			 * @fn	void RShader::setUniform4f(const GLchar* name, const RML::Vector4D & vector);
+			 * @fn		void RShader::setUniform4f(const GLchar* name, const RML::Vector4D & vector);
 			 *
 			 * @brief	Sets uniform float Vector4D required in the shader code
 			 *
@@ -130,7 +130,7 @@ namespace Rubeus
 			void setUniform4f(const GLchar* name, const RML::Vector4D & vector);
 
 			/**
-			 * @fn	void RShader::setUniformMat4(const GLchar* name, const RML::Matrix4 & matrix);
+			 * @fn		void RShader::setUniformMat4(const GLchar* name, const RML::Matrix4 & matrix);
 			 *
 			 * @brief	Sets uniform 4x4 matrix required in the shader code
 			 *
@@ -140,14 +140,14 @@ namespace Rubeus
 			void setUniformMat4(const GLchar* name, const RML::Matrix4 & matrix);
 
 			/**
-			 * @fn	void RShader::enableShader() const;
+			 * @fn		void RShader::enableShader() const;
 			 *
 			 * @brief	Enables the associated shader
 			 */
 			void enableShader() const;
 
 			/**
-			 * @fn	void RShader::disableShader() const;
+			 * @fn		void RShader::disableShader() const;
 			 *
 			 * @brief	Disables the associated shader
 			 */

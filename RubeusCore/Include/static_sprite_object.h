@@ -32,7 +32,7 @@ namespace Rubeus
 		public:
 
 			/**
-			 * @fn	RStaticSprite::RStaticSprite(float x, float y, float width, float height, const RML::Vector4D & color, RShaderComponent & shader);
+			 * @fn		RStaticSprite::RStaticSprite(float x, float y, float width, float height, const RML::Vector4D & color, RShaderComponent & shader);
 			 *
 			 * @brief	Constructor
 			 *
@@ -46,14 +46,14 @@ namespace Rubeus
 			RStaticSprite(float x, float y, float width, float height, const RML::Vector4D & color, RShaderComponent & shader);
 
 			/**
-			 * @fn	RStaticSprite::~RStaticSprite();
+			 * @fn		RStaticSprite::~RStaticSprite();
 			 *
 			 * @brief	Destructor
 			 */
 			~RStaticSprite();
 
 			/**
-			 * @fn	inline RVertexArray* RStaticSprite::getVAO() const
+			 * @fn		inline RVertexArray* RStaticSprite::getVAO() const
 			 *
 			 * @brief	Gets the vao
 			 *
@@ -62,7 +62,7 @@ namespace Rubeus
 			inline RVertexArray* getVAO() const { return m_VertexArray; }
 
 			/**
-			 * @fn	inline RIndexBuffer* RStaticSprite::getIBO() const
+			 * @fn		inline RIndexBuffer* RStaticSprite::getIBO() const
 			 *
 			 * @brief	Gets the ibo
 			 *
@@ -71,7 +71,7 @@ namespace Rubeus
 			inline RIndexBuffer* getIBO() const { return m_IndexBuffer; }
 
 			/**
-			 * @fn	inline RShaderComponent& RStaticSprite::getShader() const
+			 * @fn		inline RShaderComponent& RStaticSprite::getShader() const
 			 *
 			 * @brief	Gets the shader
 			 *

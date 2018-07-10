@@ -32,21 +32,21 @@ namespace Rubeus
 		public:
 
 			/**
-			 * @fn	RVertexArray::RVertexArray();
+			 * @fn		RVertexArray::RVertexArray();
 			 *
 			 * @brief	Default constructor. Acquires a vertex array object ID from OpenGL
 			 */
 			RVertexArray();
 
 			/**
-			 * @fn	RVertexArray::~RVertexArray();
+			 * @fn		RVertexArray::~RVertexArray();
 			 *
 			 * @brief	Destructor
 			 */
 			~RVertexArray();
 
 			/**
-			 * @fn	void RVertexArray::addBuffer(RBuffer * buffer, GLuint index);
+			 * @fn		void RVertexArray::addBuffer(RBuffer * buffer, GLuint index);
 			 *
 			 * @brief	Adds a buffer to the specified shader ID
 			 *
@@ -56,14 +56,14 @@ namespace Rubeus
 			void addBuffer(RBuffer * buffer, GLuint index);
 
 			/**
-			 * @fn	void RVertexArray::bindVertexArray();
+			 * @fn		void RVertexArray::bindVertexArray();
 			 *
 			 * @brief	Bind this vertex array
 			 */
 			void bindVertexArray() const;
 
 			/**
-			 * @fn	void RVertexArray::unbindVertexArray();
+			 * @fn		void RVertexArray::unbindVertexArray();
 			 *
 			 * @brief	Unbind this vertex array
 			 */

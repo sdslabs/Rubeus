@@ -1,4 +1,10 @@
 #include <texture_object.h>
+/**
+ * @file		Source/texture_object.cpp.
+ *
+ * @brief	Implements the Texture class
+ */
+
 #include <image_object.h>
 
 namespace Rubeus

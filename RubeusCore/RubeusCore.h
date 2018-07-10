@@ -3,13 +3,14 @@
 
 #pragma once
 
+// Standard header files
 #include <iostream>
 #include <string>
 #include <unordered_map>
 
 // TODO: Reference additional headers your program requires here.
 
-// Code Analysis Tools
+// Dynamic Program Analysis Tools
 #ifdef _DEBUG
 #ifdef VLD
 #include <vld.h>

@@ -1,3 +1,9 @@
+/**
+ * @file	Source/image_object.cpp.
+ *
+ * @brief	Implements the Image structure
+ */
+
 #include <image_object.h>
 
 namespace Rubeus

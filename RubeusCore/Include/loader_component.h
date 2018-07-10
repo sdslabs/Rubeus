@@ -30,6 +30,7 @@ namespace Rubeus
 		class RLoaderComponent : public RMasterComponent
 		{
 		private:
+			/** @brief	The image name used by DevIL library */
 			static ILuint m_ImageID;
 
 			/**
@@ -85,6 +86,14 @@ namespace Rubeus
 			 */
 			static void deleteImage();
 
+			/**
+			 * @fn	void onMessage(Message * msg) override
+			 *
+			 * @brief	Handles the message received
+			 * @warning	Use only with the message system
+			 *
+			 * @param	msg	Pointer to the message sent.
+			 */
 			void onMessage(Message * msg) override;
 
 		protected:
