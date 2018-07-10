@@ -11,14 +11,11 @@ namespace Rubeus
 {
 	namespace GraphicComponents
 	{
-		GLuint RTexture::load()
+		GLuint RTexture::load(const char * filePath)
 		{
-			Image * image = &UtilityComponents::RLoaderComponent::loadImageFile(m_FilePath);
+			Image * image = &UtilityComponents::RLoaderComponent::loadImageFile(filePath);
 
 			UtilityComponents::RLoaderComponent::deleteImage();
-
-			m_Height = image->m_Height;
-			m_Width = image->m_Width;
 
 			GLuint result;
 			GLCall(glGenTextures(1, &result));
@@ -27,7 +24,7 @@ namespace Rubeus
 			GLCall(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST));
 			GLCall(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST));
 
-			GLCall(glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, m_Width, m_Height, 0, GL_RGB, GL_UNSIGNED_BYTE, image->m_Image));
+			GLCall(glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image->m_Width, image->m_Height, 0, GL_RGB, GL_UNSIGNED_BYTE, image->m_Image));
 
 			GLCall(glBindTexture(GL_TEXTURE_2D, 0));
 
@@ -35,9 +32,8 @@ namespace Rubeus
 		}
 
 		RTexture::RTexture(const char * path)
-			: m_FilePath(path)
 		{
-			m_TextureID = load();
+			m_TextureID = load(path);
 		}
 
 		RTexture::~RTexture()

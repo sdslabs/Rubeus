@@ -23,24 +23,17 @@ namespace Rubeus
 		{
 		private:
 
-			/** @brief	The texture image file path */
-			const char * m_FilePath;
-
 			/** @brief	Texture ID provided by OpenGL */
 			GLuint m_TextureID;
 
-			/** @brief	The width of the image */
-			GLsizei m_Width;
-
-			/** @brief	The height of the image */
-			GLsizei m_Height;
-
 			/**
-			 * @fn		GLuint load()
+			 * @fn		GLuint load(const char * filePath)
 			 *
 			 * @brief	Loads a texture object using OpenGL and return a texture ID
+			 *
+			 * @param	filePath	The path to the image file to be used as a texture
 			 */
-			GLuint load();
+			GLuint load(const char * filePath);
 
 		public:
 
@@ -76,20 +69,6 @@ namespace Rubeus
 			 * @warning	Decreases graphics performance if used repeatedly.
 			 */
 			void unbindTexture() const;
-
-			/**
-			 * @fn		inline const unsigned int getWidth() const 
-			 *
-			 * @brief	Returns the width of the texture image
-			 */
-			inline const unsigned int getWidth() const { return m_Width; }
-
-			/**
-			 * @fn		inline const unsigned int getHeight() const 
-			 *
-			 * @brief	Returns the height of the texture image
-			 */
-			inline const unsigned int getHeight() const { return m_Height; }
 		};
 	}
 }
