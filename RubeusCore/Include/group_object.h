@@ -47,7 +47,7 @@ namespace Rubeus
 			~RGroup();
 
 			/**
-			 * @fn	void submit(RRendererComponent & renderer) const override
+			 * @fn		void submit(RRendererComponent & renderer) const override
 			 *
 			 * @brief	Submit the group to a renderer queue
 			 *

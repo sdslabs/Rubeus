@@ -1,5 +1,5 @@
 /**
- * @file	Include/message_object.h
+ * @file		Include/message_object.h
  *
  * @brief	Declares the message object and message commands
  */

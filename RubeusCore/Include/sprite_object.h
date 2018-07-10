@@ -21,7 +21,18 @@ namespace Rubeus
 		{
 		private:
 		public:
+			/**
+			 * @fn		RSprite()
+			 *
+			 * @brief	Constructor
+			 */
 			RSprite();
+
+			/**
+			 * @fn		virtual ~RSprite()
+			 *
+			 * @brief	Destructor
+			 */
 			virtual ~RSprite();
 
 			/**

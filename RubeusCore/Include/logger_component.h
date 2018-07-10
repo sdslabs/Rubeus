@@ -103,7 +103,7 @@
 #endif
 
 /**
- * @fn	static int toHex(int decimal);
+ * @fn		static int toHex(int decimal);
  *
  * @brief	Converts a decimal to a hexadecimal
  *
@@ -114,14 +114,14 @@
 int toHex(int decimal);
 
 /**
- * @fn	static void GLClearError();
+ * @fn		static void GLClearError();
  *
  * @brief	Clear all OpenGL error flags
  */
 void GLClearError();
 
 /**
- * @fn	void DevILClearError()
+ * @fn		void DevILClearError()
  *
  * @brief	Clears the DevIL error stack
  */

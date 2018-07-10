@@ -27,7 +27,7 @@ namespace Rubeus
 		public:
 
 			/**
-			 * @fn	virtual void RRendererComponent::submit(const RRenderableObject* renderable) = 0;
+			 * @fn		virtual void RRendererComponent::submit(const RRenderableObject* renderable) = 0;
 			 *
 			 * @brief	Submits the given renderable object to render queue
 			 *
@@ -36,16 +36,36 @@ namespace Rubeus
 			virtual void submit(const RRenderableObject * renderable) = 0;
 
 			/**
-			 * @fn	virtual void RRendererComponent::flush() = 0;
+			 * @fn		virtual void RRendererComponent::flush() = 0;
 			 *
 			 * @brief	Flushes the render objects' queue after displaying them
 			 */
 			virtual void flush() = 0;
 
+			/**
+			 * @fn		virtual void push(const RML::Matrix4 & matrix)
+			 *
+			 * @brief	Push a tranform into the tranformation stack
+			 *
+			 * @param	matrix	The Matrix4 object to push in.
+			 */
 			virtual void push(const RML::Matrix4 & matrix) { }
 
+			/**
+			 * @fn		virtual void pushOverride(const RML::Matrix4 & matrix)
+			 *
+			 * @brief	Push a tranform into the tranformation stack, while disrespecting already
+			 *			present matrices/
+			 *
+			 * @param	matrix	The Matrix4 object to push in.
+			 */
 			virtual void pushOverride(RML::Matrix4 & matrix) { }
 
+			/**
+			 * @fn		virtual void pop()
+			 *
+			 * @brief	Pop and return a tranform from the tranformation stack
+			 */
 			virtual void pop() { }
 		};
 	}

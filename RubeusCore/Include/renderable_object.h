@@ -115,7 +115,7 @@ namespace Rubeus
 			inline const RML::Vector4D & getColor() const { return m_Color; }
 
 			/**
-			 * @fn	inline const std::vector<RML::Vector2D> & getUV() const 
+			 * @fn		inline const std::vector<RML::Vector2D> & getUV() const 
 			 *
 			 * @brief	Returns the UV coords of the vertices.
 			 *
@@ -125,7 +125,7 @@ namespace Rubeus
 
 		protected:
 			/**
-			 * @fn	RRenderableObject
+			 * @fn		RRenderableObject
 			 *
 			 * @brief	Constructor
 			 * @warning	To be called only by child classes
@@ -133,7 +133,7 @@ namespace Rubeus
 			RRenderableObject();
 
 			/**
-			 * @fn	inline void setUV()
+			 * @fn		inline void setUV()
 			 *
 			 * @brief	Sets the default values for UV coords.
 			 */

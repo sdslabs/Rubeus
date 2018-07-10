@@ -34,7 +34,7 @@ namespace Rubeus
 			const unsigned int m_BPP;
 
 			/**
-			 * @fn	Image(ILubyte imageData[ ], unsigned int height, unsigned int width, unsigned int bpp)
+			 * @fn		Image(ILubyte imageData[ ], unsigned int height, unsigned int width, unsigned int bpp)
 			 *
 			 * @brief	Constructor
 			 * @warning	
@@ -47,7 +47,7 @@ namespace Rubeus
 			Image(ILubyte imageData[ ], unsigned int height, unsigned int width, unsigned int bpp);
 
 			/**
-			 * @fn	~Image()
+			 * @fn		~Image()
 			 *
 			 * @brief	Destructor
 			 */

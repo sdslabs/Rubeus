@@ -1,5 +1,5 @@
 /**
- * @file	Include/message_codes.h.
+ * @file		Include/message_codes.h.
  *
  * @brief	Contains all message codes for messaging
  */

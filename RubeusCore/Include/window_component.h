@@ -101,23 +101,23 @@ namespace Rubeus
 			RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW, int setFPS = 1);
 
 			/**
-			* @fn	RWindowComponent::~RWindowComponent();
+			* @fn		RWindowComponent::~RWindowComponent();
 			*
-			* @brief	Destructor
+			* @brief		Destructor
 			*/
 			~RWindowComponent();
 
 			/**
-			* @fn	void RWindowComponent::clearWindow();
+			* @fn		void RWindowComponent::clearWindow();
 			*
-			* @brief	Clears the window with a color buffer
+			* @brief		Clears the window with a color buffer
 			*/
 			void clearWindow();
 
 			/**
-			* @fn	void RWindowComponent::updateWindow();
+			* @fn		void RWindowComponent::updateWindow();
 			*
-			* @brief	Updates the window
+			* @brief		Updates the window
 			* 			Polls GLFW for any changes
 			* 			Then swaps the buffers
 			*/

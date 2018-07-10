@@ -30,7 +30,7 @@ namespace Rubeus
 		unsigned int m_ComponentID;
 
 		/**
-		 * @fn	void RMasterComponent::add();
+		 * @fn		void RMasterComponent::add();
 		 *
 		 * @brief	Adds this component to component table
 		 */
@@ -61,23 +61,23 @@ namespace Rubeus
 		virtual ~RMasterComponent();
 
 		/**
-		 * @fn	void RMasterComponent::remove();
+		 * @fn		void RMasterComponent::remove();
 		 *
 		 * @brief	Removes this component from component table
 		 */
 		void remove();
 
 		/**
-		* @fn	unsigned int MasterComponent::getComponentID();
+		* @fn		unsigned int MasterComponent::getComponentID();
 		*
-		* @brief	Gets component identifier
+		* @brief		Gets component identifier
 		*
-		* @return	The component identifier.
+		* @return	The component ID.
 		*/
 		unsigned int getComponentID() const;
 
         /**
-		 * @fn	inline std::string getName()
+		 * @fn		inline std::string getName()
 		 *
 		 * @brief	Gets the fully qualified name of this component
 		 *

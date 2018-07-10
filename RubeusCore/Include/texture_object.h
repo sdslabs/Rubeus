@@ -55,7 +55,7 @@ namespace Rubeus
 			RTexture(const char * path);
 
 			/**
-			 * @fn	~RTexture
+			 * @fn		~RTexture
 			 *
 			 * @brief	Destructor
 			 */

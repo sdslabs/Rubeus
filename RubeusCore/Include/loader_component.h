@@ -42,21 +42,21 @@ namespace Rubeus
 
 		public:
 			/**
-			 * @fn	RLoaderComponent()
+			 * @fn		RLoaderComponent()
 			 *		
 			 * @brief	Default constructor.
 			 */
 			RLoaderComponent();
 
 			/**
-			 * @fn	~RLoaderComponent()
+			 * @fn		~RLoaderComponent()
 			 *		
 			 * @brief	Default destructor.
 			 */
 			~RLoaderComponent();
 
 			/**
-			 * @fn	std::string RLoaderComponent::LoadTextFileStream(const char * filePath)
+			 * @fn		std::string RLoaderComponent::LoadTextFileStream(const char * filePath)
 			 *
 			 * @brief	Loads text file to a string using streams
 			 *
@@ -87,7 +87,7 @@ namespace Rubeus
 			static void deleteImage();
 
 			/**
-			 * @fn	void onMessage(Message * msg) override
+			 * @fn		void onMessage(Message * msg) override
 			 *
 			 * @brief	Handles the message received
 			 * @warning	Use only with the message system
