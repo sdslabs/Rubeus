@@ -19,7 +19,7 @@ int main()
 								EWindowParameters::WINDOWED_MODE,
 								EWindowParameters::NON_RESIZABLE_WINDOW,
 								0);
-
+  
 	RShaderComponent * shader0 = new RShaderComponent("Shaders/basic.vert", "Shaders/basic.frag");
 
 	RStaticLayer * layer0 = new RStaticLayer(*shader0);
@@ -91,5 +91,6 @@ int main()
 	delete GameWindow;
 
 #endif
+  
 	return 0;
 }
