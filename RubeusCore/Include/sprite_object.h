@@ -1,5 +1,5 @@
 /**
- * @file	Include\sprite.h.
+ * @file		Include\sprite_object.h.
  *
  * @brief	Declares the sprite class
  */
@@ -24,6 +24,8 @@ namespace Rubeus
 		{
 		private:
 		public:
+			RSprite();
+			virtual ~RSprite();
 
 			/**
 			 * @fn	RSprite::RSprite(float x, float y, float width, float height, const RML::Vector4D & color);

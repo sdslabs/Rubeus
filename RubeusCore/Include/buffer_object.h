@@ -1,5 +1,5 @@
 /**
- * @file	Include\buffer.h.
+ * @file		Include\buffer_object.h
  *
  * @brief	Declares the RBuffer class
  */

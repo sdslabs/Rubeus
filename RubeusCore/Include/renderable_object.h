@@ -1,5 +1,5 @@
 /**
- * @file	Include\renderable_object.h.
+ * @file		Include\renderable_object.h.
  *
  * @brief	Declares the renderable object class
  */
@@ -9,9 +9,9 @@
 #include <GL/glew.h>
 #include <rubeus_maths_library.h>
 
-#include <buffer.h>
-#include <index_buffer.h>
-#include <vertex_array.h>
+#include <buffer_object.h>
+#include <index_buffer_object.h>
+#include <vertex_array_object.h>
 #include <shader_component.h>
 
 namespace Rubeus
@@ -47,6 +47,9 @@ namespace Rubeus
 		class RRenderableObject
 		{
 		public:
+			/** @brief	Identifier for the object */
+			unsigned int m_ObjectID;
+
 			/** @brief	The position of the sprite */
 			RML::Vector3D m_Position;
 

@@ -1,22 +1,21 @@
 /**
- * @file	Source\c_Window\window.cpp.
+ * @file		Source\window_component.cpp.
  *
  * @brief	Implements the RWindowComponent class
  */
 
 #pragma once
 
-#include <window.h>
-#include <input_component.h>
-
-#include <window_component.h>
 #include <GL\glew.h>
 #include <GLFW\glfw3.h>
+#include <window_component.h>
 
 namespace Rubeus
 {
 	namespace GraphicComponents
 	{
+		int RWindowComponent::m_X;
+		int RWindowComponent::m_Y;
 
 		void getGLFWErrorLog(int error, const char * description)
 		{

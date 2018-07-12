@@ -1,5 +1,5 @@
 /**
- * @file	Source\c_Window\window.h.
+ * @file		Include\window_component.h.
  *
  * @brief	Declares the window class and error callbacks for GLFW
  */
@@ -68,6 +68,10 @@ namespace Rubeus
 
 			/** @brief	The title of the window */
 			const char * m_Title;
+
+		public:
+			/** @brief	Mouse positions */
+			static int m_X, m_Y;
 
 			/**
 			 * @fn	bool RWindowComponent::initWindow(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW);
@@ -195,9 +199,9 @@ namespace Rubeus
 			 * @param 		  	height	The height of the resized window.
 			 */
 			friend void windowResizeCallback(GLFWwindow * window, int width, int height);
-
+		public:
 			//friend class RInputComponent;
-			friend void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos);
+			static void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos);
 			friend void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods);
 			friend void scrollCallback(GLFWwindow *window, double xoffset, double yoffset);
 			friend void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);

@@ -1,5 +1,5 @@
 /**
- * @file	Include\renderer_component.h.
+ * @file		Include\renderer_component.h.
  *
  * @brief	Declares the renderer component abstract class
  */
@@ -37,7 +37,7 @@ namespace Rubeus
 			 *
 			 * @param	renderable	The renderable.
 			 */
-			virtual void submit(const RRenderableObject* renderable) = 0;
+			virtual void submit(const RRenderableObject * renderable) = 0;
 
 			/**
 			 * @fn	virtual void RRendererComponent::flush() = 0;

@@ -1,10 +1,10 @@
 /**
- * @file	Source\index_buffer.cpp.
+ * @file		Source\index_buffer_object.cpp.
  *
  * @brief	Implements the index buffer class
  */
 
-#include <index_buffer.h>
+#include <index_buffer_object.h>
 
 namespace Rubeus
 {

@@ -1,5 +1,5 @@
 /**
- * @file	Include\vertex_array.h.
+ * @file		Include\vertex_array_object.h.
  *
  * @brief	Declares the vertex array class
  */
@@ -9,7 +9,7 @@
 #include <GL/glew.h>
 #include <vector>
 
-#include <buffer.h>
+#include <buffer_object.h>
 
 namespace Rubeus
 {

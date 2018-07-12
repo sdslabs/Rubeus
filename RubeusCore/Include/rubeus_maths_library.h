@@ -1,3 +1,9 @@
+/**
+ * @file		Include\rubeus_maths_library.h.
+ *
+ * @brief	Declares the RML (Rubeus Maths Library)
+ */
+
 #pragma once
 
 #define _USE_MATH_DEFINES

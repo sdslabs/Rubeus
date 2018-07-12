@@ -1,5 +1,5 @@
 /**
- * @file	Source\c_Logger\logger.h.
+ * @file		Source\logger_component.h.
  *
  * @brief	Declares the logger macro
  */
@@ -68,13 +68,14 @@
 		// In case the build configuration is not "Debug"
 
 		// Deprecated for non-debug builds
-		#define LOG(x)
+#define LOG(x) std::cout << x <<std::endl;
 
 		// Deprecated for non-debug builds
 		#define LOGEXTENDED(x)
 
 		//  Deprecated for non-debug builds
 		#define ERRORLOG(x)
+
 		// Deprecated for non-debug builds
 		#define ASSERT(x)
 
@@ -82,7 +83,7 @@
 		#define SUCCESS(x)
 
 		// No error reporting in non-debug builds
-		#define GLCall(x) (x)
+		#define GLCall(x) x
 	#endif
 #endif
 

@@ -1,13 +1,13 @@
 // RubeusCore.cpp : Defines the entry point for the application.
 //
-#include <chrono>
 
 #include "RubeusCore.h"
 
-std::map<unsigned int, Rubeus::RMasterComponent *> Rubeus::RMasterComponent::m_ComponentMap;
+std::unordered_map<unsigned int, Rubeus::RMasterComponent *> Rubeus::RMasterComponent::m_ComponentMap;
 
 int main()
 {
+	srand(NULL);
 	using namespace Rubeus;
 	using namespace GraphicComponents;
 	using namespace UtilityComponents;
@@ -16,38 +16,36 @@ int main()
 								1280, 720,
 								EWindowParameters::WINDOWED_MODE,
 								EWindowParameters::NON_RESIZABLE_WINDOW,
-								1);
+								0);
 
-	RShaderComponent shader("Shaders/basic.vertexshader", "Shaders/basic.fragmentshader");
-	shader.enableShader();
-	shader.setUniformMat4("proj_matrix", Matrix4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f));
+	RShaderComponent shader0(RShaderComponent("Shaders/vertex.glsl", "Shaders/fragment.glsl"));
 
-	RSprite sprite1(0, 0, 4, 4, RML::Vector4D(255, 255, 255, 255).normaliseToRGBA());
-	RSprite sprite2(7, 1, 2, 3, RML::Vector4D(0.2f, 0, 1, 1));
-	RGuerrillaRendererComponent renderer;
+	RStaticLayer * layer0 = new RStaticLayer(shader0);
 
-	auto x = ((RWindowComponent *) (RMasterComponent::m_ComponentMap[GameWindow.getComponentID()]));
-	x->setWindowTitle("Hey I just changed the title");
+	Group * g = new Group();
+	g->addRenderable(&RSprite(1, 1, 14, 7, Vector4D(0.7, 0.3, 0.5, 1)));
 
-	RTimer timer(4);
+	layer0->addGroup(*g);
+
+	RTimer timer(2);
+
 	timer.setFrameCounter();
-	timer.addTimePoint(2);
+
+	// See if maps are slowing things down. Also have a performance check
 	while(!GameWindow.closed())
 	{
 		GameWindow.clearWindow();
-		timer.addTimePoint(3);
-		shader.setUniformMat4("model_matrix", Matrix4::translation(Vector3D(5, 5, 0)) * Matrix4::rotation(timer.getRelativeTime(2, 3) / 10000000, Vector3D(0, 0, 1)));
 
-		renderer.begin();
-		renderer.submit(&sprite1);
-		renderer.submit(&sprite2);
-		renderer.end();
-		renderer.flush();
+		shader0.enableShader();
+		shader0.setUniform2f("light_position", Vector2D(GameWindow.m_X * 16.0f / 1280.0f, (720.0f - GameWindow.m_Y) * 9.0f / 720.0f));
+
+		layer0->draw();
 
 		GameWindow.updateWindow();
-
 		timer.evaluateFrames();
 	}
 
+	delete g;
+	delete layer0;
 	return 0;
 }

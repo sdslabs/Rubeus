@@ -1,5 +1,5 @@
 /**
- * @file	Source\c_Master_Component\master.cpp.
+ * @file		Source\master_component.cpp.
  *
  * @brief	Implements the master class
  */

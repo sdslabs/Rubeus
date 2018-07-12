@@ -1,5 +1,5 @@
 /**
- * @file	Source\loader_component.h.
+ * @file		Source\loader_component.h.
  *
  * @brief	Declares the loader component class
  */

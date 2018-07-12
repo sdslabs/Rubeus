@@ -1,9 +1,15 @@
+/**
+ * @file		Include\simple_renderer_component.h.
+ *
+ * @brief	Declares the simple renderer
+ */
+
 #pragma once
 
 #include <deque>
 
 #include <renderer_component.h>
-#include <static_sprite.h>
+#include <static_sprite_object.h>
 
 namespace Rubeus
 {
