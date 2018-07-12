@@ -29,6 +29,9 @@ namespace Rubeus
 			/** @brief	The vertex position */
 			RML::Vector3D vertex;
 
+			/** @brief	UV coordinates for this vertex */
+			RML::Vector2D uv;
+
 			/** @brief	The color of this vertex */
 			RML::Vector4D color;
 		};
@@ -54,8 +57,10 @@ namespace Rubeus
 			/** @brief	The color of the sprite */
 			RML::Vector4D m_Color;
 
+			std::vector<RML::Vector2D> m_UV;
+
 			/**
-			 * @fn	RRenderableObject::RRenderableObject(RML::Vector3D position, RML::Vector2D size, RML::Vector4D color);
+			 * @fn		RRenderableObject::RRenderableObject(RML::Vector3D position, RML::Vector2D size, RML::Vector4D color);
 			 *
 			 * @brief	Constructor. Sets position, size, color of the sprite to be used for in the given
 			 * 			shader
@@ -67,43 +72,72 @@ namespace Rubeus
 			RRenderableObject(RML::Vector3D position, RML::Vector2D size, RML::Vector4D color);
 
 			/**
-			 * @fn	virtual RRenderableObject::~RRenderableObject();
+			 * @fn		virtual RRenderableObject::~RRenderableObject();
 			 *
 			 * @brief	Destructor.
 			 */
 			virtual ~RRenderableObject();
 
+			/**
+			 * @fn		virtual void submit(RRendererComponent & renderer) const
+			 *
+			 * @brief	Submit this object to a render queue
+			 *
+			 * @param	renderer		The renderer to submit to.
+			 */
 			virtual void submit(RRendererComponent & renderer) const;
 
 			/**
-			 * @fn	inline const RML::Vector3D& RRenderableObject::getPosition()
+			 * @fn		inline const RML::Vector3D& RRenderableObject::getPosition()
 			 *
 			 * @brief	Gets the position
 			 *
 			 * @return	The position.
 			 */
-			inline const RML::Vector3D& getPosition() const { return m_Position; }
+			inline const RML::Vector3D & getPosition() const { return m_Position; }
 
 			/**
-			 * @fn	inline const RML::Vector2D& RRenderableObject::getSize()
+			 * @fn		inline const RML::Vector2D& RRenderableObject::getSize()
 			 *
 			 * @brief	Gets the size
 			 *
 			 * @return	The size.
 			 */
-			inline const RML::Vector2D& getSize() const { return m_Size; }
+			inline const RML::Vector2D & getSize() const { return m_Size; }
 
 			/**
-			 * @fn	inline const RML::Vector4D& RRenderableObject::getColor()
+			 * @fn		inline const RML::Vector4D& RRenderableObject::getColor()
 			 *
 			 * @brief	Gets the color
 			 *
 			 * @return	The color.
 			 */
-			inline const RML::Vector4D& getColor() const { return m_Color; }
+			inline const RML::Vector4D & getColor() const { return m_Color; }
+
+			/**
+			 * @fn		inline const std::vector<RML::Vector2D> & getUV() const 
+			 *
+			 * @brief	Returns the UV coords of the vertices.
+			 *
+			 * @return	Reference to a std::vector containing all UV Vector2Ds.
+			 */
+			inline const std::vector<RML::Vector2D> & getUV() const { return m_UV; }
 
 		protected:
+			/**
+			 * @fn		RRenderableObject
+			 *
+			 * @brief	Constructor
+			 * @warning	To be called only by child classes
+			 */
 			RRenderableObject();
+
+			/**
+			 * @fn		inline void setUV()
+			 *
+			 * @brief	Sets the default values for UV coords.
+			 */
+			inline void setUV();
 		};
 	}
 }

@@ -23,15 +23,36 @@ namespace Rubeus
 		class RGroup : public RRenderableObject
 		{
 		private:
+			/** @brief	The transform used to place this group's contents */
 			RML::Matrix4 m_TransformationMatrix;
 
 		public:
-			RGroup(const RML::Matrix4 & transform);
-			~RGroup();
-
 			/** @brief	Vector array of renderables. */
 			std::vector<const RRenderableObject *> m_Renderables;
 
+			/**
+			 * @fn		RGroup(const RML::Matrix4 & transform)
+			 *
+			 * @brief	Constructor
+			 *
+			 * @param	tranform	The tranform that places the contents of this group.
+			 */
+			RGroup(const RML::Matrix4 & transform);
+
+			/**
+			 * @fn		~RGroup()
+			 *
+			 * @brief	Destructor
+			 */
+			~RGroup();
+
+			/**
+			 * @fn		void submit(RRendererComponent & renderer) const override
+			 *
+			 * @brief	Submit the group to a renderer queue
+			 *
+			 * @param	renderer	The renderer to send the group contents to.
+			 */
 			void submit(RRendererComponent & renderer) const override;
 
 			/**

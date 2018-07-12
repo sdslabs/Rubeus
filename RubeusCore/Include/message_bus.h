@@ -1,5 +1,5 @@
 /**
- * @file	Include/message_bus.h
+ * @file		Include/message_bus.h
  *
  * @brief	Declares the message bus class
  */
@@ -24,21 +24,21 @@ namespace Rubeus
 		std::vector<Message *> m_MessageQueue;
 
 		/**
-		 * @fn	RMessageBus()
+		 * @fn		RMessageBus()
 		 *
 		 * @brief	Constructor
 		 */
 		RMessageBus();
 
 		/**
-		 * @fn	~RMessageBus()
+		 * @fn		~RMessageBus()
 		 *
 		 * @brief	Destructor
 		 */
 		~RMessageBus();
 
 		/**
-		 * @fn	void addSystem(RMasterComponent * system)
+		 * @fn		void addSystem(RMasterComponent * system)
 		 *
 		 * @brief	Adds a system to receive commands via messages
 		 * @warning	Message bus doesn't take responsibility of deleting the system pointers. Do not pass in statically declared variables.
@@ -48,7 +48,7 @@ namespace Rubeus
 		void addSystem(RMasterComponent * system);
 
 		/**
-		 * @fn	void post(Message * message)
+		 * @fn		void post(Message * message)
 		 *
 		 * @brief	Post a message to be sent in the next frame
 		 * @warning	Message system intends to take responsibility of passed in pointers, i.e. it deletes all message pointers on destruction.
@@ -59,7 +59,7 @@ namespace Rubeus
 		void post(Message * message);
 
 		/**
-		 * @fn	Message * pop()
+		 * @fn		Message * pop()
 		 *
 		 * @brief	Returns the last message on the message array after popping it.
 		 * @warning	Do not use freely.

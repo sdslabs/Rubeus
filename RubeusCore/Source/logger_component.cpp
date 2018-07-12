@@ -27,3 +27,9 @@ void GLClearError()
 	while(glGetError() != GL_NO_ERROR)
 		;
 }
+
+void DevILClearError()
+{
+	while(ilGetError() != IL_NO_ERROR)
+		;
+}

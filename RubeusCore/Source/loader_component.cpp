@@ -12,7 +12,19 @@ namespace Rubeus
 {
 	namespace UtilityComponents
 	{
-		std::string RLoaderComponent::LoadTextFileStream(const char * filePath)
+		ILuint RLoaderComponent::m_ImageID;
+
+		RLoaderComponent::RLoaderComponent()
+		{
+			ilInit();
+			iluInit();
+		}
+
+		RLoaderComponent::~RLoaderComponent()
+		{
+		}
+
+		std::string RLoaderComponent::loadTextFileStream(const char * filePath)
 		{
 			FILE* file = fopen(filePath, "rt");
 
@@ -51,9 +63,47 @@ namespace Rubeus
 			return result;
 		}
 
-		auto RLoaderComponent::LoadImageWindows(std::string path)
+		GraphicComponents::Image RLoaderComponent::loadImageFile(const char * path)
 		{
-			// TODO: Write Windows specific image loader
+			initImageLoader();
+
+			ASSERT("Loading image: " + std::string(path));
+
+			DevILCall(ilLoadImage(path));
+			DevILCall(iluFlipImage());
+
+			return GraphicComponents::Image(
+				ilGetData(),
+				ilGetInteger(IL_IMAGE_HEIGHT),
+				ilGetInteger(IL_IMAGE_WIDTH),
+				ilGetInteger(IL_IMAGE_BITS_PER_PIXEL)
+			);
+		}
+
+		void RLoaderComponent::onMessage(Message * msg)
+		{
+			switch(msg->m_Type)
+			{
+				case load_image:
+				{
+					GraphicComponents::Image temp = loadImageFile(boost::any_cast<const char *>(msg->m_Data));
+					m_MessageSystem.addMessage(this, msg->m_Sender, get_loaded_image, temp);
+				}
+					break;
+				default:
+					LOG("Loader component received a misdirected message");
+			}
+		}
+
+		inline void RLoaderComponent::initImageLoader()
+		{
+			DevILCall(ilGenImages(1, &m_ImageID));
+			DevILCall(ilBindImage(m_ImageID));
+		}
+
+		void RLoaderComponent::deleteImage()
+		{
+			ilDeleteImages(1, &m_ImageID);
 		}
 	}
 }

@@ -1,5 +1,5 @@
 /**
- * @file	Include\index_buffer_object.h
+ * @file		Include\index_buffer_object.h
  *
  * @brief	Declares the Index buffer class
  */
@@ -31,7 +31,7 @@ namespace Rubeus
 		public:
 
 			/**
-			 * @fn	RIndexBuffer::RIndexBuffer(GLushort * data, GLsizei count);
+			 * @fn		RIndexBuffer::RIndexBuffer(GLushort * data, GLsizei count);
 			 *
 			 * @brief	Constructor. Generates a buffer object and applies its layout.
 			 *
@@ -41,28 +41,28 @@ namespace Rubeus
 			RIndexBuffer(GLushort * data, GLsizei count);
 
 			/**
-			 * @fn	RIndexBuffer::~RIndexBuffer();
+			 * @fn		RIndexBuffer::~RIndexBuffer();
 			 *
 			 * @brief	Destructor
 			 */
 			~RIndexBuffer();
 
 			/**
-			 * @fn	void RIndexBuffer::bindIndexBuffer() const;
+			 * @fn		void RIndexBuffer::bindIndexBuffer() const;
 			 *
 			 * @brief	Binds this index buffer
 			 */
 			void bindIndexBuffer() const;
 
 			/**
-			 * @fn	void RIndexBuffer::unbindIndexBuffer() const;
+			 * @fn		void RIndexBuffer::unbindIndexBuffer() const;
 			 *
 			 * @brief	Unbinds this index buffer
 			 */
 			void unbindIndexBuffer() const;
 
 			/**
-			 * @fn	inline GLuint RIndexBuffer::getElementCount()
+			 * @fn		inline GLuint RIndexBuffer::getElementCount()
 			 *
 			 * @brief	Gets number of indices in this buffer
 			 *

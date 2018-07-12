@@ -30,7 +30,7 @@ namespace Rubeus
 		public:
 
 			/**
-			 * @fn	void RSimpleRendererComponent::submit(const RRenderableObject* renderable) override;
+			 * @fn		void RSimpleRendererComponent::submit(const RRenderableObject* renderable) override;
 			 *
 			 * @brief	Submits the given renderable object
 			 *
@@ -39,7 +39,7 @@ namespace Rubeus
 			void submit(const RRenderableObject* renderable) override;
 
 			/**
-			 * @fn	void RSimpleRendererComponent::flush() override;
+			 * @fn		void RSimpleRendererComponent::flush() override;
 			 *
 			 * @brief	Flushes the render objects' queue after displaying them on the screen
 			 */

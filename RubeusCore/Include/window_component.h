@@ -34,7 +34,7 @@ namespace Rubeus
 		};
 
 		/**
-		 * @fn	void getGLFWErrorLog(int error, const char *description);
+		 * @fn		void getGLFWErrorLog(int error, const char *description);
 		 *
 		 * @brief	Gets GLFW error logs
 		 *
@@ -68,7 +68,7 @@ namespace Rubeus
 			static int m_X, m_Y;
 
 			/**
-			 * @fn	bool RWindowComponent::initWindow(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW);
+			 * @fn		bool RWindowComponent::initWindow(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW);
 			 *
 			 * @brief	Initializes the Rubeus game window.
 			 * 			Use enum EWindowParameters for windowMode and windowType
@@ -86,7 +86,7 @@ namespace Rubeus
 		public:
 
 			/**
-			 * @fn	RWindowComponent::RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW, int setFPS);
+			 * @fn		RWindowComponent::RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW, int setFPS);
 			 *
 			 * @brief	Constructor. Use enum EWindowParameters for windowMode and windowType
 			 *
@@ -101,23 +101,23 @@ namespace Rubeus
 			RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW, int setFPS = 1);
 
 			/**
-			* @fn	RWindowComponent::~RWindowComponent();
+			* @fn		RWindowComponent::~RWindowComponent();
 			*
-			* @brief	Destructor
+			* @brief		Destructor
 			*/
 			~RWindowComponent();
 
 			/**
-			* @fn	void RWindowComponent::clearWindow();
+			* @fn		void RWindowComponent::clearWindow();
 			*
-			* @brief	Clears the window with a color buffer
+			* @brief		Clears the window with a color buffer
 			*/
 			void clearWindow();
 
 			/**
-			* @fn	void RWindowComponent::updateWindow();
+			* @fn		void RWindowComponent::updateWindow();
 			*
-			* @brief	Updates the window
+			* @brief		Updates the window
 			* 			Polls GLFW for any changes
 			* 			Then swaps the buffers
 			*/
@@ -133,7 +133,7 @@ namespace Rubeus
 			bool closed();
 
 			/**
-			 * @fn	void RWindowComponent::setWindowTitle(const char * title);
+			 * @fn		void RWindowComponent::setWindowTitle(const char * title);
 			 *
 			 * @brief	Sets window title
 			 *
@@ -147,7 +147,7 @@ namespace Rubeus
 			void setWindowIconToDefault();
 
 			/**
-			 * @fn	friend void RWindowComponent::windowCloseCallback(GLFWwindow * window);
+			 * @fn		friend void RWindowComponent::windowCloseCallback(GLFWwindow * window);
 			 *
 			 * @brief	Callback, called when the window closes
 			 *
@@ -156,7 +156,7 @@ namespace Rubeus
 			friend void windowCloseCallback(GLFWwindow * window);
 
 			/**
-			 * @fn	friend void RWindowComponent::windowResizeCallback(GLFWwindow * window, int width, int height);
+			 * @fn		friend void RWindowComponent::windowResizeCallback(GLFWwindow * window, int width, int height);
 			 *
 			 * @brief	Callback, called when the window resize
 			 *
@@ -173,6 +173,14 @@ namespace Rubeus
 			friend void scrollCallback(GLFWwindow *window, double xoffset, double yoffset);
 			friend void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);
 
+			/**
+			 * @fn		void onMessage(Message * msg) override
+			 *
+			 * @brief	Handles the message received
+			 * @warning	Only to be used by the message system
+			 *
+			 * @param	msg	The message object recieved.
+			 */
 			void onMessage(Message * msg) override;
 
 		protected:

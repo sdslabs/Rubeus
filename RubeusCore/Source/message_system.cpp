@@ -13,17 +13,21 @@ namespace Rubeus
 
 	void RMessageSystem::evaluateMessages()
 	{
-		for(size_t i = 0; i < m_MessageBus.m_MessageQueue.size(); ++i)
+		if(!m_MessageBus.m_MessageQueue.empty())
 		{
-			auto temp = m_MessageBus.pop();
-			temp->m_Receiver->onMessage(temp);
-			LOG(temp->m_Sender->getName() + " messaged " + temp->m_Receiver->getName());
+			for(size_t i = 0; i < m_MessageBus.m_MessageQueue.size(); ++i)
+			{
+				auto temp = m_MessageBus.pop();
 
-			delete temp;
+				temp->m_Receiver->onMessage(temp);
+				LOG(temp->m_Sender->getName() + " messaged " + temp->m_Receiver->getName());
+
+				delete temp;
+			}
 		}
 	}
 
-	void RMessageSystem::addMessage(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, void * data)
+	void RMessageSystem::addMessage(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, var data)
 	{
 		Message * message = new Message(sender, receiver, type, data);
 		m_MessageBus.post(message);

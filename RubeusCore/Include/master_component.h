@@ -26,24 +26,25 @@ namespace Rubeus
 	class RMasterComponent
 	{
 	protected:
-		static RMessageSystem m_MessageSystem;
-
 		/** @brief	Identifier for this component */
 		unsigned int m_ComponentID;
 
 		/**
-		 * @fn	void RMasterComponent::add();
+		 * @fn		void RMasterComponent::add();
 		 *
 		 * @brief	Adds this component to component table
 		 */
 		void add();
 
 	public:
+		/** @brief	The message system to send messages */
+		static RMessageSystem m_MessageSystem;
+
 		/** @brief	The number of components initialised */
 		static unsigned int componentsInitialised;
 
 		/** @brief	The component table */
-		static std::unordered_map<unsigned int, RMasterComponent *> m_ComponentMap;
+		static std::unordered_map<unsigned int, std::unique_ptr<RMasterComponent>> m_ComponentMap;
 
 		/**
 		* @fn	MasterComponent::MasterComponent();
@@ -60,23 +61,23 @@ namespace Rubeus
 		virtual ~RMasterComponent();
 
 		/**
-		 * @fn	void RMasterComponent::remove();
+		 * @fn		void RMasterComponent::remove();
 		 *
 		 * @brief	Removes this component from component table
 		 */
 		void remove();
 
 		/**
-		* @fn	unsigned int MasterComponent::getComponentID();
+		* @fn		unsigned int MasterComponent::getComponentID();
 		*
-		* @brief	Gets component identifier
+		* @brief		Gets component identifier
 		*
-		* @return	The component identifier.
+		* @return	The component ID.
 		*/
 		unsigned int getComponentID() const;
 
         /**
-		 * @fn	inline std::string getName()
+		 * @fn		inline std::string getName()
 		 *
 		 * @brief	Gets the fully qualified name of this component
 		 *
@@ -102,6 +103,7 @@ namespace Rubeus
 		 * @param	msg	The message object received.
 		 */
 		virtual void onMessage(Message * msg);
+
 	protected:
 	};
 }

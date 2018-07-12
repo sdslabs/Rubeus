@@ -3,18 +3,22 @@
 
 #pragma once
 
+// Standard header files
 #include <iostream>
 #include <string>
 #include <unordered_map>
 
 // TODO: Reference additional headers your program requires here.
 
-// Code Analysis Tools
+// Dynamic Program Analysis Tools
 #ifdef _DEBUG
 #ifdef VLD
 #include <vld.h>
 #endif
 #endif
+
+// Library specific defines
+#define ILUT_USE_OPENGL
 
 // Dependencies
 #include <nvidia_enable.h>
@@ -36,3 +40,4 @@
 #include <timer_component.h>
 #include <static_layer_object.h>
 #include <message_system.h>
+#include <texture_object.h>

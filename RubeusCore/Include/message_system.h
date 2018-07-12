@@ -40,8 +40,8 @@ namespace Rubeus
 		 * @param	sender	Pointer to the sender.
 		 * @param	receiver	Pointer to the receiver.
 		 * @param	type		Type of message command.
-		 * @param	data		Pointer to the data object to be sent.
+		 * @param	data		The data object to be sent. See 'var' typedef for transmittable data 
 		 */
-		void addMessage(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, void * data = NULL);
+		void addMessage(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, var data = NULL);
 	};
 }

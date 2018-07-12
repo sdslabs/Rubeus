@@ -37,7 +37,7 @@ namespace Rubeus
 		public:
 
 			/**
-			 * @fn	RTimer::RTimer(int numberOfTimePoints);
+			 * @fn		RTimer::RTimer(int numberOfTimePoints);
 			 *
 			 * @brief	Constructor
 			 *
@@ -46,14 +46,14 @@ namespace Rubeus
 			RTimer(int numberOfTimePoints);
 
 			/**
-			 * @fn	RTimer::~RTimer();
+			 * @fn		RTimer::~RTimer();
 			 *
 			 * @brief	Destructor
 			 */
 			~RTimer();
 
 			/**
-			 * @fn	long long int RTimer::getRelativeTime(int sinceThisSlotIndex, int tillThisSlotIndex);
+			 * @fn		long long int RTimer::getRelativeTime(int sinceThisSlotIndex, int tillThisSlotIndex);
 			 *
 			 * @brief	Gets relative time between two timepoints, referred to by their indices
 			 *
@@ -67,7 +67,7 @@ namespace Rubeus
 			long long int getRelativeTime(int sinceThisSlotIndex, int tillThisSlotIndex);
 
 			/**
-			 * @fn	void RTimer::addTimePoint(int index);
+			 * @fn		void RTimer::addTimePoint(int index);
 			 *
 			 * @brief	Adds a time point at specified index
 			 *
@@ -76,7 +76,7 @@ namespace Rubeus
 			void addTimePoint(int index);
 
 			/**
-			 * @fn	void RTimer::setFrameCounter();
+			 * @fn		void RTimer::setFrameCounter();
 			 *
 			 * @brief	Sets the frame counter.
 			 * 			Use just before game loop.
@@ -84,7 +84,7 @@ namespace Rubeus
 			void setFrameCounter();
 
 			/**
-			 * @fn	void RTimer::evaluateFrames();
+			 * @fn		void RTimer::evaluateFrames();
 			 *
 			 * @brief	Evaluate frames.
 			 * 			Use at the end of game loop.

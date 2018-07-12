@@ -31,7 +31,7 @@ namespace Rubeus
 		public:
 
 			/**
-			 * @fn	RBuffer::RBuffer(GLfloat * data, GLsizei count, GLuint elementCount);
+			 * @fn		RBuffer::RBuffer(GLfloat * data, GLsizei count, GLuint elementCount);
 			 *
 			 * @brief	Constructor. Generates a buffer object and applies its layout.
 			 *
@@ -42,28 +42,28 @@ namespace Rubeus
 			RBuffer(GLfloat * data, GLsizei count, GLuint elementCount);
 
 			/**
-			 * @fn	RBuffer::~RBuffer();
+			 * @fn		RBuffer::~RBuffer();
 			 *
 			 * @brief	Destructor
 			 */
 			~RBuffer();
 
 			/**
-			 * @fn	void RBuffer::bindBuffer() const;
+			 * @fn		void RBuffer::bindBuffer() const;
 			 *
 			 * @brief	Binds this buffer
 			 */
 			void bindBuffer() const;
 
 			/**
-			 * @fn	void RBuffer::unbindBuffer() const;
+			 * @fn		void RBuffer::unbindBuffer() const;
 			 *
 			 * @brief	Unbinds buffer
 			 */
 			void unbindBuffer() const;
 
 			/**
-			 * @fn	inline GLuint RBuffer::getElementCount()
+			 * @fn		inline GLuint RBuffer::getElementCount()
 			 *
 			 * @brief	Gets number of elements in this buffer
 			 *

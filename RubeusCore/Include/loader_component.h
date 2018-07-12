@@ -10,17 +10,13 @@
 #include <string>
 #include <cstdlib>
 
+#include <IL/il.h>
+#include <IL/ilu.h>
+
 #include <logger_component.h>
 #include <master_component.h>
-
-// Short-hand for loading text files at path x
-// See LoadTextFileStream() for more information
-#define LoadFile(x) Rubeus::UtilityComponents::RLoaderComponent::LoadTextFileStream(x)
-
-// Short-hand for loading image files in Windows at path x
-// See LoadImageWindows() for more information
-#define LoadWinImage(x) Rubeus::UtilityComponents::RLoaderComponent::LoadImageWindows(x)
-
+#include <logger_component.h>
+#include <image_object.h>
 
 namespace Rubeus
 {
@@ -31,31 +27,74 @@ namespace Rubeus
 		 *
 		 * @brief	A loader component. Useful for file I/O
 		 */
-		class RLoaderComponent : RMasterComponent
+		class RLoaderComponent : public RMasterComponent
 		{
 		private:
+			/** @brief	The image name used by DevIL library */
+			static ILuint m_ImageID;
+
+			/**
+			 * @fn		static void initImageLoader()
+			 *
+			 * @brief	Initialise OpenIL/DevIL library for image loading
+			 */
+			static void initImageLoader();
+
 		public:
 			/**
-			 * @fn	static std::string RLoaderComponent::LoadTextFileStream(const char * filePath);
+			 * @fn		RLoaderComponent()
+			 *		
+			 * @brief	Default constructor.
+			 */
+			RLoaderComponent();
+
+			/**
+			 * @fn		~RLoaderComponent()
+			 *		
+			 * @brief	Default destructor.
+			 */
+			~RLoaderComponent();
+
+			/**
+			 * @fn		std::string RLoaderComponent::LoadTextFileStream(const char * filePath)
 			 *
 			 * @brief	Loads text file to a string using streams
+			 *
+			 * @warning	Use only after initialising the image loader through initImageLoader()
 			 *
 			 * @param	filePath	Full pathname of the file.
 			 *
 			 * @return	The text file stream.
 			 */
-			static std::string LoadTextFileStream(const char * filePath);
+			std::string loadTextFileStream(const char * filePath);
 
 			/**
-			 * @fn	static auto RLoaderComponent::LoadImageWindows(std::string path);
+			 * @fn		static GraphicComponents::Image LoadImageFile(const char * path)
 			 *
-			 * @brief	Loads image for Windows platform
+			 * @brief	Loads image
 			 *
-			 * @param	path	Full pathname of the file.
+			 * @param	path		The image file path
 			 *
-			 * @return	The image file.
+			 * @return	Pointer to the image object.
 			 */
-			static auto LoadImageWindows(std::string path);
+			static GraphicComponents::Image loadImageFile(const char * path);
+
+			/**
+			 * @fn		static void deleteImage()
+			 *
+			 * @brief	Frees the image data
+			 */
+			static void deleteImage();
+
+			/**
+			 * @fn		void onMessage(Message * msg) override
+			 *
+			 * @brief	Handles the message received
+			 * @warning	Use only with the message system
+			 *
+			 * @param	msg	Pointer to the message sent.
+			 */
+			void onMessage(Message * msg) override;
 
 		protected:
 		};

@@ -21,9 +21,11 @@ namespace Rubeus
 			GLCall(glBufferData(GL_ARRAY_BUFFER, BUFFER_SIZE, NULL, GL_STATIC_DRAW));
 
 			GLCall(glVertexAttribPointer(SHADER_VERTEX_LOCATION, 3, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::vertex))));
+			GLCall(glVertexAttribPointer(SHADER_UV_LOCATION, 2, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::uv))));
 			GLCall(glVertexAttribPointer(SHADER_COLOR_LOCATION, 4, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::color))));
 
 			GLCall(glEnableVertexAttribArray(SHADER_VERTEX_LOCATION));
+			GLCall(glEnableVertexAttribArray(SHADER_UV_LOCATION));
 			GLCall(glEnableVertexAttribArray(SHADER_COLOR_LOCATION));
 
 			GLCall(glBindBuffer(GL_ARRAY_BUFFER, 0));
@@ -84,20 +86,25 @@ namespace Rubeus
 			const RML::Vector3D & position = renderable->getPosition();
 			const RML::Vector2D & size = renderable->getSize();
 			const RML::Vector4D & color = renderable->getColor();
+			const std::vector<RML::Vector2D> & uv = renderable->getUV();
 
 			m_Buffer->vertex = *m_TransformationBack * position;
+			m_Buffer->uv = uv[0];
 			m_Buffer->color = color;
 			m_Buffer++;
 
 			m_Buffer->vertex = *m_TransformationBack * RML::Vector3D(position.x, position.y + size.y, position.z);
+			m_Buffer->uv = uv[1];
 			m_Buffer->color = color;
 			m_Buffer++;
 
 			m_Buffer->vertex = *m_TransformationBack * RML::Vector3D(position.x + size.x, position.y + size.y, position.z);
+			m_Buffer->uv = uv[2];
 			m_Buffer->color = color;
 			m_Buffer++;
 
 			m_Buffer->vertex = *m_TransformationBack * RML::Vector3D(position.x + size.x, position.y, position.z);
+			m_Buffer->uv = uv[3];
 			m_Buffer->color = color;
 			m_Buffer++;
 

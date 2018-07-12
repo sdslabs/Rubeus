@@ -8,6 +8,7 @@
 
 #include <GL\glew.h>
 #include <GLFW\glfw3.h>
+
 #include <window_component.h>
 
 namespace Rubeus
@@ -187,6 +188,38 @@ namespace Rubeus
 			return true;
 		}
 
-		
+		void RWindowComponent::onMessage(Message * msg)
+		{
+			switch(msg->m_Type)
+			{
+				case system_ok:
+					ASSERT("Message system OK");
+					break;
+
+				case change_window_title:
+					setWindowTitle(boost::any_cast<const char *>(msg->m_Data));
+					break;
+
+				case get_loaded_image:
+				{
+					ASSERT("Image received");
+					Image & image = boost::any_cast<Image &>(msg->m_Data);
+
+					for(unsigned int i = 0; i < image.m_Height * image.m_Width * 3; i+=3)
+					{
+						LOG("Red:");
+						LOG((int) image.m_Image[i]);
+						LOG("Green:");
+						LOG((int) image.m_Image[i+1]);
+						LOG("Blue:");
+						LOG((int) image.m_Image[i+2]);
+					}
+				}
+					break;
+
+				default:
+					break;
+			}
+		}
 	}
 }

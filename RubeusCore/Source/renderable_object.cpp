@@ -5,7 +5,6 @@
  */
 
 #include <renderable_object.h>
-#include "..\Include\renderable_object.h"
 
 namespace Rubeus
 {
@@ -13,7 +12,8 @@ namespace Rubeus
 	{
 		RRenderableObject::RRenderableObject(RML::Vector3D position, RML::Vector2D size, RML::Vector4D color)
 			:m_Position(position), m_Size(size), m_Color(color)
-		{	
+		{
+			setUV();
 		}
 
 		RRenderableObject::~RRenderableObject()
@@ -27,6 +27,15 @@ namespace Rubeus
 
 		RRenderableObject::RRenderableObject()
 		{
+			setUV();
+		}
+
+		inline void RRenderableObject::setUV()
+		{
+			m_UV.push_back(RML::Vector2D(0, 0));
+			m_UV.push_back(RML::Vector2D(0, 1));
+			m_UV.push_back(RML::Vector2D(1, 1));
+			m_UV.push_back(RML::Vector2D(1, 0));
 		}
 	}
 }
