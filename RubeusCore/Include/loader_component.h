@@ -9,8 +9,8 @@
 #include <string.h>
 #include <string>
 #include <cstdlib>
-#include <logger_component.h>
 
+#include <logger_component.h>
 #include <master_component.h>
 
 // Short-hand for loading text files at path x
@@ -35,7 +35,6 @@ namespace Rubeus
 		{
 		private:
 		public:
-
 			/**
 			 * @fn	static std::string RLoaderComponent::LoadTextFileStream(const char * filePath);
 			 *
@@ -57,6 +56,7 @@ namespace Rubeus
 			 * @return	The image file.
 			 */
 			static auto LoadImageWindows(std::string path);
+
 		protected:
 		};
 	}

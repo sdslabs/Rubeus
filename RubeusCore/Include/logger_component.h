@@ -9,6 +9,7 @@
 #include <iostream>
 #include <string.h>
 #include <string>
+
 #include <GL\glew.h>
 
 // TODO: Remove logger before shipping

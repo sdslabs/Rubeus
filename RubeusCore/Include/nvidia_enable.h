@@ -1,3 +1,9 @@
+/**
+ * @file		Include/nvidia_enable.h
+ *
+ * @brief	Allows rendering on the dedicated NVIDIA GPU
+ */
+
 #pragma once
 
 #ifdef _WIN32
