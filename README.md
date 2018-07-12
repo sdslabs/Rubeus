@@ -1,4 +1,4 @@
-z# Rubeus
+# Rubeus
 A 2D game engine written in C++17 using OpenGL 3.3
 ## Setup
 1. Be on Windows
