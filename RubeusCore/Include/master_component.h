@@ -21,9 +21,6 @@ namespace Rubeus
 	*
 	* @brief	A master component.
 	* 			Serves as parent class for all components
-	*
-	* @author	Twarit
-	* @date	26-05-2018
 	*/
 	class RMasterComponent
 	{
@@ -35,9 +32,6 @@ namespace Rubeus
 		 * @fn	void RMasterComponent::add();
 		 *
 		 * @brief	Adds this component to component table
-		 *
-		 * @author	Twarit
-		 * @date	19-06-2018
 		 */
 		void add();
 
@@ -52,9 +46,6 @@ namespace Rubeus
 		* @fn	MasterComponent::MasterComponent();
 		*
 		* @brief	Default constructor
-		*
-		* @author	Twarit
-		* @date	26-05-2018
 		*/
 		RMasterComponent();
 
@@ -62,9 +53,6 @@ namespace Rubeus
 		* @fn	virtual MasterComponent::~MasterComponent();
 		*
 		* @brief	Destructor
-		*
-		* @author	Twarit
-		* @date	26-05-2018
 		*/
 		virtual ~RMasterComponent();
 
@@ -72,9 +60,6 @@ namespace Rubeus
 		 * @fn	void RMasterComponent::remove();
 		 *
 		 * @brief	Removes this component from component table
-		 *
-		 * @author	Twarit
-		 * @date	19-06-2018
 		 */
 		void remove();
 
@@ -82,9 +67,6 @@ namespace Rubeus
 		* @fn	unsigned int MasterComponent::getComponentID();
 		*
 		* @brief	Gets component identifier
-		*
-		* @author	Twarit
-		* @date	26-05-2018
 		*
 		* @return	The component identifier.
 		*/
@@ -95,9 +77,6 @@ namespace Rubeus
 		 *
 		 * @brief	Gets the fully qualified name of this component
 		 *
-		 * @author	Twarit
-		 * @date	19-06-2018
-		 *
 		 * @return	The name.
 		 */
 		inline std::string getName() { return typeid(*this).name(); }
@@ -106,9 +85,6 @@ namespace Rubeus
 		 * @fn		friend std::ostream & operator<<(std::ostream & stream, RMasterComponent & component)
 		 *
 		 * @brief	Prints the name of this component
-		 *
-		 * @author	Twarit
-		 * @date	19-06-2018
 		 *
 		 * @return	The name.
 		 */

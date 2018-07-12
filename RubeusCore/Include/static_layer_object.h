@@ -27,7 +27,7 @@ namespace Rubeus
 		{
 		private:
 			/** @brief	Vector array of all the groups handles by this layer */
-			std::vector<Group *> m_Groups;
+			std::vector<RGroup *> m_Groups;
 
 			/** @brief	The renderer alloted to this layer */
 			RGuerrillaRendererComponent * m_Renderer;
@@ -54,7 +54,7 @@ namespace Rubeus
 			virtual ~RStaticLayer();
 
 			/**
-			 * @fn		RLayer & addGroup(Group & group) override
+			 * @fn		RLayer & addGroup(RGroup & group) override
 			 *
 			 * @brief	Adds the group object to this layer.
 			 * @warning
@@ -63,7 +63,7 @@ namespace Rubeus
 			 *
 			 * @return	Reference to this layer. Allows chaining multiple group additions. E.g. layer.addGoup(g1).addGroup(g2);
 			 */
-			RLayer & addGroup(Group & group) override;
+			RLayer & addGroup(RGroup & group) override;
 
 			/**
 			 * @fn		void draw() override

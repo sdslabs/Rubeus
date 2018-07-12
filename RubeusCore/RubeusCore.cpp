@@ -7,7 +7,6 @@ std::unordered_map<unsigned int, Rubeus::RMasterComponent *> Rubeus::RMasterComp
 
 int main()
 {
-	srand(NULL);
 	using namespace Rubeus;
 	using namespace GraphicComponents;
 	using namespace UtilityComponents;
@@ -18,17 +17,28 @@ int main()
 								EWindowParameters::NON_RESIZABLE_WINDOW,
 								0);
 
-	RShaderComponent shader0(RShaderComponent("Shaders/vertex.glsl", "Shaders/fragment.glsl"));
+	RShaderComponent shader0(RShaderComponent("Shaders/basic.vert", "Shaders/basic.frag"));
 
 	RStaticLayer * layer0 = new RStaticLayer(shader0);
 
-	Group * g = new Group();
-	g->addRenderable(&RSprite(1, 1, 14, 7, Vector4D(0.7, 0.3, 0.5, 1)));
+	RGroup * g = new RGroup(Matrix4::translation(Vector3D(8.0f, 3.0f, 0.0f)) * Matrix4::rotation(45, Vector3D(0, 0, 1)));
+
+	RSprite * s1 = new RSprite(0.0f, 0.0f, 1.0f, 1.0f, Vector4D(0.3f, 0.5f, 1.0f, 1.0f));
+	RSprite * s2 = new RSprite(0.2f, 0.2f, 0.6f, 0.6f, Vector4D(0.5f, 0.1f, 0.6f, 1.0f));
+
+	g->add(s1);
+	g->add(s2);
+
+	RGroup * childg = new RGroup(Matrix4::translation(Vector3D(1.0f, 0.0f, 0.0f)));
+
+	RSprite * sc1 = new RSprite(5.0f, 0.5f, 1.0f, 1.0f, Vector4D(1.0f, 1.0f, 0.0f, 1.0f));
+	childg->add(sc1);
+
+	g->add(childg);
 
 	layer0->addGroup(*g);
 
 	RTimer timer(2);
-
 	timer.setFrameCounter();
 
 	// See if maps are slowing things down. Also have a performance check
@@ -47,5 +57,6 @@ int main()
 
 	delete g;
 	delete layer0;
+
 	return 0;
 }

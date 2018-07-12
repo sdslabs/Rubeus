@@ -20,9 +20,6 @@ namespace Rubeus
 		 *
 		 * @brief	A simple renderer.
 		 * 			Only for testing purposes.
-		 *
-		 * @author	Twarit
-		 * @date	14-06-2018
 		 */
 		class RSimpleRendererComponent : public RRendererComponent
 		{
@@ -37,9 +34,6 @@ namespace Rubeus
 			 *
 			 * @brief	Submits the given renderable object
 			 *
-			 * @author	Twarit
-			 * @date	14-06-2018
-			 *
 			 * @param	renderable	The renderable.
 			 */
 			void submit(const RRenderableObject* renderable) override;
@@ -48,9 +42,6 @@ namespace Rubeus
 			 * @fn	void RSimpleRendererComponent::flush() override;
 			 *
 			 * @brief	Flushes the render objects' queue after displaying them on the screen
-			 *
-			 * @author	Twarit
-			 * @date	14-06-2018
 			 */
 			void flush() override;
 		};

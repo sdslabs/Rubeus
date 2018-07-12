@@ -21,9 +21,6 @@ namespace Rubeus
 		 * @class	RShader
 		 *
 		 * @brief	A shader class. Allows shader code to be sent to OpenGL
-		 *
-		 * @author	Twarit
-		 * @date	09-06-2018
 		 */
 		class RShaderComponent : public RMasterComponent
 		{
@@ -42,9 +39,6 @@ namespace Rubeus
 			 *
 			 * @brief	Loads the shader.
 			 *
-			 * @author	Twarit
-			 * @date	09-06-2018
-			 *
 			 * @return	The shader.
 			 */
 			GLuint loadShader();
@@ -55,9 +49,6 @@ namespace Rubeus
 			 * @brief	(OpenGL abstraction) Returns an integer that represents the location of a specific
 			 * 			uniform variable within a program object
 			 * @warning	Do not confuse with hexadecimal memory location
-			 * 
-			 * @author	Twarit
-			 * @date	09-06-2018
 			 *
 			 * @param	name	The name.
 			 *
@@ -72,9 +63,6 @@ namespace Rubeus
 			 *
 			 * @brief	Constructor
 			 *
-			 * @author	Twarit
-			 * @date	09-06-2018
-			 *
 			 * @param	vertPath	Full pathname of the vertex shader file.
 			 * @param	fragPath	Full pathname of the fragment shader file.
 			 */
@@ -84,9 +72,6 @@ namespace Rubeus
 			 * @fn	RShader::~RShader();
 			 *
 			 * @brief	Destructor
-			 *
-			 * @author	Twarit
-			 * @date	09-06-2018
 			 */
 			~RShaderComponent();
 
@@ -94,9 +79,6 @@ namespace Rubeus
 			 * @fn	void RShader::setUniform1f(const GLchar* name, float value);
 			 *
 			 * @brief	Sets uniform float value required in the shader code
-			 *
-			 * @author	Twarit
-			 * @date	09-06-2018
 			 *
 			 * @param	name 	The name.
 			 * @param	value	The value.
@@ -108,9 +90,6 @@ namespace Rubeus
 			 *
 			 * @brief	Sets uniform int value required in the shader code
 			 *
-			 * @author	Twarit
-			 * @date	09-06-2018
-			 *
 			 * @param	name 	The name.
 			 * @param	value	The value.
 			 */
@@ -120,9 +99,6 @@ namespace Rubeus
 			 * @fn	void RShader::setUniform2f(const GLchar* name, const RML::Vector2D & vector);
 			 *
 			 * @brief	Sets uniform float Vector2D required in the shader code
-			 *
-			 * @author	Twarit
-			 * @date	09-06-2018
 			 *
 			 * @param	name  	The name.
 			 * @param	vector	The vector.
@@ -134,9 +110,6 @@ namespace Rubeus
 			 *
 			 * @brief	Sets uniform float Vector3D required in the shader code
 			 *
-			 * @author	Twarit
-			 * @date	09-06-2018
-			 *
 			 * @param	name  	The name.
 			 * @param	vector	The vector.
 			 */
@@ -146,9 +119,6 @@ namespace Rubeus
 			 * @fn	void RShader::setUniform4f(const GLchar* name, const RML::Vector4D & vector);
 			 *
 			 * @brief	Sets uniform float Vector4D required in the shader code
-			 *
-			 * @author	Twarit
-			 * @date	09-06-2018
 			 *
 			 * @param	name  	The name.
 			 * @param	vector	The vector.
@@ -160,9 +130,6 @@ namespace Rubeus
 			 *
 			 * @brief	Sets uniform 4x4 matrix required in the shader code
 			 *
-			 * @author	Twarit
-			 * @date	09-06-2018
-			 *
 			 * @param	name  	The name.
 			 * @param	matrix	The matrix.
 			 */
@@ -172,9 +139,6 @@ namespace Rubeus
 			 * @fn	void RShader::enableShader() const;
 			 *
 			 * @brief	Enables the associated shader
-			 *
-			 * @author	Twarit
-			 * @date	09-06-2018
 			 */
 			void enableShader() const;
 
@@ -182,9 +146,6 @@ namespace Rubeus
 			 * @fn	void RShader::disableShader() const;
 			 *
 			 * @brief	Disables the associated shader
-			 *
-			 * @author	Twarit
-			 * @date	09-06-2018
 			 */
 			void disableShader() const;
 

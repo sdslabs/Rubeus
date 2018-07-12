@@ -46,6 +46,8 @@ namespace Rubeus
 			glfwSwapInterval(setFPS);
 			ASSERT("FPS set to " + std::to_string((1.0f / ((float) setFPS)) * 60.0f));
 
+			ASSERT(glGetString(GL_VENDOR));
+
 			m_Height = height;
 			m_Width = width;
 			m_Title = title;
