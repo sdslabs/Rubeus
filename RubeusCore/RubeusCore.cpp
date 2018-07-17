@@ -12,11 +12,11 @@ int main()
 	using namespace RML;
 #if !MSG_SYSTEM
 	RWindowComponent * GameWindow = new RWindowComponent("Hello World",
-								1280, 720,
-								EWindowParameters::WINDOWED_MODE,
-								EWindowParameters::NON_RESIZABLE_WINDOW,
-								0);
-  
+														 1280, 720,
+														 EWindowParameters::WINDOWED_MODE,
+														 EWindowParameters::NON_RESIZABLE_WINDOW,
+														 0);
+
 	RShaderComponent * shader0 = new RShaderComponent("Shaders/basic.vert", "Shaders/basic.frag");
 
 	RStaticLayer * layer0 = new RStaticLayer(*shader0);
@@ -59,37 +59,6 @@ int main()
 	delete shader0;
 	delete GameWindow;
 
-#else
-
-	RMessageSystem MessageSystem;
-	RWindowComponent * GameWindow = new RWindowComponent(
-		"Hello World",
-		1280, 720,
-		EWindowParameters::WINDOWED_MODE,
-		EWindowParameters::NON_RESIZABLE_WINDOW,
-		1
-	);
-
-	MessageSystem.m_MessageBus.addSystem(GameWindow);
-	MessageSystem.addMessage(GameWindow, GameWindow, change_window_title, "chal raha hain bro :*)");
-
-	RLoaderComponent * loader = new RLoaderComponent();
-	MessageSystem.m_MessageBus.addSystem(loader);
-
-	GameWindow->m_MessageSystem.addMessage(GameWindow, loader, EMessageCode::load_image, "Assets/test8.png");
-
-	while(!GameWindow->closed())
-	{
-		GameWindow->clearWindow();
-
-		MessageSystem.evaluateMessages();
-
-		GameWindow->updateWindow();
-	}
-
-	delete loader;
-	delete GameWindow;
-#endif
 #else
 
 	RMessageSystem MessageSystem;
