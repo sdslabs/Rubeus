@@ -36,7 +36,7 @@ namespace Rubeus
 			for(int i = 0; i < INDICES_SIZE; i += 6)
 			{
 				// Indices for the first triangle
-				indices[  i  ] = offset + 0;
+				indices[i] = offset + 0;
 				indices[i + 1] = offset + 1;
 				indices[i + 2] = offset + 2;
 
@@ -85,8 +85,18 @@ namespace Rubeus
 		{
 			const RML::Vector3D & position = renderable->getPosition();
 			const RML::Vector2D & size = renderable->getSize();
-			const RML::Vector4D & color = renderable->getColor();
+			RML::Vector4D & color = RML::Vector4D();
 			const std::vector<RML::Vector2D> & uv = renderable->getUV();
+			const GLuint textureID = renderable->getTextureID();
+
+			if(textureID > 0)
+			{
+
+			}
+			else
+			{
+				color = renderable->getColor();
+			}
 
 			m_Buffer->vertex = *m_TransformationBack * position;
 			m_Buffer->uv = uv[0];
@@ -113,7 +123,7 @@ namespace Rubeus
 
 		void RGuerrillaRendererComponent::end()
 		{
- 			glUnmapBuffer(GL_ARRAY_BUFFER);
+			glUnmapBuffer(GL_ARRAY_BUFFER);
 			glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
 		}
 
