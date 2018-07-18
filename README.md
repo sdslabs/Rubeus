@@ -1,5 +1,6 @@
 # Rubeus
 A 2D game engine written in C++17 using OpenGL 3.3
+# Setup
 ## Setting up the build environment
 1. Be on Windows
 2. Install Microsoft Visual Studio 2017 [here](https://www.visualstudio.com/)
