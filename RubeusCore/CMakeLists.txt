@@ -10,9 +10,6 @@ file(GLOB_RECURSE SOURCES
     Source/*.cpp
 )
 
-# Keep this in for letting GLEW initialise its function pointers
-add_definitions(-DGLEW_STATIC)
-
 # Remove this line if you want to remove Visual Leak Detection(VLD) reports in Debug mode.
 # Keep this line if you want to have VLD reports to detect memory leaks
 add_definitions(-DVLD)
@@ -24,33 +21,9 @@ configure_file(config.h.in config.h)
 # Add source to this project's executable.
 add_executable (RubeusCore "RubeusCore.cpp" "RubeusCore.h" ${SOURCES})
 
-add_library(glew32s STATIC IMPORTED)
-set_target_properties(glew32s PROPERTIES
-    IMPORTED_LOCATION Dependencies/GLEW/lib/glew32s.lib)
-
-add_library(glfw STATIC IMPORTED)
-set_target_properties(glfw PROPERTIES
-    IMPORTED_LOCATION Dependencies/GLFW/lib-vc2015/glfw3.lib)
-
-add_library(devIL STATIC IMPORTED)
-set_target_properties(devIL PROPERTIES
-    IMPORTED_LOCATION Dependencies/DevIL/lib/x86/Release/DevIL.lib)
-
-add_library(devILU STATIC IMPORTED)
-set_target_properties(devILU PROPERTIES
-    IMPORTED_LOCATION Dependencies/DevIL/lib/x86/Release/ILU.lib)
-
-add_library(devILUT STATIC IMPORTED)
-set_target_properties(devILUT PROPERTIES
-    IMPORTED_LOCATION Dependencies/DevIL/lib/x86/Release/ILUT.lib)
-
-target_include_directories(RubeusCore PUBLIC ./Dependencies/GLEW/include)
-target_include_directories(RubeusCore PUBLIC ./Dependencies/GLFW/include)
-target_include_directories(RubeusCore PUBLIC ./Dependencies/DevIL/include)
-target_include_directories(RubeusCore PUBLIC ./Dependencies/Boost_libraries)
 target_include_directories(RubeusCore PUBLIC ./Include)
 include_directories(${OPENGL_INCLUDE_DIRS})
 
-target_link_libraries(RubeusCore glew32s glfw devIL devILU devILUT ${OPENGL_LIBRARIES})
+target_link_libraries(RubeusCore ${OPENGL_LIBRARIES})
 
 # TODO: Add tests and install targets if needed.
