@@ -32,6 +32,10 @@ $ path/to/vcpkg/vcpkg.exe install devil
 ```shell
 $ path/to/vcpkg/vcpkg.exe install boost-any
 ```
+7. Install SFML, Simple & Fast Media Library (sfml:x86-windows) by running:
+```shell
+$ path/to/vcpkg/vcpkg.exe install sfml
+```
 
 ## Initialising CMake with vcpkg
 1. For VS 2017 project files, press `⊞ Win + X` and choose `Command Prompt(Admin)` from the dialog box.
