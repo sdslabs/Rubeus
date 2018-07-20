@@ -4,6 +4,8 @@
 
 #include <SFML/Audio.hpp>
 
+#include <master_component.h>
+
 namespace Rubeus
 {
 	namespace AudioComponents
@@ -34,33 +36,37 @@ namespace Rubeus
 
 		enum ETrackType
 		{
-			SOUND = 0,
-			MUSIC = 1
+			SOUND_TRACK = 0,
+			MUSIC_TRACK = 1
 		};
 
-		class RSoundManager
+		class RAudioManager : public RMasterComponent
 		{
 		private:
-			std::vector<sf::SoundBuffer> m_SoundBuffers;
-			std::vector<sf::Sound> m_SoundTracks;
-			std::vector<sf::Music> m_MusicTracks;
+			std::vector<sf::SoundBuffer *> m_SoundBuffers;
+			std::vector<sf::Sound *> m_SoundTracks;
+			std::vector<sf::Music *> m_MusicTracks;
 
 		public:
+			RAudioManager();
+			~RAudioManager();
+
 			void addSoundTrack(const int count);
 			void addMusicTrack(const int count);
 
-			void loadSoundTrack(const char * filePath, bool loop_enabled = false);
-			void loadMusicTrack(const char * filePath, bool loop_enabled = false);
+			void loadTrack(ETrackType trackType, ETrackName trackName, std::string filePath, bool loop_enabled = false);
 
 			void playTrack(ETrackType trackType, ETrackName trackName);
+			void pauseTrack(ETrackType trackType, ETrackName trackName);
 			void stopTrack(ETrackType trackType, ETrackName trackName);
 
-			void fadeOutMusic(ETrackName trackName, const float duration, const float floorVolume = 0);
+			void stepDownMusicVolume(const float duration, const float floorVolume = 0);
 
 			void setVolume(ETrackType trackType, ETrackName trackName, const float volume);
 			void setPitch(ETrackType trackType, ETrackName trackName, const float pitch);
 
 		protected:
+			void onMessage(Message * msg) override;
 		};
 	}
 }

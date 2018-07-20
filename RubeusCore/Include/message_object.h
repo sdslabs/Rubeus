@@ -60,4 +60,16 @@ namespace Rubeus
 
 	typedef Message RAsyncMessage;
 	typedef Message RSyncMessage;
+
+	enum AudioModifierCommand
+	{
+		// Fade out the music track defined frame by frame
+		fade_out,
+		fade_in
+	};
+
+	struct AudioModifier
+	{
+
+	};
 }

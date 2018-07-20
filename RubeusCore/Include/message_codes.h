@@ -31,7 +31,11 @@ namespace Rubeus
 
 		// Receive the reply to an earlier message sent with the command, `change_window_title`
 		// Handled by: RWindowComponent
-		get_loaded_image
+		get_loaded_image,
+
+		// Modifies the music playing every frame according to AudioModifierCommand
+		// Handled by: RAudioManager
+		modify_audio
 	};
 
 	// Define any functions needed to be sent as message data below. Make sure to mark them as inline for performance.
