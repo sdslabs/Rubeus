@@ -18,6 +18,8 @@ typedef boost::any var;
 namespace Rubeus
 {
 	class RMasterComponent;
+	enum ETrackType;
+	enum ETrackName;
 
 	/**
 	 * @struct	Message
@@ -61,7 +63,7 @@ namespace Rubeus
 	typedef Message RAsyncMessage;
 	typedef Message RSyncMessage;
 
-	enum AudioModifierCommand
+	enum EAudioEffect
 	{
 		// Fade out the music track defined frame by frame
 		fade_out,
@@ -70,6 +72,8 @@ namespace Rubeus
 
 	struct AudioModifier
 	{
-
+		ETrackType m_TrackToApplyTo;
+		EAudioEffect m_EffectToApply;
+		ETrackName m_TrackName;
 	};
 }

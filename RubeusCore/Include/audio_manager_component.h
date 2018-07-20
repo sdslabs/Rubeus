@@ -5,11 +5,15 @@
 #include <SFML/Audio.hpp>
 
 #include <master_component.h>
+#include <message_codes.h>
 
 namespace Rubeus
 {
 	namespace AudioComponents
 	{
+#define MAX_VOLUME 100
+#define VOLUME_STEP 2
+
 		enum ETrackName
 		{
 			TRACK_0 = 0,
@@ -47,6 +51,10 @@ namespace Rubeus
 			std::vector<sf::Sound *> m_SoundTracks;
 			std::vector<sf::Music *> m_MusicTracks;
 
+			std::vector<AudioModifier *> m_AudioTasks;
+
+			std::vector<void(*)()> m_TickFunctions;
+
 		public:
 			RAudioManager();
 			~RAudioManager();
@@ -54,7 +62,7 @@ namespace Rubeus
 			void addSoundTrack(const int count);
 			void addMusicTrack(const int count);
 
-			void loadTrack(ETrackType trackType, ETrackName trackName, std::string filePath, bool loop_enabled = false);
+			void loadTrack(ETrackType trackType, ETrackName trackName, std::string filePath, float volume = 50, bool loop_enabled = false);
 
 			void playTrack(ETrackType trackType, ETrackName trackName);
 			void pauseTrack(ETrackType trackType, ETrackName trackName);
@@ -64,6 +72,9 @@ namespace Rubeus
 
 			void setVolume(ETrackType trackType, ETrackName trackName, const float volume);
 			void setPitch(ETrackType trackType, ETrackName trackName, const float pitch);
+
+			void addToTick(void(*function)());
+			void tick();
 
 		protected:
 			void onMessage(Message * msg) override;

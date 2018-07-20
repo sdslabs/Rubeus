@@ -7,15 +7,23 @@
 int main()
 {
 	using namespace Rubeus;
+
 	using namespace GraphicComponents;
+	using namespace AudioComponents;
 	using namespace UtilityComponents;
+
 	using namespace RML;
+
 #if !MSG_SYSTEM
 	RWindowComponent * GameWindow = new RWindowComponent("Hello World",
 														 1280, 720,
 														 EWindowParameters::WINDOWED_MODE,
 														 EWindowParameters::NON_RESIZABLE_WINDOW,
 														 0);
+	RAudioManager * audio_manager = new RAudioManager();
+	audio_manager->addMusicTrack(1);
+	audio_manager->loadTrack(MUSIC_TRACK, TRACK_0, "Assets/Garage.wav", 20, true);
+	audio_manager->playTrack(MUSIC_TRACK, TRACK_0);
 
 	RShaderComponent * shader0 = new RShaderComponent("Shaders/basic.vert", "Shaders/basic.frag");
 
@@ -57,6 +65,7 @@ int main()
 	delete g;
 	delete layer0;
 	delete shader0;
+	delete audio_manager;
 	delete GameWindow;
 
 #else
