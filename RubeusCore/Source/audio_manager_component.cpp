@@ -26,10 +26,10 @@ namespace Rubeus
 			if(trackName > (int) m_MusicTracks.size())
 			{
 				ERRORLOG("Wrong track ID used. Only " + std::to_string(m_SoundTracks.size()) + std::string(" music tracks available"));
-				return true;
+				return false;
 			}
 
-			return false;
+			return true;
 		}
 
 		RAudioManager::RAudioManager()
@@ -72,6 +72,7 @@ namespace Rubeus
 			{
 				if(validateSoundTrackID(trackName))
 				{
+					m_SoundBuffers[trackName]->loadFromFile(filePath);
 					m_SoundTracks[trackName]->setBuffer(*m_SoundBuffers[trackName]);
 					m_SoundTracks[trackName]->setVolume(volume);
 

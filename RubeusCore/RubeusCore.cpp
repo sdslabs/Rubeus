@@ -22,8 +22,11 @@ int main()
 														 0);
 	RAudioManager * audio_manager = new RAudioManager();
 	audio_manager->addMusicTrack(1);
+	audio_manager->addSoundTrack(1);
 	audio_manager->loadTrack(MUSIC_TRACK, TRACK_0, "Assets/Garage.wav", 20, true);
+	audio_manager->loadTrack(SOUND_TRACK, TRACK_0, "Assets/sound.wav", 20);
 	audio_manager->playTrack(MUSIC_TRACK, TRACK_0);
+	audio_manager->playTrack(SOUND_TRACK, TRACK_0);
 
 	RShaderComponent * shader0 = new RShaderComponent("Shaders/basic.vert", "Shaders/basic.frag");
 
