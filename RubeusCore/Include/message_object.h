@@ -53,7 +53,7 @@ namespace Rubeus
 		Message(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, var data = NULL);
 
 		/**
-		 * @fn	~Message()
+		 * @fn		~Message()
 		 *
 		 * @brief	Destructor
 		 */
@@ -63,17 +63,34 @@ namespace Rubeus
 	typedef Message RAsyncMessage;
 	typedef Message RSyncMessage;
 
+	/**
+	 * @enum		EAudioEffect
+	 *
+	 * @brief	Defines audio commands allowed to send to the audio manager
+	 */
 	enum EAudioEffect
 	{
 		// Fade out the music track defined frame by frame
 		fade_out,
+
+		// Fade in the music track defined frame by frame
 		fade_in
 	};
 
+	/**
+	* @struct	AudioModifier
+	*
+	* @brief		Custom POD structure to be sent with messages as audio commands
+	*/
 	struct AudioModifier
 	{
+		/** @brief	Track type to use */
 		ETrackType m_TrackToApplyTo;
-		EAudioEffect m_EffectToApply;
+
+		/** @brief	Track name (Track ID) to apply to */
 		ETrackName m_TrackName;
+
+		/** @brief	Effect to apply */
+		EAudioEffect m_EffectToApply;
 	};
 }

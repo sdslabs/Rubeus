@@ -1,3 +1,9 @@
+/**
+ * @file		Source/audio_manager_component.cpp.
+ *
+ * @brief	Defines the Audio Manager
+ */
+
 #include <audio_manager_component.h>
 
 namespace Rubeus
@@ -38,14 +44,14 @@ namespace Rubeus
 			m_MusicTracks.push_back(new sf::Music());
 		}
 
-		void RAudioManager::loadTrack(ETrackType trackType, ETrackName trackName, std::string filePath, float volume, bool loop_enabled)
+		void RAudioManager::loadTrack(ETrackType trackType, ETrackName trackName, std::string filePath, float volume, bool loopEnabled)
 		{
 			if(trackType == SOUND_TRACK)
 			{
 				m_SoundTracks[trackName]->setBuffer(*m_SoundBuffers[trackName]);
 				m_SoundTracks[trackName]->setVolume(volume);
 
-				if(loop_enabled)
+				if(loopEnabled)
 				{
 					m_SoundTracks[trackName]->setLoop(true);
 				}
@@ -55,7 +61,7 @@ namespace Rubeus
 			{
 				m_MusicTracks[trackName]->openFromFile(filePath);
 
-				if(loop_enabled)
+				if(loopEnabled)
 				{
 					m_MusicTracks[trackName]->setLoop(true);
 				}
