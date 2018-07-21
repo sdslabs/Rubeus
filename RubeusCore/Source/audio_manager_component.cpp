@@ -10,13 +10,35 @@ namespace Rubeus
 {
 	namespace AudioComponents
 	{
+		inline bool RAudioManager::validateSoundTrackID(ETrackName trackName)
+		{
+			if(trackName > (int) m_MusicTracks.size())
+			{
+				ERRORLOG("Wrong track ID used. Only " + std::to_string(m_SoundTracks.size()) + std::string(" sound tracks available"));
+				return false;
+			}
+
+			return true;
+		}
+
+		inline bool RAudioManager::validateMusicTrackID(ETrackName trackName)
+		{
+			if(trackName > (int) m_MusicTracks.size())
+			{
+				ERRORLOG("Wrong track ID used. Only " + std::to_string(m_SoundTracks.size()) + std::string(" music tracks available"));
+				return true;
+			}
+
+			return false;
+		}
+
 		RAudioManager::RAudioManager()
 		{
 		}
 
 		RAudioManager::~RAudioManager()
 		{
-			int i = 0;
+			size_t i = 0;
 			while(i < m_MusicTracks.size())
 				delete m_MusicTracks[i++];
 
@@ -48,22 +70,28 @@ namespace Rubeus
 		{
 			if(trackType == SOUND_TRACK)
 			{
-				m_SoundTracks[trackName]->setBuffer(*m_SoundBuffers[trackName]);
-				m_SoundTracks[trackName]->setVolume(volume);
-
-				if(loopEnabled)
+				if(validateSoundTrackID(trackName))
 				{
-					m_SoundTracks[trackName]->setLoop(true);
+					m_SoundTracks[trackName]->setBuffer(*m_SoundBuffers[trackName]);
+					m_SoundTracks[trackName]->setVolume(volume);
+
+					if(loopEnabled)
+					{
+						m_SoundTracks[trackName]->setLoop(true);
+					}
 				}
 			}
 
 			else if(trackType == MUSIC_TRACK)
 			{
-				m_MusicTracks[trackName]->openFromFile(filePath);
-
-				if(loopEnabled)
+				if(validateMusicTrackID(trackName))
 				{
-					m_MusicTracks[trackName]->setLoop(true);
+					m_MusicTracks[trackName]->openFromFile(filePath);
+
+					if(loopEnabled)
+					{
+						m_MusicTracks[trackName]->setLoop(true);
+					}
 				}
 			}
 		}
@@ -72,11 +100,17 @@ namespace Rubeus
 		{
 			if(trackType == SOUND_TRACK)
 			{
-				m_SoundTracks[trackName]->play();
+				if(validateSoundTrackID(trackName))
+				{
+					m_SoundTracks[trackName]->play();
+				}
 			}
 			else if(trackType == MUSIC_TRACK)
 			{
-				m_MusicTracks[trackName]->play();
+				if(validateMusicTrackID(trackName))
+				{
+					m_MusicTracks[trackName]->play();
+				}
 			}
 		}
 
@@ -84,11 +118,17 @@ namespace Rubeus
 		{
 			if(trackType == SOUND_TRACK)
 			{
-				m_SoundTracks[trackName]->pause();
+				if(validateSoundTrackID(trackName))
+				{
+					m_SoundTracks[trackName]->pause();
+				}
 			}
 			else if(trackType == MUSIC_TRACK)
 			{
-				m_MusicTracks[trackName]->pause();
+				if(validateMusicTrackID(trackName))
+				{
+					m_MusicTracks[trackName]->pause();
+				}
 			}
 		}
 
@@ -96,27 +136,41 @@ namespace Rubeus
 		{
 			if(trackType == SOUND_TRACK)
 			{
-				m_SoundTracks[trackName]->stop();
+				if(validateSoundTrackID(trackName))
+				{
+					m_SoundTracks[trackName]->stop();
+				}
 			}
 			else if(trackType == MUSIC_TRACK)
 			{
-				m_MusicTracks[trackName]->stop();
+				if(validateMusicTrackID(trackName))
+				{
+					m_MusicTracks[trackName]->stop();
+				}
 			}
 		}
 
 		void RAudioManager::stepDownMusicVolume(const float duration, const float floorVolume)
 		{
+			// To be continued
 		}
 
 		void RAudioManager::setVolume(ETrackType trackType, ETrackName trackName, const float volume)
 		{
 			if(trackType == SOUND_TRACK)
 			{
-				m_SoundTracks[trackName]->setVolume(volume);
+				if(validateSoundTrackID(trackName))
+				{
+					m_SoundTracks[trackName]->setVolume(volume);
+				}
+
 			}
 			else if(trackType == MUSIC_TRACK)
 			{
-				m_MusicTracks[trackName]->setVolume(volume);
+				if(validateMusicTrackID(trackName))
+				{
+					m_MusicTracks[trackName]->setVolume(volume);
+				}
 			}
 		}
 
@@ -124,11 +178,17 @@ namespace Rubeus
 		{
 			if(trackType == SOUND_TRACK)
 			{
-				m_SoundTracks[trackName]->setPitch(pitch);
+				if(validateSoundTrackID(trackName))
+				{
+					m_SoundTracks[trackName]->setPitch(pitch);
+				}
 			}
 			else if(trackType == MUSIC_TRACK)
 			{
-				m_MusicTracks[trackName]->setPitch(pitch);
+				if(validateMusicTrackID(trackName))
+				{
+					m_MusicTracks[trackName]->setPitch(pitch);
+				}
 			}
 		}
 

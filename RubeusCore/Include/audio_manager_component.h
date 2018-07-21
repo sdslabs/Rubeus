@@ -83,6 +83,31 @@ namespace Rubeus
 			/** @brief	Array of functions to tick */
 			std::vector<void(*)()> m_TickFunctions;
 
+			/**
+			 * @fn		bool validateSoundTrackID(ETrackName trackName);
+
+			 *
+			 * @brief	Validates the sound track ID
+			 * @warning	Inline function
+			 *
+			 * @param	trackName	The track ID to check.
+			 *
+			 * @return	True if values if valid, else false.
+			 */
+			bool validateSoundTrackID(ETrackName trackName);
+
+			/**
+			 * @fn		bool validateMusicTrackID(ETrackName trackName);
+			 *
+			 * @brief	Validates the music track ID
+			 * @warning	Inline function
+			 *
+			 * @param	trackName	The track ID to check.
+			 *
+			 * @return	True if values if valid, else false.
+			 */
+			bool validateMusicTrackID(ETrackName trackName);
+
 		public:
 			/**
 			 * @fn		RAudioManager()
@@ -154,6 +179,7 @@ namespace Rubeus
 			 * @param	trackName	Name of track. Use Name (Track ID) of the track to load to. Allowed TRACK_0 upto TRACK_19, unless the number of tracks added are less than 20.
 			 */
 			void pauseTrack(ETrackType trackType, ETrackName trackName);
+
 
 			/**
 			 * @fn		void stopTrack(ETrackType trackType, ETrackName trackName);
