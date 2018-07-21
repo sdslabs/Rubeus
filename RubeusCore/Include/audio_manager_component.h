@@ -92,7 +92,7 @@ namespace Rubeus
 			 *
 			 * @param	trackName	The track ID to check.
 			 *
-			 * @return	True if values if valid, else false.
+			 * @return	True if value is valid, else false.
 			 */
 			bool validateSoundTrackID(ETrackName trackName);
 
@@ -104,7 +104,7 @@ namespace Rubeus
 			 *
 			 * @param	trackName	The track ID to check.
 			 *
-			 * @return	True if values if valid, else false.
+			 * @return	True if value is valid, else false.
 			 */
 			bool validateMusicTrackID(ETrackName trackName);
 
