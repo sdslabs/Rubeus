@@ -47,7 +47,7 @@ namespace Rubeus
 
 			if((getRelativeTime(0, 1)) >= ONESECONDINMILLISECONDS)
 			{
-				LOG(std::to_string(m_Frames) + " fps");
+				LOG(std::to_string(++m_Frames) + " fps");
 				addTimePoint(0);
 				m_Frames = 0;
 			}

@@ -33,6 +33,8 @@ namespace Rubeus
 			/** @brief	UV coordinates for this vertex */
 			RML::Vector2D uv;
 
+			float texID;
+
 			/** @brief	The color of this vertex */
 			RML::Vector4D color;
 		};

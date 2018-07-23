@@ -102,9 +102,6 @@ int main()
 	delete loader;
 	delete GameWindow;
 #endif
-<<<<<<< HEAD
-=======
 
->>>>>>> Fix fatal macro formatting related issues
 	return 0;
 }

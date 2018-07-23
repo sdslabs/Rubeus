@@ -25,7 +25,10 @@ namespace Rubeus
 
 #define SHADER_VERTEX_LOCATION 0
 #define SHADER_UV_LOCATION 1
-#define SHADER_COLOR_LOCATION 2
+#define SHADER_TEXTURE_ID_LOCATION 2
+#define SHADER_COLOR_LOCATION 3
+
+#define MAX_ALLOWED_TEXTURES 32
 
 		/**
 		 * @class	RGuerrillaRendererComponent
@@ -56,6 +59,8 @@ namespace Rubeus
 
 			/** @brief	Cache for last element of trasnformation stack */
 			RML::Matrix4 * m_TransformationBack;
+
+			std::vector<GLuint> m_TextureSlots;
 
 			/**
 			 * @fn		void RGuerrillaRendererComponent::init();

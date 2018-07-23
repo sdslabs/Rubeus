@@ -22,6 +22,7 @@ namespace Rubeus
 
 			GLCall(glVertexAttribPointer(SHADER_VERTEX_LOCATION, 3, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::vertex))));
 			GLCall(glVertexAttribPointer(SHADER_UV_LOCATION, 2, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::uv))));
+			GLCall(glVertexAttribPointer(SHADER_TEXTURE_ID_LOCATION, 1, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::texID))));
 			GLCall(glVertexAttribPointer(SHADER_COLOR_LOCATION, 4, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::color))));
 
 			GLCall(glEnableVertexAttribArray(SHADER_VERTEX_LOCATION));
@@ -89,9 +90,32 @@ namespace Rubeus
 			const std::vector<RML::Vector2D> & uv = renderable->getUV();
 			const GLuint textureID = renderable->getTextureID();
 
+			float tempTID = 0;
+
 			if(textureID > 0)
 			{
+				size_t i = 0;
+				bool flag = false;
+				while(i < m_TextureSlots.size())
+				{
+					if(m_TextureSlots[i] == textureID)
+					{
+						tempTID = (float) i;
+						flag = true;
+						break;
+					}
+				}
 
+				if(!flag == true)
+				{
+					if(m_TextureSlots.size() > MAX_ALLOWED_TEXTURES)
+					{
+						end();
+						flush();
+					}
+					m_TextureSlots.push_back(textureID);
+					tempTID = (float) (m_TextureSlots.size() - 1);
+				}
 			}
 			else
 			{
@@ -100,21 +124,25 @@ namespace Rubeus
 
 			m_Buffer->vertex = *m_TransformationBack * position;
 			m_Buffer->uv = uv[0];
+			m_Buffer->texID = tempTID;
 			m_Buffer->color = color;
 			m_Buffer++;
 
 			m_Buffer->vertex = *m_TransformationBack * RML::Vector3D(position.x, position.y + size.y, position.z);
 			m_Buffer->uv = uv[1];
+			m_Buffer->texID = tempTID;
 			m_Buffer->color = color;
 			m_Buffer++;
 
 			m_Buffer->vertex = *m_TransformationBack * RML::Vector3D(position.x + size.x, position.y + size.y, position.z);
 			m_Buffer->uv = uv[2];
+			m_Buffer->texID = tempTID;
 			m_Buffer->color = color;
 			m_Buffer++;
 
 			m_Buffer->vertex = *m_TransformationBack * RML::Vector3D(position.x + size.x, position.y, position.z);
 			m_Buffer->uv = uv[3];
+			m_Buffer->texID = tempTID;
 			m_Buffer->color = color;
 			m_Buffer++;
 
@@ -129,6 +157,12 @@ namespace Rubeus
 
 		void RGuerrillaRendererComponent::flush()
 		{
+			for(int i = 0; i < m_TextureSlots.size(); ++i)
+			{
+				glActiveTexture(GL_TEXTURE0 + i);
+				glBindTexture(GL_TEXTURE_2D, m_TextureSlots[i]);
+			}
+
 			glBindVertexArray(m_VAO);
 			m_IBO->bindIndexBuffer();
 
