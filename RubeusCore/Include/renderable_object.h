@@ -137,7 +137,7 @@ namespace Rubeus
 			 *
 			 * @return	The texture ID.
 			 */
-			inline const GLuint getTextureID() const { return (m_Texture == nullptr) ? 0 : m_Texture->getID(); }
+			inline const GLuint getTextureID() const { return (m_Texture == NULL) ? 0 : m_Texture->getID(); }
 
 		protected:
 			/**

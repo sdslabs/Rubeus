@@ -80,14 +80,16 @@ namespace Rubeus
 			~RShaderComponent();
 
 			/**
-			 * @fn		void RShader::setUniform1f(const GLchar* name, float value);
+			 * @fn		void RShader::setUniform1f(const GLchar * name, float value);
 			 *
 			 * @brief	Sets uniform float value required in the shader code
 			 *
 			 * @param	name 	The name.
 			 * @param	value	The value.
 			 */
-			void setUniform1f(const GLchar* name, float value);
+			void setUniform1f(const GLchar * name, float value);
+
+			void setUniform1fv(const GLchar * name, float * value, int count);
 
 			/**
 			 * @fn		void RShader::setUniform1i(const GLchar* name, int value);
@@ -98,6 +100,8 @@ namespace Rubeus
 			 * @param	value	The value.
 			 */
 			void setUniform1i(const GLchar* name, int value);
+
+			void setUniform1iv(const GLchar * name, int * value, int count);
 
 			/**
 			 * @fn		void RShader::setUniform2f(const GLchar* name, const RML::Vector2D & vector);

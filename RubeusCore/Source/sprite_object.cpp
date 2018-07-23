@@ -22,6 +22,13 @@ namespace Rubeus
 		RSprite::RSprite(float x, float y, float width, float height, const RML::Vector4D & color)
 			: RRenderableObject(RML::Vector3D(x, y, 0), RML::Vector2D(width, height), color)
 		{
+			m_Texture = NULL;
+		}
+
+		RSprite::RSprite(float x, float y, float width, float height, RTexture * texture)
+			: RRenderableObject(RML::Vector3D(x, y, 0), RML::Vector2D(width, height), RML::Vector4D(1.0f, 1.0f, 0.0f, 1.0f))
+		{
+			m_Texture = texture;
 		}
 	}
 }

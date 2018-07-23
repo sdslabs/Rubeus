@@ -48,6 +48,8 @@ namespace Rubeus
 			 */
 			RSprite(float x, float y, float width, float height, const RML::Vector4D & color);
 
+			RSprite(float x, float y, float width, float height, RTexture * texture);
+
 		protected:
 		};
 	}

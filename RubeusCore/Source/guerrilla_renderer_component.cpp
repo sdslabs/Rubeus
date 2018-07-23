@@ -100,21 +100,22 @@ namespace Rubeus
 				{
 					if(m_TextureSlots[i] == textureID)
 					{
-						tempTID = (float) i;
+						tempTID = (float) (i + 1);
 						flag = true;
 						break;
 					}
 				}
 
-				if(!flag == true)
+				if(!flag)
 				{
 					if(m_TextureSlots.size() > MAX_ALLOWED_TEXTURES)
 					{
 						end();
 						flush();
+						begin();
 					}
 					m_TextureSlots.push_back(textureID);
-					tempTID = (float) (m_TextureSlots.size() - 1);
+					tempTID = (float) m_TextureSlots.size();
 				}
 			}
 			else
@@ -157,7 +158,7 @@ namespace Rubeus
 
 		void RGuerrillaRendererComponent::flush()
 		{
-			for(int i = 0; i < m_TextureSlots.size(); ++i)
+			for(size_t i = 0; i < m_TextureSlots.size(); ++i)
 			{
 				glActiveTexture(GL_TEXTURE0 + i);
 				glBindTexture(GL_TEXTURE_2D, m_TextureSlots[i]);

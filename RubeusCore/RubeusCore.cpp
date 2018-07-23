@@ -34,20 +34,21 @@ int main()
 
 	RGroup * g = new RGroup(Matrix4::translation(Vector3D(0.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
 
-	g->add(new RSprite(3.0f, 3.0f, 3.0f, 3.0f, Vector4D(1.0f, 1.0f, 0.0f, 1.0f)));
-
-
-	layer0->addGroup(*g);
-
 	RTimer * timer = new RTimer(2);
 	timer->setFrameCounter();
 
-	glActiveTexture(GL_TEXTURE0);
-	RTexture texture("Assets/test8.png");
-	texture.bindTexture();
+	RTexture * texture = new RTexture("Assets/test8.png");
+
+	g->add(new RSprite(3.0f, 3.0f, 3.0f, 3.0f, texture));
+
+	layer0->addGroup(*g);
 
 	shader0->enableShader();
-	shader0->setUniform1i("tex", 0);
+	int textureIDs[] =
+	{
+		0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+	};
+	shader0->setUniform1iv("textures", textureIDs, 10);
 
 	// See if maps are slowing things down. Also have a performance check
 	while(!GameWindow->closed())
@@ -65,6 +66,7 @@ int main()
 	}
 
 	delete timer;
+	delete texture;
 	delete g;
 	delete layer0;
 	delete shader0;

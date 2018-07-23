@@ -110,9 +110,19 @@ namespace Rubeus
 			GLCall(glUniform1f(getUniformLocation(name), value));
 		}
 
+		void RShaderComponent::setUniform1fv(const GLchar * name, float * value, int count)
+		{
+			glUniform1fv(getUniformLocation(name), count, value);
+		}
+
 		void RShaderComponent::setUniform1i(const GLchar * name, int value)
 		{
 			GLCall(glUniform1i(getUniformLocation(name), value));
+		}
+
+		void RShaderComponent::setUniform1iv(const GLchar * name, int * value, int count)
+		{
+			glUniform1iv(getUniformLocation(name), count, value);
 		}
 
 		void RShaderComponent::setUniform2f(const GLchar * name, const RML::Vector2D & vector)
