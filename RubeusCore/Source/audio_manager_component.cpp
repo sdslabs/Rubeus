@@ -12,7 +12,7 @@ namespace Rubeus
 	{
 		inline bool RAudioManager::validateSoundTrackID(ETrackName trackName)
 		{
-			if(trackName > (int) m_MusicTracks.size())
+			if(trackName > (int) m_SoundTracks.size())
 			{
 				ERRORLOG("Wrong track ID used. Only " + std::to_string(m_SoundTracks.size()) + std::string(" sound tracks available"));
 				return false;
