@@ -23,8 +23,8 @@ int main()
 	RAudioManager * audio_manager = new RAudioManager();
 	audio_manager->addMusicTrack(1);
 	audio_manager->addSoundTrack(1);
-	audio_manager->loadTrack(MUSIC_TRACK, TRACK_0, "Assets/Garage.wav", 20, true);
-	audio_manager->loadTrack(SOUND_TRACK, TRACK_0, "Assets/sound.wav", 20);
+	audio_manager->loadTrack(MUSIC_TRACK, TRACK_0, "Assets/Garage.wav", 10, true);
+	audio_manager->loadTrack(SOUND_TRACK, TRACK_0, "Assets/sound.wav", 10);
 	audio_manager->playTrack(MUSIC_TRACK, TRACK_0);
 	audio_manager->playTrack(SOUND_TRACK, TRACK_0);
 
@@ -44,7 +44,7 @@ int main()
 	layer0->addGroup(*g);
 
 	shader0->enableShader();
-	int textureIDs[] =
+	GLint textureIDs[] =
 	{
 		0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 	};

@@ -86,36 +86,48 @@ namespace Rubeus
 		{
 			const RML::Vector3D & position = renderable->getPosition();
 			const RML::Vector2D & size = renderable->getSize();
-			RML::Vector4D & color = RML::Vector4D();
+			RML::Vector4D color = (const RML::Vector4D) renderable->getColor();
 			const std::vector<RML::Vector2D> & uv = renderable->getUV();
 			const GLuint textureID = renderable->getTextureID();
 
-			float tempTID = 0;
+			float tempTID = 0.0f;
 
 			if(textureID > 0)
 			{
-				size_t i = 0;
-				bool flag = false;
-				while(i < m_TextureSlots.size())
+				if(m_TextureSlots.empty())
 				{
-					if(m_TextureSlots[i] == textureID)
-					{
-						tempTID = (float) (i + 1);
-						flag = true;
-						break;
-					}
+					tempTID = 1.0f;
 				}
-
-				if(!flag)
+				else
 				{
-					if(m_TextureSlots.size() > MAX_ALLOWED_TEXTURES)
+					size_t i = 0;
+					int texNotFound = -1;
+					for(; i < m_TextureSlots.size(); i++)
 					{
-						end();
-						flush();
-						begin();
+						if(m_TextureSlots[i] == textureID)
+						{
+							tempTID = (float) (i + 1);
+							texNotFound = 0;
+							break;
+						}
 					}
-					m_TextureSlots.push_back(textureID);
-					tempTID = (float) m_TextureSlots.size();
+
+					if(i == (m_TextureSlots.size()))
+					{
+						texNotFound = 0;
+					}
+
+					if(texNotFound == 0)
+					{
+						if(m_TextureSlots.size() == MAX_ALLOWED_TEXTURES)
+						{
+							end();
+							flush();
+							begin();
+						}
+						m_TextureSlots.push_back(textureID);
+						tempTID = (float) m_TextureSlots.size();
+					}
 				}
 			}
 			else
