@@ -2,8 +2,6 @@
 //
 #include "RubeusCore.h"
 
-#define MSG_SYSTEM 0
-
 int main()
 {
 	using namespace Rubeus;
@@ -14,7 +12,6 @@ int main()
 
 	using namespace RML;
 
-#if !MSG_SYSTEM
 	RWindowComponent * GameWindow = new RWindowComponent("Hello World",
 														 1280, 720,
 														 EWindowParameters::WINDOWED_MODE,
@@ -44,11 +41,12 @@ int main()
 	layer0->addGroup(*g);
 
 	shader0->enableShader();
-	GLint textureIDs[] =
+	GLint textureIDs[32];
+	for(int i = 0; i < 32; i++)
 	{
-		0, 1, 2, 3, 4, 5, 6, 7, 8, 9
-	};
-	shader0->setUniform1iv("textures", textureIDs, 10);
+		textureIDs[i] = i;
+	}
+	shader0->setUniform1iv("textures", textureIDs, 32);
 
 	// See if maps are slowing things down. Also have a performance check
 	while(!GameWindow->closed())
@@ -72,38 +70,6 @@ int main()
 	delete shader0;
 	delete audio_manager;
 	delete GameWindow;
-
-#else
-
-	RMessageSystem MessageSystem;
-	RWindowComponent * GameWindow = new RWindowComponent(
-		"Hello World",
-		1280, 720,
-		EWindowParameters::WINDOWED_MODE,
-		EWindowParameters::NON_RESIZABLE_WINDOW,
-		1
-	);
-
-	MessageSystem.m_MessageBus.addSystem(GameWindow);
-	MessageSystem.addMessage(GameWindow, GameWindow, change_window_title, "chal raha hain bro :*)");
-
-	RLoaderComponent * loader = new RLoaderComponent();
-	MessageSystem.m_MessageBus.addSystem(loader);
-
-	GameWindow->m_MessageSystem.addMessage(GameWindow, loader, EMessageCode::load_image, "Assets/test8.png");
-
-	while(!GameWindow->closed())
-	{
-		GameWindow->clearWindow();
-
-		MessageSystem.evaluateMessages();
-
-		GameWindow->updateWindow();
-	}
-
-	delete loader;
-	delete GameWindow;
-#endif
 
 	return 0;
 }
