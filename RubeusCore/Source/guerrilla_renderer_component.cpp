@@ -87,54 +87,61 @@ namespace Rubeus
 		{
 			const RML::Vector3D & position = renderable->getPosition();
 			const RML::Vector2D & size = renderable->getSize();
-			RML::Vector4D color = (const RML::Vector4D) renderable->getColor();
+			const RML::Vector4D & color = renderable->getColor();
 			const std::vector<RML::Vector2D> & uv = renderable->getUV();
-			const GLuint textureID = renderable->getTextureID();
+			const GLuint & textureID = renderable->getTextureID();
 
 			float tempTID = 0.0f;
 
-			if(textureID > 0)
+			if(textureID > 0.0f)
 			{
-				if(m_TextureSlots.empty())
+				if(m_TextureSlots.empty()) // Checking if texture slots are not initialised
 				{
+					// Add the first texture ID
 					m_TextureSlots.push_back(textureID);
+
+					// Initialise the tempTID to be used while populating the buffers
 					tempTID = (float) m_TextureSlots.size();
 				}
-				else
+				else // if the texture slots have been initialised before
 				{
 					size_t i = 0;
-					int texNotFound = -1;
+					int texNotFound = 1;
+
+					// Look in the texture slot values for the current texture ID required
 					for(; i < m_TextureSlots.size(); i++)
 					{
-						if(m_TextureSlots[i] == textureID)
+						if(m_TextureSlots[i] == textureID) // If the texture slot matches the texture ID required
 						{
+							// Use it!
 							tempTID = (float) (i + 1);
 							texNotFound = 0;
 							break;
 						}
 					}
 
-					if(i == (m_TextureSlots.size()))
-					{
-						texNotFound = 0;
-					}
+					//if(i == (int) m_TextureSlots.size() && (texNotFound == 0)) // If the loop variable i.e. i : int, reached the last texture slot but tex
+					//{
+					//	texNotFound = 1;
+					//}
 
-					if(texNotFound == 0)
+					if(texNotFound == 1) // If the texture ID required was not found in the texture slots
 					{
-						if(m_TextureSlots.size() == MAX_ALLOWED_TEXTURES)
+						if(m_TextureSlots.size() == MAX_ALLOWED_TEXTURES) // Also if the maximum slots have been reached, restart the sprite submission process
 						{
 							end();
 							flush();
 							begin();
 						}
+						// else no need to restart submission
+
+						// Insert the newer texture ID acquired
 						m_TextureSlots.push_back(textureID);
+
+						// Retain the value for buffer population
 						tempTID = (float) m_TextureSlots.size();
 					}
 				}
-			}
-			else
-			{
-				color = renderable->getColor();
 			}
 
 			m_Buffer->vertex = *m_TransformationBack * position;
