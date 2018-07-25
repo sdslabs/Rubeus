@@ -35,8 +35,11 @@ int main()
 	timer->setFrameCounter();
 
 	RTexture * texture = new RTexture("Assets/test8.png");
+	RTexture * texture2 = new RTexture("Assets/test9.png");
 
 	g->add(new RSprite(3.0f, 3.0f, 3.0f, 3.0f, texture));
+	g->add(new RSprite(6.0f, 3.0f, 4.0f, 4.0f, texture2));
+	g->add(new RSprite(6.0f, 6.0f, 3.0f, 3.0f, Vector4D(0.5f, 0.4f, 0.2f, 1.0f)));
 
 	layer0->addGroup(*g);
 
@@ -65,6 +68,7 @@ int main()
 
 	delete timer;
 	delete texture;
+	delete texture2;
 	delete g;
 	delete layer0;
 	delete shader0;

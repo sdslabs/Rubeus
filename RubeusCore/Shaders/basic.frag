@@ -18,16 +18,13 @@ in DATA
 
 void main()
 {
-	float intensity = 1.0;
-	float l = pow(length(pos.xy - light_position), 2);
-
-	intensity = 1.0 / l;
+	float intensity = 1.0 / pow(length(pos.xy - light_position), 2);
 	
-	vec4 colorTex = vec4(1.0f, 1.0f, 1.0f, 1.0f);
+	vec4 colorTex;
 
-	if(fs_in.texID >= 0.0)
-	{
-		int tid = int(fs_in.texID);
+	if(fs_in.texID >= 1.0) 
+	{                            
+		int tid = int(fs_in.texID - 0.5);
 		colorTex = texture(textures[tid], fs_in.uv);
 	}
 	else
@@ -35,7 +32,5 @@ void main()
 		colorTex = fs_in.color;
 	}
 
-                                                                              // fs_in.texID was 0 here
 	color = colorTex * intensity;
-	//color = vec4(fs_in.texID, 0.0, 0.0, 1.0);
 }

@@ -27,6 +27,7 @@ namespace Rubeus
 
 			GLCall(glEnableVertexAttribArray(SHADER_VERTEX_LOCATION));
 			GLCall(glEnableVertexAttribArray(SHADER_UV_LOCATION));
+			GLCall(glEnableVertexAttribArray(SHADER_TEXTURE_ID_LOCATION));
 			GLCall(glEnableVertexAttribArray(SHADER_COLOR_LOCATION));
 
 			GLCall(glBindBuffer(GL_ARRAY_BUFFER, 0));
@@ -96,7 +97,8 @@ namespace Rubeus
 			{
 				if(m_TextureSlots.empty())
 				{
-					tempTID = 1.0f;
+					m_TextureSlots.push_back(textureID);
+					tempTID = (float) m_TextureSlots.size();
 				}
 				else
 				{
