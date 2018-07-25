@@ -44,10 +44,21 @@ namespace Rubeus
 			 * @param	y	  	The y offset.
 			 * @param	width 	The width.
 			 * @param	height	The height.
-			 * @param	color 	The color.
+			 * @param	color 	The color of this sprite.
 			 */
 			RSprite(float x, float y, float width, float height, const RML::Vector4D & color);
 
+			/**
+			 * @fn		RSprite::RSprite(float x, float y, float width, float height, RTexture * texture);
+			 *
+			 * @brief	Constructor
+			 *
+			 * @param	x	  	The x offset.
+			 * @param	y	  	The y offset.
+			 * @param	width 	The width.
+			 * @param	height	The height.
+			 * @param	texture 	Pointer to the texture to be used.
+			 */
 			RSprite(float x, float y, float width, float height, RTexture * texture);
 
 		protected:

@@ -60,6 +60,7 @@ namespace Rubeus
 			/** @brief	Cache for last element of trasnformation stack */
 			RML::Matrix4 * m_TransformationBack;
 
+			/** @brief	Texture cache slots used to refer to textures used recently */
 			std::vector<GLuint> m_TextureSlots;
 
 			/**

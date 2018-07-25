@@ -120,11 +120,6 @@ namespace Rubeus
 						}
 					}
 
-					//if(i == (int) m_TextureSlots.size() && (texNotFound == 0)) // If the loop variable i.e. i : int, reached the last texture slot but tex
-					//{
-					//	texNotFound = 1;
-					//}
-
 					if(texNotFound == 1) // If the texture ID required was not found in the texture slots
 					{
 						if(m_TextureSlots.size() == MAX_ALLOWED_TEXTURES) // Also if the maximum slots have been reached, restart the sprite submission process
