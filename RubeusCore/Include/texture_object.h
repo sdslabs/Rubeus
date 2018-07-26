@@ -41,7 +41,6 @@ namespace Rubeus
 			 * @fn		RTexture(const char * path)
 			 *
 			 * @brief	Constructor. Uses a path string to load an image from.
-			 * @warning	
 			 *
 			 * @param	path	The file path for the image.
 			 */
@@ -69,6 +68,15 @@ namespace Rubeus
 			 * @warning	Decreases graphics performance if used repeatedly.
 			 */
 			void unbindTexture() const;
+
+			/**
+			 * @fn		inline const GLuint getID() const
+			 *
+			 * @brief	Returns the texture ID of this texture
+			 *
+			 * @return	Copy of this object's texture ID.
+			 */
+			inline const GLuint getID() const { return m_TextureID; }
 		};
 	}
 }

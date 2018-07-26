@@ -22,10 +22,12 @@ namespace Rubeus
 
 			GLCall(glVertexAttribPointer(SHADER_VERTEX_LOCATION, 3, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::vertex))));
 			GLCall(glVertexAttribPointer(SHADER_UV_LOCATION, 2, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::uv))));
+			GLCall(glVertexAttribPointer(SHADER_TEXTURE_ID_LOCATION, 1, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::texID))));
 			GLCall(glVertexAttribPointer(SHADER_COLOR_LOCATION, 4, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid *) (offsetof(VertexData, VertexData::color))));
 
 			GLCall(glEnableVertexAttribArray(SHADER_VERTEX_LOCATION));
 			GLCall(glEnableVertexAttribArray(SHADER_UV_LOCATION));
+			GLCall(glEnableVertexAttribArray(SHADER_TEXTURE_ID_LOCATION));
 			GLCall(glEnableVertexAttribArray(SHADER_COLOR_LOCATION));
 
 			GLCall(glBindBuffer(GL_ARRAY_BUFFER, 0));
@@ -36,7 +38,7 @@ namespace Rubeus
 			for(int i = 0; i < INDICES_SIZE; i += 6)
 			{
 				// Indices for the first triangle
-				indices[  i  ] = offset + 0;
+				indices[i] = offset + 0;
 				indices[i + 1] = offset + 1;
 				indices[i + 2] = offset + 2;
 
@@ -87,24 +89,77 @@ namespace Rubeus
 			const RML::Vector2D & size = renderable->getSize();
 			const RML::Vector4D & color = renderable->getColor();
 			const std::vector<RML::Vector2D> & uv = renderable->getUV();
+			const GLuint & textureID = renderable->getTextureID();
+
+			float tempTID = 0.0f;
+
+			if(textureID > 0.0f)
+			{
+				if(m_TextureSlots.empty()) // Checking if texture slots are not initialised
+				{
+					// Add the first texture ID
+					m_TextureSlots.push_back(textureID);
+
+					// Initialise the tempTID to be used while populating the buffers
+					tempTID = (float) m_TextureSlots.size();
+				}
+				else // if the texture slots have been initialised before
+				{
+					size_t i = 0;
+					int texNotFound = 1;
+
+					// Look in the texture slot values for the current texture ID required
+					for(; i < m_TextureSlots.size(); i++)
+					{
+						if(m_TextureSlots[i] == textureID) // If the texture slot matches the texture ID required
+						{
+							// Use it!
+							tempTID = (float) (i + 1);
+							texNotFound = 0;
+							break;
+						}
+					}
+
+					if(texNotFound == 1) // If the texture ID required was not found in the texture slots
+					{
+						if(m_TextureSlots.size() == MAX_ALLOWED_TEXTURES) // Also if the maximum slots have been reached, restart the sprite submission process
+						{
+							end();
+							flush();
+							begin();
+						}
+						// else no need to restart submission
+
+						// Insert the newer texture ID acquired
+						m_TextureSlots.push_back(textureID);
+
+						// Retain the value for buffer population
+						tempTID = (float) m_TextureSlots.size();
+					}
+				}
+			}
 
 			m_Buffer->vertex = *m_TransformationBack * position;
 			m_Buffer->uv = uv[0];
+			m_Buffer->texID = tempTID;
 			m_Buffer->color = color;
 			m_Buffer++;
 
 			m_Buffer->vertex = *m_TransformationBack * RML::Vector3D(position.x, position.y + size.y, position.z);
 			m_Buffer->uv = uv[1];
+			m_Buffer->texID = tempTID;
 			m_Buffer->color = color;
 			m_Buffer++;
 
 			m_Buffer->vertex = *m_TransformationBack * RML::Vector3D(position.x + size.x, position.y + size.y, position.z);
 			m_Buffer->uv = uv[2];
+			m_Buffer->texID = tempTID;
 			m_Buffer->color = color;
 			m_Buffer++;
 
 			m_Buffer->vertex = *m_TransformationBack * RML::Vector3D(position.x + size.x, position.y, position.z);
 			m_Buffer->uv = uv[3];
+			m_Buffer->texID = tempTID;
 			m_Buffer->color = color;
 			m_Buffer++;
 
@@ -113,12 +168,18 @@ namespace Rubeus
 
 		void RGuerrillaRendererComponent::end()
 		{
- 			glUnmapBuffer(GL_ARRAY_BUFFER);
+			glUnmapBuffer(GL_ARRAY_BUFFER);
 			glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
 		}
 
 		void RGuerrillaRendererComponent::flush()
 		{
+			for(size_t i = 0; i < m_TextureSlots.size(); ++i)
+			{
+				glActiveTexture(GL_TEXTURE0 + i);
+				glBindTexture(GL_TEXTURE_2D, m_TextureSlots[i]);
+			}
+
 			glBindVertexArray(m_VAO);
 			m_IBO->bindIndexBuffer();
 

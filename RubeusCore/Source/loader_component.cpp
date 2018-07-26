@@ -47,7 +47,7 @@ namespace Rubeus
 			ASSERT("Reading file... " + (std::string) filePath);
 
 			fread(data, 1, length, file);
-			
+
 			if(ferror(file))
 			{
 				ERRORLOG("Failed reading file");
@@ -67,7 +67,7 @@ namespace Rubeus
 		{
 			initImageLoader();
 
-			ASSERT("Loading image: " + std::string(path));
+			ASSERT(std::string("Loading image: ") + std::string(path));
 
 			DevILCall(ilLoadImage(path));
 			DevILCall(iluFlipImage());
@@ -89,7 +89,7 @@ namespace Rubeus
 					GraphicComponents::Image temp = loadImageFile(boost::any_cast<const char *>(msg->m_Data));
 					m_MessageSystem.addMessage(this, msg->m_Sender, get_loaded_image, temp);
 				}
-					break;
+				break;
 				default:
 					LOG("Loader component received a misdirected message");
 			}

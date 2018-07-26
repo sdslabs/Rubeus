@@ -3,6 +3,7 @@
 layout (location = 0) out vec4 color;
 
 uniform vec2 light_position;
+uniform sampler2D textures[32];
 
 in vec4 pos;
 
@@ -10,18 +11,26 @@ in DATA
 {
 	vec4 position;
 	vec2 uv;
+	float texID;
 	vec4 color;
 } fs_in;
 
-uniform sampler2D tex;
 
 void main()
 {
-	float intensity = 1.0;
-	float l = pow(length(pos.xy - light_position), 2);
+	float intensity = 1.0 / pow(length(pos.xy - light_position), 2);
+	
+	vec4 colorTex;
 
-	intensity = 1 / l;
+	if(fs_in.texID >= 1.0) 
+	{                            
+		int tid = int(fs_in.texID - 0.5);
+		colorTex = texture(textures[tid], fs_in.uv);
+	}
+	else
+	{
+		colorTex = fs_in.color;
+	}
 
-	color = fs_in.color * intensity;
-	color = texture(tex, fs_in.uv) * intensity;
+	color = colorTex * intensity;
 }

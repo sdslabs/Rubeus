@@ -2,8 +2,6 @@
 //
 #include "RubeusCore.h"
 
-#define MSG_SYSTEM 0
-
 int main()
 {
 	using namespace Rubeus;
@@ -14,7 +12,6 @@ int main()
 
 	using namespace RML;
 
-#if !MSG_SYSTEM
 	RWindowComponent * GameWindow = new RWindowComponent("Hello World",
 														 1280, 720,
 														 EWindowParameters::WINDOWED_MODE,
@@ -23,8 +20,8 @@ int main()
 	RAudioManager * audio_manager = new RAudioManager();
 	audio_manager->addMusicTrack(1);
 	audio_manager->addSoundTrack(1);
-	audio_manager->loadTrack(MUSIC_TRACK, TRACK_0, "Assets/Garage.wav", 20, true);
-	audio_manager->loadTrack(SOUND_TRACK, TRACK_0, "Assets/sound.wav", 20);
+	audio_manager->loadTrack(MUSIC_TRACK, TRACK_0, "Assets/Garage.wav", 10, true);
+	audio_manager->loadTrack(SOUND_TRACK, TRACK_0, "Assets/sound.wav", 10);
 	audio_manager->playTrack(MUSIC_TRACK, TRACK_0);
 	audio_manager->playTrack(SOUND_TRACK, TRACK_0);
 
@@ -34,20 +31,25 @@ int main()
 
 	RGroup * g = new RGroup(Matrix4::translation(Vector3D(0.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
 
-	g->add(new RSprite(3.0f, 3.0f, 3.0f, 3.0f, Vector4D(1.0f, 1.0f, 0.0f, 1.0f)));
-
-
-	layer0->addGroup(*g);
-
 	RTimer * timer = new RTimer(2);
 	timer->setFrameCounter();
 
-	glActiveTexture(GL_TEXTURE0);
-	RTexture texture("Assets/test8.png");
-	texture.bindTexture();
+	RTexture * texture = new RTexture("Assets/test8.png");
+	RTexture * texture2 = new RTexture("Assets/test9.png");
+
+	g->add(new RSprite(3.0f, 3.0f, 3.0f, 3.0f, texture));
+	g->add(new RSprite(6.0f, 3.0f, 4.0f, 4.0f, texture2));
+	g->add(new RSprite(6.0f, 6.0f, 3.0f, 3.0f, Vector4D(0.5f, 0.4f, 0.2f, 1.0f)));
+
+	layer0->addGroup(*g);
 
 	shader0->enableShader();
-	shader0->setUniform1i("tex", 0);
+	GLint textureIDs[32];
+	for(int i = 0; i < 32; i++)
+	{
+		textureIDs[i] = i;
+	}
+	shader0->setUniform1iv("textures", textureIDs, 32);
 
 	// See if maps are slowing things down. Also have a performance check
 	while(!GameWindow->closed())
@@ -65,42 +67,13 @@ int main()
 	}
 
 	delete timer;
+	delete texture;
+	delete texture2;
 	delete g;
 	delete layer0;
 	delete shader0;
 	delete audio_manager;
 	delete GameWindow;
 
-#else
-
-	RMessageSystem MessageSystem;
-	RWindowComponent * GameWindow = new RWindowComponent(
-		"Hello World",
-		1280, 720,
-		EWindowParameters::WINDOWED_MODE,
-		EWindowParameters::NON_RESIZABLE_WINDOW,
-		1
-	);
-
-	MessageSystem.m_MessageBus.addSystem(GameWindow);
-	MessageSystem.addMessage(GameWindow, GameWindow, change_window_title, "chal raha hain bro :*)");
-
-	RLoaderComponent * loader = new RLoaderComponent();
-	MessageSystem.m_MessageBus.addSystem(loader);
-
-	GameWindow->m_MessageSystem.addMessage(GameWindow, loader, EMessageCode::load_image, "Assets/test8.png");
-
-	while(!GameWindow->closed())
-	{
-		GameWindow->clearWindow();
-
-		MessageSystem.evaluateMessages();
-
-		GameWindow->updateWindow();
-	}
-
-	delete loader;
-	delete GameWindow;
-#endif
 	return 0;
 }

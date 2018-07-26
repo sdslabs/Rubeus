@@ -80,14 +80,26 @@ namespace Rubeus
 			~RShaderComponent();
 
 			/**
-			 * @fn		void RShader::setUniform1f(const GLchar* name, float value);
+			 * @fn		void RShader::setUniform1f(const GLchar * name, float value);
 			 *
 			 * @brief	Sets uniform float value required in the shader code
 			 *
 			 * @param	name 	The name.
 			 * @param	value	The value.
 			 */
-			void setUniform1f(const GLchar* name, float value);
+			void setUniform1f(const GLchar * name, float value);
+
+			/**
+			 * @fn		void setUniform1fv(const GLchar * name, float * values, int count)
+			 *
+			 * @brief	Sets the uniform float array required in this shader
+			 * @warning	Do enable the shader before setting GLSL uniforms
+			 *
+			 * @param	name		Name given to the uniform in this shader.
+			 * @param	values	Pointer to the first element of the float array to be passed in.
+			 * @param	count	Number of elements in the float array.
+			 */
+			void setUniform1fv(const GLchar * name, float * values, int count);
 
 			/**
 			 * @fn		void RShader::setUniform1i(const GLchar* name, int value);
@@ -98,6 +110,18 @@ namespace Rubeus
 			 * @param	value	The value.
 			 */
 			void setUniform1i(const GLchar* name, int value);
+
+			/**
+			 * @fn		void setUniform1iv(const GLchar * name, int * values, int count)
+			 *
+			 * @brief	Sets the uniform int array required in this shader
+			 * @warning	Enable the shader before setting GLSL uniforms. E.g. shader.enableShader()
+			 *
+			 * @param	name		Name given to the uniform in this shader.
+			 * @param	values	Pointer to the first element of the int array to be passed in.
+			 * @param	count	Number of elements in the int array.
+			 */
+			void setUniform1iv(const GLchar * name, int * values, int count);
 
 			/**
 			 * @fn		void RShader::setUniform2f(const GLchar* name, const RML::Vector2D & vector);

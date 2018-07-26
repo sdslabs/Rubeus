@@ -12,6 +12,7 @@
 #include <buffer_object.h>
 #include <index_buffer_object.h>
 #include <vertex_array_object.h>
+#include <texture_object.h>
 #include <shader_component.h>
 #include <renderer_component.h>
 
@@ -31,6 +32,9 @@ namespace Rubeus
 
 			/** @brief	UV coordinates for this vertex */
 			RML::Vector2D uv;
+
+			/** @brief	Texture ID alloted to this vertex */
+			float texID;
 
 			/** @brief	The color of this vertex */
 			RML::Vector4D color;
@@ -53,11 +57,15 @@ namespace Rubeus
 
 			/** @brief	The size of the sprite */
 			RML::Vector2D m_Size;
-			
+
 			/** @brief	The color of the sprite */
 			RML::Vector4D m_Color;
 
+			/** @brief	The UV/texture coordinates of the current texture being utilised */
 			std::vector<RML::Vector2D> m_UV;
+
+			/** @brief	The texture alloted to this object */
+			RTexture * m_Texture;
 
 			/**
 			 * @fn		RRenderableObject::RRenderableObject(RML::Vector3D position, RML::Vector2D size, RML::Vector4D color);
@@ -115,13 +123,22 @@ namespace Rubeus
 			inline const RML::Vector4D & getColor() const { return m_Color; }
 
 			/**
-			 * @fn		inline const std::vector<RML::Vector2D> & getUV() const 
+			 * @fn		inline const std::vector<RML::Vector2D> & getUV() const
 			 *
 			 * @brief	Returns the UV coords of the vertices.
 			 *
 			 * @return	Reference to a std::vector containing all UV Vector2Ds.
 			 */
 			inline const std::vector<RML::Vector2D> & getUV() const { return m_UV; }
+
+			/**
+			 * @fn		inline const GLuint getTextureID() const
+			 *
+			 * @brief	Returns the texture ID of the respective texture assigned.
+			 *
+			 * @return	The texture ID.
+			 */
+			inline const GLuint getTextureID() const { return (m_Texture == NULL) ? 0 : m_Texture->getID(); }
 
 		protected:
 			/**
