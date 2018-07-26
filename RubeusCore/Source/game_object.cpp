@@ -2,6 +2,7 @@
 
 namespace Rubeus
 {
+<<<<<<< HEAD
 	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics, Awerere::APhysicsObject * physicsObject)
 		:
 		m_Sprite(new GraphicComponents::RSprite(x, y, deltaX, deltaY, new GraphicComponents::RTexture(imageFilePath))),
@@ -38,10 +39,24 @@ namespace Rubeus
 	RGameObject::RGameObject()
 	{
 		m_IsGroup = true;
+=======
+	RGameObject::RGameObject(GraphicComponents::RSprite * sprite)
+		: m_Sprite(sprite)
+	{
+	}
+
+	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, const char * texturePath)
+	{
+	}
+
+	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, float r, float g, float b)
+	{
+>>>>>>> Add entity class
 	}
 
 	RGameObject::~RGameObject()
 	{
+<<<<<<< HEAD
 		if(m_IsGroup == false)
 		{
 			delete m_Sprite->m_Texture;
@@ -52,6 +67,9 @@ namespace Rubeus
 		{
 			delete m_PhysicsObject;
 		}
+=======
+		delete m_Sprite;
+>>>>>>> Add entity class
 	}
 
 	void RGameObject::tick()
