@@ -30,19 +30,19 @@ int main()
 	RStaticLayer * layer0 = new RStaticLayer(*shader0);
 
 	RGroup * g = new RGroup(Matrix4::translation(Vector3D(0.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
+	RGroup * g2 = new RGroup(Matrix4::translation(Vector3D(8.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
 
 	RTimer * timer = new RTimer(2);
 	timer->setFrameCounter();
 
 	RGameObject * object1 = new RGameObject(10.0f, 1.0f, 1.0f, 1.0f, "Assets/test8.png");
-	RGameObject * object2 = new RGameObject(8.0f, 1.0f, 1.0f, 1.0f, "Assets/test9.png");
-
-	RTexture texture = RTexture("Assets/test8.png");
-	RTexture texture2 = RTexture("Assets/test9.png");
+	RGameObject * object2 = new RGameObject(1.0f, 1.0f, 1.0f, 1.0f, "Assets/test9.png");
 
 	g->add(object1);
-	g->add(object2);
+	g->add(g2);
+	g2->add(object2);
 	layer0->addGroup(*g);
+	layer0->addGroup(*g2);
 
 	shader0->enableShader();
 	GLint textureIDs[32];
@@ -69,6 +69,7 @@ int main()
 
 	delete timer;
 	delete g;
+	delete g2;
 	delete object1;
 	delete object2;
 	delete layer0;

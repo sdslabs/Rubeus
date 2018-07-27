@@ -23,24 +23,34 @@ namespace Rubeus
 		{
 			renderer.push(m_TransformationMatrix);
 
-			for(const RRenderableObject * child : m_Renderables)
+			for(auto child : m_Children)
 			{
-				child->submit(renderer);
+				if(child->m_IsGroup == false)
+				{
+					child->m_Sprite->submit(renderer);
+				}
+				else
+				{
+					for(auto groupChild : (dynamic_cast<RGroup *>(child))->m_Children)
+					{
+						groupChild->m_Sprite->submit(renderer);
+					}
+				}
 			}
 
 			renderer.pop();
 		}
 
-		RGroup & RGroup::add(RRenderableObject * renderable)
+		RGroup & RGroup::add(RSprite * renderable)
 		{
-			m_Renderables.push_back(renderable);
+			m_Children.push_back(&RGameObject(*renderable));
 
 			return *this;
 		}
 
 		RGroup & RGroup::add(RGameObject * gameObject)
 		{
-			m_Renderables.push_back(gameObject->m_Sprite);
+			m_Children.push_back(gameObject);
 
 			return *this;
 		}
