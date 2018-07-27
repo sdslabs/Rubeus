@@ -2,24 +2,18 @@
 
 #include <sprite_object.h>
 #include <entity_object.h>
+#include <game_object.h>
 #include <rubeus_maths_library.h>
 
 namespace Rubeus
 {
-	namespace Dynamo
+	namespace Awerere
 	{
-		struct Hit
+		struct HitEvent
 		{
 			RML::Vector2D contactPoint;
 			RML::Vector2D hitNormal;
-			REntity & striker;
-			REntity & taker;
-		};
-
-		struct Collider
-		{
-			void isColliding(GraphicComponents::RSprite & gameObject);
-			void update();
+			Rubeus::RGameObject *
 		};
 	}
 }
