@@ -17,10 +17,6 @@ namespace Rubeus
 
 		RGroup::~RGroup()
 		{
-			for(const RRenderableObject * item : m_Renderables)
-			{
-				delete item;
-			}
 		}
 
 		void RGroup::submit(RRendererComponent & renderer) const
@@ -38,6 +34,13 @@ namespace Rubeus
 		RGroup & RGroup::add(RRenderableObject * renderable)
 		{
 			m_Renderables.push_back(renderable);
+
+			return *this;
+		}
+
+		RGroup & RGroup::add(RGameObject * gameObject)
+		{
+			m_Renderables.push_back(gameObject->m_Sprite);
 
 			return *this;
 		}

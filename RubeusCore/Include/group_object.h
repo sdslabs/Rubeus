@@ -7,9 +7,12 @@
 #pragma once
 
 #include <vector>
-#include <renderable_object.h>
-#include <guerrilla_renderer_component.h>
+
 #include <rubeus_maths_library.h>
+
+#include <renderable_object.h>
+#include <game_object.h>
+#include <guerrilla_renderer_component.h>
 
 namespace Rubeus
 {
@@ -58,7 +61,7 @@ namespace Rubeus
 			/**
 			 * @fn		Group & add(RRenderableObject * renderable)
 			 *
-			 * @brief	Adds the renderable object as the children of this object
+			 * @brief	Adds a renderable object as the children of this object
 			 * @warning	Do not manually delete passed in pointers. This object intends to take ownership of the passed in renderable object.
 			 *
 			 * @param	renderable	The renderable object.
@@ -66,6 +69,18 @@ namespace Rubeus
 			 * @return	Reference to this group object. Allows chaining add() calls. E.g. group.add(r1).add(r2);
 			 */
 			RGroup & add(RRenderableObject * renderable);
+
+			/**
+			 * @fn		Group & add(RGameObject * gameObject)
+			 *
+			 * @brief	Adds a game object as the children of this object
+			 * @warning	Do not manually delete passed in pointers. This object intends to take ownership of the passed in renderable object.
+			 *
+			 * @param	gameObject	The game object to be added to this group.
+			 *
+			 * @return	Reference to this group object. Allows chaining add() calls. E.g. group.add(r1).add(r2);
+			 */
+			RGroup & add(RGameObject * gameObject);
 		};
 	}
 }

@@ -1,30 +1,28 @@
 #pragma once
 
+#include <rubeus_maths_library.h>
+
 #include <entity_object.h>
 #include <sprite_object.h>
-#include <rubeus_maths_library.h>
+#include <texture_object.h>
 
 namespace Rubeus
 {
 	class RGameObject : public REntity
 	{
-	private:
-		GraphicComponents::RSprite * m_Sprite;
-		// TODO: Add here--> PhysicsComponents::RCollider * m_Collider;
-		RML::Vector3D m_Position;
-		RML::Vector2D m_Size;
-		RML::Vector2D m_Scale;
-
 	public:
-		RGameObject(GraphicComponents::RSprite * sprite);
-		RGameObject(float x, float y, float deltaX, float deltaY, const char * texturePath);
+		GraphicComponents::RSprite * m_Sprite;
+		// TODO: Add Collider
+		bool m_ThisTicks;
+		bool m_UsesTexture;
+
+		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath);
 		RGameObject(float x, float y, float deltaX, float deltaY, float r, float g, float b);
-		virtual ~RGameObject();
+		~RGameObject();
 
-		void tick();
+		void tick() override;
 
-		inline const GraphicComponents::RSprite * getSprite() { return m_Sprite; }
-
+		inline void addToTickQueue() { m_ThisTicks = true; }
 	protected:
 	};
 }

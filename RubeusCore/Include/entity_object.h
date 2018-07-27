@@ -11,7 +11,7 @@ namespace Rubeus
 		virtual void tick();
 
 		REntity();
-		~REntity();
+		virtual ~REntity();
 
 	protected:
 	};

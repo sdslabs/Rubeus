@@ -34,13 +34,14 @@ int main()
 	RTimer * timer = new RTimer(2);
 	timer->setFrameCounter();
 
-	RTexture * texture = new RTexture("Assets/test8.png");
-	RTexture * texture2 = new RTexture("Assets/test9.png");
+	RGameObject * object1 = new RGameObject(10.0f, 1.0f, 1.0f, 1.0f, "Assets/test8.png");
+	RGameObject * object2 = new RGameObject(8.0f, 1.0f, 1.0f, 1.0f, "Assets/test9.png");
 
-	g->add(new RSprite(3.0f, 3.0f, 3.0f, 3.0f, texture));
-	g->add(new RSprite(6.0f, 3.0f, 4.0f, 4.0f, texture2));
-	g->add(new RSprite(6.0f, 6.0f, 3.0f, 3.0f, Vector4D(0.5f, 0.4f, 0.2f, 1.0f)));
+	RTexture texture = RTexture("Assets/test8.png");
+	RTexture texture2 = RTexture("Assets/test9.png");
 
+	g->add(object1);
+	g->add(object2);
 	layer0->addGroup(*g);
 
 	shader0->enableShader();
@@ -67,9 +68,9 @@ int main()
 	}
 
 	delete timer;
-	delete texture;
-	delete texture2;
 	delete g;
+	delete object1;
+	delete object2;
 	delete layer0;
 	delete shader0;
 	delete audio_manager;

@@ -202,7 +202,7 @@ namespace RML
 
 	std::ostream& operator<<(std::ostream& stream, const Vector3D& vector)
 	{
-		stream << "Vector3D: (" << vector.x << ", " << vector.y << ", "<< vector.z << ")";
+		stream << "Vector3D: (" << vector.x << ", " << vector.y << ", " << vector.z << ")";
 		return stream;
 	}
 
@@ -237,6 +237,16 @@ namespace RML
 	float Vector4D::getLength(Vector4D & vector) const
 	{
 		return sqrt((vector.x * vector.x) + (vector.y * vector.y) + (vector.z * vector.z) + (vector.w * vector.w));
+	}
+
+	Vector4D & Vector4D::toUnitVector()
+	{
+		float temp = getLength(*this);
+		this->x /= temp;
+		this->y /= temp;
+		this->z /= temp;
+
+		return *this;
 	}
 
 	Vector4D Vector4D::normaliseToRGBA()
@@ -411,7 +421,7 @@ namespace RML
 	{
 		return multiply(other);
 	}
-		
+
 	std::ostream& operator<<(std::ostream & stream, const Matrix4 & matrix)
 	{
 		stream << "C3: " << matrix.columns[3] << std::endl;
@@ -437,10 +447,10 @@ namespace RML
 		Matrix4 result(1.0f);
 
 		result.elements[0 + 0 * 4] = 2.0f / (right - left);
-		
+
 		result.elements[1 + 1 * 4] = 2.0f / (top - bottom);
 
-		result.elements[2 + 2 * 4] = 2.0f / (near - far); 
+		result.elements[2 + 2 * 4] = 2.0f / (near - far);
 
 		result.elements[0 + 3 * 4] = (left + right) / (left - right);
 		result.elements[1 + 3 * 4] = (bottom + top) / (bottom - top);

@@ -147,7 +147,7 @@ namespace RML
 			*
 			* @param	left	The left operand.
 			* @param	right	The right operand.
-			* 					
+			*
 			* @return	The result of the operation.
 			*/
 		friend Vector2D& operator-(Vector2D left, const Vector2D &right);
@@ -159,7 +159,7 @@ namespace RML
 			*
 			* @param	left	The left operand.
 			* @param	right	The right operand.
-			* 					
+			*
 			* @return	The result of the operation.
 			*/
 		friend Vector2D& operator*(Vector2D left, const Vector2D &right);
@@ -340,11 +340,11 @@ namespace RML
 			*
 			* @param	stream	Reference to the stream to be put to.
 			* @param	vector	Vector3D to be put to stream object.
-			*			
+			*
 			* @return	Reference to the stream been put to.
 			*/
 		friend std::ostream& operator<<(std::ostream& stream, const Vector3D& vector);
-			
+
 		/**
 			* @fn	Vector3D& operator+(Vector3D left, const Vector3D &right);
 			*
@@ -356,7 +356,7 @@ namespace RML
 			* @return	The result of the operation.
 			*/
 		friend Vector3D& operator+(Vector3D left, const Vector3D &right);
-			
+
 		/**
 			* @fn	Vector3D& operator-(Vector3D left, const Vector3D &right);
 			*
@@ -368,7 +368,7 @@ namespace RML
 			* @return	The result of the operation.
 			*/
 		friend Vector3D& operator-(Vector3D left, const Vector3D &right);
-			
+
 		/**
 			* @fn	Vector3D& operator*(Vector3D left, const Vector3D &right);
 			*
@@ -380,7 +380,7 @@ namespace RML
 			* @return	The result of the operation.
 			*/
 		friend Vector3D& operator*(Vector3D left, const Vector3D &right);
-			
+
 		/**
 			* @fn	Vector3D& operator/(Vector3D left, const Vector3D &right);
 			*
@@ -510,6 +510,16 @@ namespace RML
 		float getLength(Vector4D& vector) const;
 
 		/**
+			* @fn		Vector4D & toUnitVector()
+			*
+			* @brief	Returns this vector as a modified unit vector
+			* @warning	Works on this object directly
+			*
+			* @return	Unit vector pointing in the direction of this vector.
+			*/
+		Vector4D & toUnitVector();
+
+		/**
 		 * @fn	void normaliseToRGBA();
 		 *
 		 * @brief	Normalise color values to OpenGL supporting RGBA. Eg. (128, 128, 128, 255) => (0.5f,
@@ -571,7 +581,7 @@ namespace RML
 			*
 			* @param	stream	Reference to the stream to be put to.
 			* @param	vector	Vector4D to be put to stream object.
-			*			
+			*
 			* @return	Reference to the stream been put to.
 			*/
 		friend std::ostream& operator<<(std::ostream& stream, const Vector4D& vector);

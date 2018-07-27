@@ -42,3 +42,4 @@
 #include <message_system.h>
 #include <texture_object.h>
 #include <audio_manager_component.h>
+#include <game_object.h>

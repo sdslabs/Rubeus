@@ -20,6 +20,7 @@ namespace Rubeus
 		class RSprite : public RRenderableObject
 		{
 		private:
+
 		public:
 			/**
 			 * @fn		RSprite()
