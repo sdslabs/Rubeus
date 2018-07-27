@@ -68,7 +68,11 @@ namespace Rubeus
 			 *
 			 * @return	Reference to this group object. Allows chaining add() calls. E.g. group.add(r1).add(r2);
 			 */
+<<<<<<< HEAD
 			RGroup & add(RSprite * renderable);
+=======
+			RGroup & add(RRenderableObject * renderable);
+>>>>>>> Shift texture and sprite ownership to game object
 
 			/**
 			 * @fn		Group & add(RGameObject * gameObject)

@@ -47,5 +47,12 @@ namespace Rubeus
 
 			return *this;
 		}
+
+		RGroup & RGroup::add(RGameObject * gameObject)
+		{
+			m_Renderables.push_back(gameObject->m_Sprite);
+
+			return *this;
+		}
 	}
 }

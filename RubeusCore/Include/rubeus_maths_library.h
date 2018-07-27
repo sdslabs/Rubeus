@@ -399,7 +399,10 @@ namespace RML
 			*/
 		friend Vector3D& operator*(Vector3D left, const Vector3D &right);
 
+<<<<<<< HEAD
 		friend Vector3D& operator*(const Vector3D vector, const float &other);
+=======
+>>>>>>> Shift texture and sprite ownership to game object
 		/**
 			* @fn	Vector3D& operator/(Vector3D left, const Vector3D &right);
 			*

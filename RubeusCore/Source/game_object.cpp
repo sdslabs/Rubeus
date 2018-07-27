@@ -3,6 +3,7 @@
 namespace Rubeus
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics, Awerere::APhysicsObject * physicsObject)
 		:
 		m_Sprite(new GraphicComponents::RSprite(x, y, deltaX, deltaY, new GraphicComponents::RTexture(imageFilePath))),
@@ -46,16 +47,26 @@ namespace Rubeus
 	}
 
 	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, const char * texturePath)
+=======
+	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath)
+		: m_Sprite(new GraphicComponents::RSprite(x, y, deltaX, deltaY, new GraphicComponents::RTexture(imageFilePath))),
+		m_ThisTicks(false),
+		m_UsesTexture(true)
+>>>>>>> Shift texture and sprite ownership to game object
 	{
 	}
 
 	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, float r, float g, float b)
+		: m_Sprite(new GraphicComponents::RSprite(x, y, deltaX, deltaY, RML::Vector4D(r, g, b, 1.0f))),
+		m_ThisTicks(false),
+		m_UsesTexture(false)
 	{
 >>>>>>> Add entity class
 	}
 
 	RGameObject::~RGameObject()
 	{
+<<<<<<< HEAD
 <<<<<<< HEAD
 		if(m_IsGroup == false)
 		{
@@ -68,6 +79,9 @@ namespace Rubeus
 			delete m_PhysicsObject;
 		}
 =======
+=======
+		delete m_Sprite->m_Texture;
+>>>>>>> Shift texture and sprite ownership to game object
 		delete m_Sprite;
 >>>>>>> Add entity class
 	}

@@ -343,7 +343,10 @@ namespace RML
 		this->x /= temp;
 		this->y /= temp;
 		this->z /= temp;
+<<<<<<< HEAD
 		this->w /= temp;
+=======
+>>>>>>> Shift texture and sprite ownership to game object
 
 		return *this;
 	}

@@ -47,6 +47,7 @@ int main()
 	RTimer * timer = new RTimer(2);
 	timer->setFrameCounter();
 
+<<<<<<< HEAD
 	APhysicsMaterial mat;
 
 	RGameObject * object1 = new RGameObject(2, 2,
@@ -61,6 +62,16 @@ int main()
 
 	g->add(object1);
 	g->add(g2);
+=======
+	RGameObject * object1 = new RGameObject(10.0f, 1.0f, 1.0f, 1.0f, "Assets/test8.png");
+	RGameObject * object2 = new RGameObject(8.0f, 1.0f, 1.0f, 1.0f, "Assets/test9.png");
+
+	RTexture texture = RTexture("Assets/test8.png");
+	RTexture texture2 = RTexture("Assets/test9.png");
+
+	g->add(object1);
+	g->add(object2);
+>>>>>>> Shift texture and sprite ownership to game object
 	layer0->addGroup(*g);
 	layer0->addGroup(*g2);
 
@@ -94,8 +105,13 @@ int main()
 
 	delete timer;
 	delete g;
+<<<<<<< HEAD
 	delete g2;
 	delete object1;
+=======
+	delete object1;
+	delete object2;
+>>>>>>> Shift texture and sprite ownership to game object
 	delete layer0;
 	delete shader0;
 	delete audio_manager;
