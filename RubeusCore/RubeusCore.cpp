@@ -42,7 +42,11 @@ int main()
 	RStaticLayer * layer0 = new RStaticLayer(*shader0);
 
 	RGroup * g = new RGroup(Matrix4::translation(Vector3D(0.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
+<<<<<<< HEAD
 	RGroup * g2 = new RGroup(Matrix4::translation(Vector3D(0.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
+=======
+	RGroup * g2 = new RGroup(Matrix4::translation(Vector3D(8.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
+>>>>>>> Modify workflow to accept only RGameObject objects
 
 	RTimer * timer = new RTimer(2);
 	timer->setFrameCounter();
@@ -64,14 +68,16 @@ int main()
 	g->add(g2);
 =======
 	RGameObject * object1 = new RGameObject(10.0f, 1.0f, 1.0f, 1.0f, "Assets/test8.png");
-	RGameObject * object2 = new RGameObject(8.0f, 1.0f, 1.0f, 1.0f, "Assets/test9.png");
-
-	RTexture texture = RTexture("Assets/test8.png");
-	RTexture texture2 = RTexture("Assets/test9.png");
+	RGameObject * object2 = new RGameObject(1.0f, 1.0f, 1.0f, 1.0f, "Assets/test9.png");
 
 	g->add(object1);
+<<<<<<< HEAD
 	g->add(object2);
 >>>>>>> Shift texture and sprite ownership to game object
+=======
+	g->add(g2);
+	g2->add(object2);
+>>>>>>> Modify workflow to accept only RGameObject objects
 	layer0->addGroup(*g);
 	layer0->addGroup(*g2);
 
@@ -106,9 +112,13 @@ int main()
 	delete timer;
 	delete g;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	delete g2;
 	delete object1;
 =======
+=======
+	delete g2;
+>>>>>>> Modify workflow to accept only RGameObject objects
 	delete object1;
 	delete object2;
 >>>>>>> Shift texture and sprite ownership to game object

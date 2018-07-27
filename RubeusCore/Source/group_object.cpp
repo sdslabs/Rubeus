@@ -41,16 +41,22 @@ namespace Rubeus
 			renderer.pop();
 		}
 
+<<<<<<< HEAD
 		RGroup & RGroup::add(RGameObject * gameObject)
 		{
 			m_Children.push_back(gameObject);
+=======
+		RGroup & RGroup::add(RSprite * renderable)
+		{
+			m_Children.push_back(&RGameObject(*renderable));
+>>>>>>> Modify workflow to accept only RGameObject objects
 
 			return *this;
 		}
 
 		RGroup & RGroup::add(RGameObject * gameObject)
 		{
-			m_Renderables.push_back(gameObject->m_Sprite);
+			m_Children.push_back(gameObject);
 
 			return *this;
 		}
