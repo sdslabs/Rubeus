@@ -68,7 +68,7 @@ int main()
 	g->add(g2);
 =======
 	RGameObject * object1 = new RGameObject(10.0f, 1.0f, 1.0f, 1.0f, "Assets/test8.png");
-	RGameObject * object2 = new RGameObject(1.0f, 1.0f, 1.0f, 1.0f, "Assets/test9.png");
+	RGameObject * object2 = new RGameObject(1.0f, 2.0f, 1.0f, 1.0f, "Assets/test9.png");
 
 	g->add(object1);
 <<<<<<< HEAD
