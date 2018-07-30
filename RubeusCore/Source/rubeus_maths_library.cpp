@@ -233,6 +233,7 @@ namespace RML
 			return y;
 	}
 
+<<<<<<< HEAD
 	Vector3D & Vector3D::toUnitVector()
 	{
 		float temp = getLength(*this);
@@ -252,6 +253,8 @@ namespace RML
 		return *this;
 	}
 
+=======
+>>>>>>> Add sphere collider
 	bool Vector3D::operator==(const Vector3D & other)
 	{
 		return ((x == other.x) && (y == other.y) && (z == other.z));

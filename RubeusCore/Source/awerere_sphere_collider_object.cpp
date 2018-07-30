@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <awerere_sphere_collider_object.h>
 #include <awerere_plane_collider_object.h>
 #include <awerere_box_collider_object.h>
@@ -30,27 +31,32 @@ namespace Rubeus
 		}
 =======
 #pragma once
+=======
+#include <awerere_sphere_collider_object.h>
+>>>>>>> Add sphere collider
 
-#include <rubeus_maths_library.h>
-
-namespace Rubues
+namespace Rubeus
 {
 	namespace Awerere
 	{
-		class ASphereCollider
+		ASphereCollider::ASphereCollider(const RML::Vector3D & center, const float radius)
+			: m_Center(center), m_Radius(radius)
 		{
-		private:
-			const RML::Vector3D m_Center;
-			const float m_Radius;
+		}
 
-		public:
-			ASphereCollider(const RML::Vector3D & center, const float radius);
+		ACollideData ASphereCollider::tryIntersect(ASphereCollider & other)
+		{
+			float extTouchDistance = m_Radius + other.m_Radius;
+			float centerDistance = (other.getCenter() - m_Center).getLength();
 
-			void IntersectBoundingSphere(const ASphereCollider & other);
-
+<<<<<<< HEAD
 			inline const RML::Vector3D & getCenter() { return m_Center; }
 			inline const float & getRadius() { return m_Radius; }
 		};
 >>>>>>> Add intersect data structure
+=======
+			return ACollideData(centerDistance < extTouchDistance, centerDistance - extTouchDistance);
+		}
+>>>>>>> Add sphere collider
 	}
 }

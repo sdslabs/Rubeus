@@ -43,14 +43,19 @@ int main()
 
 	RGroup * g = new RGroup(Matrix4::translation(Vector3D(0.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
 <<<<<<< HEAD
+<<<<<<< HEAD
 	RGroup * g2 = new RGroup(Matrix4::translation(Vector3D(0.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
 =======
 	RGroup * g2 = new RGroup(Matrix4::translation(Vector3D(8.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
 >>>>>>> Modify workflow to accept only RGameObject objects
+=======
+	RGroup * g2 = new RGroup(Matrix4::translation(Vector3D(0.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
+>>>>>>> Add sphere collider
 
 	RTimer * timer = new RTimer(2);
 	timer->setFrameCounter();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 	APhysicsMaterial mat;
 
@@ -69,6 +74,10 @@ int main()
 =======
 	RGameObject * object1 = new RGameObject(10.0f, 1.0f, 1.0f, 1.0f, "Assets/test8.png");
 	RGameObject * object2 = new RGameObject(1.0f, 2.0f, 1.0f, 1.0f, "Assets/test9.png");
+=======
+	RGameObject * object1 = new RGameObject(1.0f, 1.0f, 1.0f, 1.0f, "Assets/test8.png");
+	RGameObject * object2 = new RGameObject(1.5f, 1.5f, 1.0f, 1.0f, "Assets/test9.png");
+>>>>>>> Add sphere collider
 
 	g->add(object1);
 <<<<<<< HEAD
@@ -89,11 +98,19 @@ int main()
 	}
 	shader0->setUniform1iv("textures", textureIDs, 32);
 
+<<<<<<< HEAD
 	ABoxCollider box(Vector3D(3, 3, 0), Vector3D(5, 5, 0));
 	ASphereCollider sphere(Vector3D(5.5, 5.5, 0), 1);
 
 	LOG(box.tryIntersect(sphere).getGap());
 
+=======
+	ABoxCollider testBox1(Vector3D(1, 1, 1), Vector3D(2, 2, 1));
+	ABoxCollider testBox2(Vector3D(1.5, 1.5, 1), Vector3D(3, 3, 1));
+
+	//LOG("Boxes: " + std::to_string(testBox1.tryIntersect(testBox2).getGap()));
+	LOG(testBox1.tryIntersect(testBox2).getGap());
+>>>>>>> Add sphere collider
 	// See if maps are slowing things down. Also have a performance check
 	while(!GameWindow->closed())
 	{

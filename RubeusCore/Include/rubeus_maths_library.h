@@ -347,10 +347,13 @@ namespace RML
 
 		float maxXYComponent();
 
+<<<<<<< HEAD
 		Vector3D & toUnitVector();
 
 		Vector3D & abs();
 
+=======
+>>>>>>> Add sphere collider
 		/**
 			* @fn	std::ostream& operator<<(std::ostream& stream, const Vector3D& vector);
 			*
