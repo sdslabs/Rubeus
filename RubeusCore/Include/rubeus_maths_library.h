@@ -323,12 +323,19 @@ namespace RML
 			*/
 		Vector3D& multiply(const Vector3D &other);
 
+<<<<<<< HEAD
 		float multiplyDot(const Vector3D &other);
 
 		Vector3D& multiplyCross(const Vector3D &other);
 
 		Vector3D& multiplyFloat(const float &other);
 
+=======
+		Vector3D& multiplyDot(const Vector3D &other);
+
+		Vector3D& multiplyCross(const Vector3D &other);
+
+>>>>>>> Add plane collider with sphere interactions
 		/**
 			* @fn	Vector3D& divide(const Vector3D &other);
 			*

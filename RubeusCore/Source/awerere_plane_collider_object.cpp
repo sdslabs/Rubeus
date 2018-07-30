@@ -1,22 +1,32 @@
 #include <awerere_plane_collider_object.h>
 
 #include <awerere_sphere_collider_object.h>
+<<<<<<< HEAD
 #include <awerere_box_collider_object.h>
+=======
+>>>>>>> Add plane collider with sphere interactions
 
 namespace Rubeus
 {
 	namespace Awerere
 	{
+<<<<<<< HEAD
 		APlaneCollider::APlaneCollider(const RML::Vector3D & normal, const RML::Vector3D & emergencePoint)
 			: ACollider(emergencePoint, RML::Vector2D()), m_Normal(normal), m_EmergencePoint(emergencePoint)
 		{
 			m_Type = EColliderType::PLANE;
+=======
+		APlaneCollider::APlaneCollider(const RML::Vector3D normal, const RML::Vector3D emergencePoint)
+			: m_Normal(normal), m_EmergencePoint(emergencePoint)
+		{
+>>>>>>> Add plane collider with sphere interactions
 		}
 
 		APlaneCollider::~APlaneCollider()
 		{
 		}
 
+<<<<<<< HEAD
 		ACollideData APlaneCollider::tryIntersect(APlaneCollider & plane)
 		{
 			RML::Vector3D pdt = m_Normal.multiplyCross(plane.m_Normal);
@@ -47,6 +57,14 @@ namespace Rubeus
 				!ans,
 				ans == false ? -1 : +1
 			);
+=======
+		ACollideData APlaneCollider::tryIntersect(ASphereCollider & sphere)
+		{
+			RML::Vector3D l = (sphere.getCenter() - m_EmergencePoint).multiplyDot(normalised(m_Normal));
+			float gap = l.getLength() - sphere.getRadius();
+
+			return ACollideData(gap < 0, gap);
+>>>>>>> Add plane collider with sphere interactions
 		}
 
 		RML::Vector3D APlaneCollider::normalised(const RML::Vector3D & vector) const

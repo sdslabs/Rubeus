@@ -166,6 +166,7 @@ namespace RML
 		return *this;
 	}
 
+<<<<<<< HEAD
 	float Vector3D::multiplyDot(const Vector3D & other)
 	{
 		x = this->x * other.x;
@@ -173,17 +174,31 @@ namespace RML
 		z = this->z * other.z;
 
 		return x + y + z;
+=======
+	Vector3D & Vector3D::multiplyDot(const Vector3D & other)
+	{
+		x *= other.x;
+		y *= other.y;
+		z *= other.z;
+
+		return *this;
+>>>>>>> Add plane collider with sphere interactions
 	}
 
 	Vector3D & Vector3D::multiplyCross(const Vector3D & other)
 	{
+<<<<<<< HEAD
 		x = y * other.z - other.y * z;
+=======
+		x = y * other.y - other.y * z;
+>>>>>>> Add plane collider with sphere interactions
 		y = other.x * z - x * other.z;
 		z = x * other.y - other.x * y;
 
 		return *this;
 	}
 
+<<<<<<< HEAD
 	Vector3D & Vector3D::multiplyFloat(const float & other)
 	{
 		x *= other;
@@ -193,6 +208,8 @@ namespace RML
 		return *this;
 	}
 
+=======
+>>>>>>> Add plane collider with sphere interactions
 	Vector3D & Vector3D::divide(const Vector3D & other)
 	{
 		x /= other.x;
