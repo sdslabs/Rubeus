@@ -134,6 +134,11 @@ namespace RML
 		return sqrt((vector.x * vector.x) + (vector.y * vector.y) + (vector.z * vector.z));
 	}
 
+	float Vector3D::getLength() const
+	{
+		return sqrt((x * x) + (y * y) + (z * z));
+	}
+
 	Vector3D & Vector3D::add(const Vector3D & other)
 	{
 		x += other.x;
@@ -168,6 +173,37 @@ namespace RML
 		z /= other.z;
 
 		return *this;
+	}
+
+	Vector3D Vector3D::maxVector(const Vector3D & other)
+	{
+		return Vector3D(
+			other.x > this->x ? other.x : this->x,
+			other.y > this->y ? other.y : this->y,
+			other.z > this->z ? other.z : this->z
+		);
+	}
+
+	float Vector3D::maxComponent()
+	{
+		if(x > y)
+			if(x > z)
+				return x;
+			else
+				return z;
+		else
+			if(y > z)
+				return y;
+			else
+				return z;
+	}
+
+	float Vector3D::maxXYComponent()
+	{
+		if(x > y)
+			return x;
+		else
+			return y;
 	}
 
 	bool Vector3D::operator==(const Vector3D & other)

@@ -288,6 +288,8 @@ namespace RML
 			*/
 		float getLength(Vector3D& vector) const;
 
+		float getLength() const;
+
 		/**
 			* @fn	Vector3D& add(const Vector3D &other);
 			*
@@ -332,6 +334,12 @@ namespace RML
 			* @return	A reference to a Vector3D.
 			*/
 		Vector3D& divide(const Vector3D &other);
+
+		Vector3D maxVector(const Vector3D &other);
+
+		float maxComponent();
+
+		float maxXYComponent();
 
 		/**
 			* @fn	std::ostream& operator<<(std::ostream& stream, const Vector3D& vector);

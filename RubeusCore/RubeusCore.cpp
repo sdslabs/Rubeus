@@ -12,6 +12,8 @@ int main()
 
 	using namespace RML;
 
+	using namespace Awerere;
+
 	RWindowComponent * GameWindow = new RWindowComponent("Hello World",
 														 1280, 720,
 														 EWindowParameters::WINDOWED_MODE,
@@ -30,13 +32,13 @@ int main()
 	RStaticLayer * layer0 = new RStaticLayer(*shader0);
 
 	RGroup * g = new RGroup(Matrix4::translation(Vector3D(0.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
-	RGroup * g2 = new RGroup(Matrix4::translation(Vector3D(8.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
+	RGroup * g2 = new RGroup(Matrix4::translation(Vector3D(0.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
 
 	RTimer * timer = new RTimer(2);
 	timer->setFrameCounter();
 
-	RGameObject * object1 = new RGameObject(10.0f, 1.0f, 1.0f, 1.0f, "Assets/test8.png");
-	RGameObject * object2 = new RGameObject(1.0f, 2.0f, 1.0f, 1.0f, "Assets/test9.png");
+	RGameObject * object1 = new RGameObject(1.0f, 1.0f, 1.0f, 1.0f, "Assets/test8.png");
+	RGameObject * object2 = new RGameObject(1.5f, 1.5f, 1.0f, 1.0f, "Assets/test9.png");
 
 	g->add(object1);
 	g->add(g2);
@@ -52,6 +54,11 @@ int main()
 	}
 	shader0->setUniform1iv("textures", textureIDs, 32);
 
+	ABoxCollider testBox1(Vector3D(1, 1, 1), Vector3D(2, 2, 1));
+	ABoxCollider testBox2(Vector3D(1.5, 1.5, 1), Vector3D(3, 3, 1));
+
+	//LOG("Boxes: " + std::to_string(testBox1.tryIntersect(testBox2).getGap()));
+	LOG(testBox1.tryIntersect(testBox2).getGap());
 	// See if maps are slowing things down. Also have a performance check
 	while(!GameWindow->closed())
 	{
