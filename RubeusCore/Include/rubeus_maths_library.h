@@ -323,6 +323,10 @@ namespace RML
 			*/
 		Vector3D& multiply(const Vector3D &other);
 
+		Vector3D& multiplyDot(const Vector3D &other);
+
+		Vector3D& multiplyCross(const Vector3D &other);
+
 		/**
 			* @fn	Vector3D& divide(const Vector3D &other);
 			*

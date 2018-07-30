@@ -166,6 +166,24 @@ namespace RML
 		return *this;
 	}
 
+	Vector3D & Vector3D::multiplyDot(const Vector3D & other)
+	{
+		x *= other.x;
+		y *= other.y;
+		z *= other.z;
+
+		return *this;
+	}
+
+	Vector3D & Vector3D::multiplyCross(const Vector3D & other)
+	{
+		x = y * other.y - other.y * z;
+		y = other.x * z - x * other.z;
+		z = x * other.y - other.x * y;
+
+		return *this;
+	}
+
 	Vector3D & Vector3D::divide(const Vector3D & other)
 	{
 		x /= other.x;
