@@ -48,9 +48,16 @@ namespace Rubeus
 
 			ACollideData tryIntersect(const ABoxCollider & other);
 
+<<<<<<< HEAD
 			inline const RML::Vector3D & getMinExtent() const { return m_MinExtent; }
 			inline const RML::Vector3D & getMaxExtent() const { return m_MaxExtent; }
 >>>>>>> Add sphere collider
+=======
+			inline const RML::Vector3D getLowerLeftBound() const { return m_MinExtent; }
+			inline const RML::Vector3D getUpperRightBound() const { return m_MaxExtent; }
+			inline RML::Vector3D getUpperLeftBound() const { return m_MaxExtent + RML::Vector3D(0, m_MaxExtent.y - m_MinExtent.y, 0); }
+			inline RML::Vector3D getLowerRightBound() const { return m_MaxExtent + RML::Vector3D(m_MaxExtent.x - m_MinExtent.x, 0, 0); }
+>>>>>>> Add plane-box interaction
 		};
 	}
 }

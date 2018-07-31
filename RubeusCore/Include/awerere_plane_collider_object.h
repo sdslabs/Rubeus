@@ -1,12 +1,17 @@
 #pragma once
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <algorithm>
 
 #include <rubeus_maths_library.h>
 #include <awerere_collide_data_object.h>
 #include <awerere_collider_object.h>
 =======
+=======
+#include <algorithm>
+
+>>>>>>> Add plane-box interaction
 #include <rubeus_maths_library.h>
 #include <awerere_collide_data_object.h>
 >>>>>>> Add plane collider with sphere interactions
@@ -16,6 +21,7 @@ namespace Rubeus
 	namespace Awerere
 	{
 		class ASphereCollider;
+<<<<<<< HEAD
 <<<<<<< HEAD
 		class ABoxCollider;
 
@@ -38,6 +44,10 @@ namespace Rubeus
 			inline RML::Vector3D getNormal() const { return m_Normal; }
 			inline RML::Vector3D getEmergencePoint() const { return m_EmergencePoint; }
 =======
+=======
+		class ABoxCollider;
+
+>>>>>>> Add plane-box interaction
 		class APlaneCollider
 		{
 		private:
@@ -49,6 +59,7 @@ namespace Rubeus
 			~APlaneCollider();
 
 			ACollideData tryIntersect(ASphereCollider & sphere);
+			ACollideData tryIntersect(ABoxCollider & box);
 
 			RML::Vector3D normalised(const RML::Vector3D & vector) const;
 

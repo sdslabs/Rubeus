@@ -2,9 +2,13 @@
 
 #include <awerere_sphere_collider_object.h>
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <awerere_box_collider_object.h>
 =======
 >>>>>>> Add plane collider with sphere interactions
+=======
+#include <awerere_box_collider_object.h>
+>>>>>>> Add plane-box interaction
 
 namespace Rubeus
 {
@@ -69,6 +73,20 @@ namespace Rubeus
 =======
 			return ACollideData(gap < sphere.getRadius(), gap - sphere.getRadius());
 >>>>>>> Add sphere-plane collision detection
+		}
+
+		ACollideData APlaneCollider::tryIntersect(ABoxCollider & box)
+		{
+			float ll = RML::Vector3D(box.getLowerLeftBound() - m_EmergencePoint).multiplyDot(m_Normal.toUnitVector());
+			float lr = RML::Vector3D(box.getLowerRightBound() - m_EmergencePoint).multiplyDot(m_Normal.toUnitVector());
+			float ul = RML::Vector3D(box.getUpperLeftBound() - m_EmergencePoint).multiplyDot(m_Normal.toUnitVector());
+			float ur = RML::Vector3D(box.getUpperRightBound() - m_EmergencePoint).multiplyDot(m_Normal.toUnitVector());
+
+			bool ans = (signbit(ll) * signbit(lr) * signbit(ul) * signbit(ur)) | ((1 - signbit(ll)) * (1 - signbit(lr)) * (1 - signbit(ul)) * (1 - signbit(ur)));
+			return ACollideData(
+				!ans,
+				ans == false ? -1 : +1
+			);
 		}
 
 		RML::Vector3D APlaneCollider::normalised(const RML::Vector3D & vector) const
