@@ -11,7 +11,7 @@ namespace Rubeus
 		class APlaneCollider
 		{
 		private:
-			const RML::Vector3D m_Normal;
+			mutable RML::Vector3D m_Normal;
 			const RML::Vector3D m_EmergencePoint;
 
 		public:
@@ -22,8 +22,8 @@ namespace Rubeus
 
 			RML::Vector3D normalised(const RML::Vector3D & vector) const;
 
-			inline const RML::Vector3D & getNormal() const { return m_Normal; }
-			inline const RML::Vector3D & getEmergencePoint() const { return m_EmergencePoint; }
+			inline RML::Vector3D getNormal() const { return m_Normal; }
+			inline RML::Vector3D getEmergencePoint() const { return m_EmergencePoint; }
 		};
 	}
 }

@@ -323,9 +323,11 @@ namespace RML
 			*/
 		Vector3D& multiply(const Vector3D &other);
 
-		Vector3D& multiplyDot(const Vector3D &other);
+		float multiplyDot(const Vector3D &other);
 
 		Vector3D& multiplyCross(const Vector3D &other);
+
+		Vector3D& multiplyFloat(const float &other);
 
 		/**
 			* @fn	Vector3D& divide(const Vector3D &other);
@@ -344,6 +346,10 @@ namespace RML
 		float maxComponent();
 
 		float maxXYComponent();
+
+		Vector3D & toUnitVector();
+
+		Vector3D & abs();
 
 		/**
 			* @fn	std::ostream& operator<<(std::ostream& stream, const Vector3D& vector);
@@ -393,6 +399,7 @@ namespace RML
 			*/
 		friend Vector3D& operator*(Vector3D left, const Vector3D &right);
 
+		friend Vector3D& operator*(const Vector3D vector, const float &other);
 		/**
 			* @fn	Vector3D& operator/(Vector3D left, const Vector3D &right);
 			*
@@ -404,6 +411,8 @@ namespace RML
 			* @return	The result of the operation.
 			*/
 		friend Vector3D& operator/(Vector3D left, const Vector3D &right);
+
+		friend Vector3D& operator/(const Vector3D vector, const float &other);
 
 		/**
 			* @fn	bool operator==(const Vector3D &other);

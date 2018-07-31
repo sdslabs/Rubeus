@@ -166,13 +166,13 @@ namespace RML
 		return *this;
 	}
 
-	Vector3D & Vector3D::multiplyDot(const Vector3D & other)
+	float Vector3D::multiplyDot(const Vector3D & other)
 	{
-		x *= other.x;
-		y *= other.y;
-		z *= other.z;
+		x = this->x * other.x;
+		y = this->y * other.y;
+		z = this->z * other.z;
 
-		return *this;
+		return x + y + z;
 	}
 
 	Vector3D & Vector3D::multiplyCross(const Vector3D & other)
@@ -180,6 +180,15 @@ namespace RML
 		x = y * other.y - other.y * z;
 		y = other.x * z - x * other.z;
 		z = x * other.y - other.x * y;
+
+		return *this;
+	}
+
+	Vector3D & Vector3D::multiplyFloat(const float & other)
+	{
+		x *= other;
+		y *= other;
+		z *= other;
 
 		return *this;
 	}
@@ -224,6 +233,25 @@ namespace RML
 			return y;
 	}
 
+	Vector3D & Vector3D::toUnitVector()
+	{
+		float temp = getLength(*this);
+		this->x /= temp;
+		this->y /= temp;
+		this->z /= temp;
+
+		return *this;
+	}
+
+	Vector3D & Vector3D::abs()
+	{
+		this->x = std::abs(x);
+		this->y = std::abs(y);
+		this->z = std::abs(z);
+
+		return *this;
+	}
+
 	bool Vector3D::operator==(const Vector3D & other)
 	{
 		return ((x == other.x) && (y == other.y) && (z == other.z));
@@ -248,6 +276,7 @@ namespace RML
 	{
 		return multiply(other);
 	}
+
 
 	Vector3D & Vector3D::operator/=(const Vector3D & other)
 	{
@@ -275,6 +304,16 @@ namespace RML
 		return left.multiply(right);
 	}
 
+	Vector3D & operator*(Vector3D vector, const float & other)
+	{
+		return vector.multiplyFloat(other);
+	}
+
+	Vector3D & operator/(Vector3D vector, const float & other)
+	{
+		return vector.multiplyFloat(1.0f / other);
+	}
+
 	Vector3D & operator/(Vector3D left, const Vector3D &right)
 	{
 		return left.divide(right);
@@ -299,6 +338,7 @@ namespace RML
 		this->x /= temp;
 		this->y /= temp;
 		this->z /= temp;
+		this->w /= temp;
 
 		return *this;
 	}

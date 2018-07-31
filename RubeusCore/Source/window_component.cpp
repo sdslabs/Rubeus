@@ -106,7 +106,7 @@ namespace Rubeus
 			SUCCESS("GLFW initialisation successful");
 
 			// Set window hints if any
-			if (windowType == EWindowParameters::RESIZABLE_WINDOW)
+			if(windowType == EWindowParameters::RESIZABLE_WINDOW)
 			{
 				glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
 			}
@@ -171,7 +171,7 @@ namespace Rubeus
 
 			glfwSetKeyCallback(m_Window, keyCallback);
 			glfwSetInputMode(m_Window, GLFW_STICKY_KEYS, 1);
-			
+
 
 			if(glewInit() != GLEW_OK)
 			{
@@ -181,7 +181,7 @@ namespace Rubeus
 			}
 
 			SUCCESS("GLEW initialisation successful");
-			ASSERT(glGetString(GL_VERSION));
+			ASSERT("OpenGL Driver software: " + std::string((const char *) glGetString(GL_VERSION)));
 
 			return true;
 		}
@@ -203,17 +203,17 @@ namespace Rubeus
 					ASSERT("Image received");
 					Image & image = boost::any_cast<Image &>(msg->m_Data);
 
-					for(unsigned int i = 0; i < image.m_Height * image.m_Width * 3; i+=3)
+					for(unsigned int i = 0; i < image.m_Height * image.m_Width * 3; i += 3)
 					{
 						LOG("Red:");
 						LOG((int) image.m_Image[i]);
 						LOG("Green:");
-						LOG((int) image.m_Image[i+1]);
+						LOG((int) image.m_Image[i + 1]);
 						LOG("Blue:");
-						LOG((int) image.m_Image[i+2]);
+						LOG((int) image.m_Image[i + 2]);
 					}
 				}
-					break;
+				break;
 
 				default:
 					break;

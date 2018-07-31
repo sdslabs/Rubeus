@@ -34,6 +34,7 @@ namespace Rubeus
 
 		RAudioManager::RAudioManager()
 		{
+			SUCCESS("Audio manager initialised successfully");
 		}
 
 		RAudioManager::~RAudioManager()
@@ -80,6 +81,8 @@ namespace Rubeus
 					{
 						m_SoundTracks[trackName]->setLoop(true);
 					}
+
+					ASSERT("Added sound track #" + std::to_string(trackName));
 				}
 			}
 
@@ -93,6 +96,8 @@ namespace Rubeus
 					{
 						m_MusicTracks[trackName]->setLoop(true);
 					}
+
+					ASSERT("Added music track #" + std::to_string(trackName));
 				}
 			}
 		}

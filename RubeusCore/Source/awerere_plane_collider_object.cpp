@@ -17,10 +17,10 @@ namespace Rubeus
 
 		ACollideData APlaneCollider::tryIntersect(ASphereCollider & sphere)
 		{
-			RML::Vector3D l = (sphere.getCenter() - m_EmergencePoint).multiplyDot(normalised(m_Normal));
-			float gap = l.getLength() - sphere.getRadius();
+			RML::Vector3D slantGap = sphere.getCenter() - m_EmergencePoint;
+			float gap = slantGap.multiplyDot(m_Normal.toUnitVector());
 
-			return ACollideData(gap < 0, gap);
+			return ACollideData(gap < sphere.getRadius(), gap - sphere.getRadius());
 		}
 
 		RML::Vector3D APlaneCollider::normalised(const RML::Vector3D & vector) const
