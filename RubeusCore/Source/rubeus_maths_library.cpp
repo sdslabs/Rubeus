@@ -196,10 +196,14 @@ namespace RML
 	Vector3D & Vector3D::multiplyCross(const Vector3D & other)
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		x = y * other.z - other.y * z;
 =======
 		x = y * other.y - other.y * z;
 >>>>>>> Add plane collider with sphere interactions
+=======
+		x = y * other.z - other.y * z;
+>>>>>>> Add plane-plane interaction
 		y = other.x * z - x * other.z;
 		z = x * other.y - other.x * y;
 

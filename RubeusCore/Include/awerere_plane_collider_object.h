@@ -58,6 +58,7 @@ namespace Rubeus
 			APlaneCollider(const RML::Vector3D normal, const RML::Vector3D emergencePoint);
 			~APlaneCollider();
 
+			ACollideData tryIntersect(APlaneCollider & plane);
 			ACollideData tryIntersect(ASphereCollider & sphere);
 			ACollideData tryIntersect(ABoxCollider & box);
 

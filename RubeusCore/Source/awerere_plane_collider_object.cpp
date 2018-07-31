@@ -31,6 +31,9 @@ namespace Rubeus
 		}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add plane-plane interaction
 		ACollideData APlaneCollider::tryIntersect(APlaneCollider & plane)
 		{
 			RML::Vector3D pdt = m_Normal.multiplyCross(plane.m_Normal);
@@ -41,6 +44,7 @@ namespace Rubeus
 			);
 		}
 
+<<<<<<< HEAD
 		ACollideData APlaneCollider::tryIntersect(ASphereCollider & sphere)
 		{
 			RML::Vector3D slantGap = sphere.getCenter() - m_EmergencePoint;
@@ -62,6 +66,8 @@ namespace Rubeus
 				ans == false ? -1 : +1
 			);
 =======
+=======
+>>>>>>> Add plane-plane interaction
 		ACollideData APlaneCollider::tryIntersect(ASphereCollider & sphere)
 		{
 			RML::Vector3D slantGap = sphere.getCenter() - m_EmergencePoint;

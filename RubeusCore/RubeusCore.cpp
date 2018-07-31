@@ -121,10 +121,14 @@ int main()
 >>>>>>> Add sphere-plane collision detection
 =======
 	APlaneCollider plane(Vector3D(-1, -1, 0), Vector3D(1, 1, 0));
-	ABoxCollider box(Vector3D(0, 0, 0), Vector3D(2, 2, 0));
+	APlaneCollider plane2(Vector3D(1, -1, 0), Vector3D(1, 1, 0));
 
+<<<<<<< HEAD
 	LOG(plane.tryIntersect(box).getIsIntersect());
 >>>>>>> Add plane-box interaction
+=======
+	LOG(plane.tryIntersect(plane2).getIsIntersect());
+>>>>>>> Add plane-plane interaction
 	// See if maps are slowing things down. Also have a performance check
 	while(!GameWindow->closed())
 	{
