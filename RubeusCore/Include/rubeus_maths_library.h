@@ -425,6 +425,8 @@ namespace RML
 			*/
 		bool operator==(const Vector3D &other);
 
+		bool operator==(const int other);
+
 		/**
 			* @fn	bool operator!=(const Vector3D &other);
 			*

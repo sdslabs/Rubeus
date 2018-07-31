@@ -177,7 +177,7 @@ namespace RML
 
 	Vector3D & Vector3D::multiplyCross(const Vector3D & other)
 	{
-		x = y * other.y - other.y * z;
+		x = y * other.z - other.y * z;
 		y = other.x * z - x * other.z;
 		z = x * other.y - other.x * y;
 
@@ -255,6 +255,11 @@ namespace RML
 	bool Vector3D::operator==(const Vector3D & other)
 	{
 		return ((x == other.x) && (y == other.y) && (z == other.z));
+	}
+
+	bool Vector3D::operator==(const int other)
+	{
+		return (x == other) && (y == other) && (z == other);
 	}
 
 	bool Vector3D::operator!=(const Vector3D & other)

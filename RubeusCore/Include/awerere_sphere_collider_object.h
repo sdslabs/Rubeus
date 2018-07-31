@@ -7,6 +7,8 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
+		class APlaneCollider;
+
 		class ASphereCollider
 		{
 		private:
@@ -17,6 +19,7 @@ namespace Rubeus
 			ASphereCollider(const RML::Vector3D & center, const float radius);
 
 			ACollideData tryIntersect(ASphereCollider & other);
+			ACollideData tryIntersect(APlaneCollider & plane);
 
 			inline const RML::Vector3D & getCenter() { return m_Center; }
 			inline const float & getRadius() { return m_Radius; }

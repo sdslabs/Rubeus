@@ -16,6 +16,16 @@ namespace Rubeus
 		{
 		}
 
+		ACollideData APlaneCollider::tryIntersect(APlaneCollider & plane)
+		{
+			RML::Vector3D pdt = m_Normal.multiplyCross(plane.m_Normal);
+
+			return ACollideData(
+				pdt == 0,
+				RML::Vector3D(m_EmergencePoint - plane.m_EmergencePoint).multiplyDot(plane.getNormal())
+			);
+		}
+
 		ACollideData APlaneCollider::tryIntersect(ASphereCollider & sphere)
 		{
 			RML::Vector3D slantGap = sphere.getCenter() - m_EmergencePoint;

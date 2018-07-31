@@ -1,4 +1,5 @@
 #include <awerere_sphere_collider_object.h>
+#include <awerere_plane_collider_object.h>
 
 namespace Rubeus
 {
@@ -15,6 +16,11 @@ namespace Rubeus
 			float centerDistance = (other.getCenter() - m_Center).getLength();
 
 			return ACollideData(centerDistance < extTouchDistance, centerDistance - extTouchDistance);
+		}
+
+		ACollideData ASphereCollider::tryIntersect(APlaneCollider & plane)
+		{
+			return plane.tryIntersect(*this);
 		}
 	}
 }
