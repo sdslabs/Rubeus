@@ -82,7 +82,7 @@ namespace Rubeus
 						m_SoundTracks[trackName]->setLoop(true);
 					}
 
-					ASSERT("Added sound track #" + std::to_string(trackName));
+					ASSERT("Loaded audio file: " + filePath + " to sound track #" + std::to_string(trackName));
 				}
 			}
 
@@ -97,7 +97,7 @@ namespace Rubeus
 						m_MusicTracks[trackName]->setLoop(true);
 					}
 
-					ASSERT("Added music track #" + std::to_string(trackName));
+					ASSERT("Loaded audio file: " + filePath + " to music track #" + std::to_string(trackName));
 				}
 			}
 		}

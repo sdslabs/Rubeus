@@ -1,5 +1,7 @@
 #pragma once
 
+#include <algorithm>
+
 #include <rubeus_maths_library.h>
 #include <awerere_collide_data_object.h>
 
@@ -8,6 +10,8 @@ namespace Rubeus
 	namespace Awerere
 	{
 		class ASphereCollider;
+		class ABoxCollider;
+
 		class APlaneCollider
 		{
 		private:
@@ -19,6 +23,7 @@ namespace Rubeus
 			~APlaneCollider();
 
 			ACollideData tryIntersect(ASphereCollider & sphere);
+			ACollideData tryIntersect(ABoxCollider & box);
 
 			RML::Vector3D normalised(const RML::Vector3D & vector) const;
 

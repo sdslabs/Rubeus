@@ -15,8 +15,8 @@ namespace Rubeus
 
 		ACollideData ABoxCollider::tryIntersect(const ABoxCollider & other)
 		{
-			RML::Vector3D gap1 = other.getMinExtent() - m_MaxExtent;
-			RML::Vector3D gap2 = m_MinExtent - other.getMaxExtent();
+			RML::Vector3D gap1 = other.getLowerLeftBound() - m_MaxExtent;
+			RML::Vector3D gap2 = m_MinExtent - other.getUpperRightBound();
 
 			RML::Vector3D maxGap = gap1.maxVector(gap2);
 
