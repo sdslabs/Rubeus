@@ -167,6 +167,7 @@ namespace RML
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	float Vector3D::multiplyDot(const Vector3D & other)
 	{
 		x = this->x * other.x;
@@ -176,13 +177,20 @@ namespace RML
 		return x + y + z;
 =======
 	Vector3D & Vector3D::multiplyDot(const Vector3D & other)
+=======
+	float Vector3D::multiplyDot(const Vector3D & other)
+>>>>>>> Add sphere-plane collision detection
 	{
-		x *= other.x;
-		y *= other.y;
-		z *= other.z;
+		x = this->x * other.x;
+		y = this->y * other.y;
+		z = this->z * other.z;
 
+<<<<<<< HEAD
 		return *this;
 >>>>>>> Add plane collider with sphere interactions
+=======
+		return x + y + z;
+>>>>>>> Add sphere-plane collision detection
 	}
 
 	Vector3D & Vector3D::multiplyCross(const Vector3D & other)
@@ -199,6 +207,9 @@ namespace RML
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add sphere-plane collision detection
 	Vector3D & Vector3D::multiplyFloat(const float & other)
 	{
 		x *= other;
@@ -208,8 +219,11 @@ namespace RML
 		return *this;
 	}
 
+<<<<<<< HEAD
 =======
 >>>>>>> Add plane collider with sphere interactions
+=======
+>>>>>>> Add sphere-plane collision detection
 	Vector3D & Vector3D::divide(const Vector3D & other)
 	{
 		x /= other.x;
@@ -251,6 +265,9 @@ namespace RML
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add sphere-plane collision detection
 	Vector3D & Vector3D::toUnitVector()
 	{
 		float temp = getLength(*this);
@@ -270,8 +287,11 @@ namespace RML
 		return *this;
 	}
 
+<<<<<<< HEAD
 =======
 >>>>>>> Add sphere collider
+=======
+>>>>>>> Add sphere-plane collision detection
 	bool Vector3D::operator==(const Vector3D & other)
 	{
 		return ((x == other.x) && (y == other.y) && (z == other.z));
@@ -364,9 +384,13 @@ namespace RML
 		this->y /= temp;
 		this->z /= temp;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		this->w /= temp;
 =======
 >>>>>>> Shift texture and sprite ownership to game object
+=======
+		this->w /= temp;
+>>>>>>> Add sphere-plane collision detection
 
 		return *this;
 	}

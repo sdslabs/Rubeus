@@ -324,6 +324,7 @@ namespace RML
 		Vector3D& multiply(const Vector3D &other);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 		float multiplyDot(const Vector3D &other);
 
 		Vector3D& multiplyCross(const Vector3D &other);
@@ -336,6 +337,14 @@ namespace RML
 		Vector3D& multiplyCross(const Vector3D &other);
 
 >>>>>>> Add plane collider with sphere interactions
+=======
+		float multiplyDot(const Vector3D &other);
+
+		Vector3D& multiplyCross(const Vector3D &other);
+
+		Vector3D& multiplyFloat(const float &other);
+
+>>>>>>> Add sphere-plane collision detection
 		/**
 			* @fn	Vector3D& divide(const Vector3D &other);
 			*
@@ -355,12 +364,18 @@ namespace RML
 		float maxXYComponent();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add sphere-plane collision detection
 		Vector3D & toUnitVector();
 
 		Vector3D & abs();
 
+<<<<<<< HEAD
 =======
 >>>>>>> Add sphere collider
+=======
+>>>>>>> Add sphere-plane collision detection
 		/**
 			* @fn	std::ostream& operator<<(std::ostream& stream, const Vector3D& vector);
 			*
@@ -410,9 +425,13 @@ namespace RML
 		friend Vector3D& operator*(Vector3D left, const Vector3D &right);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 		friend Vector3D& operator*(const Vector3D vector, const float &other);
 =======
 >>>>>>> Shift texture and sprite ownership to game object
+=======
+		friend Vector3D& operator*(const Vector3D vector, const float &other);
+>>>>>>> Add sphere-plane collision detection
 		/**
 			* @fn	Vector3D& operator/(Vector3D left, const Vector3D &right);
 			*

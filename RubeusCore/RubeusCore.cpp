@@ -99,6 +99,7 @@ int main()
 	shader0->setUniform1iv("textures", textureIDs, 32);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	ABoxCollider box(Vector3D(3, 3, 0), Vector3D(5, 5, 0));
 	ASphereCollider sphere(Vector3D(5.5, 5.5, 0), 1);
 
@@ -111,6 +112,12 @@ int main()
 	//LOG("Boxes: " + std::to_string(testBox1.tryIntersect(testBox2).getGap()));
 	LOG(testBox1.tryIntersect(testBox2).getGap());
 >>>>>>> Add sphere collider
+=======
+	APlaneCollider plane(Vector3D(1, 1, 0), Vector3D(10, -4, 0));
+	ASphereCollider sphere(Vector3D(5, 5, 0), 1);
+
+	LOG(plane.tryIntersect(sphere).getIsIntersect());
+>>>>>>> Add sphere-plane collision detection
 	// See if maps are slowing things down. Also have a performance check
 	while(!GameWindow->closed())
 	{
