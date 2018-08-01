@@ -3,14 +3,19 @@
 #include <rubeus_maths_library.h>
 #include <awerere_collide_data_object.h>
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <awerere_collider_object.h>
 
 =======
 >>>>>>> Add sphere collider
+=======
+
+>>>>>>> Add box and sphere interaction
 namespace Rubeus
 {
 	namespace Awerere
 	{
+<<<<<<< HEAD
 <<<<<<< HEAD
 		class APlaneCollider;
 		class ASphereCollider;
@@ -36,6 +41,11 @@ namespace Rubeus
 			inline RML::Vector3D getUpperLeftBound() const { return m_MaxExtent + RML::Vector3D(0, m_MaxExtent.y - m_MinExtent.y, 0); }
 			inline RML::Vector3D getLowerRightBound() const { return m_MaxExtent + RML::Vector3D(m_MaxExtent.x - m_MinExtent.x, 0, 0); }
 =======
+=======
+		class APlaneCollider;
+		class ASphereCollider;
+
+>>>>>>> Add box and sphere interaction
 		class ABoxCollider
 		{
 		private:
@@ -46,7 +56,9 @@ namespace Rubeus
 			ABoxCollider(const RML::Vector3D minExtent, const RML::Vector3D maxExtent);
 			~ABoxCollider();
 
-			ACollideData tryIntersect(const ABoxCollider & other);
+			ACollideData tryIntersect(const ABoxCollider & box);
+			ACollideData tryIntersect(APlaneCollider & plane);
+			ACollideData tryIntersect(ASphereCollider & sphere);
 
 <<<<<<< HEAD
 			inline const RML::Vector3D & getMinExtent() const { return m_MinExtent; }

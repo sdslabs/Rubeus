@@ -3,6 +3,7 @@
 #include <awerere_sphere_collider_object.h>
 #include <awerere_plane_collider_object.h>
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <awerere_box_collider_object.h>
 
 namespace Rubeus
@@ -37,6 +38,9 @@ namespace Rubeus
 >>>>>>> Add sphere collider
 =======
 >>>>>>> Add plane-plane interaction
+=======
+#include <awerere_box_collider_object.h>
+>>>>>>> Add box and sphere interaction
 
 namespace Rubeus
 {
@@ -68,6 +72,13 @@ namespace Rubeus
 		{
 			return plane.tryIntersect(*this);
 		}
+<<<<<<< HEAD
 >>>>>>> Add plane-plane interaction
+=======
+		ACollideData ASphereCollider::tryIntersect(ABoxCollider & box)
+		{
+			return box.tryIntersect(*this);
+		}
+>>>>>>> Add box and sphere interaction
 	}
 }

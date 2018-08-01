@@ -41,7 +41,11 @@ namespace Rubeus
 >>>>>>> Add sphere collider
 =======
 			ACollideData tryIntersect(APlaneCollider & plane);
+<<<<<<< HEAD
 >>>>>>> Add plane-plane interaction
+=======
+			ACollideData tryIntersect(ABoxCollider & box);
+>>>>>>> Add box and sphere interaction
 
 			inline const RML::Vector3D & getCenter() { return m_Center; }
 			inline const float & getRadius() { return m_Radius; }
