@@ -54,10 +54,11 @@ int main()
 	}
 	shader0->setUniform1iv("textures", textureIDs, 32);
 
-	APlaneCollider plane(Vector3D(-1, -1, 0), Vector3D(1, 1, 0));
-	APlaneCollider plane2(Vector3D(1, -1, 0), Vector3D(1, 1, 0));
+	ABoxCollider box(Vector3D(3, 3, 0), Vector3D(5, 5, 0));
+	ASphereCollider sphere(Vector3D(5.5, 5.5, 0), 1);
 
-	LOG(plane.tryIntersect(plane2).getIsIntersect());
+	LOG(box.tryIntersect(sphere).getGap());
+
 	// See if maps are slowing things down. Also have a performance check
 	while(!GameWindow->closed())
 	{
