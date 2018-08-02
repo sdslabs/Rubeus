@@ -34,7 +34,7 @@ namespace Rubeus
 		get_loaded_image,
 
 		// Modifies the music playing every frame according to AudioModifierCommand
-		// Handled by: RAudioManager
+		// Handled by: RSymphony
 		modify_audio
 	};
 

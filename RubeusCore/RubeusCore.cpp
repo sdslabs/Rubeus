@@ -19,6 +19,7 @@ int main()
 														 EWindowParameters::WINDOWED_MODE,
 														 EWindowParameters::NON_RESIZABLE_WINDOW,
 														 0);
+<<<<<<< HEAD
     RAudioManager * audio_manager = new RAudioManager();
     audio_manager->addMusicTrack(1);
     audio_manager->addSoundTrack(1);
@@ -26,6 +27,15 @@ int main()
     audio_manager->loadTrack(AudioComponents::SOUND_TRACK, AudioComponents::TRACK_0, "Assets/sound.wav", 10);
     audio_manager->playTrack(AudioComponents::MUSIC_TRACK, AudioComponents::TRACK_0);
     audio_manager->playTrack(AudioComponents::SOUND_TRACK, AudioComponents::TRACK_0);
+=======
+	RSymphony * audio_manager = new RSymphony();
+	audio_manager->addMusicTrack(1);
+	audio_manager->addSoundTrack(1);
+	audio_manager->loadTrack(MUSIC_TRACK, TRACK_0, "Assets/Garage.wav", 10, true);
+	audio_manager->loadTrack(SOUND_TRACK, TRACK_0, "Assets/sound.wav", 10);
+	audio_manager->playTrack(MUSIC_TRACK, TRACK_0);
+	audio_manager->playTrack(SOUND_TRACK, TRACK_0);
+>>>>>>> Rename audio manager as 'Symphony'
 
 	RShaderComponent * shader0 = new RShaderComponent("Shaders/basic.vert", "Shaders/basic.frag");
 
