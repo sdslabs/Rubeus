@@ -41,13 +41,6 @@ namespace Rubeus
 			renderer.pop();
 		}
 
-		RGroup & RGroup::add(RSprite * renderable)
-		{
-			m_Children.push_back(&RGameObject(*renderable));
-
-			return *this;
-		}
-
 		RGroup & RGroup::add(RGameObject * gameObject)
 		{
 			m_Children.push_back(gameObject);

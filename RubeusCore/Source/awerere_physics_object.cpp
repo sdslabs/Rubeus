@@ -8,6 +8,10 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
+		APhysicsObject::APhysicsObject()
+			: m_Mass(10), m_Collider(NULL)
+		{
+		}
 		APhysicsObject::APhysicsObject(float & mass, RML::Vector3D & position, RML::Vector2D & velocity, Awerere::ACollider * collider)
 			: m_Mass(mass), m_Collider(collider)
 		{
@@ -15,7 +19,6 @@ namespace Rubeus
 
 		APhysicsObject::~APhysicsObject()
 		{
-			delete m_Collider;
 		}
 	}
 }
