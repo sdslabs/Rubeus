@@ -12,6 +12,7 @@ namespace Rubeus
 	{
 		ASphereCollider::ASphereCollider(const RML::Vector3D & center, const float radius)
 			: ACollider(center, RML::Vector2D()), m_Center(center), m_Radius(radius)
+<<<<<<< HEAD
 		{
 		}
 
@@ -48,6 +49,8 @@ namespace Rubeus
 	{
 		ASphereCollider::ASphereCollider(const RML::Vector3D & center, const float radius)
 			: m_Center(center), m_Radius(radius)
+=======
+>>>>>>> Add support for generalised collider class
 		{
 		}
 

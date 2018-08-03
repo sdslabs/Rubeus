@@ -4,6 +4,9 @@
 #include <awerere_collide_data_object.h>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add support for generalised collider class
 #include <awerere_collider_object.h>
 
 =======
@@ -45,18 +48,24 @@ namespace Rubeus
 		class APlaneCollider;
 		class ASphereCollider;
 
+<<<<<<< HEAD
 >>>>>>> Add box and sphere interaction
 		class ABoxCollider
+=======
+		class ABoxCollider : public ACollider
+>>>>>>> Add support for generalised collider class
 		{
 		private:
-			const RML::Vector3D m_MinExtent;
-			const RML::Vector3D m_MaxExtent;
+			RML::Vector3D m_MinExtent;
+			RML::Vector3D m_MaxExtent;
+
+			RML::Vector3D calculateCenter(RML::Vector3D & ll, RML::Vector3D & ur);
 
 		public:
-			ABoxCollider(const RML::Vector3D minExtent, const RML::Vector3D maxExtent);
+			ABoxCollider(RML::Vector3D & minExtent, RML::Vector3D & maxExtent);
 			~ABoxCollider();
 
-			ACollideData tryIntersect(const ABoxCollider & box);
+			ACollideData tryIntersect(ABoxCollider & box);
 			ACollideData tryIntersect(APlaneCollider & plane);
 			ACollideData tryIntersect(ASphereCollider & sphere);
 

@@ -7,7 +7,11 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
+<<<<<<< HEAD
 		enum class EColliderType
+=======
+		enum EColliderType
+>>>>>>> Add support for generalised collider class
 		{
 			SPHERE,
 			PLANE,
@@ -23,9 +27,13 @@ namespace Rubeus
 			EColliderType m_Type;
 
 		public:
+<<<<<<< HEAD
 			ACollider();
 			ACollider(RML::Vector3D position, RML::Vector2D velocity);
 			virtual ~ACollider();
+=======
+			ACollider(RML::Vector3D position, RML::Vector2D velocity);
+>>>>>>> Add support for generalised collider class
 
 			inline RML::Vector3D getPosition() const { return m_Position; }
 			inline RML::Vector2D getVelocity() const { return m_Velocity; }

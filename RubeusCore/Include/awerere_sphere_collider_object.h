@@ -3,9 +3,13 @@
 #include <rubeus_maths_library.h>
 #include <awerere_collide_data_object.h>
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <awerere_collider_object.h>
 =======
 >>>>>>> Add sphere collider
+=======
+#include <awerere_collider_object.h>
+>>>>>>> Add support for generalised collider class
 
 namespace Rubeus
 {
@@ -17,6 +21,7 @@ namespace Rubeus
 		class ABoxCollider;
 
 		class ASphereCollider : public ACollider
+<<<<<<< HEAD
 =======
 =======
 		class APlaneCollider;
@@ -24,6 +29,8 @@ namespace Rubeus
 >>>>>>> Add plane-plane interaction
 		class ASphereCollider
 >>>>>>> Add sphere collider
+=======
+>>>>>>> Add support for generalised collider class
 		{
 		private:
 			const RML::Vector3D m_Center;

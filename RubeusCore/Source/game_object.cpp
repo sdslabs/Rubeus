@@ -4,6 +4,7 @@ namespace Rubeus
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics, Awerere::APhysicsObject * physicsObject)
 		:
 		m_Sprite(new GraphicComponents::RSprite(x, y, deltaX, deltaY, new GraphicComponents::RTexture(imageFilePath))),
@@ -49,21 +50,43 @@ namespace Rubeus
 	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, const char * texturePath)
 =======
 	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath)
+=======
+	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics, Awerere::APhysicsObject * physicsObject)
+>>>>>>> Add support for generalised collider class
 		:
 		m_Sprite(new GraphicComponents::RSprite(x, y, deltaX, deltaY, new GraphicComponents::RTexture(imageFilePath))),
 		m_ThisTicks(false),
 		m_UsesTexture(true)
 >>>>>>> Shift texture and sprite ownership to game object
 	{
+		if(enablePhysics == false)
+		{
+			m_PhysicsObject = NULL;
+		}
+		else
+		{
+			m_PhysicsObject = physicsObject;
+		}
 	}
 
-	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, float r, float g, float b)
+	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, float r, float g, float b, bool enablePhysics, Awerere::APhysicsObject * physicsObject)
 		:
 		m_Sprite(new GraphicComponents::RSprite(x, y, deltaX, deltaY, RML::Vector4D(r, g, b, 1.0f))),
 		m_ThisTicks(false),
 		m_UsesTexture(false)
 	{
+<<<<<<< HEAD
 >>>>>>> Add entity class
+=======
+		if(enablePhysics == false)
+		{
+			m_PhysicsObject = NULL;
+		}
+		else
+		{
+			m_PhysicsObject = physicsObject;
+		}
+>>>>>>> Add support for generalised collider class
 	}
 
 	RGameObject::RGameObject(GraphicComponents::RSprite & renderable)
@@ -92,6 +115,7 @@ namespace Rubeus
 			delete m_Sprite;
 		}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 		if(m_HasPhysics == true)
 		{
@@ -105,6 +129,13 @@ namespace Rubeus
 >>>>>>> Add entity class
 =======
 >>>>>>> Modify workflow to accept only RGameObject objects
+=======
+
+		if(m_PhysicsObject != NULL)
+		{
+			delete m_PhysicsObject;
+		}
+>>>>>>> Add support for generalised collider class
 	}
 
 	void RGameObject::tick()

@@ -17,6 +17,7 @@ namespace Rubeus
 	namespace Awerere
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		RML::Vector3D ABoxCollider::calculateCenter(RML::Vector3D & ll, RML::Vector3D & ur)
 		{
 			RML::Vector3D result((ll + ur) / 2.0f);
@@ -33,12 +34,26 @@ namespace Rubeus
 			: m_MinExtent(minExtent), m_MaxExtent(maxExtent)
 		{
 >>>>>>> Add sphere collider
+=======
+		RML::Vector3D ABoxCollider::calculateCenter(RML::Vector3D & ll, RML::Vector3D & ur)
+		{
+			RML::Vector3D result((ll + ur) / 2.0f);
+
+			return result;
+		}
+
+		ABoxCollider::ABoxCollider(RML::Vector3D & minExtent, RML::Vector3D & maxExtent)
+			: ACollider(calculateCenter(minExtent, maxExtent), RML::Vector2D()), m_MinExtent(minExtent), m_MaxExtent(maxExtent)
+		{
+			m_Type = EColliderType::BOX;
+>>>>>>> Add support for generalised collider class
 		}
 
 		ABoxCollider::~ABoxCollider()
 		{
 		}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 		ACollideData ABoxCollider::tryIntersect(ABoxCollider & box)
@@ -52,13 +67,19 @@ namespace Rubeus
 =======
 		ACollideData ABoxCollider::tryIntersect(const ABoxCollider & box)
 >>>>>>> Add box and sphere interaction
+=======
+		ACollideData ABoxCollider::tryIntersect(ABoxCollider & box)
+>>>>>>> Add support for generalised collider class
 		{
 			RML::Vector3D gap1 = box.getLowerLeftBound() - m_MaxExtent;
 			RML::Vector3D gap2 = m_MinExtent - box.getUpperRightBound();
 
 			RML::Vector3D maxGap = gap1.maxVector(gap2);
+<<<<<<< HEAD
 
 >>>>>>> Add sphere collider
+=======
+>>>>>>> Add support for generalised collider class
 			float maxDistance = maxGap.maxXYComponent();
 
 			return ACollideData(maxDistance < 0, maxDistance);

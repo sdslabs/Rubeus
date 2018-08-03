@@ -15,6 +15,7 @@ namespace Rubeus
 	namespace Awerere
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		APlaneCollider::APlaneCollider(const RML::Vector3D & normal, const RML::Vector3D & emergencePoint)
 			: ACollider(emergencePoint, RML::Vector2D()), m_Normal(normal), m_EmergencePoint(emergencePoint)
 		{
@@ -24,6 +25,12 @@ namespace Rubeus
 			: m_Normal(normal), m_EmergencePoint(emergencePoint)
 		{
 >>>>>>> Add plane collider with sphere interactions
+=======
+		APlaneCollider::APlaneCollider(const RML::Vector3D & normal, const RML::Vector3D & emergencePoint)
+			: ACollider(emergencePoint, RML::Vector2D()), m_Normal(normal), m_EmergencePoint(emergencePoint)
+		{
+			m_Type = EColliderType::PLANE;
+>>>>>>> Add support for generalised collider class
 		}
 
 		APlaneCollider::~APlaneCollider()
