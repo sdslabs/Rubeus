@@ -2,6 +2,7 @@
 
 #include <rubeus_maths_library.h>
 #include <awerere_collide_data_object.h>
+#include <awerere_collider_object.h>
 
 namespace Rubeus
 {
@@ -10,7 +11,7 @@ namespace Rubeus
 		class APlaneCollider;
 		class ABoxCollider;
 
-		class ASphereCollider
+		class ASphereCollider : public ACollider
 		{
 		private:
 			const RML::Vector3D m_Center;

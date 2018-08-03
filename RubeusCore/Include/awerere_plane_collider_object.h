@@ -4,6 +4,7 @@
 
 #include <rubeus_maths_library.h>
 #include <awerere_collide_data_object.h>
+#include <awerere_collider_object.h>
 
 namespace Rubeus
 {
@@ -12,14 +13,14 @@ namespace Rubeus
 		class ASphereCollider;
 		class ABoxCollider;
 
-		class APlaneCollider
+		class APlaneCollider : public ACollider
 		{
 		private:
 			mutable RML::Vector3D m_Normal;
-			const RML::Vector3D m_EmergencePoint;
+			RML::Vector3D m_EmergencePoint;
 
 		public:
-			APlaneCollider(const RML::Vector3D normal, const RML::Vector3D emergencePoint);
+			APlaneCollider(const RML::Vector3D & normal, const RML::Vector3D & emergencePoint);
 			~APlaneCollider();
 
 			ACollideData tryIntersect(APlaneCollider & plane);

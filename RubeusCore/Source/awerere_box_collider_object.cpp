@@ -7,22 +7,29 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		ABoxCollider::ABoxCollider(const RML::Vector3D minExtent, const RML::Vector3D maxExtent)
-			: m_MinExtent(minExtent), m_MaxExtent(maxExtent)
+		RML::Vector3D ABoxCollider::calculateCenter(RML::Vector3D & ll, RML::Vector3D & ur)
 		{
+			RML::Vector3D result((ll + ur) / 2.0f);
+
+			return result;
+		}
+
+		ABoxCollider::ABoxCollider(RML::Vector3D & minExtent, RML::Vector3D & maxExtent)
+			: ACollider(calculateCenter(minExtent, maxExtent), RML::Vector2D()), m_MinExtent(minExtent), m_MaxExtent(maxExtent)
+		{
+			m_Type = EColliderType::BOX;
 		}
 
 		ABoxCollider::~ABoxCollider()
 		{
 		}
 
-		ACollideData ABoxCollider::tryIntersect(const ABoxCollider & box)
+		ACollideData ABoxCollider::tryIntersect(ABoxCollider & box)
 		{
 			RML::Vector3D gap1 = box.getLowerLeftBound() - m_MaxExtent;
 			RML::Vector3D gap2 = m_MinExtent - box.getUpperRightBound();
 
 			RML::Vector3D maxGap = gap1.maxVector(gap2);
-
 			float maxDistance = maxGap.maxXYComponent();
 
 			return ACollideData(maxDistance < 0, maxDistance);
