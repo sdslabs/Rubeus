@@ -42,6 +42,7 @@ namespace Rubeus
 		}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 		RGroup & RGroup::add(RGameObject * gameObject)
 		{
 			m_Children.push_back(gameObject);
@@ -54,6 +55,8 @@ namespace Rubeus
 			return *this;
 		}
 
+=======
+>>>>>>> Add better game object API
 		RGroup & RGroup::add(RGameObject * gameObject)
 		{
 			m_Children.push_back(gameObject);

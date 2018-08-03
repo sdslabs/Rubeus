@@ -30,6 +30,7 @@ namespace Rubeus
 	{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public:
 		GraphicComponents::RSprite * m_Sprite;
 		Awerere::APhysicsObject * m_PhysicsObject;
@@ -52,17 +53,21 @@ namespace Rubeus
 =======
 	private:
 =======
+=======
+	private:
+		void setPhysics(bool enablePhysics, Rubeus::Awerere::APhysicsObject * physicsObject);
+
+>>>>>>> Add better game object API
 	public:
 >>>>>>> Shift texture and sprite ownership to game object
 		GraphicComponents::RSprite * m_Sprite;
-		Awerere::APhysicsObject * m_PhysicsObject;
+		Awerere::APhysicsObject m_PhysicsObject;
 		bool m_ThisTicks;
 		bool m_UsesTexture;
 		bool m_IsGroup = false;
 
-		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL);
+		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, Awerere::EColliderType type, bool enablePhysics = false);
 		RGameObject(float x, float y, float deltaX, float deltaY, float r, float g, float b, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL);
-		RGameObject(GraphicComponents::RSprite & renderable);
 		~RGameObject();
 
 		void tick() override;

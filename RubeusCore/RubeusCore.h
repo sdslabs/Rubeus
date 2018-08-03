@@ -52,6 +52,7 @@
 #include <awerere_box_collider_object.h>
 #include <awerere_plane_collider_object.h>
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <awerere_physics_object.h>
 =======
 >>>>>>> Shift texture and sprite ownership to game object
@@ -65,3 +66,6 @@
 >>>>>>> Add sphere collider
 =======
 >>>>>>> Add sphere-plane collision detection
+=======
+#include <awerere_physics_object.h>
+>>>>>>> Add better game object API

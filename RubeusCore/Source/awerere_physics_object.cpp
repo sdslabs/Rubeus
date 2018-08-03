@@ -16,6 +16,7 @@ namespace Rubeus
 	namespace Awerere
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		APhysicsObject::APhysicsObject()
 			: m_PhysicsMaterial(APhysicsMaterial()), m_Collider(NULL), m_EnablePhysics(false)
 		{
@@ -40,6 +41,12 @@ namespace Rubeus
 		}
 
 =======
+=======
+		APhysicsObject::APhysicsObject()
+			: m_Mass(10), m_Collider(NULL)
+		{
+		}
+>>>>>>> Add better game object API
 		APhysicsObject::APhysicsObject(float & mass, RML::Vector3D & position, RML::Vector2D & velocity, Awerere::ACollider * collider)
 			: m_Mass(mass), m_Collider(collider)
 		{
@@ -48,7 +55,6 @@ namespace Rubeus
 >>>>>>> Add support for generalised collider class
 		APhysicsObject::~APhysicsObject()
 		{
-			delete m_Collider;
 		}
 	}
 }

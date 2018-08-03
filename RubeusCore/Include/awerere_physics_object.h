@@ -27,9 +27,13 @@ namespace Rubeus
 		{
 		private:
 			float m_Mass;
-			ACollider * m_Collider;
 
 		public:
+			ACollider * m_Collider;
+
+			bool enablePhysics = false;
+
+			APhysicsObject();
 			APhysicsObject(float & mass,
 						   RML::Vector3D & position,
 						   RML::Vector2D & velocity,
