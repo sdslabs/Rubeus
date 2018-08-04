@@ -32,7 +32,7 @@ Rubeus was at first an initiative by SDSLabs to inculcate the spirit of game dev
 As previously said, we do not expect to have any monetary gains off making this project open-source, nor from any of the games that we might be developing on Rubeus.
 
 ## <a name=how>How can I contribute?
-Anyone is invited to contribute to Rubeus either through [opening issues](CONTRIBUTING.md) on Github, making [pull requests](CONTRIBUTING.md), adding [Wiki pages](https://github.com/sdslabs/Rubeus/wiki), talking to the community at [our chat website](https://chat.sdslabs.co).
+Anyone is invited to contribute to Rubeus either through opening issues on Github, making pull requests, adding [Wiki pages](https://github.com/sdslabs/Rubeus/wiki), talking to the community at [our chat website](https://chat.sdslabs.co). Make sure to read the [contribution guidelines](CONTRIBUTING.md) to ease your way in.
 
 ## <a name=when>When can I use Rubeus?
 All game engine core sub-systems are in place and a final architecture is the current goal to achieve. We can have a release when that's done. 
