@@ -7,7 +7,7 @@ A 2D game engine written in C++17 using OpenGL 3.3
 3. Rubeus uses Visual Leak Detector v2.5.1 for catching memory leaks. Get it [here](https://github.com/KindDragon/vld/releases/tag/v2.5.1). However, if you wish to not use this tool, just remove `add_definitions(-DVLD)` from /RubeusCore/CMakeLists.txt.
 4. Clone this repository:
 ```shell
-$ git clone https://github.com/sdslabs/Rubeus
+$ git clone https://github.com/sdslabs/Rubeus.git
 ```
 
 ## Building required dependencies
