@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_graphic_components_1_1_r_static_layer" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::GraphicComponents::RStaticLayer</compoundname>
+    <basecompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_layer" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RLayer</basecompoundref>
+    <includes refid="static__layer__object_8h" local="no">static_layer_object.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_static_layer_1a9ed5040ccb838278d4d1da2288eb43c7" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_rubeus_1_1_graphic_components_1_1_r_group" kindref="compound">RGroup</ref> * &gt;</type>
+        <definition>std::vector&lt;RGroup *&gt; Rubeus::GraphicComponents::RStaticLayer::m_Groups</definition>
+        <argsstring></argsstring>
+        <name>m_Groups</name>
+        <briefdescription>
+<para>Vector array of all the groups handles by this layer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_layer_object.h" line="30" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_layer_object.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_static_layer_1abd85f881547ed736a526058b6fdb5118" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component" kindref="compound">RGuerrillaRendererComponent</ref> *</type>
+        <definition>RGuerrillaRendererComponent* Rubeus::GraphicComponents::RStaticLayer::m_Renderer</definition>
+        <argsstring></argsstring>
+        <name>m_Renderer</name>
+        <briefdescription>
+<para>The renderer alloted to this layer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_layer_object.h" line="33" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_layer_object.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_static_layer_1a0e8edc063471a20613594b09de4af911" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component" kindref="compound">RShaderComponent</ref> &amp;</type>
+        <definition>RShaderComponent&amp; Rubeus::GraphicComponents::RStaticLayer::m_Shader</definition>
+        <argsstring></argsstring>
+        <name>m_Shader</name>
+        <briefdescription>
+<para>The shader for this layer to use. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_layer_object.h" line="36" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_layer_object.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_static_layer_1a0915449c7e4c98f31dfbd7eb7d828f8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RStaticLayer::RStaticLayer</definition>
+        <argsstring>(RShaderComponent &amp;shader)</argsstring>
+        <name>RStaticLayer</name>
+        <param>
+          <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component" kindref="compound">RShaderComponent</ref> &amp;</type>
+          <declname>shader</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. Initialises the layer&apos;s shader. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Do not pass in derenferences pointers</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>shader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The shader to allot to this layer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_layer_object.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_static_layer_1a8e6e6c13bcdab6656f06f854a495f08d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RStaticLayer::~RStaticLayer</definition>
+        <argsstring>()</argsstring>
+        <name>~RStaticLayer</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_layer_object.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_static_layer_1a2c681c13da16059dd77c9f1eb2b991b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_layer" kindref="compound">RLayer</ref> &amp;</type>
+        <definition>RLayer &amp; Rubeus::GraphicComponents::RStaticLayer::addGroup</definition>
+        <argsstring>(RGroup &amp;group) override</argsstring>
+        <name>addGroup</name>
+        <reimplements refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a5412320eee522831c6d48c85030cc0bd">addGroup</reimplements>
+        <param>
+          <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_group" kindref="compound">RGroup</ref> &amp;</type>
+          <declname>group</declname>
+        </param>
+        <briefdescription>
+<para>Adds the group object to this layer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para></para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The group object to add.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this layer. Allows chaining multiple group additions. E.g. layer.addGoup(g1).addGroup(g2); </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_layer_object.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_static_layer_1a5dd2610842436bfc8d2fa527ec0aa7e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RStaticLayer::draw</definition>
+        <argsstring>() override</argsstring>
+        <name>draw</name>
+        <reimplements refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a1d3a0a6fc1caf1739dceec82d7d1d90c">draw</reimplements>
+        <briefdescription>
+<para>Draws the layer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Call only once per frame </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_layer_object.h" line="74" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Allows a static layer of groups of objects to be drawn on the screen. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="116">
+        <label>Rubeus::GraphicComponents::RStaticLayer</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_static_layer"/>
+        <childnode refid="117" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="117">
+        <label>Rubeus::GraphicComponents::RLayer</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_layer"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="118">
+        <label>Rubeus::GraphicComponents::RStaticLayer</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_static_layer"/>
+        <childnode refid="119" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="119">
+        <label>Rubeus::GraphicComponents::RLayer</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_layer"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_layer_object.h" line="27" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_layer_object.h" bodystart="26" bodyend="77"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_static_layer_1a2c681c13da16059dd77c9f1eb2b991b2" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RStaticLayer</scope><name>addGroup</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_static_layer_1a5dd2610842436bfc8d2fa527ec0aa7e7" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RStaticLayer</scope><name>draw</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_static_layer_1a9ed5040ccb838278d4d1da2288eb43c7" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RStaticLayer</scope><name>m_Groups</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_static_layer_1abd85f881547ed736a526058b6fdb5118" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RStaticLayer</scope><name>m_Renderer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_static_layer_1a0e8edc063471a20613594b09de4af911" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RStaticLayer</scope><name>m_Shader</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a53f1797a973a90568b5ad2e5a5fd3e1b" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RStaticLayer</scope><name>RLayer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_static_layer_1a0915449c7e4c98f31dfbd7eb7d828f8c" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RStaticLayer</scope><name>RStaticLayer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a7ff5ad86d9ca6a2a3509689a19b68917" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RStaticLayer</scope><name>~RLayer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_static_layer_1a8e6e6c13bcdab6656f06f854a495f08d" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RStaticLayer</scope><name>~RStaticLayer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

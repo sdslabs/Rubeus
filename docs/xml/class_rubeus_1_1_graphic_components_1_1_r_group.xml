@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_graphic_components_1_1_r_group" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::GraphicComponents::RGroup</compoundname>
+    <basecompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RRenderableObject</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_group_1a9efae1dba3cf4652ea7757f74a9a91c7" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">RML::Matrix4</ref></type>
+        <definition>RML::Matrix4 Rubeus::GraphicComponents::RGroup::m_TransformationMatrix</definition>
+        <argsstring></argsstring>
+        <name>m_TransformationMatrix</name>
+        <briefdescription>
+<para>The transform used to place this group&apos;s contents. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h" line="27" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_group_1ad428db00b3025d157b6aab5dd457c98b" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; const <ref refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object" kindref="compound">RRenderableObject</ref> * &gt;</type>
+        <definition>std::vector&lt;const RRenderableObject *&gt; Rubeus::GraphicComponents::RGroup::m_Renderables</definition>
+        <argsstring></argsstring>
+        <name>m_Renderables</name>
+        <briefdescription>
+<para>Vector array of renderables. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h" line="31" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_group_1a34b62e8d249e2fd552c3a4333072d593" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RGroup::RGroup</definition>
+        <argsstring>(const RML::Matrix4 &amp;transform)</argsstring>
+        <name>RGroup</name>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">RML::Matrix4</ref> &amp;</type>
+          <declname>transform</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tranform</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tranform that places the contents of this group. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_group_1a65a59f0752a6b2633a1beee72944cc18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RGroup::~RGroup</definition>
+        <argsstring>()</argsstring>
+        <name>~RGroup</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_group_1afba570254211098554f5975619c28ec8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RGroup::submit</definition>
+        <argsstring>(RRendererComponent &amp;renderer) const override</argsstring>
+        <name>submit</name>
+        <reimplements refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a54805529c6a3b5473918f7e46b20eddd">submit</reimplements>
+        <param>
+          <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component" kindref="compound">RRendererComponent</ref> &amp;</type>
+          <declname>renderer</declname>
+        </param>
+        <briefdescription>
+<para>Submit the group to a renderer queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>renderer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The renderer to send the group contents to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_group_1a3075ef3980ed768f25fe6638cb1b49f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_group" kindref="compound">RGroup</ref> &amp;</type>
+        <definition>Group &amp; Rubeus::GraphicComponents::RGroup::add</definition>
+        <argsstring>(RRenderableObject *renderable)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object" kindref="compound">RRenderableObject</ref> *</type>
+          <declname>renderable</declname>
+        </param>
+        <briefdescription>
+<para>Adds the renderable object as the children of this object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Do not manually delete passed in pointers. This object intends to take ownership of the passed in renderable object.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>renderable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The renderable object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this group object. Allows chaining <ref refid="class_rubeus_1_1_graphic_components_1_1_r_group_1a3075ef3980ed768f25fe6638cb1b49f0" kindref="member">add()</ref> calls. E.g. group.add(r1).add(r2); </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h" line="68" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="31">
+        <label>Rubeus::GraphicComponents::RRenderableObject</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
+      </node>
+      <node id="30">
+        <label>Rubeus::GraphicComponents::RGroup</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_group"/>
+        <childnode refid="31" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="34">
+        <label>RML::Vector4D</label>
+        <link refid="struct_r_m_l_1_1_vector4_d"/>
+      </node>
+      <node id="37">
+        <label>RML::Vector3D</label>
+        <link refid="struct_r_m_l_1_1_vector3_d"/>
+      </node>
+      <node id="35">
+        <label>Rubeus::GraphicComponents::RTexture</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_texture"/>
+      </node>
+      <node id="36">
+        <label>RML::Vector2D</label>
+        <link refid="struct_r_m_l_1_1_vector2_d"/>
+      </node>
+      <node id="33">
+        <label>Rubeus::GraphicComponents::RRenderableObject</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
+        <childnode refid="34" relation="usage">
+          <edgelabel>m_Color</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>m_Texture</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>m_Size</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>m_Position</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>Rubeus::GraphicComponents::RGroup</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_group"/>
+        <childnode refid="33" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h" line="24" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h" bodystart="23" bodyend="69"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_group_1a3075ef3980ed768f25fe6638cb1b49f0" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>add</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a27b261ef20f2e511e717d8f0d2518848" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>getColor</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a89dc97d0d5037e1602bec587a3aba786" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>getPosition</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1aee29b6de589c14179b43bd0dcb517765" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>getSize</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1aecc1218deec48c318f3f440d5958f662" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>getTextureID</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a67c746390cad14ed636bc695da4fd0b4" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>getUV</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a9cbc037a6bf3dda6477d2fbb00dddc75" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>m_Color</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a386b0ee3b6e0a3a673be6dedf0ab0cf2" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>m_ObjectID</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a59bf6b1c361b304defb6108c59dd5889" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>m_Position</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_group_1ad428db00b3025d157b6aab5dd457c98b" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>m_Renderables</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a6e20a1bae4cb712cf40018313daeeb88" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>m_Size</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a4b1bdda7f4751a83973aabaab6c09ea4" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>m_Texture</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_group_1a9efae1dba3cf4652ea7757f74a9a91c7" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>m_TransformationMatrix</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a8ce71902e92e9fe8a932782fc8b0366d" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>m_UV</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_group_1a34b62e8d249e2fd552c3a4333072d593" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>RGroup</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a999a7fd55dd03809513cadd09dc59581" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>RRenderableObject</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a71a90dda838f01c4a4a02d9d97013894" prot="protected" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>RRenderableObject</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1af37b1e80d9c832c6c8e7ccc7337a90f8" prot="protected" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>setUV</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_group_1afba570254211098554f5975619c28ec8" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>submit</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_group_1a65a59f0752a6b2633a1beee72944cc18" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>~RGroup</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a521bcff95a9ddd4dfd63e9d059dea3e5" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RGroup</scope><name>~RRenderableObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

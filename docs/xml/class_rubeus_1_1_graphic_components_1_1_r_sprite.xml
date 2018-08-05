@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_graphic_components_1_1_r_sprite" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::GraphicComponents::RSprite</compoundname>
+    <basecompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RRenderableObject</basecompoundref>
+    <includes refid="sprite__object_8h" local="no">sprite_object.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_sprite_1ae57b9bca6412edb0bd106b6ec13d9130" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RSprite::RSprite</definition>
+        <argsstring>()</argsstring>
+        <name>RSprite</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/sprite_object.h" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_sprite_1a129dfb88b174cc3506bd6cccf6871732" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RSprite::~RSprite</definition>
+        <argsstring>()</argsstring>
+        <name>~RSprite</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/sprite_object.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_sprite_1a1d64815d6e93bf072d157f9019d7ac80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RSprite::RSprite</definition>
+        <argsstring>(float x, float y, float width, float height, const RML::Vector4D &amp;color)</argsstring>
+        <name>RSprite</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">RML::Vector4D</ref> &amp;</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x offset. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y offset. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color of this sprite. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/sprite_object.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_sprite_1a5ec84d096cfcfc6ca96cb39a3555e32f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RSprite::RSprite</definition>
+        <argsstring>(float x, float y, float width, float height, RTexture *texture)</argsstring>
+        <name>RSprite</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_texture" kindref="compound">RTexture</ref> *</type>
+          <declname>texture</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x offset. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y offset. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>texture</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the texture to be used. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/sprite_object.h" line="62" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A sprite compatible with guerrilla renderer. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="108">
+        <label>Rubeus::GraphicComponents::RSprite</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_sprite"/>
+        <childnode refid="109" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="109">
+        <label>Rubeus::GraphicComponents::RRenderableObject</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="112">
+        <label>RML::Vector4D</label>
+        <link refid="struct_r_m_l_1_1_vector4_d"/>
+      </node>
+      <node id="110">
+        <label>Rubeus::GraphicComponents::RSprite</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_sprite"/>
+        <childnode refid="111" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="115">
+        <label>RML::Vector3D</label>
+        <link refid="struct_r_m_l_1_1_vector3_d"/>
+      </node>
+      <node id="113">
+        <label>Rubeus::GraphicComponents::RTexture</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_texture"/>
+      </node>
+      <node id="114">
+        <label>RML::Vector2D</label>
+        <link refid="struct_r_m_l_1_1_vector2_d"/>
+      </node>
+      <node id="111">
+        <label>Rubeus::GraphicComponents::RRenderableObject</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
+        <childnode refid="112" relation="usage">
+          <edgelabel>m_Color</edgelabel>
+        </childnode>
+        <childnode refid="113" relation="usage">
+          <edgelabel>m_Texture</edgelabel>
+        </childnode>
+        <childnode refid="114" relation="usage">
+          <edgelabel>m_Size</edgelabel>
+        </childnode>
+        <childnode refid="115" relation="usage">
+          <edgelabel>m_Position</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/sprite_object.h" line="21" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/sprite_object.h" bodystart="20" bodyend="65"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a27b261ef20f2e511e717d8f0d2518848" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>getColor</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a89dc97d0d5037e1602bec587a3aba786" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>getPosition</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1aee29b6de589c14179b43bd0dcb517765" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>getSize</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1aecc1218deec48c318f3f440d5958f662" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>getTextureID</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a67c746390cad14ed636bc695da4fd0b4" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>getUV</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a9cbc037a6bf3dda6477d2fbb00dddc75" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>m_Color</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a386b0ee3b6e0a3a673be6dedf0ab0cf2" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>m_ObjectID</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a59bf6b1c361b304defb6108c59dd5889" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>m_Position</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a6e20a1bae4cb712cf40018313daeeb88" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>m_Size</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a4b1bdda7f4751a83973aabaab6c09ea4" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>m_Texture</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a8ce71902e92e9fe8a932782fc8b0366d" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>m_UV</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a999a7fd55dd03809513cadd09dc59581" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>RRenderableObject</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a71a90dda838f01c4a4a02d9d97013894" prot="protected" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>RRenderableObject</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_sprite_1ae57b9bca6412edb0bd106b6ec13d9130" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>RSprite</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_sprite_1a1d64815d6e93bf072d157f9019d7ac80" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>RSprite</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_sprite_1a5ec84d096cfcfc6ca96cb39a3555e32f" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>RSprite</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1af37b1e80d9c832c6c8e7ccc7337a90f8" prot="protected" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>setUV</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a54805529c6a3b5473918f7e46b20eddd" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>submit</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a521bcff95a9ddd4dfd63e9d059dea3e5" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>~RRenderableObject</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_sprite_1a129dfb88b174cc3506bd6cccf6871732" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RSprite</scope><name>~RSprite</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

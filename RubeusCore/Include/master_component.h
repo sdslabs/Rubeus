@@ -18,9 +18,9 @@
 namespace Rubeus
 {
 	/**
-	* @class	MasterComponent
+	* @class		MasterComponent
 	*
-	* @brief	A master component.
+	* @brief		A master component.
 	* 			Serves as parent class for all components
 	*/
 	class RMasterComponent
@@ -76,7 +76,7 @@ namespace Rubeus
 		*/
 		unsigned int getComponentID() const;
 
-        /**
+		/**
 		 * @fn		inline std::string getName()
 		 *
 		 * @brief	Gets the fully qualified name of this component

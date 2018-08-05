@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_graphic_components_1_1_r_buffer" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::GraphicComponents::RBuffer</compoundname>
+    <includes refid="buffer__object_8h" local="no">buffer_object.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_buffer_1a78d2c2155be0a9013685a61e266153d7" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Rubeus::GraphicComponents::RBuffer::m_BufferID</definition>
+        <argsstring></argsstring>
+        <name>m_BufferID</name>
+        <briefdescription>
+<para>Identifier for the buffer, provided by OpenGL. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/buffer_object.h" line="26" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/buffer_object.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_buffer_1afc0e2f960d1d2c4b1c9f8b53d6b23ee9" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Rubeus::GraphicComponents::RBuffer::m_ElementCount</definition>
+        <argsstring></argsstring>
+        <name>m_ElementCount</name>
+        <briefdescription>
+<para>Number of elements in this buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/buffer_object.h" line="29" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/buffer_object.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_buffer_1a613ca2ff7c61ccb4e3e9dbd2d1e66942" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RBuffer::RBuffer</definition>
+        <argsstring>(GLfloat *data, GLsizei count, GLuint elementCount)</argsstring>
+        <name>RBuffer</name>
+        <param>
+          <type>GLfloat *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>GLsizei</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>GLuint</type>
+          <declname>elementCount</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. Generates a buffer object and applies its layout. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If non-null, the data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of total units of data values. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>elementCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elements. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/buffer_object.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_buffer_1a2afa37e252a1e7390debf1d1eb688ad7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RBuffer::~RBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>~RBuffer</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/buffer_object.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_buffer_1a033648201e56123a0955e17d88a0d536" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RBuffer::bindBuffer</definition>
+        <argsstring>() const</argsstring>
+        <name>bindBuffer</name>
+        <briefdescription>
+<para>Binds this buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/buffer_object.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_buffer_1a2a7194f58766bd546dee81a72c1e96e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RBuffer::unbindBuffer</definition>
+        <argsstring>() const</argsstring>
+        <name>unbindBuffer</name>
+        <briefdescription>
+<para>Unbinds buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/buffer_object.h" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_buffer_1a0e710825f166d31840579c5f549dd2cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>GLuint</type>
+        <definition>GLuint Rubeus::GraphicComponents::RBuffer::getElementCount</definition>
+        <argsstring>()</argsstring>
+        <name>getElementCount</name>
+        <briefdescription>
+<para>Gets number of elements in this buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The element count. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/buffer_object.h" line="72" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/buffer_object.h" bodystart="72" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A buffer class that handles generating and binding OpenGL buffers. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/buffer_object.h" line="23" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/buffer_object.h" bodystart="22" bodyend="73"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_buffer_1a033648201e56123a0955e17d88a0d536" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RBuffer</scope><name>bindBuffer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_buffer_1a0e710825f166d31840579c5f549dd2cd" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RBuffer</scope><name>getElementCount</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_buffer_1a78d2c2155be0a9013685a61e266153d7" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RBuffer</scope><name>m_BufferID</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_buffer_1afc0e2f960d1d2c4b1c9f8b53d6b23ee9" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RBuffer</scope><name>m_ElementCount</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_buffer_1a613ca2ff7c61ccb4e3e9dbd2d1e66942" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RBuffer</scope><name>RBuffer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_buffer_1a2a7194f58766bd546dee81a72c1e96e3" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RBuffer</scope><name>unbindBuffer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_buffer_1a2afa37e252a1e7390debf1d1eb688ad7" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RBuffer</scope><name>~RBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

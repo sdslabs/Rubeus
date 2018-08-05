@@ -1,0 +1,468 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="guerrilla__renderer__component_8h" kind="file" language="C++">
+    <compoundname>guerrilla_renderer_component.h</compoundname>
+    <includes local="no">cstddef</includes>
+    <includes refid="renderer__component_8h" local="no">renderer_component.h</includes>
+    <includes refid="renderable__object_8h" local="no">renderable_object.h</includes>
+    <includes refid="index__buffer__object_8h" local="no">index_buffer_object.h</includes>
+    <includedby refid="group__object_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h</includedby>
+    <includedby refid="layer__object_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_object.h</includedby>
+    <incdepgraph>
+      <node id="73">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h</label>
+        <link refid="guerrilla__renderer__component_8h"/>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+      </node>
+      <node id="103">
+        <label>shader_component.h</label>
+        <link refid="shader__component_8h"/>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>IL/il.h</label>
+      </node>
+      <node id="87">
+        <label>IL/ilu.h</label>
+      </node>
+      <node id="98">
+        <label>GL\glew.h</label>
+      </node>
+      <node id="81">
+        <label>string</label>
+      </node>
+      <node id="76">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="75">
+        <label>renderer_component.h</label>
+        <link refid="renderer__component_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>message_codes.h</label>
+        <link refid="message__codes_8h"/>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>message_object.h</label>
+        <link refid="message__object_8h"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>message_system.h</label>
+        <link refid="message__system_8h"/>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>image_object.h</label>
+        <link refid="image__object_8h"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="85">
+        <label>string.h</label>
+      </node>
+      <node id="83">
+        <label>typeinfo</label>
+      </node>
+      <node id="97">
+        <label>index_buffer_object.h</label>
+        <link refid="index__buffer__object_8h"/>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>vector</label>
+      </node>
+      <node id="78">
+        <label>math.h</label>
+      </node>
+      <node id="102">
+        <label>cstdlib</label>
+      </node>
+      <node id="94">
+        <label>message_bus.h</label>
+        <link refid="message__bus_8h"/>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>iostream</label>
+      </node>
+      <node id="99">
+        <label>vertex_array_object.h</label>
+        <link refid="vertex__array__object_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>cstddef</label>
+      </node>
+      <node id="82">
+        <label>unordered_map</label>
+      </node>
+      <node id="96">
+        <label>buffer_object.h</label>
+        <link refid="buffer__object_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="84">
+        <label>logger_component.h</label>
+        <link refid="logger__component_8h_source"/>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>rubeus_maths_library.h</label>
+        <link refid="rubeus__maths__library_8h"/>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>texture_object.h</label>
+        <link refid="texture__object_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+      </node>
+      <node id="101">
+        <label>loader_component.h</label>
+        <link refid="loader__component_8h_source"/>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>master_component.h</label>
+        <link refid="master__component_8h_source"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>renderable_object.h</label>
+        <link refid="renderable__object_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="104">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h</label>
+        <link refid="guerrilla__renderer__component_8h"/>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+      </node>
+      <node id="107">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_layer_object.h</label>
+        <link refid="static__layer__object_8h"/>
+      </node>
+      <node id="105">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h</label>
+        <link refid="group__object_8h"/>
+        <childnode refid="106" relation="include">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_object.h</label>
+        <link refid="layer__object_8h"/>
+        <childnode refid="107" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component" prot="public">Rubeus::GraphicComponents::RGuerrillaRendererComponent</innerclass>
+    <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
+    <innernamespace refid="namespace_rubeus_1_1_graphic_components">Rubeus::GraphicComponents</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="guerrilla__renderer__component_8h_1aeb21c7ac080eea985b7701df626d9cf4" prot="public" static="no">
+        <name>MAX_SPRITES</name>
+        <initializer>60000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="20" column="9" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="guerrilla__renderer__component_8h_1a14571eb5f0eee95bf614e04c59b0207a" prot="public" static="no">
+        <name>VERTEX_SIZE</name>
+        <initializer>sizeof(VertexData)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="21" column="9" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="guerrilla__renderer__component_8h_1ae3611cd7caad34521610ef1f7c116772" prot="public" static="no">
+        <name>SPRITE_SIZE</name>
+        <initializer>VERTEX_SIZE * 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="22" column="9" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="guerrilla__renderer__component_8h_1a6b20d41d6252e9871430c242cb1a56e7" prot="public" static="no">
+        <name>BUFFER_SIZE</name>
+        <initializer>SPRITE_SIZE * MAX_SPRITES</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="23" column="9" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="guerrilla__renderer__component_8h_1a26b4181e8c7e8b52d0f0314f19b273b6" prot="public" static="no">
+        <name>INDICES_SIZE</name>
+        <initializer>MAX_SPRITES * 6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="24" column="9" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="guerrilla__renderer__component_8h_1a52d3489372c1a1e2df43a7edd650f8f9" prot="public" static="no">
+        <name>SHADER_VERTEX_LOCATION</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="26" column="9" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="guerrilla__renderer__component_8h_1a50fae95b8efc92db604fd6c338c0afb5" prot="public" static="no">
+        <name>SHADER_UV_LOCATION</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="27" column="9" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="guerrilla__renderer__component_8h_1a60d1555232142c51c49fab6d00a8dab5" prot="public" static="no">
+        <name>SHADER_TEXTURE_ID_LOCATION</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="28" column="9" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="guerrilla__renderer__component_8h_1a353058b3a9e4cadae7a546995ab962e2" prot="public" static="no">
+        <name>SHADER_COLOR_LOCATION</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="29" column="9" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="guerrilla__renderer__component_8h_1a2238f2db52f7f84a05b1eb5bf941b832" prot="public" static="no">
+        <name>MAX_ALLOWED_TEXTURES</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="31" column="9" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Declares the guerrilla renderer component class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="renderer__component_8h" kindref="compound">renderer_component.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="renderable__object_8h" kindref="compound">renderable_object.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="index__buffer__object_8h" kindref="compound">index_buffer_object.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_rubeus" kindref="compound">Rubeus</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">GraphicComponents</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_SPRITES<sp/>60000</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VERTEX_SIZE<sp/>sizeof(VertexData)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPRITE_SIZE<sp/>VERTEX_SIZE<sp/>*<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BUFFER_SIZE<sp/>SPRITE_SIZE<sp/>*<sp/>MAX_SPRITES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INDICES_SIZE<sp/>MAX_SPRITES<sp/>*<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHADER_VERTEX_LOCATION<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHADER_UV_LOCATION<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHADER_TEXTURE_ID_LOCATION<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SHADER_COLOR_LOCATION<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_ALLOWED_TEXTURES<sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component" kindref="compound">RGuerrillaRendererComponent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component" kindref="compound">RRendererComponent</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_VAO;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLuint<sp/>m_VBO;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_index_buffer" kindref="compound">RIndexBuffer</ref><sp/>*<sp/>m_IBO;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLsizei<sp/>m_IndexCount;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_rubeus_1_1_graphic_components_1_1_vertex_data" kindref="compound">VertexData</ref><sp/>*<sp/>m_Buffer;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;RML::Matrix4&gt;<sp/>m_TransformationStack;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">RML::Matrix4</ref><sp/>*<sp/>m_TransformationBack;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;GLuint&gt;<sp/>m_TextureSlots;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component_1af9e0e96ea0cb6cd0b85e224874ad6895" kindref="member">RGuerrillaRendererComponent</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component_1a03ebed59b19573fc643ee8798f4976ef" kindref="member">~RGuerrillaRendererComponent</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component_1ad1b3394c276176809806b3ead922e7de" kindref="member">begin</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component_1ac92a8fe8646e1e60726f7b351da187fb" kindref="member">submit</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object" kindref="compound">RRenderableObject</ref><sp/>*<sp/>renderable)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component_1a2295e5dc98292550b39a62b8007703aa" kindref="member">end</ref>();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component_1a4f2e53fb66f530afedc4180568e61c6c" kindref="member">flush</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component_1ab8c526a011fafe6019f9e959468d3559" kindref="member">push</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">RML::Matrix4</ref><sp/>&amp;<sp/>matrix)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component_1ad6f89209b2f16b8b0d43ca104cf5ad49" kindref="member">pushOverride</ref>(<ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">RML::Matrix4</ref><sp/>&amp;<sp/>matrix)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component_1ac759da23f42f09c56aa62a4895a1728b" kindref="member">pop</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h"/>
+  </compounddef>
+</doxygen>

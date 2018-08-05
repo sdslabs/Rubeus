@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="message__bus_8h" kind="file" language="C++">
+    <compoundname>message_bus.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes refid="message__object_8h" local="no">message_object.h</includes>
+    <includedby refid="message__system_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_system.h</includedby>
+    <incdepgraph>
+      <node id="315">
+        <label>IL/il.h</label>
+      </node>
+      <node id="321">
+        <label>IL/ilu.h</label>
+      </node>
+      <node id="312">
+        <label>string</label>
+      </node>
+      <node id="320">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="316">
+        <label>message_codes.h</label>
+        <link refid="message__codes_8h"/>
+        <childnode refid="317" relation="include">
+        </childnode>
+      </node>
+      <node id="311">
+        <label>message_object.h</label>
+        <link refid="message__object_8h"/>
+        <childnode refid="312" relation="include">
+        </childnode>
+        <childnode refid="313" relation="include">
+        </childnode>
+        <childnode refid="314" relation="include">
+        </childnode>
+        <childnode refid="316" relation="include">
+        </childnode>
+      </node>
+      <node id="314">
+        <label>image_object.h</label>
+        <link refid="image__object_8h"/>
+        <childnode refid="312" relation="include">
+        </childnode>
+        <childnode refid="315" relation="include">
+        </childnode>
+      </node>
+      <node id="313">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="319">
+        <label>string.h</label>
+      </node>
+      <node id="310">
+        <label>vector</label>
+      </node>
+      <node id="309">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_bus.h</label>
+        <link refid="message__bus_8h"/>
+        <childnode refid="310" relation="include">
+        </childnode>
+        <childnode refid="311" relation="include">
+        </childnode>
+      </node>
+      <node id="318">
+        <label>iostream</label>
+      </node>
+      <node id="317">
+        <label>logger_component.h</label>
+        <link refid="logger__component_8h_source"/>
+        <childnode refid="318" relation="include">
+        </childnode>
+        <childnode refid="319" relation="include">
+        </childnode>
+        <childnode refid="312" relation="include">
+        </childnode>
+        <childnode refid="320" relation="include">
+        </childnode>
+        <childnode refid="315" relation="include">
+        </childnode>
+        <childnode refid="321" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="334">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h</label>
+        <link refid="guerrilla__renderer__component_8h"/>
+        <childnode refid="331" relation="include">
+        </childnode>
+        <childnode refid="332" relation="include">
+        </childnode>
+      </node>
+      <node id="333">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_layer_object.h</label>
+        <link refid="static__layer__object_8h"/>
+      </node>
+      <node id="329">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/shader_component.h</label>
+        <link refid="shader__component_8h"/>
+        <childnode refid="330" relation="include">
+        </childnode>
+        <childnode refid="333" relation="include">
+        </childnode>
+      </node>
+      <node id="331">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h</label>
+        <link refid="group__object_8h"/>
+        <childnode refid="332" relation="include">
+        </childnode>
+      </node>
+      <node id="335">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/sprite_object.h</label>
+        <link refid="sprite__object_8h"/>
+        <childnode refid="333" relation="include">
+        </childnode>
+      </node>
+      <node id="340">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/timer_component.h</label>
+        <link refid="timer__component_8h"/>
+      </node>
+      <node id="325">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h</label>
+        <link refid="audio__manager__component_8h"/>
+      </node>
+      <node id="339">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderer_component.h</label>
+        <link refid="renderer__component_8h"/>
+        <childnode refid="334" relation="include">
+        </childnode>
+        <childnode refid="330" relation="include">
+        </childnode>
+        <childnode refid="337" relation="include">
+        </childnode>
+      </node>
+      <node id="323">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_system.h</label>
+        <link refid="message__system_8h"/>
+        <childnode refid="324" relation="include">
+        </childnode>
+      </node>
+      <node id="332">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_object.h</label>
+        <link refid="layer__object_8h"/>
+        <childnode refid="333" relation="include">
+        </childnode>
+      </node>
+      <node id="327">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h</label>
+        <link refid="window__component_8h"/>
+      </node>
+      <node id="326">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_component.h</label>
+        <link refid="input__component_8h_source"/>
+        <childnode refid="327" relation="include">
+        </childnode>
+      </node>
+      <node id="322">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_bus.h</label>
+        <link refid="message__bus_8h"/>
+        <childnode refid="323" relation="include">
+        </childnode>
+      </node>
+      <node id="337">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/simple_renderer_component.h</label>
+        <link refid="simple__renderer__component_8h"/>
+      </node>
+      <node id="336">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_sprite_object.h</label>
+        <link refid="static__sprite__object_8h"/>
+        <childnode refid="337" relation="include">
+        </childnode>
+      </node>
+      <node id="338">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/texture_object.h</label>
+        <link refid="texture__object_8h"/>
+        <childnode refid="330" relation="include">
+        </childnode>
+      </node>
+      <node id="328">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/loader_component.h</label>
+        <link refid="loader__component_8h_source"/>
+        <childnode refid="326" relation="include">
+        </childnode>
+        <childnode refid="329" relation="include">
+        </childnode>
+        <childnode refid="338" relation="include">
+        </childnode>
+        <childnode refid="327" relation="include">
+        </childnode>
+      </node>
+      <node id="324">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h</label>
+        <link refid="master__component_8h_source"/>
+        <childnode refid="325" relation="include">
+        </childnode>
+        <childnode refid="326" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+        <childnode refid="339" relation="include">
+        </childnode>
+        <childnode refid="329" relation="include">
+        </childnode>
+        <childnode refid="340" relation="include">
+        </childnode>
+        <childnode refid="327" relation="include">
+        </childnode>
+      </node>
+      <node id="330">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h</label>
+        <link refid="renderable__object_8h"/>
+        <childnode refid="331" relation="include">
+        </childnode>
+        <childnode refid="334" relation="include">
+        </childnode>
+        <childnode refid="332" relation="include">
+        </childnode>
+        <childnode refid="335" relation="include">
+        </childnode>
+        <childnode refid="336" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_rubeus_1_1_r_message_bus" prot="public">Rubeus::RMessageBus</innerclass>
+    <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
+    <briefdescription>
+<para>Declares the message bus class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="message__object_8h" kindref="compound">message_object.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_rubeus" kindref="compound">Rubeus</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">RMasterComponent;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_rubeus_1_1_r_message_bus" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rubeus_1_1_r_message_bus" kindref="compound">RMessageBus</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21" refid="class_rubeus_1_1_r_message_bus_1aa48f8d44b62e33ce789acf028d4ed267" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;RMasterComponent<sp/>*&gt;<sp/><ref refid="class_rubeus_1_1_r_message_bus_1aa48f8d44b62e33ce789acf028d4ed267" kindref="member">m_Systems</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_rubeus_1_1_r_message_bus_1a912614d17e909bb9deed7f7ccdb8e20e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Message<sp/>*&gt;<sp/><ref refid="class_rubeus_1_1_r_message_bus_1a912614d17e909bb9deed7f7ccdb8e20e" kindref="member">m_MessageQueue</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_r_message_bus_1a44b2eda2ed71693db3aa77370e6a4206" kindref="member">RMessageBus</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_r_message_bus_1a68ba53f79ff996a23958ffafe04e1b26" kindref="member">~RMessageBus</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_message_bus_1a193a8085ccba53a0318a1ac1375008db" kindref="member">addSystem</ref>(<ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref><sp/>*<sp/>system);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_message_bus_1acb29ca3d37aa536cee094fcfdb8ac787" kindref="member">post</ref>(<ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref><sp/>*<sp/>message);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref><sp/>*<sp/><ref refid="class_rubeus_1_1_r_message_bus_1af65073dff38f98ce5cc8ea8042cdc28f" kindref="member">pop</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_bus.h"/>
+  </compounddef>
+</doxygen>

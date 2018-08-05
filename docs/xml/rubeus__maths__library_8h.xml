@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="rubeus__maths__library_8h" kind="file" language="C++">
+    <compoundname>rubeus_maths_library.h</compoundname>
+    <includes local="no">math.h</includes>
+    <includes local="no">iostream</includes>
+    <includedby refid="group__object_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h</includedby>
+    <includedby refid="renderable__object_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h</includedby>
+    <includedby refid="renderer__component_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderer_component.h</includedby>
+    <includedby refid="shader__component_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/shader_component.h</includedby>
+    <includedby refid="static__layer__object_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_layer_object.h</includedby>
+    <incdepgraph>
+      <node id="502">
+        <label>math.h</label>
+      </node>
+      <node id="503">
+        <label>iostream</label>
+      </node>
+      <node id="501">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h</label>
+        <link refid="rubeus__maths__library_8h"/>
+        <childnode refid="502" relation="include">
+        </childnode>
+        <childnode refid="503" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="509">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h</label>
+        <link refid="guerrilla__renderer__component_8h"/>
+        <childnode refid="505" relation="include">
+        </childnode>
+        <childnode refid="506" relation="include">
+        </childnode>
+      </node>
+      <node id="507">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_layer_object.h</label>
+        <link refid="static__layer__object_8h"/>
+      </node>
+      <node id="514">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/shader_component.h</label>
+        <link refid="shader__component_8h"/>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="507" relation="include">
+        </childnode>
+      </node>
+      <node id="505">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h</label>
+        <link refid="group__object_8h"/>
+        <childnode refid="506" relation="include">
+        </childnode>
+      </node>
+      <node id="510">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/sprite_object.h</label>
+        <link refid="sprite__object_8h"/>
+        <childnode refid="507" relation="include">
+        </childnode>
+      </node>
+      <node id="513">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderer_component.h</label>
+        <link refid="renderer__component_8h"/>
+        <childnode refid="509" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="512" relation="include">
+        </childnode>
+      </node>
+      <node id="506">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_object.h</label>
+        <link refid="layer__object_8h"/>
+        <childnode refid="507" relation="include">
+        </childnode>
+      </node>
+      <node id="512">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/simple_renderer_component.h</label>
+        <link refid="simple__renderer__component_8h"/>
+      </node>
+      <node id="511">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_sprite_object.h</label>
+        <link refid="static__sprite__object_8h"/>
+        <childnode refid="512" relation="include">
+        </childnode>
+      </node>
+      <node id="504">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h</label>
+        <link refid="rubeus__maths__library_8h"/>
+        <childnode refid="505" relation="include">
+        </childnode>
+        <childnode refid="508" relation="include">
+        </childnode>
+        <childnode refid="513" relation="include">
+        </childnode>
+        <childnode refid="514" relation="include">
+        </childnode>
+        <childnode refid="507" relation="include">
+        </childnode>
+      </node>
+      <node id="508">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h</label>
+        <link refid="renderable__object_8h"/>
+        <childnode refid="505" relation="include">
+        </childnode>
+        <childnode refid="509" relation="include">
+        </childnode>
+        <childnode refid="506" relation="include">
+        </childnode>
+        <childnode refid="510" relation="include">
+        </childnode>
+        <childnode refid="511" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_r_m_l_1_1_vector2_d" prot="public">RML::Vector2D</innerclass>
+    <innerclass refid="struct_r_m_l_1_1_vector3_d" prot="public">RML::Vector3D</innerclass>
+    <innerclass refid="struct_r_m_l_1_1_vector4_d" prot="public">RML::Vector4D</innerclass>
+    <innerclass refid="struct_r_m_l_1_1_matrix4" prot="public">RML::Matrix4</innerclass>
+    <innernamespace refid="namespace_r_m_l">RML</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="rubeus__maths__library_8h_1a525335710b53cb064ca56b936120431e" prot="public" static="no">
+        <name>_USE_MATH_DEFINES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="9" column="9" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Declares the RML (Rubeus Maths Library) </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_USE_MATH_DEFINES</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_r_m_l" kindref="compound">RML</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25" refid="rubeus__maths__library_8h_1a172fe5f30b4f649cacce7e1b110e46c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="rubeus__maths__library_8h_1a172fe5f30b4f649cacce7e1b110e46c6" kindref="member">degreeToRadians</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>degree)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>degree<sp/>*<sp/>(float)<sp/>(M_PI<sp/>/<sp/>180.0f);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="struct_r_m_l_1_1_vector2_d" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38" refid="struct_r_m_l_1_1_vector2_d_1ab5c3a92e55c53865ba1662ad2beb6ef2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d_1ab5c3a92e55c53865ba1662ad2beb6ef2" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="struct_r_m_l_1_1_vector2_d_1a05f39d7943bb201be12d409246fc7bae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d_1a05f39d7943bb201be12d409246fc7bae" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector2_d_1a39ae4a2d20e822527b329683a2bf0dda" kindref="member">Vector2D</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector2_d_1a39ae4a2d20e822527b329683a2bf0dda" kindref="member">Vector2D</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<ref refid="struct_r_m_l_1_1_vector2_d_1ab5c3a92e55c53865ba1662ad2beb6ef2" kindref="member">x</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<ref refid="struct_r_m_l_1_1_vector2_d_1a05f39d7943bb201be12d409246fc7bae" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d_1a235406fb3743bab4fe5d4ce7ac2695e2" kindref="member">getLength</ref>(<ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref>&amp;<sp/>vector)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector2_d_1a24a5d8d195ddd7e0e5f27c05a93bf823" kindref="member">add</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector2_d_1a40f35e27b1a9c197a3370aafc1ae61f4" kindref="member">subtract</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector2_d_1a0c18b119beab3d9ee30fb5b86e76d75b" kindref="member">multiply</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector2_d_1af6867f3291fa38bb929187ec966390f2" kindref="member">divide</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="struct_r_m_l_1_1_vector2_d_1a06b6908d4cc6d42b97f8e170d207f704" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref>&amp;<sp/>vector);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector2_d_1a0f7d18328dd2439ce8c22448d6fc3a43" kindref="member">operator+</ref>(<ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>left,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;right);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector2_d_1ae6cffe844d261af54e0c96d4a4e8971f" kindref="member">operator-</ref>(<ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>left,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;right);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector2_d_1afc2ee110866e616b8acfd6d1eea64eee" kindref="member">operator*</ref>(<ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>left,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;right);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector2_d_1a27011a9d9baf6c52476d5a5d27ceeea9" kindref="member">operator/</ref>(<ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>left,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;right);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d_1a4d39c5e0743400d7d14d0683ff168a5a" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d_1ad0fd2b1ac014d6345224d03f258a1164" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector2_d_1a933787f37217402094ecec3f3e3de01c" kindref="member">operator+=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector2_d_1a4a19917907c69474afc0330edaa05f08" kindref="member">operator-=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector2_d_1a4caff2a72c5abc5d89218809d899e90d" kindref="member">operator*=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector2_d_1a879806aa7dc16c51349208bf7da904e4" kindref="member">operator/=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251" refid="struct_r_m_l_1_1_vector3_d" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="254" refid="struct_r_m_l_1_1_vector3_d_1a6a44f9334ebb4ae0ca6634d195914016" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d_1a6a44f9334ebb4ae0ca6634d195914016" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257" refid="struct_r_m_l_1_1_vector3_d_1a967dbb984259d52bc299e9c145ccb59b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d_1a967dbb984259d52bc299e9c145ccb59b" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260" refid="struct_r_m_l_1_1_vector3_d_1aa01bf2be80215c0a25e2c6cad6349767" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d_1aa01bf2be80215c0a25e2c6cad6349767" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector3_d_1a6b8c12f17d045c8a43b674ebec7190fe" kindref="member">Vector3D</ref>();</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector3_d_1a6b8c12f17d045c8a43b674ebec7190fe" kindref="member">Vector3D</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<ref refid="struct_r_m_l_1_1_vector3_d_1a6a44f9334ebb4ae0ca6634d195914016" kindref="member">x</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<ref refid="struct_r_m_l_1_1_vector3_d_1a967dbb984259d52bc299e9c145ccb59b" kindref="member">y</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<ref refid="struct_r_m_l_1_1_vector3_d_1aa01bf2be80215c0a25e2c6cad6349767" kindref="member">z</ref>);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d_1a5e4222f3ef8a53a78903db74de855569" kindref="member">getLength</ref>(<ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref>&amp;<sp/>vector)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector3_d_1ae490026de2bc1c7c69543686d5677d33" kindref="member">add</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector3_d_1a5831741dc88ac4abba376953c37c760b" kindref="member">subtract</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector3_d_1a8b30fe6010364d9f7c0a9f70d79cd763" kindref="member">multiply</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector3_d_1a15ac875f67d72fba4edc3e92432fd5a5" kindref="member">divide</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="struct_r_m_l_1_1_vector3_d_1a9c0cc562b338de248976b51a71a9be09" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref>&amp;<sp/>vector);</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector3_d_1aa112a27ed9ff973b5270845524f6990f" kindref="member">operator+</ref>(<ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>left,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>&amp;right);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector3_d_1ab61d3901bae4ab8fb099c19f86d5065e" kindref="member">operator-</ref>(<ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>left,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>&amp;right);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector3_d_1a8a11ba64eb61962fb1cc92a244890c7b" kindref="member">operator*</ref>(<ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>left,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>&amp;right);</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector3_d_1a1331e2fbb42bb468bcd9cec0794bce7b" kindref="member">operator/</ref>(<ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>left,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>&amp;right);</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d_1a048a3d9ed505aee2e637117036d23d43" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"></highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d_1a8bd28d3db1f8d6ddf6d578b6f6be40a9" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector3_d_1aa4132db4ccf37586c84e4dab071085e5" kindref="member">operator+=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector3_d_1a7267d6915bb2b74d41c0a06d24ce9ef9" kindref="member">operator-=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector3_d_1a9036303c0ed8d11f739d1757da352c91" kindref="member">operator*=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"></highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector3_d_1a4bf33c2319ba86127295fdbf0f4ee7b9" kindref="member">operator/=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"></highlight></codeline>
+<codeline lineno="468" refid="struct_r_m_l_1_1_vector4_d" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref></highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="471" refid="struct_r_m_l_1_1_vector4_d_1adcb520477d39fd0f1d4d60e53ce6d85a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d_1adcb520477d39fd0f1d4d60e53ce6d85a" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"></highlight></codeline>
+<codeline lineno="474" refid="struct_r_m_l_1_1_vector4_d_1a14cae581494b8c58f1721a41ff9c95f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d_1a14cae581494b8c58f1721a41ff9c95f5" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"></highlight></codeline>
+<codeline lineno="477" refid="struct_r_m_l_1_1_vector4_d_1a6523108955901df4b77ea5f7527b8d4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d_1a6523108955901df4b77ea5f7527b8d4a" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"></highlight></codeline>
+<codeline lineno="480" refid="struct_r_m_l_1_1_vector4_d_1a93ab2b98d896c89315742cbb3fcb0ef6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d_1a93ab2b98d896c89315742cbb3fcb0ef6" kindref="member">w</ref>;</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"></highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector4_d_1abb8dcf2e1a1a32030144a5784385b399" kindref="member">Vector4D</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"></highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector4_d_1abb8dcf2e1a1a32030144a5784385b399" kindref="member">Vector4D</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<ref refid="struct_r_m_l_1_1_vector4_d_1adcb520477d39fd0f1d4d60e53ce6d85a" kindref="member">x</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<ref refid="struct_r_m_l_1_1_vector4_d_1a14cae581494b8c58f1721a41ff9c95f5" kindref="member">y</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<ref refid="struct_r_m_l_1_1_vector4_d_1a6523108955901df4b77ea5f7527b8d4a" kindref="member">z</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<ref refid="struct_r_m_l_1_1_vector4_d_1a93ab2b98d896c89315742cbb3fcb0ef6" kindref="member">w</ref>);</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"></highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d_1a74373f069530627f194e5bba0a23ae3b" kindref="member">getLength</ref>(<ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref>&amp;<sp/>vector)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"></highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/><ref refid="struct_r_m_l_1_1_vector4_d_1af5bc24e9eaa6c52c1a793755421eddf9" kindref="member">normaliseToRGBA</ref>();</highlight></codeline>
+<codeline lineno="521"><highlight class="normal"></highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector4_d_1a19da676c402114eca6556022cbf77aab" kindref="member">add</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="532"><highlight class="normal"></highlight></codeline>
+<codeline lineno="542"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector4_d_1ae643fc3223a85b3c5b4b8f81298c7244" kindref="member">subtract</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"></highlight></codeline>
+<codeline lineno="553"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector4_d_1a0793689cb56a292f64094bee02dea911" kindref="member">multiply</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="554"><highlight class="normal"></highlight></codeline>
+<codeline lineno="565"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector4_d_1a9fc886cda50726d946fd1b6c50da16c6" kindref="member">divide</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="566"><highlight class="normal"></highlight></codeline>
+<codeline lineno="577"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="struct_r_m_l_1_1_vector4_d_1a59b15f56f8e4c2073cc3709df5055095" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref>&amp;<sp/>vector);</highlight></codeline>
+<codeline lineno="578"><highlight class="normal"></highlight></codeline>
+<codeline lineno="589"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector4_d_1a1ffba004ed1cab5fdd33667cd3f2d352" kindref="member">operator+</ref>(<ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/>left,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/>&amp;right);</highlight></codeline>
+<codeline lineno="590"><highlight class="normal"></highlight></codeline>
+<codeline lineno="601"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector4_d_1af2b73bc6f250d0c8d1002b370d56aa58" kindref="member">operator-</ref>(<ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/>left,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/>&amp;right);</highlight></codeline>
+<codeline lineno="602"><highlight class="normal"></highlight></codeline>
+<codeline lineno="613"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector4_d_1a571a0b43449ef23e9d94aaa96e5f566f" kindref="member">operator*</ref>(<ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/>left,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/>&amp;right);</highlight></codeline>
+<codeline lineno="614"><highlight class="normal"></highlight></codeline>
+<codeline lineno="625"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector4_d_1a52d83cdab624059568446d23607402a5" kindref="member">operator/</ref>(<ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/>left,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/>&amp;right);</highlight></codeline>
+<codeline lineno="626"><highlight class="normal"></highlight></codeline>
+<codeline lineno="636"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d_1ad793560a0cd4c6f7af5e355b67b33994" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="637"><highlight class="normal"></highlight></codeline>
+<codeline lineno="647"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d_1ac9bd0fc89969166c40590677e239a293" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="648"><highlight class="normal"></highlight></codeline>
+<codeline lineno="658"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector4_d_1a96d924fa33e8d53b09c323410ba62c49" kindref="member">operator+=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="659"><highlight class="normal"></highlight></codeline>
+<codeline lineno="669"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector4_d_1acc5af278f7b72faefb812d9cec641323" kindref="member">operator-=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="670"><highlight class="normal"></highlight></codeline>
+<codeline lineno="680"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector4_d_1a9e708a9b84793d8ad7a62ffc83a94616" kindref="member">operator*=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="681"><highlight class="normal"></highlight></codeline>
+<codeline lineno="691"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_vector4_d_1a7f2df730c80c82f0c7d81bdac3d5e340" kindref="member">operator/=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="692"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="693"><highlight class="normal"></highlight></codeline>
+<codeline lineno="699" refid="struct_r_m_l_1_1_matrix4" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref></highlight></codeline>
+<codeline lineno="700"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="706"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="707"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="709" refid="struct_r_m_l_1_1_matrix4_1a0168d944094fa74d7f946ad0d79ab08d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_matrix4_1a0168d944094fa74d7f946ad0d79ab08d" kindref="member">elements</ref>[4<sp/>*<sp/>4];</highlight></codeline>
+<codeline lineno="710"><highlight class="normal"></highlight></codeline>
+<codeline lineno="712" refid="struct_r_m_l_1_1_matrix4_1afbd8a5a65a2fa1a0dc2e019ea702509b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref><sp/><ref refid="struct_r_m_l_1_1_matrix4_1afbd8a5a65a2fa1a0dc2e019ea702509b" kindref="member">columns</ref>[4];</highlight></codeline>
+<codeline lineno="713"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="714"><highlight class="normal"></highlight></codeline>
+<codeline lineno="720"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_matrix4_1ae6cb41ca121c787cd424e30be9ec197b" kindref="member">Matrix4</ref>();</highlight></codeline>
+<codeline lineno="721"><highlight class="normal"></highlight></codeline>
+<codeline lineno="729"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_matrix4_1ae6cb41ca121c787cd424e30be9ec197b" kindref="member">Matrix4</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>diagonal);</highlight></codeline>
+<codeline lineno="730"><highlight class="normal"></highlight></codeline>
+<codeline lineno="738"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref><sp/><ref refid="struct_r_m_l_1_1_matrix4_1aadc06ed4632520f877278792b90d81dc" kindref="member">identity</ref>();</highlight></codeline>
+<codeline lineno="739"><highlight class="normal"></highlight></codeline>
+<codeline lineno="749"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_matrix4_1a018d5eead295d1575dd1cfaf4892bb1a" kindref="member">multiply</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref>&amp;<sp/>other);</highlight></codeline>
+<codeline lineno="750"><highlight class="normal"></highlight></codeline>
+<codeline lineno="760"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/><ref refid="struct_r_m_l_1_1_matrix4_1a018d5eead295d1575dd1cfaf4892bb1a" kindref="member">multiply</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>&amp;<sp/>vector);</highlight></codeline>
+<codeline lineno="761"><highlight class="normal"></highlight></codeline>
+<codeline lineno="772"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/><ref refid="struct_r_m_l_1_1_matrix4_1a62b90a9d339e60b38aafe83338939168" kindref="member">operator&lt;&lt;</ref>(std::ostream&amp;<sp/>stream,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref>&amp;<sp/>matrix);</highlight></codeline>
+<codeline lineno="773"><highlight class="normal"></highlight></codeline>
+<codeline lineno="784"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref><sp/><ref refid="struct_r_m_l_1_1_matrix4_1aada1dd7495c9b1ea02a1afd62ee4c857" kindref="member">operator*</ref>(<ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref><sp/>left,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref>&amp;<sp/>right);</highlight></codeline>
+<codeline lineno="785"><highlight class="normal"></highlight></codeline>
+<codeline lineno="796"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/><ref refid="struct_r_m_l_1_1_matrix4_1aada1dd7495c9b1ea02a1afd62ee4c857" kindref="member">operator*</ref>(<ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref><sp/>&amp;<sp/>matrix,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/>&amp;<sp/>vector);</highlight></codeline>
+<codeline lineno="797"><highlight class="normal"></highlight></codeline>
+<codeline lineno="807"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_matrix4_1a28d8726ea817c8319d9b3d0437af1f35" kindref="member">operator*=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref><sp/>&amp;other);</highlight></codeline>
+<codeline lineno="808"><highlight class="normal"></highlight></codeline>
+<codeline lineno="823"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref><sp/><ref refid="struct_r_m_l_1_1_matrix4_1a15053ebac4f9a215ef6e111141a7507b" kindref="member">orthographic</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>left,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>right,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>bottom,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>top,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>near,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>far);</highlight></codeline>
+<codeline lineno="824"><highlight class="normal"></highlight></codeline>
+<codeline lineno="837"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref><sp/><ref refid="struct_r_m_l_1_1_matrix4_1a6a769621695539c0504d86eef3e5285b" kindref="member">perspective</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fov,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>aspectRatio,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>near,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>far);</highlight></codeline>
+<codeline lineno="838"><highlight class="normal"></highlight></codeline>
+<codeline lineno="849"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref><sp/><ref refid="struct_r_m_l_1_1_matrix4_1ae185c1e416dc969b345b85ebad8d10fe" kindref="member">translation</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref>&amp;<sp/><ref refid="struct_r_m_l_1_1_matrix4_1ae185c1e416dc969b345b85ebad8d10fe" kindref="member">translation</ref>);</highlight></codeline>
+<codeline lineno="850"><highlight class="normal"></highlight></codeline>
+<codeline lineno="862"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref><sp/><ref refid="struct_r_m_l_1_1_matrix4_1a27b9eaf13477e5eac82df25dc64b105b" kindref="member">rotation</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>angle,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref>&amp;<sp/>axis);</highlight></codeline>
+<codeline lineno="863"><highlight class="normal"></highlight></codeline>
+<codeline lineno="873"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref><sp/><ref refid="struct_r_m_l_1_1_matrix4_1a00dec154f240f40ecd6fb4bc067593cf" kindref="member">scale</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref><sp/><ref refid="struct_r_m_l_1_1_matrix4_1a00dec154f240f40ecd6fb4bc067593cf" kindref="member">scale</ref>);</highlight></codeline>
+<codeline lineno="874"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="875"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h"/>
+  </compounddef>
+</doxygen>

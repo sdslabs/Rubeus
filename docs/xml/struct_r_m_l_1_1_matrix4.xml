@@ -1,0 +1,544 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="struct_r_m_l_1_1_matrix4" kind="struct" language="C++" prot="public">
+    <compoundname>RML::Matrix4</compoundname>
+    <includes refid="rubeus__maths__library_8h" local="no">rubeus_maths_library.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_r_m_l_1_1_matrix4_1a0168d944094fa74d7f946ad0d79ab08d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RML::Matrix4::elements[4 *4]</definition>
+        <argsstring>[4 *4]</argsstring>
+        <name>elements</name>
+        <briefdescription>
+<para>The elements[4 * 4]. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="709" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="709" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_r_m_l_1_1_matrix4_1afbd8a5a65a2fa1a0dc2e019ea702509b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref></type>
+        <definition>Vector4D RML::Matrix4::columns[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>columns</name>
+        <briefdescription>
+<para>The columns[4] in forms of Vector4Ds. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="712" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="712" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_r_m_l_1_1_matrix4_1a907bbfc96cfce60bdc19fb57c24c0f68" prot="public" static="no" mutable="no">
+        <type>union RML::Matrix4::@0</type>
+        <definition>union RML::Matrix4::@0 RML::Matrix4::@1</definition>
+        <argsstring></argsstring>
+        <name>@1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="713" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_r_m_l_1_1_matrix4_1ae6cb41ca121c787cd424e30be9ec197b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RML::Matrix4::Matrix4</definition>
+        <argsstring>()</argsstring>
+        <name>Matrix4</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="720" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_matrix4_1af6e49071696e577315efb81e34655d3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RML::Matrix4::Matrix4</definition>
+        <argsstring>(float diagonal)</argsstring>
+        <name>Matrix4</name>
+        <param>
+          <type>float</type>
+          <declname>diagonal</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. Initialises <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref> with a diagonal matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>diagonal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The diagonal. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="729" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_matrix4_1a018d5eead295d1575dd1cfaf4892bb1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref> &amp;</type>
+        <definition>Matrix4 &amp; RML::Matrix4::multiply</definition>
+        <argsstring>(const Matrix4 &amp;other)</argsstring>
+        <name>multiply</name>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Multiplies the given other. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to a <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="749" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_matrix4_1ad12fab1ba72a4c130d7945f51bb0c993" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref></type>
+        <definition>Vector3D RML::Matrix4::multiply</definition>
+        <argsstring>(const Vector3D &amp;vector)</argsstring>
+        <name>multiply</name>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+<para>Multiplies the given <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> to multiply.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> result. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="760" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_matrix4_1a28d8726ea817c8319d9b3d0437af1f35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref> &amp;</type>
+        <definition>Matrix4 &amp; RML::Matrix4::operator*=</definition>
+        <argsstring>(const Matrix4 &amp;other)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Multiplication assignment operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="807" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="struct_r_m_l_1_1_matrix4_1aadc06ed4632520f877278792b90d81dc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref></type>
+        <definition>static Matrix4 RML::Matrix4::identity</definition>
+        <argsstring>()</argsstring>
+        <name>identity</name>
+        <briefdescription>
+<para>Gets an identity <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="738" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_matrix4_1a15053ebac4f9a215ef6e111141a7507b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref></type>
+        <definition>static Matrix4 RML::Matrix4::orthographic</definition>
+        <argsstring>(float left, float right, float bottom, float top, float near, float far)</argsstring>
+        <name>orthographic</name>
+        <param>
+          <type>float</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>right</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>bottom</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>top</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>near</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>far</declname>
+        </param>
+        <briefdescription>
+<para>Returns an orthographic matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The left parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The right parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bottom</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bottom parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>top</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The top parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>near</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The near parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>far</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The far parameter.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="823" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_matrix4_1a6a769621695539c0504d86eef3e5285b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref></type>
+        <definition>static Matrix4 RML::Matrix4::perspective</definition>
+        <argsstring>(float fov, float aspectRatio, float near, float far)</argsstring>
+        <name>perspective</name>
+        <param>
+          <type>float</type>
+          <declname>fov</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>aspectRatio</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>near</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>far</declname>
+        </param>
+        <briefdescription>
+<para>Returns a perspective matrix. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The field of view. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>aspectRatio</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The aspect ratio. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>near</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The near parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>far</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The far parameter.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="837" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_matrix4_1ae185c1e416dc969b345b85ebad8d10fe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref></type>
+        <definition>static Matrix4 RML::Matrix4::translation</definition>
+        <argsstring>(const Vector3D &amp;translation)</argsstring>
+        <name>translation</name>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>translation</declname>
+        </param>
+        <briefdescription>
+<para>Returns a translation matrix, which translates by amounts defined by the translation vector parameter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>translation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The translation vector.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="849" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_matrix4_1a27b9eaf13477e5eac82df25dc64b105b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref></type>
+        <definition>static Matrix4 RML::Matrix4::rotation</definition>
+        <argsstring>(float angle, const Vector3D &amp;axis)</argsstring>
+        <name>rotation</name>
+        <param>
+          <type>float</type>
+          <declname>angle</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>axis</declname>
+        </param>
+        <briefdescription>
+<para>Returns a rotation matrix, which rotates by amount defined by angle parameter about the axis defined by the axis parameter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The angle(in degree) to be rotated by. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>axis</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The axis to be rotated about.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="862" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_matrix4_1a00dec154f240f40ecd6fb4bc067593cf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref></type>
+        <definition>static Matrix4 RML::Matrix4::scale</definition>
+        <argsstring>(const Vector3D scale)</argsstring>
+        <name>scale</name>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref></type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+<para>Returns a scaling matrix, that scales by amounts defined by scale parameter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The scale vector.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="873" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="struct_r_m_l_1_1_matrix4_1a62b90a9d339e60b38aafe83338939168" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream &amp; RML::Matrix4::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;stream, const Matrix4 &amp;matrix)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref> &amp;</type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+<para>Put to operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The output stream. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The matrix to be put to stream.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="772" column="1"/>
+      </memberdef>
+      <memberdef kind="friend" id="struct_r_m_l_1_1_matrix4_1aada1dd7495c9b1ea02a1afd62ee4c857" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref></type>
+        <definition>Matrix4 operator*</definition>
+        <argsstring>(Matrix4 left, const Matrix4 &amp;right)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Multiplication operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first value. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A matrix to multiply to it.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="784" column="1"/>
+      </memberdef>
+      <memberdef kind="friend" id="struct_r_m_l_1_1_matrix4_1a8063454b4178078fa6cb1afd67d81e7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref></type>
+        <definition>Vector3D operator*</definition>
+        <argsstring>(Matrix4 &amp;matrix, const Vector3D &amp;vector)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref> &amp;</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="796" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A matrix 4. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="15">
+        <label>RML::Matrix4</label>
+        <link refid="struct_r_m_l_1_1_matrix4"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>columns</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>RML::Vector4D</label>
+        <link refid="struct_r_m_l_1_1_vector4_d"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="700" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="699" bodyend="874"/>
+    <listofallmembers>
+      <member refid="struct_r_m_l_1_1_matrix4_1afbd8a5a65a2fa1a0dc2e019ea702509b" prot="public" virt="non-virtual"><scope>RML::Matrix4</scope><name>columns</name></member>
+      <member refid="struct_r_m_l_1_1_matrix4_1a0168d944094fa74d7f946ad0d79ab08d" prot="public" virt="non-virtual"><scope>RML::Matrix4</scope><name>elements</name></member>
+      <member refid="struct_r_m_l_1_1_matrix4_1aadc06ed4632520f877278792b90d81dc" prot="public" virt="non-virtual"><scope>RML::Matrix4</scope><name>identity</name></member>
+      <member refid="struct_r_m_l_1_1_matrix4_1ae6cb41ca121c787cd424e30be9ec197b" prot="public" virt="non-virtual"><scope>RML::Matrix4</scope><name>Matrix4</name></member>
+      <member refid="struct_r_m_l_1_1_matrix4_1af6e49071696e577315efb81e34655d3b" prot="public" virt="non-virtual"><scope>RML::Matrix4</scope><name>Matrix4</name></member>
+      <member refid="struct_r_m_l_1_1_matrix4_1a018d5eead295d1575dd1cfaf4892bb1a" prot="public" virt="non-virtual"><scope>RML::Matrix4</scope><name>multiply</name></member>
+      <member refid="struct_r_m_l_1_1_matrix4_1ad12fab1ba72a4c130d7945f51bb0c993" prot="public" virt="non-virtual"><scope>RML::Matrix4</scope><name>multiply</name></member>
+      <member refid="struct_r_m_l_1_1_matrix4_1aada1dd7495c9b1ea02a1afd62ee4c857" prot="public" virt="non-virtual"><scope>RML::Matrix4</scope><name>operator*</name></member>
+      <member refid="struct_r_m_l_1_1_matrix4_1a8063454b4178078fa6cb1afd67d81e7c" prot="public" virt="non-virtual"><scope>RML::Matrix4</scope><name>operator*</name></member>
+      <member refid="struct_r_m_l_1_1_matrix4_1a28d8726ea817c8319d9b3d0437af1f35" prot="public" virt="non-virtual"><scope>RML::Matrix4</scope><name>operator*=</name></member>
+      <member refid="struct_r_m_l_1_1_matrix4_1a62b90a9d339e60b38aafe83338939168" prot="public" virt="non-virtual"><scope>RML::Matrix4</scope><name>operator&lt;&lt;</name></member>
+      <member refid="struct_r_m_l_1_1_matrix4_1a15053ebac4f9a215ef6e111141a7507b" prot="public" virt="non-virtual"><scope>RML::Matrix4</scope><name>orthographic</name></member>
+      <member refid="struct_r_m_l_1_1_matrix4_1a6a769621695539c0504d86eef3e5285b" prot="public" virt="non-virtual"><scope>RML::Matrix4</scope><name>perspective</name></member>
+      <member refid="struct_r_m_l_1_1_matrix4_1a27b9eaf13477e5eac82df25dc64b105b" prot="public" virt="non-virtual"><scope>RML::Matrix4</scope><name>rotation</name></member>
+      <member refid="struct_r_m_l_1_1_matrix4_1a00dec154f240f40ecd6fb4bc067593cf" prot="public" virt="non-virtual"><scope>RML::Matrix4</scope><name>scale</name></member>
+      <member refid="struct_r_m_l_1_1_matrix4_1ae185c1e416dc969b345b85ebad8d10fe" prot="public" virt="non-virtual"><scope>RML::Matrix4</scope><name>translation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
