@@ -42,4 +42,4 @@ All game engine core sub-systems are in place and a final architecture is the cu
   * Guerrilla Renderer, the main rendering engine, highly inspired by the [Sparky Engine](https://github.com/TheCherno/Sparky)
   * Awerere Physics collision system, the physics update engine using a homebrewed maths library i.e. Rubeus Maths Library (RML)
   * Symphony Audio Engine, audio effects and cueing engine using SFML as it's backend.
-  * Easy to use workflow, efforts are being made to release as little information to the user without compromising flexibility.
+  * Easy to use workflow, efforts are being made to release as little information to the user as possible without compromising flexibility.
