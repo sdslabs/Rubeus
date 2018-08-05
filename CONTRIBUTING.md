@@ -9,9 +9,12 @@ Curated by SDSLabs with :heart:
 Developers can contribute to Rubeus openly through pull requests, issues or just talking to contributors at [our chat hookup](https://chat.sdslabs.co).
 
 ## Contents
-* [Setting Up Rubeus](SETUP.md)
+* [Setting Up Rubeus](#setup)
 * [Issue Guidelines](#ig)
 * [PR guidelines](#pr)
+
+## <a name=setup>Setup
+Use Rubeus' [setup instructions](SETUP.md) for setting up Rubeus Engine on your machine. 
 
 ## <a name=ig>Issue Guidelines
 All issues should try to follow the basic structure described [here](ISSUE_TEMPLATE.md).
