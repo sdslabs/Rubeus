@@ -16,7 +16,9 @@ Curated by SDSLabs with :heart:
 
 ## <a name=what>What is Rubeus?
 
-A cross-platform 2D game engine written in C++17 using OpenGL 3.3. The main objective of making this engine is to provide a simple and fast API to help people realize their game ideas efficiently.
+A cross-platform 2D game engine written in C++17 using OpenGL 3.3. The main objective of making this engine is to provide a simple and fast API to help people realize their game ideas efficiently. 
+
+Read the [beginner guide](https://github.com/sdslabs/Rubeus/wiki) and prefer using the [API documentation](https://blog.sdslabs.co/Rubeus/) for technical reference.
 <br><br>
 
 <p align="center">
