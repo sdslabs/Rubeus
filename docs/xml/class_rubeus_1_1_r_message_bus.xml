@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_r_message_bus" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::RMessageBus</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_r_message_bus_1aa48f8d44b62e33ce789acf028d4ed267" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref> * &gt;</type>
+        <definition>std::vector&lt;RMasterComponent *&gt; Rubeus::RMessageBus::m_Systems</definition>
+        <argsstring></argsstring>
+        <name>m_Systems</name>
+        <briefdescription>
+<para>Array of systems participating in message communication. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_bus.h" line="21" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_bus.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_r_message_bus_1a912614d17e909bb9deed7f7ccdb8e20e" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref> * &gt;</type>
+        <definition>std::vector&lt;Message *&gt; Rubeus::RMessageBus::m_MessageQueue</definition>
+        <argsstring></argsstring>
+        <name>m_MessageQueue</name>
+        <briefdescription>
+<para>Vector array of synchronous messages to be sent. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_bus.h" line="24" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_bus.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_r_message_bus_1a44b2eda2ed71693db3aa77370e6a4206" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::RMessageBus::RMessageBus</definition>
+        <argsstring>()</argsstring>
+        <name>RMessageBus</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_bus.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_message_bus_1a68ba53f79ff996a23958ffafe04e1b26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::RMessageBus::~RMessageBus</definition>
+        <argsstring>()</argsstring>
+        <name>~RMessageBus</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_bus.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_message_bus_1a193a8085ccba53a0318a1ac1375008db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::RMessageBus::addSystem</definition>
+        <argsstring>(RMasterComponent *system)</argsstring>
+        <name>addSystem</name>
+        <param>
+          <type><ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref> *</type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+<para>Adds a system to receive commands via messages. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para><ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref> bus doesn&apos;t take responsibility of deleting the system pointers. Do not pass in statically declared variables.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>system</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A pointer to the system to be added. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_bus.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_message_bus_1acb29ca3d37aa536cee094fcfdb8ac787" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::RMessageBus::post</definition>
+        <argsstring>(Message *message)</argsstring>
+        <name>post</name>
+        <param>
+          <type><ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref> *</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Post a message to be sent in the next frame. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para><ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref> system intends to take responsibility of passed in pointers, i.e. it deletes all message pointers on destruction. Do not delete message pointers that are passed in.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message pointer to be posted. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_bus.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_message_bus_1af65073dff38f98ce5cc8ea8042cdc28f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref> *</type>
+        <definition>Message * Rubeus::RMessageBus::pop</definition>
+        <argsstring>()</argsstring>
+        <name>pop</name>
+        <briefdescription>
+<para>Returns the last message on the message array after popping it. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Do not use freely. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_bus.h" line="67" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_bus.h" line="18" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_bus.h" bodystart="17" bodyend="68"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_r_message_bus_1a193a8085ccba53a0318a1ac1375008db" prot="public" virt="non-virtual"><scope>Rubeus::RMessageBus</scope><name>addSystem</name></member>
+      <member refid="class_rubeus_1_1_r_message_bus_1a912614d17e909bb9deed7f7ccdb8e20e" prot="public" virt="non-virtual"><scope>Rubeus::RMessageBus</scope><name>m_MessageQueue</name></member>
+      <member refid="class_rubeus_1_1_r_message_bus_1aa48f8d44b62e33ce789acf028d4ed267" prot="public" virt="non-virtual"><scope>Rubeus::RMessageBus</scope><name>m_Systems</name></member>
+      <member refid="class_rubeus_1_1_r_message_bus_1af65073dff38f98ce5cc8ea8042cdc28f" prot="public" virt="non-virtual"><scope>Rubeus::RMessageBus</scope><name>pop</name></member>
+      <member refid="class_rubeus_1_1_r_message_bus_1acb29ca3d37aa536cee094fcfdb8ac787" prot="public" virt="non-virtual"><scope>Rubeus::RMessageBus</scope><name>post</name></member>
+      <member refid="class_rubeus_1_1_r_message_bus_1a44b2eda2ed71693db3aa77370e6a4206" prot="public" virt="non-virtual"><scope>Rubeus::RMessageBus</scope><name>RMessageBus</name></member>
+      <member refid="class_rubeus_1_1_r_message_bus_1a68ba53f79ff996a23958ffafe04e1b26" prot="public" virt="non-virtual"><scope>Rubeus::RMessageBus</scope><name>~RMessageBus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

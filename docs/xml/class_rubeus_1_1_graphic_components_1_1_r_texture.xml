@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_graphic_components_1_1_r_texture" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::GraphicComponents::RTexture</compoundname>
+    <includes refid="texture__object_8h" local="no">texture_object.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_texture_1a489f4c8b13aac4857b35108bdf20d619" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Rubeus::GraphicComponents::RTexture::m_TextureID</definition>
+        <argsstring></argsstring>
+        <name>m_TextureID</name>
+        <briefdescription>
+<para>Texture ID provided by OpenGL. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/texture_object.h" line="27" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/texture_object.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_texture_1a44c3a9a0cf4c122096332a64de6c1586" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GLuint</type>
+        <definition>GLuint Rubeus::GraphicComponents::RTexture::load</definition>
+        <argsstring>(const char *filePath)</argsstring>
+        <name>load</name>
+        <param>
+          <type>const char *</type>
+          <declname>filePath</declname>
+        </param>
+        <briefdescription>
+<para>Loads a texture object using OpenGL and return a texture ID. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the image file to be used as a texture </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/texture_object.h" line="36" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_texture_1a5e0e8a64c123519e8b4d5adeef4a818d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RTexture::RTexture</definition>
+        <argsstring>(const char *path)</argsstring>
+        <name>RTexture</name>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. Uses a path string to load an image from. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file path for the image. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/texture_object.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_texture_1aac9570f1052e68205e620044dcc00561" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RTexture::~RTexture</definition>
+        <argsstring>()</argsstring>
+        <name>~RTexture</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/texture_object.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_texture_1ad42320182db320ed23ffd8a62488d645" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RTexture::bindTexture</definition>
+        <argsstring>() const</argsstring>
+        <name>bindTexture</name>
+        <briefdescription>
+<para>Binds this texture object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Decreases graphics performance if used repeatedly. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/texture_object.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_texture_1ac7c99cfd61ca61bc419ade0c9e7f9738" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RTexture::unbindTexture</definition>
+        <argsstring>() const</argsstring>
+        <name>unbindTexture</name>
+        <briefdescription>
+<para>Unbinds this texture object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Decreases graphics performance if used repeatedly. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/texture_object.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_texture_1ae47da0c2eee8a5d1ee0306950bf4eb29" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const GLuint</type>
+        <definition>const GLuint Rubeus::GraphicComponents::RTexture::getID</definition>
+        <argsstring>() const</argsstring>
+        <name>getID</name>
+        <briefdescription>
+<para>Returns the texture ID of this texture. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Copy of this object&apos;s texture ID. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/texture_object.h" line="79" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/texture_object.h" bodystart="79" bodyend="79"/>
+        <referencedby refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1aecc1218deec48c318f3f440d5958f662" compoundref="renderable__object_8h" startline="141" endline="141">Rubeus::GraphicComponents::RRenderableObject::getTextureID</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A texture class containing all OpenGL abstractions for implementing textures. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/texture_object.h" line="23" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/texture_object.h" bodystart="22" bodyend="80"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_texture_1ad42320182db320ed23ffd8a62488d645" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RTexture</scope><name>bindTexture</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_texture_1ae47da0c2eee8a5d1ee0306950bf4eb29" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RTexture</scope><name>getID</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_texture_1a44c3a9a0cf4c122096332a64de6c1586" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RTexture</scope><name>load</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_texture_1a489f4c8b13aac4857b35108bdf20d619" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RTexture</scope><name>m_TextureID</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_texture_1a5e0e8a64c123519e8b4d5adeef4a818d" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RTexture</scope><name>RTexture</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_texture_1ac7c99cfd61ca61bc419ade0c9e7f9738" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RTexture</scope><name>unbindTexture</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_texture_1aac9570f1052e68205e620044dcc00561" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RTexture</scope><name>~RTexture</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

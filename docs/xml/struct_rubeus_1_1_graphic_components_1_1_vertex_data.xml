@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="struct_rubeus_1_1_graphic_components_1_1_vertex_data" kind="struct" language="C++" prot="public">
+    <compoundname>Rubeus::GraphicComponents::VertexData</compoundname>
+    <includes refid="renderable__object_8h" local="no">renderable_object.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_rubeus_1_1_graphic_components_1_1_vertex_data_1ace7fc834563dcb365a2158d654e13976" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref></type>
+        <definition>RML::Vector3D Rubeus::GraphicComponents::VertexData::vertex</definition>
+        <argsstring></argsstring>
+        <name>vertex</name>
+        <briefdescription>
+<para>The vertex position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="31" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_rubeus_1_1_graphic_components_1_1_vertex_data_1a0e10e8b6e42c269d89c9bcff53ac6a5b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref></type>
+        <definition>RML::Vector2D Rubeus::GraphicComponents::VertexData::uv</definition>
+        <argsstring></argsstring>
+        <name>uv</name>
+        <briefdescription>
+<para>UV coordinates for this vertex. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="34" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_rubeus_1_1_graphic_components_1_1_vertex_data_1a1b7c9661475f54fa282603c4785d5bd1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Rubeus::GraphicComponents::VertexData::texID</definition>
+        <argsstring></argsstring>
+        <name>texID</name>
+        <briefdescription>
+<para>Texture ID alloted to this vertex. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="37" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_rubeus_1_1_graphic_components_1_1_vertex_data_1ad38d09def4c05a57e605f77fad0dfcfd" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">RML::Vector4D</ref></type>
+        <definition>RML::Vector4D Rubeus::GraphicComponents::VertexData::color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <briefdescription>
+<para>The color of this vertex. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="40" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A structure holding vertex data to be sent to OpenGL. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="154">
+        <label>RML::Vector4D</label>
+        <link refid="struct_r_m_l_1_1_vector4_d"/>
+      </node>
+      <node id="156">
+        <label>RML::Vector3D</label>
+        <link refid="struct_r_m_l_1_1_vector3_d"/>
+      </node>
+      <node id="155">
+        <label>RML::Vector2D</label>
+        <link refid="struct_r_m_l_1_1_vector2_d"/>
+      </node>
+      <node id="153">
+        <label>Rubeus::GraphicComponents::VertexData</label>
+        <link refid="struct_rubeus_1_1_graphic_components_1_1_vertex_data"/>
+        <childnode refid="154" relation="usage">
+          <edgelabel>color</edgelabel>
+        </childnode>
+        <childnode refid="155" relation="usage">
+          <edgelabel>uv</edgelabel>
+        </childnode>
+        <childnode refid="156" relation="usage">
+          <edgelabel>vertex</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="29" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="28" bodyend="41"/>
+    <listofallmembers>
+      <member refid="struct_rubeus_1_1_graphic_components_1_1_vertex_data_1ad38d09def4c05a57e605f77fad0dfcfd" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::VertexData</scope><name>color</name></member>
+      <member refid="struct_rubeus_1_1_graphic_components_1_1_vertex_data_1a1b7c9661475f54fa282603c4785d5bd1" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::VertexData</scope><name>texID</name></member>
+      <member refid="struct_rubeus_1_1_graphic_components_1_1_vertex_data_1a0e10e8b6e42c269d89c9bcff53ac6a5b" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::VertexData</scope><name>uv</name></member>
+      <member refid="struct_rubeus_1_1_graphic_components_1_1_vertex_data_1ace7fc834563dcb365a2158d654e13976" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::VertexData</scope><name>vertex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_graphic_components_1_1_r_index_buffer" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::GraphicComponents::RIndexBuffer</compoundname>
+    <includes refid="index__buffer__object_8h" local="no">index_buffer_object.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_index_buffer_1ae11bfb3f7a7ad028b823b28cd67214f0" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Rubeus::GraphicComponents::RIndexBuffer::m_BufferID</definition>
+        <argsstring></argsstring>
+        <name>m_BufferID</name>
+        <briefdescription>
+<para>Identifier for the index buffer, provided by OpenGL. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/index_buffer_object.h" line="26" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/index_buffer_object.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_index_buffer_1a6f95fbf1ecd6272fa802b812931b439f" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Rubeus::GraphicComponents::RIndexBuffer::m_IndicesCount</definition>
+        <argsstring></argsstring>
+        <name>m_IndicesCount</name>
+        <briefdescription>
+<para>Number of indices. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/index_buffer_object.h" line="29" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/index_buffer_object.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_index_buffer_1a9a319bc70052def3549b0b2f8f2627db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RIndexBuffer::RIndexBuffer</definition>
+        <argsstring>(GLushort *data, GLsizei count)</argsstring>
+        <name>RIndexBuffer</name>
+        <param>
+          <type>GLushort *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>GLsizei</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. Generates a buffer object and applies its layout. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If non-null, the data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of indices specified. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/index_buffer_object.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_index_buffer_1ab322e9b3e89f3074aa1cfc82f6efaf18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RIndexBuffer::~RIndexBuffer</definition>
+        <argsstring>()</argsstring>
+        <name>~RIndexBuffer</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/index_buffer_object.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_index_buffer_1a6cbcbc12451956af91cbd28851b600b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RIndexBuffer::bindIndexBuffer</definition>
+        <argsstring>() const</argsstring>
+        <name>bindIndexBuffer</name>
+        <briefdescription>
+<para>Binds this index buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/index_buffer_object.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_index_buffer_1a2233237242db5414de99e479884d9600" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RIndexBuffer::unbindIndexBuffer</definition>
+        <argsstring>() const</argsstring>
+        <name>unbindIndexBuffer</name>
+        <briefdescription>
+<para>Unbinds this index buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/index_buffer_object.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_index_buffer_1a1393da955cf677f9b76138403bfc4081" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>GLuint</type>
+        <definition>GLuint Rubeus::GraphicComponents::RIndexBuffer::getIndexCount</definition>
+        <argsstring>()</argsstring>
+        <name>getIndexCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/index_buffer_object.h" line="71" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/index_buffer_object.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A buffer class that handles generating and binding OpenGL index buffers. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/index_buffer_object.h" line="23" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/index_buffer_object.h" bodystart="22" bodyend="74"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_index_buffer_1a6cbcbc12451956af91cbd28851b600b1" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RIndexBuffer</scope><name>bindIndexBuffer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_index_buffer_1a1393da955cf677f9b76138403bfc4081" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RIndexBuffer</scope><name>getIndexCount</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_index_buffer_1ae11bfb3f7a7ad028b823b28cd67214f0" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RIndexBuffer</scope><name>m_BufferID</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_index_buffer_1a6f95fbf1ecd6272fa802b812931b439f" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RIndexBuffer</scope><name>m_IndicesCount</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_index_buffer_1a9a319bc70052def3549b0b2f8f2627db" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RIndexBuffer</scope><name>RIndexBuffer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_index_buffer_1a2233237242db5414de99e479884d9600" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RIndexBuffer</scope><name>unbindIndexBuffer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_index_buffer_1ab322e9b3e89f3074aa1cfc82f6efaf18" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RIndexBuffer</scope><name>~RIndexBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

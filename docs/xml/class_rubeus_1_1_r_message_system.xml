@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_r_message_system" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::RMessageSystem</compoundname>
+    <includes refid="message__system_8h" local="no">message_system.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_r_message_system_1ae17ea62568f2c703b42bb23add39bf05" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_rubeus_1_1_r_message_bus" kindref="compound">RMessageBus</ref></type>
+        <definition>RMessageBus Rubeus::RMessageSystem::m_MessageBus</definition>
+        <argsstring></argsstring>
+        <name>m_MessageBus</name>
+        <briefdescription>
+<para>The message bus, common to all message systems. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_system.h" line="25" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_system.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_r_message_system_1af27c32001557d581e8160ca18d547dce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::RMessageSystem::evaluateMessages</definition>
+        <argsstring>()</argsstring>
+        <name>evaluateMessages</name>
+        <briefdescription>
+<para>Pops messages from the message queue and sends them to their respective destinations. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Use only once per frame </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_system.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_message_system_1a45cc05c73a0c3b90964690607ccd0847" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::RMessageSystem::addMessage</definition>
+        <argsstring>(RMasterComponent *sender, RMasterComponent *receiver, EMessageCode type, var data=NULL)</argsstring>
+        <name>addMessage</name>
+        <param>
+          <type><ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref> *</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type><ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref> *</type>
+          <declname>receiver</declname>
+        </param>
+        <param>
+          <type><ref refid="message__codes_8h_1a82d14ec7bd46347068de3bc5c03a8136" kindref="member">EMessageCode</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>var</type>
+          <declname>data</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Adds a message to the message queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the sender. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>receiver</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the receiver. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of message command. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data object to be sent. See &apos;var&apos; typedef for transmittable data </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_system.h" line="45" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A message system class that handles message posting and adding. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="73">
+        <label>Rubeus::RMessageBus</label>
+        <link refid="class_rubeus_1_1_r_message_bus"/>
+      </node>
+      <node id="72">
+        <label>Rubeus::RMessageSystem</label>
+        <link refid="class_rubeus_1_1_r_message_system"/>
+        <childnode refid="73" relation="usage">
+          <edgelabel>m_MessageBus</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_system.h" line="22" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_system.h" bodystart="21" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_r_message_system_1a45cc05c73a0c3b90964690607ccd0847" prot="public" virt="non-virtual"><scope>Rubeus::RMessageSystem</scope><name>addMessage</name></member>
+      <member refid="class_rubeus_1_1_r_message_system_1af27c32001557d581e8160ca18d547dce" prot="public" virt="non-virtual"><scope>Rubeus::RMessageSystem</scope><name>evaluateMessages</name></member>
+      <member refid="class_rubeus_1_1_r_message_system_1ae17ea62568f2c703b42bb23add39bf05" prot="public" virt="non-virtual"><scope>Rubeus::RMessageSystem</scope><name>m_MessageBus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

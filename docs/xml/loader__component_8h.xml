@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="loader__component_8h" kind="file" language="C++">
+    <compoundname>loader_component.h</compoundname>
+    <includes local="no">string.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">IL/il.h</includes>
+    <includes local="no">IL/ilu.h</includes>
+    <includes refid="logger__component_8h" local="no">logger_component.h</includes>
+    <includes refid="master__component_8h" local="no">master_component.h</includes>
+    <includes refid="image__object_8h" local="no">image_object.h</includes>
+    <includedby refid="input__component_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_component.h</includedby>
+    <includedby refid="shader__component_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/shader_component.h</includedby>
+    <includedby refid="texture__object_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/texture_object.h</includedby>
+    <includedby refid="window__component_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h</includedby>
+    <incdepgraph>
+      <node id="215">
+        <label>IL/il.h</label>
+      </node>
+      <node id="216">
+        <label>IL/ilu.h</label>
+      </node>
+      <node id="213">
+        <label>string</label>
+      </node>
+      <node id="219">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="228">
+        <label>message_codes.h</label>
+        <link refid="message__codes_8h"/>
+        <childnode refid="217" relation="include">
+        </childnode>
+      </node>
+      <node id="225">
+        <label>message_object.h</label>
+        <link refid="message__object_8h"/>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+      </node>
+      <node id="223">
+        <label>message_system.h</label>
+        <link refid="message__system_8h"/>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+      </node>
+      <node id="227">
+        <label>image_object.h</label>
+        <link refid="image__object_8h"/>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+      </node>
+      <node id="226">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="212">
+        <label>string.h</label>
+      </node>
+      <node id="222">
+        <label>typeinfo</label>
+      </node>
+      <node id="224">
+        <label>vector</label>
+      </node>
+      <node id="214">
+        <label>cstdlib</label>
+      </node>
+      <node id="229">
+        <label>message_bus.h</label>
+        <link refid="message__bus_8h"/>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+      </node>
+      <node id="218">
+        <label>iostream</label>
+      </node>
+      <node id="221">
+        <label>unordered_map</label>
+      </node>
+      <node id="217">
+        <label>logger_component.h</label>
+        <link refid="logger__component_8h_source"/>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+      </node>
+      <node id="211">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/loader_component.h</label>
+        <link refid="loader__component_8h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+      </node>
+      <node id="220">
+        <label>master_component.h</label>
+        <link refid="master__component_8h_source"/>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="238">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h</label>
+        <link refid="guerrilla__renderer__component_8h"/>
+        <childnode refid="235" relation="include">
+        </childnode>
+        <childnode refid="236" relation="include">
+        </childnode>
+      </node>
+      <node id="237">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_layer_object.h</label>
+        <link refid="static__layer__object_8h"/>
+      </node>
+      <node id="233">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/shader_component.h</label>
+        <link refid="shader__component_8h"/>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+      </node>
+      <node id="235">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h</label>
+        <link refid="group__object_8h"/>
+        <childnode refid="236" relation="include">
+        </childnode>
+      </node>
+      <node id="239">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/sprite_object.h</label>
+        <link refid="sprite__object_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+      </node>
+      <node id="236">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_object.h</label>
+        <link refid="layer__object_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+      </node>
+      <node id="232">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h</label>
+        <link refid="window__component_8h"/>
+      </node>
+      <node id="231">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_component.h</label>
+        <link refid="input__component_8h_source"/>
+        <childnode refid="232" relation="include">
+        </childnode>
+      </node>
+      <node id="241">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/simple_renderer_component.h</label>
+        <link refid="simple__renderer__component_8h"/>
+      </node>
+      <node id="240">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_sprite_object.h</label>
+        <link refid="static__sprite__object_8h"/>
+        <childnode refid="241" relation="include">
+        </childnode>
+      </node>
+      <node id="242">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/texture_object.h</label>
+        <link refid="texture__object_8h"/>
+        <childnode refid="234" relation="include">
+        </childnode>
+      </node>
+      <node id="230">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/loader_component.h</label>
+        <link refid="loader__component_8h"/>
+        <childnode refid="231" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+      </node>
+      <node id="234">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h</label>
+        <link refid="renderable__object_8h"/>
+        <childnode refid="235" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_rubeus_1_1_utility_components_1_1_r_loader_component" prot="public">Rubeus::UtilityComponents::RLoaderComponent</innerclass>
+    <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
+    <innernamespace refid="namespace_rubeus_1_1_utility_components">Rubeus::UtilityComponents</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;IL/il.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;IL/ilu.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;logger_component.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;master_component.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;logger_component.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="image__object_8h" kindref="compound">image_object.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_rubeus" kindref="compound">Rubeus</ref></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">UtilityComponents</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30" refid="class_rubeus_1_1_utility_components_1_1_r_loader_component" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rubeus_1_1_utility_components_1_1_r_loader_component" kindref="compound">RLoaderComponent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ILuint<sp/>m_ImageID;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initImageLoader();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_utility_components_1_1_r_loader_component_1ae4a1a7465d9bb7c0a93a1d17ba59cf1c" kindref="member">RLoaderComponent</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_utility_components_1_1_r_loader_component_1a4bad0754f16152c483e7038eee74cfa4" kindref="member">~RLoaderComponent</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>loadTextFileStream(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>filePath);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_rubeus_1_1_graphic_components_1_1_image" kindref="compound">GraphicComponents::Image</ref><sp/>loadImageFile(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>path);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_utility_components_1_1_r_loader_component_1af9f7e56b12da6fe38bb873d069e346ec" kindref="member">deleteImage</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_utility_components_1_1_r_loader_component_1a2ca4414ddba0b63415a14b2844d8a5a6" kindref="member">onMessage</ref>(<ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref><sp/>*<sp/>msg)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/loader_component.h"/>
+  </compounddef>
+</doxygen>

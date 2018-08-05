@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_graphic_components_1_1_r_renderer_component" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Rubeus::GraphicComponents::RRendererComponent</compoundname>
+    <basecompoundref refid="class_rubeus_1_1_r_master_component" prot="public" virt="non-virtual">Rubeus::RMasterComponent</basecompoundref>
+    <derivedcompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RGuerrillaRendererComponent</derivedcompoundref>
+    <derivedcompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_simple_renderer_component" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RSimpleRendererComponent</derivedcompoundref>
+    <includes refid="renderer__component_8h" local="no">renderer_component.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderer_component_1a37606689bc45ed28e6282271ec7d175e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RRendererComponent::submit</definition>
+        <argsstring>(const RRenderableObject *renderable)=0</argsstring>
+        <name>submit</name>
+        <reimplementedby refid="class_rubeus_1_1_graphic_components_1_1_r_simple_renderer_component_1a7beb3a6fe8fed441328323ac4ef843f0">submit</reimplementedby>
+        <reimplementedby refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component_1ac92a8fe8646e1e60726f7b351da187fb">submit</reimplementedby>
+        <param>
+          <type>const <ref refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object" kindref="compound">RRenderableObject</ref> *</type>
+          <declname>renderable</declname>
+        </param>
+        <briefdescription>
+<para>Submits the given renderable object to render queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>renderable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The renderable. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderer_component.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderer_component_1a21650be54782ac7fd98cd6fb650937d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RRendererComponent::flush</definition>
+        <argsstring>()=0</argsstring>
+        <name>flush</name>
+        <reimplementedby refid="class_rubeus_1_1_graphic_components_1_1_r_simple_renderer_component_1a12cb23fa1c2aea044b239f85767c372c">flush</reimplementedby>
+        <reimplementedby refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component_1a4f2e53fb66f530afedc4180568e61c6c">flush</reimplementedby>
+        <briefdescription>
+<para>Flushes the render objects&apos; queue after displaying them. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderer_component.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderer_component_1a9ec9a422aeb7e69635a36aaef668141b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RRendererComponent::push</definition>
+        <argsstring>(const RML::Matrix4 &amp;matrix)</argsstring>
+        <name>push</name>
+        <reimplementedby refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component_1ab8c526a011fafe6019f9e959468d3559">push</reimplementedby>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">RML::Matrix4</ref> &amp;</type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+<para>Push a tranform into the tranformation stack. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Matrix4 object to push in. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderer_component.h" line="52" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderer_component.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderer_component_1a731ea8a502134a13c059fa9ef1b9fc87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RRendererComponent::pushOverride</definition>
+        <argsstring>(RML::Matrix4 &amp;matrix)</argsstring>
+        <name>pushOverride</name>
+        <reimplementedby refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component_1ad6f89209b2f16b8b0d43ca104cf5ad49">pushOverride</reimplementedby>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">RML::Matrix4</ref> &amp;</type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+<para>Push a tranform into the tranformation stack, while disrespecting already present matrices/. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Matrix4 object to push in. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderer_component.h" line="62" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderer_component.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderer_component_1aba9f2cd2a076a88e9efe46d477a7ce4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RRendererComponent::pop</definition>
+        <argsstring>()</argsstring>
+        <name>pop</name>
+        <reimplementedby refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component_1ac759da23f42f09c56aa62a4895a1728b">pop</reimplementedby>
+        <briefdescription>
+<para>Pop and return a tranform from the tranformation stack. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderer_component.h" line="69" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderer_component.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A renderer component abstraction. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="83">
+        <label>Rubeus::GraphicComponents::RRendererComponent</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component"/>
+        <childnode refid="84" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>Rubeus::GraphicComponents::RGuerrillaRendererComponent</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component"/>
+        <childnode refid="83" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>Rubeus::GraphicComponents::RSimpleRendererComponent</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_simple_renderer_component"/>
+        <childnode refid="83" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="84">
+        <label>Rubeus::RMasterComponent</label>
+        <link refid="class_rubeus_1_1_r_master_component"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="87">
+        <label>Rubeus::GraphicComponents::RRendererComponent</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component"/>
+        <childnode refid="88" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>Rubeus::RMessageBus</label>
+        <link refid="class_rubeus_1_1_r_message_bus"/>
+      </node>
+      <node id="89">
+        <label>Rubeus::RMessageSystem</label>
+        <link refid="class_rubeus_1_1_r_message_system"/>
+        <childnode refid="90" relation="usage">
+          <edgelabel>m_MessageBus</edgelabel>
+        </childnode>
+      </node>
+      <node id="88">
+        <label>Rubeus::RMasterComponent</label>
+        <link refid="class_rubeus_1_1_r_master_component"/>
+        <childnode refid="89" relation="usage">
+          <edgelabel>m_MessageSystem</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderer_component.h" line="26" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderer_component.h" bodystart="25" bodyend="70"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_r_master_component_1a6be44507ef5a2ffb653016729661b416" prot="protected" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRendererComponent</scope><name>add</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1aa8456741bb2402650fc8726cd6768803" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRendererComponent</scope><name>componentsInitialised</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component_1a21650be54782ac7fd98cd6fb650937d7" prot="public" virt="pure-virtual"><scope>Rubeus::GraphicComponents::RRendererComponent</scope><name>flush</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1ada4b85021d96ac2c2153e613d5f14097" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRendererComponent</scope><name>getComponentID</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1ad3c9003c4bc64661ed9ae5961c8cf3fa" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRendererComponent</scope><name>getName</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1a838bceba7935bb3b11a5b69def0f0fc0" prot="protected" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRendererComponent</scope><name>m_ComponentID</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1a613bda5fb5704c0131f53610c99bd7fb" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRendererComponent</scope><name>m_ComponentMap</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1aedb604c4ddfb8d2ba72ff493a74b7025" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRendererComponent</scope><name>m_MessageSystem</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1a129a5b04db723423b40cfd4780adcd35" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RRendererComponent</scope><name>onMessage</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component_1aba9f2cd2a076a88e9efe46d477a7ce4d" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RRendererComponent</scope><name>pop</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component_1a9ec9a422aeb7e69635a36aaef668141b" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RRendererComponent</scope><name>push</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component_1a731ea8a502134a13c059fa9ef1b9fc87" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RRendererComponent</scope><name>pushOverride</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1a100b8cb3b0bfb25c090d2c9e7777a641" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRendererComponent</scope><name>remove</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1aecd982f5c7361dbb23bcc8ac5ec6481c" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRendererComponent</scope><name>RMasterComponent</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component_1a37606689bc45ed28e6282271ec7d175e" prot="public" virt="pure-virtual"><scope>Rubeus::GraphicComponents::RRendererComponent</scope><name>submit</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1a3ee1666371bfafadd5f3adfa67ac874c" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RRendererComponent</scope><name>~RMasterComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

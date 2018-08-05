@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_r_m_l" kind="namespace" language="C++">
+    <compoundname>RML</compoundname>
+    <innerclass refid="struct_r_m_l_1_1_matrix4" prot="public">RML::Matrix4</innerclass>
+    <innerclass refid="struct_r_m_l_1_1_vector2_d" prot="public">RML::Vector2D</innerclass>
+    <innerclass refid="struct_r_m_l_1_1_vector3_d" prot="public">RML::Vector3D</innerclass>
+    <innerclass refid="struct_r_m_l_1_1_vector4_d" prot="public">RML::Vector4D</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rubeus__maths__library_8h_1a172fe5f30b4f649cacce7e1b110e46c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float RML::degreeToRadians</definition>
+        <argsstring>(float degree)</argsstring>
+        <name>degreeToRadians</name>
+        <param>
+          <type>float</type>
+          <declname>degree</declname>
+        </param>
+        <briefdescription>
+<para>Converts degree to radians. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>degree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The degree.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Radians in float. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="25" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="25" bodyend="28"/>
+        <references refid="rubeus__maths__library_8h_1a172fe5f30b4f649cacce7e1b110e46c6" compoundref="rubeus__maths__library_8h" startline="25" endline="28">degreeToRadians</references>
+        <referencedby refid="rubeus__maths__library_8h_1a172fe5f30b4f649cacce7e1b110e46c6" compoundref="rubeus__maths__library_8h" startline="25" endline="28">degreeToRadians</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="15" column="1"/>
+  </compounddef>
+</doxygen>

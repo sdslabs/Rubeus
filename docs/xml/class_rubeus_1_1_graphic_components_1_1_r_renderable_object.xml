@@ -1,0 +1,369 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::GraphicComponents::RRenderableObject</compoundname>
+    <derivedcompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_group" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RGroup</derivedcompoundref>
+    <derivedcompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_sprite" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RSprite</derivedcompoundref>
+    <derivedcompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_static_sprite" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RStaticSprite</derivedcompoundref>
+    <includes refid="renderable__object_8h" local="no">renderable_object.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a386b0ee3b6e0a3a673be6dedf0ab0cf2" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Rubeus::GraphicComponents::RRenderableObject::m_ObjectID</definition>
+        <argsstring></argsstring>
+        <name>m_ObjectID</name>
+        <briefdescription>
+<para>Identifier for the object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="53" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a59bf6b1c361b304defb6108c59dd5889" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref></type>
+        <definition>RML::Vector3D Rubeus::GraphicComponents::RRenderableObject::m_Position</definition>
+        <argsstring></argsstring>
+        <name>m_Position</name>
+        <briefdescription>
+<para>The position of the sprite. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="56" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a89dc97d0d5037e1602bec587a3aba786" compoundref="renderable__object_8h" startline="105" endline="105">getPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a6e20a1bae4cb712cf40018313daeeb88" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref></type>
+        <definition>RML::Vector2D Rubeus::GraphicComponents::RRenderableObject::m_Size</definition>
+        <argsstring></argsstring>
+        <name>m_Size</name>
+        <briefdescription>
+<para>The size of the sprite. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="59" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1aee29b6de589c14179b43bd0dcb517765" compoundref="renderable__object_8h" startline="114" endline="114">getSize</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a9cbc037a6bf3dda6477d2fbb00dddc75" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">RML::Vector4D</ref></type>
+        <definition>RML::Vector4D Rubeus::GraphicComponents::RRenderableObject::m_Color</definition>
+        <argsstring></argsstring>
+        <name>m_Color</name>
+        <briefdescription>
+<para>The color of the sprite. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="62" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="62" bodyend="-1"/>
+        <referencedby refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a27b261ef20f2e511e717d8f0d2518848" compoundref="renderable__object_8h" startline="123" endline="123">getColor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a8ce71902e92e9fe8a932782fc8b0366d" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &gt;</type>
+        <definition>std::vector&lt;RML::Vector2D&gt; Rubeus::GraphicComponents::RRenderableObject::m_UV</definition>
+        <argsstring></argsstring>
+        <name>m_UV</name>
+        <briefdescription>
+<para>The UV/texture coordinates of the current texture being utilised. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="65" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="65" bodyend="-1"/>
+        <referencedby refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a67c746390cad14ed636bc695da4fd0b4" compoundref="renderable__object_8h" startline="132" endline="132">getUV</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a4b1bdda7f4751a83973aabaab6c09ea4" prot="public" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_texture" kindref="compound">RTexture</ref> *</type>
+        <definition>RTexture* Rubeus::GraphicComponents::RRenderableObject::m_Texture</definition>
+        <argsstring></argsstring>
+        <name>m_Texture</name>
+        <briefdescription>
+<para>The texture alloted to this object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="68" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="68" bodyend="-1"/>
+        <referencedby refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1aecc1218deec48c318f3f440d5958f662" compoundref="renderable__object_8h" startline="141" endline="141">getTextureID</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a999a7fd55dd03809513cadd09dc59581" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RRenderableObject::RRenderableObject</definition>
+        <argsstring>(RML::Vector3D position, RML::Vector2D size, RML::Vector4D color)</argsstring>
+        <name>RRenderableObject</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref></type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">RML::Vector4D</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. Sets position, size, color of the sprite to be used for in the given shader. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a521bcff95a9ddd4dfd63e9d059dea3e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RRenderableObject::~RRenderableObject</definition>
+        <argsstring>()</argsstring>
+        <name>~RRenderableObject</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="87" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a54805529c6a3b5473918f7e46b20eddd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RRenderableObject::submit</definition>
+        <argsstring>(RRendererComponent &amp;renderer) const</argsstring>
+        <name>submit</name>
+        <reimplementedby refid="class_rubeus_1_1_graphic_components_1_1_r_group_1afba570254211098554f5975619c28ec8">submit</reimplementedby>
+        <param>
+          <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component" kindref="compound">RRendererComponent</ref> &amp;</type>
+          <declname>renderer</declname>
+        </param>
+        <briefdescription>
+<para>Submit this object to a render queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>renderer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The renderer to submit to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="96" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a89dc97d0d5037e1602bec587a3aba786" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref> &amp;</type>
+        <definition>const RML::Vector3D &amp; Rubeus::GraphicComponents::RRenderableObject::getPosition</definition>
+        <argsstring>() const</argsstring>
+        <name>getPosition</name>
+        <briefdescription>
+<para>Gets the position. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The position. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="105" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="105" bodyend="105"/>
+        <references refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a59bf6b1c361b304defb6108c59dd5889" compoundref="renderable__object_8h" startline="56">m_Position</references>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1aee29b6de589c14179b43bd0dcb517765" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &amp;</type>
+        <definition>const RML::Vector2D &amp; Rubeus::GraphicComponents::RRenderableObject::getSize</definition>
+        <argsstring>() const</argsstring>
+        <name>getSize</name>
+        <briefdescription>
+<para>Gets the size. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The size. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="114" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="114" bodyend="114"/>
+        <references refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a6e20a1bae4cb712cf40018313daeeb88" compoundref="renderable__object_8h" startline="59">m_Size</references>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a27b261ef20f2e511e717d8f0d2518848" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">RML::Vector4D</ref> &amp;</type>
+        <definition>const RML::Vector4D &amp; Rubeus::GraphicComponents::RRenderableObject::getColor</definition>
+        <argsstring>() const</argsstring>
+        <name>getColor</name>
+        <briefdescription>
+<para>Gets the color. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The color. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="123" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="123" bodyend="123"/>
+        <references refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a9cbc037a6bf3dda6477d2fbb00dddc75" compoundref="renderable__object_8h" startline="62">m_Color</references>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a67c746390cad14ed636bc695da4fd0b4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt; RML::Vector2D &gt; &amp; Rubeus::GraphicComponents::RRenderableObject::getUV</definition>
+        <argsstring>() const</argsstring>
+        <name>getUV</name>
+        <briefdescription>
+<para>Returns the UV coords of the vertices. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Reference to a std::vector containing all UV Vector2Ds. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="132" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="132" bodyend="132"/>
+        <references refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a8ce71902e92e9fe8a932782fc8b0366d" compoundref="renderable__object_8h" startline="65">m_UV</references>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1aecc1218deec48c318f3f440d5958f662" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const GLuint</type>
+        <definition>const GLuint Rubeus::GraphicComponents::RRenderableObject::getTextureID</definition>
+        <argsstring>() const</argsstring>
+        <name>getTextureID</name>
+        <briefdescription>
+<para>Returns the texture ID of the respective texture assigned. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The texture ID. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="141" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="141" bodyend="141"/>
+        <references refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a4b1bdda7f4751a83973aabaab6c09ea4" compoundref="renderable__object_8h" startline="68">m_Texture</references>
+        <references refid="class_rubeus_1_1_graphic_components_1_1_r_texture_1ae47da0c2eee8a5d1ee0306950bf4eb29" compoundref="texture__object_8h" startline="79" endline="79">Rubeus::GraphicComponents::RTexture::getID</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a71a90dda838f01c4a4a02d9d97013894" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RRenderableObject::RRenderableObject</definition>
+        <argsstring>()</argsstring>
+        <name>RRenderableObject</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>To be called only by child classes </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="150" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1af37b1e80d9c832c6c8e7ccc7337a90f8" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RRenderableObject::setUV</definition>
+        <argsstring>()</argsstring>
+        <name>setUV</name>
+        <briefdescription>
+<para>Sets the default values for UV coords. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="157" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A renderable object. Allows specifying the position, size and color of the renderable object. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="76">
+        <label>Rubeus::GraphicComponents::RSprite</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_sprite"/>
+        <childnode refid="74" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>Rubeus::GraphicComponents::RRenderableObject</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
+      </node>
+      <node id="77">
+        <label>Rubeus::GraphicComponents::RStaticSprite</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_static_sprite"/>
+        <childnode refid="74" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>Rubeus::GraphicComponents::RGroup</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_group"/>
+        <childnode refid="74" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="79">
+        <label>RML::Vector4D</label>
+        <link refid="struct_r_m_l_1_1_vector4_d"/>
+      </node>
+      <node id="82">
+        <label>RML::Vector3D</label>
+        <link refid="struct_r_m_l_1_1_vector3_d"/>
+      </node>
+      <node id="80">
+        <label>Rubeus::GraphicComponents::RTexture</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_texture"/>
+      </node>
+      <node id="81">
+        <label>RML::Vector2D</label>
+        <link refid="struct_r_m_l_1_1_vector2_d"/>
+      </node>
+      <node id="78">
+        <label>Rubeus::GraphicComponents::RRenderableObject</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
+        <childnode refid="79" relation="usage">
+          <edgelabel>m_Color</edgelabel>
+        </childnode>
+        <childnode refid="80" relation="usage">
+          <edgelabel>m_Texture</edgelabel>
+        </childnode>
+        <childnode refid="81" relation="usage">
+          <edgelabel>m_Size</edgelabel>
+        </childnode>
+        <childnode refid="82" relation="usage">
+          <edgelabel>m_Position</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" line="50" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="49" bodyend="158"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a27b261ef20f2e511e717d8f0d2518848" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>getColor</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a89dc97d0d5037e1602bec587a3aba786" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>getPosition</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1aee29b6de589c14179b43bd0dcb517765" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>getSize</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1aecc1218deec48c318f3f440d5958f662" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>getTextureID</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a67c746390cad14ed636bc695da4fd0b4" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>getUV</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a9cbc037a6bf3dda6477d2fbb00dddc75" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>m_Color</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a386b0ee3b6e0a3a673be6dedf0ab0cf2" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>m_ObjectID</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a59bf6b1c361b304defb6108c59dd5889" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>m_Position</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a6e20a1bae4cb712cf40018313daeeb88" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>m_Size</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a4b1bdda7f4751a83973aabaab6c09ea4" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>m_Texture</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a8ce71902e92e9fe8a932782fc8b0366d" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>m_UV</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a999a7fd55dd03809513cadd09dc59581" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>RRenderableObject</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a71a90dda838f01c4a4a02d9d97013894" prot="protected" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>RRenderableObject</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1af37b1e80d9c832c6c8e7ccc7337a90f8" prot="protected" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>setUV</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a54805529c6a3b5473918f7e46b20eddd" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>submit</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a521bcff95a9ddd4dfd63e9d059dea3e5" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>~RRenderableObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

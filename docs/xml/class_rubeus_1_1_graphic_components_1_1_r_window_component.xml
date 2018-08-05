@@ -1,0 +1,652 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_graphic_components_1_1_r_window_component" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::GraphicComponents::RWindowComponent</compoundname>
+    <basecompoundref refid="class_rubeus_1_1_r_master_component" prot="public" virt="non-virtual">Rubeus::RMasterComponent</basecompoundref>
+    <includes refid="window__component_8h" local="no">window_component.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1af445e2e41ff6c10dbcffbb8ffa7959dd" prot="private" static="no" mutable="no">
+        <type>GLFWwindow *</type>
+        <definition>GLFWwindow* Rubeus::GraphicComponents::RWindowComponent::m_Window</definition>
+        <argsstring></argsstring>
+        <name>m_Window</name>
+        <briefdescription>
+<para>GLFW Window object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="55" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ac83926cc8f53c1d8453b90934eef9e22" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Rubeus::GraphicComponents::RWindowComponent::m_Width</definition>
+        <argsstring></argsstring>
+        <name>m_Width</name>
+        <briefdescription>
+<para>The width of the window. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="58" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a9a3f42fa87ca955a4429c31f3f9dd0a9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Rubeus::GraphicComponents::RWindowComponent::m_Height</definition>
+        <argsstring></argsstring>
+        <name>m_Height</name>
+        <briefdescription>
+<para>The height of the window. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="61" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a0d1afba9343d29f0bd05268f53b9e32f" prot="private" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* Rubeus::GraphicComponents::RWindowComponent::m_Title</definition>
+        <argsstring></argsstring>
+        <name>m_Title</name>
+        <briefdescription>
+<para>The title of the window. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="64" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a24b6c4ff6c8558619dd5f97e1a8cfea3" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Rubeus::GraphicComponents::RWindowComponent::m_X</definition>
+        <argsstring></argsstring>
+        <name>m_X</name>
+        <briefdescription>
+<para>Mouse positions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="68" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a9be5974b59890f9d7dfacb10a0169fe2" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Rubeus::GraphicComponents::RWindowComponent::m_Y</definition>
+        <argsstring></argsstring>
+        <name>m_Y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="68" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a7de46dcdb635adfd4324e7ca5da1b3f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Rubeus::GraphicComponents::RWindowComponent::initWindow</definition>
+        <argsstring>(const char *title, int width, int height, EWindowParameters windowMode=EWindowParameters::WINDOWED_MODE, EWindowParameters windowType=EWindowParameters::RESIZABLE_WINDOW)</argsstring>
+        <name>initWindow</name>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type><ref refid="window__component_8h_1ab1b8341969a82bc64ecc95a440578f4e" kindref="member">EWindowParameters</ref></type>
+          <declname>windowMode</declname>
+          <defval>EWindowParameters::WINDOWED_MODE</defval>
+        </param>
+        <param>
+          <type><ref refid="window__component_8h_1ab1b8341969a82bc64ecc95a440578f4e" kindref="member">EWindowParameters</ref></type>
+          <declname>windowType</declname>
+          <defval>EWindowParameters::RESIZABLE_WINDOW</defval>
+        </param>
+        <briefdescription>
+<para>Initializes the Rubeus game window. Use enum EWindowParameters for windowMode and windowType. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title of the window to be formed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the window to be formed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height of the window to be formed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>windowMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Optional) The window mode. Default is windowed mode </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>windowType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Optional) Type of the window. Default is resizable window</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if it succeeds, false if it fails. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ac61828b6b57dfb3aa398fd0cd5f34224" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RWindowComponent::RWindowComponent</definition>
+        <argsstring>(const char *title, int width, int height, EWindowParameters windowMode=EWindowParameters::WINDOWED_MODE, EWindowParameters windowType=EWindowParameters::RESIZABLE_WINDOW, int setFPS=1)</argsstring>
+        <name>RWindowComponent</name>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type><ref refid="window__component_8h_1ab1b8341969a82bc64ecc95a440578f4e" kindref="member">EWindowParameters</ref></type>
+          <declname>windowMode</declname>
+          <defval>EWindowParameters::WINDOWED_MODE</defval>
+        </param>
+        <param>
+          <type><ref refid="window__component_8h_1ab1b8341969a82bc64ecc95a440578f4e" kindref="member">EWindowParameters</ref></type>
+          <declname>windowType</declname>
+          <defval>EWindowParameters::RESIZABLE_WINDOW</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>setFPS</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. Use enum EWindowParameters for windowMode and windowType. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title of the window to be formed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the window to be formed in pixels. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height of the window to be formed in pixels. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>windowMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Optional) The window mode. Default is windowed mode. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>windowType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Optional) Type of the window. Default is resizable window. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>setFPS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The FPS. Default is 60fps. Use 0 for unbound FPS, 1 for 60 FPS, 2 for 30 FPS, and likewise </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="101" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ab56619ea64ad8ebec5f0059a7a5c6638" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RWindowComponent::~RWindowComponent</definition>
+        <argsstring>()</argsstring>
+        <name>~RWindowComponent</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="108" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ab7c5724af3c2d6f3c3db226eb0757263" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RWindowComponent::clearWindow</definition>
+        <argsstring>()</argsstring>
+        <name>clearWindow</name>
+        <briefdescription>
+<para>Clears the window with a color buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1af65024825d2b929e9e322570f48aad81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RWindowComponent::updateWindow</definition>
+        <argsstring>()</argsstring>
+        <name>updateWindow</name>
+        <briefdescription>
+<para>Updates the window Polls GLFW for any changes Then swaps the buffers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="124" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a47a71ace6fce39d9e9213c914b9be2f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Rubeus::GraphicComponents::RWindowComponent::closed</definition>
+        <argsstring>()</argsstring>
+        <name>closed</name>
+        <briefdescription>
+<para>Queries if the window is closed. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>m_Closed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="133" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a279b5589ab679da9f44d34a47bcc3966" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RWindowComponent::setWindowTitle</definition>
+        <argsstring>(const char *title)</argsstring>
+        <name>setWindowTitle</name>
+        <param>
+          <type>const char *</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+<para>Sets window title. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="142" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ac79eb96ca24e529ab82411e58c81ccdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RWindowComponent::setWindowIcon</definition>
+        <argsstring>(RWindowComponent GameWindow, std::string names[])</argsstring>
+        <name>setWindowIcon</name>
+        <param>
+          <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" kindref="compound">RWindowComponent</ref></type>
+          <declname>GameWindow</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>names</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="145" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a002c157c066b4f5040cf140a593850a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RWindowComponent::setWindowIconToDefault</definition>
+        <argsstring>()</argsstring>
+        <name>setWindowIconToDefault</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="147" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a55b12b3208217709e571d6e7811de756" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RWindowComponent::onMessage</definition>
+        <argsstring>(Message *msg) override</argsstring>
+        <name>onMessage</name>
+        <reimplements refid="class_rubeus_1_1_r_master_component_1a129a5b04db723423b40cfd4780adcd35">onMessage</reimplements>
+        <param>
+          <type><ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref> *</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Handles the message received. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only to be used by the message system</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message object recieved. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="184" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a49b73f0aabec271c81a81efa0f9aacc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend void</type>
+        <definition>void windowCloseCallback</definition>
+        <argsstring>(GLFWwindow *window)</argsstring>
+        <name>windowCloseCallback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Callback, called when the window closes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to GLFWwindow object being closed. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="156" column="1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a01e52489c6643d63f4fbca88df2d9c9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend void</type>
+        <definition>void windowResizeCallback</definition>
+        <argsstring>(GLFWwindow *window, int width, int height)</argsstring>
+        <name>windowResizeCallback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+<para>Callback, called when the window resize. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to GLFWwindow object being resized. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width of the resized window. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height of the resized window. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="167" column="1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ae41a3951e1196401047b29ad1d37c6ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend void</type>
+        <definition>void mouseButtonCallback</definition>
+        <argsstring>(GLFWwindow *window, int button, int action, int mods)</argsstring>
+        <name>mouseButtonCallback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>button</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mods</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="172" column="1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1aa9b224479e8c1cc5251b8e7f3fdabacd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend void</type>
+        <definition>void scrollCallback</definition>
+        <argsstring>(GLFWwindow *window, double xoffset, double yoffset)</argsstring>
+        <name>scrollCallback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xoffset</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>yoffset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="173" column="1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a0b9e239c8889734711f29fe45551605b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend void</type>
+        <definition>void keyCallback</definition>
+        <argsstring>(GLFWwindow *window, int key, int scancode, int action, int mods)</argsstring>
+        <name>keyCallback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scancode</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mods</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="174" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a546fa30cdfe8bddac8aba00898d188a6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Rubeus::GraphicComponents::RWindowComponent::cursorPositionCallback</definition>
+        <argsstring>(GLFWwindow *window, double xpos, double ypos)</argsstring>
+        <name>cursorPositionCallback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xpos</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ypos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="171" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A window component that bridges GLFW function calls to handle Rubeus game window. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="138">
+        <label>Rubeus::GraphicComponents::RWindowComponent</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_window_component"/>
+        <childnode refid="139" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="139">
+        <label>Rubeus::RMasterComponent</label>
+        <link refid="class_rubeus_1_1_r_master_component"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="140">
+        <label>Rubeus::GraphicComponents::RWindowComponent</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_window_component"/>
+        <childnode refid="141" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="143">
+        <label>Rubeus::RMessageBus</label>
+        <link refid="class_rubeus_1_1_r_message_bus"/>
+      </node>
+      <node id="142">
+        <label>Rubeus::RMessageSystem</label>
+        <link refid="class_rubeus_1_1_r_message_system"/>
+        <childnode refid="143" relation="usage">
+          <edgelabel>m_MessageBus</edgelabel>
+        </childnode>
+      </node>
+      <node id="141">
+        <label>Rubeus::RMasterComponent</label>
+        <link refid="class_rubeus_1_1_r_master_component"/>
+        <childnode refid="142" relation="usage">
+          <edgelabel>m_MessageSystem</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="52" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" bodystart="51" bodyend="187"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_r_master_component_1a6be44507ef5a2ffb653016729661b416" prot="protected" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>add</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ab7c5724af3c2d6f3c3db226eb0757263" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>clearWindow</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a47a71ace6fce39d9e9213c914b9be2f3" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>closed</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1aa8456741bb2402650fc8726cd6768803" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>componentsInitialised</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a546fa30cdfe8bddac8aba00898d188a6" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>cursorPositionCallback</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1ada4b85021d96ac2c2153e613d5f14097" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>getComponentID</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1ad3c9003c4bc64661ed9ae5961c8cf3fa" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>getName</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a7de46dcdb635adfd4324e7ca5da1b3f0" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>initWindow</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a0b9e239c8889734711f29fe45551605b" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>keyCallback</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1a838bceba7935bb3b11a5b69def0f0fc0" prot="protected" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_ComponentID</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1a613bda5fb5704c0131f53610c99bd7fb" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_ComponentMap</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a9a3f42fa87ca955a4429c31f3f9dd0a9" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_Height</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1aedb604c4ddfb8d2ba72ff493a74b7025" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_MessageSystem</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a0d1afba9343d29f0bd05268f53b9e32f" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_Title</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ac83926cc8f53c1d8453b90934eef9e22" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_Width</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1af445e2e41ff6c10dbcffbb8ffa7959dd" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_Window</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a24b6c4ff6c8558619dd5f97e1a8cfea3" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_X</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a9be5974b59890f9d7dfacb10a0169fe2" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_Y</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ae41a3951e1196401047b29ad1d37c6ae" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>mouseButtonCallback</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a55b12b3208217709e571d6e7811de756" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>onMessage</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1a100b8cb3b0bfb25c090d2c9e7777a641" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>remove</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1aecd982f5c7361dbb23bcc8ac5ec6481c" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>RMasterComponent</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ac61828b6b57dfb3aa398fd0cd5f34224" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>RWindowComponent</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1aa9b224479e8c1cc5251b8e7f3fdabacd" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>scrollCallback</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ac79eb96ca24e529ab82411e58c81ccdc" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>setWindowIcon</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a002c157c066b4f5040cf140a593850a6" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>setWindowIconToDefault</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a279b5589ab679da9f44d34a47bcc3966" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>setWindowTitle</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1af65024825d2b929e9e322570f48aad81" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>updateWindow</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a49b73f0aabec271c81a81efa0f9aacc2" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>windowCloseCallback</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a01e52489c6643d63f4fbca88df2d9c9f" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>windowResizeCallback</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1a3ee1666371bfafadd5f3adfa67ac874c" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>~RMasterComponent</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ab56619ea64ad8ebec5f0059a7a5c6638" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>~RWindowComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

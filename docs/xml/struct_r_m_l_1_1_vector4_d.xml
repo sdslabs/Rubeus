@@ -1,0 +1,651 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="struct_r_m_l_1_1_vector4_d" kind="struct" language="C++" prot="public">
+    <compoundname>RML::Vector4D</compoundname>
+    <includes refid="rubeus__maths__library_8h" local="no">rubeus_maths_library.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_r_m_l_1_1_vector4_d_1adcb520477d39fd0f1d4d60e53ce6d85a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RML::Vector4D::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>The x coordinate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="471" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="471" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_r_m_l_1_1_vector4_d_1a14cae581494b8c58f1721a41ff9c95f5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RML::Vector4D::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>The y coordinate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="474" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="474" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_r_m_l_1_1_vector4_d_1a6523108955901df4b77ea5f7527b8d4a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RML::Vector4D::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+<para>The z coordinate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="477" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="477" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_r_m_l_1_1_vector4_d_1a93ab2b98d896c89315742cbb3fcb0ef6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RML::Vector4D::w</definition>
+        <argsstring></argsstring>
+        <name>w</name>
+        <briefdescription>
+<para>The w coordinate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="480" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="480" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1abb8dcf2e1a1a32030144a5784385b399" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RML::Vector4D::Vector4D</definition>
+        <argsstring>()=default</argsstring>
+        <name>Vector4D</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="487" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1a7c599849961d43002f26db7e888c8662" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RML::Vector4D::Vector4D</definition>
+        <argsstring>(const float &amp;x, const float &amp;y, const float &amp;z, const float &amp;w)</argsstring>
+        <name>Vector4D</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The x coordinate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The y coordinate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The z coordinate. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>w</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The w coordinate. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="499" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1a74373f069530627f194e5bba0a23ae3b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float RML::Vector4D::getLength</definition>
+        <argsstring>(Vector4D &amp;vector) const</argsstring>
+        <name>getLength</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+<para>Gets length of vector. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">vector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vector.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The length. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="510" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1af5bc24e9eaa6c52c1a793755421eddf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref></type>
+        <definition>void RML::Vector4D::normaliseToRGBA</definition>
+        <argsstring>()</argsstring>
+        <name>normaliseToRGBA</name>
+        <briefdescription>
+<para>Normalise color values to OpenGL supporting RGBA. Eg. (128, 128, 128, 255) =&gt; (0.5f, 0.5f, 0.5f, 1.0f) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Color <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> with normalised values </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="520" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1a19da676c402114eca6556022cbf77aab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+        <definition>Vector4D &amp; RML::Vector4D::add</definition>
+        <argsstring>(const Vector4D &amp;other)</argsstring>
+        <name>add</name>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Adds other. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other to add.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to a <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="531" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1ae643fc3223a85b3c5b4b8f81298c7244" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+        <definition>Vector4D &amp; RML::Vector4D::subtract</definition>
+        <argsstring>(const Vector4D &amp;other)</argsstring>
+        <name>subtract</name>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Subtracts the given other. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to a <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="542" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1a0793689cb56a292f64094bee02dea911" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+        <definition>Vector4D &amp; RML::Vector4D::multiply</definition>
+        <argsstring>(const Vector4D &amp;other)</argsstring>
+        <name>multiply</name>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Multiplies the given other. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to a <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="553" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1a9fc886cda50726d946fd1b6c50da16c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+        <definition>Vector4D &amp; RML::Vector4D::divide</definition>
+        <argsstring>(const Vector4D &amp;other)</argsstring>
+        <name>divide</name>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Divides the given other. Returns [a/x , b/y , c/z , d/w] if [a , b , c , d] is divided by [x , y , z , w]. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to a <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="565" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1ad793560a0cd4c6f7af5e355b67b33994" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RML::Vector4D::operator==</definition>
+        <argsstring>(const Vector4D &amp;other)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Equality operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the parameters are considered equivalent. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="636" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1ac9bd0fc89969166c40590677e239a293" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RML::Vector4D::operator!=</definition>
+        <argsstring>(const Vector4D &amp;other)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Inequality operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the parameters are not considered equivalent. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="647" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1a96d924fa33e8d53b09c323410ba62c49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+        <definition>Vector4D &amp; RML::Vector4D::operator+=</definition>
+        <argsstring>(const Vector4D &amp;other)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Addition assignment operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="658" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1acc5af278f7b72faefb812d9cec641323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+        <definition>Vector4D &amp; RML::Vector4D::operator-=</definition>
+        <argsstring>(const Vector4D &amp;other)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Subtraction assignment operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="669" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1a9e708a9b84793d8ad7a62ffc83a94616" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+        <definition>Vector4D &amp; RML::Vector4D::operator*=</definition>
+        <argsstring>(const Vector4D &amp;other)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Multiplication assignment operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="680" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1a7f2df730c80c82f0c7d81bdac3d5e340" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+        <definition>Vector4D &amp; RML::Vector4D::operator/=</definition>
+        <argsstring>(const Vector4D &amp;other)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Division assignment operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="691" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="struct_r_m_l_1_1_vector4_d_1a59b15f56f8e4c2073cc3709df5055095" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream &amp; RML::Vector4D::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;stream, const Vector4D &amp;vector)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+<para>Put to operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the stream to be put to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> to be put to stream object.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to the stream been put to. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="577" column="1"/>
+      </memberdef>
+      <memberdef kind="friend" id="struct_r_m_l_1_1_vector4_d_1a1ffba004ed1cab5fdd33667cd3f2d352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+        <definition>Vector4D &amp; RML::Vector4D::operator+</definition>
+        <argsstring>(Vector4D left, const Vector4D &amp;right)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Addition operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The left operand. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The right operand.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="589" column="1"/>
+      </memberdef>
+      <memberdef kind="friend" id="struct_r_m_l_1_1_vector4_d_1af2b73bc6f250d0c8d1002b370d56aa58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+        <definition>Vector4D &amp; RML::Vector4D::operator-</definition>
+        <argsstring>(Vector4D left, const Vector4D &amp;right)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Subtraction operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The left operand. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The right operand.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="601" column="1"/>
+      </memberdef>
+      <memberdef kind="friend" id="struct_r_m_l_1_1_vector4_d_1a571a0b43449ef23e9d94aaa96e5f566f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+        <definition>Vector4D &amp; RML::Vector4D::operator*</definition>
+        <argsstring>(Vector4D left, const Vector4D &amp;right)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Multiplication operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The left operand. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The right operand.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="613" column="1"/>
+      </memberdef>
+      <memberdef kind="friend" id="struct_r_m_l_1_1_vector4_d_1a52d83cdab624059568446d23607402a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+        <definition>Vector4D &amp; RML::Vector4D::operator/</definition>
+        <argsstring>(Vector4D left, const Vector4D &amp;right)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Division operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The left operand. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The right operand.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="625" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A vector in 4d. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="469" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="468" bodyend="692"/>
+    <listofallmembers>
+      <member refid="struct_r_m_l_1_1_vector4_d_1a19da676c402114eca6556022cbf77aab" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>add</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1a9fc886cda50726d946fd1b6c50da16c6" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>divide</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1a74373f069530627f194e5bba0a23ae3b" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>getLength</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1a0793689cb56a292f64094bee02dea911" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>multiply</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1af5bc24e9eaa6c52c1a793755421eddf9" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>normaliseToRGBA</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1ac9bd0fc89969166c40590677e239a293" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>operator!=</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1a571a0b43449ef23e9d94aaa96e5f566f" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>operator*</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1a9e708a9b84793d8ad7a62ffc83a94616" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>operator*=</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1a1ffba004ed1cab5fdd33667cd3f2d352" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>operator+</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1a96d924fa33e8d53b09c323410ba62c49" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>operator+=</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1af2b73bc6f250d0c8d1002b370d56aa58" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>operator-</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1acc5af278f7b72faefb812d9cec641323" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>operator-=</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1a52d83cdab624059568446d23607402a5" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>operator/</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1a7f2df730c80c82f0c7d81bdac3d5e340" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>operator/=</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1a59b15f56f8e4c2073cc3709df5055095" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>operator&lt;&lt;</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1ad793560a0cd4c6f7af5e355b67b33994" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>operator==</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1ae643fc3223a85b3c5b4b8f81298c7244" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>subtract</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1abb8dcf2e1a1a32030144a5784385b399" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>Vector4D</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1a7c599849961d43002f26db7e888c8662" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>Vector4D</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1a93ab2b98d896c89315742cbb3fcb0ef6" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>w</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1adcb520477d39fd0f1d4d60e53ce6d85a" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>x</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1a14cae581494b8c58f1721a41ff9c95f5" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>y</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1a6523108955901df4b77ea5f7527b8d4a" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

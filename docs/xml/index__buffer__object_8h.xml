@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="index__buffer__object_8h" kind="file" language="C++">
+    <compoundname>index_buffer_object.h</compoundname>
+    <includes local="no">GL\glew.h</includes>
+    <includes refid="logger__component_8h" local="no">logger_component.h</includes>
+    <includedby refid="guerrilla__renderer__component_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h</includedby>
+    <includedby refid="renderable__object_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h</includedby>
+    <incdepgraph>
+      <node id="139">
+        <label>IL/il.h</label>
+      </node>
+      <node id="140">
+        <label>IL/ilu.h</label>
+      </node>
+      <node id="133">
+        <label>GL\glew.h</label>
+      </node>
+      <node id="137">
+        <label>string</label>
+      </node>
+      <node id="138">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="136">
+        <label>string.h</label>
+      </node>
+      <node id="132">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/index_buffer_object.h</label>
+        <link refid="index__buffer__object_8h"/>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+      </node>
+      <node id="135">
+        <label>iostream</label>
+      </node>
+      <node id="134">
+        <label>logger_component.h</label>
+        <link refid="logger__component_8h_source"/>
+        <childnode refid="135" relation="include">
+        </childnode>
+        <childnode refid="136" relation="include">
+        </childnode>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="142">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h</label>
+        <link refid="guerrilla__renderer__component_8h"/>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+      </node>
+      <node id="145">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_layer_object.h</label>
+        <link refid="static__layer__object_8h"/>
+      </node>
+      <node id="143">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h</label>
+        <link refid="group__object_8h"/>
+        <childnode refid="144" relation="include">
+        </childnode>
+      </node>
+      <node id="147">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/sprite_object.h</label>
+        <link refid="sprite__object_8h"/>
+        <childnode refid="145" relation="include">
+        </childnode>
+      </node>
+      <node id="144">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_object.h</label>
+        <link refid="layer__object_8h"/>
+        <childnode refid="145" relation="include">
+        </childnode>
+      </node>
+      <node id="141">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/index_buffer_object.h</label>
+        <link refid="index__buffer__object_8h"/>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+      </node>
+      <node id="149">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/simple_renderer_component.h</label>
+        <link refid="simple__renderer__component_8h"/>
+      </node>
+      <node id="148">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/static_sprite_object.h</label>
+        <link refid="static__sprite__object_8h"/>
+        <childnode refid="149" relation="include">
+        </childnode>
+      </node>
+      <node id="146">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/renderable_object.h</label>
+        <link refid="renderable__object_8h"/>
+        <childnode refid="143" relation="include">
+        </childnode>
+        <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="144" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="148" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_index_buffer" prot="public">Rubeus::GraphicComponents::RIndexBuffer</innerclass>
+    <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
+    <innernamespace refid="namespace_rubeus_1_1_graphic_components">Rubeus::GraphicComponents</innernamespace>
+    <briefdescription>
+<para>Declares the Index buffer class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL\glew.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;logger_component.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_rubeus" kindref="compound">Rubeus</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">GraphicComponents</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22" refid="class_rubeus_1_1_graphic_components_1_1_r_index_buffer" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rubeus_1_1_graphic_components_1_1_r_index_buffer" kindref="compound">RIndexBuffer</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_BufferID;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_IndicesCount;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_index_buffer_1a9a319bc70052def3549b0b2f8f2627db" kindref="member">RIndexBuffer</ref>(GLushort<sp/>*<sp/>data,<sp/>GLsizei<sp/>count);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_index_buffer_1ab322e9b3e89f3074aa1cfc82f6efaf18" kindref="member">~RIndexBuffer</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_index_buffer_1a6cbcbc12451956af91cbd28851b600b1" kindref="member">bindIndexBuffer</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_index_buffer_1a2233237242db5414de99e479884d9600" kindref="member">unbindIndexBuffer</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>GLuint<sp/>getIndexCount()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_IndicesCount;<sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/index_buffer_object.h"/>
+  </compounddef>
+</doxygen>

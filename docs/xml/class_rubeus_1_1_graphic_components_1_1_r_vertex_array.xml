@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_graphic_components_1_1_r_vertex_array" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::GraphicComponents::RVertexArray</compoundname>
+    <includes refid="vertex__array__object_8h" local="no">vertex_array_object.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_vertex_array_1a6f0ed139af8d7a4087c070f4ab79207b" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Rubeus::GraphicComponents::RVertexArray::m_ArrayID</definition>
+        <argsstring></argsstring>
+        <name>m_ArrayID</name>
+        <briefdescription>
+<para>Identifier for the array. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/vertex_array_object.h" line="27" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/vertex_array_object.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_vertex_array_1a7f865c16da7589d40b60f5df11efe927" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_rubeus_1_1_graphic_components_1_1_r_buffer" kindref="compound">RBuffer</ref> * &gt;</type>
+        <definition>std::vector&lt;RBuffer *&gt; Rubeus::GraphicComponents::RVertexArray::m_Buffers</definition>
+        <argsstring></argsstring>
+        <name>m_Buffers</name>
+        <briefdescription>
+<para>The buffers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/vertex_array_object.h" line="30" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/vertex_array_object.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_vertex_array_1a0038c4ef2b2bb0a9e6bb4f8c51bd3c2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RVertexArray::RVertexArray</definition>
+        <argsstring>()</argsstring>
+        <name>RVertexArray</name>
+        <briefdescription>
+<para>Default constructor. Acquires a vertex array object ID from OpenGL. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/vertex_array_object.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_vertex_array_1a8e84e0fce03cffce793776e3d9475f24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RVertexArray::~RVertexArray</definition>
+        <argsstring>()</argsstring>
+        <name>~RVertexArray</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/vertex_array_object.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_vertex_array_1aa6640e03d3ab6e570d1b923362d3d71c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RVertexArray::addBuffer</definition>
+        <argsstring>(RBuffer *buffer, GLuint index)</argsstring>
+        <name>addBuffer</name>
+        <param>
+          <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_buffer" kindref="compound">RBuffer</ref> *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>GLuint</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Adds a buffer to the specified shader ID. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If non-null, the buffer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The location specified in shader to add a buffer to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/vertex_array_object.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_vertex_array_1a9db4ee31cf63d0463cdda0b08b734f11" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RVertexArray::bindVertexArray</definition>
+        <argsstring>() const</argsstring>
+        <name>bindVertexArray</name>
+        <briefdescription>
+<para>Bind this vertex array. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/vertex_array_object.h" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_vertex_array_1abc9af51ced90d29675e4071ae56b37b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RVertexArray::unbindVertexArray</definition>
+        <argsstring>() const</argsstring>
+        <name>unbindVertexArray</name>
+        <briefdescription>
+<para>Unbind this vertex array. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/vertex_array_object.h" line="70" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A vertex array class that handles vertex and index buffer bindings. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/vertex_array_object.h" line="24" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/vertex_array_object.h" bodystart="23" bodyend="73"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_vertex_array_1aa6640e03d3ab6e570d1b923362d3d71c" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RVertexArray</scope><name>addBuffer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_vertex_array_1a9db4ee31cf63d0463cdda0b08b734f11" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RVertexArray</scope><name>bindVertexArray</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_vertex_array_1a6f0ed139af8d7a4087c070f4ab79207b" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RVertexArray</scope><name>m_ArrayID</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_vertex_array_1a7f865c16da7589d40b60f5df11efe927" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RVertexArray</scope><name>m_Buffers</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_vertex_array_1a0038c4ef2b2bb0a9e6bb4f8c51bd3c2b" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RVertexArray</scope><name>RVertexArray</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_vertex_array_1abc9af51ced90d29675e4071ae56b37b1" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RVertexArray</scope><name>unbindVertexArray</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_vertex_array_1a8e84e0fce03cffce793776e3d9475f24" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RVertexArray</scope><name>~RVertexArray</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

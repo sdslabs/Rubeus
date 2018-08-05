@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_rubeus_1_1_graphic_components" kind="namespace" language="C++">
+    <compoundname>Rubeus::GraphicComponents</compoundname>
+    <innerclass refid="struct_rubeus_1_1_graphic_components_1_1_image" prot="public">Rubeus::GraphicComponents::Image</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_buffer" prot="public">Rubeus::GraphicComponents::RBuffer</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_group" prot="public">Rubeus::GraphicComponents::RGroup</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component" prot="public">Rubeus::GraphicComponents::RGuerrillaRendererComponent</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_index_buffer" prot="public">Rubeus::GraphicComponents::RIndexBuffer</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_layer" prot="public">Rubeus::GraphicComponents::RLayer</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object" prot="public">Rubeus::GraphicComponents::RRenderableObject</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component" prot="public">Rubeus::GraphicComponents::RRendererComponent</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component" prot="public">Rubeus::GraphicComponents::RShaderComponent</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_simple_renderer_component" prot="public">Rubeus::GraphicComponents::RSimpleRendererComponent</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_sprite" prot="public">Rubeus::GraphicComponents::RSprite</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_static_layer" prot="public">Rubeus::GraphicComponents::RStaticLayer</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_static_sprite" prot="public">Rubeus::GraphicComponents::RStaticSprite</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_texture" prot="public">Rubeus::GraphicComponents::RTexture</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_vertex_array" prot="public">Rubeus::GraphicComponents::RVertexArray</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" prot="public">Rubeus::GraphicComponents::RWindowComponent</innerclass>
+    <innerclass refid="struct_rubeus_1_1_graphic_components_1_1_vertex_data" prot="public">Rubeus::GraphicComponents::VertexData</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="window__component_8h_1ab1b8341969a82bc64ecc95a440578f4e" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>EWindowParameters</name>
+        <enumvalue id="dummy_1ab1b8341969a82bc64ecc95a440578f4eabc914ca15710cdd16bb445e1590265c0" prot="public">
+          <name>WINDOWED_MODE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ab1b8341969a82bc64ecc95a440578f4ea40a830d18c0be1067f79d8984b772003" prot="public">
+          <name>FULLSCREEN_MODE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ab1b8341969a82bc64ecc95a440578f4eae0cb079325e65f05d71c9a26c7fd0780" prot="public">
+          <name>NON_RESIZABLE_WINDOW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ab1b8341969a82bc64ecc95a440578f4eadc5e3959d9acf540fa255f2a8178e6c4" prot="public">
+          <name>RESIZABLE_WINDOW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Values that represent window parameters. Use while constructing a <ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" kindref="compound">RWindowComponent</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="29" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" bodystart="28" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="input__component_8h_1addd22d20d9c596d67d4cce1380370aba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::cursorPositionCallback</definition>
+        <argsstring>(GLFWwindow *window, double xpos, double ypos)</argsstring>
+        <name>cursorPositionCallback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xpos</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ypos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_component.h" line="15" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="input__component_8h_1aaf029039346532121afb3b2c1a553f12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::mouseButtonCallback</definition>
+        <argsstring>(GLFWwindow *window, int button, int action, int mods)</argsstring>
+        <name>mouseButtonCallback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>button</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mods</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_component.h" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="input__component_8h_1aa164ff0472b9d6dfd38a3b39080703f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::scrollCallback</definition>
+        <argsstring>(GLFWwindow *window, double xoffset, double yoffset)</argsstring>
+        <name>scrollCallback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xoffset</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>yoffset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_component.h" line="17" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="input__component_8h_1ae3b18f62b7bacca1216ec789a7e46f89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::keyCallback</definition>
+        <argsstring>(GLFWwindow *window, int key, int scancode, int action, int mods)</argsstring>
+        <name>keyCallback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scancode</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mods</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_component.h" line="19" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="window__component_8h_1ae977f0dca420926193fd5c7cd465baf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::getGLFWErrorLog</definition>
+        <argsstring>(int error, const char *description)</argsstring>
+        <name>getGLFWErrorLog</name>
+        <param>
+          <type>int</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+<para>Gets GLFW error logs. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The error. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>description</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The description. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="44" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/buffer_object.h" line="16" column="1"/>
+  </compounddef>
+</doxygen>
