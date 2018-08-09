@@ -25,12 +25,12 @@ include_directories(${OPENGL_INCLUDE_DIRS})
 
 add_library(vorbis STATIC IMPORTED)
 set_target_properties(vorbis PROPERTIES
-    IMPORTED_LOCATION  /home/serious/Desktop/vcpkg/installed/x64-linux/lib/libvorbis.a
+    IMPORTED_LOCATION  ${Vorbis_LIB}
 )
 
 add_library(vorbisfile STATIC IMPORTED)
 set_target_properties(vorbisfile PROPERTIES
-    IMPORTED_LOCATION  /home/serious/Desktop/vcpkg/installed/x64-linux/lib/libvorbisfile.a
+    IMPORTED_LOCATION  ${VorbisFile_LIB}
 )
 
 # target_link_libraries(RubeusCore ${OPENGL_LIBRARIES})
