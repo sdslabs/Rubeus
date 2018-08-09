@@ -78,7 +78,7 @@ namespace Rubeus
 			std::vector<sf::Music *> m_MusicTracks;
 
 			/** @brief	Array of audio modification messages received */
-			std::vector<AudioModifier *> m_AudioTasks;
+			std::vector<Rubeus::AudioModifier *> m_AudioTasks;
 
 			/** @brief	Array of functions to tick */
 			std::vector<void(*)()> m_TickFunctions;
@@ -254,7 +254,7 @@ namespace Rubeus
 			 *
 			 * @param	msg	Pointer to the message received.
 			 */
-			void onMessage(Message * msg) override;
+			void onMessage(Rubeus::Message * msg) override;
 		};
 	}
 }

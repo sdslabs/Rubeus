@@ -9,6 +9,7 @@
 #include <string>
 #include <unordered_map>
 #include <typeinfo>
+#include <memory>
 
 #include <logger_component.h>
 #include <message_system.h>

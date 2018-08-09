@@ -4,8 +4,6 @@
  * @brief	Implements the shader component class
  */
 
-#pragma once
-
 #include <shader_component.h>
 
 namespace Rubeus

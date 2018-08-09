@@ -18,8 +18,8 @@ typedef boost::any var;
 namespace Rubeus
 {
 	class RMasterComponent;
-	enum ETrackType;
-	enum ETrackName;
+	enum ETrackType : int;
+	enum ETrackName : int;
 
 	/**
 	 * @struct	Message
