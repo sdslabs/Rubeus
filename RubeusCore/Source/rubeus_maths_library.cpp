@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include <cstring>
+
 #include <rubeus_maths_library.h>
 
 namespace RML

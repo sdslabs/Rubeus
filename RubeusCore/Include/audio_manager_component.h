@@ -11,7 +11,6 @@
 #include <SFML/Audio.hpp>
 
 #include <master_component.h>
-#include <message_codes.h>
 
 namespace Rubeus
 {
@@ -50,10 +49,10 @@ namespace Rubeus
 		};
 
 		/**
-		 * @class	ETrackType
-		 *
-		 * @brief	List of track types available.
-		 */
+         * @class	ETrackType
+         *
+         * @brief	List of track types available.
+         */
 		enum ETrackType
 		{
 			SOUND_TRACK = 0,
