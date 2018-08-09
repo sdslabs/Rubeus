@@ -50,10 +50,10 @@ namespace Rubeus
 		};
 
 		/**
-         * @class	ETrackType
-         *
-         * @brief	List of track types available.
-         */
+		 * @class	ETrackType
+		 *
+		 * @brief	List of track types available.
+		 */
 		enum ETrackType
 		{
 			SOUND_TRACK = 0,
