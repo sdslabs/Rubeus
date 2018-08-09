@@ -4,8 +4,6 @@
  * @brief	Implements the loader component class
  */
 
-#pragma once
-
 #include <loader_component.h>
 
 namespace Rubeus

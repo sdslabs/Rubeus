@@ -4,8 +4,6 @@
  * @brief	Implements the RML (Rubeus Maths Library)
  */
 
-#pragma once
-
 #include <cstring>
 
 #include <rubeus_maths_library.h>

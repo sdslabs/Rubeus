@@ -23,7 +23,17 @@ add_executable (RubeusCore "RubeusCore.cpp" "RubeusCore.h" ${SOURCES})
 target_include_directories(RubeusCore PUBLIC ./Include)
 include_directories(${OPENGL_INCLUDE_DIRS})
 
+add_library(vorbis STATIC IMPORTED)
+set_target_properties(vorbis PROPERTIES
+    IMPORTED_LOCATION  /home/serious/Desktop/vcpkg/installed/x64-linux/lib/libvorbis.a
+)
+
+add_library(vorbisfile STATIC IMPORTED)
+set_target_properties(vorbisfile PROPERTIES
+    IMPORTED_LOCATION  /home/serious/Desktop/vcpkg/installed/x64-linux/lib/libvorbisfile.a
+)
+
 # target_link_libraries(RubeusCore ${OPENGL_LIBRARIES})
-target_link_libraries(RubeusCore ${OPENGL_LIBRARIES} glfw GLEW ${IL_LIBRARIES} ${ILU_LIBRARIES} sfml-audio)
+target_link_libraries(RubeusCore -ldl sfml-audio sfml-network sfml-graphics sfml-window sfml-system ${OPENGL_LIBRARIES} GLEW glfw openal ${IL_LIBRARIES} ${ILU_LIBRARIES} vorbis vorbisfile)
 
 # TODO: Add tests and install targets if needed.
