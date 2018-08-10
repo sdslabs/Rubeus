@@ -24,10 +24,15 @@ target_include_directories(RubeusCore PUBLIC ./Include)
 include_directories(${OPENGL_INCLUDE_DIRS})
 
 if(WIN32)
+    MESSAGE(STATUS "Linking Windows libraries")
     target_link_libraries(RubeusCore ${OPENGL_LIBRARIES})
-endif(WIN32)
 
-if(UNIX)
+elseif(APPLE)
+    MESSAGE(STATUS "Linking Apple libraries")
+    target_link_libraries(RubeusCore ${OPENGL_LIBRARIES} GLEW sfml-audio ${IL_LIBRARIES} ${ILU_LIBRARIES} glfw openal)
+
+elseif(UNIX)
+    MESSAGE(STATUS "Linking Unix libraries")
     add_library(vorbis STATIC IMPORTED)
     set_target_properties(vorbis PROPERTIES
         IMPORTED_LOCATION  ${Vorbis_LIB}
@@ -37,6 +42,8 @@ if(UNIX)
         IMPORTED_LOCATION  ${VorbisFile_LIB}
     )
     target_link_libraries(RubeusCore -ldl sfml-audio sfml-network sfml-graphics sfml-window sfml-system ${OPENGL_LIBRARIES} GLEW glfw openal ${IL_LIBRARIES} ${ILU_LIBRARIES} vorbis vorbisfile)
-endif(UNIX)
+
+endif(WIN32)
+
 
 # TODO: Add tests and install targets if needed.

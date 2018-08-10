@@ -23,6 +23,7 @@
 // Dependencies
 #include <nvidia_enable.h>
 #include <GL/glew.h>
+#include <OpenGL/glu.h>
 #include <GLFW/glfw3.h>
 #include <rubeus_maths_library.h>
 
