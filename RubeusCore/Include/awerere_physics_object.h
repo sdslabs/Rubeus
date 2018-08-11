@@ -9,22 +9,14 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		class APhysicsObject
+		struct APhysicsObject
 		{
-		private:
 			float m_Mass;
-
-		public:
 			ACollider * m_Collider;
-
-			bool enablePhysics = false;
+			bool m_EnablePhysics = false;
 
 			APhysicsObject();
-			APhysicsObject(float & mass,
-						   RML::Vector3D & position,
-						   RML::Vector2D & velocity,
-						   Awerere::ACollider * collider
-			);
+			APhysicsObject(float & mass, RML::Vector3D & position, RML::Vector2D & velocity, Awerere::ACollider * collider);
 			~APhysicsObject();
 		};
 	}

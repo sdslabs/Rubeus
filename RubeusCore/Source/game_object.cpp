@@ -7,7 +7,7 @@ namespace Rubeus
 		if(enablePhysics == true)
 		{
 			m_PhysicsObject = *physicsObject;
-			m_PhysicsObject.enablePhysics = true;
+			m_PhysicsObject.m_EnablePhysics = true;
 		}
 	}
 
@@ -17,7 +17,7 @@ namespace Rubeus
 		m_ThisTicks(false),
 		m_UsesTexture(true)
 	{
-		setPhysics(enablePhysics, Awerere::APhysicsObject());
+		setPhysics(enablePhysics, new Awerere::APhysicsObject());
 	}
 
 	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, float r, float g, float b, bool enablePhysics, Awerere::APhysicsObject * physicsObject)

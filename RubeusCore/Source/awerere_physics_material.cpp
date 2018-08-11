@@ -4,12 +4,22 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		struct PhysicsMaterial
+		APhysicsMaterial::APhysicsMaterial()
 		{
-			float m_Mass;
-			float m_CoefficientOfRestitution;
-			float m_StaticFriction;
-			float m_KineticFriction;
-		};
+			// makeMaterial();
+		}
+
+		APhysicsMaterial::~APhysicsMaterial()
+		{
+		}
+
+		void APhysicsMaterial::makeMaterial(float mass, float gravity, float friction, float restitution)
+		{
+			m_Mass = mass;
+			m_Gravity = gravity;
+
+			m_CoefficientOfFriction = friction;
+			m_CoefficientOfRestitution = restitution;
+		}
 	}
 }
