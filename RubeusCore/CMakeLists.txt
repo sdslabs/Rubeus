@@ -29,7 +29,7 @@ if(WIN32)
 
 elseif(APPLE)
     MESSAGE(STATUS "Linking Apple libraries")
-    target_link_libraries(RubeusCore ${OPENGL_LIBRARIES} GLEW sfml-audio ${IL_LIBRARIES} ${ILU_LIBRARIES} glfw openal)
+    target_link_libraries(RubeusCore ${OPENGL_LIBRARIES} -lGLEW FLAC OpenAL OpenGL Vorbis ${IL_LIBRARIES} ${ILU_LIBRARIES} glfw openal)
 
 elseif(UNIX)
     MESSAGE(STATUS "Linking Unix libraries")
