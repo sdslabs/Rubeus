@@ -6,10 +6,10 @@ set (CMAKE_CXX_STANDARD 17)
 
 project ("RubeusCore")
 
-set(SFML_STATIC false)
+set(SFML_STATIC true)
 
 if(WIN32)
-MESSAGE(STATUS "Win32 platform detected")
+	MESSAGE(STATUS "Win32 platform detected")
 	FIND_PACKAGE(OpenGL REQUIRED)
 
 elseif(APPLE)

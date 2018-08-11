@@ -43,14 +43,14 @@ namespace Rubeus
 		public:
 			/**
 			 * @fn		RLoaderComponent()
-			 *		
+			 *
 			 * @brief	Default constructor.
 			 */
 			RLoaderComponent();
 
 			/**
 			 * @fn		~RLoaderComponent()
-			 *		
+			 *
 			 * @brief	Default destructor.
 			 */
 			~RLoaderComponent();
