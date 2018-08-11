@@ -5,6 +5,7 @@ namespace Rubeus
 	namespace Awerere
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		APhysicsMaterial::APhysicsMaterial()
 		{
 			makeMaterial(DEFAULT_MASS,
@@ -33,5 +34,24 @@ namespace Rubeus
 			float m_KineticFriction;
 		};
 >>>>>>> Add better game object API
+=======
+		APhysicsMaterial::APhysicsMaterial()
+		{
+			// makeMaterial();
+		}
+
+		APhysicsMaterial::~APhysicsMaterial()
+		{
+		}
+
+		void APhysicsMaterial::makeMaterial(float mass, float gravity, float friction, float restitution)
+		{
+			m_Mass = mass;
+			m_Gravity = gravity;
+
+			m_CoefficientOfFriction = friction;
+			m_CoefficientOfRestitution = restitution;
+		}
+>>>>>>> Add physics material
 	}
 }

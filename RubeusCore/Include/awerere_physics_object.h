@@ -14,6 +14,7 @@ namespace Rubeus
 	namespace Awerere
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		struct APhysicsObject
 		{
 			APhysicsMaterial m_PhysicsMaterial;
@@ -24,22 +25,25 @@ namespace Rubeus
 			APhysicsObject(const APhysicsMaterial & material, const bool & enablePhysics = false, const EColliderType & type = EColliderType::NO_COLLIDER, ACollider * collider = NULL);
 =======
 		class APhysicsObject
+=======
+		struct APhysicsObject
+>>>>>>> Add physics material
 		{
-		private:
 			float m_Mass;
-
-		public:
 			ACollider * m_Collider;
-
-			bool enablePhysics = false;
+			bool m_EnablePhysics = false;
 
 			APhysicsObject();
+<<<<<<< HEAD
 			APhysicsObject(float & mass,
 						   RML::Vector3D & position,
 						   RML::Vector2D & velocity,
 						   Awerere::ACollider * collider
 			);
 >>>>>>> Add support for generalised collider class
+=======
+			APhysicsObject(float & mass, RML::Vector3D & position, RML::Vector2D & velocity, Awerere::ACollider * collider);
+>>>>>>> Add physics material
 			~APhysicsObject();
 		};
 	}
