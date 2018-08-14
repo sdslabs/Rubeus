@@ -1,57 +1,51 @@
-# Rubeus
-A 2D game engine written in C++17 using OpenGL 3.3
-# Setup
-## Setting up the build environment
-1. Be on Windows
-2. Install Microsoft Visual Studio 2017 [here](https://www.visualstudio.com/)
-3. Rubeus uses Visual Leak Detector v2.5.1 for catching memory leaks. Get it [here](https://github.com/KindDragon/vld/releases/tag/v2.5.1). However, if you wish to not use this tool, just remove `add_definitions(-DVLD)` from /RubeusCore/CMakeLists.txt.
-4. Clone this repository:
-```shell
-$ git clone https://github.com/sdslabs/Rubeus.git
-```
+<p>
+<h1 align=center><strong>Rubeus</strong></h1>
+<p/>
 
-## Building required dependencies
-1. Install Vcpkg, a cross-platform C++ package manager from [here](https://github.com/Microsoft/vcpkg) in a suitable directory. Follow basic installation commands provided in the link.
-2. Update vcpkg first:
-```shell
-$ path/to/vcpkg/vcpkg.exe update
-```
-3. Install GLEW, OpenGL Extension Wrangler library (preferably glew:x86-windows) by running:
-```shell
-$ path/to/vcpkg/vcpkg.exe install glew
-```
-4. Install GLFW, OpenGL Graphics Framework (preferably glfw3:x86-windows 3.2.1-2) by running:
-```shell
-$ path/to/vcpkg/vcpkg.exe install glfw3
-```
-5. Install DevIL, Developer Image Library (preferably devil:x86-windows) by running:
-```shell
-$ path/to/vcpkg/vcpkg.exe install devil
-```
-6. Install Boost.Any, Boost::Any C++ utility library(boost-any:x86-windows) by running:
-```shell
-$ path/to/vcpkg/vcpkg.exe install boost-any
-```
-7. Install SFML, Simple & Fast Media Library (sfml:x86-windows) by running:
-```shell
-$ path/to/vcpkg/vcpkg.exe install sfml
-```
+<p align=center>
+Created by SDSLabs with :heart:
+</p>
 
-## Initialising CMake with vcpkg
-1. For VS 2017 project files, press `⊞ Win + X` and choose `Command Prompt(Admin)` from the dialog box.
-2. Open CMake GUI. Set source code and build destination as the same as the repository directory. Click on Configure.
-3. Select 'Specify options for cross-compiling with CMake'. Specify a platform name and specify the C/C++ compiler directories(gcc.exe and g++.exe preferably).
-4. Navigate to the cloned repository. Quick-tips: `X:` command will navigate to the X: drive. `dir` command works the same as the Unix `ls -la` and `cd` still works the same.
-5. Instruct CMake to acquire libraries already built by vcpkg, by running:
-```shell
-$ cmake -DCMAKE_TOOLCHAIN_FILE=path/to/vcpkg/scripts/buildsystems/vcpkg.cmake ./
-```
-6. Run CMake by executing ```cmake ./ ```
+## Contents
 
-## Setting up Rubeus source in Visual Studio 2017
-1. Open `RubeusCore.sln` in VS and right click on `RubeusCore` and `Set as StartUp project`. [Screenshot](https://imgur.com/a/xadxwsG)
-2. All `.h` files will be present in `/RubeusCore/Include` and all of their implementations(if any) will be present in `/RubeusCore/Source` as `.cpp` files. No need to edit CMakeLists.txt anywhere unless there are any linking errors popping up.
+* [What is Rubeus?](#what)
+* [Why is Rubeus?](#why)
+* [How do I setup Rubeus?](#setup)
+* [How can I contribute?](#how)
+* [When can I use Rubeus?](#when)
+* [Remarks](#remarks)
 
-All libraries are relatively linked thus your project is ready to boot up in Visual Studio. Remember to go through the contribution guidelines [here](CONTRIBUTING.md) before contributing/reading.
-___
-Started by [SDSLabs](https://github.com/sdslabs)
+## <a name=what>What is Rubeus?
+
+A cross-platform 2D game engine written in C++17 using OpenGL 3.3. The main objective of making this engine is to provide a simple and fast API to help people realize their game ideas efficiently.
+
+Read the [beginner guide](https://github.com/sdslabs/Rubeus/wiki) and prefer using the [API documentation](https://blog.sdslabs.co/Rubeus/) for technical reference.
+<br><br>
+
+<p align="center">
+<img src=ReadmeAssets/10_9_8.png width=600 alt="Multiple textures">
+<img src=ReadmeAssets/6_point_star.png width=600 align=middle alt="Colored sprites">
+<p/>
+
+Rubeus is currently a work in progress. We also invite you to contribute to this engine along with us. Head [here](CONTRIBUTING.md) to read the contributing guidelines. You can also talk to all the fellow contributors at <a href=https://chat.sdslabs.co>SDSLabs' chat hookup</a>.
+
+## <a name=why>Why is Rubeus?
+Rubeus was at first an initiative by SDSLabs to inculcate the spirit of game development amongst the members of this organisation. But after Rubeus achieved a slightly mature state, we realised that it would be best for the development of this project if we get inputs from game engine developers across the open source community, and build this together.
+
+As previously said, we do not expect to have any monetary gains off making this project open-source, nor from any of the games that we might be developing on Rubeus.
+
+## <a name=setup>How do I setup Rubeus?
+Setup instructions for Rubeus are explained [here](SETUP.md). Also make sure to read the [contribution guidelines](CONTRIBUTING.md).
+
+## <a name=how>How can I contribute?
+Anyone is invited to contribute to Rubeus either through opening issues on Github, making pull requests, adding [Wiki pages](https://github.com/sdslabs/Rubeus/wiki), talking to the community at [our chat website](https://chat.sdslabs.co). Make sure to read the [contribution guidelines](CONTRIBUTING.md) to ease your way in.
+
+## <a name=when>When can I use Rubeus?
+All game engine core sub-systems are in place and a final architecture is the current goal to achieve. We can have a release when that's done.
+
+## <a name=remarks>Remarks
+* A work in production
+  * Guerrilla Renderer, the main rendering engine, highly inspired by the [Sparky Engine](https://github.com/TheCherno/Sparky)
+  * Awerere Physics collision system, the physics update engine using a homebrewed maths library i.e. Rubeus Maths Library (RML)
+  * Symphony Audio Engine, audio effects and cueing engine using SFML as it's backend.
+  * Easy to use workflow, efforts are being made to release as little information to the user as possible without compromising flexibility.
