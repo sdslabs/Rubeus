@@ -3,7 +3,7 @@
 <p/>
 
 <p align=center>
-Curated by SDSLabs with :heart:
+Created by SDSLabs with :heart:
 </p>
 Rubeus Engine was under development at SDSLabs, Indian Institute of Technology Roorkee
 from the mid-May of 2018. During the late July of 2018, Rubeus Engine was open-sourced

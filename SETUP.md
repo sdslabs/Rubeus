@@ -3,7 +3,7 @@
 <p/>
 
 <p align=center>
-Curated by SDSLabs with :heart:
+Created by SDSLabs with :heart:
 </p>
 
 Rubeus uses CMake to maintain builds across Windows, Linux and MacOS. To manage all 3rd party dependencies, Rubeus recommends using Vcpkg, a C++ package manager. Read ahead for instructions on how to build Rubeus on your system.
