@@ -31,6 +31,7 @@ namespace Rubeus
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public:
 		GraphicComponents::RSprite * m_Sprite;
 		Awerere::APhysicsObject * m_PhysicsObject;
@@ -58,15 +59,19 @@ namespace Rubeus
 		void setPhysics(bool enablePhysics, Rubeus::Awerere::APhysicsObject * physicsObject);
 
 >>>>>>> Add better game object API
+=======
+>>>>>>> Add simplified game-physics object creation
 	public:
 >>>>>>> Shift texture and sprite ownership to game object
 		GraphicComponents::RSprite * m_Sprite;
-		Awerere::APhysicsObject m_PhysicsObject;
+		Awerere::APhysicsObject * m_PhysicsObject;
+
 		bool m_ThisTicks;
 		bool m_UsesTexture;
 		bool m_IsGroup = false;
+		bool m_HasPhysics = false;
 
-		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, Awerere::EColliderType type, bool enablePhysics = false);
+		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL);
 		RGameObject(float x, float y, float deltaX, float deltaY, float r, float g, float b, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL);
 		~RGameObject();
 

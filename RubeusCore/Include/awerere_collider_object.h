@@ -8,10 +8,14 @@ namespace Rubeus
 	namespace Awerere
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		enum class EColliderType
 =======
 		enum EColliderType
 >>>>>>> Add support for generalised collider class
+=======
+		enum class EColliderType
+>>>>>>> Add simplified game-physics object creation
 		{
 			SPHERE,
 			PLANE,
@@ -28,12 +32,18 @@ namespace Rubeus
 
 		public:
 <<<<<<< HEAD
+<<<<<<< HEAD
 			ACollider();
 			ACollider(RML::Vector3D position, RML::Vector2D velocity);
 			virtual ~ACollider();
 =======
 			ACollider(RML::Vector3D position, RML::Vector2D velocity);
 >>>>>>> Add support for generalised collider class
+=======
+			ACollider();
+			ACollider(RML::Vector3D position, RML::Vector2D velocity);
+			virtual ~ACollider();
+>>>>>>> Add simplified game-physics object creation
 
 			inline RML::Vector3D getPosition() const { return m_Position; }
 			inline RML::Vector2D getVelocity() const { return m_Velocity; }

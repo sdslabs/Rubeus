@@ -37,7 +37,10 @@ namespace Rubeus
 =======
 		APhysicsMaterial::APhysicsMaterial()
 		{
-			// makeMaterial();
+			makeMaterial(DEFAULT_MASS,
+						 DEFAULT_GRAVITY,
+						 DEFAULT_FRICTION,
+						 DEFAULT_RESTITUTION);
 		}
 
 		APhysicsMaterial::~APhysicsMaterial()
@@ -48,7 +51,6 @@ namespace Rubeus
 		{
 			m_Mass = mass;
 			m_Gravity = gravity;
-
 			m_CoefficientOfFriction = friction;
 			m_CoefficientOfRestitution = restitution;
 		}

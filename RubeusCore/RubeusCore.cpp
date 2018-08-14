@@ -68,6 +68,9 @@ int main()
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add simplified game-physics object creation
 	APhysicsMaterial mat;
 
 	RGameObject * object1 = new RGameObject(2, 2,
@@ -79,6 +82,7 @@ int main()
 															   EColliderType::BOX,
 															   new ABoxCollider(RML::Vector3D(),
 																				RML::Vector3D(3.0f, 3.0f, 1.0f))));
+<<<<<<< HEAD
 
 	g->add(object1);
 	g->add(g2);
@@ -89,6 +93,8 @@ int main()
 	RGameObject * object1 = new RGameObject(1.0f, 1.0f, 1.0f, 1.0f, "Assets/test8.png");
 	RGameObject * object2 = new RGameObject(1.5f, 1.5f, 1.0f, 1.0f, "Assets/test9.png");
 >>>>>>> Add sphere collider
+=======
+>>>>>>> Add simplified game-physics object creation
 
 	g->add(object1);
 <<<<<<< HEAD
@@ -96,8 +102,11 @@ int main()
 >>>>>>> Shift texture and sprite ownership to game object
 =======
 	g->add(g2);
+<<<<<<< HEAD
 	g2->add(object2);
 >>>>>>> Modify workflow to accept only RGameObject objects
+=======
+>>>>>>> Add simplified game-physics object creation
 	layer0->addGroup(*g);
 	layer0->addGroup(*g2);
 
@@ -173,8 +182,11 @@ int main()
 	delete g2;
 >>>>>>> Modify workflow to accept only RGameObject objects
 	delete object1;
+<<<<<<< HEAD
 	delete object2;
 >>>>>>> Shift texture and sprite ownership to game object
+=======
+>>>>>>> Add simplified game-physics object creation
 	delete layer0;
 	delete shader0;
 	delete audio_manager;

@@ -5,13 +5,19 @@ namespace Rubeus
 	namespace Awerere
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Add simplified game-physics object creation
 #define DEFAULT_MASS       10.0f // kg
 #define DEFAULT_GRAVITY     9.8f // m/s^2
 #define DEFAULT_FRICTION    0.2f // [no units]
 #define DEFAULT_RESTITUTION 0.8f // [no units]
 
+<<<<<<< HEAD
 =======
 >>>>>>> Add physics material
+=======
+>>>>>>> Add simplified game-physics object creation
 		struct APhysicsMaterial
 		{
 			bool m_EnableCollision;
