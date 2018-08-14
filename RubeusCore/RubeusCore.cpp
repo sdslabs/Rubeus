@@ -47,12 +47,20 @@ int main()
 	RTimer * timer = new RTimer(2);
 	timer->setFrameCounter();
 
-	RGameObject * object1 = new RGameObject(1.0f, 1.0f, 1.0f, 1.0f, "Assets/test8.png");
-	RGameObject * object2 = new RGameObject(1.5f, 1.5f, 1.0f, 1.0f, "Assets/test9.png");
+	APhysicsMaterial mat;
+
+	RGameObject * object1 = new RGameObject(2, 2,
+											3, 3,
+											"Assets/debug.png",
+											true,
+											new APhysicsObject(mat,
+															   true,
+															   EColliderType::BOX,
+															   new ABoxCollider(RML::Vector3D(),
+																				RML::Vector3D(3.0f, 3.0f, 1.0f))));
 
 	g->add(object1);
 	g->add(g2);
-	g2->add(object2);
 	layer0->addGroup(*g);
 	layer0->addGroup(*g2);
 
@@ -88,7 +96,6 @@ int main()
 	delete g;
 	delete g2;
 	delete object1;
-	delete object2;
 	delete layer0;
 	delete shader0;
 	delete audio_manager;

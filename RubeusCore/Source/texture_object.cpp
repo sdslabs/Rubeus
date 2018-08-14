@@ -13,7 +13,11 @@ namespace Rubeus
 	{
 		GLuint RTexture::load(const char * filePath)
 		{
+<<<<<<< HEAD
 			Image image = UtilityComponents::RLoaderComponent::loadImageFile(filePath);
+=======
+			Image * image = &UtilityComponents::RLoaderComponent::loadImageFile(filePath);
+>>>>>>> Add simplified game-physics object creation
 
 			GLuint result;
 			GLCall(glGenTextures(1, &result));
@@ -26,6 +30,8 @@ namespace Rubeus
 
 			GLCall(glBindTexture(GL_TEXTURE_2D, 0));
 			
+			UtilityComponents::RLoaderComponent::deleteImage();
+
 			UtilityComponents::RLoaderComponent::deleteImage();
 
 			return result;
