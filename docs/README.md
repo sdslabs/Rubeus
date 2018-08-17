@@ -3,7 +3,7 @@
 <p/>
 
 <p align=center>
-Curated by SDSLabs with :heart:
+Created by SDSLabs with :heart:
 </p>
 
 Every large scale project is incomplete without an exhautive, and efficient documentation.
@@ -13,7 +13,7 @@ Getting started: https://github.com/sdslabs/Rubeus/wiki
 API documentation: https://blog.sdslabs.co/Rubeus/
 
 ## Workflow
-Rubeus uses Java-Doc style commenting and uses a combination of Doxygen and Moxygen to gather 
+Rubeus uses Java-Doc style commenting and uses a combination of Doxygen and Moxygen to gather
 all the code documentation into a single markdown file.
 
 ### 1. Write complete documentation
