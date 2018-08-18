@@ -9,7 +9,6 @@
 #include <vector>
 
 #include <rubeus_maths_library.h>
-
 #include <renderable_object.h>
 #include <game_object.h>
 #include <guerrilla_renderer_component.h>

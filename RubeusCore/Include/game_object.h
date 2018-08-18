@@ -1,7 +1,6 @@
 #pragma once
 
 #include <rubeus_maths_library.h>
-
 #include <entity_object.h>
 #include <sprite_object.h>
 #include <texture_object.h>

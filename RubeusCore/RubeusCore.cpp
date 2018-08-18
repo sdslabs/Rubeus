@@ -40,8 +40,7 @@ int main()
 
 	APhysicsMaterial mat;
 
-	RGameObject * object1 = new RGameObject(2, 2,
-											3, 3,
+	RGameObject * object1 = new RGameObject(2, 2, 3, 3,
 											"Assets/debug.png",
 											true,
 											new APhysicsObject(mat,
