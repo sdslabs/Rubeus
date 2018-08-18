@@ -12,36 +12,47 @@ int main()
 
 	using namespace RML;
 
+	using namespace Awerere;
+
 	RWindowComponent * GameWindow = new RWindowComponent("Hello World",
 														 1280, 720,
 														 EWindowParameters::WINDOWED_MODE,
 														 EWindowParameters::NON_RESIZABLE_WINDOW,
 														 0);
-    RAudioManager * audio_manager = new RAudioManager();
-    audio_manager->addMusicTrack(1);
-    audio_manager->addSoundTrack(1);
-    audio_manager->loadTrack(AudioComponents::MUSIC_TRACK, AudioComponents::TRACK_0, "Assets/Garage.wav", 10, true);
-    audio_manager->loadTrack(AudioComponents::SOUND_TRACK, AudioComponents::TRACK_0, "Assets/sound.wav", 10);
-    audio_manager->playTrack(AudioComponents::MUSIC_TRACK, AudioComponents::TRACK_0);
-    audio_manager->playTrack(AudioComponents::SOUND_TRACK, AudioComponents::TRACK_0);
+
+	RSymphony * audio_manager = new RSymphony();
+	audio_manager->addMusicTrack(1);
+	audio_manager->addSoundTrack(1);
+	audio_manager->loadTrack(AudioComponents::MUSIC_TRACK, AudioComponents::TRACK_0, "Assets/Garage.wav", 10, true);
+	audio_manager->loadTrack(AudioComponents::SOUND_TRACK, AudioComponents::TRACK_0, "Assets/sound.wav", 10);
+	audio_manager->playTrack(AudioComponents::MUSIC_TRACK, AudioComponents::TRACK_0);
+	audio_manager->playTrack(AudioComponents::SOUND_TRACK, AudioComponents::TRACK_0);
 
 	RShaderComponent * shader0 = new RShaderComponent("Shaders/basic.vert", "Shaders/basic.frag");
 
 	RStaticLayer * layer0 = new RStaticLayer(*shader0);
 
 	RGroup * g = new RGroup(Matrix4::translation(Vector3D(0.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
+	RGroup * g2 = new RGroup(Matrix4::translation(Vector3D(0.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
 
 	RTimer * timer = new RTimer(2);
 	timer->setFrameCounter();
 
-	RTexture * texture = new RTexture("Assets/test8.png");
-	RTexture * texture2 = new RTexture("Assets/test9.png");
+	APhysicsMaterial mat;
 
-	g->add(new RSprite(3.0f, 3.0f, 3.0f, 3.0f, texture));
-	g->add(new RSprite(6.0f, 3.0f, 4.0f, 4.0f, texture2));
-	g->add(new RSprite(6.0f, 6.0f, 3.0f, 3.0f, Vector4D(0.5f, 0.4f, 0.2f, 1.0f)));
+	RGameObject * object1 = new RGameObject(2, 2, 3, 3,
+											"Assets/debug.png",
+											true,
+											new APhysicsObject(mat,
+															   true,
+															   EColliderType::BOX,
+															   new ABoxCollider(RML::Vector3D(),
+																				RML::Vector3D(3.0f, 3.0f, 1.0f))));
 
+	g->add(object1);
+	g->add(g2);
 	layer0->addGroup(*g);
+	layer0->addGroup(*g2);
 
 	shader0->enableShader();
 	GLint textureIDs[32];
@@ -50,6 +61,11 @@ int main()
 		textureIDs[i] = i;
 	}
 	shader0->setUniform1iv("textures", textureIDs, 32);
+
+	ABoxCollider box(Vector3D(3, 3, 0), Vector3D(5, 5, 0));
+	ASphereCollider sphere(Vector3D(5.5, 5.5, 0), 1);
+
+	LOG(box.tryIntersect(sphere).getGap());
 
 	// See if maps are slowing things down. Also have a performance check
 	while(!GameWindow->closed())
@@ -67,9 +83,9 @@ int main()
 	}
 
 	delete timer;
-	delete texture;
-	delete texture2;
 	delete g;
+	delete g2;
+	delete object1;
 	delete layer0;
 	delete shader0;
 	delete audio_manager;

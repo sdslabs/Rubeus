@@ -147,7 +147,7 @@ namespace RML
 			*
 			* @param	left	The left operand.
 			* @param	right	The right operand.
-			* 					
+			*
 			* @return	The result of the operation.
 			*/
 		friend Vector2D& operator-(Vector2D left, const Vector2D &right);
@@ -159,7 +159,7 @@ namespace RML
 			*
 			* @param	left	The left operand.
 			* @param	right	The right operand.
-			* 					
+			*
 			* @return	The result of the operation.
 			*/
 		friend Vector2D& operator*(Vector2D left, const Vector2D &right);
@@ -288,6 +288,8 @@ namespace RML
 			*/
 		float getLength(Vector3D& vector) const;
 
+		float getLength() const;
+
 		/**
 			* @fn	Vector3D& add(const Vector3D &other);
 			*
@@ -321,6 +323,12 @@ namespace RML
 			*/
 		Vector3D& multiply(const Vector3D &other);
 
+		float multiplyDot(const Vector3D &other);
+
+		Vector3D& multiplyCross(const Vector3D &other);
+
+		Vector3D& multiplyFloat(const float &other);
+
 		/**
 			* @fn	Vector3D& divide(const Vector3D &other);
 			*
@@ -333,6 +341,16 @@ namespace RML
 			*/
 		Vector3D& divide(const Vector3D &other);
 
+		Vector3D maxVector(const Vector3D &other);
+
+		float maxComponent();
+
+		float maxXYComponent();
+
+		Vector3D & toUnitVector();
+
+		Vector3D & abs();
+
 		/**
 			* @fn	std::ostream& operator<<(std::ostream& stream, const Vector3D& vector);
 			*
@@ -340,11 +358,11 @@ namespace RML
 			*
 			* @param	stream	Reference to the stream to be put to.
 			* @param	vector	Vector3D to be put to stream object.
-			*			
+			*
 			* @return	Reference to the stream been put to.
 			*/
 		friend std::ostream& operator<<(std::ostream& stream, const Vector3D& vector);
-			
+
 		/**
 			* @fn	Vector3D& operator+(Vector3D left, const Vector3D &right);
 			*
@@ -356,7 +374,7 @@ namespace RML
 			* @return	The result of the operation.
 			*/
 		friend Vector3D& operator+(Vector3D left, const Vector3D &right);
-			
+
 		/**
 			* @fn	Vector3D& operator-(Vector3D left, const Vector3D &right);
 			*
@@ -368,7 +386,7 @@ namespace RML
 			* @return	The result of the operation.
 			*/
 		friend Vector3D& operator-(Vector3D left, const Vector3D &right);
-			
+
 		/**
 			* @fn	Vector3D& operator*(Vector3D left, const Vector3D &right);
 			*
@@ -380,7 +398,8 @@ namespace RML
 			* @return	The result of the operation.
 			*/
 		friend Vector3D& operator*(Vector3D left, const Vector3D &right);
-			
+
+		friend Vector3D& operator*(const Vector3D vector, const float &other);
 		/**
 			* @fn	Vector3D& operator/(Vector3D left, const Vector3D &right);
 			*
@@ -393,6 +412,8 @@ namespace RML
 			*/
 		friend Vector3D& operator/(Vector3D left, const Vector3D &right);
 
+		friend Vector3D& operator/(const Vector3D vector, const float &other);
+
 		/**
 			* @fn	bool operator==(const Vector3D &other);
 			*
@@ -403,6 +424,8 @@ namespace RML
 			* @return	True if the parameters are considered equivalent.
 			*/
 		bool operator==(const Vector3D &other);
+
+		bool operator==(const int other);
 
 		/**
 			* @fn	bool operator!=(const Vector3D &other);
@@ -510,6 +533,16 @@ namespace RML
 		float getLength(Vector4D& vector) const;
 
 		/**
+			* @fn		Vector4D & toUnitVector()
+			*
+			* @brief	Returns this vector as a modified unit vector
+			* @warning	Works on this object directly
+			*
+			* @return	Unit vector pointing in the direction of this vector.
+			*/
+		Vector4D & toUnitVector();
+
+		/**
 		 * @fn	void normaliseToRGBA();
 		 *
 		 * @brief	Normalise color values to OpenGL supporting RGBA. Eg. (128, 128, 128, 255) => (0.5f,
@@ -571,7 +604,7 @@ namespace RML
 			*
 			* @param	stream	Reference to the stream to be put to.
 			* @param	vector	Vector4D to be put to stream object.
-			*			
+			*
 			* @return	Reference to the stream been put to.
 			*/
 		friend std::ostream& operator<<(std::ostream& stream, const Vector4D& vector);

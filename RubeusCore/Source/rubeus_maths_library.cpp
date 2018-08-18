@@ -134,6 +134,11 @@ namespace RML
 		return sqrt((vector.x * vector.x) + (vector.y * vector.y) + (vector.z * vector.z));
 	}
 
+	float Vector3D::getLength() const
+	{
+		return sqrt((x * x) + (y * y) + (z * z));
+	}
+
 	Vector3D & Vector3D::add(const Vector3D & other)
 	{
 		x += other.x;
@@ -161,6 +166,33 @@ namespace RML
 		return *this;
 	}
 
+	float Vector3D::multiplyDot(const Vector3D & other)
+	{
+		x = this->x * other.x;
+		y = this->y * other.y;
+		z = this->z * other.z;
+
+		return x + y + z;
+	}
+
+	Vector3D & Vector3D::multiplyCross(const Vector3D & other)
+	{
+		x = y * other.z - other.y * z;
+		y = other.x * z - x * other.z;
+		z = x * other.y - other.x * y;
+
+		return *this;
+	}
+
+	Vector3D & Vector3D::multiplyFloat(const float & other)
+	{
+		x *= other;
+		y *= other;
+		z *= other;
+
+		return *this;
+	}
+
 	Vector3D & Vector3D::divide(const Vector3D & other)
 	{
 		x /= other.x;
@@ -170,9 +202,64 @@ namespace RML
 		return *this;
 	}
 
+	Vector3D Vector3D::maxVector(const Vector3D & other)
+	{
+		return Vector3D(
+			other.x > this->x ? other.x : this->x,
+			other.y > this->y ? other.y : this->y,
+			other.z > this->z ? other.z : this->z
+		);
+	}
+
+	float Vector3D::maxComponent()
+	{
+		if(x > y)
+			if(x > z)
+				return x;
+			else
+				return z;
+		else
+			if(y > z)
+				return y;
+			else
+				return z;
+	}
+
+	float Vector3D::maxXYComponent()
+	{
+		if(x > y)
+			return x;
+		else
+			return y;
+	}
+
+	Vector3D & Vector3D::toUnitVector()
+	{
+		float temp = getLength(*this);
+		this->x /= temp;
+		this->y /= temp;
+		this->z /= temp;
+
+		return *this;
+	}
+
+	Vector3D & Vector3D::abs()
+	{
+		this->x = std::abs(x);
+		this->y = std::abs(y);
+		this->z = std::abs(z);
+
+		return *this;
+	}
+
 	bool Vector3D::operator==(const Vector3D & other)
 	{
 		return ((x == other.x) && (y == other.y) && (z == other.z));
+	}
+
+	bool Vector3D::operator==(const int other)
+	{
+		return (x == other) && (y == other) && (z == other);
 	}
 
 	bool Vector3D::operator!=(const Vector3D & other)
@@ -195,6 +282,7 @@ namespace RML
 		return multiply(other);
 	}
 
+
 	Vector3D & Vector3D::operator/=(const Vector3D & other)
 	{
 		return divide(other);
@@ -202,7 +290,7 @@ namespace RML
 
 	std::ostream& operator<<(std::ostream& stream, const Vector3D& vector)
 	{
-		stream << "Vector3D: (" << vector.x << ", " << vector.y << ", "<< vector.z << ")";
+		stream << "Vector3D: (" << vector.x << ", " << vector.y << ", " << vector.z << ")";
 		return stream;
 	}
 
@@ -221,6 +309,16 @@ namespace RML
 		return left.multiply(right);
 	}
 
+	Vector3D & operator*(Vector3D vector, const float & other)
+	{
+		return vector.multiplyFloat(other);
+	}
+
+	Vector3D & operator/(Vector3D vector, const float & other)
+	{
+		return vector.multiplyFloat(1.0f / other);
+	}
+
 	Vector3D & operator/(Vector3D left, const Vector3D &right)
 	{
 		return left.divide(right);
@@ -237,6 +335,17 @@ namespace RML
 	float Vector4D::getLength(Vector4D & vector) const
 	{
 		return sqrt((vector.x * vector.x) + (vector.y * vector.y) + (vector.z * vector.z) + (vector.w * vector.w));
+	}
+
+	Vector4D & Vector4D::toUnitVector()
+	{
+		float temp = getLength(*this);
+		this->x /= temp;
+		this->y /= temp;
+		this->z /= temp;
+		this->w /= temp;
+
+		return *this;
 	}
 
 	Vector4D Vector4D::normaliseToRGBA()
@@ -411,7 +520,7 @@ namespace RML
 	{
 		return multiply(other);
 	}
-		
+
 	std::ostream& operator<<(std::ostream & stream, const Matrix4 & matrix)
 	{
 		stream << "C3: " << matrix.columns[3] << std::endl;
@@ -437,10 +546,10 @@ namespace RML
 		Matrix4 result(1.0f);
 
 		result.elements[0 + 0 * 4] = 2.0f / (right - left);
-		
+
 		result.elements[1 + 1 * 4] = 2.0f / (top - bottom);
 
-		result.elements[2 + 2 * 4] = 2.0f / (near - far); 
+		result.elements[2 + 2 * 4] = 2.0f / (near - far);
 
 		result.elements[0 + 3 * 4] = (left + right) / (left - right);
 		result.elements[1 + 3 * 4] = (bottom + top) / (bottom - top);

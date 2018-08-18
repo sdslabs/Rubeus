@@ -10,7 +10,7 @@ namespace Rubeus
 {
 	namespace AudioComponents
 	{
-		inline bool RAudioManager::validateSoundTrackID(ETrackName trackName)
+		inline bool RSymphony::validateSoundTrackID(ETrackName trackName)
 		{
 			if(trackName > (int) m_SoundTracks.size())
 			{
@@ -21,7 +21,7 @@ namespace Rubeus
 			return true;
 		}
 
-		inline bool RAudioManager::validateMusicTrackID(ETrackName trackName)
+		inline bool RSymphony::validateMusicTrackID(ETrackName trackName)
 		{
 			if(trackName > (int) m_MusicTracks.size())
 			{
@@ -32,11 +32,12 @@ namespace Rubeus
 			return true;
 		}
 
-		RAudioManager::RAudioManager()
+		RSymphony::RSymphony()
 		{
+			SUCCESS("Audio manager initialised successfully");
 		}
 
-		RAudioManager::~RAudioManager()
+		RSymphony::~RSymphony()
 		{
 			size_t i = 0;
 			while(i < m_MusicTracks.size())
@@ -51,7 +52,7 @@ namespace Rubeus
 				delete m_SoundTracks[i++];
 		}
 
-		void RAudioManager::addSoundTrack(const int count)
+		void RSymphony::addSoundTrack(const int count)
 		{
 			int i = 0;
 			while(i++ < count)
@@ -61,12 +62,12 @@ namespace Rubeus
 			}
 		}
 
-		void RAudioManager::addMusicTrack(const int count)
+		void RSymphony::addMusicTrack(const int count)
 		{
 			m_MusicTracks.push_back(new sf::Music());
 		}
 
-		void RAudioManager::loadTrack(ETrackType trackType, ETrackName trackName, std::string filePath, float volume, bool loopEnabled)
+		void RSymphony::loadTrack(ETrackType trackType, ETrackName trackName, std::string filePath, float volume, bool loopEnabled)
 		{
 			if(trackType == SOUND_TRACK)
 			{
@@ -80,6 +81,8 @@ namespace Rubeus
 					{
 						m_SoundTracks[trackName]->setLoop(true);
 					}
+
+					ASSERT("Loaded audio file: " + filePath + " to sound track #" + std::to_string(trackName));
 				}
 			}
 
@@ -93,11 +96,13 @@ namespace Rubeus
 					{
 						m_MusicTracks[trackName]->setLoop(true);
 					}
+
+					ASSERT("Loaded audio file: " + filePath + " to music track #" + std::to_string(trackName));
 				}
 			}
 		}
 
-		void RAudioManager::playTrack(ETrackType trackType, ETrackName trackName)
+		void RSymphony::playTrack(ETrackType trackType, ETrackName trackName)
 		{
 			if(trackType == SOUND_TRACK)
 			{
@@ -115,7 +120,7 @@ namespace Rubeus
 			}
 		}
 
-		void RAudioManager::pauseTrack(ETrackType trackType, ETrackName trackName)
+		void RSymphony::pauseTrack(ETrackType trackType, ETrackName trackName)
 		{
 			if(trackType == SOUND_TRACK)
 			{
@@ -133,7 +138,7 @@ namespace Rubeus
 			}
 		}
 
-		void RAudioManager::stopTrack(ETrackType trackType, ETrackName trackName)
+		void RSymphony::stopTrack(ETrackType trackType, ETrackName trackName)
 		{
 			if(trackType == SOUND_TRACK)
 			{
@@ -151,12 +156,12 @@ namespace Rubeus
 			}
 		}
 
-		void RAudioManager::stepDownMusicVolume(const float duration, const float floorVolume)
+		void RSymphony::stepDownMusicVolume(const float duration, const float floorVolume)
 		{
 			// To be continued
 		}
 
-		void RAudioManager::setVolume(ETrackType trackType, ETrackName trackName, const float volume)
+		void RSymphony::setVolume(ETrackType trackType, ETrackName trackName, const float volume)
 		{
 			if(trackType == SOUND_TRACK)
 			{
@@ -175,7 +180,7 @@ namespace Rubeus
 			}
 		}
 
-		void RAudioManager::setPitch(ETrackType trackType, ETrackName trackName, const float pitch)
+		void RSymphony::setPitch(ETrackType trackType, ETrackName trackName, const float pitch)
 		{
 			if(trackType == SOUND_TRACK)
 			{
@@ -193,12 +198,12 @@ namespace Rubeus
 			}
 		}
 
-		void RAudioManager::addToTick(void(*function)())
+		void RSymphony::addToTick(void(*function)())
 		{
 			m_TickFunctions.push_back(function);
 		}
 
-		void RAudioManager::tick()
+		void RSymphony::tick()
 		{
 			for(size_t i = 0; i < m_TickFunctions.size(); i++)
 			{
@@ -256,7 +261,7 @@ namespace Rubeus
 			}
 		}
 
-		void RAudioManager::onMessage(Message * msg)
+		void RSymphony::onMessage(Message * msg)
 		{
 		}
 	}

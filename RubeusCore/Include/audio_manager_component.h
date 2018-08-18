@@ -61,11 +61,11 @@ namespace Rubeus
 		};
 
 		/**
-		 * @class	RAudioManager
+		 * @class	RSymphony
 		 *
 		 * @brief	Manages audio loading, cueing and audio effects.
 		 */
-		class RAudioManager : public RMasterComponent
+		class RSymphony : public RMasterComponent
 		{
 		private:
 			/** @brief	Array of SFML sound effect buffers */
@@ -110,18 +110,18 @@ namespace Rubeus
 
 		public:
 			/**
-			 * @fn		RAudioManager()
+			 * @fn		RSymphony()
 			 *
 			 * @brief	Constructor
 			 */
-			RAudioManager();
+			RSymphony();
 
 			/**
-			 * @fn		~RAudioManager()
+			 * @fn		~RSymphony()
 			 *
 			 * @brief	Destructor
 			 */
-			~RAudioManager();
+			~RSymphony();
 
 			/**
 			 * @fn		void addSoundTrack(const int count);

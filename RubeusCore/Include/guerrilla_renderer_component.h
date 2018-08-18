@@ -57,7 +57,7 @@ namespace Rubeus
 			/** @brief	Vector of transform matrices */
 			std::vector<RML::Matrix4> m_TransformationStack;
 
-			/** @brief	Cache for last element of trasnformation stack */
+			/** @brief	Cache for the last element of the transformation stack */
 			RML::Matrix4 * m_TransformationBack;
 
 			/** @brief	Texture cache slots used to refer to textures used recently */

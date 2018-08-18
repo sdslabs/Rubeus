@@ -25,7 +25,7 @@ namespace Rubeus
 			GLCall(glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image.m_Width, image.m_Height, 0, GL_RGB, GL_UNSIGNED_BYTE, image.m_Image));
 
 			GLCall(glBindTexture(GL_TEXTURE_2D, 0));
-			
+
 			UtilityComponents::RLoaderComponent::deleteImage();
 
 			return result;
