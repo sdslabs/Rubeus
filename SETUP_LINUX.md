@@ -53,7 +53,7 @@ $ cmake-gui
 4. Navigate to the cloned repository.
 5. To use libraries acquired by vcpkg, run:
 ```shell
-$ path/to/vcpkg/vcpkg.exe integrate install
+$ path/to/vcpkg/vcpkg integrate install
 ```
 6. Instruct CMake to acquire libraries already built by vcpkg, by running:
 ```shell
