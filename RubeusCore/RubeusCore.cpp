@@ -39,7 +39,7 @@ int main()
 >>>>>>> Rename audio manager as 'Symphony'
 =======
 
-	RAudioManager * audio_manager = new RAudioManager();
+	RSymphony * audio_manager = new RSymphony();
 	audio_manager->addMusicTrack(1);
 	audio_manager->addSoundTrack(1);
 	audio_manager->loadTrack(AudioComponents::MUSIC_TRACK, AudioComponents::TRACK_0, "Assets/Garage.wav", 10, true);
