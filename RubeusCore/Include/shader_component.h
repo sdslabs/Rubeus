@@ -8,7 +8,7 @@
 
 #include <vector>
 
-#include <GL\glew.h>
+#include <GL/glew.h>
 
 #include <master_component.h>
 #include <loader_component.h>

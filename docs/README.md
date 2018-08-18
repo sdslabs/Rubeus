@@ -6,7 +6,7 @@
 Created by SDSLabs with :heart:
 </p>
 
-Every large scale project is incomplete without an exhautive, and efficient documentation.
+Every large scale project is incomplete without an exhaustive, and efficient documentation.
 
 Getting started: https://github.com/sdslabs/Rubeus/wiki
 

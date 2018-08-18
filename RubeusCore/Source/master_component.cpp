@@ -4,8 +4,6 @@
  * @brief	Implements the master class
  */
 
-#pragma once
-
 #include <master_component.h>
 
 namespace Rubeus

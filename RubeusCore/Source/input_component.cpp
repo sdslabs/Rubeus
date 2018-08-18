@@ -1,5 +1,3 @@
-#pragma once
-
 #include <input_component.h>
 #include <window_component.h>
 

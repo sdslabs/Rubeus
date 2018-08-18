@@ -4,8 +4,6 @@
  * @brief	Implements the logger component functions
  */
 
-#pragma once
-
 #include <logger_component.h>
 #include <math.h>
 

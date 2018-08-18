@@ -25,7 +25,7 @@ namespace Rubeus
 		 *
 		 * @brief	List of track names and track numbers.
 		 */
-		enum ETrackName
+		enum ETrackName : int
 		{
 			TRACK_0 = 0,
 			TRACK_1 = 1,
@@ -50,11 +50,11 @@ namespace Rubeus
 		};
 
 		/**
-		 * @class	ETrackType
-		 *
-		 * @brief	List of track types available.
-		 */
-		enum ETrackType
+         * @class	ETrackType
+         *
+         * @brief	List of track types available.
+         */
+		enum ETrackType : int
 		{
 			SOUND_TRACK = 0,
 			MUSIC_TRACK = 1
@@ -254,7 +254,7 @@ namespace Rubeus
 			 *
 			 * @param	msg	Pointer to the message received.
 			 */
-			void onMessage(Message * msg) override;
+			void onMessage(Rubeus::Message * msg) override;
 		};
 	}
 }
