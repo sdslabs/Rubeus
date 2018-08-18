@@ -21,6 +21,7 @@ int main()
 														 0);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     RAudioManager * audio_manager = new RAudioManager();
     audio_manager->addMusicTrack(1);
     audio_manager->addSoundTrack(1);
@@ -38,6 +39,8 @@ int main()
 	audio_manager->playTrack(SOUND_TRACK, TRACK_0);
 >>>>>>> Rename audio manager as 'Symphony'
 =======
+=======
+>>>>>>> Fix image deletion bug
 
 	RSymphony * audio_manager = new RSymphony();
 	audio_manager->addMusicTrack(1);
