@@ -20,10 +20,10 @@ int main()
     RAudioManager * audio_manager = new RAudioManager();
     audio_manager->addMusicTrack(1);
     audio_manager->addSoundTrack(1);
-    audio_manager->loadTrack(::Rubeus::AudioComponents::ETrackType::MUSIC_TRACK, ::Rubeus::AudioComponents::ETrackName::TRACK_0, "Assets/Garage.wav", 10, true);
-    audio_manager->loadTrack(::Rubeus::AudioComponents::ETrackType::SOUND_TRACK, ::Rubeus::AudioComponents::ETrackName::TRACK_0, "Assets/sound.wav", 10);
-    audio_manager->playTrack(::Rubeus::AudioComponents::ETrackType::MUSIC_TRACK, ::Rubeus::AudioComponents::ETrackName::TRACK_0);
-    audio_manager->playTrack(::Rubeus::AudioComponents::ETrackType::SOUND_TRACK, ::Rubeus::AudioComponents::ETrackName::TRACK_0);
+    audio_manager->loadTrack(AudioComponents::MUSIC_TRACK, AudioComponents::TRACK_0, "Assets/Garage.wav", 10, true);
+    audio_manager->loadTrack(AudioComponents::SOUND_TRACK, AudioComponents::TRACK_0, "Assets/sound.wav", 10);
+    audio_manager->playTrack(AudioComponents::MUSIC_TRACK, AudioComponents::TRACK_0);
+    audio_manager->playTrack(AudioComponents::SOUND_TRACK, AudioComponents::TRACK_0);
 
 	RShaderComponent * shader0 = new RShaderComponent("Shaders/basic.vert", "Shaders/basic.frag");
 

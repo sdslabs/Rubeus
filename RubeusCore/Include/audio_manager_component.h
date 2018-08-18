@@ -25,7 +25,7 @@ namespace Rubeus
 		 *
 		 * @brief	List of track names and track numbers.
 		 */
-		enum ETrackName
+		enum ETrackName : int
 		{
 			TRACK_0 = 0,
 			TRACK_1 = 1,
@@ -50,11 +50,11 @@ namespace Rubeus
 		};
 
 		/**
-		 * @class	ETrackType
-		 *
-		 * @brief	List of track types available.
-		 */
-		enum ETrackType
+         * @class	ETrackType
+         *
+         * @brief	List of track types available.
+         */
+		enum ETrackType : int
 		{
 			SOUND_TRACK = 0,
 			MUSIC_TRACK = 1
@@ -78,7 +78,7 @@ namespace Rubeus
 			std::vector<sf::Music *> m_MusicTracks;
 
 			/** @brief	Array of audio modification messages received */
-			std::vector<Rubeus::AudioModifier *> m_AudioTasks;
+			std::vector<AudioModifier *> m_AudioTasks;
 
 			/** @brief	Array of functions to tick */
 			std::vector<void(*)()> m_TickFunctions;
