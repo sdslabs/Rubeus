@@ -82,15 +82,7 @@ namespace Rubeus
 						m_SoundTracks[trackName]->setLoop(true);
 					}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 					ASSERT("Loaded audio file: " + filePath + " to sound track #" + std::to_string(trackName));
-=======
-					ASSERT("Added sound track #" + std::to_string(trackName));
->>>>>>> Add sphere-plane collision detection
-=======
-					ASSERT("Loaded audio file: " + filePath + " to sound track #" + std::to_string(trackName));
->>>>>>> Add plane-box interaction
 				}
 			}
 
@@ -105,15 +97,7 @@ namespace Rubeus
 						m_MusicTracks[trackName]->setLoop(true);
 					}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 					ASSERT("Loaded audio file: " + filePath + " to music track #" + std::to_string(trackName));
-=======
-					ASSERT("Added music track #" + std::to_string(trackName));
->>>>>>> Add sphere-plane collision detection
-=======
-					ASSERT("Loaded audio file: " + filePath + " to music track #" + std::to_string(trackName));
->>>>>>> Add plane-box interaction
 				}
 			}
 		}

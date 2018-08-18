@@ -43,29 +43,9 @@
 #include <texture_object.h>
 #include <audio_manager_component.h>
 #include <game_object.h>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 // Awerere specific includes
 #include <awerere_sphere_collider_object.h>
 #include <awerere_box_collider_object.h>
 #include <awerere_plane_collider_object.h>
-<<<<<<< HEAD
-<<<<<<< HEAD
 #include <awerere_physics_object.h>
-=======
->>>>>>> Shift texture and sprite ownership to game object
-=======
-=======
-
-// Awerere specific includes
->>>>>>> Add plane collider with sphere interactions
-#include <awerere_sphere_collider_object.h>
-#include <awerere_box_collider_object.h>
->>>>>>> Add sphere collider
-=======
->>>>>>> Add sphere-plane collision detection
-=======
-#include <awerere_physics_object.h>
->>>>>>> Add better game object API
