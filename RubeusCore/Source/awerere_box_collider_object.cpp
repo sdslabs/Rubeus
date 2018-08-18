@@ -1,4 +1,11 @@
+/**
+ * @fn	Source/awerere_box_collider_object.cpp
+ *
+ * @brief	Defines the Box Collider class
+ */
+
 #include <awerere_box_collider_object.h>
+
 #include <awerere_plane_collider_object.h>
 #include <awerere_sphere_collider_object.h>
 #include <awerere_collide_data_object.h>
