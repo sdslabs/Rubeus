@@ -7,14 +7,14 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		RML::Vector3D ABoxCollider::calculateCenter(RML::Vector3D & ll, RML::Vector3D & ur)
+		RML::Vector3D ABoxCollider::calculateCenter(const RML::Vector3D & ll, const RML::Vector3D & ur)
 		{
 			RML::Vector3D result((ll + ur) / 2.0f);
 
 			return result;
 		}
 
-		ABoxCollider::ABoxCollider(RML::Vector3D & minExtent, RML::Vector3D & maxExtent)
+		ABoxCollider::ABoxCollider(const RML::Vector3D & minExtent, const RML::Vector3D & maxExtent)
 			: ACollider(calculateCenter(minExtent, maxExtent), RML::Vector2D()), m_MinExtent(minExtent), m_MaxExtent(maxExtent)
 		{
 			m_Type = EColliderType::BOX;
