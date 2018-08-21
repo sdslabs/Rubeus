@@ -1,3 +1,9 @@
+/**
+ * @file		Source/awerere_plane_collider_object.cpp.
+ *
+ * @brief	Defines the Plane Collider class
+ */
+
 #include <awerere_plane_collider_object.h>
 
 #include <awerere_sphere_collider_object.h>

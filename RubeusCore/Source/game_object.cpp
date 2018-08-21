@@ -1,3 +1,9 @@
+/**
+ * @file		Source/game_object.cpp.
+ *
+ * @brief	Defines the Game Object class
+ */
+
 #include <game_object.h>
 
 namespace Rubeus

@@ -1,3 +1,9 @@
+/**
+ * @file		Source/awerere_physics_object.cpp.
+ *
+ * @brief	Defines the Physics object class
+ */
+
 #include <awerere_physics_object.h>
 
 #include <logger_component.h>
