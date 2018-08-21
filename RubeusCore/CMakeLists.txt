@@ -29,14 +29,8 @@ endif(WIN32)
 
 if(UNIX)
     add_library(vorbis STATIC IMPORTED)
-    set_target_properties(vorbis PROPERTIES
-        IMPORTED_LOCATION  ${Vorbis_LIB}
-    )
-    add_library(vorbisfile STATIC IMPORTED)
-    set_target_properties(vorbisfile PROPERTIES
-        IMPORTED_LOCATION  ${VorbisFile_LIB}
-    )
-    target_link_libraries(RubeusCore -ldl sfml-audio sfml-network sfml-graphics sfml-window sfml-system ${OPENGL_LIBRARIES} GLEW glfw openal ${IL_LIBRARIES} ${ILU_LIBRARIES} vorbis vorbisfile)
+    
+    target_link_libraries(RubeusCore -ldl sfml-audio sfml-network sfml-graphics sfml-window sfml-system ${OPENGL_LIBRARIES} GLEW glfw openal ${IL_LIBRARIES} ${ILU_LIBRARIES})
 endif(UNIX)
 
 # TODO: Add tests and install targets if needed.

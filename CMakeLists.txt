@@ -15,11 +15,10 @@ endif (WIN32)
 
 if(UNIX)
 	FIND_PACKAGE(OpenGL REQUIRED)
-	set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "/usr/share/SFML/Modules/")
 	FIND_PACKAGE(glfw3 REQUIRED)
 	FIND_PACKAGE(GLEW REQUIRED)
 	FIND_PACKAGE(DevIL REQUIRED)
-	FIND_PACKAGE(SFML 2.5 COMPONENTS audio graphics window system network REQUIRED)
+	FIND_PACKAGE(SFML 2.4 COMPONENTS audio graphics window system network REQUIRED)
 	MESSAGE(STATUS "Unix platform detected")
 endif (UNIX)
 
