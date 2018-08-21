@@ -6,8 +6,8 @@
 Created by SDSLabs with :heart:
 </p>
 
-## Setting up the build environment
-1. You can use any IDE/text-editor you fancy for contributing to Rubeus but we find.
+## Setting up the build environment 
+1. You can use any IDE/text-editor you fancy for contributing to Rubeus.
 2. Rubeus uses Visual Leak Detector v2.5.1 for catching memory leaks. Unfortunately, it is not available for Linux, which means that you may have to use some other dynamic code profiling tool like [Valgrind](http://valgrind.org/).
 3. Install [CMake](https://cmake.org/)
 4. Clone this repository:
@@ -41,7 +41,7 @@ $ path/to/vcpkg/vcpkg install boost-any
 ```shell
 $ path/to/vcpkg/vcpkg install sfml
 ```
-8. SFML requires some external libraries acquired by the system package manager. Vcpkg shall remind you at this point to install these libraries using `apt-get`.
+8. SFML requires some external libraries acquired by the system package manager. Vcpkg shall remind you before building SFML to install these libraries using `apt-get`.
 
 ## Initialising CMake with vcpkg
 1. Open Terminal(Default: Ctrl+Alt+T). Open CMake GUI:
