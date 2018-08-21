@@ -1,3 +1,9 @@
+/**
+ * @file		Source/entity_object.cpp.
+ *
+ * @brief	Defines the Entity class
+ */
+
 #include <entity_object.h>
 
 namespace Rubeus

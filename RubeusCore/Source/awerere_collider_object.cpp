@@ -1,3 +1,9 @@
+/**
+ * @file		Source/awerere_collider_object.cpp.
+ *
+ * @brief	Defines the collider super class
+ */
+
 #include <awerere_collider_object.h>
 
 namespace Rubeus

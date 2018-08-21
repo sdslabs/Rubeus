@@ -1,3 +1,9 @@
+/**
+ * @file		Source/awerere_physics_material.cpp.
+ *
+ * @brief	Defines the Physics Material class
+ */
+
 #include <awerere_physics_material.h>
 
 namespace Rubeus
