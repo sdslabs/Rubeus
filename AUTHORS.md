@@ -17,10 +17,10 @@ officially.
 However, the motivation behind making Rubeus publicly open-source was mainly to help
 attract talents from various fields and bringing developers together to create a user-friendly, powerful and efficient game engine capable of realising custom-made video game ideas.
 
-## Authors
+## Founding Contributors
 * Twarit Waikar (@IronicallySerious)
 
 * Nikita Singh (@99singhnikita)
 
-## Developers
+## Contributors
 _your name here :)_
