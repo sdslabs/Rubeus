@@ -41,7 +41,7 @@ namespace Rubeus
 			 *
 			 * @return	The center of the box.
 			 */
-			RML::Vector3D calculateCenter(RML::Vector3D & ll, RML::Vector3D & ur);
+			RML::Vector3D calculateCenter(const RML::Vector3D & ll, const RML::Vector3D & ur);
 
 		public:
 			/**
@@ -52,7 +52,7 @@ namespace Rubeus
 			 * @param	minExtent	The lower left point of the box.
 			 * @param	maxExtent	The upper right point of the box.
 			 */
-			ABoxCollider(RML::Vector3D & minExtent, RML::Vector3D & maxExtent);
+			ABoxCollider(const RML::Vector3D & minExtent, const RML::Vector3D & maxExtent);
 
 			/**
 			 * @fn		~ABoxCollider()
