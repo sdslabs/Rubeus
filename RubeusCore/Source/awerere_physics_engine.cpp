@@ -6,6 +6,8 @@ namespace Rubeus
 	{
 		void APhysicsEngine::calculateCollisions()
 		{
+			m_CollisionEngine.executePhaseOne(m_GameObjects);
+			m_CollisionEngine.executePhaseTwo();
 		}
 
 		void APhysicsEngine::decodeCollisionResponse()
@@ -14,14 +16,15 @@ namespace Rubeus
 
 		APhysicsEngine::APhysicsEngine(std::vector<RGameObject *> * gameObjects)
 		{
-			m_CollisionEngine.m_Candidates = gameObjects;
+			m_CollisionEngine.m_GameObjects = gameObjects;
+			m_GameObjects = gameObjects;
 		}
 
 		APhysicsEngine::~APhysicsEngine()
 		{
 		}
 
-		void APhysicsEngine::update(std::vector<RGameObject*>* gameObjects)
+		void APhysicsEngine::update(std::vector<RGameObject*> * gameObjects)
 		{
 		}
 	}
