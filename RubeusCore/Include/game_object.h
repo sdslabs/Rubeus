@@ -60,17 +60,19 @@ namespace Rubeus
 
 
 		/**
-		 * @fn		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL)
+		 * @fn		RGameObject(float x, float y, float deltaX, float deltaY, float r, float g, float b, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL)
 		 *
 		 * @brief	Constructor. Uses pure colors as textures.
 		 * @warning	All pointers passed in will be owned by the game object.
-					Heap objects will be deleted by the object automatically.
+					Heap objects will be deleted by this object.
 		 *
 		 * @param	x				x coordinate of the lower left point.
 		 * @param	y				y coordinate of the lower left point.
 		 * @param	deltaX			Horizontal span of the object.
 		 * @param	deltaX			Vertical span of the object.
-		 * @param	imageFilePath		Path to the image to be used as texture.
+		 * @param	r				Red channel value.
+		 * @param	g				Green channel value.
+		 * @param	b				Blue channel value
 		 * @param	enablePhysics		Whether the object obeys physics. Default is false.
 		 * @param	physicsObject		Physics object to be used for collision detection. Default is NULL. Use only when
 									physics has been enabled.
@@ -101,7 +103,7 @@ namespace Rubeus
 
 	protected:
 		/**
-		 * @fn	RGameObject()
+		 * @fn		RGameObject()
 		 *
 		 * @brief	Protected constructor. Only used to create groups
 		 */

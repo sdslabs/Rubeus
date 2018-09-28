@@ -1,15 +1,13 @@
 #pragma once
 
-#include <game_object.h>
-
 #include <vector>
+
+#include <game_object.h>
 
 namespace Rubeus
 {
 	namespace Awerere
 	{
-		class ::Rubeus::RGameObject;
-
 		class ACollisionEngine
 		{
 		private:

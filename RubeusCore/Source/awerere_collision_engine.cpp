@@ -12,11 +12,11 @@ namespace Rubeus
 		{
 		}
 
-		void ACollisionEngine::executePhaseOne(std::vector<RGameObject> * gameObjects)
+		void ACollisionEngine::executePhaseOne(std::vector<RGameObject *> * gameObjects)
 		{
 		}
 
-		void ACollisionEngine::executePhaseTwo(std::vector<RGameObject> * passers)
+		void ACollisionEngine::executePhaseTwo()
 		{
 		}
 

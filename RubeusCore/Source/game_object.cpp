@@ -37,7 +37,7 @@ namespace Rubeus
 	{
 		if(enablePhysics == true && m_PhysicsObject == NULL)
 		{
-			ERRORLOG("Invalid game object. Physics has been enabled. Specify a physics object");
+			ERRORLOG("Invalid game object. Physics has been enabled for a NULL values Physics object pointer. Specify a non-NULL physics object.");
 		}
 	}
 

@@ -9,8 +9,6 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		class ::Rubeus::RGameObject;
-
 		class APhysicsEngine
 		{
 		private:
