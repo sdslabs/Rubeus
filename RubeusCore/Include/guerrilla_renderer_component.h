@@ -16,19 +16,18 @@ namespace Rubeus
 {
 	namespace GraphicComponents
 	{
+		constexpr long MAX_SPRITES = 60000;
+		constexpr long VERTEX_SIZE = sizeof(VertexData);
+		constexpr long SPRITE_SIZE = VERTEX_SIZE * 4;
+		constexpr long BUFFER_SIZE = SPRITE_SIZE * MAX_SPRITES;
+		constexpr long INDICES_SIZE = MAX_SPRITES * 6;
 
-#define MAX_SPRITES 60000
-#define VERTEX_SIZE sizeof(VertexData)
-#define SPRITE_SIZE VERTEX_SIZE * 4
-#define BUFFER_SIZE SPRITE_SIZE * MAX_SPRITES
-#define INDICES_SIZE MAX_SPRITES * 6
+		constexpr int SHADER_VERTEX_LOCATION = 0;
+		constexpr int SHADER_UV_LOCATION = 1;
+		constexpr int SHADER_TEXTURE_ID_LOCATION = 2;
+		constexpr int SHADER_COLOR_LOCATION = 3;
 
-#define SHADER_VERTEX_LOCATION 0
-#define SHADER_UV_LOCATION 1
-#define SHADER_TEXTURE_ID_LOCATION 2
-#define SHADER_COLOR_LOCATION 3
-
-#define MAX_ALLOWED_TEXTURES 32
+		constexpr int MAX_ALLOWED_TEXTURES = 32;
 
 		/**
 		 * @class	RGuerrillaRendererComponent
