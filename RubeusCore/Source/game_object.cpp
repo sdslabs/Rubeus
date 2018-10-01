@@ -16,12 +16,12 @@ namespace Rubeus
 		m_UsesTexture(true),
 		m_HasPhysics(enablePhysics)
 	{
-		if(enablePhysics == true && m_PhysicsObject == NULL)
+		if (enablePhysics == true && m_PhysicsObject == NULL)
 		{
 			ERRORLOG("Invalid game object. Physics has been enabled. Specify a physics object");
 		}
 
-		if(m_PhysicsObject != NULL)
+		if (m_PhysicsObject != NULL)
 		{
 			m_PhysicsObject->m_EnablePhysics = enablePhysics;
 		}
@@ -35,7 +35,7 @@ namespace Rubeus
 		m_UsesTexture(false),
 		m_HasPhysics(enablePhysics)
 	{
-		if(enablePhysics == true && m_PhysicsObject == NULL)
+		if (enablePhysics == true && m_PhysicsObject == NULL)
 		{
 			ERRORLOG("Invalid game object. Physics has been enabled for a NULL values Physics object pointer. Specify a non-NULL physics object.");
 		}
@@ -48,13 +48,13 @@ namespace Rubeus
 
 	RGameObject::~RGameObject()
 	{
-		if(m_IsGroup == false)
+		if (m_IsGroup == false)
 		{
 			delete m_Sprite->m_Texture;
 			delete m_Sprite;
 		}
 
-		if(m_HasPhysics == true)
+		if (m_HasPhysics == true)
 		{
 			delete m_PhysicsObject;
 		}
