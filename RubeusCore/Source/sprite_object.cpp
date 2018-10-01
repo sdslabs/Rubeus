@@ -17,7 +17,7 @@ namespace Rubeus
 
 		RSprite::~RSprite()
 		{
-			if(!m_Texture)
+			if (!m_Texture)
 			{
 				delete m_Texture;
 			}
@@ -32,7 +32,7 @@ namespace Rubeus
 		RSprite::RSprite(float x, float y, float width, float height, RTexture * texture)
 			: RRenderableObject(RML::Vector3D(x, y, 0), RML::Vector2D(width, height), RML::Vector4D(0.314f, 0.314f, 0.314f, 0.0f)) // Using values of PI to catch errors as flags while debugging
 		{
-			m_Texture = new RTexture(*texture);
+			m_Texture = texture;
 		}
 	}
 }
