@@ -40,6 +40,8 @@ namespace Rubeus
 		/** @brief	Whether this gameobject obeys physics */
 		bool m_HasPhysics = false;
 
+		bool m_GeneratesHit = false;
+
 		/**
 		 * @fn		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL)
 		 *
@@ -55,8 +57,9 @@ namespace Rubeus
 		 * @param	enablePhysics		Whether the object obeys physics. Default is false.
 		 * @param	physicsObject		Physics object to be used for collision detection. Default is NULL. Use only when
 									physics has been enabled.
+		 * @param	generatesHit		Whether the object generates hit events. Default is false.
 		 */
-		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL);
+		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL, bool generatesHit = false);
 
 
 		/**
@@ -76,8 +79,9 @@ namespace Rubeus
 		 * @param	enablePhysics		Whether the object obeys physics. Default is false.
 		 * @param	physicsObject		Physics object to be used for collision detection. Default is NULL. Use only when
 									physics has been enabled.
+		 * @param	generatesHit		Whether the object generates hit events. Default is false.
 		 */
-		RGameObject(float x, float y, float deltaX, float deltaY, float r, float g, float b, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL);
+		RGameObject(float x, float y, float deltaX, float deltaY, float r, float g, float b, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL, bool generatesHit = false);
 
 		/**
 		 * @fn		~RGameObject()

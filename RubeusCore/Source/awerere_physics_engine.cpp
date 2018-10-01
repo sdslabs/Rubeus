@@ -24,8 +24,14 @@ namespace Rubeus
 		{
 		}
 
-		void APhysicsEngine::update(std::vector<RGameObject*> * gameObjects)
+		void APhysicsEngine::setGameObjectArray(std::vector<RGameObject *> * gameObjects)
 		{
+			m_GameObjects = gameObjects;
+		}
+
+		void APhysicsEngine::update(const float deltaTime)
+		{
+
 		}
 	}
 }

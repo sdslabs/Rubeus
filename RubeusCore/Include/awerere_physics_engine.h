@@ -22,7 +22,9 @@ namespace Rubeus
 			APhysicsEngine(std::vector<RGameObject *> * gameObjects);
 			~APhysicsEngine();
 
-			void update(std::vector<RGameObject *> * gameObjects = NULL);
+			void update(const float deltaTime);
+
+			void setGameObjectArray(std::vector<RGameObject *> * gameObjects);
 
 		protected:
 

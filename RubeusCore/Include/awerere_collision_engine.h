@@ -17,13 +17,15 @@ namespace Rubeus
 			friend class APhysicsEngine;
 
 		public:
-			ACollisionEngine();
+			ACollisionEngine(std::vector<RGameObject *> * gameObjects = NULL);
 			~ACollisionEngine();
 
 			void executePhaseOne(std::vector<RGameObject *> * gameObjects);
 			void executePhaseTwo();
 
 			void eraseCache();
+
+			inline void setGameObjectArray(std::vector<RGameObject *> * gameObjects) { m_GameObjects = gameObjects; }
 
 		protected:
 
