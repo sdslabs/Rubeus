@@ -11,10 +11,7 @@ namespace Rubeus
 		class ACollisionEngine
 		{
 		private:
-			const int m_GridHeight;
-			const int m_GridWidth;
-			const int m_CellHeight;
-			const int m_CellWidth;
+			CollisionGrid m_CollisionGrid;
 			std::vector<RGameObject *> * m_GameObjects = NULL;
 			std::vector<RGameObject *> * m_FirstPassers = NULL;
 

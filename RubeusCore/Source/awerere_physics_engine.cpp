@@ -14,7 +14,9 @@ namespace Rubeus
 		{
 		}
 
-		APhysicsEngine::APhysicsEngine(std::vector<RGameObject *> * gameObjects)
+		APhysicsEngine::APhysicsEngine(std::vector<RGameObject *> * gameObjects, const int & gridHeight, const int & gridWidth, const int & cellHeight, const int & cellWidth)
+			:
+			m_CollisionEngine(gameObjects, gridHeight, gridWidth, cellHeight, cellWidth)
 		{
 			m_CollisionEngine.m_GameObjects = gameObjects;
 			m_GameObjects = gameObjects;
