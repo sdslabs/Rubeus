@@ -11,13 +11,17 @@ namespace Rubeus
 		class ACollisionEngine
 		{
 		private:
+			const int m_GridHeight;
+			const int m_GridWidth;
+			const int m_CellHeight;
+			const int m_CellWidth;
 			std::vector<RGameObject *> * m_GameObjects = NULL;
 			std::vector<RGameObject *> * m_FirstPassers = NULL;
 
 			friend class APhysicsEngine;
 
 		public:
-			ACollisionEngine(std::vector<RGameObject *> * gameObjects = NULL);
+			ACollisionEngine(std::vector<RGameObject *> * gameObjects, const int & gridHeight, const int & gridWidth, const int & cellHeight, const int & cellWidth);
 			~ACollisionEngine();
 
 			void executePhaseOne(std::vector<RGameObject *> * gameObjects);

@@ -7,6 +7,7 @@
 #pragma once
 
 #include <vector>
+#include <bitset>
 
 #include <rubeus_maths_library.h>
 #include <awerere_physics_material.h>
@@ -29,8 +30,10 @@ namespace Rubeus
 			/** @brief	A collider in charge of handling collision algorithms */
 			ACollider * m_Collider;
 
-			/** @brief	Whether physics should be enabled for a game object */
-			bool m_EnablePhysics = false;
+			std::bitset<>
+
+				/** @brief	Whether physics should be enabled for a game object */
+				bool m_EnablePhysics = false;
 
 			/**
 			 * @fn		APhysicsObject()
