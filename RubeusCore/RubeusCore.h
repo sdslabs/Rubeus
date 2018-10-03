@@ -49,3 +49,5 @@
 #include <awerere_box_collider_object.h>
 #include <awerere_plane_collider_object.h>
 #include <awerere_physics_object.h>
+#include <awerere_physics_engine.h>
+#include <awerere_collision_engine.h>

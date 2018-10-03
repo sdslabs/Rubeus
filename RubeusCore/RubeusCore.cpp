@@ -40,6 +40,8 @@ int main()
 
 	APhysicsMaterial mat;
 
+	std::vector<RGameObject *> gameObjects;
+
 	RGameObject * object1 = new RGameObject(2, 2, 3, 3,
 											"Assets/debug.png",
 											true,
@@ -48,7 +50,7 @@ int main()
 															   EColliderType::BOX,
 															   new ABoxCollider(RML::Vector3D(),
 																				RML::Vector3D(3.0f, 3.0f, 1.0f))));
-
+	gameObjects.push_back(object1);
 	g->add(object1);
 	g->add(g2);
 	layer0->addGroup(*g);
@@ -56,7 +58,7 @@ int main()
 
 	shader0->enableShader();
 	GLint textureIDs[32];
-	for(int i = 0; i < 32; i++)
+	for (int i = 0; i < 32; i++)
 	{
 		textureIDs[i] = i;
 	}
@@ -67,8 +69,10 @@ int main()
 
 	LOG(box.tryIntersect(sphere).getGap());
 
+	APhysicsEngine physicsEngine(GameWindow, &gameObjects, 10.0f, 10.0f);
+
 	// See if maps are slowing things down. Also have a performance check
-	while(!GameWindow->closed())
+	while (!GameWindow->closed())
 	{
 		// TODO: Message bus needs references to all systems here
 		GameWindow->clearWindow();

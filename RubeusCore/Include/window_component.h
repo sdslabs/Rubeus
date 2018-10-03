@@ -7,6 +7,7 @@
 #pragma once
 
 #include <string.h>
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
@@ -14,6 +15,7 @@
 #include <loader_component.h>
 #include <master_component.h>
 #include <input_component.h>
+#include <awerere_physics_object.h>
 
 namespace Rubeus
 {
@@ -144,6 +146,7 @@ namespace Rubeus
 			// TODO: Add docs
 			void setWindowIcon(RWindowComponent GameWindow, std::string names[]);
 
+			// TODO: Add docs
 			void setWindowIconToDefault();
 
 			/**
@@ -166,12 +169,15 @@ namespace Rubeus
 			 */
 			friend void windowResizeCallback(GLFWwindow * window, int width, int height);
 		public:
-			//friend class RInputComponent;
+
 			// TODO: Add docs
 			static void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos);
 			friend void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods);
 			friend void scrollCallback(GLFWwindow *window, double xoffset, double yoffset);
 			friend void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);
+
+			inline const int & getWidth() const { return m_Width; }
+			inline const int & getHeight() const { return m_Height; }
 
 			/**
 			 * @fn		void onMessage(Message * msg) override

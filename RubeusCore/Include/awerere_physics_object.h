@@ -30,9 +30,6 @@ namespace Rubeus
 			/** @brief	A collider in charge of handling collision algorithms */
 			ACollider * m_Collider;
 
-			std::bitset<128> m_XGridSuperimpose; // TODO: Add flexible bit array sizes
-			std::bitset<72>  m_YGridSuperimpose; // TODO: Add flexible bit array sizes
-
 			/** @brief	Whether physics should be enabled for a game object */
 			bool m_EnablePhysics = false;
 

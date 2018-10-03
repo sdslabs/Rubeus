@@ -20,7 +20,7 @@ namespace Rubeus
 			void decodeCollisionResponse();
 
 		public:
-			APhysicsEngine(std::vector<RGameObject *> * gameObjects, const int & gridHeight, const int & gridWidth, const int & cellHeight, const int & cellWidth);
+			APhysicsEngine(GraphicComponents::RWindowComponent * windowComponent, std::vector<RGameObject *> * gameObjects, const float & cellHeight, const float & cellWidth);
 			~APhysicsEngine();
 
 			void update(const float deltaTime);

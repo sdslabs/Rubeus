@@ -4,13 +4,11 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		ACollisionEngine::ACollisionEngine(std::vector<RGameObject *> * gameObjects, const int & gridHeight, const int & gridWidth, const int & cellHeight, const int & cellWidth)
+		ACollisionEngine::ACollisionEngine(GraphicComponents::RWindowComponent & windowComponent, std::vector<RGameObject *> * gameObjects, const float & gridHeight, const float & gridWidth, const float & cellHeight, const float & cellWidth)
 			:
-			m_GameObjects(gameObjects),
-			m_GridHeight(gridHeight),
-			m_GridWidth(gridWidth),
-			m_CellHeight(cellHeight),
-			m_CellWidth(cellWidth)
+			m_WindowComponent(windowComponent),
+			m_CollisionGrid(gridHeight, gridWidth, cellHeight, cellWidth),
+			m_GameObjects(gameObjects)
 		{
 		}
 
@@ -25,7 +23,6 @@ namespace Rubeus
 
 			for (int i = 0; i < gameObjectsCount; i++)
 			{
-
 
 				// https://gamedev.stackexchange.com/questions/72030/using-uniform-grids-for-collision-detection-efficient-way-to-keep-track-of-wha
 			}
