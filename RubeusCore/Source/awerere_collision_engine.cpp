@@ -40,7 +40,7 @@ namespace Rubeus
 
 				// Y AXIS FLAGGING
 				int leftFlag = m_GameObjects[i]->m_Sprite->getPosition().y / m_CollisionGrid.m_CellHeight;
-				int rightFlag = (m_GameObjects[i]->m_Sprite->getPosition().y + m_GameObjects[i]->m_Sprite->getSize().x) / m_CollisionGrid.m_CellHeight;
+				int rightFlag = (m_GameObjects[i]->m_Sprite->getPosition().y + m_GameObjects[i]->m_Sprite->getSize().y) / m_CollisionGrid.m_CellHeight;
 
 				for (int p = 0; p < m_CollisionGrid.m_YCount; p++)
 				{
