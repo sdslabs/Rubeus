@@ -14,7 +14,7 @@ namespace Rubeus
 		{
 		private:
 			ACollisionEngine m_CollisionEngine;
-			std::vector<RGameObject *> * m_GameObjects = NULL;
+			std::vector<RGameObject *> m_GameObjects;
 			std::vector<std::string> m_XFlags;
 			std::vector<std::string> m_YFlags;
 
@@ -22,11 +22,11 @@ namespace Rubeus
 			void decodeCollisionResponse();
 
 		public:
-			APhysicsEngine(GraphicComponents::RWindowComponent * windowComponent, std::vector<RGameObject *> * gameObjects, const float & cellHeight, const float & cellWidth);
+			APhysicsEngine(GraphicComponents::RWindowComponent & windowComponent, std::vector<RGameObject *> & gameObjects, const float & cellHeight, const float & cellWidth);
 			~APhysicsEngine();
 
 			void update(const float deltaTime);
-			void setGameObjectArray(std::vector<RGameObject *> * gameObjects);
+			void setGameObjectArray(std::vector<RGameObject *> & gameObjects);
 
 		protected:
 

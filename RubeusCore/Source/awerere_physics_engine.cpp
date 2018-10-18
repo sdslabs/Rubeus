@@ -14,22 +14,22 @@ namespace Rubeus
 		{
 		}
 
-		APhysicsEngine::APhysicsEngine(GraphicComponents::RWindowComponent * windowComponent, std::vector<RGameObject *> * gameObjects, const float & cellHeight, const float & cellWidth)
+		APhysicsEngine::APhysicsEngine(GraphicComponents::RWindowComponent & windowComponent, std::vector<RGameObject *> & gameObjects, const float & cellHeight, const float & cellWidth)
 			:
-			m_CollisionEngine(*windowComponent, gameObjects, windowComponent->getHeight(), windowComponent->getWidth(), cellHeight, cellWidth)
+			m_CollisionEngine(windowComponent, gameObjects, windowComponent.getHeight(), windowComponent.getWidth(), cellHeight, cellWidth)
 		{
 			m_CollisionEngine.m_GameObjects = gameObjects;
 			m_GameObjects = gameObjects;
 
-			m_XFlags.reserve(m_GameObjects->size());
-			m_YFlags.reserve(m_GameObjects->size());
+			m_XFlags.reserve(m_GameObjects.size());
+			m_YFlags.reserve(m_GameObjects.size());
 		}
 
 		APhysicsEngine::~APhysicsEngine()
 		{
 		}
 
-		void APhysicsEngine::setGameObjectArray(std::vector<RGameObject *> * gameObjects)
+		void APhysicsEngine::setGameObjectArray(std::vector<RGameObject *> & gameObjects)
 		{
 			m_GameObjects = gameObjects;
 		}

@@ -4,7 +4,7 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		ACollisionEngine::ACollisionEngine(GraphicComponents::RWindowComponent & windowComponent, std::vector<RGameObject *> gameObjects, const float & gridHeight, const float & gridWidth, const float & cellHeight, const float & cellWidth)
+		ACollisionEngine::ACollisionEngine(GraphicComponents::RWindowComponent & windowComponent, std::vector<RGameObject *> & gameObjects, const float & gridHeight, const float & gridWidth, const float & cellHeight, const float & cellWidth)
 			:
 			m_WindowComponent(windowComponent),
 			m_CollisionGrid(gridHeight, gridWidth, cellHeight, cellWidth),
@@ -39,8 +39,8 @@ namespace Rubeus
 				}
 
 				// Y AXIS FLAGGING
-				int leftFlag = m_GameObjects[i]->m_Sprite->getPosition().y / m_CollisionGrid.m_CellHeight;
-				int rightFlag = (m_GameObjects[i]->m_Sprite->getPosition().y + m_GameObjects[i]->m_Sprite->getSize().y) / m_CollisionGrid.m_CellHeight;
+				leftFlag = m_GameObjects[i]->m_Sprite->getPosition().y / m_CollisionGrid.m_CellHeight;
+				rightFlag = (m_GameObjects[i]->m_Sprite->getPosition().y + m_GameObjects[i]->m_Sprite->getSize().y) / m_CollisionGrid.m_CellHeight;
 
 				for (int p = 0; p < m_CollisionGrid.m_YCount; p++)
 				{

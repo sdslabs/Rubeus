@@ -23,7 +23,7 @@ namespace Rubeus
 			friend class APhysicsEngine;
 
 		public:
-			ACollisionEngine(GraphicComponents::RWindowComponent & windowComponent, std::vector<RGameObject *> gameObjects, const float & gridHeight, const float & gridWidth, const float & cellHeight, const float & cellWidth);
+			ACollisionEngine(GraphicComponents::RWindowComponent & windowComponent, std::vector<RGameObject *> & gameObjects, const float & gridHeight, const float & gridWidth, const float & cellHeight, const float & cellWidth);
 			~ACollisionEngine();
 
 			void assignFlags();
