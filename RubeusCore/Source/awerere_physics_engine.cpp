@@ -6,7 +6,7 @@ namespace Rubeus
 	{
 		void APhysicsEngine::calculateCollisions()
 		{
-			m_CollisionEngine.executePhaseOne(m_GameObjects);
+			m_CollisionEngine.assignFlags();
 			m_CollisionEngine.executePhaseTwo();
 		}
 
@@ -20,6 +20,9 @@ namespace Rubeus
 		{
 			m_CollisionEngine.m_GameObjects = gameObjects;
 			m_GameObjects = gameObjects;
+
+			m_XFlags.reserve(m_GameObjects->size());
+			m_YFlags.reserve(m_GameObjects->size());
 		}
 
 		APhysicsEngine::~APhysicsEngine()

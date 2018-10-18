@@ -15,21 +15,23 @@ namespace Rubeus
 		private:
 			GraphicComponents::RWindowComponent & m_WindowComponent;
 			CollisionGrid m_CollisionGrid;
-			std::vector<RGameObject *> * m_GameObjects = NULL;
-			std::vector<RGameObject *> * m_FirstPassers = NULL;
+			std::vector<RGameObject *> m_GameObjects;
+			std::vector<RGameObject *> m_FirstPassers;
+			std::vector<std::vector<int>> m_XFlags;
+			std::vector<std::vector<int>> m_YFlags;
 
 			friend class APhysicsEngine;
 
 		public:
-			ACollisionEngine(GraphicComponents::RWindowComponent & windowComponent, std::vector<RGameObject *> * gameObjects, const float & gridHeight, const float & gridWidth, const float & cellHeight, const float & cellWidth);
+			ACollisionEngine(GraphicComponents::RWindowComponent & windowComponent, std::vector<RGameObject *> gameObjects, const float & gridHeight, const float & gridWidth, const float & cellHeight, const float & cellWidth);
 			~ACollisionEngine();
 
-			void executePhaseOne(std::vector<RGameObject *> * gameObjects);
+			void assignFlags();
 			void executePhaseTwo();
 
 			void eraseCache();
 
-			inline void setGameObjectArray(std::vector<RGameObject *> * gameObjects) { m_GameObjects = gameObjects; }
+			inline void setGameObjectArray(std::vector<RGameObject *> gameObjects) { m_GameObjects = gameObjects; }
 
 		protected:
 

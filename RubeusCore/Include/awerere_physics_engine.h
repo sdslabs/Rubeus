@@ -15,6 +15,8 @@ namespace Rubeus
 		private:
 			ACollisionEngine m_CollisionEngine;
 			std::vector<RGameObject *> * m_GameObjects = NULL;
+			std::vector<std::string> m_XFlags;
+			std::vector<std::string> m_YFlags;
 
 			void calculateCollisions();
 			void decodeCollisionResponse();
