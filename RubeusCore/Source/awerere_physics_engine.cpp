@@ -36,7 +36,7 @@ namespace Rubeus
 
 		void APhysicsEngine::update(const float deltaTime)
 		{
-
+			calculateCollisions();
 		}
 	}
 }
