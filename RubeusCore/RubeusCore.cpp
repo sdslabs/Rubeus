@@ -50,6 +50,17 @@ int main()
 															   EColliderType::BOX,
 															   new ABoxCollider(RML::Vector3D(),
 																				RML::Vector3D(3.0f, 3.0f, 1.0f))));
+
+	RGameObject * object2 = new RGameObject(2, 2, 3, 3,
+											"Assets/debug.png",
+											true,
+											new APhysicsObject(mat,
+															   true,
+															   EColliderType::BOX,
+															   new ABoxCollider(RML::Vector3D(),
+																				RML::Vector3D(3.0f, 3.0f, 1.0f))));
+
+
 	gameObjects.push_back(object1);
 	g->add(object1);
 	g->add(g2);
@@ -80,6 +91,7 @@ int main()
 		shader0->enableShader();
 		shader0->setUniform2f("light_position", Vector2D(GameWindow->m_X * 16.0f / 1280.0f, (720.0f - GameWindow->m_Y) * 9.0f / 720.0f));
 
+		physicsEngine.update(1);
 		layer0->draw();
 
 		GameWindow->updateWindow();

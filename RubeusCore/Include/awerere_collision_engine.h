@@ -5,6 +5,7 @@
 #include <game_object.h>
 #include <awerere_collision_grid.h>
 #include <window_component.h>
+#include <awerere_collide_data_object.h>
 
 namespace Rubeus
 {
@@ -19,6 +20,8 @@ namespace Rubeus
 			std::vector<RGameObject *> m_FirstPassers;
 			std::vector<std::vector<int>> m_XFlags;
 			std::vector<std::vector<int>> m_YFlags;
+			std::vector<ACollideData> m_CollisionEvents;
+
 
 			friend class APhysicsEngine;
 

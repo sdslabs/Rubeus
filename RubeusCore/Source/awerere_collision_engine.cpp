@@ -10,6 +10,8 @@ namespace Rubeus
 			m_CollisionGrid(gridHeight, gridWidth, cellHeight, cellWidth),
 			m_GameObjects(gameObjects)
 		{
+			m_XFlags.reserve(m_GameObjects.size());
+			m_YFlags.reserve(m_GameObjects.size());
 		}
 
 		ACollisionEngine::~ACollisionEngine()
@@ -22,12 +24,16 @@ namespace Rubeus
 
 			for (int i = 0; i < gameObjectsCount; i++)
 			{
+				m_XFlags.push_back(std::vector<int>());
+				m_YFlags.push_back(std::vector<int>());
+
 				// X AXIS FLAGGING
 				int leftFlag = m_GameObjects[i]->m_Sprite->getPosition().x / m_CollisionGrid.m_CellWidth;
 				int rightFlag = (m_GameObjects[i]->m_Sprite->getPosition().x + m_GameObjects[i]->m_Sprite->getSize().x) / m_CollisionGrid.m_CellWidth;
 
 				for (int p = 0; p < m_CollisionGrid.m_XCount; p++)
 				{
+
 					if (p >= leftFlag && p < rightFlag)
 					{
 						m_XFlags[i].push_back(1);
