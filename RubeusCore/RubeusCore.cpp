@@ -62,6 +62,7 @@ int main()
 
 
 	gameObjects.push_back(object1);
+	gameObjects.push_back(object2);
 	g->add(object1);
 	g->add(object2);
 	g->add(g2);
@@ -81,7 +82,7 @@ int main()
 
 	LOG(box.tryIntersect(sphere).getGap());
 
-	APhysicsEngine physicsEngine(*GameWindow, gameObjects, GameWindow->getHeight() / 8, GameWindow->getWidth() / 8);
+	APhysicsEngine physicsEngine(*GameWindow, gameObjects, GameWindow->getHeight() / 9, GameWindow->getWidth() / 16);
 	physicsEngine.update(1);
 	// See if maps are slowing things down. Also have a performance check
 	while (!GameWindow->closed())

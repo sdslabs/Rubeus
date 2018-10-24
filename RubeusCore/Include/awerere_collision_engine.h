@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <array>
 
 #include <game_object.h>
 #include <awerere_collision_grid.h>
@@ -18,8 +19,8 @@ namespace Rubeus
 			CollisionGrid m_CollisionGrid;
 			std::vector<RGameObject *> m_GameObjects;
 			std::vector<RGameObject *> m_FirstPassers;
-			std::string m_XFlags;
-			std::string m_YFlags;
+			std::vector<std::string> m_XFlags;
+			std::vector<std::string> m_YFlags;
 			std::vector<ACollideData> m_CollisionEvents;
 
 
