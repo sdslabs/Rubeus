@@ -16,7 +16,7 @@ namespace Rubeus
 
 		APhysicsEngine::APhysicsEngine(GraphicComponents::RWindowComponent & windowComponent, std::vector<RGameObject *> & gameObjects, const float & cellHeight, const float & cellWidth)
 			:
-			m_CollisionEngine(windowComponent, gameObjects, windowComponent.getHeight(), windowComponent.getWidth(), cellHeight, cellWidth)
+			m_CollisionEngine(gameObjects, windowComponent.getHeight(), windowComponent.getWidth(), cellHeight, cellWidth)
 		{
 			m_CollisionEngine.m_GameObjects = gameObjects;
 			m_GameObjects = gameObjects;

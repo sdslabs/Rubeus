@@ -3,7 +3,6 @@
  *
  * @brief	Implements the RWindowComponent class
  */
-
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
@@ -34,7 +33,7 @@ namespace Rubeus
 
 		RWindowComponent::RWindowComponent(const char *title, int width, int height, EWindowParameters windowMode, EWindowParameters windowType, int setFPS)
 		{
-			if(!initWindow(title, width, height, windowMode, windowType))
+			if (!initWindow(title, width, height, windowMode, windowType))
 			{
 				ERRORLOG("WindowComponent Initialisation failed");
 				glfwTerminate();
@@ -43,13 +42,15 @@ namespace Rubeus
 			SUCCESS("Window initialisation successful");
 
 			glfwSwapInterval(setFPS);
-			ASSERT("FPS set to " + std::to_string((1.0f / ((float) setFPS)) * 60.0f));
+			ASSERT("FPS set to " + std::to_string((1.0f / ((float)setFPS)) * 60.0f));
 
 			ASSERT(glGetString(GL_VENDOR));
 
 			m_Height = height;
 			m_Width = width;
 			m_Title = title;
+
+			// TODO: Add customisable resolutions
 		}
 
 		bool RWindowComponent::closed()
@@ -98,7 +99,7 @@ namespace Rubeus
 
 		bool RWindowComponent::initWindow(const char * title, int width, int height, EWindowParameters windowMode, EWindowParameters windowType)
 		{
-			if(!glfwInit())
+			if (!glfwInit())
 			{
 				ERRORLOG("Error: GLFW initialisation failed");
 			}
@@ -106,13 +107,13 @@ namespace Rubeus
 			SUCCESS("GLFW initialisation successful");
 
 			// Set window hints if any
-			if(windowType == EWindowParameters::RESIZABLE_WINDOW)
+			if (windowType == EWindowParameters::RESIZABLE_WINDOW)
 			{
 				glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
 			}
 			else
 			{
-				if(windowType == EWindowParameters::NON_RESIZABLE_WINDOW)
+				if (windowType == EWindowParameters::NON_RESIZABLE_WINDOW)
 				{
 					glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 				}
@@ -128,13 +129,13 @@ namespace Rubeus
 			glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 			// Create a window of specified mode, title, width and height
-			if(windowMode == EWindowParameters::WINDOWED_MODE)
+			if (windowMode == EWindowParameters::WINDOWED_MODE)
 			{
 				m_Window = glfwCreateWindow(width, height, title, NULL, NULL);
 			}
 			else
 			{
-				if(windowMode == EWindowParameters::FULLSCREEN_MODE)
+				if (windowMode == EWindowParameters::FULLSCREEN_MODE)
 				{
 					m_Window = glfwCreateWindow(width, height, title, glfwGetPrimaryMonitor(), NULL);
 				}
@@ -144,7 +145,7 @@ namespace Rubeus
 				}
 			}
 
-			if(!m_Window)
+			if (!m_Window)
 			{
 				glfwTerminate();
 				ERRORLOG("Failed to create window");
@@ -173,7 +174,7 @@ namespace Rubeus
 			glfwSetInputMode(m_Window, GLFW_STICKY_KEYS, 1);
 
 
-			if(glewInit() != GLEW_OK)
+			if (glewInit() != GLEW_OK)
 			{
 				ERRORLOG("GLEW initialisation failed");
 
@@ -181,42 +182,42 @@ namespace Rubeus
 			}
 
 			SUCCESS("GLEW initialisation successful");
-			ASSERT("OpenGL Driver software: " + std::string((const char *) glGetString(GL_VERSION)));
+			ASSERT("OpenGL Driver software: " + std::string((const char *)glGetString(GL_VERSION)));
 
 			return true;
 		}
 
 		void RWindowComponent::onMessage(Message * msg)
 		{
-			switch(msg->m_Type)
+			switch (msg->m_Type)
 			{
-				case system_ok:
-					ASSERT("Message system OK");
-					break;
-
-				case change_window_title:
-					setWindowTitle(boost::any_cast<const char *>(msg->m_Data));
-					break;
-
-				case get_loaded_image:
-				{
-					ASSERT("Image received");
-					Image & image = boost::any_cast<Image &>(msg->m_Data);
-
-					for(unsigned int i = 0; i < image.m_Height * image.m_Width * 3; i += 3)
-					{
-						LOG("Red:");
-						LOG((int) image.m_Image[i]);
-						LOG("Green:");
-						LOG((int) image.m_Image[i + 1]);
-						LOG("Blue:");
-						LOG((int) image.m_Image[i + 2]);
-					}
-				}
+			case system_ok:
+				ASSERT("Message system OK");
 				break;
 
-				default:
-					break;
+			case change_window_title:
+				setWindowTitle(boost::any_cast<const char *>(msg->m_Data));
+				break;
+
+			case get_loaded_image:
+			{
+				ASSERT("Image received");
+				Image & image = boost::any_cast<Image &>(msg->m_Data);
+
+				for (unsigned int i = 0; i < image.m_Height * image.m_Width * 3; i += 3)
+				{
+					LOG("Red:");
+					LOG((int)image.m_Image[i]);
+					LOG("Green:");
+					LOG((int)image.m_Image[i + 1]);
+					LOG("Blue:");
+					LOG((int)image.m_Image[i + 2]);
+				}
+			}
+			break;
+
+			default:
+				break;
 			}
 		}
 	}

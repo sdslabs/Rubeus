@@ -42,7 +42,7 @@ int main()
 
 	std::vector<RGameObject *> gameObjects;
 
-	RGameObject * object1 = new RGameObject(2, 2, 3, 3,
+	RGameObject * object1 = new RGameObject(13, 2, 3, 3,
 											"Assets/debug.png",
 											true,
 											new APhysicsObject(mat,
@@ -51,7 +51,7 @@ int main()
 															   new ABoxCollider(RML::Vector3D(),
 																				RML::Vector3D(3.0f, 3.0f, 1.0f))));
 
-	RGameObject * object2 = new RGameObject(2, 2, 3, 3,
+	RGameObject * object2 = new RGameObject(1, 2, 3, 3,
 											"Assets/debug.png",
 											true,
 											new APhysicsObject(mat,
@@ -63,6 +63,7 @@ int main()
 
 	gameObjects.push_back(object1);
 	g->add(object1);
+	g->add(object2);
 	g->add(g2);
 	layer0->addGroup(*g);
 	layer0->addGroup(*g2);
@@ -80,7 +81,7 @@ int main()
 
 	LOG(box.tryIntersect(sphere).getGap());
 
-	APhysicsEngine physicsEngine(*GameWindow, gameObjects, 1, 1);
+	APhysicsEngine physicsEngine(*GameWindow, gameObjects, GameWindow->getHeight() / 8, GameWindow->getWidth() / 8);
 	physicsEngine.update(1);
 	// See if maps are slowing things down. Also have a performance check
 	while (!GameWindow->closed())
@@ -102,6 +103,7 @@ int main()
 	delete g;
 	delete g2;
 	delete object1;
+	delete object2;
 	delete layer0;
 	delete shader0;
 	delete audio_manager;
