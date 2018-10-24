@@ -51,8 +51,14 @@ namespace Rubeus
 			}
 		}
 
-		void ACollisionEngine::executePhaseTwo()
+		AHitEventList ACollisionEngine::broadPhaseResolution()
 		{
+			for (auto XFlag : m_XFlags)
+			{
+
+			}
+
+			return AHitEventList();
 		}
 
 		void ACollisionEngine::eraseCache()

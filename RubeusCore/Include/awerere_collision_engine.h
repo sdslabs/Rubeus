@@ -31,7 +31,6 @@ namespace Rubeus
 			~ACollisionEngine();
 
 			void assignFlags();
-			void executePhaseTwo();
 
 			AHitEventList broadPhaseResolution();
 			void narrowPhaseResolution();
