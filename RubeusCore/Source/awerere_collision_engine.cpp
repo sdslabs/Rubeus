@@ -1,4 +1,7 @@
 #include <awerere_collision_engine.h>
+#include <awerere_box_collider_object.h>
+#include <awerere_sphere_collider_object.h>
+#include <awerere_plane_collider_object.h>
 
 namespace Rubeus
 {
@@ -12,8 +15,8 @@ namespace Rubeus
 			size_t i = 0;
 			while (i < m_GameObjects.size())
 			{
-				m_XFlags.push_back("");
-				m_YFlags.push_back("");
+				m_XFlags.push_back(AFlag(""));
+				m_YFlags.push_back(AFlag(""));
 
 				i++;
 			}
@@ -51,14 +54,36 @@ namespace Rubeus
 			}
 		}
 
-		AHitEventList ACollisionEngine::broadPhaseResolution()
+		void ACollisionEngine::broadPhaseResolution()
 		{
-			for (auto XFlag : m_XFlags)
+			for (int i = 0; i < m_GameObjects.size(); i++)
 			{
-
+				for (int j = i; j < m_GameObjects.size(); j++)
+				{
+					if ((m_XFlags[i] * m_XFlags[j]) && (m_YFlags[i] * m_YFlags[j]))
+					{
+						narrowPhaseResolution(m_GameObjects[i], m_GameObjects[i]->m_PhysicsObject->m_Collider->getType(),
+											  m_GameObjects[j], m_GameObjects[j]->m_PhysicsObject->m_Collider->getType());
+					}
+				}
 			}
+		}
 
-			return AHitEventList();
+		void ACollisionEngine::narrowPhaseResolution(RGameObject * p1, EColliderType type1, RGameObject * p2, EColliderType type2)
+		{
+			switch (type1)
+			{
+			case EColliderType::BOX:
+			{
+				//reinterpret_cast<ABoxCollider *>(p2)
+			}
+			break;
+			case EColliderType::PLANE:
+				break;
+			case EColliderType::SPHERE:
+				break;
+			case EColliderType::NO_COLLIDER:
+			}
 		}
 
 		void ACollisionEngine::eraseCache()

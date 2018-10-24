@@ -105,6 +105,8 @@ namespace Rubeus
 		 */
 		inline void addToTickQueue() { m_ThisTicks = true; }
 
+		friend class Awerere::ACollisionEngine;
+
 	protected:
 		/**
 		 * @fn		RGameObject()

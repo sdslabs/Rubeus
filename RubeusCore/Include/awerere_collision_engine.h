@@ -1,11 +1,9 @@
 #pragma once
 
-#include <string>
-#include <array>
-
 #include <game_object.h>
 #include <awerere_collision_grid.h>
 #include <window_component.h>
+#include <awerere_flag.h>
 #include <awerere_hit_event_list.h>
 #include <awerere_collide_data_object.h>
 
@@ -19,10 +17,9 @@ namespace Rubeus
 			CollisionGrid m_CollisionGrid;
 			std::vector<RGameObject *> m_GameObjects;
 			std::vector<RGameObject *> m_FirstPassers;
-			std::vector<std::string> m_XFlags;
-			std::vector<std::string> m_YFlags;
-			std::vector<ACollideData> m_CollisionEvents;
-
+			std::vector<AFlag> m_XFlags;
+			std::vector<AFlag> m_YFlags;
+			AHitEventList m_CollisionEvents;
 
 			friend class APhysicsEngine;
 
@@ -32,8 +29,8 @@ namespace Rubeus
 
 			void assignFlags();
 
-			AHitEventList broadPhaseResolution();
-			void narrowPhaseResolution();
+			void broadPhaseResolution();
+			void narrowPhaseResolution(RGameObject * p1, EColliderType type1, RGameObject * p2, EColliderType type2);
 
 			void eraseCache();
 
