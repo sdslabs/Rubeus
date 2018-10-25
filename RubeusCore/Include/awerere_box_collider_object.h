@@ -62,7 +62,7 @@ namespace Rubeus
 			~ABoxCollider();
 
 			/**
-			 * @fn		ACollideData tryIntersect(ABoxCollider & box)
+			 * @fn		ACollideData tryIntersect(ABoxCollider & box) override
 			 *
 			 * @brief	Returns collision status between 2 different colliders
 			 * @warning
@@ -71,10 +71,10 @@ namespace Rubeus
 			 *
 			 * @return	Collide data, containing collision information.
 			 */
-			ACollideData tryIntersect(ABoxCollider & box);
+			ACollideData tryIntersect(ABoxCollider & box) override;
 
 			/**
-			 * @fn		ACollideData tryIntersect(ABoxCollider & plane)
+			 * @fn		ACollideData tryIntersect(ABoxCollider & plane) override
 			 *
 			 * @brief	Returns collision status between 2 different colliders
 			 * @warning
@@ -83,10 +83,10 @@ namespace Rubeus
 			 *
 			 * @return	Collide data, containing collision information.
 			 */
-			ACollideData tryIntersect(APlaneCollider & plane);
+			ACollideData tryIntersect(APlaneCollider & plane) override;
 
 			/**
-			 * @fn		ACollideData tryIntersect(ABoxCollider & sphere)
+			 * @fn		ACollideData tryIntersect(ABoxCollider & sphere) override
 			 *
 			 * @brief	Returns collision status between 2 different colliders
 			 * @warning
@@ -95,7 +95,7 @@ namespace Rubeus
 			 *
 			 * @return	Collide data, containing collision information.
 			 */
-			ACollideData tryIntersect(ASphereCollider & sphere);
+			ACollideData tryIntersect(ASphereCollider & sphere) override;
 
 			/**
 			 * @fn		inline const RML::Vector3D getLowerLeftBound() const

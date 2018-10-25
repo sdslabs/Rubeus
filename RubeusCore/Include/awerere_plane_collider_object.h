@@ -53,7 +53,7 @@ namespace Rubeus
 			~APlaneCollider();
 
 			/**
-			 * @fn		ACollideData tryIntersect(APlaneCollider & plane)
+			 * @fn		ACollideData tryIntersect(APlaneCollider & plane) override
 			 *
 			 * @brief	Generate collision data with a plane collider
 			 *
@@ -61,10 +61,10 @@ namespace Rubeus
 			 *
 			 * @return	Collision data.
 			 */
-			ACollideData tryIntersect(APlaneCollider & plane);
+			ACollideData tryIntersect(APlaneCollider & plane) override;
 
 			/**
-			 * @fn		ACollideData tryIntersect(ASphereCollider & sphere)
+			 * @fn		ACollideData tryIntersect(ASphereCollider & sphere) override
 			 *
 			 * @brief	Generate collision data with a sphere collider
 			 *
@@ -72,10 +72,10 @@ namespace Rubeus
 			 *
 			 * @return	Collision data.
 			 */
-			ACollideData tryIntersect(ASphereCollider & sphere);
+			ACollideData tryIntersect(ASphereCollider & sphere) override;
 
 			/**
-			 * @fn		ACollideData tryIntersect(ABoxCollider & box)
+			 * @fn		ACollideData tryIntersect(ABoxCollider & box) override
 			 *
 			 * @brief	Generate collision data with a box collider
 			 *
@@ -83,7 +83,7 @@ namespace Rubeus
 			 *
 			 * @return	Collision data.
 			 */
-			ACollideData tryIntersect(ABoxCollider & box);
+			ACollideData tryIntersect(ABoxCollider & box) override;
 
 			/**
 			 * @fn		RML::Vector3D normalised(const RML::Vector3D & vector) const

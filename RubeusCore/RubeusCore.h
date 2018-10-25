@@ -45,6 +45,7 @@
 #include <game_object.h>
 
 // Awerere specific includes
+#include <awerere_collider_object.h>
 #include <awerere_sphere_collider_object.h>
 #include <awerere_box_collider_object.h>
 #include <awerere_plane_collider_object.h>

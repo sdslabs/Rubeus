@@ -71,18 +71,35 @@ namespace Rubeus
 
 		void ACollisionEngine::narrowPhaseResolution(RGameObject * p1, EColliderType type1, RGameObject * p2, EColliderType type2)
 		{
-			switch (type1)
+			switch (type2)
 			{
-			case EColliderType::BOX:
-			{
-				//reinterpret_cast<ABoxCollider *>(p2)
-			}
-			break;
-			case EColliderType::PLANE:
+				case EColliderType::BOX:
+				{
+					m_CollisionEvents.push(p1->m_PhysicsObject->m_Collider->tryIntersect(*((ABoxCollider *)p2->m_PhysicsObject->m_Collider)));
+				}
 				break;
-			case EColliderType::SPHERE:
+
+				case EColliderType::PLANE:
+				{
+					m_CollisionEvents.push(p1->m_PhysicsObject->m_Collider->tryIntersect(*((APlaneCollider *)p2->m_PhysicsObject->m_Collider)));
+				}
 				break;
-			case EColliderType::NO_COLLIDER:
+
+				case EColliderType::SPHERE:
+				{
+					m_CollisionEvents.push(p1->m_PhysicsObject->m_Collider->tryIntersect(*((ASphereCollider *)p2->m_PhysicsObject->m_Collider)));
+				}
+				break;
+
+				case EColliderType::NO_COLLIDER:
+				{
+					;
+				}
+				break;
+
+				default:
+					LOG("Unspecified collider type");
+					break;
 			}
 		}
 

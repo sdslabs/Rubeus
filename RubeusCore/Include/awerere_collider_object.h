@@ -13,6 +13,11 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
+		class ACollideData;
+		class ABoxCollider;
+		class APlaneCollider;
+		class ASphereCollider;
+
 		/**
 		 * @enum		EColliderType
 		 *
@@ -44,8 +49,6 @@ namespace Rubeus
 			/** @brief	Type of the collider */
 			EColliderType m_Type;
 
-		public:
-
 			/**
 			 * @fn		ACollider()
 			 *
@@ -64,12 +67,18 @@ namespace Rubeus
 			 */
 			ACollider(RML::Vector3D position, RML::Vector2D velocity);
 
+		public:
+
 			/**
 			 * @fn		~ACollider()
 			 *
 			 * @brief	Destructor
 			 */
 			virtual ~ACollider();
+
+			virtual ACollideData tryIntersect(ABoxCollider & box) = 0;
+			virtual ACollideData tryIntersect(ASphereCollider & sphere) = 0;
+			virtual ACollideData tryIntersect(APlaneCollider & plane) = 0;
 
 			/**
 			 * @fn		inline RML::Vector3D getPosition() const
