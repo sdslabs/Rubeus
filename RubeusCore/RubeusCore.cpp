@@ -49,16 +49,16 @@ int main()
 															   true,
 															   EColliderType::BOX,
 															   new ABoxCollider(RML::Vector3D(13.0f, 2.0f, 1.0f),
-																				RML::Vector3D(3.0f, 3.0f, 1.0f))));
+																				RML::Vector3D(16.0f, 5.0f, 1.0f))));
 
-	RGameObject * object2 = new RGameObject(1.0f, 2.0f, 3.0f, 3.0f,
+	RGameObject * object2 = new RGameObject(14.0f, 3.0f, 3.0f, 3.0f,
 											"Assets/debug.png",
 											true,
 											new APhysicsObject(mat,
 															   true,
 															   EColliderType::BOX,
-															   new ABoxCollider(RML::Vector3D(1.0f, 2.0f, 1.0f),
-																				RML::Vector3D(3.0f, 3.0f, 1.0f))));
+															   new ABoxCollider(RML::Vector3D(14.0f, 3.0f, 1.0f),
+																				RML::Vector3D(17.0f, 6.0f, 1.0f))));
 
 
 	gameObjects.push_back(object1);

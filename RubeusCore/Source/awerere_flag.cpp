@@ -20,10 +20,10 @@ namespace Rubeus
 
 			for (int i = 0; i < this->size(); i++)
 			{
-				accum = accum + (((int)(*this)[i]) * ((int)(other[i])));
+				accum = accum + ((((*this)[i] == '1') ? 1 : 0) * (((other[i] == '1') ? 1 : 0)));
 			}
 
-			return accum != 0;
+			return accum;
 		}
 	}
 }
