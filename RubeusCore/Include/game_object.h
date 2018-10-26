@@ -11,6 +11,7 @@
 #include <sprite_object.h>
 #include <texture_object.h>
 #include <awerere_physics_object.h>
+#include <awerere_collision_engine.h>
 
 namespace Rubeus
 {
@@ -105,7 +106,7 @@ namespace Rubeus
 		 */
 		inline void addToTickQueue() { m_ThisTicks = true; }
 
-		friend class Awerere::ACollisionEngine;
+		friend class ACollisionEngine;
 
 	protected:
 		/**

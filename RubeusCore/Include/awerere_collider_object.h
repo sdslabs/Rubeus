@@ -13,10 +13,9 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		class ACollideData;
 		class ABoxCollider;
-		class APlaneCollider;
 		class ASphereCollider;
+		class APlaneCollider;
 
 		/**
 		 * @enum		EColliderType

@@ -1,6 +1,5 @@
 #pragma once
 
-#include <game_object.h>
 #include <awerere_collision_grid.h>
 #include <window_component.h>
 #include <awerere_flag.h>
@@ -9,11 +8,14 @@
 
 namespace Rubeus
 {
+	class RGameObject;
+
 	namespace Awerere
 	{
 		class ACollisionEngine
 		{
 		private:
+
 			CollisionGrid m_CollisionGrid;
 			std::vector<RGameObject *> m_GameObjects;
 			std::vector<RGameObject *> m_FirstPassers;
@@ -24,6 +26,7 @@ namespace Rubeus
 			friend class APhysicsEngine;
 
 		public:
+
 			ACollisionEngine(std::vector<RGameObject *> & gameObjects, const float & gridHeight, const float & gridWidth, const float & cellHeight, const float & cellWidth);
 			~ACollisionEngine();
 

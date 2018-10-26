@@ -1,3 +1,4 @@
+#include <game_object.h>
 #include <awerere_collision_engine.h>
 #include <awerere_box_collider_object.h>
 #include <awerere_sphere_collider_object.h>

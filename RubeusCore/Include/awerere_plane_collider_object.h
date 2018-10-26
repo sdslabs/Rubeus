@@ -16,9 +16,6 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		class ASphereCollider;
-		class ABoxCollider;
-
 		/**
 		 * @class	APLaneCollider
 		 *
