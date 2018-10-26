@@ -71,10 +71,18 @@ namespace Rubeus
 
 		void ACollisionEngine::narrowPhaseResolution(RGameObject & left, RGameObject & right)
 		{
-			left.m_PhysicsObject->m_Collider->getType
+			auto cache = multiplexColliders(left.m_PhysicsObject->m_Collider,
+											left.m_PhysicsObject->m_Collider->getType(),
+											right.m_PhysicsObject->m_Collider,
+											right.m_PhysicsObject->m_Collider->getType());
+
+			if (cache.getIsIntersect() == true)
+			{
+				m_CollisionEvents.push(cache);
+			}
 		}
 
-		void ACollisionEngine::multiplexColliders(ACollider * left, EColliderType & leftType, ACollider * right, EColliderType & rightType)
+		ACollideData ACollisionEngine::multiplexColliders(ACollider * left, const EColliderType & leftType, ACollider * right, const EColliderType & rightType)
 		{
 			switch ((int)leftType + (int)rightType)
 			{
@@ -86,49 +94,43 @@ namespace Rubeus
 				// NO_COLLIDER = 0x1000
 
 				case 0x0001:
-					left->tryIntersect(*(ASphereCollider *)right);
+					return left->tryIntersect(*(ASphereCollider *)right);
 					break;
 
 				case 0x0010:
-					left->tryIntersect(*(APlaneCollider *)right);
+					return left->tryIntersect(*(APlaneCollider *)right);
 					break;
 
 				case 0x0100:
-					left->tryIntersect(*(ABoxCollider *)right);
-					break;
+					return left->tryIntersect(*(ABoxCollider *)right);
 
 				case 0x0011:
-					left->tryIntersect(*(APlaneCollider *)right);
-					break;
+					return left->tryIntersect(*(APlaneCollider *)right);
 
 				case 0x0101:
-					left->tryIntersect(*(ABoxCollider *)right);
-					break;
+					return left->tryIntersect(*(ABoxCollider *)right);
 
 				case 0x0110:
-					left->tryIntersect(*(APlaneCollider *)right);
-					break;
+					return left->tryIntersect(*(APlaneCollider *)right);
 
 				case 0x1001:
-					; // No collider
-					break;
+					return ACollideData(false, 0); // No collider
 
 				case 0x1000:
-					; // No collider
-					break;
+					return ACollideData(false, 0); // No collider
 
 				case 0x1010:
-					; // No collider
-					break;
+					return ACollideData(false, 0); // No collider
 
 				case 0x1100:
-					; // No collider
-					break;
+					return ACollideData(false, 0); // No collider
 
 				default:
 					ERRORLOG("Fatal error: Unknown collider type found");
 					break;
 			}
+
+			return ACollideData(false, 0);
 		}
 
 		void ACollisionEngine::eraseCache()
