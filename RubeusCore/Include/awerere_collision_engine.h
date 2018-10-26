@@ -30,7 +30,7 @@ namespace Rubeus
 			void assignFlags();
 			void broadPhaseResolution();
 			void narrowPhaseResolution(RGameObject & left, RGameObject & right);
-			void handleCollision(ACollider * left, EColliderType & leftType, ACollider * right, EColliderType & rightType);
+			void multiplexColliders(ACollider * left, EColliderType & leftType, ACollider * right, EColliderType & rightType);
 			void eraseCache();
 
 			inline void setGameObjectArray(std::vector<RGameObject *> gameObjects) { m_GameObjects = gameObjects; }

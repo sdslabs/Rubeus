@@ -74,21 +74,60 @@ namespace Rubeus
 			left.m_PhysicsObject->m_Collider->getType
 		}
 
-		void ACollisionEngine::handleCollision(ACollider * left, EColliderType & leftType, ACollider * right, EColliderType & rightType)
+		void ACollisionEngine::multiplexColliders(ACollider * left, EColliderType & leftType, ACollider * right, EColliderType & rightType)
 		{
 			switch ((int)leftType + (int)rightType)
 			{
-				//0x0001
-				//0x0010
-				//0x0100
-				//0x1000
+				// Collider types are as follows:
+				//
+				// SPHERE = 0x0001,       
+				// PLANE = 0x0010,		
+				// BOX = 0x0100,		
+				// NO_COLLIDER = 0x1000
+
+				case 0x0001:
+					left->tryIntersect(*(ASphereCollider *)right);
+					break;
+
+				case 0x0010:
+					left->tryIntersect(*(APlaneCollider *)right);
+					break;
+
+				case 0x0100:
+					left->tryIntersect(*(ABoxCollider *)right);
+					break;
 
 				case 0x0011:
+					left->tryIntersect(*(APlaneCollider *)right);
+					break;
+
 				case 0x0101:
-				case 0x1001:
+					left->tryIntersect(*(ABoxCollider *)right);
+					break;
+
 				case 0x0110:
+					left->tryIntersect(*(APlaneCollider *)right);
+					break;
+
+				case 0x1001:
+					; // No collider
+					break;
+
+				case 0x1000:
+					; // No collider
+					break;
+
 				case 0x1010:
+					; // No collider
+					break;
+
 				case 0x1100:
+					; // No collider
+					break;
+
+				default:
+					ERRORLOG("Fatal error: Unknown collider type found");
+					break;
 			}
 		}
 
