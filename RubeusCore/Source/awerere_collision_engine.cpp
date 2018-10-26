@@ -54,7 +54,7 @@ namespace Rubeus
 			}
 		}
 
-		void ACollisionEngine::broadPhaseResolution()
+		void ACollisionEngine::collisionResolution()
 		{
 			for (int i = 0; i < m_GameObjects.size(); i++)
 			{

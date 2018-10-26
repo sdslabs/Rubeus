@@ -42,22 +42,22 @@ int main()
 
 	std::vector<RGameObject *> gameObjects;
 
-	RGameObject * object1 = new RGameObject(13, 2, 3, 3,
+	RGameObject * object1 = new RGameObject(13.0f, 2.0f, 3.0f, 3.0f,
 											"Assets/debug.png",
 											true,
 											new APhysicsObject(mat,
 															   true,
 															   EColliderType::BOX,
-															   new ABoxCollider(RML::Vector3D(),
+															   new ABoxCollider(RML::Vector3D(13.0f, 2.0f, 1.0f),
 																				RML::Vector3D(3.0f, 3.0f, 1.0f))));
 
-	RGameObject * object2 = new RGameObject(1, 2, 3, 3,
+	RGameObject * object2 = new RGameObject(1.0f, 2.0f, 3.0f, 3.0f,
 											"Assets/debug.png",
 											true,
 											new APhysicsObject(mat,
 															   true,
 															   EColliderType::BOX,
-															   new ABoxCollider(RML::Vector3D(),
+															   new ABoxCollider(RML::Vector3D(1.0f, 2.0f, 1.0f),
 																				RML::Vector3D(3.0f, 3.0f, 1.0f))));
 
 

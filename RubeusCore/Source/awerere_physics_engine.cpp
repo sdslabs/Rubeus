@@ -7,7 +7,7 @@ namespace Rubeus
 		void APhysicsEngine::calculateCollisions()
 		{
 			m_CollisionEngine.assignFlags();
-			m_CollisionEngine.broadPhaseResolution();
+			m_CollisionEngine.collisionResolution();
 		}
 
 		void APhysicsEngine::decodeCollisionResponse()

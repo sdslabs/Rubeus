@@ -28,7 +28,7 @@ namespace Rubeus
 			~ACollisionEngine();
 
 			void assignFlags();
-			void broadPhaseResolution();
+			void collisionResolution();
 			void narrowPhaseResolution(RGameObject & left, RGameObject & right);
 			ACollideData multiplexColliders(ACollider * left, const EColliderType & leftType, ACollider * right, const EColliderType & rightType);
 			void eraseCache();
