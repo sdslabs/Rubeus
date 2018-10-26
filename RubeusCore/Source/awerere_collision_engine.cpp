@@ -51,14 +51,41 @@ namespace Rubeus
 			}
 		}
 
-		AHitEventList ACollisionEngine::broadPhaseResolution()
+		void ACollisionEngine::broadPhaseResolution()
 		{
-			for (auto XFlag : m_XFlags)
+			for (int i = 0; i < m_GameObjects.size(); i++)
 			{
-
+				for (int j = i; j < m_GameObjects.size(); j++)
+				{
+					if ((m_XFlags[i] * m_XFlags[j]) && (m_YFlags[i] * m_YFlags[j]))
+					{
+						narrowPhaseResolution(*m_GameObjects[i], *m_GameObjects[j]);
+					}
+				}
 			}
+		}
 
-			return AHitEventList();
+		void ACollisionEngine::narrowPhaseResolution(RGameObject & left, RGameObject & right)
+		{
+			left.m_PhysicsObject->m_Collider->getType
+		}
+
+		void ACollisionEngine::handleCollision(ACollider * left, EColliderType & leftType, ACollider * right, EColliderType & rightType)
+		{
+			switch ((int)leftType + (int)rightType)
+			{
+				//0x0001
+				//0x0010
+				//0x0100
+				//0x1000
+
+				case 0x0011:
+				case 0x0101:
+				case 0x1001:
+				case 0x0110:
+				case 0x1010:
+				case 0x1100:
+			}
 		}
 
 		void ACollisionEngine::eraseCache()
