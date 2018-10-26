@@ -62,44 +62,33 @@ namespace Rubeus
 				{
 					if ((m_XFlags[i] * m_XFlags[j]) && (m_YFlags[i] * m_YFlags[j]))
 					{
-						narrowPhaseResolution(m_GameObjects[i], m_GameObjects[i]->m_PhysicsObject->m_Collider->getType(),
-											  m_GameObjects[j], m_GameObjects[j]->m_PhysicsObject->m_Collider->getType());
+						narrowPhaseResolution(*m_GameObjects[i], *m_GameObjects[j]);
+
 					}
 				}
 			}
 		}
 
-		void ACollisionEngine::narrowPhaseResolution(RGameObject * p1, EColliderType type1, RGameObject * p2, EColliderType type2)
+		void ACollisionEngine::narrowPhaseResolution(RGameObject & left, RGameObject & right)
 		{
-			switch (type2)
+			left.m_PhysicsObject->m_Collider->getType
+		}
+
+		void ACollisionEngine::handleCollision(ACollider * left, EColliderType & leftType, ACollider * right, EColliderType & rightType)
+		{
+			switch ((int)leftType + (int)rightType)
 			{
-				case EColliderType::BOX:
-				{
-					m_CollisionEvents.push(p1->m_PhysicsObject->m_Collider->tryIntersect(*((ABoxCollider *)p2->m_PhysicsObject->m_Collider)));
-				}
-				break;
+				//0x0001
+				//0x0010
+				//0x0100
+				//0x1000
 
-				case EColliderType::PLANE:
-				{
-					m_CollisionEvents.push(p1->m_PhysicsObject->m_Collider->tryIntersect(*((APlaneCollider *)p2->m_PhysicsObject->m_Collider)));
-				}
-				break;
-
-				case EColliderType::SPHERE:
-				{
-					m_CollisionEvents.push(p1->m_PhysicsObject->m_Collider->tryIntersect(*((ASphereCollider *)p2->m_PhysicsObject->m_Collider)));
-				}
-				break;
-
-				case EColliderType::NO_COLLIDER:
-				{
-					;
-				}
-				break;
-
-				default:
-					LOG("Unspecified collider type");
-					break;
+				case 0x0011:
+				case 0x0101:
+				case 0x1001:
+				case 0x0110:
+				case 0x1010:
+				case 0x1100:
 			}
 		}
 

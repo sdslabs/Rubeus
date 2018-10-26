@@ -7,7 +7,7 @@
 #pragma once
 
 #include <rubeus_maths_library.h>
-#include <awerere_collider_object.h>
+#include <awerere_collide_data_object.h>
 
 namespace Rubeus
 {
@@ -25,10 +25,10 @@ namespace Rubeus
 		 */
 		enum class EColliderType
 		{
-			SPHERE,
-			PLANE,
-			BOX,
-			NO_COLLIDER
+			SPHERE = 0x1,           // 0x0001
+			PLANE = 0x10,			// 0x0010
+			BOX = 0x100,			// 0x0100
+			NO_COLLIDER = 0x1000	// 0x1000
 		};
 
 		/**
