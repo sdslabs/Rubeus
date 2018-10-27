@@ -1,3 +1,9 @@
+/**
+ * @file		Source/awerere_collision_grid.cpp.
+ *
+ * @brief	Defines the Collision Flag class
+ */
+
 #include <awerere_flag.h>
 
 namespace Rubeus
@@ -14,7 +20,7 @@ namespace Rubeus
 		{
 		}
 
-		bool Rubeus::Awerere::AFlag::operator*(AFlag & other)
+		bool AFlag::operator*(AFlag & other)
 		{
 			int accum = 0;
 

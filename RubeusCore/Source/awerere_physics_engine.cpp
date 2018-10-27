@@ -1,3 +1,9 @@
+/**
+ * @file		Include/awerere_physics_engine.cpp.
+ *
+ * @brief	Defines the Awerere Physics Engine
+ */
+
 #include <awerere_physics_engine.h>
 
 namespace Rubeus

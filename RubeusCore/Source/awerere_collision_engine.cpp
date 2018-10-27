@@ -1,3 +1,9 @@
+/**
+ * @file		Source/awerere_collision_engine.cpp.
+ *
+ * @brief	Defines the Collision Engine
+ */
+
 #include <game_object.h>
 #include <awerere_collision_engine.h>
 #include <awerere_box_collider_object.h>
@@ -131,11 +137,6 @@ namespace Rubeus
 			}
 
 			return ACollideData(false, 0);
-		}
-
-		void ACollisionEngine::eraseCache()
-		{
-			m_FirstPassers.clear();
 		}
 	}
 }

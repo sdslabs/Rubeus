@@ -75,8 +75,40 @@ namespace Rubeus
 			 */
 			virtual ~ACollider();
 
+			/**
+			 * @fn		virtual ACollideData tryIntersect(ABoxCollider & box) = 0
+			 *
+			 * @brief	Query collision status with another box type collider
+			 * @warning	Requires a 2D box collider
+			 *
+			 * @param	box	The box collider this collider is being queried with.
+			 *
+			 * @return	Collision data.
+			 */
 			virtual ACollideData tryIntersect(ABoxCollider & box) = 0;
+
+			/**
+			 * @fn		virtual ACollideData tryIntersect(ASphereCollider & sphere) = 0
+			 *
+			 * @brief	Query collision status with another sphere type collider
+			 * @warning	Requires a 3D sphere collider (circle colliders will work too)
+			 *
+			 * @param	sphere	The sphere collider this collider is being queried with.
+			 *
+			 * @return	Collision data.
+			 */
 			virtual ACollideData tryIntersect(ASphereCollider & sphere) = 0;
+
+			/**
+			 * @fn		virtual ACollideData tryIntersect(APlaneCollider & plane) = 0
+			 *
+			 * @brief	Query collision status with another plane type collider
+			 * @warning	Requires a 2D plane collider (straight line)
+			 *
+			 * @param	plane	The plane collider this collider is being queried with.
+			 *
+			 * @return	Collision data.
+			 */
 			virtual ACollideData tryIntersect(APlaneCollider & plane) = 0;
 
 			/**

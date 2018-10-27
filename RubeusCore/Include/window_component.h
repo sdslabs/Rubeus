@@ -171,12 +171,28 @@ namespace Rubeus
 		public:
 
 			// TODO: Add docs
+			// Temporary input handling until Input Components are finalised
 			static void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos);
 			friend void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods);
 			friend void scrollCallback(GLFWwindow *window, double xoffset, double yoffset);
 			friend void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);
 
+			/**
+			 * @fn		inline const int & getWidth() const
+			 *
+			 * @brief	Gets the width of this window
+			 *
+			 * @return	Width of this window.
+			 */
 			inline const int & getWidth() const { return m_Width; }
+
+			/**
+			 * @fn		inline const int & getHeight() const
+			 *
+			 * @brief	Gets the height of this window
+			 *
+			 * @return	Height of this window.
+			 */
 			inline const int & getHeight() const { return m_Height; }
 
 			/**

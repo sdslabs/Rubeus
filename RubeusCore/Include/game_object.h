@@ -54,9 +54,9 @@ namespace Rubeus
 		 * @param	y				y coordinate of the lower left point.
 		 * @param	deltaX			Horizontal span of the object.
 		 * @param	deltaX			Vertical span of the object.
-		 * @param	imageFilePath	Path to the image to be used as texture.
-		 * @param	enablePhysics	Whether the object obeys physics. Default is false.
-		 * @param	physicsObject	Physics object to be used for collision detection. Default is NULL. Use only when
+		 * @param	imageFilePath		Path to the image to be used as texture.
+		 * @param	enablePhysics		Whether the object obeys physics. Default is false.
+		 * @param	physicsObject		Physics object to be used for collision detection. Default is NULL. Use only when
 									physics has been enabled.
 		 * @param	generatesHit		Whether the object generates hit events. Default is false.
 		 */

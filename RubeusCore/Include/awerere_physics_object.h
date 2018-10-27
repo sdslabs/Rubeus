@@ -7,7 +7,6 @@
 #pragma once
 
 #include <vector>
-#include <bitset>
 
 #include <rubeus_maths_library.h>
 #include <awerere_physics_material.h>

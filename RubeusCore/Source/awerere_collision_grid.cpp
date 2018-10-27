@@ -1,3 +1,9 @@
+/**
+ * @file		Source/awerere_collision_grid.cpp.
+ *
+ * @brief	Defines the collision grid
+ */
+
 #include <awerere_collision_grid.h>
 
 namespace Rubeus

@@ -1,3 +1,9 @@
+/**
+ * @file		Source/awerere_hit_event_list.cpp.
+ *
+ * @brief	Defines the Hit Event List Class used by Collision Engine
+ */
+
 #include <awerere_hit_event_list.h>
 
 namespace Rubeus
