@@ -20,6 +20,10 @@ namespace Rubeus
 		{
 		}
 
+		AFlag::~AFlag()
+		{
+		}
+
 		bool AFlag::operator*(AFlag & other)
 		{
 			int accum = 0;

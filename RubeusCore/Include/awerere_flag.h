@@ -38,6 +38,13 @@ namespace Rubeus
 			AFlag(const std::string & string);
 
 			/**
+			 * @fn		~AFlag()
+			 *
+			 * @brief	Destructor
+			 */
+			~AFlag();
+
+			/**
 			 * @fn		bool operator*(AFlag & right)
 			 *
 			 * @brief	Operates multiplication on flag values

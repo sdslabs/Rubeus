@@ -98,7 +98,7 @@ namespace Rubeus
 			 * @warning	Select lines are EColliderType values
 			 *
 			 * @param	left			Left collider.
-			 * @param	left	Type		Type of Left collider.
+			 * @param	leftType		Type of Left collider.
 			 * @param	right		Right collider.
 			 * @param	rightType	Type of right collider.
 			 *
@@ -109,7 +109,7 @@ namespace Rubeus
 			/**
 			 * @fn		inline void setGameObjectArray(std::vector<RGameObject *> gameObjects)
 			 *
-			 * @brief	Set the game object array for use in collision deteciton (if not already sent throught the collision engine contructor)
+			 * @brief	Set the game object array for use in collision deteciton (if not already sent through the collision engine contructor)
 			 *
 			 * @param	gameObjects	The container with all the game objects.
 			 */

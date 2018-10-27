@@ -29,14 +29,14 @@ namespace Rubeus
 		public:
 
 			/**
-			 * @fn	AHitEventList()
+			 * @fn		AHitEventList()
 			 *
 			 * @brief	Constructor
 			 */
 			AHitEventList();
 
 			/**
-			 * @fn		AHitEventList()
+			 * @fn		~AHitEventList()
 			 *
 			 * @brief	Destructor
 			 */
