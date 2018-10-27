@@ -16,9 +16,7 @@ namespace Rubeus
 	{
 		RML::Vector3D ABoxCollider::calculateCenter(const RML::Vector3D & ll, const RML::Vector3D & ur)
 		{
-			RML::Vector3D result((ll + ur) / 2.0f);
-
-			return result;
+			return RML::Vector3D(ll + ur) * 0.5f;
 		}
 
 		ABoxCollider::ABoxCollider(const RML::Vector3D & minExtent, const RML::Vector3D & maxExtent)
@@ -53,11 +51,11 @@ namespace Rubeus
 			const RML::Vector3D & center = sphere.getCenter();
 
 			// Find the closest x offset
-			if(center.x <= m_MinExtent.x)
+			if (center.x <= m_MinExtent.x)
 			{
 				closestPoint.x = m_MinExtent.x;
 			}
-			else if(center.x >= m_MaxExtent.x)
+			else if (center.x >= m_MaxExtent.x)
 			{
 				closestPoint.x = m_MaxExtent.x;
 			}
@@ -67,11 +65,11 @@ namespace Rubeus
 			}
 
 			// Find closest y offset
-			if(center.y <= m_MinExtent.y)
+			if (center.y <= m_MinExtent.y)
 			{
 				closestPoint.y = m_MinExtent.y;
 			}
-			else if(center.y >= m_MaxExtent.y)
+			else if (center.y >= m_MaxExtent.y)
 			{
 				closestPoint.y = m_MaxExtent.y;
 			}

@@ -40,23 +40,38 @@ int main()
 
 	APhysicsMaterial mat;
 
-	RGameObject * object1 = new RGameObject(2, 2, 3, 3,
+	std::vector<RGameObject *> gameObjects;
+
+	RGameObject * object1 = new RGameObject(13.0f, 2.0f, 3.0f, 3.0f,
 											"Assets/debug.png",
 											true,
 											new APhysicsObject(mat,
 															   true,
 															   EColliderType::BOX,
-															   new ABoxCollider(RML::Vector3D(),
-																				RML::Vector3D(3.0f, 3.0f, 1.0f))));
+															   new ABoxCollider(RML::Vector3D(13.0f, 2.0f, 1.0f),
+																				RML::Vector3D(16.0f, 5.0f, 1.0f))));
 
+	RGameObject * object2 = new RGameObject(14.0f, 3.0f, 3.0f, 3.0f,
+											"Assets/debug.png",
+											true,
+											new APhysicsObject(mat,
+															   true,
+															   EColliderType::BOX,
+															   new ABoxCollider(RML::Vector3D(14.0f, 3.0f, 1.0f),
+																				RML::Vector3D(17.0f, 6.0f, 1.0f))));
+
+
+	gameObjects.push_back(object1);
+	gameObjects.push_back(object2);
 	g->add(object1);
+	g->add(object2);
 	g->add(g2);
 	layer0->addGroup(*g);
 	layer0->addGroup(*g2);
 
 	shader0->enableShader();
 	GLint textureIDs[32];
-	for(int i = 0; i < 32; i++)
+	for (int i = 0; i < 32; i++)
 	{
 		textureIDs[i] = i;
 	}
@@ -67,8 +82,10 @@ int main()
 
 	LOG(box.tryIntersect(sphere).getGap());
 
+	APhysicsEngine physicsEngine(*GameWindow, gameObjects, GameWindow->getHeight() / 9, GameWindow->getWidth() / 16);
+
 	// See if maps are slowing things down. Also have a performance check
-	while(!GameWindow->closed())
+	while (!GameWindow->closed())
 	{
 		// TODO: Message bus needs references to all systems here
 		GameWindow->clearWindow();
@@ -76,6 +93,7 @@ int main()
 		shader0->enableShader();
 		shader0->setUniform2f("light_position", Vector2D(GameWindow->m_X * 16.0f / 1280.0f, (720.0f - GameWindow->m_Y) * 9.0f / 720.0f));
 
+		physicsEngine.update(1);
 		layer0->draw();
 
 		GameWindow->updateWindow();
@@ -86,6 +104,7 @@ int main()
 	delete g;
 	delete g2;
 	delete object1;
+	delete object2;
 	delete layer0;
 	delete shader0;
 	delete audio_manager;

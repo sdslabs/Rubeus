@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include <string>
+
 namespace Rubeus
 {
 	class REntity
@@ -38,6 +40,13 @@ namespace Rubeus
 		 * @brief	Destructor
 		 */
 		virtual ~REntity();
+
+		/**
+		 * @fn		inline std::string getName()
+		 *
+		 * @return	String containing name of this entity.
+		 */
+		inline std::string getName();
 
 	protected:
 	};

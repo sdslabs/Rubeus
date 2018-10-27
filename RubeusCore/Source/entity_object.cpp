@@ -23,4 +23,9 @@ namespace Rubeus
 	{
 		entityCount--;
 	}
+
+	inline std::string REntity::getName()
+	{
+		return typeid(*this).name();
+	}
 }

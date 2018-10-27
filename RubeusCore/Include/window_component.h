@@ -7,6 +7,7 @@
 #pragma once
 
 #include <string.h>
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
@@ -14,6 +15,7 @@
 #include <loader_component.h>
 #include <master_component.h>
 #include <input_component.h>
+#include <awerere_physics_object.h>
 
 namespace Rubeus
 {
@@ -144,6 +146,7 @@ namespace Rubeus
 			// TODO: Add docs
 			void setWindowIcon(RWindowComponent GameWindow, std::string names[]);
 
+			// TODO: Add docs
 			void setWindowIconToDefault();
 
 			/**
@@ -166,12 +169,31 @@ namespace Rubeus
 			 */
 			friend void windowResizeCallback(GLFWwindow * window, int width, int height);
 		public:
-			//friend class RInputComponent;
+
 			// TODO: Add docs
+			// Temporary input handling until Input Components are finalised
 			static void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos);
 			friend void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods);
 			friend void scrollCallback(GLFWwindow *window, double xoffset, double yoffset);
 			friend void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);
+
+			/**
+			 * @fn		inline const int & getWidth() const
+			 *
+			 * @brief	Gets the width of this window
+			 *
+			 * @return	Width of this window.
+			 */
+			inline const int & getWidth() const { return m_Width; }
+
+			/**
+			 * @fn		inline const int & getHeight() const
+			 *
+			 * @brief	Gets the height of this window
+			 *
+			 * @return	Height of this window.
+			 */
+			inline const int & getHeight() const { return m_Height; }
 
 			/**
 			 * @fn		void onMessage(Message * msg) override

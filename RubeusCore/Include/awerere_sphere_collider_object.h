@@ -14,9 +14,6 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		class APlaneCollider;
-		class ABoxCollider;
-
 		/**
 		 * @class	ASphereCollider
 		 *
@@ -44,7 +41,7 @@ namespace Rubeus
 			ASphereCollider(const RML::Vector3D & center, const float radius);
 
 			/**
-			 * @fn		ACollideData tryIntersect(ASphereCollider & other)
+			 * @fn		ACollideData tryIntersect(ASphereCollider & other) override
 			 *
 			 * @brief	Generate collision data with a sphere collider
 			 *
@@ -52,10 +49,10 @@ namespace Rubeus
 			 *
 			 * @return	Collision data.
 			 */
-			ACollideData tryIntersect(ASphereCollider & other);
+			ACollideData tryIntersect(ASphereCollider & other) override;
 
 			/**
-			 * @fn		ACollideData tryIntersect(APLaneCollider & plane)
+			 * @fn		ACollideData tryIntersect(APLaneCollider & plane) override
 			 *
 			 * @brief	Generate collision data with a plane collider
 			 *
@@ -63,10 +60,10 @@ namespace Rubeus
 			 *
 			 * @return	Collision data.
 			 */
-			ACollideData tryIntersect(APlaneCollider & plane);
+			ACollideData tryIntersect(APlaneCollider & plane) override;
 
 			/**
-			 * @fn		ACollideData tryIntersect(ABoxCollider & box)
+			 * @fn		ACollideData tryIntersect(ABoxCollider & box) override
 			 *
 			 * @brief	Generate collision data with a box collider
 			 *
@@ -74,7 +71,7 @@ namespace Rubeus
 			 *
 			 * @return	Collision data.
 			 */
-			ACollideData tryIntersect(ABoxCollider & box);
+			ACollideData tryIntersect(ABoxCollider & box) override;
 
 			/**
 			 * @fn		inline const RML::Vector3D & getCenter() const

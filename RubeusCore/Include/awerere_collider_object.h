@@ -7,12 +7,16 @@
 #pragma once
 
 #include <rubeus_maths_library.h>
-#include <awerere_collider_object.h>
+#include <awerere_collide_data_object.h>
 
 namespace Rubeus
 {
 	namespace Awerere
 	{
+		class ABoxCollider;
+		class ASphereCollider;
+		class APlaneCollider;
+
 		/**
 		 * @enum		EColliderType
 		 *
@@ -20,10 +24,10 @@ namespace Rubeus
 		 */
 		enum class EColliderType
 		{
-			SPHERE,
-			PLANE,
-			BOX,
-			NO_COLLIDER
+			SPHERE = 0x1,           // 0x0001
+			PLANE = 0x10,			// 0x0010
+			BOX = 0x100,			// 0x0100
+			NO_COLLIDER = 0x1000	// 0x1000
 		};
 
 		/**
@@ -44,8 +48,6 @@ namespace Rubeus
 			/** @brief	Type of the collider */
 			EColliderType m_Type;
 
-		public:
-
 			/**
 			 * @fn		ACollider()
 			 *
@@ -64,12 +66,50 @@ namespace Rubeus
 			 */
 			ACollider(RML::Vector3D position, RML::Vector2D velocity);
 
+		public:
+
 			/**
 			 * @fn		~ACollider()
 			 *
 			 * @brief	Destructor
 			 */
 			virtual ~ACollider();
+
+			/**
+			 * @fn		virtual ACollideData tryIntersect(ABoxCollider & box) = 0
+			 *
+			 * @brief	Query collision status with another box type collider
+			 * @warning	Requires a 2D box collider
+			 *
+			 * @param	box	The box collider this collider is being queried with.
+			 *
+			 * @return	Collision data.
+			 */
+			virtual ACollideData tryIntersect(ABoxCollider & box) = 0;
+
+			/**
+			 * @fn		virtual ACollideData tryIntersect(ASphereCollider & sphere) = 0
+			 *
+			 * @brief	Query collision status with another sphere type collider
+			 * @warning	Requires a 3D sphere collider (circle colliders will work too)
+			 *
+			 * @param	sphere	The sphere collider this collider is being queried with.
+			 *
+			 * @return	Collision data.
+			 */
+			virtual ACollideData tryIntersect(ASphereCollider & sphere) = 0;
+
+			/**
+			 * @fn		virtual ACollideData tryIntersect(APlaneCollider & plane) = 0
+			 *
+			 * @brief	Query collision status with another plane type collider
+			 * @warning	Requires a 2D plane collider (straight line)
+			 *
+			 * @param	plane	The plane collider this collider is being queried with.
+			 *
+			 * @return	Collision data.
+			 */
+			virtual ACollideData tryIntersect(APlaneCollider & plane) = 0;
 
 			/**
 			 * @fn		inline RML::Vector3D getPosition() const

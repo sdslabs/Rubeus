@@ -24,17 +24,16 @@ namespace Rubeus
 		APhysicsObject::APhysicsObject(const APhysicsMaterial & material, const bool & enablePhysics, const EColliderType & type, ACollider * collider)
 			: m_PhysicsMaterial(material), m_Collider(collider)
 		{
-			if(type == EColliderType::BOX
-			   || type == EColliderType::PLANE
-			   || type == EColliderType::SPHERE
-			   || type == EColliderType::NO_COLLIDER)
+			if (type == EColliderType::BOX
+				|| type == EColliderType::PLANE
+				|| type == EColliderType::SPHERE
+				|| type == EColliderType::NO_COLLIDER)
 			{
 				m_Collider = collider;
 				m_EnablePhysics = enablePhysics;
 			}
 			else
 			{
-				m_Collider = new ACollider();
 				LOG("Invalid Collider type. Use members of enumeration EColliderType");
 			}
 		}

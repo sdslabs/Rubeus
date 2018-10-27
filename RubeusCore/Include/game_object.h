@@ -11,6 +11,7 @@
 #include <sprite_object.h>
 #include <texture_object.h>
 #include <awerere_physics_object.h>
+#include <awerere_collision_engine.h>
 
 namespace Rubeus
 {
@@ -40,6 +41,8 @@ namespace Rubeus
 		/** @brief	Whether this gameobject obeys physics */
 		bool m_HasPhysics = false;
 
+		bool m_GeneratesHit = false;
+
 		/**
 		 * @fn		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL)
 		 *
@@ -55,27 +58,31 @@ namespace Rubeus
 		 * @param	enablePhysics		Whether the object obeys physics. Default is false.
 		 * @param	physicsObject		Physics object to be used for collision detection. Default is NULL. Use only when
 									physics has been enabled.
+		 * @param	generatesHit		Whether the object generates hit events. Default is false.
 		 */
-		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL);
+		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL, bool generatesHit = false);
 
 
 		/**
-		 * @fn		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL)
+		 * @fn		RGameObject(float x, float y, float deltaX, float deltaY, float r, float g, float b, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL)
 		 *
 		 * @brief	Constructor. Uses pure colors as textures.
 		 * @warning	All pointers passed in will be owned by the game object.
-					Heap objects will be deleted by the object automatically.
+					Heap objects will be deleted by this object.
 		 *
 		 * @param	x				x coordinate of the lower left point.
 		 * @param	y				y coordinate of the lower left point.
 		 * @param	deltaX			Horizontal span of the object.
 		 * @param	deltaX			Vertical span of the object.
-		 * @param	imageFilePath		Path to the image to be used as texture.
+		 * @param	r				Red channel value.
+		 * @param	g				Green channel value.
+		 * @param	b				Blue channel value
 		 * @param	enablePhysics		Whether the object obeys physics. Default is false.
 		 * @param	physicsObject		Physics object to be used for collision detection. Default is NULL. Use only when
 									physics has been enabled.
+		 * @param	generatesHit		Whether the object generates hit events. Default is false.
 		 */
-		RGameObject(float x, float y, float deltaX, float deltaY, float r, float g, float b, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL);
+		RGameObject(float x, float y, float deltaX, float deltaY, float r, float g, float b, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL, bool generatesHit = false);
 
 		/**
 		 * @fn		~RGameObject()
@@ -99,9 +106,11 @@ namespace Rubeus
 		 */
 		inline void addToTickQueue() { m_ThisTicks = true; }
 
+		friend class ACollisionEngine;
+
 	protected:
 		/**
-		 * @fn	RGameObject()
+		 * @fn		RGameObject()
 		 *
 		 * @brief	Protected constructor. Only used to create groups
 		 */
