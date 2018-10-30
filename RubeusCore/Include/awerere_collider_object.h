@@ -7,6 +7,7 @@
 #pragma once
 
 #include <rubeus_maths_library.h>
+#include <awerere_physics_material.h>
 #include <awerere_collide_data_object.h>
 
 namespace Rubeus
@@ -45,6 +46,10 @@ namespace Rubeus
 			/** @brief	Velocity of the collider in 2D space */
 			RML::Vector2D m_Velocity;
 
+			RML::Vector2D m_Force;
+
+			APhysicsMaterial m_PhysicsMaterial;
+
 			/** @brief	Type of the collider */
 			EColliderType m_Type;
 
@@ -56,15 +61,15 @@ namespace Rubeus
 			ACollider();
 
 			/**
-			 * @fn		ACollider(RML::Vector3D position, RML::Vector2D velocity)
+			 * @fn		ACollider(const RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial)
 			 *
 			 * @brief	Contructor
-			 * @warning
 			 *
 			 * @param	position		The position of the collider.
 			 * @param	velocity		The velocity of the collider.
+			 * @param	physicsMat	The physics material of this collider. Default is DefualtMaterial
 			 */
-			ACollider(RML::Vector3D position, RML::Vector2D velocity);
+			ACollider(const RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial);
 
 		public:
 
@@ -111,6 +116,8 @@ namespace Rubeus
 			 */
 			virtual ACollideData tryIntersect(APlaneCollider & plane) = 0;
 
+			virtual void update(const float & deltaTime);
+
 			/**
 			 * @fn		inline RML::Vector3D getPosition() const
 			 *
@@ -155,6 +162,8 @@ namespace Rubeus
 			 * @param	velocity		The new velocity value.
 			 */
 			inline void setVelocity(const RML::Vector2D & velocity) { m_Velocity = velocity; }
+
+			inline void setMaterial(const APhysicsMaterial & physicsMat) { m_PhysicsMaterial = physicsMat; }
 		};
 	}
 }

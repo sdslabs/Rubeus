@@ -48,7 +48,7 @@ namespace Rubeus
 			{
 				if (object->m_HasPhysics)
 				{
-					// object->m_PhysicsObject->m_Collider.update();
+					object->m_PhysicsObject->m_Collider.update();
 				}
 			}
 		}

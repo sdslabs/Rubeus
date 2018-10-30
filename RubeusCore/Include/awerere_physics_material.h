@@ -10,18 +10,21 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-#define DEFAULT_MASS       10.0f // kg
-#define DEFAULT_GRAVITY     9.8f // m/s^2
-#define DEFAULT_FRICTION    0.2f // [no units]
-#define DEFAULT_RESTITUTION 0.8f // [no units]
+		constexpr float DEFAULT_MASS = 10.0f; // kg
+		constexpr float DEFAULT_GRAVITY = 9.8f; // m/s^2
+		constexpr float DEFAULT_FRICTION = 0.2f; // [no units]
+		constexpr float DEFAULT_RESTITUTION = 0.8f; // [no units]
 
 		/**
-		 * @struct	APhysicsMaterial
+		 * @class	APhysicsMaterial
 		 *
 		 * @brief	A physics material used to characterise physics objects
 		 */
-		struct APhysicsMaterial
+		class APhysicsMaterial
 		{
+		public:
+			static const APhysicsMaterial DefaultMaterial; // Add more materials here
+
 			/** @brief	Whether enables collision for this type of material or not */
 			bool m_EnableCollision;
 
@@ -52,7 +55,7 @@ namespace Rubeus
 			~APhysicsMaterial();
 
 			/**
-			 * @fn		void makeMaterial(float mass, float gravity, float friction, float restitution)
+			 * @fn		void makeMaterial(const float & mass, const float & gravity, const float & friction, const float & restitution)
 			 *
 			 * @brief	Make a material with by specifying physics constants
 			 *
@@ -61,16 +64,16 @@ namespace Rubeus
 			 * @param	friction		Friction coefficient of the surfaces.
 			 * @param	restitution	Restitution coefficient for resolving collisions.
 			 */
-			void makeMaterial(float mass, float gravity, float friction, float restitution);
+			void makeMaterial(const float & mass, const float & gravity, const float & friction, const float & restitution);
 
 			/**
-			 * @fn		inline bool getCollision() const
+			 * @fn		inline bool isCollisionEnabled() const
 			 *
 			 * @brief	Returns if the material has collision enabled
 			 *
 			 * @return	Whether collision has been enabled.
 			 */
-			inline bool getCollision() const { return m_EnableCollision; }
+			inline bool isCollisionEnabled() const { return m_EnableCollision; }
 
 			/**
 			 * @fn		inline void setCollision(bool override = false)

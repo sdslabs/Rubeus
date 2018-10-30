@@ -17,12 +17,13 @@ namespace Rubeus
 	namespace Awerere
 	{
 		/**
-		 * @struct	APhysicsObject
+		 * @class	APhysicsObject
 		 *
 		 * @brief	A Physics Object that is used for all collision detection and responses
 		 */
-		struct APhysicsObject
+		class APhysicsObject
 		{
+		public:
 			/** @brief	Physics Material defining a physics object */
 			APhysicsMaterial m_PhysicsMaterial;
 

@@ -97,6 +97,8 @@ namespace Rubeus
 			 */
 			ACollideData tryIntersect(ASphereCollider & sphere) override;
 
+			void update(const float & deltaTime) override;
+
 			/**
 			 * @fn		inline const RML::Vector3D getLowerLeftBound() const
 			 *

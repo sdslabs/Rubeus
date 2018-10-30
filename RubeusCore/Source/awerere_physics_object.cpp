@@ -31,6 +31,7 @@ namespace Rubeus
 			{
 				m_Collider = collider;
 				m_EnablePhysics = enablePhysics;
+				m_Collider->setMaterial(material);
 			}
 			else
 			{

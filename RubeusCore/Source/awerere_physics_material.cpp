@@ -10,6 +10,8 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
+		const APhysicsMaterial APhysicsMaterial::DefaultMaterial;
+
 		APhysicsMaterial::APhysicsMaterial()
 		{
 			makeMaterial(DEFAULT_MASS,
@@ -22,7 +24,7 @@ namespace Rubeus
 		{
 		}
 
-		void APhysicsMaterial::makeMaterial(float mass, float gravity, float friction, float restitution)
+		void APhysicsMaterial::makeMaterial(const float & mass, const float & gravity, const float & friction, const float & restitution)
 		{
 			m_Mass = mass;
 			m_Gravity = gravity;

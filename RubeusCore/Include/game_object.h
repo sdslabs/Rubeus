@@ -11,6 +11,7 @@
 #include <sprite_object.h>
 #include <texture_object.h>
 #include <awerere_physics_object.h>
+#include <awerere_physics_material.h>
 #include <awerere_collision_engine.h>
 
 namespace Rubeus
@@ -59,9 +60,9 @@ namespace Rubeus
 		 * @param	physicsObject		Physics object to be used for collision detection. Default is NULL. Use only when
 									physics has been enabled.
 		 * @param	generatesHit		Whether the object generates hit events. Default is false.
+		 * @param	physicsMat		Provide a physics material to be used to respond to hit events. Default is
 		 */
-		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL, bool generatesHit = false);
-
+		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL, bool generatesHit = false, const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial());
 
 		/**
 		 * @fn		RGameObject(float x, float y, float deltaX, float deltaY, float r, float g, float b, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL)

@@ -88,5 +88,9 @@ namespace Rubeus
 				penetrationDistance - sphere.getRadius()
 			);
 		}
+
+		void ABoxCollider::update(const float & deltaTime)
+		{
+		}
 	}
 }

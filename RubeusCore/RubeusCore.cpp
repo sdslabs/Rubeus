@@ -82,9 +82,9 @@ int main()
 
 	LOG(box.tryIntersect(sphere).getGap());
 
-	APhysicsEngine physicsEngine(*GameWindow, gameObjects, GameWindow->getHeight() / 9, GameWindow->getWidth() / 16);
-
 	RWorld world(gameObjects);
+
+	APhysicsEngine physicsEngine(*GameWindow, world, GameWindow->getHeight() / 9, GameWindow->getWidth() / 16);
 
 	// See if maps are slowing things down. Also have a performance check
 	while (!GameWindow->closed())
