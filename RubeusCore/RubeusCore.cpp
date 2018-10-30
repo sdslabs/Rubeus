@@ -84,19 +84,30 @@ int main()
 
 	APhysicsEngine physicsEngine(*GameWindow, gameObjects, GameWindow->getHeight() / 9, GameWindow->getWidth() / 16);
 
+	RWorld world(gameObjects);
+
 	// See if maps are slowing things down. Also have a performance check
 	while (!GameWindow->closed())
 	{
 		// TODO: Message bus needs references to all systems here
+
+		// Clear Window buffer
 		GameWindow->clearWindow();
 
+		// Miscellaneous testing stuff
 		shader0->enableShader();
 		shader0->setUniform2f("light_position", Vector2D(GameWindow->m_X * 16.0f / 1280.0f, (720.0f - GameWindow->m_Y) * 9.0f / 720.0f));
 
+		// Physics engine update
 		physicsEngine.update(1);
+
+		// Render update
 		layer0->draw();
 
+		// Window buffer update
 		GameWindow->updateWindow();
+
+		// Frame counter update
 		timer->evaluateFrames();
 	}
 

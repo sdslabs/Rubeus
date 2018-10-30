@@ -11,9 +11,9 @@ int toHex(int decimal)
 {
 	int hex = 0;
 
-	for(int i = 0; decimal != 0; i++)
+	for (int i = 0; decimal != 0; i++)
 	{
-		hex = hex + (int) ((pow(10,i))*(decimal % 16));
+		hex = hex + (int)((pow(10, i))*(decimal % 16));
 		decimal /= 16;
 	}
 
@@ -22,12 +22,12 @@ int toHex(int decimal)
 
 void GLClearError()
 {
-	while(glGetError() != GL_NO_ERROR)
+	while (glGetError() != GL_NO_ERROR)
 		;
 }
 
 void DevILClearError()
 {
-	while(ilGetError() != IL_NO_ERROR)
+	while (ilGetError() != IL_NO_ERROR)
 		;
 }

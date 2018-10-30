@@ -51,6 +51,8 @@ namespace Rubeus
 			 */
 			void decodeCollisionResponse();
 
+			void updateGameObjectCoordinates();
+
 		public:
 
 			/**

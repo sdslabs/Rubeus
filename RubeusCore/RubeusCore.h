@@ -43,6 +43,7 @@
 #include <texture_object.h>
 #include <audio_manager_component.h>
 #include <game_object.h>
+#include <world.h>
 
 // Awerere specific includes
 #include <awerere_collider_object.h>
