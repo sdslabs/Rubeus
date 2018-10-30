@@ -6,12 +6,10 @@
 
 namespace Rubeus
 {
-
-
 	class RWorld
 	{
 	private:
-		std::vector<RGameObject *> m_ActiveGameObjects;
+		mutable std::vector<RGameObject *> m_ActiveGameObjects;
 
 	public:
 		RWorld();
@@ -22,7 +20,7 @@ namespace Rubeus
 		void add(const std::vector<RGameObject *> & gameObjects);
 
 		inline void setObjectArray(std::vector<RGameObject *> & gameObjects);
-		inline const std::vector<RGameObject *> & getActiveObjects() const { return m_ActiveGameObjects; }
+		inline std::vector<RGameObject *> & getActiveObjects() const { return m_ActiveGameObjects; }
 
 	protected:
 	};

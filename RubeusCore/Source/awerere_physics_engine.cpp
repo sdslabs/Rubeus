@@ -20,29 +20,37 @@ namespace Rubeus
 		{
 		}
 
-		APhysicsEngine::APhysicsEngine(GraphicComponents::RWindowComponent & windowComponent, std::vector<RGameObject *> & gameObjects, const float & cellHeight, const float & cellWidth)
+		APhysicsEngine::APhysicsEngine(GraphicComponents::RWindowComponent & windowComponent, RWorld & world, const float & cellHeight, const float & cellWidth)
 			:
-			m_CollisionEngine(gameObjects, windowComponent.getHeight(), windowComponent.getWidth(), cellHeight, cellWidth)
+			m_CollisionEngine(world.getActiveObjects(), windowComponent.getHeight(), windowComponent.getWidth(), cellHeight, cellWidth),
+			m_World(world)
 		{
-			m_CollisionEngine.m_GameObjects = gameObjects;
-			m_GameObjects = gameObjects;
+			m_CollisionEngine.m_GameObjects = world.getActiveObjects();
 
-			m_XFlags.reserve(m_GameObjects.size());
-			m_YFlags.reserve(m_GameObjects.size());
+			m_XFlags.reserve(world.getActiveObjects().size());
+			m_YFlags.reserve(world.getActiveObjects().size());
 		}
 
 		APhysicsEngine::~APhysicsEngine()
 		{
 		}
 
-		void APhysicsEngine::setGameObjectArray(std::vector<RGameObject *> & gameObjects)
+		void APhysicsEngine::setWorld(RWorld & world)
 		{
-			m_GameObjects = gameObjects;
+			m_World = world;
 		}
 
 		void APhysicsEngine::update(const float deltaTime)
 		{
 			calculateCollisions();
+
+			for (auto object : m_World.getActiveObjects())
+			{
+				if (object->m_HasPhysics)
+				{
+					// object->m_PhysicsObject->m_Collider.update();
+				}
+			}
 		}
 	}
 }

@@ -8,7 +8,7 @@
 
 #include <vector>
 
-#include <game_object.h>
+#include <world.h>
 #include <awerere_collision_engine.h>
 #include <awerere_collision_grid.h>
 
@@ -28,8 +28,8 @@ namespace Rubeus
 			/** @brief	Associated collision engine */
 			ACollisionEngine m_CollisionEngine;
 
-			/** @brief	Array of active gameobjects */
-			std::vector<RGameObject *> m_GameObjects;
+			/** @brief	The World object in use */
+			RWorld & m_World;
 
 			/** @brief	Array of collision Xflags assigned to each gameobject */
 			std::vector<std::string> m_XFlags;
@@ -51,21 +51,19 @@ namespace Rubeus
 			 */
 			void decodeCollisionResponse();
 
-			void updateGameObjectCoordinates();
-
 		public:
 
 			/**
-			 * @fn		APhysicsEngine(GraphicComponents::RWindowComponent & windowComponent, std::vector<RGameObject *> & gameObjects, const float & cellHeight, const float & cellWidth)
+			 * @fn		APhysicsEngine(GraphicComponents::RWindowComponent & windowComponent, RWorld & world, const float & cellHeight, const float & cellWidth)
 			 *
 			 * @brief	Constructor
 			 *
 			 * @param	windowComponent	Window component currently in use.
-			 * @param	gameObjects	Array of all active gameobjects pointers.
-			 * @param	cellHeight	Cell height of collision grid.
-			 * @param	cellWidth	Cell width of collision grid.
+			 * @param	world			The world instantiated in this run.
+			 * @param	cellHeight		Cell height of collision grid.
+			 * @param	cellWidth		Cell width of collision grid.
 			 */
-			APhysicsEngine(GraphicComponents::RWindowComponent & windowComponent, std::vector<RGameObject *> & gameObjects, const float & cellHeight, const float & cellWidth);
+			APhysicsEngine(GraphicComponents::RWindowComponent & windowComponent, RWorld & world, const float & cellHeight, const float & cellWidth);
 
 			/**
 			 * @fn		~APhysicsEngine()
@@ -84,14 +82,14 @@ namespace Rubeus
 			void update(const float deltaTime);
 
 			/**
-			 * @fn		void setGameObjectArray(std::vector<RGameObject *> & gameObjects)
+			 * @fn		void setWorld(RWorld & world)
 			 *
-			 * @brief	Set the game objects array to be used in update
+			 * @brief	Set the world being used to be used in update
 			 * @warning	Keep track of multiple gameObject arrays if active
 			 *
-			 * @param	gameObjects	Array of new gameObjects.
+			 * @param	world	World object in use.
 			 */
-			void setGameObjectArray(std::vector<RGameObject *> & gameObjects);
+			void setWorld(RWorld & world);
 
 		protected:
 

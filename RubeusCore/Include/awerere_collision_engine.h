@@ -107,7 +107,7 @@ namespace Rubeus
 			ACollideData multiplexColliders(ACollider * left, const EColliderType & leftType, ACollider * right, const EColliderType & rightType);
 
 			/**
-			 * @fn		inline void setGameObjectArray(std::vector<RGameObject *> gameObjects)
+			 * @fn		inline void setWorld(std::vector<RGameObject *> gameObjects)
 			 *
 			 * @brief	Set the game object array for use in collision deteciton (if not already sent through the collision engine contructor)
 			 *
