@@ -13,7 +13,7 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		APlaneCollider::APlaneCollider(const RML::Vector3D & normal, const RML::Vector3D & emergencePoint)
+		APlaneCollider::APlaneCollider(const RML::Vector3D & normal, RML::Vector3D & emergencePoint)
 			: ACollider(emergencePoint, RML::Vector2D()), m_Normal(normal), m_EmergencePoint(emergencePoint)
 		{
 			m_Type = EColliderType::PLANE;

@@ -41,7 +41,7 @@ namespace Rubeus
 		protected:
 
 			/** @brief	The central position of the collider */
-			RML::Vector3D m_Position;
+			RML::Vector3D & m_Position;
 
 			/** @brief	Momentum of the collider in 2D space */
 			RML::Vector2D m_Momentum;
@@ -61,7 +61,7 @@ namespace Rubeus
 			ACollider();
 
 			/**
-			 * @fn		ACollider(const RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial)
+			 * @fn		ACollider(RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial)
 			 *
 			 * @brief	Contructor
 			 *
@@ -69,7 +69,7 @@ namespace Rubeus
 			 * @param	velocity		The velocity of the collider.
 			 * @param	physicsMat	The physics material of this collider. Default is DefualtMaterial
 			 */
-			ACollider(const RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial);
+			ACollider(RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial);
 
 		public:
 

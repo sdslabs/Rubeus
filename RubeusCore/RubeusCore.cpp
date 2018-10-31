@@ -18,7 +18,7 @@ int main()
 														 1280, 720,
 														 EWindowParameters::WINDOWED_MODE,
 														 EWindowParameters::NON_RESIZABLE_WINDOW,
-														 0);
+														 1);
 
 	RSymphony * audio_manager = new RSymphony();
 	audio_manager->addMusicTrack(1);
@@ -50,16 +50,16 @@ int main()
 															   EColliderType::BOX,
 															   new ABoxCollider(RML::Vector3D(13.0f, 2.0f, 1.0f),
 																				RML::Vector3D(16.0f, 5.0f, 1.0f))));
-
-	RGameObject * object2 = new RGameObject(14.0f, 3.0f, 3.0f, 3.0f,
+	float a = 1234;
+	RGameObject * object2 = new RGameObject(a, 3.0f, 3.0f, 3.0f,
 											"Assets/debug.png",
 											true,
 											new APhysicsObject(mat,
 															   true,
 															   EColliderType::BOX,
-															   new ABoxCollider(RML::Vector3D(14.0f, 3.0f, 1.0f),
+															   new ABoxCollider(RML::Vector3D(a, 3.0f, 1.0f),
 																				RML::Vector3D(17.0f, 6.0f, 1.0f))));
-
+	a++;
 
 	gameObjects.push_back(object1);
 	gameObjects.push_back(object2);
@@ -99,7 +99,7 @@ int main()
 		shader0->setUniform2f("light_position", Vector2D(GameWindow->m_X * 16.0f / 1280.0f, (720.0f - GameWindow->m_Y) * 9.0f / 720.0f));
 
 		// Physics engine update
-		physicsEngine.update(1);
+		physicsEngine.update(1.0f / 60.0f);
 
 		// Render update
 		layer0->draw();

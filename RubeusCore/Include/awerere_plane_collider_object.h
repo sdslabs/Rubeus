@@ -33,14 +33,14 @@ namespace Rubeus
 		public:
 
 			/**
-			 * @fn		APlaneCollider(const RML::Vector3D & normal, const RML::Vector3D & emergencePoint)
+			 * @fn		APlaneCollider(const RML::Vector3D & normal, RML::Vector3D & emergencePoint)
 			 *
 			 * @brief	Contructor
 			 *
 			 * @param	normal			The normal vector of the 2D plane.
 			 * @param	emergencePoint	The fixed point through which the plane is defined.
 			 */
-			APlaneCollider(const RML::Vector3D & normal, const RML::Vector3D & emergencePoint);
+			APlaneCollider(const RML::Vector3D & normal, RML::Vector3D & emergencePoint);
 
 			/**
 			 * @fn		~APlaneCollider()

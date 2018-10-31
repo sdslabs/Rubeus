@@ -10,7 +10,7 @@ namespace Rubeus
 {
 	namespace GraphicComponents
 	{
-		RRenderableObject::RRenderableObject(RML::Vector3D position, RML::Vector2D size, RML::Vector4D color)
+		RRenderableObject::RRenderableObject(RML::Vector3D & position, RML::Vector2D & size, RML::Vector4D & color)
 			:m_Position(position), m_Size(size), m_Color(color)
 		{
 			setUV();
@@ -26,6 +26,7 @@ namespace Rubeus
 		}
 
 		RRenderableObject::RRenderableObject()
+			: m_Position(RML::Vector3D())
 		{
 			setUV();
 		}

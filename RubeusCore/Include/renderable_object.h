@@ -53,7 +53,7 @@ namespace Rubeus
 			unsigned int m_ObjectID;
 
 			/** @brief	The position of the sprite */
-			RML::Vector3D m_Position;
+			RML::Vector3D & m_Position;
 
 			/** @brief	The size of the sprite */
 			RML::Vector2D m_Size;
@@ -68,7 +68,7 @@ namespace Rubeus
 			RTexture * m_Texture;
 
 			/**
-			 * @fn		RRenderableObject::RRenderableObject(RML::Vector3D position, RML::Vector2D size, RML::Vector4D color);
+			 * @fn		RRenderableObject::RRenderableObject(RML::Vector3D & position, RML::Vector2D & size, RML::Vector4D & color);
 			 *
 			 * @brief	Constructor. Sets position, size, color of the sprite to be used for in the given
 			 * 			shader
@@ -77,7 +77,7 @@ namespace Rubeus
 			 * @param 		  	size		The size.
 			 * @param 		  	color   	The color.
 			 */
-			RRenderableObject(RML::Vector3D position, RML::Vector2D size, RML::Vector4D color);
+			RRenderableObject(RML::Vector3D & position, RML::Vector2D & size, RML::Vector4D & color);
 
 			/**
 			 * @fn		virtual RRenderableObject::~RRenderableObject();

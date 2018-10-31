@@ -10,12 +10,12 @@ namespace Rubeus
 {
 	namespace GraphicComponents
 	{
-		RStaticSprite::RStaticSprite(float x, float y, float width, float height, const RML::Vector4D & color, RShaderComponent & shader)
+		RStaticSprite::RStaticSprite(float x, float y, float width, float height, RML::Vector4D & color, RShaderComponent & shader)
 			: RRenderableObject(RML::Vector3D(x, y, 0), RML::Vector2D(width, height), color), m_Shader(shader)
 		{
 			m_VertexArray = new RVertexArray();
 
-			GLfloat vertices[] = 
+			GLfloat vertices[] =
 			{
 				0, 0, 0,
 				0, height, 0,
@@ -23,7 +23,7 @@ namespace Rubeus
 				width, 0, 0
 			};
 
-			GLfloat colors[] = 
+			GLfloat colors[] =
 			{
 				color.x, color.y, color.z, color.w,
 				color.x, color.y, color.z, color.w,

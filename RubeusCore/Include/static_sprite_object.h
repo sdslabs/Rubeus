@@ -32,7 +32,7 @@ namespace Rubeus
 		public:
 
 			/**
-			 * @fn		RStaticSprite::RStaticSprite(float x, float y, float width, float height, const RML::Vector4D & color, RShaderComponent & shader);
+			 * @fn		RStaticSprite::RStaticSprite(float x, float y, float width, float height, RML::Vector4D & color, RShaderComponent & shader);
 			 *
 			 * @brief	Constructor
 			 *
@@ -43,7 +43,7 @@ namespace Rubeus
 			 * @param 		  	color 	The color.
 			 * @param [in,out]	shader	The shader.
 			 */
-			RStaticSprite(float x, float y, float width, float height, const RML::Vector4D & color, RShaderComponent & shader);
+			RStaticSprite(float x, float y, float width, float height, RML::Vector4D & color, RShaderComponent & shader);
 
 			/**
 			 * @fn		RStaticSprite::~RStaticSprite();
