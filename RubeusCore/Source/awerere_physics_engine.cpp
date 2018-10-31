@@ -5,14 +5,15 @@
  */
 
 #include <awerere_physics_engine.h>
+#include <game_object.h>
 
 namespace Rubeus
 {
 	namespace Awerere
 	{
-		void APhysicsEngine::calculateCollisions()
+		void APhysicsEngine::updateState(const float & deltaTime)
 		{
-			m_CollisionEngine.assignFlags();
+			m_CollisionEngine.updateAndAssignFlags(deltaTime);
 			m_CollisionEngine.collisionResolution();
 		}
 
@@ -42,15 +43,7 @@ namespace Rubeus
 
 		void APhysicsEngine::update(const float deltaTime)
 		{
-			calculateCollisions();
-
-			for (auto object : m_World.getActiveObjects())
-			{
-				if (object->m_HasPhysics)
-				{
-					object->m_PhysicsObject->m_Collider.update();
-				}
-			}
+			updateState(deltaTime);
 		}
 	}
 }

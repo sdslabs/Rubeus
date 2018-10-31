@@ -51,6 +51,14 @@ namespace RML
 		return *this;
 	}
 
+	Vector2D & Vector2D::multiplyFloat(const float & other)
+	{
+		x *= other;
+		y *= other;
+
+		return *this;
+	}
+
 	Vector2D & Vector2D::divide(const Vector2D & other)
 	{
 		x /= other.x;
@@ -108,6 +116,11 @@ namespace RML
 	Vector2D & operator*(Vector2D left, const Vector2D &right)
 	{
 		return left.multiply(right);
+	}
+
+	Vector2D & operator*(Vector2D & vector, const float & other)
+	{
+		return vector.multiplyFloat(other);
 	}
 
 	Vector2D & operator/(Vector2D left, const Vector2D &right)
@@ -213,13 +226,13 @@ namespace RML
 
 	float Vector3D::maxComponent()
 	{
-		if(x > y)
-			if(x > z)
+		if (x > y)
+			if (x > z)
 				return x;
 			else
 				return z;
 		else
-			if(y > z)
+			if (y > z)
 				return y;
 			else
 				return z;
@@ -227,7 +240,7 @@ namespace RML
 
 	float Vector3D::maxXYComponent()
 	{
-		if(x > y)
+		if (x > y)
 			return x;
 		else
 			return y;
@@ -386,10 +399,10 @@ namespace RML
 
 	Vector4D & Vector4D::divide(const Vector4D & other)
 	{
-		x /= (float) other.x;
-		y /= (float) other.y;
-		z /= (float) other.z;
-		w /= (float) other.w;
+		x /= (float)other.x;
+		y /= (float)other.y;
+		z /= (float)other.z;
+		w /= (float)other.w;
 
 		return *this;
 	}
@@ -452,14 +465,14 @@ namespace RML
 
 	Matrix4::Matrix4()
 	{
-		memset((char*) elements, 0.0f, sizeof(elements));
+		memset((char*)elements, 0.0f, sizeof(elements));
 	}
 
 	Matrix4::Matrix4(float diagonal)
 	{
-		for(int i = 0; i < 16; i++)
+		for (int i = 0; i < 16; i++)
 		{
-			if((i % 5) == 0)
+			if ((i % 5) == 0)
 			{
 				elements[i] = diagonal;
 				continue;
@@ -498,12 +511,12 @@ namespace RML
 	{
 		float result[16];
 
-		for(int y = 0; y < 4; y++)
+		for (int y = 0; y < 4; y++)
 		{
-			for(int x = 0; x < 4; x++)
+			for (int x = 0; x < 4; x++)
 			{
 				float sum = 0.0f;
-				for(int e = 0; e < 4; e++)
+				for (int e = 0; e < 4; e++)
 				{
 					sum += elements[x + e * 4] * other.elements[e + y * 4];
 				}

@@ -6,12 +6,14 @@
 
 #pragma once
 
+#include <rubeus_maths_library.h>
+
 namespace Rubeus
 {
 	namespace Awerere
 	{
-		constexpr float DEFAULT_MASS = 10.0f; // kg
-		constexpr float DEFAULT_GRAVITY = 9.8f; // m/s^2
+		constexpr float DEFAULT_MASS = 1.0f; // kg
+		constexpr float DEFAULT_GRAVITY = -9.8f; // m/s^2
 		constexpr float DEFAULT_FRICTION = 0.2f; // [no units]
 		constexpr float DEFAULT_RESTITUTION = 0.8f; // [no units]
 
@@ -31,8 +33,8 @@ namespace Rubeus
 			/** @brief	Value of mass of this physics object */
 			float m_Mass;
 
-			/** @brief	Value of gravity acting on a physics object */
-			float m_Gravity;
+			/** @brief	Gravity vector acting on a physics object */
+			RML::Vector2D m_Gravity;
 
 			/** @brief	Coefficient of friction of this physics material */
 			float m_CoefficientOfFriction;
@@ -55,7 +57,7 @@ namespace Rubeus
 			~APhysicsMaterial();
 
 			/**
-			 * @fn		void makeMaterial(const float & mass, const float & gravity, const float & friction, const float & restitution)
+			 * @fn		void makeMaterial(const float & mass, RML::Vector2D & gravity, const float & friction, const float & restitution)
 			 *
 			 * @brief	Make a material with by specifying physics constants
 			 *
@@ -64,7 +66,7 @@ namespace Rubeus
 			 * @param	friction		Friction coefficient of the surfaces.
 			 * @param	restitution	Restitution coefficient for resolving collisions.
 			 */
-			void makeMaterial(const float & mass, const float & gravity, const float & friction, const float & restitution);
+			void makeMaterial(const float & mass, RML::Vector2D & gravity, const float & friction, const float & restitution);
 
 			/**
 			 * @fn		inline bool isCollisionEnabled() const

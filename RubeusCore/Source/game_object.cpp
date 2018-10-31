@@ -8,7 +8,7 @@
 
 namespace Rubeus
 {
-	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics, Awerere::APhysicsObject * physicsObject, bool generatesHit)
+	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics, Awerere::APhysicsObject * physicsObject, bool generatesHit, const Awerere::APhysicsMaterial & physicsMat)
 		:
 		m_Sprite(new GraphicComponents::RSprite(x, y, deltaX, deltaY, new GraphicComponents::RTexture(imageFilePath))),
 		m_PhysicsObject(physicsObject),

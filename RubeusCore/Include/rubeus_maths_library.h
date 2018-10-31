@@ -24,7 +24,7 @@ namespace RML
 		*/
 	inline float degreeToRadians(float degree)
 	{
-		return degree * (float) (M_PI / 180.0f);
+		return degree * (float)(M_PI / 180.0f);
 	}
 
 	/**
@@ -102,6 +102,8 @@ namespace RML
 			*/
 		Vector2D& multiply(const Vector2D &other);
 
+		Vector2D& multiplyFloat(const float &other);
+
 		/**
 			* @fn	Vector2D& divide(const Vector2D &other);
 			*
@@ -113,7 +115,6 @@ namespace RML
 			*
 			* @return	A reference to a Vector2D.
 			*/
-
 		Vector2D& divide(const Vector2D &other);
 
 		/**
@@ -163,6 +164,8 @@ namespace RML
 			* @return	The result of the operation.
 			*/
 		friend Vector2D& operator*(Vector2D left, const Vector2D &right);
+
+		friend Vector2D& operator*(Vector2D & vector, const float & other);
 
 		/**
 			* @fn	Vector2D& operator/(Vector2D left, const Vector2D &right);
@@ -399,6 +402,7 @@ namespace RML
 			*/
 		friend Vector3D& operator*(Vector3D left, const Vector3D &right);
 
+		// TODO: Add docs
 		friend Vector3D& operator*(const Vector3D vector, const float &other);
 		/**
 			* @fn	Vector3D& operator/(Vector3D left, const Vector3D &right);
@@ -412,6 +416,7 @@ namespace RML
 			*/
 		friend Vector3D& operator/(Vector3D left, const Vector3D &right);
 
+		// TODO: Add docs
 		friend Vector3D& operator/(const Vector3D vector, const float &other);
 
 		/**
@@ -425,6 +430,7 @@ namespace RML
 			*/
 		bool operator==(const Vector3D &other);
 
+		// TODO: Add docs
 		bool operator==(const int other);
 
 		/**

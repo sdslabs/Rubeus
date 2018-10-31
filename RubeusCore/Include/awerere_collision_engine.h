@@ -67,12 +67,16 @@ namespace Rubeus
 			~ACollisionEngine();
 
 			/**
-			 * @fn		void assignFlags()
+			 * @fn		void updateAndAssignFlags(const float & deltaTime)
 			 *
 			 * @brief	Assign grid flags for each game object
 			 * @warning	Uses a 2D grid
+			 *
+			 * @param	The timestep for the update
 			 */
-			void assignFlags();
+			void updateAndAssignFlags(const float & deltaTime);
+
+			void checkCollisions(const int & i);
 
 			/**
 			 * @fn		void collisionResolution()

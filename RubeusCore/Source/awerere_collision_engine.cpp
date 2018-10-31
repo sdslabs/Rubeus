@@ -33,32 +33,42 @@ namespace Rubeus
 		{
 		}
 
-		void ACollisionEngine::assignFlags()
+		void ACollisionEngine::updateAndAssignFlags(const float & deltaTime)
 		{
 			size_t gameObjectsCount = m_GameObjects.size();
 
 			for (int i = 0; i < gameObjectsCount; i++)
 			{
-				// X AXIS FLAGGING
-				int leftFlag = m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().x / m_CollisionGrid.m_CellWidth;
-				int rightFlag = (m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().x + m_GameObjects[i]->m_Sprite->getSize().x) / m_CollisionGrid.m_CellWidth;
-
-				for (int p = 0; p < m_CollisionGrid.m_XCount; p++)
+				if (m_GameObjects[i]->m_HasPhysics)
 				{
-					m_XFlags[i] += ((p >= leftFlag) && (p < rightFlag)) ? "1" : "0";
+					m_GameObjects[i]->m_PhysicsObject->m_Collider->update(deltaTime);
 				}
 
-				// Y AXIS FLAGGING
-				leftFlag = m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().y / m_CollisionGrid.m_CellHeight;
-				rightFlag = (m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().y + m_GameObjects[i]->m_Sprite->getSize().y) / m_CollisionGrid.m_CellHeight;
-
-				for (int p = 0; p < m_CollisionGrid.m_YCount; p++)
-				{
-					m_YFlags[i] += ((p >= leftFlag) && (p < rightFlag)) ? "1" : "0";
-				}
-
-				// https://gamedev.stackexchange.com/questions/72030/using-uniform-grids-for-collision-detection-efficient-way-to-keep-track-of-wha
+				checkCollisions(i);
 			}
+		}
+
+		void ACollisionEngine::checkCollisions(const int & i)
+		{
+			// X AXIS FLAGGING
+			int leftFlag = m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().x / m_CollisionGrid.m_CellWidth;
+			int rightFlag = (m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().x + m_GameObjects[i]->m_Sprite->getSize().x) / m_CollisionGrid.m_CellWidth;
+
+			for (int p = 0; p < m_CollisionGrid.m_XCount; p++)
+			{
+				m_XFlags[i] += ((p >= leftFlag) && (p < rightFlag)) ? "1" : "0";
+			}
+
+			// Y AXIS FLAGGING
+			leftFlag = m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().y / m_CollisionGrid.m_CellHeight;
+			rightFlag = (m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().y + m_GameObjects[i]->m_Sprite->getSize().y) / m_CollisionGrid.m_CellHeight;
+
+			for (int p = 0; p < m_CollisionGrid.m_YCount; p++)
+			{
+				m_YFlags[i] += ((p >= leftFlag) && (p < rightFlag)) ? "1" : "0";
+			}
+
+			// https://gamedev.stackexchange.com/questions/72030/using-uniform-grids-for-collision-detection-efficient-way-to-keep-track-of-wha
 		}
 
 		void ACollisionEngine::collisionResolution()

@@ -15,7 +15,7 @@ namespace Rubeus
 		APhysicsMaterial::APhysicsMaterial()
 		{
 			makeMaterial(DEFAULT_MASS,
-						 DEFAULT_GRAVITY,
+						 RML::Vector2D(0.0f, DEFAULT_GRAVITY),
 						 DEFAULT_FRICTION,
 						 DEFAULT_RESTITUTION);
 		}
@@ -24,7 +24,7 @@ namespace Rubeus
 		{
 		}
 
-		void APhysicsMaterial::makeMaterial(const float & mass, const float & gravity, const float & friction, const float & restitution)
+		void APhysicsMaterial::makeMaterial(const float & mass, RML::Vector2D & gravity, const float & friction, const float & restitution)
 		{
 			m_Mass = mass;
 			m_Gravity = gravity;

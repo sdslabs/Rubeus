@@ -43,8 +43,8 @@ namespace Rubeus
 			/** @brief	The central position of the collider */
 			RML::Vector3D m_Position;
 
-			/** @brief	Velocity of the collider in 2D space */
-			RML::Vector2D m_Velocity;
+			/** @brief	Momentum of the collider in 2D space */
+			RML::Vector2D m_Momentum;
 
 			RML::Vector2D m_Force;
 
@@ -116,7 +116,7 @@ namespace Rubeus
 			 */
 			virtual ACollideData tryIntersect(APlaneCollider & plane) = 0;
 
-			virtual void update(const float & deltaTime);
+			void update(const float & deltaTime);
 
 			/**
 			 * @fn		inline RML::Vector3D getPosition() const
@@ -134,7 +134,7 @@ namespace Rubeus
 			 *
 			 * @return	Position of this collider.
 			 */
-			inline RML::Vector2D getVelocity() const { return m_Velocity; }
+			inline RML::Vector2D getVelocity() const { return m_Momentum; }
 
 			/**
 			 * @fn		inline EColliderType getType() const
@@ -161,7 +161,7 @@ namespace Rubeus
 			 *
 			 * @param	velocity		The new velocity value.
 			 */
-			inline void setVelocity(const RML::Vector2D & velocity) { m_Velocity = velocity; }
+			inline void setVelocity(const RML::Vector2D & velocity) { m_Momentum = velocity; }
 
 			inline void setMaterial(const APhysicsMaterial & physicsMat) { m_PhysicsMaterial = physicsMat; }
 		};

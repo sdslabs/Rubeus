@@ -38,11 +38,13 @@ namespace Rubeus
 			std::vector<std::string> m_YFlags;
 
 			/**
-			 * @fn		void calculateCollisions()
+			 * @fn		void updateState(const float & deltaTime)
 			 *
 			 * @brief	Generate hit events
+			 *
+			 * @param	The timestep for this update
 			 */
-			void calculateCollisions();
+			void updateState(const float & deltaTime);
 
 			/**
 			 * @fn		void decodeCollisionResponse()
