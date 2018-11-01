@@ -64,8 +64,11 @@ $ cmake -DCMAKE_TOOLCHAIN_FILE=path/to/vcpkg/scripts/buildsystems/vcpkg.cmake ./
 $ cmake ./
 ```
 
-## Setting up Rubeus source in Visual Studio 2017
-1. Open the Rubeus root directory in your favourite text-editor/IDE.
+## Setting up Rubeus source in your IDE/text-editor
+1. Open the Rubeus root directory in your IDE/text-editor.
 2. All `.h` files will be present in `/RubeusCore/Include` and all of their implementations(if any) will be present in `/RubeusCore/Source` as `.cpp` files. No need to edit CMakeLists.txt anywhere unless there are any linking errors popping up.
+3. Use any CMake extensions available for your environment to ease building the project using CMake.
+4. Add `/RubeusCore/Include` as your include directory.
+5. Build the project using a `g++` extension or manually compile the entire project.
 
 Remember to go through the [contribution guidelines](CONTRIBUTING.md) for further guidance.
