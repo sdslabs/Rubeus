@@ -5,13 +5,14 @@
  */
 
 #include <game_object.h>
+#include <awerere_physics_object.h>
 
 namespace Rubeus
 {
-	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics, Awerere::APhysicsObject * physicsObject, bool generatesHit, const Awerere::APhysicsMaterial & physicsMat)
+	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics, const Awerere::EColliderType & type, Awerere::ACollider * collider, bool generatesHit, const Awerere::APhysicsMaterial & physicsMat)
 		:
-		m_Sprite(new GraphicComponents::RSprite(x, y, deltaX, deltaY, new GraphicComponents::RTexture(imageFilePath))),
-		m_PhysicsObject(physicsObject),
+		m_Sprite(new GraphicComponents::RSprite(&x, &y, &deltaX, &deltaY, new GraphicComponents::RTexture(imageFilePath))),
+		m_PhysicsObject(new Awerere::APhysicsObject(physicsMat, enablePhysics, type, collider)),
 		m_ThisTicks(false),
 		m_UsesTexture(true),
 		m_HasPhysics(enablePhysics),
@@ -28,10 +29,10 @@ namespace Rubeus
 		}
 	}
 
-	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, float r, float g, float b, bool enablePhysics, Awerere::APhysicsObject * physicsObject, bool generatesHit)
+	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, float & r, float & g, float & b, bool enablePhysics, const Awerere::APhysicsMaterial & material, const Awerere::EColliderType & type, Awerere::ACollider * collider, bool generatesHit)
 		:
-		m_Sprite(new GraphicComponents::RSprite(x, y, deltaX, deltaY, RML::Vector4D(r, g, b, 1.0f))),
-		m_PhysicsObject(physicsObject),
+		m_Sprite(new GraphicComponents::RSprite(&x, &y, &deltaX, &deltaY, RML::Vector4D(r, g, b, 1.0f))),
+		m_PhysicsObject(new Awerere::APhysicsObject(material, enablePhysics, type, collider)),
 		m_ThisTicks(false),
 		m_UsesTexture(false),
 		m_HasPhysics(enablePhysics),
@@ -56,13 +57,28 @@ namespace Rubeus
 			delete m_Sprite;
 		}
 
-		if (m_HasPhysics == true)
-		{
-			delete m_PhysicsObject;
-		}
+		delete m_PhysicsObject;
 	}
 
 	void RGameObject::tick()
 	{
+	}
+
+	void RGameObject::onHit(RGameObject * hammer, RGameObject * nail, Awerere::ACollideData & collisionData)
+	{
+	}
+
+	void RGameObject::syncSpriteWithCollider(RGameObject * object)
+	{
+		object->m_Sprite->m_Position = object->m_PhysicsObject->m_Collider->getPosition();
+	}
+
+	void RGameObject::onMessage(Message * msg)
+	{
+		switch (msg->m_Type)
+		{
+			case system_ok:
+				LOG(this->RMasterComponent::getName() + std::string(" reporting for duty"));
+		}
 	}
 }

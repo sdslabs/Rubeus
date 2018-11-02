@@ -39,9 +39,6 @@ namespace Rubeus
 			/** @brief	Array of grid unit flags across Y axis for each game object */
 			std::vector<AFlag> m_YFlags;
 
-			/** @brief	List of hit events generated after collision detection has finished */
-			AHitEventList m_CollisionEvents;
-
 			friend class APhysicsEngine;
 
 		public:
@@ -109,6 +106,8 @@ namespace Rubeus
 			 * @return	Collision data.
 			 */
 			ACollideData multiplexColliders(ACollider * left, const EColliderType & leftType, ACollider * right, const EColliderType & rightType);
+
+			void respondToCollidedObjects(RGameObject * left, RGameObject * right);
 
 			/**
 			 * @fn		inline void setWorld(std::vector<RGameObject *> gameObjects)

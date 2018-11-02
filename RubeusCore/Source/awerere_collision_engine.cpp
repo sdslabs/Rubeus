@@ -94,7 +94,10 @@ namespace Rubeus
 
 			if (cache.getIsIntersect() == true)
 			{
-				m_CollisionEvents.push(cache);
+
+
+				// Collision detected!
+				left.onHit(&left, &right, cache);
 			}
 		}
 
@@ -147,6 +150,11 @@ namespace Rubeus
 			}
 
 			return ACollideData(false, 0);
+		}
+
+		void ACollisionEngine::respondToCollidedObjects(RGameObject * left, RGameObject * right)
+		{
+			int e = min(left->m_PhysicsObject->m_PhysicsMaterial.m_CoefficientOfRestitution, right->m_PhysicsObject->m_PhysicsMaterial.m_CoefficientOfRestitution);
 		}
 	}
 }
