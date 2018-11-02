@@ -14,6 +14,8 @@
 
 namespace Rubeus
 {
+	constexpr float FLOAT_APPROXIMATION = 0.00001f;
+
 	class RGameObject;
 
 	namespace Awerere

@@ -27,6 +27,16 @@ namespace RML
 		return sqrt((vector.x * vector.x) + (vector.y * vector.y));
 	}
 
+	float Vector2D::getLength() const
+	{
+		return x * x + y * y;
+	}
+
+	Vector2D Vector2D::toUnitVector()
+	{
+		return this->multiplyFloat(this->getLength());
+	}
+
 	Vector2D & Vector2D::add(const Vector2D & other)
 	{
 		x += other.x;
@@ -49,6 +59,11 @@ namespace RML
 		y *= other.y;
 
 		return *this;
+	}
+
+	float Vector2D::multiplyDot(const Vector2D & other)
+	{
+		return x * other.x + y * other.y;
 	}
 
 	Vector2D & Vector2D::multiplyFloat(const float & other)
@@ -116,6 +131,11 @@ namespace RML
 	Vector2D & operator*(Vector2D left, const Vector2D &right)
 	{
 		return left.multiply(right);
+	}
+
+	float operator*(Vector2D & left, const Vector2D & right)
+	{
+		return left.multiplyDot(right);
 	}
 
 	Vector2D & operator*(Vector2D & vector, const float & other)

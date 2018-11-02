@@ -69,6 +69,10 @@ namespace RML
 			*/
 		float getLength(Vector2D& vector) const;
 
+		float getLength() const;
+
+		Vector2D toUnitVector();
+
 		/**
 			* @fn	Vector2D& add(const Vector2D &other);
 			*
@@ -101,6 +105,8 @@ namespace RML
 			* @return	A reference to a Vector2D.
 			*/
 		Vector2D& multiply(const Vector2D &other);
+
+		float multiplyDot(const Vector2D &other);
 
 		Vector2D& multiplyFloat(const float &other);
 
@@ -164,6 +170,8 @@ namespace RML
 			* @return	The result of the operation.
 			*/
 		friend Vector2D& operator*(Vector2D left, const Vector2D &right);
+
+		friend float operator*(Vector2D & left, const Vector2D & right);
 
 		friend Vector2D& operator*(Vector2D & vector, const float & other);
 

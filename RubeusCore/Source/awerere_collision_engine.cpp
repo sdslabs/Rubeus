@@ -154,7 +154,27 @@ namespace Rubeus
 
 		void ACollisionEngine::respondToCollidedObjects(RGameObject * left, RGameObject * right)
 		{
-			int e = min(left->m_PhysicsObject->m_PhysicsMaterial.m_CoefficientOfRestitution, right->m_PhysicsObject->m_PhysicsMaterial.m_CoefficientOfRestitution);
+			float e = min(left->m_PhysicsObject->m_PhysicsMaterial.m_CoefficientOfRestitution, right->m_PhysicsObject->m_PhysicsMaterial.m_CoefficientOfRestitution);
+
+			if (e == 0.0f + FLOAT_APPROXIMATION)
+			{
+
+			}
+
+			RML::Vector3D directionVector = left->m_PhysicsObject->m_Collider->getPosition() - right->m_PhysicsObject->m_Collider->getPosition();
+			RML::Vector2D directionVector2D = RML::Vector2D(directionVector.x, directionVector.y);
+
+			RML::Vector2D leftVector_perp = directionVector2D * left->m_PhysicsObject->m_Collider->getVelocity().multiplyDot(directionVector2D);
+			RML::Vector2D leftVector_parel = directionVector2D - leftVector_perp;
+
+			RML::Vector2D rightVector_perp = directionVector2D * right->m_PhysicsObject->m_Collider->getVelocity().multiplyDot(directionVector2D);
+			RML::Vector2D rightVector_parel = directionVector2D - rightVector_perp;
+
+
+			RML::Vector2D vIncoming = directionVector2D * (left->m_PhysicsObject->m_Collider->getVelocity() - right->m_PhysicsObject->m_Collider->getVelocity()).multiplyDot(directionVector2D);
+			RML::Vector2D vOutgoing = vIncoming * e;
+
+
 		}
 	}
 }
