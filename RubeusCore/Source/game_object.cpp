@@ -12,7 +12,7 @@ namespace Rubeus
 	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics, const Awerere::EColliderType & type, Awerere::ACollider * collider, bool generatesHit, const Awerere::APhysicsMaterial & physicsMat)
 		:
 		m_Sprite(new GraphicComponents::RSprite(x, y, deltaX, deltaY, new GraphicComponents::RTexture(imageFilePath))),
-		m_PhysicsObject(new Awerere::APhysicsObject(physicsMat, enablePhysics, type, collider)),
+		m_PhysicsObject(new Awerere::APhysicsObject(physicsMat, enablePhysics, type, collider, m_Sprite)),
 		m_ThisTicks(false),
 		m_UsesTexture(true),
 		m_HasPhysics(enablePhysics),
@@ -27,6 +27,8 @@ namespace Rubeus
 		{
 			m_PhysicsObject->m_EnablePhysics = enablePhysics;
 		}
+
+		m_PhysicsObject->m_Collider->m_Sprite = m_Sprite;
 	}
 
 	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, float & r, float & g, float & b, bool enablePhysics, const Awerere::APhysicsMaterial & material, const Awerere::EColliderType & type, Awerere::ACollider * collider, bool generatesHit)
@@ -42,6 +44,8 @@ namespace Rubeus
 		{
 			ERRORLOG("Invalid game object. Physics has been enabled for a NULL values Physics object pointer. Specify a non-NULL physics object.");
 		}
+
+		m_PhysicsObject->m_Collider->m_Sprite = m_Sprite;
 	}
 
 	RGameObject::RGameObject()

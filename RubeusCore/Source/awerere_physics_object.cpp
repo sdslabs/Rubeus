@@ -17,12 +17,12 @@ namespace Rubeus
 	namespace Awerere
 	{
 		APhysicsObject::APhysicsObject()
-			: m_PhysicsMaterial(APhysicsMaterial()), m_Collider(NULL), m_EnablePhysics(false)
+			: m_PhysicsMaterial(APhysicsMaterial()), m_Collider(NULL), m_EnablePhysics(false), m_Sprite(NULL)
 		{
 		}
 
-		APhysicsObject::APhysicsObject(const APhysicsMaterial & material, const bool & enablePhysics, const EColliderType & type, ACollider * collider)
-			: m_PhysicsMaterial(material), m_Collider(collider)
+		APhysicsObject::APhysicsObject(const APhysicsMaterial & material, const bool & enablePhysics, const EColliderType & type, ACollider * collider, GraphicComponents::RSprite * sprite)
+			: m_PhysicsMaterial(material), m_Collider(collider), m_Sprite(sprite)
 		{
 			if (type == EColliderType::BOX
 				|| type == EColliderType::PLANE

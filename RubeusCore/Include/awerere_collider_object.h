@@ -9,6 +9,7 @@
 #include <rubeus_maths_library.h>
 #include <awerere_physics_material.h>
 #include <awerere_collide_data_object.h>
+#include <sprite_object.h>
 
 namespace Rubeus
 {
@@ -72,6 +73,7 @@ namespace Rubeus
 			ACollider(RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial);
 
 		public:
+			GraphicComponents::RSprite * m_Sprite = NULL;
 
 			void addForce(RML::Vector2D & force) { m_Force = force; }
 

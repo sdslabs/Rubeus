@@ -46,7 +46,7 @@ int main()
 
 	float a = 1234;
 
-	RGameObject object2(0, 3.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(a, 0, 1), RML::Vector3D(3 + a, 3, 1)), true, APhysicsMaterial::DefaultMaterial);
+	RGameObject object2(0, 3.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(0.0f, 3.0f, 1), RML::Vector3D(3, 6, 1)), true, APhysicsMaterial::DefaultMaterial);
 	a++;
 
 	gameObjects.push_back(object1);
@@ -74,7 +74,9 @@ int main()
 
 	APhysicsEngine physicsEngine(*GameWindow, world, GameWindow->getHeight() / 9, GameWindow->getWidth() / 16);
 
-	object1->m_PhysicsObject->m_Collider->addForce(RML::Vector2D(1.0f, 1.0f));
+	object1->m_PhysicsObject->m_PhysicsMaterial.m_Gravity = RML::Vector2D();
+	object2.m_PhysicsObject->m_PhysicsMaterial.m_Gravity = RML::Vector2D();
+
 	// See if maps are slowing things down. Also have a performance check
 	while (!GameWindow->closed())
 	{
@@ -86,6 +88,11 @@ int main()
 		// Miscellaneous testing stuff
 		shader0->enableShader();
 		shader0->setUniform2f("light_position", Vector2D(GameWindow->m_X * 16.0f / 1280.0f, (720.0f - GameWindow->m_Y) * 9.0f / 720.0f));
+
+		if (object1->m_PhysicsObject->m_Collider->getPosition().y <= 0)
+		{
+			object1->m_PhysicsObject->m_Collider->addForce(RML::Vector2D(0.0f, 10.0f));
+		}
 
 		// Physics engine update
 		physicsEngine.update(1.0f / 60.0f);

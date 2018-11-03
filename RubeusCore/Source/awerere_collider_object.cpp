@@ -19,7 +19,12 @@ namespace Rubeus
 		}
 
 		ACollider::ACollider(RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat)
-			: m_Position(position), m_Momentum(velocity), m_Force(RML::Vector2D(0.0f, 0.0f)), m_PhysicsMaterial(physicsMat), m_Type(EColliderType::NO_COLLIDER)
+			:
+			m_Position(position),
+			m_Momentum(velocity),
+			m_Force(RML::Vector2D(0.0f, 0.0f)),
+			m_PhysicsMaterial(physicsMat),
+			m_Type(EColliderType::NO_COLLIDER)
 		{
 		}
 
@@ -34,6 +39,8 @@ namespace Rubeus
 
 			m_Position.x += m_Momentum.x * deltaTime;
 			m_Position.y += m_Momentum.y * deltaTime;
+
+			m_Sprite->m_Position = this->m_Position;
 		}
 	}
 }
