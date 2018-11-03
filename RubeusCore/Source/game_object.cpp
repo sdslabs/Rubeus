@@ -11,7 +11,7 @@ namespace Rubeus
 {
 	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics, const Awerere::EColliderType & type, Awerere::ACollider * collider, bool generatesHit, const Awerere::APhysicsMaterial & physicsMat)
 		:
-		m_Sprite(new GraphicComponents::RSprite(&x, &y, &deltaX, &deltaY, new GraphicComponents::RTexture(imageFilePath))),
+		m_Sprite(new GraphicComponents::RSprite(x, y, deltaX, deltaY, new GraphicComponents::RTexture(imageFilePath))),
 		m_PhysicsObject(new Awerere::APhysicsObject(physicsMat, enablePhysics, type, collider)),
 		m_ThisTicks(false),
 		m_UsesTexture(true),
@@ -31,7 +31,7 @@ namespace Rubeus
 
 	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, float & r, float & g, float & b, bool enablePhysics, const Awerere::APhysicsMaterial & material, const Awerere::EColliderType & type, Awerere::ACollider * collider, bool generatesHit)
 		:
-		m_Sprite(new GraphicComponents::RSprite(&x, &y, &deltaX, &deltaY, RML::Vector4D(r, g, b, 1.0f))),
+		m_Sprite(new GraphicComponents::RSprite(x, y, deltaX, deltaY, RML::Vector4D(r, g, b, 1.0f))),
 		m_PhysicsObject(new Awerere::APhysicsObject(material, enablePhysics, type, collider)),
 		m_ThisTicks(false),
 		m_UsesTexture(false),

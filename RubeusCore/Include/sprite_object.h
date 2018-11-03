@@ -37,7 +37,7 @@ namespace Rubeus
 			virtual ~RSprite();
 
 			/**
-			 * @fn		RSprite::RSprite(float * x, float * y, float * width, float * height, RML::Vector4D & color);
+			 * @fn		RSprite::RSprite(float & x, float & y, float & width, float & height, RML::Vector4D & color);
 			 *
 			 * @brief	Constructor
 			 *
@@ -47,10 +47,10 @@ namespace Rubeus
 			 * @param	height	The height.
 			 * @param	color 	The color of this sprite.
 			 */
-			RSprite(float * x, float * y, float * width, float * height, RML::Vector4D & color);
+			RSprite(float & x, float & y, float & width, float & height, RML::Vector4D & color);
 
 			/**
-			 * @fn		RSprite::RSprite(float * x, float * y, float * width, float * height, RTexture * texture);
+			 * @fn		RSprite::RSprite(float & x, float & y, float & width, float & height, RTexture * texture);
 			 *
 			 * @brief	Constructor
 			 *
@@ -60,7 +60,7 @@ namespace Rubeus
 			 * @param	height	The height.
 			 * @param	texture 	Pointer to the texture to be used.
 			 */
-			RSprite(float * x, float * y, float * width, float * height, RTexture * texture);
+			RSprite(float & x, float & y, float & width, float & height, RTexture * texture);
 
 		protected:
 		};

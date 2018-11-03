@@ -11,7 +11,7 @@ namespace Rubeus
 	namespace GraphicComponents
 	{
 		RStaticSprite::RStaticSprite(float x, float y, float width, float height, RML::Vector4D & color, RShaderComponent & shader)
-			: RRenderableObject(RML::Vector3D(x, y, 0), RML::Vector2D(width, height), color), m_Shader(shader)
+			: RRenderableObject(new RML::Vector3D(x, y, 0), new RML::Vector2D(width, height), new RML::Vector4D(color)), m_Shader(shader)
 		{
 			m_VertexArray = new RVertexArray();
 

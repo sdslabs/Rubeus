@@ -74,6 +74,7 @@ int main()
 
 	APhysicsEngine physicsEngine(*GameWindow, world, GameWindow->getHeight() / 9, GameWindow->getWidth() / 16);
 
+	object1->m_PhysicsObject->m_Collider->addForce(RML::Vector2D(1.0f, 1.0f));
 	// See if maps are slowing things down. Also have a performance check
 	while (!GameWindow->closed())
 	{

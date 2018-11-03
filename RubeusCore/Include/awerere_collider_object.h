@@ -73,6 +73,8 @@ namespace Rubeus
 
 		public:
 
+			void addForce(RML::Vector2D & force) { m_Force = force; }
+
 			/**
 			 * @fn		~ACollider()
 			 *
@@ -128,13 +130,13 @@ namespace Rubeus
 			inline RML::Vector3D getPosition() const { return m_Position; }
 
 			/**
-			 * @fn		inline RML::Vector2D getVelocity() const
+			 * @fn		inline RML::Vector2D getMomentum() const
 			 *
-			 * @brief	Returns the position of this position
+			 * @brief	Returns the momentum of this position
 			 *
-			 * @return	Position of this collider.
+			 * @return	Momentum of this collider.
 			 */
-			inline RML::Vector2D getVelocity() const { return m_Momentum; }
+			inline RML::Vector2D getMomentum() const { return m_Momentum; }
 
 			/**
 			 * @fn		inline EColliderType getType() const
@@ -157,9 +159,9 @@ namespace Rubeus
 			/**
 			 * @fn		inline void setMomentum(const RML::Vector2D & velocity)
 			 *
-			 * @brief	Set the velocity of this collider
+			 * @brief	Set the momentum of this collider
 			 *
-			 * @param	velocity		The new velocity value.
+			 * @param	momentum		The new momentum value.
 			 */
 			inline void setMomentum(const RML::Vector2D & momentum) { m_Momentum = momentum; }
 
