@@ -94,8 +94,7 @@ namespace Rubeus
 
 			if (cache.getIsIntersect() == true)
 			{
-
-
+				LOG("HIT");
 				// Collision detected!
 				left.onHit(&left, &right, cache);
 			}

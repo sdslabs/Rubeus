@@ -39,7 +39,7 @@ namespace Rubeus
 		 */
 		class ACollider
 		{
-		protected:
+		public:
 
 			/** @brief	The central position of the collider */
 			RML::Vector3D & m_Position;
@@ -72,10 +72,6 @@ namespace Rubeus
 			 */
 			ACollider(RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial);
 
-		public:
-			GraphicComponents::RSprite * m_Sprite = NULL;
-
-			void addForce(RML::Vector2D & force) { m_Force = force; }
 
 			/**
 			 * @fn		~ACollider()
@@ -168,6 +164,12 @@ namespace Rubeus
 			inline void setMomentum(const RML::Vector2D & momentum) { m_Momentum = momentum; }
 
 			inline void setMaterial(const APhysicsMaterial & physicsMat) { m_PhysicsMaterial = physicsMat; }
+
+			GraphicComponents::RSprite * m_Sprite = NULL;
+
+			void addForce(RML::Vector2D & force) { m_Force = force; }
+
+			void addMomentum(RML::Vector2D & momentum) { m_Momentum += momentum; }
 		};
 	}
 }

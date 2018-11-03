@@ -73,6 +73,8 @@ namespace Rubeus
 
 	void RGameObject::onHit(RGameObject * hammer, RGameObject * nail, Awerere::ACollideData & collisionData)
 	{
+		hammer->m_PhysicsObject->m_Collider->m_Momentum = hammer->m_PhysicsObject->m_Collider->m_Momentum * -hammer->m_PhysicsObject->m_PhysicsMaterial.m_CoefficientOfRestitution;
+		nail->m_PhysicsObject->m_Collider->m_Momentum = nail->m_PhysicsObject->m_Collider->m_Momentum * -nail->m_PhysicsObject->m_PhysicsMaterial.m_CoefficientOfRestitution;
 	}
 
 	void RGameObject::syncSpriteWithCollider()

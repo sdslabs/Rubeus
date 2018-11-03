@@ -42,7 +42,7 @@ int main()
 
 	std::vector<RGameObject *> gameObjects;
 
-	RGameObject * object1 = new RGameObject(0.0f, 0.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(10.0f, 0, 1), RML::Vector3D(3 + 10.0f, 3, 1)), true, APhysicsMaterial::DefaultMaterial);
+	RGameObject * object1 = new RGameObject(0.0f, 9.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(0.0f, 9.0f, 1), RML::Vector3D(3.0f, 6.0f, 1)), true, APhysicsMaterial::DefaultMaterial);
 
 	float a = 1234;
 
@@ -89,9 +89,9 @@ int main()
 		shader0->enableShader();
 		shader0->setUniform2f("light_position", Vector2D(GameWindow->m_X * 16.0f / 1280.0f, (720.0f - GameWindow->m_Y) * 9.0f / 720.0f));
 
-		if (object1->m_PhysicsObject->m_Collider->getPosition().y <= 0)
+		if (object2.m_PhysicsObject->m_Collider->getPosition().y <= 0)
 		{
-			object1->m_PhysicsObject->m_Collider->addForce(RML::Vector2D(0.0f, 10.0f));
+			object2.m_PhysicsObject->m_Collider->addMomentum(RML::Vector2D(0.0f, 10.0f));
 		}
 
 		// Physics engine update
