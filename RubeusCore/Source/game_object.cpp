@@ -57,7 +57,10 @@ namespace Rubeus
 			delete m_Sprite;
 		}
 
-		delete m_PhysicsObject;
+		if (m_HasPhysics == true)
+		{
+			delete m_PhysicsObject;
+		}
 	}
 
 	void RGameObject::tick()
@@ -68,9 +71,9 @@ namespace Rubeus
 	{
 	}
 
-	void RGameObject::syncSpriteWithCollider(RGameObject * object)
+	void RGameObject::syncSpriteWithCollider()
 	{
-		object->m_Sprite->m_Position = object->m_PhysicsObject->m_Collider->getPosition();
+		this->m_Sprite->m_Position = this->m_PhysicsObject->m_Collider->getPosition();
 	}
 
 	void RGameObject::onMessage(Message * msg)

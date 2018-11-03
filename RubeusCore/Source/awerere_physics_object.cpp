@@ -35,7 +35,7 @@ namespace Rubeus
 			}
 			else
 			{
-				LOG("Invalid Collider type. Use members of enumeration EColliderType");
+				LOG("Invalid Collider type. Use members of EColliderType");
 			}
 		}
 

@@ -158,22 +158,20 @@ namespace Rubeus
 
 			if (e == 0.0f + FLOAT_APPROXIMATION)
 			{
+				left->m_PhysicsObject->m_Collider->setMomentum(RML::Vector2D(0.0f, 0.0f));
+				left->syncSpriteWithCollider();
+				right->m_PhysicsObject->m_Collider->setMomentum(RML::Vector2D(0.0f, 0.0f));
+				right->syncSpriteWithCollider();
 
+				return;
 			}
 
-			RML::Vector3D directionVector = left->m_PhysicsObject->m_Collider->getPosition() - right->m_PhysicsObject->m_Collider->getPosition();
-			RML::Vector2D directionVector2D = RML::Vector2D(directionVector.x, directionVector.y);
+			if (e == 1.0f + FLOAT_APPROXIMATION)
+			{
+				// Add things here
+			}
 
-			RML::Vector2D leftVector_perp = directionVector2D * left->m_PhysicsObject->m_Collider->getVelocity().multiplyDot(directionVector2D);
-			RML::Vector2D leftVector_parel = directionVector2D - leftVector_perp;
-
-			RML::Vector2D rightVector_perp = directionVector2D * right->m_PhysicsObject->m_Collider->getVelocity().multiplyDot(directionVector2D);
-			RML::Vector2D rightVector_parel = directionVector2D - rightVector_perp;
-
-
-			RML::Vector2D vIncoming = directionVector2D * (left->m_PhysicsObject->m_Collider->getVelocity() - right->m_PhysicsObject->m_Collider->getVelocity()).multiplyDot(directionVector2D);
-			RML::Vector2D vOutgoing = vIncoming * e;
-
+			// Add collision response rules for non-elastic collisions
 
 		}
 	}

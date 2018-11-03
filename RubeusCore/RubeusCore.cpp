@@ -42,16 +42,16 @@ int main()
 
 	std::vector<RGameObject *> gameObjects;
 
-	RGameObject object1(10.0f, 3.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(10.0f, 0, 1), RML::Vector3D(3 + 10.0f, 3, 1)), true, APhysicsMaterial::DefaultMaterial);
+	RGameObject * object1 = new RGameObject(0.0f, 0.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(10.0f, 0, 1), RML::Vector3D(3 + 10.0f, 3, 1)), true, APhysicsMaterial::DefaultMaterial);
 
 	float a = 1234;
 
-	RGameObject object2(a, 3.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(a, 0, 1), RML::Vector3D(3 + a, 3, 1)), true, APhysicsMaterial::DefaultMaterial);
+	RGameObject object2(0, 3.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(a, 0, 1), RML::Vector3D(3 + a, 3, 1)), true, APhysicsMaterial::DefaultMaterial);
 	a++;
 
-	gameObjects.push_back(&object1);
+	gameObjects.push_back(object1);
 	gameObjects.push_back(&object2);
-	g->add(&object1);
+	g->add(object1);
 	g->add(&object2);
 	g->add(g2);
 	layer0->addGroup(*g);
@@ -102,6 +102,7 @@ int main()
 	delete timer;
 	delete g;
 	delete g2;
+	delete object1;
 	delete layer0;
 	delete shader0;
 	delete audio_manager;

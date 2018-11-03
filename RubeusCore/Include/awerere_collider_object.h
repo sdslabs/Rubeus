@@ -155,13 +155,13 @@ namespace Rubeus
 			inline void setPosition(const RML::Vector3D & position) { m_Position = position; }
 
 			/**
-			 * @fn		inline void setVelocity(const RML::Vector2D & velocity)
+			 * @fn		inline void setMomentum(const RML::Vector2D & velocity)
 			 *
 			 * @brief	Set the velocity of this collider
 			 *
 			 * @param	velocity		The new velocity value.
 			 */
-			inline void setVelocity(const RML::Vector2D & velocity) { m_Momentum = velocity; }
+			inline void setMomentum(const RML::Vector2D & momentum) { m_Momentum = momentum; }
 
 			inline void setMaterial(const APhysicsMaterial & physicsMat) { m_PhysicsMaterial = physicsMat; }
 		};

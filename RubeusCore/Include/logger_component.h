@@ -48,23 +48,25 @@
                    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7)
 
 // Pass in OpenGL calls for debugging errors while executing OpenGL code
-#define GLCall(x) GLClearError();\
-                  x;\
-                  while(GLenum error = glGetError())\
-                  {\
-                      int z = toHex(error);\
-                      ERRORLOG("OpenGL Error: 0x" + ((z < 0x1000)? "0" + std::to_string(z) : std::to_string(z)));\
-                      std::cin.get();\
+#define GLCall(x) GLClearError();																									\
+                  x;																												\
+                  while(GLenum error = glGetError())																				\
+                  {																													\
+                      int z = toHex(error);																							\
+                      ERRORLOG("OpenGL Error: 0x" + ((z < 0x1000)? "0" + std::to_string(z) : std::to_string(z)));					\
+                      std::cin.get();																								\
                   }
 
 // Pass in DevIL calls for checking for errors in image management
-#define DevILCall(x) DevILClearError();\
-                     x;\
-                     while(ILenum error = ilGetError())\
-                     {\
-                         ERRORLOG(std::string("DevIL Error: ") + iluErrorString(error));\
-                         if(error == ILU_OUT_OF_MEMORY)\
-                         std::cin.get();\
+#define DevILCall(x) DevILClearError();																								\
+                     x;																												\
+                     while(ILenum error = ilGetError())																				\
+                     {																												\
+                         ERRORLOG(std::string("DevIL Error: ") + iluErrorString(error));											\
+                         if(error == ILU_OUT_OF_MEMORY)																				\
+                         {																											\
+							 std::cin.get();																						\
+						 }																											\
                      }
 #else
 	// In case non Windows system is the build target
@@ -89,7 +91,7 @@
 // Deprecated for non-debug builds
 #define LOGEXTENDED(x)
 
-//  Deprecated for non-debug builds
+// Deprecated for non-debug builds
 #define ERRORLOG(x)
 
 // Deprecated for non-debug builds
