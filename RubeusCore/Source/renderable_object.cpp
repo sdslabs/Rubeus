@@ -26,7 +26,10 @@ namespace Rubeus
 		}
 
 		RRenderableObject::RRenderableObject()
-			: m_Position(RML::Vector3D())
+			:
+			m_Position(RML::Vector3D()),
+			m_Size(RML::Vector2D()),
+			m_Color(RML::Vector4D())
 		{
 			setUV();
 		}

@@ -20,6 +20,9 @@ namespace Rubeus
 		class RSprite : public RRenderableObject
 		{
 		private:
+			RML::Vector3D * _m_Position;
+			RML::Vector2D * _m_Size;
+			RML::Vector4D * _m_Color;
 
 		public:
 			/**

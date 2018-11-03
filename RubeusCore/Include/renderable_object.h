@@ -48,6 +48,9 @@ namespace Rubeus
 		 */
 		class RRenderableObject
 		{
+		private:
+
+
 		public:
 			/** @brief	Identifier for the object */
 			unsigned int m_ObjectID;
@@ -56,10 +59,10 @@ namespace Rubeus
 			RML::Vector3D & m_Position;
 
 			/** @brief	The size of the sprite */
-			RML::Vector2D m_Size;
+			RML::Vector2D & m_Size;
 
 			/** @brief	The color of the sprite */
-			RML::Vector4D m_Color;
+			RML::Vector4D & m_Color;
 
 			/** @brief	The UV/texture coordinates of the current texture being utilised */
 			std::vector<RML::Vector2D> m_UV;
