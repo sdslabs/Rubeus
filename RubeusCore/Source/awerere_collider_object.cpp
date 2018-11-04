@@ -7,6 +7,7 @@
 #include <awerere_collider_object.h>
 #include <awerere_sphere_collider_object.h>
 #include <awerere_plane_collider_object.h>
+#include <awerere_physics_engine.h>
 #include <awerere_box_collider_object.h>
 
 namespace Rubeus
@@ -41,6 +42,11 @@ namespace Rubeus
 			m_Position.y += m_Momentum.y * deltaTime;
 
 			m_Sprite->m_Position = this->m_Position;
+		}
+
+		void ACollider::addImpulse(RML::Vector2D & impulse)
+		{
+			m_Momentum += impulse;
 		}
 	}
 }

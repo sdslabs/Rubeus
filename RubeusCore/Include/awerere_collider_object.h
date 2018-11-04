@@ -170,6 +170,8 @@ namespace Rubeus
 			void addForce(RML::Vector2D & force) { m_Force = force; }
 
 			void addMomentum(RML::Vector2D & momentum) { m_Momentum += momentum; }
+
+			void addImpulse(RML::Vector2D & impulse);
 		};
 	}
 }

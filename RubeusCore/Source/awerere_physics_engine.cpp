@@ -9,8 +9,13 @@
 
 namespace Rubeus
 {
+
 	namespace Awerere
 	{
+		std::map<ACollider *, RML::Vector2D> APhysicsEngine::ImpulsesGeneratedPerImpulseCalculationFrame;
+		int APhysicsEngine::ImpulseCalculationFrames = 3;
+		int APhysicsEngine::ImpulseFrames = 0;
+
 		void APhysicsEngine::updateState(const float & deltaTime)
 		{
 			m_CollisionEngine.updateAndAssignFlags(deltaTime);
@@ -43,7 +48,22 @@ namespace Rubeus
 
 		void APhysicsEngine::update(const float deltaTime)
 		{
+			if (ImpulseFrames > ImpulseCalculationFrames)
+			{
+				stopImpulses();
+			}
+
 			updateState(deltaTime);
+		}
+
+		void APhysicsEngine::stopImpulses()
+		{
+			for (auto & item : ImpulsesGeneratedPerImpulseCalculationFrame)
+			{
+				item.first->m_Momentum -= item.second;
+
+				ImpulsesGeneratedPerImpulseCalculationFrame.erase(item.first);
+			}
 		}
 	}
 }

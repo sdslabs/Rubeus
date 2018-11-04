@@ -18,7 +18,7 @@ int main()
 														 1280, 720,
 														 EWindowParameters::WINDOWED_MODE,
 														 EWindowParameters::NON_RESIZABLE_WINDOW,
-														 0);
+														 1);
 
 	RSymphony * audio_manager = new RSymphony();
 	audio_manager->addMusicTrack(1);
@@ -42,7 +42,7 @@ int main()
 
 	std::vector<RGameObject *> gameObjects;
 
-	RGameObject * object1 = new RGameObject(0.0f, 9.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(0.0f, 9.0f, 1), RML::Vector3D(3.0f, 6.0f, 1)), true, APhysicsMaterial::DefaultMaterial);
+	RGameObject * object1 = new RGameObject(4.0f, 9.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(4.0f, 9.0f, 1), RML::Vector3D(3.0f, 6.0f, 1)), true, APhysicsMaterial::DefaultMaterial);
 
 	float a = 1234;
 

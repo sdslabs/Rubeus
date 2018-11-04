@@ -7,6 +7,7 @@
 #pragma once
 
 #include <vector>
+#include <map>
 
 #include <world.h>
 #include <awerere_collision_engine.h>
@@ -16,6 +17,7 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
+
 		/**
 		 * @class	APhysicsEngine
 		 *
@@ -36,6 +38,11 @@ namespace Rubeus
 
 			/** @brief	Array of collision Yflags assigned to each gameobject */
 			std::vector<std::string> m_YFlags;
+
+			static std::map<ACollider *, RML::Vector2D> ImpulsesGeneratedPerImpulseCalculationFrame;
+			static int ImpulseCalculationFrames;
+
+			static int ImpulseFrames;
 
 			/**
 			 * @fn		void updateState(const float & deltaTime)
@@ -82,6 +89,8 @@ namespace Rubeus
 			 * @param	deltaTime	Time passed since last update.
 			 */
 			void update(const float deltaTime);
+
+			void stopImpulses();
 
 			/**
 			 * @fn		void setWorld(RWorld & world)

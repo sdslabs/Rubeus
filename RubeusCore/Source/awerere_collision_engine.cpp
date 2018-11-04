@@ -96,6 +96,8 @@ namespace Rubeus
 			{
 				LOG("HIT");
 				// Collision detected!
+				left.m_PhysicsObject->m_Collider->addImpulse(right.m_PhysicsObject->m_Collider->getMomentum() * (1 / (left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Mass) * (right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Mass)));
+				right.m_PhysicsObject->m_Collider->addImpulse(left.m_PhysicsObject->m_Collider->getMomentum() * (1 / (left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Mass) * (right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Mass)));
 
 				// Step 1 : Get collision normal along with penetration depth from the collided objects
 
@@ -137,23 +139,23 @@ namespace Rubeus
 					return left->tryIntersect(*(APlaneCollider *)right);
 
 				case 0x1001:
-					return ACollideData(false, 0); // No collider
+					return ACollideData(false, 0, RML::Vector2D()); // No collider
 
 				case 0x1000:
-					return ACollideData(false, 0); // No collider
+					return ACollideData(false, 0, RML::Vector2D()); // No collider
 
 				case 0x1010:
-					return ACollideData(false, 0); // No collider
+					return ACollideData(false, 0, RML::Vector2D()); // No collider
 
 				case 0x1100:
-					return ACollideData(false, 0); // No collider
+					return ACollideData(false, 0, RML::Vector2D()); // No collider
 
 				default:
 					ERRORLOG("Fatal error: Unknown collider type found");
 					break;
 			}
 
-			return ACollideData(false, 0);
+			return ACollideData(false, 0, RML::Vector2D());
 		}
 
 		void ACollisionEngine::respondToCollidedObjects(RGameObject * left, RGameObject * right)
