@@ -37,7 +37,11 @@ namespace Rubeus
 			RML::Vector3D maxGap = gap1.maxVector(gap2);
 			float maxDistance = maxGap.maxXYComponent();
 
-			return ACollideData(maxDistance > 0, maxDistance);
+			RML::Vector3D normal = (this->m_MinExtent + this->m_MaxExtent).multiplyCross(box.m_MinExtent + box.m_MaxExtent);
+
+			normal = normal / (4.0f * normal.getLength());
+
+			return ACollideData(maxDistance < 0, maxDistance, normal.getVector2D());
 		}
 
 		ACollideData ABoxCollider::tryIntersect(APlaneCollider & plane)
@@ -81,11 +85,17 @@ namespace Rubeus
 			// Set the z axis
 			closestPoint.z = center.z;
 
-			float penetrationDistance = RML::Vector3D(closestPoint - center).getLength();
 			// Find distance of original sphere center from the closest point
+			float penetrationDistance = RML::Vector3D(closestPoint - center).getLength();
+
+			RML::Vector3D normal = (this->m_MinExtent + this->m_MaxExtent).multiplyCross(sphere.getCenter());
+
+			normal = normal / (4.0f * normal.getLength());
+
 			return ACollideData(
 				penetrationDistance < sphere.getRadius(),
-				penetrationDistance - sphere.getRadius()
+				penetrationDistance - sphere.getRadius(),
+				normal.getVector2D()
 			);
 		}
 	}

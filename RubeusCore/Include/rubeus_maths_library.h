@@ -301,6 +301,8 @@ namespace RML
 
 		float getLength() const;
 
+		Vector2D getVector2D();
+
 		/**
 			* @fn	Vector3D& add(const Vector3D &other);
 			*

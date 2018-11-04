@@ -96,6 +96,11 @@ namespace Rubeus
 			{
 				LOG("HIT");
 				// Collision detected!
+
+				// Step 1 : Get collision normal along with penetration depth from the collided objects
+
+				// Step 2 : https://gamedevelopment.tutsplus.com/tutorials/how-to-create-a-custom-2d-physics-engine-the-basics-and-impulse-resolution--gamedev-6331
+
 				left.onHit(&left, &right, cache);
 			}
 		}

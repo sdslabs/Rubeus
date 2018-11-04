@@ -18,7 +18,7 @@ int main()
 														 1280, 720,
 														 EWindowParameters::WINDOWED_MODE,
 														 EWindowParameters::NON_RESIZABLE_WINDOW,
-														 1);
+														 0);
 
 	RSymphony * audio_manager = new RSymphony();
 	audio_manager->addMusicTrack(1);

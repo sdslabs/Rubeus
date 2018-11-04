@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include <rubeus_maths_library.h>
+
 namespace Rubeus
 {
 	namespace Awerere
@@ -26,6 +28,8 @@ namespace Rubeus
 						(is less than 0 if colliders are intersecting) */
 			const float m_Gap;
 
+			const RML::Vector2D m_CollisionNormal;
+
 		public:
 
 			/**
@@ -34,10 +38,11 @@ namespace Rubeus
 			 * @brief	Constructor
 			 * @warning
 			 *
-			 * @param	isIntersect	Bool containing if the colliders are intersecting.
-			 * @param	gap			The penetration distance of the collision.
+			 * @param	isIntersect		Bool containing if the colliders are intersecting.
+			 * @param	gap				The penetration distance of the collision.
+			 * @param	collisionNormal	The normal vector of the collision
 			 */
-			ACollideData(const bool isIntersect, const float gap);
+			ACollideData(const bool isIntersect, const float gap, const RML::Vector2D collisionNormal);
 
 			/**
 			 * @fn		~ACollideData()

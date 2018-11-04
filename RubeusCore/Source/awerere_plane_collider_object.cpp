@@ -29,7 +29,8 @@ namespace Rubeus
 
 			return ACollideData(
 				pdt == 0,
-				RML::Vector3D(m_EmergencePoint - plane.m_EmergencePoint).multiplyDot(plane.getNormal())
+				RML::Vector3D(m_EmergencePoint - plane.m_EmergencePoint).multiplyDot(plane.getNormal()),
+				m_Normal.getVector2D()
 			);
 		}
 
@@ -38,7 +39,9 @@ namespace Rubeus
 			RML::Vector3D slantGap = sphere.getCenter() - m_EmergencePoint;
 			float gap = slantGap.multiplyDot(m_Normal.toUnitVector());
 
-			return ACollideData(gap < sphere.getRadius(), gap - sphere.getRadius());
+			return ACollideData(gap < sphere.getRadius(),
+								gap - sphere.getRadius(),
+								m_Normal.getVector2D());
 		}
 
 		ACollideData APlaneCollider::tryIntersect(ABoxCollider & box)
@@ -49,9 +52,11 @@ namespace Rubeus
 			float ur = RML::Vector3D(box.getUpperRightBound() - m_EmergencePoint).multiplyDot(m_Normal.toUnitVector());
 
 			bool ans = (signbit(ll) * signbit(lr) * signbit(ul) * signbit(ur)) | ((1 - signbit(ll)) * (1 - signbit(lr)) * (1 - signbit(ul)) * (1 - signbit(ur)));
+
 			return ACollideData(
 				!ans,
-				ans == false ? -1 : +1
+				ans == false ? -1 : +1,
+				m_Normal.getVector2D()
 			);
 		}
 

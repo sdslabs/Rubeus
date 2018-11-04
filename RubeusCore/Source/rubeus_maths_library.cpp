@@ -172,6 +172,11 @@ namespace RML
 		return sqrt((x * x) + (y * y) + (z * z));
 	}
 
+	Vector2D Vector3D::getVector2D()
+	{
+		return Vector2D(x, y);
+	}
+
 	Vector3D & Vector3D::add(const Vector3D & other)
 	{
 		x += other.x;
