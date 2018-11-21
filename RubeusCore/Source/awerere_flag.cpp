@@ -10,25 +10,24 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		AFlag::AFlag()
-			: std::string("")
-		{
-		}
+		int AFlag::BufferSize = 1;
 
-		AFlag::AFlag(const std::string & string)
-			: std::string(string)
+		AFlag::AFlag(const int & bufferSize = BufferSize)
+			: m_Data(new int[BufferSize])
 		{
+			BufferSize = bufferSize;
 		}
 
 		AFlag::~AFlag()
 		{
+			delete[] m_Data;
 		}
 
 		bool AFlag::operator*(AFlag & other)
 		{
 			int accum = 0;
 
-			for (int i = 0; i < this->size(); i++)
+			for (int i = 0; i < BufferSize; i++)
 			{
 				accum = accum + ((((*this)[i] == '1') ? 1 : 0) * (((other[i] == '1') ? 1 : 0)));
 			}

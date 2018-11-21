@@ -15,7 +15,7 @@ namespace Rubeus
 	namespace Awerere
 	{
 		ACollider::ACollider()
-			: m_Position(RML::Vector3D())
+			: m_Position(RML::Vector3D()), m_Type(EColliderType::NO_COLLIDER)
 		{
 		}
 
@@ -41,7 +41,10 @@ namespace Rubeus
 			m_Position.x += m_Momentum.x * deltaTime;
 			m_Position.y += m_Momentum.y * deltaTime;
 
-			m_Sprite->m_Position = this->m_Position;
+			// Update sprite with the same change in position to allow sprites having
+			// different dimensions than its collider.
+			m_Sprite->m_Position.x += m_Momentum.x * deltaTime;
+			m_Sprite->m_Position.y += m_Momentum.y * deltaTime;
 		}
 
 		void ACollider::addImpulse(RML::Vector2D & impulse)

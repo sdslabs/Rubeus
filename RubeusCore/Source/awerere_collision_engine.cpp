@@ -160,14 +160,12 @@ namespace Rubeus
 
 		void ACollisionEngine::respondToCollidedObjects(RGameObject * left, RGameObject * right)
 		{
-			float e = min(left->m_PhysicsObject->m_PhysicsMaterial.m_CoefficientOfRestitution, right->m_PhysicsObject->m_PhysicsMaterial.m_CoefficientOfRestitution);
+			float e = std::min(left->m_PhysicsObject->m_PhysicsMaterial.m_CoefficientOfRestitution, right->m_PhysicsObject->m_PhysicsMaterial.m_CoefficientOfRestitution);
 
 			if (e == 0.0f + FLOAT_APPROXIMATION)
 			{
 				left->m_PhysicsObject->m_Collider->setMomentum(RML::Vector2D(0.0f, 0.0f));
-				left->syncSpriteWithCollider();
 				right->m_PhysicsObject->m_Collider->setMomentum(RML::Vector2D(0.0f, 0.0f));
-				right->syncSpriteWithCollider();
 
 				return;
 			}

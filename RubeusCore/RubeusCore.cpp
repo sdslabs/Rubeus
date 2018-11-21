@@ -18,15 +18,15 @@ int main()
 														 1280, 720,
 														 EWindowParameters::WINDOWED_MODE,
 														 EWindowParameters::NON_RESIZABLE_WINDOW,
-														 1);
+														 0);
 
-	RSymphony * audio_manager = new RSymphony();
-	audio_manager->addMusicTrack(1);
-	audio_manager->addSoundTrack(1);
-	audio_manager->loadTrack(AudioComponents::MUSIC_TRACK, AudioComponents::TRACK_0, "Assets/Garage.wav", 10, true);
-	audio_manager->loadTrack(AudioComponents::SOUND_TRACK, AudioComponents::TRACK_0, "Assets/sound.wav", 10);
-	audio_manager->playTrack(AudioComponents::MUSIC_TRACK, AudioComponents::TRACK_0);
-	audio_manager->playTrack(AudioComponents::SOUND_TRACK, AudioComponents::TRACK_0);
+	RSymphony * symphony = new RSymphony();
+	symphony->addMusicTrack(1);
+	symphony->addSoundTrack(1);
+	symphony->loadTrack(AudioComponents::MUSIC_TRACK, AudioComponents::TRACK_0, "Assets/Garage.wav", 10, true);
+	symphony->loadTrack(AudioComponents::SOUND_TRACK, AudioComponents::TRACK_0, "Assets/sound.wav", 10);
+	symphony->playTrack(AudioComponents::MUSIC_TRACK, AudioComponents::TRACK_0);
+	symphony->playTrack(AudioComponents::SOUND_TRACK, AudioComponents::TRACK_0);
 
 	RShaderComponent * shader0 = new RShaderComponent("Shaders/basic.vert", "Shaders/basic.frag");
 
@@ -72,7 +72,7 @@ int main()
 
 	RWorld world(gameObjects);
 
-	APhysicsEngine physicsEngine(*GameWindow, world, GameWindow->getHeight() / 9, GameWindow->getWidth() / 16);
+	APhysicsEngine awerere(*GameWindow, world, GameWindow->getHeight() / 9, GameWindow->getWidth() / 16);
 
 	object1->m_PhysicsObject->m_PhysicsMaterial.m_Gravity = RML::Vector2D();
 	object2.m_PhysicsObject->m_PhysicsMaterial.m_Gravity = RML::Vector2D();
@@ -91,11 +91,11 @@ int main()
 
 		if (object2.m_PhysicsObject->m_Collider->getPosition().y <= 0)
 		{
-			object2.m_PhysicsObject->m_Collider->addMomentum(RML::Vector2D(0.0f, 10.0f));
+			object2.m_PhysicsObject->m_Collider->addImpulse(RML::Vector2D(0.0f, 10.0f));
 		}
 
 		// Physics engine update
-		physicsEngine.update(1.0f / 60.0f);
+		awerere.update(1.0f / 60.0f);
 
 		// Render update
 		layer0->draw();
@@ -113,7 +113,7 @@ int main()
 	delete object1;
 	delete layer0;
 	delete shader0;
-	delete audio_manager;
+	delete symphony;
 	delete GameWindow;
 
 	return 0;
