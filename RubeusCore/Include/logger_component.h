@@ -20,10 +20,12 @@
 
 #define LOGS
 
+#define USERLOG(x) std::cout << (x) << std::endl
+
 #ifdef _DEBUG
 
 // Prints to the console anything that is passed in
-#define LOG(x) std::cout << (x) << std::endl
+#define LOG(x) std::cout << "Rubeus: " << (x) << std::endl
 
 // Prints to console with file name and line number
 // Use LOG() for shorter version
