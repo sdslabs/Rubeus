@@ -22,8 +22,15 @@ namespace Rubeus
 			size_t i = 0;
 			while (i < m_GameObjects.size())
 			{
-				m_XFlags.push_back(AFlag(""));
-				m_YFlags.push_back(AFlag(""));
+				m_XFlags.push_back(AFlag(m_CollisionGrid.m_XCount));
+
+				i++;
+			}
+
+			i = 0;
+			while (i < m_GameObjects.size())
+			{
+				m_YFlags.push_back(AFlag(m_CollisionGrid.m_YCount));
 
 				i++;
 			}
@@ -56,7 +63,7 @@ namespace Rubeus
 
 			for (int p = 0; p < m_CollisionGrid.m_XCount; p++)
 			{
-				m_XFlags[i] += ((p >= leftFlag) && (p < rightFlag)) ? "1" : "0";
+				m_XFlags[i].m_Data[p] = ((p >= leftFlag) && (p < rightFlag)) ? true : false;
 			}
 
 			// Y AXIS FLAGGING
@@ -65,7 +72,7 @@ namespace Rubeus
 
 			for (int p = 0; p < m_CollisionGrid.m_YCount; p++)
 			{
-				m_YFlags[i] += ((p >= leftFlag) && (p < rightFlag)) ? "1" : "0";
+				m_YFlags[i].m_Data[p] = ((p >= leftFlag) && (p < rightFlag)) ? true : false;
 			}
 
 			// https://gamedev.stackexchange.com/questions/72030/using-uniform-grids-for-collision-detection-efficient-way-to-keep-track-of-wha
@@ -160,7 +167,7 @@ namespace Rubeus
 
 		void ACollisionEngine::respondToCollidedObjects(RGameObject * left, RGameObject * right)
 		{
-			float e = std::min(left->m_PhysicsObject->m_PhysicsMaterial.m_CoefficientOfRestitution, right->m_PhysicsObject->m_PhysicsMaterial.m_CoefficientOfRestitution);
+			float e = min(left->m_PhysicsObject->m_PhysicsMaterial.m_CoefficientOfRestitution, right->m_PhysicsObject->m_PhysicsMaterial.m_CoefficientOfRestitution);
 
 			if (e == 0.0f + FLOAT_APPROXIMATION)
 			{

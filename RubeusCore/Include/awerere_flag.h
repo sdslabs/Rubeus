@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include <vector>
+
 namespace Rubeus
 {
 	namespace Awerere
@@ -13,21 +15,20 @@ namespace Rubeus
 		/**
 		 * @class	AFlag
 		 *
-		 * @brief	Collision flag used in grid based resolution.
+		 * @brief	Array based collection of collision flag used in grid based resolution.
 		 */
 		class AFlag
 		{
 		private:
-			static int BufferSize;
-			int * m_Data;
 
 		public:
+			std::vector<bool> m_Data;
 
 			/**
 			 * @fn		AFlag(const int & bufferSize = 1)
 			 *
 			 * @brief	Constructor.
-			 * @warning	Set BufferSize by using AFlag::setBufferSize() to use inside Awerere.
+			 * @warning	Set BufferSize by using AFlag::SetBufferSize() to use inside Awerere.
 			 *
 			 * @param	bufferSize	Flags buffer size. Default value is BufferSize.
 									If BufferSize is not set before hand, then default is 1.
@@ -54,8 +55,7 @@ namespace Rubeus
 			 */
 			bool operator*(AFlag & right);
 
-			inline void setBufferSize(const int & bufferSize) { BufferSize = bufferSize; }
-			inline const int getBufferSize() const { return BufferSize; }
+			inline const size_t & getLength() const { return m_Data.size(); }
 		};
 	}
 }

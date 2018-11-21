@@ -10,26 +10,26 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		int AFlag::BufferSize = 1;
 
-		AFlag::AFlag(const int & bufferSize = BufferSize)
-			: m_Data(new int[BufferSize])
+		AFlag::AFlag(const int & bufferSize)
 		{
-			BufferSize = bufferSize;
+			for (int i = 0; i < bufferSize; i++)
+			{
+				m_Data.push_back(false);
+			}
 		}
 
 		AFlag::~AFlag()
 		{
-			delete[] m_Data;
 		}
 
 		bool AFlag::operator*(AFlag & other)
 		{
 			int accum = 0;
 
-			for (int i = 0; i < BufferSize; i++)
+			for (int i = 0; i < m_Data.size(); i++)
 			{
-				accum = accum + ((((*this)[i] == '1') ? 1 : 0) * (((other[i] == '1') ? 1 : 0)));
+				accum = accum + (this->m_Data[i] * other.m_Data[i]);
 			}
 
 			return accum;
