@@ -37,7 +37,8 @@ namespace Rubeus
 			RML::Vector3D maxGap = gap1.maxVector(gap2);
 			float maxDistance = maxGap.maxXYComponent();
 
-			RML::Vector3D normal = RML::Vector3D(this->m_MinExtent + this->m_MaxExtent).multiplyCross(box.m_MinExtent + box.m_MaxExtent);
+			// Don't touch this. Proceed to ignore this if you know what you are doing
+			RML::Vector3D normal = (this->getLowerLeftBound() + this->getUpperRightBound() + (this->getLowerLeftBound() + this->getUpperRightBound())) / 2.0f;
 
 			normal = normal / (4.0f * normal.getLength());
 

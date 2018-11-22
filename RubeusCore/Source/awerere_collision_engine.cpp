@@ -102,13 +102,32 @@ namespace Rubeus
 			if (cache.getIsIntersect() == true)
 			{
 				LOG("HIT");
-				// Collision detected!
-				left.m_PhysicsObject->m_Collider->addImpulse(right.m_PhysicsObject->m_Collider->getMomentum() * (1 / (left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Mass) * (right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Mass)));
-				right.m_PhysicsObject->m_Collider->addImpulse(left.m_PhysicsObject->m_Collider->getMomentum() * (1 / (left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Mass) * (right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Mass)));
+				// Record the relative coefficient of restitution
+				float e = min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution);
 
-				// Step 1 : Get collision normal along with penetration depth from the collided objects
+				// Store temporary variables
+				float m1 = left.m_PhysicsObject->m_PhysicsMaterial.m_Mass;
+				float m2 = right.m_PhysicsObject->m_PhysicsMaterial.m_Mass;
 
-				// Step 2 : https://gamedevelopment.tutsplus.com/tutorials/how-to-create-a-custom-2d-physics-engine-the-basics-and-impulse-resolution--gamedev-6331
+				float v1x = left.m_PhysicsObject->m_Collider->m_Momentum.x / m1;
+				float v2x = right.m_PhysicsObject->m_Collider->m_Momentum.x / m2;
+
+				float v1y = left.m_PhysicsObject->m_Collider->m_Momentum.y / m1;
+				float v2y = right.m_PhysicsObject->m_Collider->m_Momentum.y / m2;
+
+				// Calculate the final velocities
+				float v1xFinal = (m1 * v1x - m2 * v2x - e * m2 * (v1x - v2x)) / (m2 - m1 + 0.1f);
+				float v2xFinal = ((m1 * v1x - m2 * v2x - e * m1 * (v1x - v2x))) / (m2 - m1 + 0.1f);
+
+				float v1yFinal = v1y;
+				float v2yFinal = v2y;
+
+				// Set the final values in the objects
+				left.m_PhysicsObject->m_Collider->m_Momentum.x = m1 * v1xFinal;
+				left.m_PhysicsObject->m_Collider->m_Momentum.y = m1 * v1yFinal;
+
+				right.m_PhysicsObject->m_Collider->m_Momentum.x = m2 * v2xFinal;
+				right.m_PhysicsObject->m_Collider->m_Momentum.y = m2 * v2yFinal;
 
 				left.onHit(&left, &right, cache);
 			}
@@ -120,9 +139,9 @@ namespace Rubeus
 			{
 				// Collider types are as follows:
 				//
-				// SPHERE = 0x0001,       
-				// PLANE = 0x0010,		
-				// BOX = 0x0100,		
+				// SPHERE      = 0x0001,       
+				// PLANE       = 0x0010,		
+				// BOX         = 0x0100,		
 				// NO_COLLIDER = 0x1000
 
 				case 0x0001:

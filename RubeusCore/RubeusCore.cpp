@@ -18,7 +18,7 @@ int main()
 														 1280, 720,
 														 EWindowParameters::WINDOWED_MODE,
 														 EWindowParameters::NON_RESIZABLE_WINDOW,
-														 0);
+														 1);
 
 	RSymphony * symphony = new RSymphony();
 	symphony->addMusicTrack(1);
@@ -42,8 +42,7 @@ int main()
 
 	std::vector<RGameObject *> gameObjects;
 
-	RGameObject * object1 = new RGameObject(4.0f, 9.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(4.0f, 9.0f, 1), RML::Vector3D(3.0f, 6.0f, 1)), true, APhysicsMaterial::DefaultMaterial);
-
+	RGameObject * object1 = new RGameObject(2.0f, 9.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(2.0f, 9.0f, 1), RML::Vector3D(5.0f, 12.0f, 1)), true, APhysicsMaterial::DefaultMaterial);
 	float a = 1234;
 
 	RGameObject object2(0, 3.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(0.0f, 3.0f, 1), RML::Vector3D(3, 6, 1)), true, APhysicsMaterial::DefaultMaterial);
@@ -74,8 +73,8 @@ int main()
 
 	APhysicsEngine awerere(*GameWindow, world, GameWindow->getHeight() / 9, GameWindow->getWidth() / 16);
 
-	object1->m_PhysicsObject->m_PhysicsMaterial.m_Gravity = RML::Vector2D();
-	object2.m_PhysicsObject->m_PhysicsMaterial.m_Gravity = RML::Vector2D();
+	object1->m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Gravity = RML::Vector2D(0.0f, -0.1f);
+	object2.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Gravity = RML::Vector2D();
 
 	// See if maps are slowing things down. Also have a performance check
 	while (!GameWindow->closed())
@@ -88,11 +87,6 @@ int main()
 		// Miscellaneous testing stuff
 		shader0->enableShader();
 		shader0->setUniform2f("light_position", Vector2D(GameWindow->m_X * 16.0f / 1280.0f, (720.0f - GameWindow->m_Y) * 9.0f / 720.0f));
-
-		if (object2.m_PhysicsObject->m_Collider->getPosition().y <= 0)
-		{
-			object2.m_PhysicsObject->m_Collider->addImpulse(RML::Vector2D(0.0f, 10.0f));
-		}
 
 		// Physics engine update
 		awerere.update(1.0f / 60.0f);
