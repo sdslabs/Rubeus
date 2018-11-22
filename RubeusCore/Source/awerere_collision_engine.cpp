@@ -116,11 +116,22 @@ namespace Rubeus
 				float v2y = right.m_PhysicsObject->m_Collider->m_Momentum.y / m2;
 
 				// Calculate the final velocities
-				float v1xFinal = (m1 * v1x - m2 * v2x - e * m2 * (v1x - v2x)) / (m2 - m1 + 0.1f);
-				float v2xFinal = ((m1 * v1x - m2 * v2x - e * m1 * (v1x - v2x))) / (m2 - m1 + 0.1f);
+				float v1xFinal = 1.0f;
+				float v2xFinal = 1.0f;
 
 				float v1yFinal = v1y;
 				float v2yFinal = v2y;
+
+				if (m1 != m2)
+				{
+					v1xFinal = (m1 * v1x - m2 * v2x - e * m2 * (v1x - v2x)) / (m2 - m1);
+					v2xFinal = ((m1 * v1x - m2 * v2x - e * m1 * (v1x - v2x))) / (m2 - m1);
+				}
+				else
+				{
+					v1xFinal = v2x;
+					v2xFinal = v1x;
+				}
 
 				// Set the final values in the objects
 				left.m_PhysicsObject->m_Collider->m_Momentum.x = m1 * v1xFinal;
