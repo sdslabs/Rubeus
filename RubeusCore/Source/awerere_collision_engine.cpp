@@ -140,6 +140,7 @@ namespace Rubeus
 				right.m_PhysicsObject->m_Collider->m_Momentum.x = m2 * v2xFinal;
 				right.m_PhysicsObject->m_Collider->m_Momentum.y = m2 * v2yFinal;
 
+				// Call user-defined hit response
 				left.onHit(&left, &right, cache);
 			}
 		}

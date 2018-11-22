@@ -31,17 +31,17 @@ namespace Rubeus
 
 		ACollideData ABoxCollider::tryIntersect(ABoxCollider & box)
 		{
-			RML::Vector3D gap1 = box.getLowerLeftBound() - m_MaxExtent;
-			RML::Vector3D gap2 = m_MinExtent - box.getUpperRightBound();
-
-			RML::Vector3D maxGap = gap1.maxVector(gap2);
-			float maxDistance = maxGap.maxXYComponent();
-
-			// Don't touch this. Proceed to ignore this if you know what you are doing--------
-			RML::Vector3D normal = (this->getLowerLeftBound() + this->getUpperRightBound() + (this->getLowerLeftBound() + this->getUpperRightBound())) / 2.0f;
-			// -------------------------------------------------------------------------------
-
-			return ACollideData(maxDistance > 0, maxDistance, normal.getVector2D());
+			/**/ // Don't touch these. Proceed to ignore this if you know what you are doing--------
+			/**/		RML::Vector3D gap1 = box.getLowerLeftBound() - m_MaxExtent;
+			/**/		RML::Vector3D gap2 = m_MinExtent - box.getUpperRightBound();
+			/**/
+			/**/		RML::Vector3D maxGap = gap1.maxVector(gap2);
+			/**/		float maxDistance = maxGap.maxXYComponent();
+			/**/
+			/**/		RML::Vector3D normal = (this->getLowerLeftBound() + this->getUpperRightBound() + (this->getLowerLeftBound() + this->getUpperRightBound())) / 2.0f;
+			/**/
+			/**/		return ACollideData(maxDistance > 0, maxDistance, normal.getVector2D());
+			/**/ // --------------------------------------------------------------------------------
 		}
 
 		ACollideData ABoxCollider::tryIntersect(APlaneCollider & plane)
