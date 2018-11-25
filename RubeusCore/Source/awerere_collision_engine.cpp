@@ -122,19 +122,18 @@ namespace Rubeus
 				RML::Vector2D v2_parallel = normal * v2.multiplyDot(normal);
 				RML::Vector2D v2_perp = v2 - v2_parallel;
 
-				RML::Vector2D v1_perpFinal = v2_perp;
-				RML::Vector2D v2_perpFinal = v1_perp;
+				RML::Vector2D v1_perpFinal = v1_perp - v2_perp * m2 * mu * (1.0f / m1);
+				RML::Vector2D v2_perpFinal = v2_perp - v1_perp * m1 * mu * (1.0f / m2);
 
 				RML::Vector2D v1_parallelFinal;
 				RML::Vector2D v2_parallelFinal;
 
-				v1_parallelFinal = v1_parallel * -1.0f;
-
-				v2_parallelFinal = v2_parallel * -1.0f;
+				v1_parallelFinal = v2_parallel * m2 * (1.0f / m1) * e;
+				v2_parallelFinal = v1_parallel * m1 * (1.0f / m2) * e;
 
 				// Set the final values in the objects
-				left.m_PhysicsObject->m_Collider->m_Momentum = v1_parallelFinal + v1_perpFinal;
-				right.m_PhysicsObject->m_Collider->m_Momentum = v2_parallelFinal + v2_perpFinal;
+				left.m_PhysicsObject->m_Collider->m_Momentum = (v1_parallelFinal + v1_perpFinal) * m1;
+				right.m_PhysicsObject->m_Collider->m_Momentum = (v2_parallelFinal + v2_perpFinal) * m2;
 
 				// Call user-defined hit response
 				left.onHit(&left, &right, cache);

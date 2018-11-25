@@ -47,12 +47,29 @@ namespace Rubeus
 
 			RML::Vector3D maxGap = gap1.maxVector(gap2);
 			float maxDistance = maxGap.maxXYComponent();
+			float absDistance = 2;
 
-			RML::Vector3D normal;
-			normal.x = 0.0f;
-			normal.y = -1.0f;
+			RML::Vector2D normal(0.0f, 0.0f);
+			RML::Vector3D boxSize(RML::Vector3D(box.m_MinExtent - box.m_MaxExtent).abs());
 
-			return ACollideData(maxDistance < 0.0f, maxDistance, normal.getVector2D());
+			if (abs(box.getPosition().x - boxSize.x / 2.0f - m_MaxExtent.x) <= absDistance)
+			{
+				normal.x = 1.0f;
+			}
+			else if (abs(box.getPosition().y + boxSize.y / 2.0f - m_MinExtent.y) <= absDistance)
+			{
+				normal.y = -1.0f;
+			}
+			else if (abs(box.getPosition().y - boxSize.y / 2.0f - m_MaxExtent.y) <= absDistance)
+			{
+				normal.y = 1.0f;
+			}
+			else if (abs(box.getPosition().x + boxSize.x / 2.0f - m_MinExtent.x) <= absDistance)
+			{
+				normal.x = -1.0f;
+			}
+
+			return ACollideData(maxDistance < 0.0f, maxDistance, normal);
 		}
 
 		ACollideData ABoxCollider::tryIntersect(APlaneCollider & plane)
