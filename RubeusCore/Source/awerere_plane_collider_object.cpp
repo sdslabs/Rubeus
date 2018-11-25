@@ -23,6 +23,12 @@ namespace Rubeus
 		{
 		}
 
+		void APlaneCollider::selfUpdate(float deltaX, float deltaY)
+		{
+			m_EmergencePoint.x += deltaX;
+			m_EmergencePoint.y += deltaY;
+		}
+
 		ACollideData APlaneCollider::tryIntersect(APlaneCollider & plane)
 		{
 			RML::Vector3D pdt = m_Normal.multiplyCross(plane.m_Normal);

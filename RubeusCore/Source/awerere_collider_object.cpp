@@ -38,13 +38,18 @@ namespace Rubeus
 			m_Momentum.x += (m_Force.x * deltaTime) + (m_PhysicsMaterial.m_Gravity.x * deltaTime);
 			m_Momentum.y += (m_Force.y * deltaTime) + (m_PhysicsMaterial.m_Gravity.y * deltaTime);
 
-			m_Position.x += m_Momentum.x * deltaTime;
-			m_Position.y += m_Momentum.y * deltaTime;
+			float deltaX = m_Momentum.x * deltaTime;
+			float deltaY = m_Momentum.y * deltaTime;
+
+			m_Position.x += deltaX;
+			m_Position.y += deltaY;
 
 			// Update sprite with the same change in position to allow sprites having
 			// different dimensions than its collider.
-			m_Sprite->m_Position.x += m_Momentum.x * deltaTime;
-			m_Sprite->m_Position.y += m_Momentum.y * deltaTime;
+			m_Sprite->m_Position.x += deltaX;
+			m_Sprite->m_Position.y += deltaY;
+
+			selfUpdate(deltaX, deltaY);
 		}
 
 		void ACollider::addImpulse(RML::Vector2D & impulse)

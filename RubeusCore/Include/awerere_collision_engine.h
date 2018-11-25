@@ -109,8 +109,6 @@ namespace Rubeus
 			 */
 			ACollideData multiplexColliders(ACollider * left, const EColliderType & leftType, ACollider * right, const EColliderType & rightType);
 
-			void respondToCollidedObjects(RGameObject * left, RGameObject * right);
-
 			/**
 			 * @fn		inline void setWorld(std::vector<RGameObject *> gameObjects)
 			 *

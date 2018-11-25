@@ -118,6 +118,8 @@ namespace Rubeus
 
 			void update(const float & deltaTime);
 
+			virtual void selfUpdate(float deltaX, float deltaY) = 0;
+
 			/**
 			 * @fn		inline RML::Vector3D getPosition() const
 			 *

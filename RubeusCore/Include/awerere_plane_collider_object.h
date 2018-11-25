@@ -49,6 +49,8 @@ namespace Rubeus
 			 */
 			~APlaneCollider();
 
+			void selfUpdate(float deltaX, float deltaY) override;
+
 			/**
 			 * @fn		ACollideData tryIntersect(APlaneCollider & plane) override
 			 *

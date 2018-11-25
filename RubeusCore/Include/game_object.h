@@ -104,8 +104,6 @@ namespace Rubeus
 
 		void onHit(RGameObject * hammer, RGameObject * nail, Awerere::ACollideData & collisionData);
 
-		void syncSpriteWithCollider();
-
 		/**
 		 * @fn		inline void addToTickQueue()
 		 *

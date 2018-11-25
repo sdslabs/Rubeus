@@ -42,16 +42,14 @@ int main()
 
 	std::vector<RGameObject *> gameObjects;
 
-	RGameObject * object1 = new RGameObject(5.0f, 5.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(5.0f, 5.0f, 1), RML::Vector3D(8.0f, 8.0f, 1)), true, APhysicsMaterial::DefaultMaterial);
-	float a = 1234;
+	RGameObject * object1 = new RGameObject(0.0f, 4.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(0.0f, 4.0f, 1), RML::Vector3D(3.0f, 7.0f, 1)), true, APhysicsMaterial::DefaultMaterial);
 
-	RGameObject object2(0, 3.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(0.0f, 0.0f, 1), RML::Vector3D(3, 6, 1)), true, APhysicsMaterial::DefaultMaterial);
-	a++;
+	RGameObject * object2 = new RGameObject(0.0, 0.5f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(0.0f, 0.5f, 1), RML::Vector3D(3.0f, 3.5f, 1)), true, APhysicsMaterial::DefaultMaterial);
 
 	gameObjects.push_back(object1);
-	gameObjects.push_back(&object2);
+	gameObjects.push_back(object2);
 	g->add(object1);
-	g->add(&object2);
+	g->add(object2);
 	g->add(g2);
 	layer0->addGroup(*g);
 	layer0->addGroup(*g2);
@@ -74,13 +72,13 @@ int main()
 	APhysicsEngine awerere(*GameWindow, world, GameWindow->getHeight() / 9, GameWindow->getWidth() / 16);
 
 	object1->m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Gravity = RML::Vector2D(0.0f, 0.0f);
-	object2.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Gravity = RML::Vector2D(0.1f, 0.1f);
+	object2->m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Gravity = RML::Vector2D(0.1f, 0.1f);
 
 	// See if maps are slowing things down. Also have a performance check
 	while (!GameWindow->closed())
 	{
+		LOG(object1->m_PhysicsObject->m_Collider->tryIntersect(*(ABoxCollider *)object2->m_PhysicsObject->m_Collider).getIsIntersect());
 		// TODO: Message bus needs references to all systems here
-
 		// Clear Window buffer
 		GameWindow->clearWindow();
 
@@ -105,6 +103,7 @@ int main()
 	delete g;
 	delete g2;
 	delete object1;
+	delete object2;
 	delete layer0;
 	delete shader0;
 	delete symphony;

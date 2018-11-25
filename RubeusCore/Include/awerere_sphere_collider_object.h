@@ -40,6 +40,8 @@ namespace Rubeus
 			 */
 			ASphereCollider(RML::Vector3D & center, const float radius);
 
+			void selfUpdate(float deltaX, float deltaY) override;
+
 			/**
 			 * @fn		ACollideData tryIntersect(ASphereCollider & other) override
 			 *

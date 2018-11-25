@@ -75,11 +75,6 @@ namespace Rubeus
 	{
 	}
 
-	void RGameObject::syncSpriteWithCollider()
-	{
-		this->m_Sprite->m_Position = this->m_PhysicsObject->m_Collider->getPosition();
-	}
-
 	void RGameObject::onMessage(Message * msg)
 	{
 		switch (msg->m_Type)

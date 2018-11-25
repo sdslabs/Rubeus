@@ -61,6 +61,8 @@ namespace Rubeus
 			 */
 			~ABoxCollider();
 
+			void selfUpdate(float deltaX, float deltaY) override;
+
 			/**
 			 * @fn		ACollideData tryIntersect(ABoxCollider & box) override
 			 *

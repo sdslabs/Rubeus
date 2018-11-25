@@ -17,6 +17,12 @@ namespace Rubeus
 		{
 		}
 
+		void ASphereCollider::selfUpdate(float deltaX, float deltaY)
+		{
+			m_Center.x += deltaX;
+			m_Center.y += deltaY;
+		}
+
 		ACollideData ASphereCollider::tryIntersect(ASphereCollider & other)
 		{
 			float extTouchDistance = m_Radius + other.m_Radius;

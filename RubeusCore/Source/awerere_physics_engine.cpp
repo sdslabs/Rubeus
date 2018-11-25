@@ -13,7 +13,7 @@ namespace Rubeus
 	namespace Awerere
 	{
 		std::map<ACollider *, RML::Vector2D> APhysicsEngine::ImpulsesGeneratedPerImpulseCalculationFrame;
-		int APhysicsEngine::ImpulseCalculationFrames = 3;
+		int APhysicsEngine::ImpulseCalculationFrames = 1;
 		int APhysicsEngine::ImpulseFrames = 0;
 
 		void APhysicsEngine::updateState(const float & deltaTime)
