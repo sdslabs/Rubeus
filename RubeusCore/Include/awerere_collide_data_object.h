@@ -67,6 +67,8 @@ namespace Rubeus
 			 */
 			inline const float & getGap() const { return m_Gap; }
 
+			inline const RML::Vector2D & getCollisionNormal() const { return m_CollisionNormal; }
+
 		protected:
 		};
 	}

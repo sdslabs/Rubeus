@@ -84,8 +84,6 @@ namespace Rubeus
 			{
 				for (int j = i + 1; j < m_GameObjects.size(); j++)
 				{
-					static int x = 0;
-					x++;
 					if ((m_XFlags[i] * m_XFlags[j]) && (m_YFlags[i] * m_YFlags[j]))
 					{
 						narrowPhaseResolution(*m_GameObjects[i], *m_GameObjects[j]);
@@ -106,41 +104,41 @@ namespace Rubeus
 				LOG("HIT");
 				// Record the relative coefficient of restitution
 				float e = min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution);
+				float mu = min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction);
 
 				// Store temporary variables
 				float m1 = left.m_PhysicsObject->m_PhysicsMaterial.m_Mass;
 				float m2 = right.m_PhysicsObject->m_PhysicsMaterial.m_Mass;
 
-				float v1x = left.m_PhysicsObject->m_Collider->m_Momentum.x / m1;
-				float v2x = right.m_PhysicsObject->m_Collider->m_Momentum.x / m2;
+				RML::Vector2D normal = cache.getCollisionNormal();
+				normal.toUnitVector();
 
-				float v1y = left.m_PhysicsObject->m_Collider->m_Momentum.y / m1;
-				float v2y = right.m_PhysicsObject->m_Collider->m_Momentum.y / m2;
+				RML::Vector2D v1 = left.m_PhysicsObject->m_Collider->m_Momentum * (1.0f / m1);
+				RML::Vector2D v2 = right.m_PhysicsObject->m_Collider->m_Momentum * (1.0f / m2);
 
-				// Calculate the final velocities
-				float v1xFinal = 1.0f;
-				float v2xFinal = 1.0f;
+				RML::Vector2D v1_perp = normal * v1.multiplyDot(normal);
+				RML::Vector2D v1_parallel = v1 - v1_perp;
 
-				float v1yFinal = v1y;
-				float v2yFinal = v2y;
+				RML::Vector2D v2_perp = normal * v2.multiplyDot(normal);
+				RML::Vector2D v2_parallel = v2 - v2_perp;
+
+				RML::Vector2D v1_perpFinal;
+				RML::Vector2D v2_perpFinal;
 
 				if (m1 != m2)
 				{
-					v1xFinal = (m1 * v1x - m2 * v2x - e * m2 * (v1x - v2x)) / (m2 - m1);
-					v2xFinal = ((m1 * v1x - m2 * v2x - e * m1 * (v1x - v2x))) / (m2 - m1);
+					v1_perpFinal = (v1_perp * m1 - v2_perp * m2 - (v1_perp - v2_perp) * e * m2) * (1.0f / (m2 - m1));
+					v2_perpFinal = (v1_perp * m1 - v2_perp * m2 - (v1_perp - v2_perp) * e * m1) * (1.0f / (m2 - m1));
+
 				}
 				else
 				{
-					v1xFinal = v2x;
-					v2xFinal = v1x;
+					v1_perpFinal = v2_perp * e;
+					v2_perpFinal = v1_perp * e;
 				}
 
 				// Set the final values in the objects
-				left.m_PhysicsObject->m_Collider->m_Momentum.x = m1 * v1xFinal;
-				left.m_PhysicsObject->m_Collider->m_Momentum.y = m1 * v1yFinal;
 
-				right.m_PhysicsObject->m_Collider->m_Momentum.x = m2 * v2xFinal;
-				right.m_PhysicsObject->m_Collider->m_Momentum.y = m2 * v2yFinal;
 
 				// Call user-defined hit response
 				left.onHit(&left, &right, cache);

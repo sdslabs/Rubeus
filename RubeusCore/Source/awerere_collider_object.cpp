@@ -41,6 +41,7 @@ namespace Rubeus
 			float deltaX = m_Momentum.x * deltaTime;
 			float deltaY = m_Momentum.y * deltaTime;
 
+			// Update the collider position
 			m_Position.x += deltaX;
 			m_Position.y += deltaY;
 
@@ -49,6 +50,7 @@ namespace Rubeus
 			m_Sprite->m_Position.x += deltaX;
 			m_Sprite->m_Position.y += deltaY;
 
+			// Update collider shape specific properties
 			selfUpdate(deltaX, deltaY);
 		}
 

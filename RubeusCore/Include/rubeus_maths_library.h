@@ -85,7 +85,7 @@ namespace RML
 		Vector2D& add(const Vector2D &other);
 
 		/**
-			* @fn	Vector2D& subtract(const Vector2D &other);
+			* @fn	Vector2D subtract(const Vector2D &other);
 			*
 			* @brief	Subtracts the given other
 			*
@@ -93,7 +93,7 @@ namespace RML
 			*
 			* @return	A reference to a Vector2D.
 			*/
-		Vector2D& subtract(const Vector2D &other);
+		Vector2D subtract(const Vector2D &other);
 
 		/**
 			* @fn	Vector2D& multiply(const Vector2D &other);
@@ -171,9 +171,9 @@ namespace RML
 			*/
 		friend Vector2D& operator*(Vector2D left, const Vector2D &right);
 
-		friend float operator*(Vector2D & left, const Vector2D & right);
+		friend Vector2D& operator*(Vector2D left, const float &right);
 
-		friend Vector2D& operator*(Vector2D & vector, const float & other);
+		friend float operator*(Vector2D & left, const Vector2D & right);
 
 		/**
 			* @fn	Vector2D& operator/(Vector2D left, const Vector2D &right);

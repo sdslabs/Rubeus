@@ -34,7 +34,7 @@ namespace RML
 
 	Vector2D Vector2D::toUnitVector()
 	{
-		return this->multiplyFloat(this->getLength());
+		return this->multiplyFloat(1.0f / this->getLength());
 	}
 
 	Vector2D & Vector2D::add(const Vector2D & other)
@@ -45,7 +45,7 @@ namespace RML
 		return *this;
 	}
 
-	Vector2D & Vector2D::subtract(const Vector2D & other)
+	Vector2D Vector2D::subtract(const Vector2D & other)
 	{
 		x -= other.x;
 		y -= other.y;
@@ -133,14 +133,14 @@ namespace RML
 		return left.multiply(right);
 	}
 
+	Vector2D & operator*(Vector2D left, const float & right)
+	{
+		return left.multiplyFloat(right);
+	}
+
 	float operator*(Vector2D & left, const Vector2D & right)
 	{
 		return left.multiplyDot(right);
-	}
-
-	Vector2D & operator*(Vector2D & vector, const float & other)
-	{
-		return vector.multiplyFloat(other);
 	}
 
 	Vector2D & operator/(Vector2D left, const Vector2D &right)
