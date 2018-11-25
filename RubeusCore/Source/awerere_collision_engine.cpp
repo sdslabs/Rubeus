@@ -116,29 +116,25 @@ namespace Rubeus
 				RML::Vector2D v1 = left.m_PhysicsObject->m_Collider->m_Momentum * (1.0f / m1);
 				RML::Vector2D v2 = right.m_PhysicsObject->m_Collider->m_Momentum * (1.0f / m2);
 
-				RML::Vector2D v1_perp = normal * v1.multiplyDot(normal);
-				RML::Vector2D v1_parallel = v1 - v1_perp;
+				RML::Vector2D v1_parallel = normal * v1.multiplyDot(normal);
+				RML::Vector2D v1_perp = v1 - v1_parallel;
 
-				RML::Vector2D v2_perp = normal * v2.multiplyDot(normal);
-				RML::Vector2D v2_parallel = v2 - v2_perp;
+				RML::Vector2D v2_parallel = normal * v2.multiplyDot(normal);
+				RML::Vector2D v2_perp = v2 - v2_parallel;
 
-				RML::Vector2D v1_perpFinal;
-				RML::Vector2D v2_perpFinal;
+				RML::Vector2D v1_perpFinal = v2_perp;
+				RML::Vector2D v2_perpFinal = v1_perp;
 
-				if (m1 != m2)
-				{
-					v1_perpFinal = (v1_perp * m1 - v2_perp * m2 - (v1_perp - v2_perp) * e * m2) * (1.0f / (m2 - m1));
-					v2_perpFinal = (v1_perp * m1 - v2_perp * m2 - (v1_perp - v2_perp) * e * m1) * (1.0f / (m2 - m1));
+				RML::Vector2D v1_parallelFinal;
+				RML::Vector2D v2_parallelFinal;
 
-				}
-				else
-				{
-					v1_perpFinal = v2_perp * e;
-					v2_perpFinal = v1_perp * e;
-				}
+				v1_parallelFinal = v1_parallel * -1.0f;
+
+				v2_parallelFinal = v2_parallel * -1.0f;
 
 				// Set the final values in the objects
-
+				left.m_PhysicsObject->m_Collider->m_Momentum = v1_parallelFinal + v1_perpFinal;
+				right.m_PhysicsObject->m_Collider->m_Momentum = v2_parallelFinal + v2_perpFinal;
 
 				// Call user-defined hit response
 				left.onHit(&left, &right, cache);

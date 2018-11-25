@@ -48,7 +48,9 @@ namespace Rubeus
 			RML::Vector3D maxGap = gap1.maxVector(gap2);
 			float maxDistance = maxGap.maxXYComponent();
 
-			RML::Vector3D normal = this->getPosition() - box.getPosition();
+			RML::Vector3D normal;
+			normal.x = 0.0f;
+			normal.y = -1.0f;
 
 			return ACollideData(maxDistance < 0.0f, maxDistance, normal.getVector2D());
 		}
