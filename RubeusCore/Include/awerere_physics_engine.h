@@ -39,9 +39,13 @@ namespace Rubeus
 			/** @brief	Array of collision Yflags assigned to each gameobject */
 			std::vector<std::string> m_YFlags;
 
+			/** @brief	The container for all impulses added during a frame render */
 			static std::map<ACollider *, RML::Vector2D> ImpulsesGeneratedPerImpulseCalculationFrame;
+
+			/** @brief	The max amount of frames the impulse is added */
 			static int ImpulseCalculationFrames;
 
+			/** @brief	Number of frames the impulse have been added */
 			static int ImpulseFrames;
 
 			/**
@@ -90,6 +94,11 @@ namespace Rubeus
 			 */
 			void update(const float deltaTime);
 
+			/**
+			 * @fn		void stopImpulses()
+			 *
+			 * @brief	Stops adding impulses and reverts those been added already to the scene
+			 */
 			void stopImpulses();
 
 			/**

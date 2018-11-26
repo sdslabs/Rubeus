@@ -69,8 +69,22 @@ namespace RML
 			*/
 		float getLength(Vector2D& vector) const;
 
+		/**
+			* @fn	float getLength() const;
+			*
+			* @brief	Gets length of this vector
+			*
+			* @return	The length.
+			*/
 		float getLength() const;
 
+		/**
+			* @fn	Vector2D toUnitVector();
+			*
+			* @brief	Convert this to a unit vector
+			*
+			* @return	The normalised vector.
+			*/
 		Vector2D toUnitVector();
 
 		/**
@@ -106,8 +120,26 @@ namespace RML
 			*/
 		Vector2D& multiply(const Vector2D &other);
 
+		/**
+			* @fn	float multiplyDot(const Vector2D &other)
+			*
+			* @brief	Multiplies the given other vector (Dot product)
+			*
+			* @param	other	The other.
+			*
+			* @return	A dot product result.
+			*/
 		float multiplyDot(const Vector2D &other);
 
+		/**
+			* @fn	Vector2D& multiplyFloat(const float &other)
+			*
+			* @brief	Scale all values of this vector by a float
+			*
+			* @param	other	The other.
+			*
+			* @return	Scaled version of this vector.
+			*/
 		Vector2D& multiplyFloat(const float &other);
 
 		/**
@@ -171,8 +203,28 @@ namespace RML
 			*/
 		friend Vector2D& operator*(Vector2D left, const Vector2D &right);
 
+		/**
+			* @fn	Vector2D& operator*(Vector2D left, const float &right);
+			*
+			* @brief	Float multiplication operator
+			*
+			* @param	left	The left operand.
+			* @param	right	The right operand.
+			*
+			* @return	The result of the operation.
+			*/
 		friend Vector2D& operator*(Vector2D left, const float &right);
 
+		/**
+			* @fn	Vector2D& operator*(Vector2D left, const Vector2D &right);
+			*
+			* @brief	Dot multiplication operator
+			*
+			* @param	left	The left operand.
+			* @param	right	The right operand.
+			*
+			* @return	The result of the dot operation.
+			*/
 		friend float operator*(Vector2D & left, const Vector2D & right);
 
 		/**
@@ -299,8 +351,22 @@ namespace RML
 			*/
 		float getLength(Vector3D& vector) const;
 
+		/**
+			* @fn	float getLength() const;
+			*
+			* @brief	Gets length of this vector
+			*
+			* @return	The length.
+			*/
 		float getLength() const;
 
+		/**
+			* @fn	Vector2D getVector2D()
+			*
+			* @brief	Return a Vector2D containing the x and y values from this Vector3D respectively
+			*
+			* @return	The length.
+			*/
 		Vector2D getVector2D();
 
 		/**
@@ -336,10 +402,37 @@ namespace RML
 			*/
 		Vector3D& multiply(const Vector3D &other);
 
+		/**
+			* @fn	float multiplyDot(const Vector3D &other);
+			*
+			* @brief	Multiplies the given other (Dot product).
+			*
+			* @param	other	The other.
+			*
+			* @return	A result of the operation.
+			*/
 		float multiplyDot(const Vector3D &other);
 
+		/**
+			* @fn	Vector3D& multiplyCross(const Vector3D &other);
+			*
+			* @brief	Multiplies the given other (Cross product).
+			*
+			* @param	other	The other.
+			*
+			* @return	A result of the operation.
+			*/
 		Vector3D& multiplyCross(const Vector3D &other);
 
+		/**
+			* @fn	Vector3D& multiplyFloat(const float &other);
+			*
+			* @brief	Multiplies the given float with this (Scaling).
+			*
+			* @param	other	The other.
+			*
+			* @return	A result of the operation.
+			*/
 		Vector3D& multiplyFloat(const float &other);
 
 		/**
@@ -354,14 +447,52 @@ namespace RML
 			*/
 		Vector3D& divide(const Vector3D &other);
 
+		/**
+			* @fn	Vector3D maxVector(const Vector3D &other);
+			*
+			* @brief	Returns a Vector3D with only the maximum coordinates on each axes
+					as compared to the given other.
+			*
+			* @param	other	The other.
+			*
+			* @return	A reference to a Vector3D.
+			*/
 		Vector3D maxVector(const Vector3D &other);
 
+		/**
+			* @fn	float maxComponent()
+			*
+			* @brief	Return the maximum coordinate across all axes
+			*
+			* @return	The maximum coordinate.
+			*/
 		float maxComponent();
 
+		/**
+			* @fn	float maxComponent()
+			*
+			* @brief	Return the maximum coordinate across X and Y axes
+			*
+			* @return	The maximum coordinate.
+			*/
 		float maxXYComponent();
 
+		/**
+			* @fn	Vector3D & toUnitVector()
+			*
+			* @brief	Convert this vector to a unit vector
+			*
+			* @return	The unit vector.
+			*/
 		Vector3D & toUnitVector();
 
+		/**
+			* @fn	Vector3D & abs()
+			*
+			* @brief	Take modulus of all coordinates
+			*
+			* @return	The abs vector.
+			*/
 		Vector3D & abs();
 
 		/**
@@ -412,8 +543,18 @@ namespace RML
 			*/
 		friend Vector3D& operator*(Vector3D left, const Vector3D &right);
 
-		// TODO: Add docs
+		/**
+			* @fn	friend Vector3D& operator*(const Vector3D vector, const float &other)
+			*
+			* @brief	Float multiplication operator. (Scaling)
+			*
+			* @param	left	The left operand.
+			* @param	right	The right operand.
+			*
+			* @return	The result of the operation.
+			*/
 		friend Vector3D& operator*(const Vector3D vector, const float &other);
+
 		/**
 			* @fn	Vector3D& operator/(Vector3D left, const Vector3D &right);
 			*
@@ -426,7 +567,16 @@ namespace RML
 			*/
 		friend Vector3D& operator/(Vector3D left, const Vector3D &right);
 
-		// TODO: Add docs
+		/**
+			* @fn	Vector3D& operator/(Vector3D left, const float &right);
+			*
+			* @brief	Float division operator. (Down scaling)
+			*
+			* @param	left	The left operand.
+			* @param	right	The right operand.
+			*
+			* @return	The result of the operation.
+			*/
 		friend Vector3D& operator/(const Vector3D vector, const float &other);
 
 		/**
@@ -440,7 +590,15 @@ namespace RML
 			*/
 		bool operator==(const Vector3D &other);
 
-		// TODO: Add docs
+		/**
+			* @fn	bool operator==(const Vector3D &other);
+			*
+			* @brief	Int equality operator
+			*
+			* @param	other	The other.
+			*
+			* @return	True if the all parameters are equal to other.
+			*/
 		bool operator==(const int other);
 
 		/**

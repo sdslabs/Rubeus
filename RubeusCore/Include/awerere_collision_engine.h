@@ -75,6 +75,13 @@ namespace Rubeus
 			 */
 			void updateAndAssignFlags(const float & deltaTime);
 
+			/**
+			 * @fn		void checkCollisions(const int & i)
+			 *
+			 * @brief	A helper function to check collision from the a particular index in the world object array
+			 *
+			 * @param	i	The gameobject index.
+			 */
 			void checkCollisions(const int & i);
 
 			/**

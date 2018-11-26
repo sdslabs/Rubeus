@@ -61,6 +61,15 @@ namespace Rubeus
 			 */
 			~ABoxCollider();
 
+			/**
+			 * @fn		void selfUpdate(float deltaX, float deltaY) override
+			 *
+			 * @brief	Update the type specific paramaters of this collider
+			 * @warning	Used only inside Awerere
+			 *
+			 * @param	deltaX	Change in X position.
+			 * @param	deltaY	Change in Y position.
+			 */
 			void selfUpdate(float deltaX, float deltaY) override;
 
 			/**

@@ -40,6 +40,14 @@ namespace Rubeus
 			 */
 			ASphereCollider(RML::Vector3D & center, const float radius);
 
+			/**
+			 * @fn		void selfUpdate(float deltaX, float deltaY) override
+			 *
+			 * @brief	Update the center with the parameters passed in
+			 *
+			 * @param	deltaX	The change in X position.
+			 * @param	deltaY	The change in Y position.
+			 */
 			void selfUpdate(float deltaX, float deltaY) override;
 
 			/**

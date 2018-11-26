@@ -44,10 +44,11 @@ namespace Rubeus
 		/** @brief	Whether this gameobject obeys physics */
 		bool m_HasPhysics = false;
 
+		/** @brief	Whether this gameobject generates hit events */
 		bool m_GeneratesHit = false;
 
 		/**
-		 * @fn		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL, bool generatesHit = false, const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial())
+		 * @fn		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, const Awerere::EColliderType & type = Awerere::EColliderType::NO_COLLIDER, Awerere::ACollider * collider = NULL, bool generatesHit = false, const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial())
 		 *
 		 * @brief	Constructor. Uses images as textures.
 		 * @warning	All pointers passed in will be owned by the game object.
@@ -59,10 +60,10 @@ namespace Rubeus
 		 * @param	deltaX			Vertical span of the object.
 		 * @param	imageFilePath		Path to the image to be used as texture.
 		 * @param	enablePhysics		Whether the object obeys physics. Default is false.
-		 * @param	physicsObject		Physics object to be used for collision detection. Default is NULL. Use only when
-									physics has been enabled.
+		 * @param	type				Collider type to be assigned to this gameobject. Defaults to NO_COLLIDER
+		 * @param	collider			The collider object to be used. Defaults to NULL.
 		 * @param	generatesHit		Whether the object generates hit events. Default is false.
-		 * @param	physicsMat		Provide a physics material to be used to respond to hit events. Default is
+		 * @param	physicsMat		Provide a physics material to be used to respond to hit events. Defaults to DefaultPhysicsMat.
 		 */
 		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, const Awerere::EColliderType & type = Awerere::EColliderType::NO_COLLIDER, Awerere::ACollider * collider = NULL, bool generatesHit = false, const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial());
 
@@ -81,8 +82,9 @@ namespace Rubeus
 		 * @param	g				Green channel value.
 		 * @param	b				Blue channel value
 		 * @param	enablePhysics		Whether the object obeys physics. Default is false.
-		 * @param	physicsObject		Physics object to be used for collision detection. Default is NULL. Use only when
-									physics has been enabled.
+		 * @param	material			Provide a physics material to be used to respond to hit events. Defaults to DefaultPhysicsMat.
+		 * @param	type				Collider type to be assigned to this gameobject. Defaults to NO_COLLIDER.
+		 * @param	collider			The collider object to be used. Defaults to NULL.
 		 * @param	generatesHit		Whether the object generates hit events. Default is false.
 		 */
 		RGameObject(float x, float y, float deltaX, float deltaY, float & r, float & g, float & b, bool enablePhysics = false, const Awerere::APhysicsMaterial & material = Awerere::APhysicsMaterial(), const Awerere::EColliderType & type = Awerere::EColliderType::NO_COLLIDER, Awerere::ACollider * collider = NULL, bool generatesHit = false);
@@ -102,6 +104,15 @@ namespace Rubeus
 		 */
 		void tick() override;
 
+		/**
+		 * @fn		void onHit(RGameObject * hammer, RGameObject * nail, Awerere::ACollideData & collisionData)
+		 *
+		 * @brief	User defined function called whenever a hit event is generated
+		 *
+		 * @param	hammer			The hitting object.
+		 * @param	nail				The object getting hit
+		 * @param	collisionData		Details of the collision
+		 */
 		void onHit(RGameObject * hammer, RGameObject * nail, Awerere::ACollideData & collisionData);
 
 		/**
@@ -111,6 +122,15 @@ namespace Rubeus
 		 */
 		inline void addToTickQueue() { m_ThisTicks = true; }
 
+		/**
+		 * @fn		void onMessage(Message * msg)
+		 *
+		 * @brief	Handles message sent by Message system
+		 * @warning	Async invokation only
+		 *
+		 * @param	msg	The message data.
+		 *
+		 */
 		void onMessage(Message * msg) override;
 
 		friend class ACollisionEngine;

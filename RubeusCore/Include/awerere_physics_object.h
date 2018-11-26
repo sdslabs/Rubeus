@@ -33,6 +33,7 @@ namespace Rubeus
 			/** @brief	Whether physics should be enabled for a game object */
 			bool m_EnablePhysics = false;
 
+			/** @brief	The sprite linked to this physicsobject */
 			GraphicComponents::RSprite * m_Sprite;
 
 			/**

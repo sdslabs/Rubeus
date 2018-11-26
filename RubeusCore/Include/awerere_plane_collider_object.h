@@ -49,6 +49,14 @@ namespace Rubeus
 			 */
 			~APlaneCollider();
 
+			/**
+			 * @fn		void selfUpdate(float deltaX, float deltaY) override
+			 *
+			 * @brief	Update the emergencePoint with the parameters passed in
+			 *
+			 * @param	deltaX	The change in X position.
+			 * @param	deltaY	The change in Y position.
+			 */
 			void selfUpdate(float deltaX, float deltaY) override;
 
 			/**
