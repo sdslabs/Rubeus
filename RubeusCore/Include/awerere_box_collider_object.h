@@ -45,14 +45,14 @@ namespace Rubeus
 
 		public:
 			/**
-			 * @fn		ABoxCollider(RML::Vector3D & minExtent, RML::Vector3D & maxExtent)
+			 * @fn		ABoxCollider(RML::Vector3D & minExtent, const RML::Vector3D & maxExtent)
 			 *
 			 * @brief	Contructor
 			 *
 			 * @param	minExtent	The lower left point of the box.
 			 * @param	maxExtent	The upper right point of the box.
 			 */
-			ABoxCollider(const RML::Vector3D & minExtent, const RML::Vector3D & maxExtent);
+			ABoxCollider(RML::Vector3D & minExtent, const RML::Vector3D & maxExtent);
 
 			/**
 			 * @fn		~ABoxCollider()
@@ -60,6 +60,17 @@ namespace Rubeus
 			 * @brief	Destructor
 			 */
 			~ABoxCollider();
+
+			/**
+			 * @fn		void selfUpdate(float deltaX, float deltaY) override
+			 *
+			 * @brief	Update the type specific paramaters of this collider
+			 * @warning	Used only inside Awerere
+			 *
+			 * @param	deltaX	Change in X position.
+			 * @param	deltaY	Change in Y position.
+			 */
+			void selfUpdate(float deltaX, float deltaY) override;
 
 			/**
 			 * @fn		ACollideData tryIntersect(ABoxCollider & box) override

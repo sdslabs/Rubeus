@@ -18,15 +18,15 @@ int main()
 														 1280, 720,
 														 EWindowParameters::WINDOWED_MODE,
 														 EWindowParameters::NON_RESIZABLE_WINDOW,
-														 0);
+														 1);
 
-	RSymphony * audio_manager = new RSymphony();
-	audio_manager->addMusicTrack(1);
-	audio_manager->addSoundTrack(1);
-	audio_manager->loadTrack(AudioComponents::MUSIC_TRACK, AudioComponents::TRACK_0, "Assets/Garage.wav", 10, true);
-	audio_manager->loadTrack(AudioComponents::SOUND_TRACK, AudioComponents::TRACK_0, "Assets/sound.wav", 10);
-	audio_manager->playTrack(AudioComponents::MUSIC_TRACK, AudioComponents::TRACK_0);
-	audio_manager->playTrack(AudioComponents::SOUND_TRACK, AudioComponents::TRACK_0);
+	RSymphony * symphony = new RSymphony();
+	symphony->addMusicTrack(1);
+	symphony->addSoundTrack(1);
+	symphony->loadTrack(AudioComponents::MUSIC_TRACK, AudioComponents::TRACK_0, "Assets/Garage.wav", 10, true);
+	symphony->loadTrack(AudioComponents::SOUND_TRACK, AudioComponents::TRACK_0, "Assets/sound.wav", 10);
+	symphony->playTrack(AudioComponents::MUSIC_TRACK, AudioComponents::TRACK_0);
+	symphony->playTrack(AudioComponents::SOUND_TRACK, AudioComponents::TRACK_0);
 
 	RShaderComponent * shader0 = new RShaderComponent("Shaders/basic.vert", "Shaders/basic.frag");
 
@@ -42,24 +42,9 @@ int main()
 
 	std::vector<RGameObject *> gameObjects;
 
-	RGameObject * object1 = new RGameObject(13.0f, 2.0f, 3.0f, 3.0f,
-											"Assets/debug.png",
-											true,
-											new APhysicsObject(mat,
-															   true,
-															   EColliderType::BOX,
-															   new ABoxCollider(RML::Vector3D(13.0f, 2.0f, 1.0f),
-																				RML::Vector3D(16.0f, 5.0f, 1.0f))));
+	RGameObject * object1 = new RGameObject(0.0f, 0.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(0.0f, 0.0f, 1), RML::Vector3D(3.0f, 3.0f, 1)), true, APhysicsMaterial::DefaultMaterial);
 
-	RGameObject * object2 = new RGameObject(14.0f, 3.0f, 3.0f, 3.0f,
-											"Assets/debug.png",
-											true,
-											new APhysicsObject(mat,
-															   true,
-															   EColliderType::BOX,
-															   new ABoxCollider(RML::Vector3D(14.0f, 3.0f, 1.0f),
-																				RML::Vector3D(17.0f, 6.0f, 1.0f))));
-
+	RGameObject * object2 = new RGameObject(0.0, 6.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(0.0f, 6.0f, 1), RML::Vector3D(3.0f, 9.0f, 1)), true, APhysicsMaterial::DefaultMaterial);
 
 	gameObjects.push_back(object1);
 	gameObjects.push_back(object2);
@@ -82,21 +67,34 @@ int main()
 
 	LOG(box.tryIntersect(sphere).getGap());
 
-	APhysicsEngine physicsEngine(*GameWindow, gameObjects, GameWindow->getHeight() / 9, GameWindow->getWidth() / 16);
+	RWorld world(gameObjects);
+
+	APhysicsEngine awerere(*GameWindow, world, GameWindow->getHeight() / 9, GameWindow->getWidth() / 16);
+
+	object1->m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Gravity = RML::Vector2D(0.0f, 0.0f);
+	object2->m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Gravity = RML::Vector2D(0.0f, -1.0f);
 
 	// See if maps are slowing things down. Also have a performance check
 	while (!GameWindow->closed())
 	{
 		// TODO: Message bus needs references to all systems here
+		// Clear Window buffer
 		GameWindow->clearWindow();
 
+		// Miscellaneous testing stuff
 		shader0->enableShader();
 		shader0->setUniform2f("light_position", Vector2D(GameWindow->m_X * 16.0f / 1280.0f, (720.0f - GameWindow->m_Y) * 9.0f / 720.0f));
 
-		physicsEngine.update(1);
+		// Physics engine update
+		awerere.update(1.0f / 60.0f);
+
+		// Render update
 		layer0->draw();
 
+		// Window buffer update
 		GameWindow->updateWindow();
+
+		// Frame counter update
 		timer->evaluateFrames();
 	}
 
@@ -107,7 +105,7 @@ int main()
 	delete object2;
 	delete layer0;
 	delete shader0;
-	delete audio_manager;
+	delete symphony;
 	delete GameWindow;
 
 	return 0;

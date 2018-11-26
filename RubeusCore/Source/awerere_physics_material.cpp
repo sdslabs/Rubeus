@@ -10,10 +10,12 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
+		const APhysicsMaterial APhysicsMaterial::DefaultMaterial;
+
 		APhysicsMaterial::APhysicsMaterial()
 		{
 			makeMaterial(DEFAULT_MASS,
-						 DEFAULT_GRAVITY,
+						 RML::Vector2D(0.0f, DEFAULT_GRAVITY),
 						 DEFAULT_FRICTION,
 						 DEFAULT_RESTITUTION);
 		}
@@ -22,7 +24,7 @@ namespace Rubeus
 		{
 		}
 
-		void APhysicsMaterial::makeMaterial(float mass, float gravity, float friction, float restitution)
+		void APhysicsMaterial::makeMaterial(const float & mass, RML::Vector2D & gravity, const float & friction, const float & restitution)
 		{
 			m_Mass = mass;
 			m_Gravity = gravity;

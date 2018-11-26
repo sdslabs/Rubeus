@@ -14,6 +14,8 @@
 
 namespace Rubeus
 {
+	constexpr float FLOAT_APPROXIMATION = 0.00001f;
+
 	class RGameObject;
 
 	namespace Awerere
@@ -38,9 +40,6 @@ namespace Rubeus
 
 			/** @brief	Array of grid unit flags across Y axis for each game object */
 			std::vector<AFlag> m_YFlags;
-
-			/** @brief	List of hit events generated after collision detection has finished */
-			AHitEventList m_CollisionEvents;
 
 			friend class APhysicsEngine;
 
@@ -67,12 +66,23 @@ namespace Rubeus
 			~ACollisionEngine();
 
 			/**
-			 * @fn		void assignFlags()
+			 * @fn		void updateAndAssignFlags(const float & deltaTime)
 			 *
 			 * @brief	Assign grid flags for each game object
 			 * @warning	Uses a 2D grid
+			 *
+			 * @param	The timestep for the update
 			 */
-			void assignFlags();
+			void updateAndAssignFlags(const float & deltaTime);
+
+			/**
+			 * @fn		void checkCollisions(const int & i)
+			 *
+			 * @brief	A helper function to check collision from the a particular index in the world object array
+			 *
+			 * @param	i	The gameobject index.
+			 */
+			void checkCollisions(const int & i);
 
 			/**
 			 * @fn		void collisionResolution()
@@ -107,7 +117,7 @@ namespace Rubeus
 			ACollideData multiplexColliders(ACollider * left, const EColliderType & leftType, ACollider * right, const EColliderType & rightType);
 
 			/**
-			 * @fn		inline void setGameObjectArray(std::vector<RGameObject *> gameObjects)
+			 * @fn		inline void setWorld(std::vector<RGameObject *> gameObjects)
 			 *
 			 * @brief	Set the game object array for use in collision deteciton (if not already sent through the collision engine contructor)
 			 *

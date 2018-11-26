@@ -20,6 +20,14 @@ namespace Rubeus
 		class RSprite : public RRenderableObject
 		{
 		private:
+			/** @brief	Link to position of the parent Renderable object */
+			RML::Vector3D * _m_Position;
+
+			/** @brief	Link to size of the parent Renderable object */
+			RML::Vector2D * _m_Size;
+
+			/** @brief	Link to color of the parent Renderable object */
+			RML::Vector4D * _m_Color;
 
 		public:
 			/**
@@ -37,7 +45,7 @@ namespace Rubeus
 			virtual ~RSprite();
 
 			/**
-			 * @fn		RSprite::RSprite(float x, float y, float width, float height, const RML::Vector4D & color);
+			 * @fn		RSprite::RSprite(float & x, float & y, float & width, float & height, RML::Vector4D & color);
 			 *
 			 * @brief	Constructor
 			 *
@@ -47,10 +55,10 @@ namespace Rubeus
 			 * @param	height	The height.
 			 * @param	color 	The color of this sprite.
 			 */
-			RSprite(float x, float y, float width, float height, const RML::Vector4D & color);
+			RSprite(float & x, float & y, float & width, float & height, RML::Vector4D & color);
 
 			/**
-			 * @fn		RSprite::RSprite(float x, float y, float width, float height, RTexture * texture);
+			 * @fn		RSprite::RSprite(float & x, float & y, float & width, float & height, RTexture * texture);
 			 *
 			 * @brief	Constructor
 			 *
@@ -60,7 +68,7 @@ namespace Rubeus
 			 * @param	height	The height.
 			 * @param	texture 	Pointer to the texture to be used.
 			 */
-			RSprite(float x, float y, float width, float height, RTexture * texture);
+			RSprite(float & x, float & y, float & width, float & height, RTexture * texture);
 
 		protected:
 		};

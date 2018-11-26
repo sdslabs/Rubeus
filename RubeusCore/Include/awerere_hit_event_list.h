@@ -52,14 +52,15 @@ namespace Rubeus
 			void push(const ACollideData & additive);
 
 			/**
-			 * @fn		void push(const bool & intersect, const bool & gap)
+			 * @fn		void push(const bool & intersect, const bool & gap, const RML::Vector2D & collisionNormal)
 			 *
 			 * @brief	Generate a hit event and add to queue
 			 *
-			 * @param	intersect	Has intersected.
-			 * @param	gap			Amount of gap.
+			 * @param	intersect		If colliders have intersected.
+			 * @param	gap				Amount of gap.
+			 * @param	collisionNormal	Collision normal.
 			 */
-			void push(const bool & intersect, const bool & gap);
+			void push(const bool & intersect, const bool & gap, const RML::Vector2D & collisionNormal);
 
 			/**
 			 * @fn		const ACollideData & pop()

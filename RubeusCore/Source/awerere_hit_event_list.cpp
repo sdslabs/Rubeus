@@ -23,9 +23,9 @@ namespace Rubeus
 			m_Data.push_back(additive);
 		}
 
-		void AHitEventList::push(const bool & intersect, const bool & gap)
+		void AHitEventList::push(const bool & intersect, const bool & gap, const RML::Vector2D & collisionNormal)
 		{
-			m_Data.push_back(ACollideData(intersect, gap));
+			m_Data.push_back(ACollideData(intersect, gap, collisionNormal));
 		}
 
 		const ACollideData & AHitEventList::pop()

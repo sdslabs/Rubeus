@@ -12,17 +12,27 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		ASphereCollider::ASphereCollider(const RML::Vector3D & center, const float radius)
+		ASphereCollider::ASphereCollider(RML::Vector3D & center, const float radius)
 			: ACollider(center, RML::Vector2D()), m_Center(center), m_Radius(radius)
 		{
+		}
+
+		void ASphereCollider::selfUpdate(float deltaX, float deltaY)
+		{
+			m_Center.x += deltaX;
+			m_Center.y += deltaY;
 		}
 
 		ACollideData ASphereCollider::tryIntersect(ASphereCollider & other)
 		{
 			float extTouchDistance = m_Radius + other.m_Radius;
-			float centerDistance = (other.getCenter() - m_Center).getLength();
+			RML::Vector2D distanceVector = RML::Vector3D(other.getCenter() - m_Center).getVector2D();
+			float centerDistance = distanceVector.getLength();
 
-			return ACollideData(centerDistance < extTouchDistance, centerDistance - extTouchDistance);
+			return ACollideData(centerDistance < extTouchDistance,
+								centerDistance - extTouchDistance,
+								distanceVector
+			);
 		}
 
 		ACollideData ASphereCollider::tryIntersect(APlaneCollider & plane)

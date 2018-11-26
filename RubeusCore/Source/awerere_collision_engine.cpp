@@ -22,8 +22,15 @@ namespace Rubeus
 			size_t i = 0;
 			while (i < m_GameObjects.size())
 			{
-				m_XFlags.push_back(AFlag(""));
-				m_YFlags.push_back(AFlag(""));
+				m_XFlags.push_back(AFlag(m_CollisionGrid.m_XCount));
+
+				i++;
+			}
+
+			i = 0;
+			while (i < m_GameObjects.size())
+			{
+				m_YFlags.push_back(AFlag(m_CollisionGrid.m_YCount));
 
 				i++;
 			}
@@ -33,32 +40,42 @@ namespace Rubeus
 		{
 		}
 
-		void ACollisionEngine::assignFlags()
+		void ACollisionEngine::updateAndAssignFlags(const float & deltaTime)
 		{
 			size_t gameObjectsCount = m_GameObjects.size();
 
 			for (int i = 0; i < gameObjectsCount; i++)
 			{
-				// X AXIS FLAGGING
-				int leftFlag = m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().x / m_CollisionGrid.m_CellWidth;
-				int rightFlag = (m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().x + m_GameObjects[i]->m_Sprite->getSize().x) / m_CollisionGrid.m_CellWidth;
-
-				for (int p = 0; p < m_CollisionGrid.m_XCount; p++)
+				if (m_GameObjects[i]->m_HasPhysics)
 				{
-					m_XFlags[i] += ((p >= leftFlag) && (p < rightFlag)) ? "1" : "0";
+					m_GameObjects[i]->m_PhysicsObject->m_Collider->update(deltaTime);
 				}
 
-				// Y AXIS FLAGGING
-				leftFlag = m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().y / m_CollisionGrid.m_CellHeight;
-				rightFlag = (m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().y + m_GameObjects[i]->m_Sprite->getSize().y) / m_CollisionGrid.m_CellHeight;
-
-				for (int p = 0; p < m_CollisionGrid.m_YCount; p++)
-				{
-					m_YFlags[i] += ((p >= leftFlag) && (p < rightFlag)) ? "1" : "0";
-				}
-
-				// https://gamedev.stackexchange.com/questions/72030/using-uniform-grids-for-collision-detection-efficient-way-to-keep-track-of-wha
+				checkCollisions(i);
 			}
+		}
+
+		void ACollisionEngine::checkCollisions(const int & i)
+		{
+			// X AXIS FLAGGING
+			int leftFlag = m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().x / m_CollisionGrid.m_CellWidth;
+			int rightFlag = (m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().x + m_GameObjects[i]->m_Sprite->getSize().x) / m_CollisionGrid.m_CellWidth;
+
+			for (int p = 0; p < m_CollisionGrid.m_XCount; p++)
+			{
+				m_XFlags[i].m_Data[p] = ((p >= leftFlag) && (p <= rightFlag)) ? true : false;
+			}
+
+			// Y AXIS FLAGGING
+			leftFlag = m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().y / m_CollisionGrid.m_CellHeight;
+			rightFlag = (m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().y + m_GameObjects[i]->m_Sprite->getSize().y) / m_CollisionGrid.m_CellHeight;
+
+			for (int p = 0; p < m_CollisionGrid.m_YCount; p++)
+			{
+				m_YFlags[i].m_Data[p] = ((p >= leftFlag) && (p <= rightFlag)) ? true : false;
+			}
+
+			// https://gamedev.stackexchange.com/questions/72030/using-uniform-grids-for-collision-detection-efficient-way-to-keep-track-of-wha
 		}
 
 		void ACollisionEngine::collisionResolution()
@@ -84,7 +101,42 @@ namespace Rubeus
 
 			if (cache.getIsIntersect() == true)
 			{
-				m_CollisionEvents.push(cache);
+				LOG("HIT");
+				// Record the relative coefficient of restitution
+				float e = min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution);
+				float mu = min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction);
+
+				// Store temporary variables
+				float m1 = left.m_PhysicsObject->m_PhysicsMaterial.m_Mass;
+				float m2 = right.m_PhysicsObject->m_PhysicsMaterial.m_Mass;
+
+				RML::Vector2D normal = cache.getCollisionNormal();
+				normal.toUnitVector();
+
+				RML::Vector2D v1 = left.m_PhysicsObject->m_Collider->m_Momentum * (1.0f / m1);
+				RML::Vector2D v2 = right.m_PhysicsObject->m_Collider->m_Momentum * (1.0f / m2);
+
+				RML::Vector2D v1_parallel = normal * v1.multiplyDot(normal);
+				RML::Vector2D v1_perp = v1 - v1_parallel;
+
+				RML::Vector2D v2_parallel = normal * v2.multiplyDot(normal);
+				RML::Vector2D v2_perp = v2 - v2_parallel;
+
+				RML::Vector2D v1_perpFinal = v1_perp - v2_perp * m2 * mu * (1.0f / m1);
+				RML::Vector2D v2_perpFinal = v2_perp - v1_perp * m1 * mu * (1.0f / m2);
+
+				RML::Vector2D v1_parallelFinal;
+				RML::Vector2D v2_parallelFinal;
+
+				v1_parallelFinal = v2_parallel * m2 * (1.0f / m1) * e;
+				v2_parallelFinal = v1_parallel * m1 * (1.0f / m2) * e;
+
+				// Set the final values in the objects
+				left.m_PhysicsObject->m_Collider->m_Momentum = (v1_parallelFinal + v1_perpFinal) * m1;
+				right.m_PhysicsObject->m_Collider->m_Momentum = (v2_parallelFinal + v2_perpFinal) * m2;
+
+				// Call user-defined hit response
+				left.onHit(&left, &right, cache);
 			}
 		}
 
@@ -94,9 +146,9 @@ namespace Rubeus
 			{
 				// Collider types are as follows:
 				//
-				// SPHERE = 0x0001,       
-				// PLANE = 0x0010,		
-				// BOX = 0x0100,		
+				// SPHERE      = 0x0001,       
+				// PLANE       = 0x0010,		
+				// BOX         = 0x0100,		
 				// NO_COLLIDER = 0x1000
 
 				case 0x0001:
@@ -120,23 +172,23 @@ namespace Rubeus
 					return left->tryIntersect(*(APlaneCollider *)right);
 
 				case 0x1001:
-					return ACollideData(false, 0); // No collider
+					return ACollideData(false, 0, RML::Vector2D()); // No collider
 
 				case 0x1000:
-					return ACollideData(false, 0); // No collider
+					return ACollideData(false, 0, RML::Vector2D()); // No collider
 
 				case 0x1010:
-					return ACollideData(false, 0); // No collider
+					return ACollideData(false, 0, RML::Vector2D()); // No collider
 
 				case 0x1100:
-					return ACollideData(false, 0); // No collider
+					return ACollideData(false, 0, RML::Vector2D()); // No collider
 
 				default:
 					ERRORLOG("Fatal error: Unknown collider type found");
 					break;
 			}
 
-			return ACollideData(false, 0);
+			return ACollideData(false, 0, RML::Vector2D());
 		}
 	}
 }

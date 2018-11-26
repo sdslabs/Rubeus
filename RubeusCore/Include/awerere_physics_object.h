@@ -17,12 +17,13 @@ namespace Rubeus
 	namespace Awerere
 	{
 		/**
-		 * @struct	APhysicsObject
+		 * @class	APhysicsObject
 		 *
 		 * @brief	A Physics Object that is used for all collision detection and responses
 		 */
-		struct APhysicsObject
+		class APhysicsObject
 		{
+		public:
 			/** @brief	Physics Material defining a physics object */
 			APhysicsMaterial m_PhysicsMaterial;
 
@@ -32,6 +33,9 @@ namespace Rubeus
 			/** @brief	Whether physics should be enabled for a game object */
 			bool m_EnablePhysics = false;
 
+			/** @brief	The sprite linked to this physicsobject */
+			GraphicComponents::RSprite * m_Sprite;
+
 			/**
 			 * @fn		APhysicsObject()
 			 *
@@ -40,7 +44,7 @@ namespace Rubeus
 			APhysicsObject();
 
 			/**
-			 * @fn		APhysicsObject(const APhysicsMaterial & material, const bool & enablePhysics = false, const EColliderType & type = EColliderType::NO_COLLIDER, ACollider * collider = NULL)
+			 * @fn		APhysicsObject(const APhysicsMaterial & material, const bool & enablePhysics = false, const EColliderType & type = EColliderType::NO_COLLIDER, ACollider * collider = NULL, GraphicComponents::RSprite * sprite = NULL)
 			 *
 			 * @brief	Generates a physics object for linking within a game object
 			 *
@@ -48,8 +52,9 @@ namespace Rubeus
 			 * @param	enablePhysics	Whether physics should be enabled for the game object. Default is false
 			 * @param	type			Type of collider to be used. Default is NO_COLLIDER
 			 * @param	collider		Collider object to be used. Default is NULL
+			 * @param	sprite		Sprite object associated to be used. Default is NULL
 			 */
-			APhysicsObject(const APhysicsMaterial & material, const bool & enablePhysics = false, const EColliderType & type = EColliderType::NO_COLLIDER, ACollider * collider = NULL);
+			APhysicsObject(const APhysicsMaterial & material, const bool & enablePhysics = false, const EColliderType & type = EColliderType::NO_COLLIDER, ACollider * collider = NULL, GraphicComponents::RSprite * sprite = NULL);
 
 			/**
 			 * @fn		~APhysicsObject()

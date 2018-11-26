@@ -27,6 +27,16 @@ namespace RML
 		return sqrt((vector.x * vector.x) + (vector.y * vector.y));
 	}
 
+	float Vector2D::getLength() const
+	{
+		return x * x + y * y;
+	}
+
+	Vector2D Vector2D::toUnitVector()
+	{
+		return this->multiplyFloat(1.0f / this->getLength());
+	}
+
 	Vector2D & Vector2D::add(const Vector2D & other)
 	{
 		x += other.x;
@@ -35,7 +45,7 @@ namespace RML
 		return *this;
 	}
 
-	Vector2D & Vector2D::subtract(const Vector2D & other)
+	Vector2D Vector2D::subtract(const Vector2D & other)
 	{
 		x -= other.x;
 		y -= other.y;
@@ -47,6 +57,19 @@ namespace RML
 	{
 		x *= other.x;
 		y *= other.y;
+
+		return *this;
+	}
+
+	float Vector2D::multiplyDot(const Vector2D & other)
+	{
+		return x * other.x + y * other.y;
+	}
+
+	Vector2D & Vector2D::multiplyFloat(const float & other)
+	{
+		x *= other;
+		y *= other;
 
 		return *this;
 	}
@@ -110,6 +133,16 @@ namespace RML
 		return left.multiply(right);
 	}
 
+	Vector2D & operator*(Vector2D left, const float & right)
+	{
+		return left.multiplyFloat(right);
+	}
+
+	float operator*(Vector2D & left, const Vector2D & right)
+	{
+		return left.multiplyDot(right);
+	}
+
 	Vector2D & operator/(Vector2D left, const Vector2D &right)
 	{
 		return left.divide(right);
@@ -137,6 +170,11 @@ namespace RML
 	float Vector3D::getLength() const
 	{
 		return sqrt((x * x) + (y * y) + (z * z));
+	}
+
+	Vector2D Vector3D::getVector2D()
+	{
+		return Vector2D(x, y);
 	}
 
 	Vector3D & Vector3D::add(const Vector3D & other)
@@ -213,13 +251,13 @@ namespace RML
 
 	float Vector3D::maxComponent()
 	{
-		if(x > y)
-			if(x > z)
+		if (x > y)
+			if (x > z)
 				return x;
 			else
 				return z;
 		else
-			if(y > z)
+			if (y > z)
 				return y;
 			else
 				return z;
@@ -227,7 +265,7 @@ namespace RML
 
 	float Vector3D::maxXYComponent()
 	{
-		if(x > y)
+		if (x > y)
 			return x;
 		else
 			return y;
@@ -386,10 +424,10 @@ namespace RML
 
 	Vector4D & Vector4D::divide(const Vector4D & other)
 	{
-		x /= (float) other.x;
-		y /= (float) other.y;
-		z /= (float) other.z;
-		w /= (float) other.w;
+		x /= (float)other.x;
+		y /= (float)other.y;
+		z /= (float)other.z;
+		w /= (float)other.w;
 
 		return *this;
 	}
@@ -452,14 +490,14 @@ namespace RML
 
 	Matrix4::Matrix4()
 	{
-		memset((char*) elements, 0.0f, sizeof(elements));
+		memset((char*)elements, 0.0f, sizeof(elements));
 	}
 
 	Matrix4::Matrix4(float diagonal)
 	{
-		for(int i = 0; i < 16; i++)
+		for (int i = 0; i < 16; i++)
 		{
-			if((i % 5) == 0)
+			if ((i % 5) == 0)
 			{
 				elements[i] = diagonal;
 				continue;
@@ -498,12 +536,12 @@ namespace RML
 	{
 		float result[16];
 
-		for(int y = 0; y < 4; y++)
+		for (int y = 0; y < 4; y++)
 		{
-			for(int x = 0; x < 4; x++)
+			for (int x = 0; x < 4; x++)
 			{
 				float sum = 0.0f;
-				for(int e = 0; e < 4; e++)
+				for (int e = 0; e < 4; e++)
 				{
 					sum += elements[x + e * 4] * other.elements[e + y * 4];
 				}
