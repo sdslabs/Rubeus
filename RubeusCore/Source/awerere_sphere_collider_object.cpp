@@ -12,8 +12,8 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		ASphereCollider::ASphereCollider(RML::Vector3D & center, const float radius)
-			: ACollider(center, RML::Vector2D()), m_Center(center), m_Radius(radius)
+		ASphereCollider::ASphereCollider(const RML::Vector3D & center, const float radius)
+			: ACollider(*const_cast<RML::Vector3D *>(&center), RML::Vector2D()), m_Center(*const_cast<RML::Vector3D *>(&center)), m_Radius(radius)
 		{
 		}
 

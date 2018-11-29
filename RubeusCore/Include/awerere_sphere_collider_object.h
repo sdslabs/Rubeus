@@ -30,7 +30,7 @@ namespace Rubeus
 
 		public:
 			/**
-			 * @fn		ASphereCollider(RML::Vector3D & center, const float radius)
+			 * @fn		ASphereCollider(const RML::Vector3D & center, const float radius)
 			 *
 			 * @brief	Contructor
 			 *
@@ -38,7 +38,7 @@ namespace Rubeus
 			 * @param	radius	Radius of the sphere.
 			 *
 			 */
-			ASphereCollider(RML::Vector3D & center, const float radius);
+			ASphereCollider(const RML::Vector3D & center, const float radius);
 
 			/**
 			 * @fn		void selfUpdate(float deltaX, float deltaY) override

@@ -145,12 +145,16 @@ namespace Rubeus
 
 		protected:
 			/**
-			 * @fn		RRenderableObject
+			 * @fn		RRenderableObject(RML::Vector3D position = RML::Vector3D(0.0f, 0.0f, 0.0f), RML::Vector2D size = RML::Vector2D(0.0f, 0.0f, 0.0f), RML::Vector4D color = RML::Vector4D(0.0f, 0.0f, 0.0f))
 			 *
 			 * @brief	Constructor
 			 * @warning	To be called only by child classes
+			 *
+			 * @param	position	The default posiiton (origin).
+			 * @param	size		The default size (0 by 0).
+			 * @param	color		The default color (Black).
 			 */
-			RRenderableObject();
+			RRenderableObject(RML::Vector3D position = RML::Vector3D(0.0f, 0.0f, 0.0f), RML::Vector2D size = RML::Vector2D(0.0f, 0.0f), RML::Vector4D color = RML::Vector4D(0.0f, 0.0f, 0.0f, 0.0f));
 
 			/**
 			 * @fn		inline void setUV()

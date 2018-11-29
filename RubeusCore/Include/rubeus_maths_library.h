@@ -99,7 +99,7 @@ namespace RML
 		Vector2D& add(const Vector2D &other);
 
 		/**
-			* @fn	Vector2D subtract(const Vector2D &other);
+			* @fn	Vector2D & subtract(const Vector2D &other);
 			*
 			* @brief	Subtracts the given other
 			*
@@ -107,7 +107,7 @@ namespace RML
 			*
 			* @return	A reference to a Vector2D.
 			*/
-		Vector2D subtract(const Vector2D &other);
+		Vector2D & subtract(const Vector2D &other);
 
 		/**
 			* @fn	Vector2D& multiply(const Vector2D &other);

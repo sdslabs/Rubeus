@@ -25,11 +25,11 @@ namespace Rubeus
 			renderer.submit(this);
 		}
 
-		RRenderableObject::RRenderableObject()
+		RRenderableObject::RRenderableObject(RML::Vector3D position, RML::Vector2D size, RML::Vector4D color)
 			:
-			m_Position(RML::Vector3D()),
-			m_Size(RML::Vector2D()),
-			m_Color(RML::Vector4D())
+			m_Position(position),
+			m_Size(size),
+			m_Color(color)
 		{
 			setUV();
 		}

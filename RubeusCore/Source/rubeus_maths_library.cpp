@@ -45,7 +45,7 @@ namespace RML
 		return *this;
 	}
 
-	Vector2D Vector2D::subtract(const Vector2D & other)
+	Vector2D & Vector2D::subtract(const Vector2D & other)
 	{
 		x -= other.x;
 		y -= other.y;

@@ -14,8 +14,10 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
+		static RML::Vector3D TEMP_VECTOR3D(0.0f, 0.0f, 0.0f);
+
 		ACollider::ACollider()
-			: m_Position(RML::Vector3D()), m_Type(EColliderType::NO_COLLIDER)
+			: m_Position(TEMP_VECTOR3D), m_Type(EColliderType::NO_COLLIDER)
 		{
 		}
 

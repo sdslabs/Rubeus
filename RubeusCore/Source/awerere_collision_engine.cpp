@@ -103,8 +103,8 @@ namespace Rubeus
 			{
 				LOG("HIT");
 				// Record the relative coefficient of restitution
-				float e = min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution);
-				float mu = min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction);
+				float e = std::min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution);
+				float mu = std::min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction);
 
 				// Store temporary variables
 				float m1 = left.m_PhysicsObject->m_PhysicsMaterial.m_Mass;
@@ -118,10 +118,10 @@ namespace Rubeus
 
 				RML::Vector2D v1_parallel = normal * v1.multiplyDot(normal);
 				RML::Vector2D v1_perp = v1 - v1_parallel;
-
+				v1 += v1_parallel;
 				RML::Vector2D v2_parallel = normal * v2.multiplyDot(normal);
 				RML::Vector2D v2_perp = v2 - v2_parallel;
-
+				v2 += v2_parallel;
 				RML::Vector2D v1_perpFinal = v1_perp - v2_perp * m2 * mu * (1.0f / m1);
 				RML::Vector2D v2_perpFinal = v2_perp - v1_perp * m1 * mu * (1.0f / m2);
 
