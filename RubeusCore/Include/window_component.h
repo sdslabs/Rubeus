@@ -14,7 +14,7 @@
 #include <logger_component.h>
 #include <loader_component.h>
 #include <master_component.h>
-#include <input_component.h>
+#include <input_manager.h>
 #include <awerere_physics_object.h>
 
 namespace Rubeus
@@ -84,6 +84,8 @@ namespace Rubeus
 			 * @return	True if it succeeds, false if it fails.
 			 */
 			bool initWindow(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW);
+
+			friend class RInputManager;
 
 		public:
 
