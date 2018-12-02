@@ -74,9 +74,12 @@ int main()
 	object1->m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Gravity = RML::Vector2D(0.0f, 0.0f);
 	object2->m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Gravity = RML::Vector2D(0.0f, -1.0f);
 
+	RInputManager inputManager(*GameWindow);
+
 	// See if maps are slowing things down. Also have a performance check
 	while (!GameWindow->closed())
 	{
+		//inputManager.update();
 		// TODO: Message bus needs references to all systems here
 		// Clear Window buffer
 		GameWindow->clearWindow();
@@ -84,6 +87,8 @@ int main()
 		// Miscellaneous testing stuff
 		shader0->enableShader();
 		shader0->setUniform2f("light_position", Vector2D(GameWindow->m_X * 16.0f / 1280.0f, (720.0f - GameWindow->m_Y) * 9.0f / 720.0f));
+
+		// Inputs update
 
 		// Physics engine update
 		awerere.update(1.0f / 60.0f);
@@ -96,6 +101,7 @@ int main()
 
 		// Frame counter update
 		timer->evaluateFrames();
+		LOG(inputManager.isKeyPressed(EKeys::__SPACE));
 	}
 
 	delete timer;

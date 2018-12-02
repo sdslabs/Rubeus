@@ -13,44 +13,50 @@
 
 namespace Rubeus
 {
-	class GraphicComponents::RWindowComponent;
-
 	namespace GraphicComponents
 	{
+		class RWindowComponent;
+
 		void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos);
 		void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods);
 		void scrollCallback(GLFWwindow *window, double xoffset, double yoffset);
-		void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);
 
 	}
+
+	void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);
 
 	class RInputManager : public RMasterComponent
 	{
 	private:
 		bool m_IsEnabled;
-		GraphicComponents::RWindowComponent & m_Window;
-		Keys m_Keys;
-		std::unordered_map<std::string, std::vector<int>> m_Keybindings;
-		std::unordered_map<unsigned int, bool> m_KeyMap;
-
+		const GraphicComponents::RWindowComponent & m_Window;
+		std::unordered_map<std::string, std::vector<EKeys>> m_KeybindingsToKeys;
+		std::unordered_map<EKeys, std::string> m_KeysToKeybindings;
 
 		void addKeyBinding(const std::string & keyBinding);
+		void clearFlags();
+		void addKeysToKeyMap();
 
 	public:
-		RInputManager(GraphicComponents::RWindowComponent & window);
+		static std::unordered_map<int, bool> KeyMap;
+
+		RInputManager(const GraphicComponents::RWindowComponent & window);
 		~RInputManager();
 
-		void addKeyToKeyBinding(const std::string & keyBinding, const int & keyName);
-		void addKeysToKeyBinding(const std::string & keyBinding, const std::vector<int> & keyNames);
+		void update();
+
+		void addKeyToKeyBinding(const std::string & keyBinding, const EKeys & keyName);
+		void addKeysToKeyBinding(const std::string & keyBinding, const std::vector<EKeys> & keyNames);
 
 		void activate(const std::string & keyBinding);
 		void deactivate(const std::string & keyBinding);
 
-		bool isKeyBindingActivated(const std::string & keyBinding) const;
-		bool isKeyPressed(const int & keyName) const;
+		bool isKeyBindingPressed(const std::string & keyBinding);
+		bool isKeyPressed(const EKeys & keyName);
 
-		inline void enable() { m_IsEnabled == true; }
-		inline void disable() { m_IsEnabled == false; }
+
+		inline void enable() { m_IsEnabled = true; }
+		inline void disable() { m_IsEnabled = false; }
 
 		void onMessage(Message * msg) override;
 

@@ -29,6 +29,7 @@
 // Rubeus specific includes
 #include <logger_component.h>
 #include <loader_component.h>
+#include <input_manager.h>
 #include <window_component.h>
 #include <shader_component.h>
 #include <master_component.h>
