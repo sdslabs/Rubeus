@@ -1,7 +1,7 @@
 // RubeusCore.cpp : Defines the entry point for the application.
 //
 #include "RubeusCore.h"
-#include <sstream>
+
 int main()
 {
 	using namespace Rubeus;
@@ -75,32 +75,9 @@ int main()
 	object2->m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Gravity = RML::Vector2D(0.0f, -1.0f);
 
 	RInputManager inputManager(*GameWindow);
-
-	RLoaderComponent loader;
-	std::string str = loader.loadTextFileStream("Include/keys.h");
-	std::vector<std::string> tokens;
-	std::stringstream check1(str);
-	std::string intermediate;
-
-	// Tokenizing w.r.t. space ' ' 
-	while (std::getline(check1, intermediate, '\n'))
-	{
-		tokens.push_back(intermediate);
-	}
-
-	for (auto& item : tokens)
-	{
-		if (item.size() > 3)
-			if (item[2] == '_' && item[3] == '_')
-			{
-				std::string str1 = "";
-				for (int i = 2; item[i] != '='; i++)
-				{
-					str1 += item[i];
-				}
-				LOG("KeyMap.insert(std::pair<int, bool>((int)EKeys::" + str1 + std::string(", false));"));
-			}
-	}
+	inputManager.addKeyToKeyBinding("Pause", EKeyboardKeys::__ESCAPE);
+	inputManager.addKeyToKeyBinding("Jump", EKeyboardKeys::__UP);
+	inputManager.addKeyToKeyBinding("Jump", EKeyboardKeys::__S);
 
 	// See if maps are slowing things down. Also have a performance check
 	while (!GameWindow->closed())
@@ -114,8 +91,6 @@ int main()
 		shader0->enableShader();
 		shader0->setUniform2f("light_position", Vector2D(GameWindow->m_X * 16.0f / 1280.0f, (720.0f - GameWindow->m_Y) * 9.0f / 720.0f));
 
-		// Inputs update
-
 		// Physics engine update
 		awerere.update(1.0f / 60.0f);
 
@@ -127,7 +102,6 @@ int main()
 
 		// Frame counter update
 		timer->evaluateFrames();
-		LOG(inputManager.isKeyPressed(EKeys::__SPACE));
 	}
 
 	delete timer;

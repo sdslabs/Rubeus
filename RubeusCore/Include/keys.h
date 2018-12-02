@@ -2,7 +2,23 @@
 
 namespace Rubeus
 {
-	enum class EKeys
+	enum class EMouseButtons
+	{
+		__MOUSE_BUTTON_1 = 0,
+		__MOUSE_BUTTON_2 = 1,
+		__MOUSE_BUTTON_3 = 2,
+		__MOUSE_BUTTON_4 = 3,
+		__MOUSE_BUTTON_5 = 4,
+		__MOUSE_BUTTON_6 = 5,
+		__MOUSE_BUTTON_7 = 6,
+		__MOUSE_BUTTON_8 = 7,
+		__MOUSE_BUTTON_LAST = __MOUSE_BUTTON_8,
+		__MOUSE_BUTTON_LEFT = __MOUSE_BUTTON_1,
+		__MOUSE_BUTTON_RIGHT = __MOUSE_BUTTON_2,
+		__MOUSE_BUTTON_MIDDLE = __MOUSE_BUTTON_3
+	};
+
+	enum class EKeyboardKeys
 	{
 		__UNKNOWN = -1,
 		__SPACE = 32,

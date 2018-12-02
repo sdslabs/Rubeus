@@ -4,28 +4,25 @@
 namespace Rubeus
 {
 	std::unordered_map<int, bool> RInputManager::KeyMap;
+	std::unordered_map<int, bool> RInputManager::MouseButtonMap;
+	RML::Vector2D RInputManager::MousePosition;
+	RML::Vector2D RInputManager::MouseScroll;
 
-	// To be deleted when input functionality is complete
-	namespace GraphicComponents
+	void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods)
 	{
-		void RWindowComponent::cursorPositionCallback(GLFWwindow *window, double xpos, double ypos)
-		{
-			RWindowComponent::m_X = xpos;
-			RWindowComponent::m_Y = ypos;
-		}
+		RInputManager::MouseButtonMap[button] = action == GLFW_RELEASE ? 0 : 1;
+	}
 
-		void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods)
-		{
-			if (button == GLFW_MOUSE_BUTTON_RIGHT && action == GLFW_PRESS)
-			{
-				std::cout << "Right button pressed" << std::endl;
-			}
-		}
+	void scrollCallback(GLFWwindow *window, double xoffset, double yoffset)
+	{
+		RInputManager::MouseScroll.x = xoffset;
+		RInputManager::MouseScroll.y = yoffset;
+	}
 
-		void scrollCallback(GLFWwindow *window, double xoffset, double yoffset)
-		{
-			std::cout << xoffset << " : " << yoffset << std::endl;
-		}
+	void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos)
+	{
+		RInputManager::MousePosition.x = xpos;
+		RInputManager::MousePosition.y = ypos;
 	}
 
 	void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods)
@@ -33,18 +30,16 @@ namespace Rubeus
 		RInputManager::KeyMap[key] = action == GLFW_RELEASE ? 0 : 1;
 	}
 
-	void RInputManager::clearFlags()
-	{
-		for (auto& item : KeyMap)
-		{
-			item.second = false;
-		}
-	}
-
 	RInputManager::RInputManager(const GraphicComponents::RWindowComponent & window)
 		: m_IsEnabled(true), m_Window(window)
 	{
 		addKeysToKeyMap();
+
+		MousePosition.x = 0.0f;
+		MousePosition.y = 0.0f;
+
+		MouseScroll.x = 0.0f;
+		MouseScroll.y = 0.0f;
 	}
 
 	RInputManager::~RInputManager()
@@ -53,46 +48,41 @@ namespace Rubeus
 
 	void RInputManager::addKeyBinding(const std::string & keyBinding)
 	{
-		m_KeybindingsToKeys.insert(std::pair<std::string, std::vector<EKeys>>(keyBinding, std::vector<EKeys>()));
-		m_KeybindingsToKeys[keyBinding].push_back(EKeys::__DEACTIVATED);
+		m_KeybindingsToKeys.insert(std::pair<std::string, std::vector<EKeyboardKeys>>(keyBinding, std::vector<EKeyboardKeys>()));
+		m_KeybindingsToKeys[keyBinding].push_back(EKeyboardKeys::__ACTIVATED);
 	}
 
-	void RInputManager::update()
-	{
-		//clearFlags();
-	}
-
-	void RInputManager::addKeyToKeyBinding(const std::string & keyBinding, const EKeys & keyName)
+	void RInputManager::addKeyToKeyBinding(const std::string & keyBinding, const EKeyboardKeys & keyName)
 	{
 		addKeyBinding(keyBinding);
 		m_KeybindingsToKeys[keyBinding].push_back(keyName);
 
-		m_KeysToKeybindings.insert(std::pair<EKeys, std::string>(keyName, keyBinding));
+		m_KeysToKeybindings.insert(std::pair<EKeyboardKeys, std::string>(keyName, keyBinding));
 	}
 
-	void RInputManager::addKeysToKeyBinding(const std::string & keyBinding, const std::vector<EKeys> & keyNames)
+	void RInputManager::addKeysToKeyBinding(const std::string & keyBinding, const std::vector<EKeyboardKeys> & keyNames)
 	{
 		addKeyBinding(keyBinding);
 		for (auto& keyName : keyNames)
 		{
 			m_KeybindingsToKeys[keyBinding].push_back(keyName);
-			m_KeysToKeybindings.insert(std::pair<EKeys, std::string>(keyName, keyBinding));
+			m_KeysToKeybindings.insert(std::pair<EKeyboardKeys, std::string>(keyName, keyBinding));
 		}
 	}
 
 	void RInputManager::activate(const std::string & keyBinding)
 	{
-		m_KeybindingsToKeys[keyBinding][0] = EKeys::__ACTIVATED;
+		m_KeybindingsToKeys[keyBinding][0] = EKeyboardKeys::__ACTIVATED;
 	}
 
 	void RInputManager::deactivate(const std::string & keyBinding)
 	{
-		m_KeybindingsToKeys[keyBinding][0] = EKeys::__DEACTIVATED;
+		m_KeybindingsToKeys[keyBinding][0] = EKeyboardKeys::__DEACTIVATED;
 	}
 
 	bool RInputManager::isKeyBindingPressed(const std::string & keyBinding)
 	{
-		if (m_IsEnabled == true && m_KeybindingsToKeys[keyBinding][0] == EKeys::__ACTIVATED)
+		if ((m_IsEnabled == true) && (m_KeybindingsToKeys[keyBinding][0] == EKeyboardKeys::__ACTIVATED))
 		{
 			for (auto& key : m_KeybindingsToKeys[keyBinding])
 			{
@@ -106,11 +96,21 @@ namespace Rubeus
 		return false;
 	}
 
-	bool RInputManager::isKeyPressed(const EKeys & keyName)
+	bool RInputManager::isKeyPressed(const EKeyboardKeys & keyName)
 	{
 		if (m_IsEnabled == true)
 		{
 			return KeyMap[(int)keyName];
+		}
+
+		return false;
+	}
+
+	bool RInputManager::isMouseButtonPressed(const EMouseButtons & buttonName)
+	{
+		if (m_IsEnabled == true)
+		{
+			return MouseButtonMap[(int)buttonName];
 		}
 
 		return false;
@@ -128,127 +128,136 @@ namespace Rubeus
 
 	void RInputManager::addKeysToKeyMap()
 	{
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__UNKNOWN, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__SPACE, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__APOSTROPHE, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__COMMA, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__MINUS, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__PERIOD, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__SLASH, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__0, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__1, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__2, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__3, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__4, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__5, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__6, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__7, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__8, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__9, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__SEMICOLON, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__EQUAL, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__A, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__B, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__C, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__D, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__E, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__G, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__H, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__I, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__J, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__K, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__L, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__M, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__N, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__O, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__P, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__Q, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__R, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__S, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__T, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__U, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__V, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__W, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__X, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__Y, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__Z, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__LEFT_BRACKET, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__BACKSLASH, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__RIGHT_BRACKET, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__GRAVE_ACCENT, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__WORLD_1, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__WORLD_2, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__ESCAPE, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__ENTER, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__TAB, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__BACKSPACE, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__INSERT, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__DELETE, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__RIGHT, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__LEFT, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__DOWN, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__UP, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__PAGE_UP, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__PAGE_DOWN, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__HOME, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__END, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__CAPS_LOCK, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__SCROLL_LOCK, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__NUM_LOCK, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__PRINT_SCREEN, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__PAUSE, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F1, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F2, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F3, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F4, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F5, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F6, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F7, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F8, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F9, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F10, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F11, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F12, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F13, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F14, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F15, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F16, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F17, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F18, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F19, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F20, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F21, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F22, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F23, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F24, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__F25, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__KP_0, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__KP_1, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__KP_2, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__KP_3, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__KP_4, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__KP_5, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__KP_6, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__KP_7, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__KP_8, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__KP_9, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__KP_DECIMAL, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__KP_DIVIDE, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__KP_MULTIPLY, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__KP_SUBTRACT, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__KP_ADD, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__KP_ENTER, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__KP_EQUAL, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__LEFT_SHIFT, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__LEFT_CONTROL, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__LEFT_ALT, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__LEFT_SUPER, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__RIGHT_SHIFT, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__RIGHT_CONTROL, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__RIGHT_ALT, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__RIGHT_SUPER, false));
-		KeyMap.insert(std::pair<int, bool>((int)EKeys::__MENU, false));
+		MouseButtonMap.insert(std::pair<int, bool>((int)EMouseButtons::__MOUSE_BUTTON_1, false));
+		MouseButtonMap.insert(std::pair<int, bool>((int)EMouseButtons::__MOUSE_BUTTON_2, false));
+		MouseButtonMap.insert(std::pair<int, bool>((int)EMouseButtons::__MOUSE_BUTTON_3, false));
+		MouseButtonMap.insert(std::pair<int, bool>((int)EMouseButtons::__MOUSE_BUTTON_4, false));
+		MouseButtonMap.insert(std::pair<int, bool>((int)EMouseButtons::__MOUSE_BUTTON_5, false));
+		MouseButtonMap.insert(std::pair<int, bool>((int)EMouseButtons::__MOUSE_BUTTON_6, false));
+		MouseButtonMap.insert(std::pair<int, bool>((int)EMouseButtons::__MOUSE_BUTTON_7, false));
+		MouseButtonMap.insert(std::pair<int, bool>((int)EMouseButtons::__MOUSE_BUTTON_8, false));
+
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__UNKNOWN, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__SPACE, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__APOSTROPHE, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__COMMA, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__MINUS, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__PERIOD, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__SLASH, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__0, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__1, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__2, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__3, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__4, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__5, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__6, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__7, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__8, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__9, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__SEMICOLON, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__EQUAL, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__A, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__B, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__C, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__D, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__E, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__G, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__H, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__I, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__J, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__K, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__L, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__M, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__N, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__O, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__P, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__Q, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__R, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__S, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__T, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__U, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__V, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__W, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__X, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__Y, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__Z, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__LEFT_BRACKET, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__BACKSLASH, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__RIGHT_BRACKET, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__GRAVE_ACCENT, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__WORLD_1, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__WORLD_2, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__ESCAPE, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__ENTER, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__TAB, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__BACKSPACE, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__INSERT, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__DELETE, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__RIGHT, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__LEFT, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__DOWN, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__UP, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__PAGE_UP, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__PAGE_DOWN, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__HOME, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__END, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__CAPS_LOCK, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__SCROLL_LOCK, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__NUM_LOCK, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__PRINT_SCREEN, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__PAUSE, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F1, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F2, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F3, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F4, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F5, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F6, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F7, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F8, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F9, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F10, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F11, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F12, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F13, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F14, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F15, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F16, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F17, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F18, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F19, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F20, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F21, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F22, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F23, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F24, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__F25, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__KP_0, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__KP_1, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__KP_2, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__KP_3, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__KP_4, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__KP_5, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__KP_6, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__KP_7, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__KP_8, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__KP_9, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__KP_DECIMAL, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__KP_DIVIDE, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__KP_MULTIPLY, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__KP_SUBTRACT, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__KP_ADD, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__KP_ENTER, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__KP_EQUAL, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__LEFT_SHIFT, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__LEFT_CONTROL, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__LEFT_ALT, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__LEFT_SUPER, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__RIGHT_SHIFT, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__RIGHT_CONTROL, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__RIGHT_ALT, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__RIGHT_SUPER, false));
+		KeyMap.insert(std::pair<int, bool>((int)EKeyboardKeys::__MENU, false));
 	}
 }
 

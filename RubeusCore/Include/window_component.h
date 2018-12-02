@@ -169,14 +169,8 @@ namespace Rubeus
 			 * @param 		  	height	The height of the resized window.
 			 */
 			friend void windowResizeCallback(GLFWwindow * window, int width, int height);
+
 		public:
-
-			// TODO: Add docs
-			// Temporary input handling until Input Components are finalised
-			static void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos);
-			friend void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods);
-			friend void scrollCallback(GLFWwindow *window, double xoffset, double yoffset);
-
 			/**
 			 * @fn		inline const int & getWidth() const
 			 *
