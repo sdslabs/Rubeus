@@ -1,7 +1,18 @@
+/**
+ * @file		Include/keys.h.
+ *
+ * @brief	Defines the input keys enumerations used by Input Manager
+ */
+
 #pragma once
 
 namespace Rubeus
 {
+	/**
+	 * @enum		EMouseButtons
+	 *
+	 * @brief	Mouse buttons supported
+	 */
 	enum class EMouseButtons
 	{
 		__MOUSE_BUTTON_1 = 0,
@@ -18,6 +29,11 @@ namespace Rubeus
 		__MOUSE_BUTTON_MIDDLE = __MOUSE_BUTTON_3
 	};
 
+	/**
+	 * @enum		EKeyboardKeys
+	 *
+	 * @brief	Keyboard keys supported
+	 */
 	enum class EKeyboardKeys
 	{
 		__UNKNOWN = -1,

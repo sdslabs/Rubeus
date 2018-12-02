@@ -1,4 +1,11 @@
+/**
+ * @file		Source/input_manager.cpp.
+ *
+ * @brief	Defines the Input Manager class along with helper functions
+ */
+
 #include <input_manager.h>
+
 #include <window_component.h>
 
 namespace Rubeus
