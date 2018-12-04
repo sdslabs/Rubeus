@@ -26,6 +26,8 @@ namespace Rubeus
 	class RGameObject : public REntity, public RMasterComponent
 	{
 	public:
+		std::string m_Name;
+
 		/** @brief	Sprite used for the rendering process */
 		GraphicComponents::RSprite * m_Sprite;
 
@@ -96,16 +98,18 @@ namespace Rubeus
 		 */
 		~RGameObject();
 
+		virtual void begin();
+
 		/**
-		 * @fn		void tick() override
+		 * @fn		virtual void tick() override
 		 *
 		 * @brief	Tick function.
 		 * @warning	Runs once every frame
 		 */
-		void tick() override;
+		virtual void tick() override;
 
 		/**
-		 * @fn		void onHit(RGameObject * hammer, RGameObject * nail, Awerere::ACollideData & collisionData)
+		 * @fn		virtual void onHit(RGameObject * hammer, RGameObject * nail, Awerere::ACollideData & collisionData)
 		 *
 		 * @brief	User defined function called whenever a hit event is generated
 		 *
@@ -113,7 +117,7 @@ namespace Rubeus
 		 * @param	nail				The object getting hit
 		 * @param	collisionData		Details of the collision
 		 */
-		void onHit(RGameObject * hammer, RGameObject * nail, Awerere::ACollideData & collisionData);
+		virtual void onHit(RGameObject * hammer, RGameObject * nail, Awerere::ACollideData & collisionData);
 
 		/**
 		 * @fn		inline void addToTickQueue()
@@ -123,7 +127,7 @@ namespace Rubeus
 		inline void addToTickQueue() { m_ThisTicks = true; }
 
 		/**
-		 * @fn		void onMessage(Message * msg)
+		 * @fn		virtual void onMessage(Message * msg)
 		 *
 		 * @brief	Handles message sent by Message system
 		 * @warning	Async invokation only
@@ -131,7 +135,7 @@ namespace Rubeus
 		 * @param	msg	The message data.
 		 *
 		 */
-		void onMessage(Message * msg) override;
+		virtual void onMessage(Message * msg) override;
 
 		friend class ACollisionEngine;
 

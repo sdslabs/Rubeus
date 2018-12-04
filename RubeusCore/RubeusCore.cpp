@@ -5,13 +5,10 @@
 int main()
 {
 	using namespace Rubeus;
-
 	using namespace GraphicComponents;
 	using namespace AudioComponents;
 	using namespace UtilityComponents;
-
 	using namespace RML;
-
 	using namespace Awerere;
 
 	RWindowComponent * GameWindow = new RWindowComponent("Hello World",
@@ -24,7 +21,6 @@ int main()
 	symphony->addMusicTrack(1);
 	symphony->addSoundTrack(1);
 	symphony->loadTrack(AudioComponents::MUSIC_TRACK, AudioComponents::TRACK_0, "Assets/Garage.wav", 10, true);
-	symphony->loadTrack(AudioComponents::SOUND_TRACK, AudioComponents::TRACK_0, "Assets/sound.wav", 10);
 	symphony->playTrack(AudioComponents::MUSIC_TRACK, AudioComponents::TRACK_0);
 	symphony->playTrack(AudioComponents::SOUND_TRACK, AudioComponents::TRACK_0);
 
@@ -41,15 +37,16 @@ int main()
 	APhysicsMaterial mat;
 
 	std::vector<RGameObject *> gameObjects;
+	APhysicsMaterial paddleMaterial;
+	paddleMaterial.makeMaterial(1.0f, RML::Vector2D(0.0f, 0.0f), 0.5f, 1.0f);
+	RGameObject * paddleLeft = new RGameObject(0.0f, 0.0f, 0.5f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(0.0f, 0.0f, 1), RML::Vector3D(0.5f, 3.0f, 1)), true, paddleMaterial);
 
-	RGameObject * object1 = new RGameObject(0.0f, 0.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(0.0f, 0.0f, 1), RML::Vector3D(3.0f, 3.0f, 1)), true, APhysicsMaterial::DefaultMaterial);
+	RGameObject * paddleRight = new RGameObject(15.5f, 0.0f, 0.5f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(15.5f, 0.0f, 1), RML::Vector3D(16.0f, 3.0f, 1)), true, paddleMaterial);
 
-	RGameObject * object2 = new RGameObject(0.0, 6.0f, 3.0f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(0.0f, 6.0f, 1), RML::Vector3D(3.0f, 9.0f, 1)), true, APhysicsMaterial::DefaultMaterial);
-
-	gameObjects.push_back(object1);
-	gameObjects.push_back(object2);
-	g->add(object1);
-	g->add(object2);
+	gameObjects.push_back(paddleLeft);
+	gameObjects.push_back(paddleRight);
+	g->add(paddleLeft);
+	g->add(paddleRight);
 	g->add(g2);
 	layer0->addGroup(*g);
 	layer0->addGroup(*g2);
@@ -62,22 +59,17 @@ int main()
 	}
 	shader0->setUniform1iv("textures", textureIDs, 32);
 
-	ABoxCollider box(Vector3D(3, 3, 0), Vector3D(5, 5, 0));
-	ASphereCollider sphere(Vector3D(5.5, 5.5, 0), 1);
-
-	LOG(box.tryIntersect(sphere).getGap());
-
 	RWorld world(gameObjects);
 
 	APhysicsEngine awerere(*GameWindow, world, GameWindow->getHeight() / 9, GameWindow->getWidth() / 16);
-
-	object1->m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Gravity = RML::Vector2D(0.0f, 0.0f);
-	object2->m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Gravity = RML::Vector2D(0.0f, -1.0f);
-
 	RInputManager inputManager(*GameWindow);
-	inputManager.addKeyToKeyBinding("Pause", EKeyboardKeys::__ESCAPE);
-	inputManager.addKeyToKeyBinding("Jump", EKeyboardKeys::__UP);
-	inputManager.addKeyToKeyBinding("Jump", EKeyboardKeys::__S);
+	inputManager.addKeyToKeyBinding("Up", EKeyboardKeys::__UP);
+	inputManager.addKeyToKeyBinding("Down", EKeyboardKeys::__DOWN);
+
+	for (auto& item : world.getActiveObjects())
+	{
+		item->begin();
+	}
 
 	// See if maps are slowing things down. Also have a performance check
 	while (!GameWindow->closed())
@@ -90,6 +82,8 @@ int main()
 		// Miscellaneous testing stuff
 		shader0->enableShader();
 		shader0->setUniform2f("light_position", Vector2D(GameWindow->m_X * 16.0f / 1280.0f, (720.0f - GameWindow->m_Y) * 9.0f / 720.0f));
+
+		world.tick();
 
 		// Physics engine update
 		awerere.update(1.0f / 60.0f);
@@ -107,8 +101,8 @@ int main()
 	delete timer;
 	delete g;
 	delete g2;
-	delete object1;
-	delete object2;
+	delete paddleLeft;
+	delete paddleRight;
 	delete layer0;
 	delete shader0;
 	delete symphony;
@@ -116,3 +110,4 @@ int main()
 
 	return 0;
 }
+

@@ -54,3 +54,13 @@
 #include <awerere_physics_object.h>
 #include <awerere_physics_engine.h>
 #include <awerere_collision_engine.h>
+
+// User defined objects/classes
+class paddle : public Rubeus::RGameObject
+{
+public:
+	void begin() override;
+	void onHit(RGameObject * hammer, RGameObject * nail, Rubeus::Awerere::ACollideData & collisionData) override;
+	void onMessage(Rubeus::Message * msg) override;
+	void tick() override;
+};

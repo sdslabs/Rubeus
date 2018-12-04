@@ -40,6 +40,8 @@ namespace Rubeus
 		 */
 		RWorld(std::vector<RGameObject *> & gameObjects);
 
+		void tick();
+
 		/**
 		 * @fn		~RWorld()
 		 *

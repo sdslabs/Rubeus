@@ -67,6 +67,10 @@ namespace Rubeus
 		}
 	}
 
+	void RGameObject::begin()
+	{
+	}
+
 	void RGameObject::tick()
 	{
 	}
