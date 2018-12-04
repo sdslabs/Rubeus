@@ -21,7 +21,6 @@
 #define ILUT_USE_OPENGL
 
 // Dependencies
-#include <nvidia_enable.h>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <rubeus_maths_library.h>
@@ -55,12 +54,8 @@
 #include <awerere_physics_engine.h>
 #include <awerere_collision_engine.h>
 
-// User defined objects/classes
-class paddle : public Rubeus::RGameObject
-{
-public:
-	void begin() override;
-	void onHit(RGameObject * hammer, RGameObject * nail, Rubeus::Awerere::ACollideData & collisionData) override;
-	void onMessage(Rubeus::Message * msg) override;
-	void tick() override;
-};
+// Engine global objects
+//  TODO These need to be in a class
+extern Rubeus::GraphicComponents::RWindowComponent * GameWindow;
+
+extern Rubeus::RInputManager inputManager;

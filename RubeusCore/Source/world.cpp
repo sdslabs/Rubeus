@@ -15,7 +15,10 @@ namespace Rubeus
 	{
 		for (auto& item : m_ActiveGameObjects)
 		{
-			item->tick();
+			if (item->m_ThisTicks)
+			{
+				item->tick();
+			}
 		}
 	}
 

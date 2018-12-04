@@ -1,6 +1,12 @@
 // RubeusCore.cpp : Defines the entry point for the application.
 //
+#define ENGINE_COMPONENTS
+
 #include "RubeusCore.h"
+#include "Game/paddle.h"
+#include "Game/ball.h"
+
+#include <nvidia_enable.h>
 
 int main()
 {
@@ -10,12 +16,6 @@ int main()
 	using namespace UtilityComponents;
 	using namespace RML;
 	using namespace Awerere;
-
-	RWindowComponent * GameWindow = new RWindowComponent("Hello World",
-														 1280, 720,
-														 EWindowParameters::WINDOWED_MODE,
-														 EWindowParameters::NON_RESIZABLE_WINDOW,
-														 1);
 
 	RSymphony * symphony = new RSymphony();
 	symphony->addMusicTrack(1);
@@ -39,14 +39,24 @@ int main()
 	std::vector<RGameObject *> gameObjects;
 	APhysicsMaterial paddleMaterial;
 	paddleMaterial.makeMaterial(1.0f, RML::Vector2D(0.0f, 0.0f), 0.5f, 1.0f);
-	RGameObject * paddleLeft = new RGameObject(0.0f, 0.0f, 0.5f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(0.0f, 0.0f, 1), RML::Vector3D(0.5f, 3.0f, 1)), true, paddleMaterial);
 
-	RGameObject * paddleRight = new RGameObject(15.5f, 0.0f, 0.5f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(15.5f, 0.0f, 1), RML::Vector3D(16.0f, 3.0f, 1)), true, paddleMaterial);
+	APhysicsMaterial ballMaterial;
+	ballMaterial.makeMaterial(0.5f, RML::Vector2D(0.0f, 0.0f), 0.5f, 1.0f);
+
+	paddle * paddleLeft = new paddle(0.0f, 0.0f, 0.5f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(0.0f, 0.0f, 1), RML::Vector3D(0.5f, 3.0f, 1)), true, paddleMaterial);
+
+	paddle * paddleRight = new paddle(15.5f, 0.0f, 0.5f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(15.5f, 0.0f, 1), RML::Vector3D(16.0f, 3.0f, 1)), true, paddleMaterial);
+
+	ball * ball1 = new ball(8.0f, 4.5f, 0.1f, 0.1f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(8.0f, 4.5f, 1), RML::Vector3D(8.1f, 4.6f, 1)), true, ballMaterial);
+	ball1->m_PhysicsObject->m_Collider->m_Momentum.x = 2.0f;
+	ball1->m_PhysicsObject->m_Collider->m_Momentum.y = 2.0f;
 
 	gameObjects.push_back(paddleLeft);
 	gameObjects.push_back(paddleRight);
+	gameObjects.push_back(ball1);
 	g->add(paddleLeft);
 	g->add(paddleRight);
+	g->add(ball1);
 	g->add(g2);
 	layer0->addGroup(*g);
 	layer0->addGroup(*g2);
@@ -62,7 +72,7 @@ int main()
 	RWorld world(gameObjects);
 
 	APhysicsEngine awerere(*GameWindow, world, GameWindow->getHeight() / 9, GameWindow->getWidth() / 16);
-	RInputManager inputManager(*GameWindow);
+
 	inputManager.addKeyToKeyBinding("Up", EKeyboardKeys::__UP);
 	inputManager.addKeyToKeyBinding("Down", EKeyboardKeys::__DOWN);
 
@@ -103,6 +113,7 @@ int main()
 	delete g2;
 	delete paddleLeft;
 	delete paddleRight;
+	delete ball1;
 	delete layer0;
 	delete shader0;
 	delete symphony;
