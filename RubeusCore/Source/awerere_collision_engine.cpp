@@ -101,7 +101,6 @@ namespace Rubeus
 
 			if (cache.getIsIntersect() == true)
 			{
-				LOG("HIT");
 				// Record the relative coefficient of restitution
 				float e = min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution);
 				float mu = min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction);

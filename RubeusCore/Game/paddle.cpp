@@ -13,8 +13,6 @@ void paddle::begin()
 	using namespace ::Rubeus;
 
 	m_ThisTicks = true;
-	inputManager.addKeyToKeyBinding("Up", EKeyboardKeys::__UP);
-	inputManager.addKeyToKeyBinding("Down", EKeyboardKeys::__DOWN);
 }
 
 void paddle::onHit(RGameObject * hammer, RGameObject * nail, Rubeus::Awerere::ACollideData & collisionData)
