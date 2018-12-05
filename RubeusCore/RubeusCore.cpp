@@ -35,18 +35,18 @@ int main()
 
 	std::vector<RGameObject *> gameObjects;
 	APhysicsMaterial paddleMaterial;
-	paddleMaterial.makeMaterial(1000000.0f, RML::Vector2D(0.0f, 0.0f), 0.0f, 1.0f);
+	paddleMaterial.makeMaterial(1.0f, RML::Vector2D(0.0f, 0.0f), 0.0f, 1.0f);
 
 	APhysicsMaterial ballMaterial;
 	ballMaterial.makeMaterial(1.0f, RML::Vector2D(0.0f, 0.0f), 0.0f, 1.0f);
 
 	paddle * paddleLeft = new paddle(0.0f, 5.0f, 0.5f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(0.0f, 5.0f, 1), RML::Vector3D(0.5f, 8.0f, 1)), true, paddleMaterial);
-
+	paddleLeft->m_Name = "paddleLeft";
 	paddle * paddleRight = new paddle(15.5f, 5.0f, 0.5f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(15.5f, 5.0f, 1), RML::Vector3D(16.0f, 8.0f, 1)), true, paddleMaterial);
 
-	ball * ball1 = new ball(8.0f, 4.5f, 0.1f, 0.1f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(8.0f, 4.5f, 1), RML::Vector3D(8.1f, 4.6f, 1)), true, ballMaterial);
-	ball1->m_PhysicsObject->m_Collider->m_Momentum.x = 2.0f;
-	ball1->m_PhysicsObject->m_Collider->m_Momentum.y = 2.0f;
+	ball * ball1 = new ball(8.0f, 4.5f, 0.5f, 0.5f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(8.0f, 4.5f, 1), RML::Vector3D(8.5f, 5.0f, 1)), true, ballMaterial);
+	ball1->m_PhysicsObject->m_Collider->m_Momentum.x = 0.0f;
+	ball1->m_PhysicsObject->m_Collider->m_Momentum.y = 0.0f;
 
 	gameObjects.push_back(paddleLeft);
 	gameObjects.push_back(paddleRight);
@@ -72,6 +72,8 @@ int main()
 
 	inputManager.addKeyToKeyBinding("Up", EKeyboardKeys::__UP);
 	inputManager.addKeyToKeyBinding("Down", EKeyboardKeys::__DOWN);
+	inputManager.addKeyToKeyBinding("Left", EKeyboardKeys::__LEFT);
+	inputManager.addKeyToKeyBinding("Right", EKeyboardKeys::__RIGHT);
 
 	for (auto& item : world.getActiveObjects())
 	{

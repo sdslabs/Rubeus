@@ -43,28 +43,46 @@ void paddle::onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awere
 
 void paddle::tick()
 {
-	if (inputManager.isKeyBindingPressed("Up"))
-	{
-		this->m_PhysicsObject->m_Collider->m_Position.y += 0.1f;
-		this->m_Sprite->m_Position.y += 0.1f;
-	}
+	auto * temp = (Rubeus::Awerere::ABoxCollider *) m_PhysicsObject->m_Collider;
 
-	if (inputManager.isKeyBindingPressed("Down"))
+	if (this->m_Sprite->m_Position.y > 9.0f)
 	{
-		this->m_PhysicsObject->m_Collider->m_Position.y -= 0.1f;
-		this->m_Sprite->m_Position.y -= 0.1f;
-	}
-
-	if (this->m_Sprite->m_Position.y > 6.0f)
-	{
-		this->m_PhysicsObject->m_Collider->m_Position.y -= 0.1f;
-		this->m_Sprite->m_Position.y -= 0.1f;
+		temp->m_Momentum.y *= -1.0f;
 	}
 
 	if (this->m_Sprite->m_Position.y < 0.0f)
 	{
-		this->m_PhysicsObject->m_Collider->m_Position.y += 0.1f;
-		this->m_Sprite->m_Position.y += 0.1f;
+		temp->m_Momentum.y *= -1.0f;
+	}
+
+	if (inputManager.isKeyBindingPressed("Up"))
+	{
+		temp->m_Momentum.y += 0.1f;
+	}
+
+	if (inputManager.isKeyBindingPressed("Down"))
+	{
+		this->m_PhysicsObject->m_Collider->m_Momentum.y -= 0.1f;
+	}
+
+	if (inputManager.isKeyBindingPressed("Left"))
+	{
+		this->m_PhysicsObject->m_Collider->m_Momentum.x -= 0.1f;
+	}
+
+	if (inputManager.isKeyBindingPressed("Right"))
+	{
+		this->m_PhysicsObject->m_Collider->m_Momentum.x += 0.1f;
+	}
+
+	if (this->m_Sprite->m_Position.y > 6.0f)
+	{
+		this->m_PhysicsObject->m_Collider->m_Momentum.y -= 0.1f;
+	}
+
+	if (this->m_Sprite->m_Position.y < 0.0f)
+	{
+		this->m_PhysicsObject->m_Collider->m_Momentum.y += 0.1f;
 	}
 }
 

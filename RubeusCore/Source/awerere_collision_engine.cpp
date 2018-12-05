@@ -101,6 +101,7 @@ namespace Rubeus
 
 			if (cache.getIsIntersect() == true)
 			{
+				LOG("Hit");
 				if (!left.m_HasPhysics && !right.m_HasPhysics)
 				{
 					// Code copied from the end of this function for maximum performance.
@@ -143,7 +144,7 @@ namespace Rubeus
 				RML::Vector2D v2_perp = v2 - v2_parallel;
 				v2_perp.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
 
-				RML::Vector2D rel_parallel = v2_parallel - v1_parallel;
+				RML::Vector2D rel_parallel = v1_parallel - v2_parallel;
 
 				if (rel_parallel.multiplyDot(normal) < 0.0f)
 				{
@@ -161,7 +162,7 @@ namespace Rubeus
 				}
 				else
 				{
-					v1_perpFinal = v1_perp + v2_perp * (m2 * mu * invm1);
+					v1_perpFinal = v1_perp.subtract(v2_perp.multiplyFloat(m2 * mu * invm1));
 					v2_perpFinal = v2_perp.subtract(v1_perp.multiplyFloat(m1 * mu * invm2));
 				}
 
