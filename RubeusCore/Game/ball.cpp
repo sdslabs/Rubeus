@@ -13,7 +13,7 @@ void ball::onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awerere
 
 void ball::tick()
 {
-	if (this->m_PhysicsObject->m_Collider->m_Position.y > 9 || this->m_PhysicsObject->m_Collider->m_Position.y < 0)
+	if (this->m_PhysicsObject->m_Collider->m_Position.y > 8.5 || this->m_PhysicsObject->m_Collider->m_Position.y < 0)
 	{
 		this->m_PhysicsObject->m_Collider->m_Momentum.y *= -1.0f;
 	}

@@ -45,8 +45,8 @@ int main()
 	paddle * paddleRight = new paddle(15.5f, 5.0f, 0.5f, 3.0f, "Assets/debug.png", false, EColliderType::BOX, new ABoxCollider(RML::Vector3D(15.5f, 5.0f, 1), RML::Vector3D(16.0f, 8.0f, 1)), true, paddleMaterial);
 
 	ball * ball1 = new ball(8.0f, 4.5f, 0.5f, 0.5f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(8.0f, 4.5f, 1), RML::Vector3D(8.5f, 5.0f, 1)), true, ballMaterial);
-	ball1->m_PhysicsObject->m_Collider->m_Momentum.x = 3.0f;
-	ball1->m_PhysicsObject->m_Collider->m_Momentum.y = 1.0f;
+	ball1->m_PhysicsObject->m_Collider->m_Momentum.x = 8.0f;
+	ball1->m_PhysicsObject->m_Collider->m_Momentum.y = 0.5;
 
 	gameObjects.push_back(paddleLeft);
 	gameObjects.push_back(paddleRight);
