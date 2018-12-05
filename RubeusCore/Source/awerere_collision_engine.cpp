@@ -162,24 +162,58 @@ namespace Rubeus
 				}
 				else
 				{
-					v1_perpFinal = v1_perp.subtract(v2_perp.multiplyFloat(m2 * mu * invm1));
-					v2_perpFinal = v2_perp.subtract(v1_perp.multiplyFloat(m1 * mu * invm2));
+					static auto temp = v2_perp;
+					if (left.m_HasPhysics)
+					{
+						v2_perpFinal = temp.subtract(v1_perp.multiplyFloat(m1 * mu * invm2));
+					}
+					else
+					{
+						v2_perpFinal.x = 1.0f * v2_perp.x;
+						v2_perpFinal.y = 1.0f * v2_perp.y;
+					}
+
+					if (right.m_HasPhysics)
+					{
+						v1_perpFinal = v1_perp.subtract(v2_perp.multiplyFloat(m2 * mu * invm1));
+					}
+					else
+					{
+						v1_perpFinal.x = 1.0f * v1_perp.x;
+						v1_perpFinal.y = 1.0f * v1_perp.y;
+					}
 				}
 
 				RML::Vector2D v1_parallelFinal;
 				RML::Vector2D v2_parallelFinal;
 
-				v2_parallelFinal.x = v1_parallel.x * m1 + v2_parallel.x * m2 + (v1_parallel.x - v2_parallel.x) * m1 * e;
-				v2_parallelFinal.y = v1_parallel.y * m1 + v2_parallel.y * m2 + (v1_parallel.y - v2_parallel.y) * m1 * e;
-				v2_parallelFinal.x /= m1 + m2;
-				v2_parallelFinal.y /= m1 + m2;
-				v2_parallelFinal.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
+				if (left.m_HasPhysics)
+				{
+					v2_parallelFinal.x = v1_parallel.x * m1 + v2_parallel.x * m2 + (v1_parallel.x - v2_parallel.x) * m1 * e;
+					v2_parallelFinal.y = v1_parallel.y * m1 + v2_parallel.y * m2 + (v1_parallel.y - v2_parallel.y) * m1 * e;
+					v2_parallelFinal.x /= m1 + m2;
+					v2_parallelFinal.y /= m1 + m2;
+					v2_parallelFinal.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
+				}
+				else
+				{
+					v2_parallelFinal.x = -1.0f * v2_parallel.x;
+					v2_parallelFinal.y = -1.0f * v2_parallel.y;
+				}
 
-				v1_parallelFinal.x = (v1_parallel.x - v2_parallel.x) * e + v2_parallelFinal.x;
-				v1_parallelFinal.y = (v1_parallel.y - v2_parallel.y) * e + v2_parallelFinal.y;
-				v1_parallelFinal.x /= m1 + m2;
-				v1_parallelFinal.y /= m1 + m2;
-				v1_parallelFinal.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
+				if (right.m_HasPhysics)
+				{
+					v1_parallelFinal.x = (v1_parallel.x - v2_parallel.x) * e + v2_parallelFinal.x;
+					v1_parallelFinal.y = (v1_parallel.y - v2_parallel.y) * e + v2_parallelFinal.y;
+					v1_parallelFinal.x /= m1 + m2;
+					v1_parallelFinal.y /= m1 + m2;
+					v1_parallelFinal.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
+				}
+				else
+				{
+					v1_parallelFinal.x = -1.0f * v1_parallel.x;
+					v1_parallelFinal.y = -1.0f * v1_parallel.y;
+				}
 
 				// Set the final values in the objects
 				if (left.m_HasPhysics)
