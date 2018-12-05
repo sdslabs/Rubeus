@@ -11,6 +11,17 @@ namespace Rubeus
 	{
 	}
 
+	void RWorld::tick()
+	{
+		for (auto& item : m_ActiveGameObjects)
+		{
+			if (item->m_ThisTicks)
+			{
+				item->tick();
+			}
+		}
+	}
+
 	RWorld::~RWorld()
 	{
 	}

@@ -14,7 +14,7 @@
 #include <logger_component.h>
 #include <loader_component.h>
 #include <master_component.h>
-#include <input_component.h>
+#include <input_manager.h>
 #include <awerere_physics_object.h>
 
 namespace Rubeus
@@ -53,8 +53,6 @@ namespace Rubeus
 		class RWindowComponent : public RMasterComponent
 		{
 		private:
-			/** @brief	GLFW Window object */
-			GLFWwindow * m_Window;
 
 			/** @brief	The width of the window */
 			int m_Width;
@@ -68,6 +66,9 @@ namespace Rubeus
 		public:
 			/** @brief	Mouse positions */
 			static int m_X, m_Y;
+
+			/** @brief	GLFW Window object */
+			GLFWwindow * m_Window;
 
 			/**
 			 * @fn		bool RWindowComponent::initWindow(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW);
@@ -168,15 +169,8 @@ namespace Rubeus
 			 * @param 		  	height	The height of the resized window.
 			 */
 			friend void windowResizeCallback(GLFWwindow * window, int width, int height);
+
 		public:
-
-			// TODO: Add docs
-			// Temporary input handling until Input Components are finalised
-			static void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos);
-			friend void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods);
-			friend void scrollCallback(GLFWwindow *window, double xoffset, double yoffset);
-			friend void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);
-
 			/**
 			 * @fn		inline const int & getWidth() const
 			 *

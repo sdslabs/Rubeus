@@ -67,11 +67,15 @@ namespace Rubeus
 		}
 	}
 
+	void RGameObject::begin()
+	{
+	}
+
 	void RGameObject::tick()
 	{
 	}
 
-	void RGameObject::onHit(RGameObject * hammer, RGameObject * nail, Awerere::ACollideData & collisionData)
+	void RGameObject::onHit(RGameObject * hammer, RGameObject * nail, const Awerere::ACollideData & collisionData)
 	{
 	}
 

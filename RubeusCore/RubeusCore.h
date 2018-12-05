@@ -21,7 +21,6 @@
 #define ILUT_USE_OPENGL
 
 // Dependencies
-#include <nvidia_enable.h>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <rubeus_maths_library.h>
@@ -29,6 +28,7 @@
 // Rubeus specific includes
 #include <logger_component.h>
 #include <loader_component.h>
+#include <input_manager.h>
 #include <window_component.h>
 #include <shader_component.h>
 #include <master_component.h>
@@ -53,3 +53,9 @@
 #include <awerere_physics_object.h>
 #include <awerere_physics_engine.h>
 #include <awerere_collision_engine.h>
+
+// Engine global objects
+//  TODO These need to be in a class
+extern Rubeus::GraphicComponents::RWindowComponent * GameWindow;
+
+extern Rubeus::RInputManager inputManager;

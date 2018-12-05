@@ -101,7 +101,21 @@ namespace Rubeus
 
 			if (cache.getIsIntersect() == true)
 			{
-				LOG("HIT");
+				LOG("Hit");
+				if (!left.m_HasPhysics && !right.m_HasPhysics)
+				{
+					// Code copied from the end of this function for maximum performance.
+					// Hit events can only be created before assigning the appropriate velocities when the object physics is disabled
+					if (left.m_GeneratesHit || right.m_GeneratesHit)
+					{
+						// Call user-defined hit response
+						left.onHit(&left, &right, cache);
+						right.onHit(&right, &left, cache);
+					}
+
+					return;
+				}
+
 				// Record the relative coefficient of restitution
 				float e = min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution);
 				float mu = min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction);
@@ -109,34 +123,114 @@ namespace Rubeus
 				// Store temporary variables
 				float m1 = left.m_PhysicsObject->m_PhysicsMaterial.m_Mass;
 				float m2 = right.m_PhysicsObject->m_PhysicsMaterial.m_Mass;
+				float invm1 = (m1 >= 1000000.0f) ? 0.0f : 1.0f / m1;
+				float invm2 = (m2 >= 1000000.0f) ? 0.0f : 1.0f / m2;
 
 				RML::Vector2D normal = cache.getCollisionNormal();
 				normal.toUnitVector();
 
-				RML::Vector2D v1 = left.m_PhysicsObject->m_Collider->m_Momentum * (1.0f / m1);
-				RML::Vector2D v2 = right.m_PhysicsObject->m_Collider->m_Momentum * (1.0f / m2);
+				RML::Vector2D v1 = left.m_PhysicsObject->m_Collider->m_Momentum * invm1;
+				RML::Vector2D v2 = right.m_PhysicsObject->m_Collider->m_Momentum * invm2;
 
 				RML::Vector2D v1_parallel = normal * v1.multiplyDot(normal);
+				v1_parallel.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
+
 				RML::Vector2D v1_perp = v1 - v1_parallel;
+				v1_perp.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
 
 				RML::Vector2D v2_parallel = normal * v2.multiplyDot(normal);
-				RML::Vector2D v2_perp = v2 - v2_parallel;
+				v2_parallel.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
 
-				RML::Vector2D v1_perpFinal = v1_perp - v2_perp * m2 * mu * (1.0f / m1);
-				RML::Vector2D v2_perpFinal = v2_perp - v1_perp * m1 * mu * (1.0f / m2);
+				RML::Vector2D v2_perp = v2 - v2_parallel;
+				v2_perp.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
+
+				RML::Vector2D rel_parallel = v1_parallel - v2_parallel;
+
+				if (rel_parallel.multiplyDot(normal) < 0.0f)
+				{
+					LOG("Skipped");
+					return;
+				}
+
+				RML::Vector2D v1_perpFinal;
+				RML::Vector2D v2_perpFinal;
+
+				if (v1_perp == v2_perp)
+				{
+					v1_perpFinal = v1_perp;
+					v2_perpFinal = v2_perp;
+				}
+				else
+				{
+					static auto temp = v2_perp;
+					if (left.m_HasPhysics)
+					{
+						v2_perpFinal = temp.subtract(v1_perp.multiplyFloat(m1 * mu * invm2));
+					}
+					else
+					{
+						v2_perpFinal.x = 1.0f * v2_perp.x;
+						v2_perpFinal.y = 1.0f * v2_perp.y;
+					}
+
+					if (right.m_HasPhysics)
+					{
+						v1_perpFinal = v1_perp.subtract(v2_perp.multiplyFloat(m2 * mu * invm1));
+					}
+					else
+					{
+						v1_perpFinal.x = 1.0f * v1_perp.x;
+						v1_perpFinal.y = 1.0f * v1_perp.y;
+					}
+				}
 
 				RML::Vector2D v1_parallelFinal;
 				RML::Vector2D v2_parallelFinal;
 
-				v1_parallelFinal = v2_parallel * m2 * (1.0f / m1) * e;
-				v2_parallelFinal = v1_parallel * m1 * (1.0f / m2) * e;
+				if (left.m_HasPhysics)
+				{
+					v2_parallelFinal.x = v1_parallel.x * m1 + v2_parallel.x * m2 + (v1_parallel.x - v2_parallel.x) * m1 * e;
+					v2_parallelFinal.y = v1_parallel.y * m1 + v2_parallel.y * m2 + (v1_parallel.y - v2_parallel.y) * m1 * e;
+					v2_parallelFinal.x /= m1 + m2;
+					v2_parallelFinal.y /= m1 + m2;
+					v2_parallelFinal.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
+				}
+				else
+				{
+					v2_parallelFinal.x = -1.0f * v2_parallel.x;
+					v2_parallelFinal.y = -1.0f * v2_parallel.y;
+				}
+
+				if (right.m_HasPhysics)
+				{
+					v1_parallelFinal.x = (v1_parallel.x - v2_parallel.x) * e + v2_parallelFinal.x;
+					v1_parallelFinal.y = (v1_parallel.y - v2_parallel.y) * e + v2_parallelFinal.y;
+					v1_parallelFinal.x /= m1 + m2;
+					v1_parallelFinal.y /= m1 + m2;
+					v1_parallelFinal.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
+				}
+				else
+				{
+					v1_parallelFinal.x = -1.0f * v1_parallel.x;
+					v1_parallelFinal.y = -1.0f * v1_parallel.y;
+				}
 
 				// Set the final values in the objects
-				left.m_PhysicsObject->m_Collider->m_Momentum = (v1_parallelFinal + v1_perpFinal) * m1;
-				right.m_PhysicsObject->m_Collider->m_Momentum = (v2_parallelFinal + v2_perpFinal) * m2;
+				if (left.m_HasPhysics)
+				{
+					left.m_PhysicsObject->m_Collider->m_Momentum = (v1_parallelFinal + v1_perpFinal) * m1;
+				}
+				if (right.m_HasPhysics)
+				{
+					right.m_PhysicsObject->m_Collider->m_Momentum = (v2_parallelFinal + v2_perpFinal) * m2;
+				}
 
-				// Call user-defined hit response
-				left.onHit(&left, &right, cache);
+				if (left.m_GeneratesHit || right.m_GeneratesHit)
+				{
+					// Call user-defined hit response
+					left.onHit(&left, &right, cache);
+					right.onHit(&right, &left, cache);
+				}
 			}
 		}
 

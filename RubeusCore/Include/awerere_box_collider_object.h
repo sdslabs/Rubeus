@@ -24,12 +24,6 @@ namespace Rubeus
 		class ABoxCollider : public ACollider
 		{
 		private:
-			/** @brief	Lower left coordinates of the box collider */
-			RML::Vector3D m_MinExtent;
-
-			/** @brief	Upper right coordinates of the box collider */
-			RML::Vector3D m_MaxExtent;
-
 			/**
 			 * @fn		RML::Vector3D calculateCenter(RML::Vector3D & ll, RML::Vector3D & ur)
 			 *
@@ -44,6 +38,12 @@ namespace Rubeus
 			RML::Vector3D calculateCenter(const RML::Vector3D & ll, const RML::Vector3D & ur);
 
 		public:
+			/** @brief	Lower left coordinates of the box collider */
+			RML::Vector3D m_MinExtent;
+
+			/** @brief	Upper right coordinates of the box collider */
+			RML::Vector3D m_MaxExtent;
+
 			/**
 			 * @fn		ABoxCollider(RML::Vector3D & minExtent, const RML::Vector3D & maxExtent)
 			 *

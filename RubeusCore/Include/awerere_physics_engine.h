@@ -7,7 +7,7 @@
 #pragma once
 
 #include <vector>
-#include <map>
+#include <unordered_map>
 
 #include <world.h>
 #include <awerere_collision_engine.h>
@@ -40,7 +40,7 @@ namespace Rubeus
 			std::vector<std::string> m_YFlags;
 
 			/** @brief	The container for all impulses added during a frame render */
-			static std::map<ACollider *, RML::Vector2D> ImpulsesGeneratedPerImpulseCalculationFrame;
+			static std::unordered_map<ACollider *, RML::Vector2D> ImpulsesGeneratedPerImpulseCalculationFrame;
 
 			/** @brief	The max amount of frames the impulse is added */
 			static int ImpulseCalculationFrames;

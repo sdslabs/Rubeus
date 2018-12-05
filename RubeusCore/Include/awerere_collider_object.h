@@ -84,6 +84,8 @@ namespace Rubeus
 			 */
 			virtual ~ACollider();
 
+			ACollideData tryIntersect(ACollider & collider);
+
 			/**
 			 * @fn		virtual ACollideData tryIntersect(ABoxCollider & box) = 0
 			 *

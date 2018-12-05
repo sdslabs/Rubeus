@@ -7,6 +7,7 @@ link_directories(Source/)
 
 file(GLOB_RECURSE SOURCES
     Source/*.cpp
+    Game/*.cpp
 )
 
 # Remove this line if you want to remove Visual Leak Detection(VLD) reports in Debug mode.
@@ -29,7 +30,7 @@ endif(WIN32)
 
 if(UNIX)
     add_library(vorbis STATIC IMPORTED)
-    
+
     target_link_libraries(RubeusCore -ldl sfml-audio sfml-network sfml-graphics sfml-window sfml-system ${OPENGL_LIBRARIES} GLEW glfw openal ${IL_LIBRARIES} ${ILU_LIBRARIES})
 endif(UNIX)
 
