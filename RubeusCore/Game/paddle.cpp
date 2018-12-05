@@ -16,7 +16,7 @@ void paddle::begin()
 	m_ThisTicks = true;
 }
 
-void paddle::onHit(RGameObject * hammer, RGameObject * nail, Rubeus::Awerere::ACollideData & collisionData)
+void paddle::onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awerere::ACollideData & collisionData)
 {
 	if (this->m_PhysicsObject->m_Collider->m_Position.x > 15.0f)
 	{

@@ -109,6 +109,7 @@ namespace Rubeus
 					{
 						// Call user-defined hit response
 						left.onHit(&left, &right, cache);
+						right.onHit(&right, &left, cache);
 					}
 
 					return;
@@ -142,14 +143,13 @@ namespace Rubeus
 				RML::Vector2D v2_perp = v2 - v2_parallel;
 				v2_perp.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
 
-				LOG(cache.getGap());
-				static int i = 0;
-				if (i > 0)
+				RML::Vector2D rel_parallel = v2_parallel - v1_parallel;
+
+				if (rel_parallel.multiplyDot(normal) < 0.0f)
 				{
-					LOG("Skipped*************************");
+					LOG("Skipped");
 					return;
 				}
-				i++;
 
 				RML::Vector2D v1_perpFinal;
 				RML::Vector2D v2_perpFinal;
@@ -194,6 +194,7 @@ namespace Rubeus
 				{
 					// Call user-defined hit response
 					left.onHit(&left, &right, cache);
+					right.onHit(&right, &left, cache);
 				}
 			}
 		}

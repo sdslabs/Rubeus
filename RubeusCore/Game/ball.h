@@ -12,7 +12,7 @@ public:
 	}
 
 	void begin() override;
-	void onHit(RGameObject * hammer, RGameObject * nail, Rubeus::Awerere::ACollideData & collisionData) override;
+	void onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awerere::ACollideData & collisionData) override;
 	void onMessage(Rubeus::Message * msg) override;
 	void tick() override;
 };

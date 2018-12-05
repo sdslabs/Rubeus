@@ -109,7 +109,7 @@ namespace Rubeus
 		virtual void tick() override;
 
 		/**
-		 * @fn		virtual void onHit(RGameObject * hammer, RGameObject * nail, Awerere::ACollideData & collisionData)
+		 * @fn		virtual void onHit(RGameObject * hammer, RGameObject * nail, const Awerere::ACollideData & collisionData)
 		 *
 		 * @brief	User defined function called whenever a hit event is generated
 		 *
@@ -117,7 +117,7 @@ namespace Rubeus
 		 * @param	nail				The object getting hit
 		 * @param	collisionData		Details of the collision
 		 */
-		virtual void onHit(RGameObject * hammer, RGameObject * nail, Awerere::ACollideData & collisionData);
+		virtual void onHit(RGameObject * hammer, RGameObject * nail, const Awerere::ACollideData & collisionData);
 
 		/**
 		 * @fn		inline void addToTickQueue()

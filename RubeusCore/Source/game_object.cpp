@@ -75,7 +75,7 @@ namespace Rubeus
 	{
 	}
 
-	void RGameObject::onHit(RGameObject * hammer, RGameObject * nail, Awerere::ACollideData & collisionData)
+	void RGameObject::onHit(RGameObject * hammer, RGameObject * nail, const Awerere::ACollideData & collisionData)
 	{
 	}
 
