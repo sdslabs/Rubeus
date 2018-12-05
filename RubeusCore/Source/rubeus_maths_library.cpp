@@ -22,6 +22,14 @@ namespace RML
 		this->y = y;
 	}
 
+	Vector2D & Vector2D::roundTo(const float & pivotX, const float & errorX, const float & pivotY, const float & errorY)
+	{
+		this->x = abs(x - pivotX) <= errorX ? pivotX : x;
+		this->y = abs(y - pivotY) <= errorY ? pivotY : y;
+
+		return *this;
+	}
+
 	float Vector2D::getLength(Vector2D & vector) const
 	{
 		return sqrt((vector.x * vector.x) + (vector.y * vector.y));
@@ -123,7 +131,7 @@ namespace RML
 		return left.add(right);
 	}
 
-	Vector2D & operator-(Vector2D left, const Vector2D &right)
+	Vector2D operator-(Vector2D left, const Vector2D &right)
 	{
 		return left.subtract(right);
 	}

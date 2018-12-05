@@ -104,8 +104,7 @@ namespace Rubeus
 				if (!left.m_HasPhysics && !right.m_HasPhysics)
 				{
 					// Code copied from the end of this function for maximum performance.
-
-					// Hit events can only be created before the appropriate velocities are assigned if the object physics is disabled
+					// Hit events can only be created before assigning the appropriate velocities when the object physics is disabled
 					if (left.m_GeneratesHit || right.m_GeneratesHit)
 					{
 						// Call user-defined hit response
@@ -132,19 +131,54 @@ namespace Rubeus
 				RML::Vector2D v2 = right.m_PhysicsObject->m_Collider->m_Momentum * invm2;
 
 				RML::Vector2D v1_parallel = normal * v1.multiplyDot(normal);
+				v1_parallel.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
+
 				RML::Vector2D v1_perp = v1 - v1_parallel;
+				v1_perp.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
 
 				RML::Vector2D v2_parallel = normal * v2.multiplyDot(normal);
-				RML::Vector2D v2_perp = v2 - v2_parallel;
+				v2_parallel.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
 
-				RML::Vector2D v1_perpFinal = v1_perp - v2_perp * m2 * mu * invm1;
-				RML::Vector2D v2_perpFinal = v2_perp - v1_perp * m1 * mu * invm2;
+				RML::Vector2D v2_perp = v2 - v2_parallel;
+				v2_perp.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
+
+				LOG(cache.getGap());
+				static int i = 0;
+				if (i > 0)
+				{
+					LOG("Skipped*************************");
+					return;
+				}
+				i++;
+
+				RML::Vector2D v1_perpFinal;
+				RML::Vector2D v2_perpFinal;
+
+				if (v1_perp == v2_perp)
+				{
+					v1_perpFinal = v1_perp;
+					v2_perpFinal = v2_perp;
+				}
+				else
+				{
+					v1_perpFinal = v1_perp + v2_perp * (m2 * mu * invm1);
+					v2_perpFinal = v2_perp.subtract(v1_perp.multiplyFloat(m1 * mu * invm2));
+				}
 
 				RML::Vector2D v1_parallelFinal;
 				RML::Vector2D v2_parallelFinal;
 
-				v1_parallelFinal = v2_parallel * m2 * invm1 * e;
-				v2_parallelFinal = v1_parallel * m1 * invm2 * e;
+				v2_parallelFinal.x = v1_parallel.x * m1 + v2_parallel.x * m2 + (v1_parallel.x - v2_parallel.x) * m1 * e;
+				v2_parallelFinal.y = v1_parallel.y * m1 + v2_parallel.y * m2 + (v1_parallel.y - v2_parallel.y) * m1 * e;
+				v2_parallelFinal.x /= m1 + m2;
+				v2_parallelFinal.y /= m1 + m2;
+				v2_parallelFinal.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
+
+				v1_parallelFinal.x = (v1_parallel.x - v2_parallel.x) * e + v2_parallelFinal.x;
+				v1_parallelFinal.y = (v1_parallel.y - v2_parallel.y) * e + v2_parallelFinal.y;
+				v1_parallelFinal.x /= m1 + m2;
+				v1_parallelFinal.y /= m1 + m2;
+				v1_parallelFinal.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
 
 				// Set the final values in the objects
 				if (left.m_HasPhysics)
