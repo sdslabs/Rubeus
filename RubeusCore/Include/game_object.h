@@ -43,7 +43,7 @@ namespace Rubeus
 		/** @brief	Whether this gameobject is a group of other child gameobjects */
 		bool m_IsGroup = false;
 
-		/** @brief	Whether this gameobject obeys physics */
+		/** @brief	Whether this gameobject obeys physics and responds to collisions */
 		bool m_HasPhysics = false;
 
 		/** @brief	Whether this gameobject generates hit events */

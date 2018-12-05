@@ -31,17 +31,14 @@ int main()
 	RGroup * g = new RGroup(Matrix4::translation(Vector3D(0.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
 	RGroup * g2 = new RGroup(Matrix4::translation(Vector3D(0.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
 
-	RTimer * timer = new RTimer(2);
-	timer->setFrameCounter();
-
 	APhysicsMaterial mat;
 
 	std::vector<RGameObject *> gameObjects;
 	APhysicsMaterial paddleMaterial;
-	paddleMaterial.makeMaterial(1.0f, RML::Vector2D(0.0f, 0.0f), 0.5f, 1.0f);
+	paddleMaterial.makeMaterial(1000000.0f, RML::Vector2D(0.0f, 0.0f), 0.0f, 1.0f);
 
 	APhysicsMaterial ballMaterial;
-	ballMaterial.makeMaterial(0.5f, RML::Vector2D(0.0f, 0.0f), 0.5f, 1.0f);
+	ballMaterial.makeMaterial(1.0f, RML::Vector2D(0.0f, 0.0f), 0.0f, 1.0f);
 
 	paddle * paddleLeft = new paddle(0.0f, 5.0f, 0.5f, 3.0f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(0.0f, 5.0f, 1), RML::Vector3D(0.5f, 8.0f, 1)), true, paddleMaterial);
 
@@ -80,6 +77,9 @@ int main()
 	{
 		item->begin();
 	}
+
+	RTimer * timer = new RTimer(2);
+	timer->setFrameCounter();
 
 	// See if maps are slowing things down. Also have a performance check
 	while (!GameWindow->closed())

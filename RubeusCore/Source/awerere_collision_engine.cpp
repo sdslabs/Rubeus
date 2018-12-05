@@ -101,6 +101,20 @@ namespace Rubeus
 
 			if (cache.getIsIntersect() == true)
 			{
+				if (!left.m_HasPhysics && !right.m_HasPhysics)
+				{
+					// Code copied from the end of this function for maximum performance.
+
+					// Hit events can only be created before the appropriate velocities are assigned if the object physics is disabled
+					if (left.m_GeneratesHit || right.m_GeneratesHit)
+					{
+						// Call user-defined hit response
+						left.onHit(&left, &right, cache);
+					}
+
+					return;
+				}
+
 				// Record the relative coefficient of restitution
 				float e = min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution);
 				float mu = min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction);
@@ -108,12 +122,14 @@ namespace Rubeus
 				// Store temporary variables
 				float m1 = left.m_PhysicsObject->m_PhysicsMaterial.m_Mass;
 				float m2 = right.m_PhysicsObject->m_PhysicsMaterial.m_Mass;
+				float invm1 = (m1 >= 1000000.0f) ? 0.0f : 1.0f / m1;
+				float invm2 = (m2 >= 1000000.0f) ? 0.0f : 1.0f / m2;
 
 				RML::Vector2D normal = cache.getCollisionNormal();
 				normal.toUnitVector();
 
-				RML::Vector2D v1 = left.m_PhysicsObject->m_Collider->m_Momentum * (1.0f / m1);
-				RML::Vector2D v2 = right.m_PhysicsObject->m_Collider->m_Momentum * (1.0f / m2);
+				RML::Vector2D v1 = left.m_PhysicsObject->m_Collider->m_Momentum * invm1;
+				RML::Vector2D v2 = right.m_PhysicsObject->m_Collider->m_Momentum * invm2;
 
 				RML::Vector2D v1_parallel = normal * v1.multiplyDot(normal);
 				RML::Vector2D v1_perp = v1 - v1_parallel;
@@ -121,21 +137,30 @@ namespace Rubeus
 				RML::Vector2D v2_parallel = normal * v2.multiplyDot(normal);
 				RML::Vector2D v2_perp = v2 - v2_parallel;
 
-				RML::Vector2D v1_perpFinal = v1_perp - v2_perp * m2 * mu * (1.0f / m1);
-				RML::Vector2D v2_perpFinal = v2_perp - v1_perp * m1 * mu * (1.0f / m2);
+				RML::Vector2D v1_perpFinal = v1_perp - v2_perp * m2 * mu * invm1;
+				RML::Vector2D v2_perpFinal = v2_perp - v1_perp * m1 * mu * invm2;
 
 				RML::Vector2D v1_parallelFinal;
 				RML::Vector2D v2_parallelFinal;
 
-				v1_parallelFinal = v2_parallel * m2 * (1.0f / m1) * e;
-				v2_parallelFinal = v1_parallel * m1 * (1.0f / m2) * e;
+				v1_parallelFinal = v2_parallel * m2 * invm1 * e;
+				v2_parallelFinal = v1_parallel * m1 * invm2 * e;
 
 				// Set the final values in the objects
-				left.m_PhysicsObject->m_Collider->m_Momentum = (v1_parallelFinal + v1_perpFinal) * m1;
-				right.m_PhysicsObject->m_Collider->m_Momentum = (v2_parallelFinal + v2_perpFinal) * m2;
+				if (left.m_HasPhysics)
+				{
+					left.m_PhysicsObject->m_Collider->m_Momentum = (v1_parallelFinal + v1_perpFinal) * m1;
+				}
+				if (right.m_HasPhysics)
+				{
+					right.m_PhysicsObject->m_Collider->m_Momentum = (v2_parallelFinal + v2_perpFinal) * m2;
+				}
 
-				// Call user-defined hit response
-				left.onHit(&left, &right, cache);
+				if (left.m_GeneratesHit || right.m_GeneratesHit)
+				{
+					// Call user-defined hit response
+					left.onHit(&left, &right, cache);
+				}
 			}
 		}
 

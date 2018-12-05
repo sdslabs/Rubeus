@@ -1,4 +1,5 @@
 #include "paddle.h"
+#include "ball.h"
 
 Rubeus::GraphicComponents::RWindowComponent * GameWindow = new Rubeus::GraphicComponents::RWindowComponent("Hello World",
 																										   1280, 720,
@@ -17,6 +18,27 @@ void paddle::begin()
 
 void paddle::onHit(RGameObject * hammer, RGameObject * nail, Rubeus::Awerere::ACollideData & collisionData)
 {
+	if (this->m_PhysicsObject->m_Collider->m_Position.x > 15.0f)
+	{
+		LOG(hammer->m_PhysicsObject->m_Collider->tryIntersect(*nail->m_PhysicsObject->m_Collider).getIsIntersect());
+	}
+
+	RGameObject * temp;
+
+	temp = reinterpret_cast<ball *>(hammer);
+
+	if (temp == NULL)
+	{
+		temp = reinterpret_cast<ball *>(nail);
+
+		LOG("hammer hit");
+	}
+	else
+	{
+		LOG("nail hit");
+
+		LOG(collisionData.getCollisionNormal());
+	}
 }
 
 void paddle::tick()

@@ -9,25 +9,6 @@ void ball::begin()
 
 void ball::onHit(RGameObject * hammer, RGameObject * nail, Rubeus::Awerere::ACollideData & collisionData)
 {
-	if (this->m_PhysicsObject->m_Collider->m_Position.x > 15.0f)
-	{
-		LOG(hammer->m_PhysicsObject->m_Collider->tryIntersect(*nail->m_PhysicsObject->m_Collider).getIsIntersect());
-	}
-
-	RGameObject * temp;
-
-	temp = reinterpret_cast<ball *>(hammer);
-
-	if (temp == NULL)
-	{
-		temp = reinterpret_cast<ball *>(nail);
-
-		LOG("hammer hit");
-	}
-	else
-	{
-		LOG("nail hit");
-	}
 }
 
 void ball::tick()
