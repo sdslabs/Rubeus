@@ -74,9 +74,15 @@ int main()
 	object1->m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Gravity = RML::Vector2D(0.0f, 0.0f);
 	object2->m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Gravity = RML::Vector2D(0.0f, -1.0f);
 
+	RInputManager inputManager(*GameWindow);
+	inputManager.addKeyToKeyBinding("Pause", EKeyboardKeys::__ESCAPE);
+	inputManager.addKeyToKeyBinding("Jump", EKeyboardKeys::__UP);
+	inputManager.addKeyToKeyBinding("Jump", EKeyboardKeys::__S);
+
 	// See if maps are slowing things down. Also have a performance check
 	while (!GameWindow->closed())
 	{
+		//inputManager.update();
 		// TODO: Message bus needs references to all systems here
 		// Clear Window buffer
 		GameWindow->clearWindow();

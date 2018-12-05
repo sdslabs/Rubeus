@@ -3,10 +3,10 @@
  *
  * @brief	Implements the RWindowComponent class
  */
+#include <window_component.h>
+
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
-
-#include <window_component.h>
 
 namespace Rubeus
 {
@@ -191,33 +191,33 @@ namespace Rubeus
 		{
 			switch (msg->m_Type)
 			{
-			case system_ok:
-				ASSERT("Message system OK");
-				break;
+				case system_ok:
+					ASSERT("Message system OK");
+					break;
 
-			case change_window_title:
-				setWindowTitle(boost::any_cast<const char *>(msg->m_Data));
-				break;
+				case change_window_title:
+					setWindowTitle(boost::any_cast<const char *>(msg->m_Data));
+					break;
 
-			case get_loaded_image:
-			{
-				ASSERT("Image received");
-				Image & image = boost::any_cast<Image &>(msg->m_Data);
-
-				for (unsigned int i = 0; i < image.m_Height * image.m_Width * 3; i += 3)
+				case get_loaded_image:
 				{
-					LOG("Red:");
-					LOG((int)image.m_Image[i]);
-					LOG("Green:");
-					LOG((int)image.m_Image[i + 1]);
-					LOG("Blue:");
-					LOG((int)image.m_Image[i + 2]);
-				}
-			}
-			break;
+					ASSERT("Image received");
+					Image & image = boost::any_cast<Image &>(msg->m_Data);
 
-			default:
+					for (unsigned int i = 0; i < image.m_Height * image.m_Width * 3; i += 3)
+					{
+						LOG("Red:");
+						LOG((int)image.m_Image[i]);
+						LOG("Green:");
+						LOG((int)image.m_Image[i + 1]);
+						LOG("Blue:");
+						LOG((int)image.m_Image[i + 2]);
+					}
+				}
 				break;
+
+				default:
+					break;
 			}
 		}
 	}
