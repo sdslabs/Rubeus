@@ -1,18 +1,18 @@
-#include "sampleObject.h"
+#include "sample_object.h"
 
-void sampleObject::begin()
+void USampleObject::begin()
 {
 }
 
-void sampleObject::onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awerere::ACollideData & collisionData)
+void USampleObject::onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awerere::ACollideData & collisionData)
 {
 }
 
-void sampleObject::tick()
+void USampleObject::tick()
 {
 }
 
-void sampleObject::onMessage(Rubeus::Message * msg)
+void USampleObject::onMessage(Rubeus::Message * msg)
 {
 }
 

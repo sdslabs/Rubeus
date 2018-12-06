@@ -10,11 +10,6 @@
 
 namespace Rubeus
 {
-	std::unordered_map<int, bool> RInputManager::KeyMap;
-	std::unordered_map<int, bool> RInputManager::MouseButtonMap;
-	RML::Vector2D RInputManager::MousePosition;
-	RML::Vector2D RInputManager::MouseScroll;
-
 	void mouseButtonCallback(GLFWwindow *window, int button, int action, int mods)
 	{
 		RInputManager::MouseButtonMap[button] = action == GLFW_RELEASE ? 0 : 1;

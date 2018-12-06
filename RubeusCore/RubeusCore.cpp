@@ -1,10 +1,6 @@
 // RubeusCore.cpp : Defines the entry point for the application.
 //
-#define ENGINE_COMPONENTS
-
 #include "RubeusCore.h"
-#include "Game/paddle.h"
-#include "Game/ball.h"
 
 #include <nvidia_enable.h>
 
@@ -40,20 +36,10 @@ int main()
 	APhysicsMaterial ballMaterial;
 	ballMaterial.makeMaterial(1.0f, RML::Vector2D(0.0f, 0.0f), 0.0f, 1.0f);
 
-	paddle * paddleLeft = new paddle(0.0f, 5.0f, 0.5f, 3.0f, "Assets/debug.png", false, EColliderType::BOX, new ABoxCollider(RML::Vector3D(0.0f, 5.0f, 1), RML::Vector3D(0.5f, 8.0f, 1)), true, paddleMaterial);
-	paddleLeft->m_Name = "paddleLeft";
-	paddle * paddleRight = new paddle(15.5f, 5.0f, 0.5f, 3.0f, "Assets/debug.png", false, EColliderType::BOX, new ABoxCollider(RML::Vector3D(15.5f, 5.0f, 1), RML::Vector3D(16.0f, 8.0f, 1)), true, paddleMaterial);
+	USampleObject * sampleobject = new USampleObject(8.0f, 4.5f, 0.5f, 0.5f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(8.0f, 4.5f, 1), RML::Vector3D(8.5f, 5.0f, 1)), true, ballMaterial);
 
-	ball * ball1 = new ball(8.0f, 4.5f, 0.5f, 0.5f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(8.0f, 4.5f, 1), RML::Vector3D(8.5f, 5.0f, 1)), true, ballMaterial);
-	ball1->m_PhysicsObject->m_Collider->m_Momentum.x = 8.0f;
-	ball1->m_PhysicsObject->m_Collider->m_Momentum.y = 0.5;
-
-	gameObjects.push_back(paddleLeft);
-	gameObjects.push_back(paddleRight);
-	gameObjects.push_back(ball1);
-	g->add(paddleLeft);
-	g->add(paddleRight);
-	g->add(ball1);
+	gameObjects.push_back(sampleobject);
+	g->add(sampleobject);
 	g->add(g2);
 	layer0->addGroup(*g);
 	layer0->addGroup(*g2);
@@ -69,11 +55,6 @@ int main()
 	RWorld world(gameObjects);
 
 	APhysicsEngine awerere(*GameWindow, world, GameWindow->getHeight() / 9, GameWindow->getWidth() / 16);
-
-	inputManager.addKeyToKeyBinding("Up", EKeyboardKeys::__UP);
-	inputManager.addKeyToKeyBinding("Down", EKeyboardKeys::__DOWN);
-	inputManager.addKeyToKeyBinding("Left", EKeyboardKeys::__LEFT);
-	inputManager.addKeyToKeyBinding("Right", EKeyboardKeys::__RIGHT);
 
 	for (auto& item : world.getActiveObjects())
 	{
@@ -91,19 +72,16 @@ int main()
 		// Clear Window buffer
 		GameWindow->clearWindow();
 
-		// Miscellaneous testing stuff
-		shader0->enableShader();
-		shader0->setUniform2f("light_position", Vector2D(GameWindow->m_X * 16.0f / 1280.0f, (720.0f - GameWindow->m_Y) * 9.0f / 720.0f));
-
+		// World tick
 		world.tick();
 
 		// Physics engine update
 		awerere.update(1.0f / 60.0f);
 
-		// Render update
+		// Render objects
 		layer0->draw();
 
-		// Window buffer update
+		// Window buffer replacement
 		GameWindow->updateWindow();
 
 		// Frame counter update
@@ -113,9 +91,7 @@ int main()
 	delete timer;
 	delete g;
 	delete g2;
-	delete paddleLeft;
-	delete paddleRight;
-	delete ball1;
+	delete sampleobject;
 	delete layer0;
 	delete shader0;
 	delete symphony;

@@ -25,6 +25,9 @@
 #include <GLFW/glfw3.h>
 #include <rubeus_maths_library.h>
 
+// Engine global objects
+#include <engine.h>
+
 // Rubeus specific includes
 #include <logger_component.h>
 #include <loader_component.h>
@@ -54,8 +57,6 @@
 #include <awerere_physics_engine.h>
 #include <awerere_collision_engine.h>
 
-// Engine global objects
-//  TODO These need to be in a class
-extern Rubeus::GraphicComponents::RWindowComponent * GameWindow;
 
-extern Rubeus::RInputManager inputManager;
+// User defined classes - levels/objects/components
+#include "../Game/sample_object.h"

@@ -30,22 +30,12 @@ namespace Rubeus
 		/** @brief	Identifier for this component */
 		unsigned int m_ComponentID;
 
-		/**
-		 * @fn		void RMasterComponent::add();
-		 *
-		 * @brief	Adds this component to component table
-		 */
-		void add();
-
 	public:
 		/** @brief	The message system to send messages */
 		static RMessageSystem m_MessageSystem;
 
 		/** @brief	The number of components initialised */
 		static unsigned int componentsInitialised;
-
-		/** @brief	The component table */
-		static std::unordered_map<unsigned int, std::unique_ptr<RMasterComponent>> m_ComponentMap;
 
 		/**
 		* @fn	MasterComponent::MasterComponent();
@@ -60,13 +50,6 @@ namespace Rubeus
 		* @brief	Destructor
 		*/
 		virtual ~RMasterComponent();
-
-		/**
-		 * @fn		void RMasterComponent::remove();
-		 *
-		 * @brief	Removes this component from component table
-		 */
-		void remove();
 
 		/**
 		* @fn		unsigned int MasterComponent::getComponentID();
