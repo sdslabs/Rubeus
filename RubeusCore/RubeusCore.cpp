@@ -12,7 +12,6 @@ int main()
 	using namespace UtilityComponents;
 	using namespace RML;
 	using namespace Awerere;
-
 	RSymphony * symphony = new RSymphony();
 	symphony->addMusicTrack(1);
 	symphony->addSoundTrack(1);
@@ -22,23 +21,18 @@ int main()
 
 	RShaderComponent * shader0 = new RShaderComponent("Shaders/basic.vert", "Shaders/basic.frag");
 
-	RStaticLayer * layer0 = new RStaticLayer(*shader0);
+	RUILayer * layer0 = new RUILayer(*shader0);
 
+	// Each level has its own  world
+	RWorld world;
+
+	// Generated lines
 	RGroup * g = new RGroup(Matrix4::translation(Vector3D(0.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
 	RGroup * g2 = new RGroup(Matrix4::translation(Vector3D(0.0f, 0.0f, 0.0f)) * Matrix4::rotation(0, Vector3D(0, 0, 1)));
+	USampleObject * sampleobject = new USampleObject(8.0f, 4.5f, 0.5f, 0.5f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(8.0f, 4.5f, 1), RML::Vector3D(8.5f, 5.0f, 1)), true, APhysicsMaterial::DefaultMaterial);
+	// End generated lines
 
-	APhysicsMaterial mat;
-
-	std::vector<RGameObject *> gameObjects;
-	APhysicsMaterial paddleMaterial;
-	paddleMaterial.makeMaterial(1.0f, RML::Vector2D(0.0f, 0.0f), 0.0f, 1.0f);
-
-	APhysicsMaterial ballMaterial;
-	ballMaterial.makeMaterial(1.0f, RML::Vector2D(0.0f, 0.0f), 0.0f, 1.0f);
-
-	USampleObject * sampleobject = new USampleObject(8.0f, 4.5f, 0.5f, 0.5f, "Assets/debug.png", true, EColliderType::BOX, new ABoxCollider(RML::Vector3D(8.0f, 4.5f, 1), RML::Vector3D(8.5f, 5.0f, 1)), true, ballMaterial);
-
-	gameObjects.push_back(sampleobject);
+	world.add(*sampleobject);
 	g->add(sampleobject);
 	g->add(g2);
 	layer0->addGroup(*g);
@@ -52,7 +46,6 @@ int main()
 	}
 	shader0->setUniform1iv("textures", textureIDs, 32);
 
-	RWorld world(gameObjects);
 
 	APhysicsEngine awerere(*GameWindow, world, GameWindow->getHeight() / 9, GameWindow->getWidth() / 16);
 
@@ -61,6 +54,7 @@ int main()
 		item->begin();
 	}
 
+	// DONE_______________________________________
 	RTimer * timer = new RTimer(2);
 	timer->setFrameCounter();
 

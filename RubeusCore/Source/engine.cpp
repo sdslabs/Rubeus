@@ -13,5 +13,6 @@ namespace Rubeus
 	RML::Vector2D RInputManager::MouseScroll;
 
 	RInputManager inputManager(*GameWindow);
-	// Add all components here
+
+
 }
