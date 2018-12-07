@@ -14,6 +14,7 @@ namespace Rubeus
 		RWorld * m_World;
 		RInputManager * m_InputManager;
 		AudioComponents::RSymphony * m_AudioManager;
+		std::string m_Name;
 
 		friend class REngine;
 	public:
@@ -24,5 +25,9 @@ namespace Rubeus
 		void run();
 		void cleanUp();
 		void end();
+
+		void addGameObject(RGameObject * gameObject);
+
+		inline std::string getName() const { return m_Name; }
 	};
 }
