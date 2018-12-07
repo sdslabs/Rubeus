@@ -15,4 +15,28 @@ namespace Rubeus
 	RInputManager inputManager(*GameWindow);
 
 
+	void REngine::onMessage(Message * msg)
+	{
+		switch (msg->m_Type)
+		{
+			case system_ok:
+			{
+				LOG("Running Engine checks...");
+				if (m_PhysicsEngine == NULL ||
+					m_Window = NULL ||
+					m_LayerComposition == NULL ||
+					m_Timer == NULL ||
+					m_Loader == NULL)
+				{
+					ERRORLOG("Core systems not active");
+				}
+				else
+				{
+					LOG("All systems running");
+				}
+			}
+			break;
+		}
+	}
+
 }

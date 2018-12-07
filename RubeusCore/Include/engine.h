@@ -19,11 +19,11 @@ namespace Rubeus
 	extern class REngine : public RMasterComponent
 	{
 	private:
-		Awerere::APhysicsEngine * m_PhysicsEngine;
-		GraphicComponents::RWindowComponent * m_Window;
-		GraphicComponents::RLayerComposition * m_LayerComposition;
-		UtilityComponents::RTimer * m_Timer;
-		UtilityComponents::RLoaderComponent * m_Loader;
+		Awerere::APhysicsEngine * m_PhysicsEngine = NULL;
+		GraphicComponents::RWindowComponent * m_Window = NULL;
+		GraphicComponents::RLayerComposition * m_LayerComposition = NULL;
+		UtilityComponents::RTimer * m_Timer = NULL;
+		UtilityComponents::RLoaderComponent * m_Loader = NULL;
 
 		RLevel * m_CurrentLevel;
 
