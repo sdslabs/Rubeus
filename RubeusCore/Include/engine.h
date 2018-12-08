@@ -23,10 +23,12 @@ namespace Rubeus
 		UtilityComponents::RLoaderComponent * m_Loader = NULL;
 
 		std::unordered_map<std::string, RLevel *> m_Levels;
-		RLevel * m_CurrentLevel;
+		RLevel * m_CurrentLevel = NULL;
+
+		friend class RLevel;
 
 	public:
-		REngine(std::vector<RLevel *> levels);
+		REngine();
 		~REngine();
 
 		void load(RLevel & level);
@@ -35,12 +37,14 @@ namespace Rubeus
 
 		inline UtilityComponents::RLoaderComponent * getResourceLoader() const { return m_Loader; }
 		inline RLevel * getCurrentLevel() const { return m_CurrentLevel; }
+		inline std::unordered_map<std::string, RLevel *> & getAllLevels() { return m_Levels; }
 		inline GraphicComponents::RWindowComponent * getCurrentWindow() const { return m_Window; }
 		inline AudioComponents::RSymphony * getCurrentLevelAudioManager() const { return m_CurrentLevel->m_AudioManager; }
 		inline RInputManager * getCurrentLevelInputManager() const { return m_CurrentLevel->m_InputManager; }
+		inline RWorld * getWorld() const { return m_CurrentLevel->m_World; }
 
 		void onMessage(Message * msg) override;
 	};
 
-	extern const REngine * RubeusEngine;
+	extern const REngine * Engine;
 }

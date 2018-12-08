@@ -2,6 +2,9 @@
 
 void USampleObject::begin()
 {
+	m_Name = "sample_object";
+
+	m_ThisTicks = true;
 }
 
 void USampleObject::onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awerere::ACollideData & collisionData)

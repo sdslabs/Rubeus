@@ -10,7 +10,7 @@ namespace Rubeus
 {
 	namespace UtilityComponents
 	{
-#define ONESECONDINMILLISECONDS 1000000000
+		constexpr auto ONESECONDINMILLISECONDS = 1000000000;
 
 		std::chrono::steady_clock RTimer::m_Clock;
 

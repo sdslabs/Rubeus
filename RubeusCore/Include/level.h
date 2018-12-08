@@ -18,7 +18,7 @@ namespace Rubeus
 
 		friend class REngine;
 	public:
-		RLevel();
+		RLevel(std::string name);
 		~RLevel();
 
 		void begin();

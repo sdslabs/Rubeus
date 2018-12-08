@@ -61,7 +61,6 @@ int main()
 	// See if maps are slowing things down. Also have a performance check
 	while (!GameWindow->closed())
 	{
-		//inputManager.update();
 		// TODO: Message bus needs references to all systems here
 		// Clear Window buffer
 		GameWindow->clearWindow();

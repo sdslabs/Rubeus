@@ -1,16 +1,23 @@
 #include <level.h>
 
+#include <engine.h>
+
 namespace Rubeus
 {
-	RLevel::RLevel()
+	RLevel::RLevel(std::string name)
 		:
 		m_World(new RWorld()),
-		m_InputManager(new RInputManager())
+		m_InputManager(new RInputManager(*Engine->getCurrentWindow())),
+		m_AudioManager(new AudioComponents::RSymphony()),
+		m_Name(name)
 	{
 	}
 
 	RLevel::~RLevel()
 	{
+		delete m_World;
+		delete m_InputManager;
+		delete m_AudioManager;
 	}
 
 	void RLevel::begin()

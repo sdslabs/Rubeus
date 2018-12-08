@@ -17,11 +17,15 @@ namespace Rubeus
 			RSceneLayer * m_SceneLayer;
 			RShaderComponent * m_UIShader;
 			RShaderComponent * m_SceneShader;
+			RGroup * m_UIGroup;
+			RGroup * m_SceneGroup;
 
 		public:
 			RLayerComposition(const char * pathToUIVertexShader, const char * pathToUIFragmentShader,
 							  const char * pathToSceneVertexShader, const char * pathToSceneFragmentShader);
 			~RLayerComposition();
+
+			void add(RGameObject * gameObject, bool UIElement = false);
 
 			void draw();
 		};

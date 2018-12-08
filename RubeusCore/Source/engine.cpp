@@ -3,7 +3,7 @@
 
 namespace Rubeus
 {
-	REngine * RubeusEngine = new REngine();
+	const REngine * Engine = new REngine();
 
 	GraphicComponents::RWindowComponent * GameWindow = new Rubeus::GraphicComponents::RWindowComponent("Hello World",
 																									   1280, 720,
@@ -17,16 +17,37 @@ namespace Rubeus
 
 	RInputManager inputManager(*GameWindow);
 
-	REngine::REngine(std::vector<RLevel *> levels)
+	REngine::REngine()
+		:
+		m_LayerComposition(new GraphicComponents::RLayerComposition(
+			"Shaders/basic.vert",
+			"Shaders/basic.frag",
+			"Shaders/basic.vert",
+			"Shaders/basic.frag"
+		)),
+		m_Timer(new UtilityComponents::RTimer(10)),
+		m_Loader(new UtilityComponents::RLoaderComponent())
 	{
 	}
 
 	REngine::~REngine()
 	{
-
+		delete m_PhysicsEngine;
+		delete m_Window;
+		delete m_LayerComposition;
+		delete m_Timer;
+		delete m_Loader;
 	}
 
 	void REngine::load(RLevel & level)
+	{
+	}
+
+	void REngine::run()
+	{
+	}
+
+	void REngine::cleanUp()
 	{
 	}
 
@@ -70,5 +91,4 @@ namespace Rubeus
 			break;
 		}
 	}
-
 }
