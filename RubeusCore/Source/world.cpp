@@ -24,6 +24,7 @@ namespace Rubeus
 
 	RWorld::~RWorld()
 	{
+		// Objcet deletion is handled by the RLevel object associated with this RWorld
 	}
 
 	void RWorld::add(RGameObject & gameObject)

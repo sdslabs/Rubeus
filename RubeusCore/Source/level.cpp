@@ -4,6 +4,8 @@
 
 namespace Rubeus
 {
+	std::unordered_map<std::string, RLevel *> RLevel::InstantiatedLevels;
+
 	RLevel::RLevel(std::string name)
 		:
 		m_World(new RWorld()),
@@ -11,6 +13,7 @@ namespace Rubeus
 		m_AudioManager(new AudioComponents::RSymphony()),
 		m_Name(name)
 	{
+		InstantiatedLevels.insert(std::pair<std::string, RLevel *>(name, this));
 	}
 
 	RLevel::~RLevel()
@@ -18,6 +21,10 @@ namespace Rubeus
 		delete m_World;
 		delete m_InputManager;
 		delete m_AudioManager;
+	}
+
+	void RLevel::submitObject(RGameObject * gameObject)
+	{
 	}
 
 	void RLevel::begin()
@@ -32,7 +39,7 @@ namespace Rubeus
 	{
 	}
 
-	void RLevel::end()
+	void RLevel::onEnd()
 	{
 	}
 

@@ -9,8 +9,12 @@
 
 namespace Rubeus
 {
-	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics, const Awerere::EColliderType & type, Awerere::ACollider * collider, bool generatesHit, const Awerere::APhysicsMaterial & physicsMat)
+	std::unordered_map<std::string, RGameObject *> RGameObject::InstantiatedGameObjects;
+
+	RGameObject::RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics, const Awerere::EColliderType & type, Awerere::ACollider * collider, bool generatesHit, const Awerere::APhysicsMaterial & physicsMat)
 		:
+		m_Name(name),
+		m_UsedByLevelName(levelName),
 		m_Sprite(new GraphicComponents::RSprite(x, y, deltaX, deltaY, new GraphicComponents::RTexture(imageFilePath))),
 		m_PhysicsObject(new Awerere::APhysicsObject(physicsMat, enablePhysics, type, collider, m_Sprite)),
 		m_ThisTicks(false),
@@ -31,8 +35,10 @@ namespace Rubeus
 		m_PhysicsObject->m_Collider->m_Sprite = m_Sprite;
 	}
 
-	RGameObject::RGameObject(float x, float y, float deltaX, float deltaY, float & r, float & g, float & b, bool enablePhysics, const Awerere::APhysicsMaterial & material, const Awerere::EColliderType & type, Awerere::ACollider * collider, bool generatesHit)
+	RGameObject::RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, float & r, float & g, float & b, bool enablePhysics, const Awerere::APhysicsMaterial & material, const Awerere::EColliderType & type, Awerere::ACollider * collider, bool generatesHit)
 		:
+		m_Name(name),
+		m_UsedByLevelName(levelName),
 		m_Sprite(new GraphicComponents::RSprite(x, y, deltaX, deltaY, RML::Vector4D(r, g, b, 1.0f))),
 		m_PhysicsObject(new Awerere::APhysicsObject(material, enablePhysics, type, collider)),
 		m_ThisTicks(false),
@@ -40,6 +46,8 @@ namespace Rubeus
 		m_HasPhysics(enablePhysics),
 		m_GeneratesHit(generatesHit)
 	{
+		InstantiatedGameObjects.insert(std::pair<std::string, RGameObject *>(name, this));
+
 		if (enablePhysics == true && m_PhysicsObject == NULL)
 		{
 			ERRORLOG("Invalid game object. Physics has been enabled for a NULL values Physics object pointer. Specify a non-NULL physics object.");

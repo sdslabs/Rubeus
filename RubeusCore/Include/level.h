@@ -19,13 +19,16 @@ namespace Rubeus
 		friend class REngine;
 
 	public:
+		static std::unordered_map<std::string, RLevel *> InstantiatedLevels;
+
 		RLevel(std::string name);
 		~RLevel();
 
+		virtual void submitObject(RGameObject * gameObject);
 		virtual void begin();
 		virtual void run();
 		void cleanUp();
-		virtual void end();
+		virtual void onEnd();
 
 		void addGameObject(RGameObject * gameObject);
 

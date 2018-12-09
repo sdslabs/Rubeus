@@ -9,6 +9,6 @@ void USampleLevel::run()
 {
 }
 
-void USampleLevel::end()
+void USampleLevel::onEnd()
 {
 }

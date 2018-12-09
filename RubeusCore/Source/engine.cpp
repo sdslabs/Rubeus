@@ -1,21 +1,15 @@
 #include <engine.h>
+
 #include <boost/any.hpp>
 
 namespace Rubeus
 {
-	const REngine * Engine = new REngine();
+	REngine * const Engine = new REngine();
 
-	GraphicComponents::RWindowComponent * GameWindow = new Rubeus::GraphicComponents::RWindowComponent("Hello World",
-																									   1280, 720,
-																									   Rubeus::GraphicComponents::EWindowParameters::WINDOWED_MODE,
-																									   Rubeus::GraphicComponents::EWindowParameters::NON_RESIZABLE_WINDOW,
-																									   1);
 	std::unordered_map<int, bool> RInputManager::KeyMap;
 	std::unordered_map<int, bool> RInputManager::MouseButtonMap;
 	RML::Vector2D RInputManager::MousePosition;
 	RML::Vector2D RInputManager::MouseScroll;
-
-	RInputManager inputManager(*GameWindow);
 
 	REngine::REngine()
 		:
@@ -24,6 +18,14 @@ namespace Rubeus
 			"Shaders/basic.frag",
 			"Shaders/basic.vert",
 			"Shaders/basic.frag"
+		)),
+		m_Window(new GraphicComponents::RWindowComponent(
+			"Hello World",
+			1280,
+			720,
+			GraphicComponents::EWindowParameters::WINDOWED_MODE,
+			GraphicComponents::EWindowParameters::NON_RESIZABLE_WINDOW,
+			1
 		)),
 		m_Timer(new UtilityComponents::RTimer(10)),
 		m_Loader(new UtilityComponents::RLoaderComponent())
@@ -41,6 +43,14 @@ namespace Rubeus
 
 	void REngine::load(RLevel & level)
 	{
+		for (auto & item : RGameObject::InstantiatedGameObjects)
+		{
+			if (item.second->m_UsedByLevelName == level.m_Name)
+			{
+				level.addGameObject(item.second);
+				m_LayerComposition->add(item.second);
+			}
+		}
 	}
 
 	void REngine::run()
@@ -49,6 +59,7 @@ namespace Rubeus
 
 	void REngine::cleanUp()
 	{
+		m_CurrentLevel->cleanUp();
 	}
 
 	void REngine::onMessage(Message * msg)
@@ -77,9 +88,9 @@ namespace Rubeus
 			{
 				LOG("Loading level: " + std::string(getCurrentLevel()->getName()));
 
-				auto search = m_Levels.find(boost::any_cast<std::string>(msg->m_Data));
+				auto search = RLevel::InstantiatedLevels.find(boost::any_cast<std::string>(msg->m_Data));
 
-				if (search != m_Levels.end())
+				if (search != RLevel::InstantiatedLevels.end())
 				{
 					this->load(*search->second);
 				}
