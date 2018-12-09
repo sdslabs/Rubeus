@@ -26,6 +26,9 @@ namespace Rubeus
 		RLevel * m_CurrentLevel = NULL;
 
 		friend class RLevel;
+		// Remove toml parser
+		// Add level loading
+		// Handle object loading
 
 	public:
 		REngine();

@@ -10,21 +10,22 @@ namespace Rubeus
 
 	class RLevel
 	{
-	private:
+	protected:
 		RWorld * m_World;
 		RInputManager * m_InputManager;
 		AudioComponents::RSymphony * m_AudioManager;
 		std::string m_Name;
 
 		friend class REngine;
+
 	public:
 		RLevel(std::string name);
 		~RLevel();
 
-		void begin();
-		void run();
+		virtual void begin();
+		virtual void run();
 		void cleanUp();
-		void end();
+		virtual void end();
 
 		void addGameObject(RGameObject * gameObject);
 
