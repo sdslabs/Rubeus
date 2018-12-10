@@ -13,13 +13,15 @@ namespace Rubeus
 		class RLayerComposition
 		{
 		private:
-			RShaderComponent * m_UIShader;
-			RShaderComponent * m_SceneShader;
-			RUILayer * m_UILayer;
-			RSceneLayer * m_SceneLayer;
-			RGroup * m_UIGroup;
-			RGroup * m_SceneGroup;
+			RShaderComponent * m_UIShader = NULL;
+			RShaderComponent * m_SceneShader = NULL;
+			RUILayer * m_UILayer = NULL;
+			RSceneLayer * m_SceneLayer = NULL;
+			RGroup * m_UIGroup = NULL;
+			RGroup * m_SceneGroup = NULL;
 			GLint m_TextureIDs[32];
+
+			friend class REngine;
 
 		public:
 			RLayerComposition(const char * pathToUIVertexShader, const char * pathToUIFragmentShader,

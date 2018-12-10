@@ -71,14 +71,17 @@ namespace Rubeus
 
 		for (auto & item : RGameObject::InstantiatedGameObjects)
 		{
-			if (item.second->m_UsedByLevelName == level.m_Name)
+			if (item.first != "")
 			{
-				level.addGameObject(item.second);
-				m_LayerComposition->add(item.second);
-			}
-			else
-			{
-				delete item.second;
+				if (item.second->m_UsedByLevelName == level.m_Name)
+				{
+					level.addGameObject(item.second);
+					m_LayerComposition->add(item.second);
+				}
+				else
+				{
+					delete item.second;
+				}
 			}
 		}
 
@@ -90,7 +93,7 @@ namespace Rubeus
 
 	void REngine::run()
 	{
-		LOG("Running level : " + m_CurrentLevel->m_Name);
+		SUCCESS("Running level : " + m_CurrentLevel->m_Name);
 
 		// Call `on level load` user-scripts
 		m_CurrentLevel->begin();

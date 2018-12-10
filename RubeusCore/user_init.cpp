@@ -4,6 +4,7 @@
 std::string startupLevel = "sample_level";
 
 USampleLevel * sample_level = new USampleLevel("sample_level");
+USampleLevel2 * sample_level2 = new USampleLevel2("sample_level2");
 
 Usample_object * sample_object = new Usample_object(
 	"sample_object",

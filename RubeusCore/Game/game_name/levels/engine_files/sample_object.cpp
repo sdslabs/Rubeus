@@ -14,7 +14,7 @@ void Usample_object::tick()
 {
 	if (Rubeus::Engine->getCurrentLevelInputManager()->isKeyBindingPressed("Space"))
 	{
-		Rubeus::Engine->end();
+		Rubeus::Engine->load(*Rubeus::Engine->getCurrentLevel()->InstantiatedLevels["sample_level2"]);
 	}
 }
 

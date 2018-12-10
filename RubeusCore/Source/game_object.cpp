@@ -45,7 +45,7 @@ namespace Rubeus
 			m_PhysicsObject->m_EnablePhysics = enablePhysics;
 		}
 
-		if (collider != NULL)
+		if (collider != NULL && m_PhysicsObject != NULL)
 		{
 			m_PhysicsObject->m_Collider->m_Sprite = m_Sprite;
 		}

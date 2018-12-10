@@ -36,7 +36,7 @@ int main()
 		 */
 		if (Engine->m_StartupLevelName == "")
 		{
-			LOG("Startup level was found to be : NULL");
+			LOG("Startup level name was erased");
 			break;
 		}
 
