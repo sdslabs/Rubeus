@@ -25,7 +25,18 @@ namespace Rubeus
 	 */
 	class RGameObject : public REntity, public RMasterComponent
 	{
+	private:
+
 	public:
+		/** @brief	The singular array that tracks all objects that were instantiated of this class */
+		static std::unordered_map<std::string, RGameObject *> InstantiatedGameObjects;
+
+		/** @brief	Name of this game object */
+		std::string m_Name;
+
+		/** @brief	The level context during which this object lives */
+		std::string m_UsedByLevelName;
+
 		/** @brief	Sprite used for the rendering process */
 		GraphicComponents::RSprite * m_Sprite;
 
@@ -41,19 +52,21 @@ namespace Rubeus
 		/** @brief	Whether this gameobject is a group of other child gameobjects */
 		bool m_IsGroup = false;
 
-		/** @brief	Whether this gameobject obeys physics */
+		/** @brief	Whether this gameobject obeys physics and responds to collisions */
 		bool m_HasPhysics = false;
 
 		/** @brief	Whether this gameobject generates hit events */
 		bool m_GeneratesHit = false;
 
 		/**
-		 * @fn		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, const Awerere::EColliderType & type = Awerere::EColliderType::NO_COLLIDER, Awerere::ACollider * collider = NULL, bool generatesHit = false, const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial())
+		 * @fn		RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, const Awerere::EColliderType & type = Awerere::EColliderType::NO_COLLIDER, Awerere::ACollider * collider = NULL, bool generatesHit = false, const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial())
 		 *
 		 * @brief	Constructor. Uses images as textures.
 		 * @warning	All pointers passed in will be owned by the game object.
 					Heap objects will be deleted by the object automatically.
 		 *
+		 * @param	name				Name of this game object.
+		 * @param	levelName		Name of level that uses this object.
 		 * @param	x				x coordinate of the lower left point.
 		 * @param	y				y coordinate of the lower left point.
 		 * @param	deltaX			Horizontal span of the object.
@@ -65,15 +78,17 @@ namespace Rubeus
 		 * @param	generatesHit		Whether the object generates hit events. Default is false.
 		 * @param	physicsMat		Provide a physics material to be used to respond to hit events. Defaults to DefaultPhysicsMat.
 		 */
-		RGameObject(float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, const Awerere::EColliderType & type = Awerere::EColliderType::NO_COLLIDER, Awerere::ACollider * collider = NULL, bool generatesHit = false, const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial());
+		RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, const Awerere::EColliderType & type = Awerere::EColliderType::NO_COLLIDER, Awerere::ACollider * collider = NULL, bool generatesHit = false, const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial());
 
 		/**
-		 * @fn		RGameObject(float x, float y, float deltaX, float deltaY, const float & r, const float & g, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL)
+		 * @fn		RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, const float & r, const float & g, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL)
 		 *
 		 * @brief	Constructor. Uses pure colors as textures.
 		 * @warning	All pointers passed in will be owned by the game object.
 					Heap objects will be deleted by this object.
 		 *
+		 * @param	name				Name of this game object.
+		 * @param	levelName		Name of level that uses this object.
 		 * @param	x				x coordinate of the lower left point.
 		 * @param	y				y coordinate of the lower left point.
 		 * @param	deltaX			Horizontal span of the object.
@@ -87,7 +102,7 @@ namespace Rubeus
 		 * @param	collider			The collider object to be used. Defaults to NULL.
 		 * @param	generatesHit		Whether the object generates hit events. Default is false.
 		 */
-		RGameObject(float x, float y, float deltaX, float deltaY, float & r, float & g, float & b, bool enablePhysics = false, const Awerere::APhysicsMaterial & material = Awerere::APhysicsMaterial(), const Awerere::EColliderType & type = Awerere::EColliderType::NO_COLLIDER, Awerere::ACollider * collider = NULL, bool generatesHit = false);
+		RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, float & r, float & g, float & b, bool enablePhysics = false, const Awerere::APhysicsMaterial & material = Awerere::APhysicsMaterial(), const Awerere::EColliderType & type = Awerere::EColliderType::NO_COLLIDER, Awerere::ACollider * collider = NULL, bool generatesHit = false);
 
 		/**
 		 * @fn		~RGameObject()
@@ -97,15 +112,23 @@ namespace Rubeus
 		~RGameObject();
 
 		/**
-		 * @fn		void tick() override
+		 * @fn		virtual void begin()
+		 *
+		 * @brief	Called by the engine once before the level starts to run
+		 *
+		 */
+		virtual void begin();
+
+		/**
+		 * @fn		virtual void tick() override
 		 *
 		 * @brief	Tick function.
 		 * @warning	Runs once every frame
 		 */
-		void tick() override;
+		virtual void tick() override;
 
 		/**
-		 * @fn		void onHit(RGameObject * hammer, RGameObject * nail, Awerere::ACollideData & collisionData)
+		 * @fn		virtual void onHit(RGameObject * hammer, RGameObject * nail, const Awerere::ACollideData & collisionData)
 		 *
 		 * @brief	User defined function called whenever a hit event is generated
 		 *
@@ -113,7 +136,7 @@ namespace Rubeus
 		 * @param	nail				The object getting hit
 		 * @param	collisionData		Details of the collision
 		 */
-		void onHit(RGameObject * hammer, RGameObject * nail, Awerere::ACollideData & collisionData);
+		virtual void onHit(RGameObject * hammer, RGameObject * nail, const Awerere::ACollideData & collisionData);
 
 		/**
 		 * @fn		inline void addToTickQueue()
@@ -123,19 +146,20 @@ namespace Rubeus
 		inline void addToTickQueue() { m_ThisTicks = true; }
 
 		/**
-		 * @fn		void onMessage(Message * msg)
+		 * @fn		virtual void onMessage(Message * msg)
 		 *
 		 * @brief	Handles message sent by Message system
 		 * @warning	Async invokation only
 		 *
 		 * @param	msg	The message data.
-		 *
 		 */
-		void onMessage(Message * msg) override;
+		virtual void onMessage(Message * msg) override;
 
 		friend class ACollisionEngine;
+		friend class REngine;
 
 	protected:
+
 		/**
 		 * @fn		RGameObject()
 		 *

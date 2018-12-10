@@ -11,8 +11,20 @@ namespace Rubeus
 	{
 	}
 
+	void RWorld::tick()
+	{
+		for (auto& item : m_ActiveGameObjects)
+		{
+			if (item->m_ThisTicks)
+			{
+				item->tick();
+			}
+		}
+	}
+
 	RWorld::~RWorld()
 	{
+		// Objcet deletion is handled by the RLevel object associated with this RWorld
 	}
 
 	void RWorld::add(RGameObject & gameObject)

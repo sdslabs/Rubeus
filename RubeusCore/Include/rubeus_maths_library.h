@@ -59,6 +59,18 @@ namespace RML
 		Vector2D(const float &x, const float &y);
 
 		/**
+			* @fn	Vector2D & roundTo(const float & pivotX, const float & errorX, const float & pivotY, const float & errorY)
+			*
+			* @brief	Rounds the coordinates to the pivot values for X and Y within the ranges of the error values
+			*
+			* @param	pivotX	The X pivot.
+			* @param	pivotY	The Y pivot.
+			* @param	errorX	The X error for pivot.
+			* @param	errorY	The Y error for pivot.
+			*/
+		Vector2D & roundTo(const float & pivotX, const float & errorX, const float & pivotY, const float & errorY);
+
+		/**
 			* @fn	float getLength(Vector2D& vector) const;
 			*
 			* @brief	Gets length of vector
@@ -180,7 +192,7 @@ namespace RML
 		friend Vector2D& operator+(Vector2D left, const Vector2D &right);
 
 		/**
-			* @fn	Vector2D& operator-(Vector2D left, const Vector2D &right);
+			* @fn	Vector2D operator-(Vector2D left, const Vector2D &right);
 			*
 			* @brief	Subtraction operator
 			*
@@ -189,7 +201,7 @@ namespace RML
 			*
 			* @return	The result of the operation.
 			*/
-		friend Vector2D& operator-(Vector2D left, const Vector2D &right);
+		friend Vector2D operator-(Vector2D left, const Vector2D &right);
 
 		/**
 			* @fn	Vector2D& operator*(Vector2D left, const Vector2D &right);

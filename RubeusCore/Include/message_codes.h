@@ -35,7 +35,11 @@ namespace Rubeus
 
 		// Modifies the music playing every frame according to AudioModifierCommand
 		// Handled by: RSymphony
-		modify_audio
+		modify_audio,
+
+		// Loads the specified level name (level needs to be registered in REngine first)
+		// Handled by: REngine
+		load_level
 	};
 
 	// Define any functions needed to be sent as message data below. Make sure to mark them as inline for performance.

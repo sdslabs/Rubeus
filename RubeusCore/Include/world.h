@@ -48,6 +48,13 @@ namespace Rubeus
 		~RWorld();
 
 		/**
+		 * @fn		void tick()
+		 *
+		 * @brief	Call tick functions of all objects in the world once.
+		 */
+		void tick();
+
+		/**
 		 * @fn		void add(RGameObject & gameObject)
 		 *
 		 * @brief	Add a gameobject to the world

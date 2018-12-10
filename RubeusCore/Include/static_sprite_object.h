@@ -15,7 +15,9 @@ namespace Rubeus
 		/**
 		 * @class	RStaticSprite
 		 *
-		 * @brief	A static sprite.
+		 * @warning	Use only while testing the simple renderer.
+		 *
+		 * @brief	A static positioned sprite.
 		 */
 		class RStaticSprite : public RRenderableObject
 		{

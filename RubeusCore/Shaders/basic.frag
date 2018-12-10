@@ -18,7 +18,7 @@ in DATA
 
 void main()
 {
-	float intensity = 1.0 / pow(length(pos.xy - light_position), 2);
+	float intensity = 1.0;
 	
 	vec4 colorTex;
 

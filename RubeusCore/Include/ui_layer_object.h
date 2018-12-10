@@ -1,7 +1,7 @@
 /**
- * @file		Include\static_layer_object.h.
+ * @file		Include\ui_layer_object.h.
  *
- * @brief	Declares the static layer class
+ * @brief	Declares the UI layer class
  */
 
 #pragma once
@@ -19,11 +19,11 @@ namespace Rubeus
 	namespace GraphicComponents
 	{
 		/**
-		 * @class	RStaticLayer
+		 * @class	RUILayer
 		 *
-		 * @brief	Allows a static layer of groups of objects to be drawn on the screen.
+		 * @brief	Rendering Layer used for drawing UI elements to the screen.
 		 */
-		class RStaticLayer : public RLayer
+		class RUILayer : public RLayer
 		{
 		private:
 			/** @brief	Vector array of all the groups handles by this layer */
@@ -37,31 +37,30 @@ namespace Rubeus
 
 		public:
 			/**
-			 * @fn		RStaticLayer(RShaderComponent& shader)
+			 * @fn		RUILayer(RShaderComponent& shader)
 			 *
 			 * @brief	Constructor. Initialises the layer's shader.
-			 * @warning	Do not pass in derenferences pointers
+			 * @warning	Do not pass in dereferenced pointers
 			 *
-			 * @param	shader	The shader to allot to this layer.
+			 * @param	shader	The shader to be alloted to this layer.
 			 */
-			RStaticLayer(RShaderComponent& shader);
+			RUILayer(RShaderComponent& shader);
 
 			/**
-			 * @fn		virtual ~RStaticLayer()
+			 * @fn		virtual ~RUILayer()
 			 *
 			 * @brief	Destructor
 			 */
-			virtual ~RStaticLayer();
+			virtual ~RUILayer();
 
 			/**
 			 * @fn		RLayer & addGroup(RGroup & group) override
 			 *
 			 * @brief	Adds the group object to this layer.
-			 * @warning
 			 *
 			 * @param	group	The group object to add.
 			 *
-			 * @return	Reference to this layer. Allows chaining multiple group additions. E.g. layer.addGoup(g1).addGroup(g2);
+			 * @return	Reference to this layer. Allows chaining multiple group additions. E.g.: layer.addGoup(g1).addGroup(g2);
 			 */
 			RLayer & addGroup(RGroup & group) override;
 

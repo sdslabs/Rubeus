@@ -21,10 +21,12 @@
 #define ILUT_USE_OPENGL
 
 // Dependencies
-#include <nvidia_enable.h>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <rubeus_maths_library.h>
+
+// Engine global objects
+#include <engine.h>
 
 // Rubeus specific includes
 #include <logger_component.h>
@@ -39,7 +41,7 @@
 #include <sprite_object.h>
 #include <static_sprite_object.h>
 #include <timer_component.h>
-#include <static_layer_object.h>
+#include <ui_layer_object.h>
 #include <message_system.h>
 #include <texture_object.h>
 #include <audio_manager_component.h>
@@ -54,3 +56,6 @@
 #include <awerere_physics_object.h>
 #include <awerere_physics_engine.h>
 #include <awerere_collision_engine.h>
+
+// User defined classes - levels/objects/components
+#include "user_init.h"

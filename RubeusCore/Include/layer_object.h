@@ -1,7 +1,7 @@
 /**
  * @file		Include/layer_object.h
  *
- * @brief	Declares the layer class	
+ * @brief	Declares the layer class
  */
 #pragma once
 
@@ -29,7 +29,6 @@ namespace Rubeus
 			 * @fn		RLayer()
 			 *
 			 * @brief	Default constructor
-			 * @warning	
 			 */
 			RLayer() = default;
 

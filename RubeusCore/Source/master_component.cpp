@@ -10,23 +10,15 @@ namespace Rubeus
 {
 	RMessageSystem RMasterComponent::m_MessageSystem;
 	unsigned int RMasterComponent::componentsInitialised = 0;
-	std::unordered_map<unsigned int, std::unique_ptr<Rubeus::RMasterComponent>> Rubeus::RMasterComponent::m_ComponentMap;
 
 	RMasterComponent::RMasterComponent()
 	{
 		componentsInitialised++;
 		m_ComponentID = componentsInitialised;
-
-		add();
 	}
 
 	RMasterComponent::~RMasterComponent()
 	{
-	}
-
-	void RMasterComponent::add()
-	{
-		m_ComponentMap[m_ComponentID] = std::make_unique<RMasterComponent>(*this);
 	}
 
 	unsigned int RMasterComponent::getComponentID() const
