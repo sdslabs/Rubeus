@@ -11,17 +11,6 @@ namespace Rubeus
 {
 	std::unordered_map<std::string, RGameObject *> RGameObject::InstantiatedGameObjects;
 
-	void RGameObject::DeleteAll()
-	{
-		for (auto & item : RGameObject::InstantiatedGameObjects)
-		{
-			if (item.second != NULL)
-			{
-				delete item.second;
-			}
-		}
-	}
-
 	RGameObject::RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics, const Awerere::EColliderType & type, Awerere::ACollider * collider, bool generatesHit, const Awerere::APhysicsMaterial & physicsMat)
 		:
 		m_Name(name),

@@ -57,6 +57,5 @@
 #include <awerere_physics_engine.h>
 #include <awerere_collision_engine.h>
 
-
 // User defined classes - levels/objects/components
 #include "user_init.h"

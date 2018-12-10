@@ -4,6 +4,7 @@
 
 #include <nvidia_enable.h>
 
+/** @brief	The startup level of the engine. Set this in user_init.cpp */
 extern std::string startupLevel;
 
 int main()

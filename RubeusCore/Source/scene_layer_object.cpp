@@ -1,3 +1,9 @@
+/**
+ * @file		Source/scene_layer_object.cpp.
+ *
+ * @brief	Defines the Scene layer object
+ */
+
 #include <scene_layer_object.h>
 
 namespace Rubeus

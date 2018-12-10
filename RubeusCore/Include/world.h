@@ -40,14 +40,19 @@ namespace Rubeus
 		 */
 		RWorld(std::vector<RGameObject *> & gameObjects);
 
-		void tick();
-
 		/**
 		 * @fn		~RWorld()
 		 *
 		 * @brief	Destructor
 		 */
 		~RWorld();
+
+		/**
+		 * @fn		void tick()
+		 *
+		 * @brief	Call tick functions of all objects in the world once.
+		 */
+		void tick();
 
 		/**
 		 * @fn		void add(RGameObject & gameObject)

@@ -1,3 +1,9 @@
+/**
+ * @file		Source/engine.cpp.
+ *
+ * @brief	Defines the Rubeus Engine class
+ */
+
 #include <engine.h>
 
 #include <boost/any.hpp>

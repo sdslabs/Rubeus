@@ -58,6 +58,16 @@ namespace RML
 			*/
 		Vector2D(const float &x, const float &y);
 
+		/**
+			* @fn	Vector2D & roundTo(const float & pivotX, const float & errorX, const float & pivotY, const float & errorY)
+			*
+			* @brief	Rounds the coordinates to the pivot values for X and Y within the ranges of the error values
+			*
+			* @param	pivotX	The X pivot.
+			* @param	pivotY	The Y pivot.
+			* @param	errorX	The X error for pivot.
+			* @param	errorY	The Y error for pivot.
+			*/
 		Vector2D & roundTo(const float & pivotX, const float & errorX, const float & pivotY, const float & errorY);
 
 		/**

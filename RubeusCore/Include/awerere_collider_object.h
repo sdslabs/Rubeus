@@ -84,6 +84,15 @@ namespace Rubeus
 			 */
 			virtual ~ACollider();
 
+			/**
+			 * @fn		ACollideData tryIntersect(ACollider & collider)
+			 *
+			 * @brief	Generate collision status data object to see if object collides with another
+			 *
+			 * @param	collider	The collider object to test against.
+			 *
+			 * @return	A struct containing collision status data.
+			 */
 			ACollideData tryIntersect(ACollider & collider);
 
 			/**

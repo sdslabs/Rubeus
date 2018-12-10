@@ -1,3 +1,9 @@
+/**
+ * @file		Source/level.cpp.
+ *
+ * @brief	Defines the Level class
+ */
+
 #include <level.h>
 
 #include <engine.h>
@@ -5,17 +11,6 @@
 namespace Rubeus
 {
 	std::unordered_map<std::string, RLevel *> RLevel::InstantiatedLevels;
-
-	void RLevel::DeleteAll()
-	{
-		for (auto & item : RLevel::InstantiatedLevels)
-		{
-			if (item.second != NULL)
-			{
-				delete item.second;
-			}
-		}
-	}
 
 	RLevel::RLevel(std::string name)
 		:
@@ -37,10 +32,6 @@ namespace Rubeus
 	}
 
 	void RLevel::begin()
-	{
-	}
-
-	void RLevel::run()
 	{
 	}
 

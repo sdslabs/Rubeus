@@ -8,7 +8,7 @@ link_directories(Source/)
 file(GLOB_RECURSE SOURCES
     Source/*.cpp
     Game/*.cpp
-	user_init.cpp
+    user_init.cpp
 )
 
 # Remove this line if you want to remove Visual Leak Detection(VLD) reports in Debug mode.

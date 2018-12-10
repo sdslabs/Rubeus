@@ -28,11 +28,13 @@ namespace Rubeus
 	private:
 
 	public:
-		static void DeleteAll();
+		/** @brief	The singular array that tracks all objects that were instantiated of this class */
 		static std::unordered_map<std::string, RGameObject *> InstantiatedGameObjects;
 
+		/** @brief	Name of this game object */
 		std::string m_Name;
 
+		/** @brief	The level context during which this object lives */
 		std::string m_UsedByLevelName;
 
 		/** @brief	Sprite used for the rendering process */
@@ -109,6 +111,12 @@ namespace Rubeus
 		 */
 		~RGameObject();
 
+		/**
+		 * @fn		virtual void begin()
+		 *
+		 * @brief	Called by the engine once before the level starts to run
+		 *
+		 */
 		virtual void begin();
 
 		/**
@@ -144,7 +152,6 @@ namespace Rubeus
 		 * @warning	Async invokation only
 		 *
 		 * @param	msg	The message data.
-		 *
 		 */
 		virtual void onMessage(Message * msg) override;
 

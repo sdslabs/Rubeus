@@ -1,3 +1,9 @@
+/**
+ * @file		Source/layer_composition_object.cpp.
+ *
+ * @brief	Defines the Layer composition class
+ */
+
 #include <layer_composition_object.h>
 
 namespace Rubeus
