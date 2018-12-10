@@ -6,10 +6,6 @@
 
 extern std::string startupLevel;
 
-// Generated user file
-//#include "user_init.cpp"
-// End of generated lines
-
 int main()
 {
 	using namespace Rubeus;
@@ -18,9 +14,6 @@ int main()
 	using namespace UtilityComponents;
 	using namespace RML;
 	using namespace Awerere;
-
-	// Contains the entire Rubeus code base
-	LOG(sizeof(*Engine));
 
 	// startupLevel : std::string contains the startup level name. Defined in user_init.cpp
 	Engine->m_StartupLevelName = startupLevel;

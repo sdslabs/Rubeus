@@ -8,10 +8,8 @@ link_directories(Source/)
 file(GLOB_RECURSE SOURCES
     Source/*.cpp
     Game/*.cpp
+	user_init.cpp
 )
-
-# Remove the user initiation file from build translation units
-list(REMOVE_ITEM SOURCES "Game/user_init.cpp")
 
 # Remove this line if you want to remove Visual Leak Detection(VLD) reports in Debug mode.
 # Keep this line if you want to have VLD reports to detect memory leaks
