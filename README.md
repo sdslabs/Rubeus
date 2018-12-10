@@ -10,9 +10,8 @@ Created by SDSLabs with :heart:
 
 * [What is Rubeus?](#what)
 * [Why is Rubeus?](#why)
-* [How do I setup Rubeus?](#setup)
+* [How do I use Rubeus?](#setup)
 * [How can I contribute?](#how)
-* [When can I use Rubeus?](#when)
 * [Remarks](#remarks)
 
 ## <a name=what>What is Rubeus?
@@ -47,10 +46,7 @@ Follow the [Getting Started guide](https://github.com/sdslabs/Rubeus/wiki).
 Setup instructions for Rubeus are explained [here](SETUP.md). Also make sure to read the [contribution guidelines](CONTRIBUTING.md). A good start would be trying to build Rubeus on your personal systems.
 
 ## <a name=how>How can I contribute?
-Anyone is invited to contribute to Rubeus either through opening issues on Github, making pull requests, adding [Wiki pages](https://github.com/sdslabs/Rubeus/wiki), talking to the community at [our chat website](https://chat.sdslabs.co). Make sure to read the [contribution guidelines](CONTRIBUTING.md) to ease your way in.
-
-## <a name=when>When can I use Rubeus?
-All game engine core sub-systems are in place and a final architecture is the current goal to achieve. We can have a release when that's done.
+Everyone reading this is invited to contribute to Rubeus either through opening issues on Github, making pull requests, adding [Wiki pages](https://github.com/sdslabs/Rubeus/wiki) and talking to the community at [our chat website](https://chat.sdslabs.co). Make sure to read the [contribution guidelines](CONTRIBUTING.md) to ease your way in.
 
 ## <a name=remarks>Remarks
  
