@@ -11,12 +11,23 @@ namespace Rubeus
 {
 	std::unordered_map<std::string, RGameObject *> RGameObject::InstantiatedGameObjects;
 
+	void RGameObject::DeleteAll()
+	{
+		for (auto & item : RGameObject::InstantiatedGameObjects)
+		{
+			if (item.second != NULL)
+			{
+				delete item.second;
+			}
+		}
+	}
+
 	RGameObject::RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics, const Awerere::EColliderType & type, Awerere::ACollider * collider, bool generatesHit, const Awerere::APhysicsMaterial & physicsMat)
 		:
 		m_Name(name),
 		m_UsedByLevelName(levelName),
 		m_Sprite(new GraphicComponents::RSprite(x, y, deltaX, deltaY, new GraphicComponents::RTexture(imageFilePath))),
-		m_PhysicsObject(new Awerere::APhysicsObject(physicsMat, enablePhysics, type, collider, m_Sprite)),
+		m_PhysicsObject(enablePhysics == true ? new Awerere::APhysicsObject(physicsMat, enablePhysics, type, collider, m_Sprite) : NULL),
 		m_ThisTicks(false),
 		m_UsesTexture(true),
 		m_HasPhysics(enablePhysics),
@@ -45,7 +56,7 @@ namespace Rubeus
 		m_Name(name),
 		m_UsedByLevelName(levelName),
 		m_Sprite(new GraphicComponents::RSprite(x, y, deltaX, deltaY, RML::Vector4D(r, g, b, 1.0f))),
-		m_PhysicsObject(new Awerere::APhysicsObject(material, enablePhysics, type, collider)),
+		m_PhysicsObject(enablePhysics == true ? new Awerere::APhysicsObject(material, enablePhysics, type, collider) : NULL),
 		m_ThisTicks(false),
 		m_UsesTexture(false),
 		m_HasPhysics(enablePhysics),
@@ -71,6 +82,8 @@ namespace Rubeus
 
 	RGameObject::~RGameObject()
 	{
+		InstantiatedGameObjects[m_Name] = NULL;
+
 		if (m_IsGroup == false)
 		{
 			delete m_Sprite->m_Texture;

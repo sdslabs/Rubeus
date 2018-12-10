@@ -16,9 +16,11 @@ namespace Rubeus
 		AudioComponents::RSymphony * m_AudioManager;
 		std::string m_Name;
 
+
 		friend class REngine;
 
 	public:
+		static void DeleteAll();
 		static std::unordered_map<std::string, RLevel *> InstantiatedLevels;
 
 		RLevel(std::string name);
@@ -26,11 +28,14 @@ namespace Rubeus
 
 		virtual void begin();
 		virtual void run();
-		void cleanUp();
 		virtual void onEnd();
+		void killAliveObjects();
 
 		void addGameObject(RGameObject * gameObject);
 
 		inline std::string getName() const { return m_Name; }
+		inline RWorld * getWorld() const { return m_World; }
+		inline RInputManager * getInputManager() const { return m_InputManager; }
+		inline AudioComponents::RSymphony * getSoundManager() const { return m_AudioManager; }
 	};
 }

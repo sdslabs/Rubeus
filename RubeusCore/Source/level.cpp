@@ -6,6 +6,17 @@ namespace Rubeus
 {
 	std::unordered_map<std::string, RLevel *> RLevel::InstantiatedLevels;
 
+	void RLevel::DeleteAll()
+	{
+		for (auto & item : RLevel::InstantiatedLevels)
+		{
+			if (item.second != NULL)
+			{
+				delete item.second;
+			}
+		}
+	}
+
 	RLevel::RLevel(std::string name)
 		:
 		m_World(new RWorld()),
@@ -18,6 +29,8 @@ namespace Rubeus
 
 	RLevel::~RLevel()
 	{
+		InstantiatedLevels[m_Name] = NULL;
+
 		delete m_World;
 		delete m_InputManager;
 		delete m_AudioManager;
@@ -31,7 +44,7 @@ namespace Rubeus
 	{
 	}
 
-	void RLevel::cleanUp()
+	void RLevel::killAliveObjects()
 	{
 		for (auto & item : m_World->getActiveObjects())
 		{

@@ -37,7 +37,7 @@ namespace Rubeus
 
 		void load(RLevel & level);
 		void run();
-		void cleanUp();
+		void killAliveLevel();
 		void end();
 
 		inline UtilityComponents::RLoaderComponent * getResourceLoader() const { return m_Loader; }

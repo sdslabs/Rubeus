@@ -25,7 +25,10 @@ namespace Rubeus
 	 */
 	class RGameObject : public REntity, public RMasterComponent
 	{
+	private:
+
 	public:
+		static void DeleteAll();
 		static std::unordered_map<std::string, RGameObject *> InstantiatedGameObjects;
 
 		std::string m_Name;

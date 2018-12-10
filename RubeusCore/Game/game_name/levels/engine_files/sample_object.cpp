@@ -12,6 +12,10 @@ void Usample_object::onHit(RGameObject * hammer, RGameObject * nail, const Rubeu
 
 void Usample_object::tick()
 {
+	if (Rubeus::Engine->getCurrentLevelInputManager()->isKeyBindingPressed("Space"))
+	{
+		Rubeus::Engine->end();
+	}
 }
 
 void Usample_object::onMessage(Rubeus::Message * msg)

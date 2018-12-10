@@ -4,6 +4,12 @@
 
 #include <nvidia_enable.h>
 
+extern std::string startupLevel;
+
+// Generated user file
+//#include "user_init.cpp"
+// End of generated lines
+
 int main()
 {
 	using namespace Rubeus;
@@ -15,10 +21,6 @@ int main()
 
 	// Contains the entire Rubeus code base
 	LOG(sizeof(*Engine));
-
-	// Generated user file
-#include "user_init.cpp"
-	// End generated lines
 
 	// startupLevel : std::string contains the startup level name. Defined in user_init.cpp
 	Engine->m_StartupLevelName = startupLevel;
@@ -46,12 +48,14 @@ int main()
 				Engine->load(*item.second);
 				Engine->run();
 				Engine->getCurrentLevel()->onEnd();
-				Engine->cleanUp();
+				Engine->killAliveLevel();
 			}
 			// The startup level should contain the logic for when to load the next level
 		}
 	}
 	LOG("Rubeus is now exiting");
+
+	delete Rubeus::Engine;
 
 	return 0;
 }

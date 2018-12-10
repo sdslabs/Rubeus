@@ -35,8 +35,8 @@ namespace Rubeus
 	REngine::~REngine()
 	{
 		delete m_PhysicsEngine;
-		delete m_Window;
 		delete m_LayerComposition;
+		delete m_Window;
 		delete m_Timer;
 		delete m_Loader;
 	}
@@ -48,7 +48,7 @@ namespace Rubeus
 
 		if (m_StartupLevelName == "")
 		{
-			cleanUp();
+			killAliveLevel();
 
 			return;
 		}
@@ -92,6 +92,9 @@ namespace Rubeus
 	{
 		LOG("Running level : " + m_CurrentLevel->m_Name);
 
+		// Call `on level load` user-scripts
+		m_CurrentLevel->begin();
+
 		// Tick the entire world once with begin() scripts
 		for (auto & item : getWorld()->getActiveObjects())
 		{
@@ -133,9 +136,9 @@ namespace Rubeus
 		m_StartupLevelName = "";
 	}
 
-	void REngine::cleanUp()
+	void REngine::killAliveLevel()
 	{
-		m_CurrentLevel->cleanUp();
+		m_CurrentLevel->killAliveObjects();
 		delete m_CurrentLevel;
 	}
 
