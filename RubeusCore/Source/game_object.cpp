@@ -22,6 +22,8 @@ namespace Rubeus
 		m_HasPhysics(enablePhysics),
 		m_GeneratesHit(generatesHit)
 	{
+		InstantiatedGameObjects.insert(std::pair<std::string, RGameObject *>(name, this));
+
 		if (enablePhysics == true && m_PhysicsObject == NULL)
 		{
 			ERRORLOG("Invalid game object. Physics has been enabled. Specify a physics object");
@@ -32,7 +34,10 @@ namespace Rubeus
 			m_PhysicsObject->m_EnablePhysics = enablePhysics;
 		}
 
-		m_PhysicsObject->m_Collider->m_Sprite = m_Sprite;
+		if (collider != NULL)
+		{
+			m_PhysicsObject->m_Collider->m_Sprite = m_Sprite;
+		}
 	}
 
 	RGameObject::RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, float & r, float & g, float & b, bool enablePhysics, const Awerere::APhysicsMaterial & material, const Awerere::EColliderType & type, Awerere::ACollider * collider, bool generatesHit)
@@ -53,7 +58,10 @@ namespace Rubeus
 			ERRORLOG("Invalid game object. Physics has been enabled for a NULL values Physics object pointer. Specify a non-NULL physics object.");
 		}
 
-		m_PhysicsObject->m_Collider->m_Sprite = m_Sprite;
+		if (collider != NULL)
+		{
+			m_PhysicsObject->m_Collider->m_Sprite = m_Sprite;
+		}
 	}
 
 	RGameObject::RGameObject()

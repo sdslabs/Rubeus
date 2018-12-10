@@ -16,11 +16,12 @@ int main()
 	// Contains the entire Rubeus code base
 	LOG(sizeof(*Engine));
 
-	std::string startupLevel = "";
-
 	// Generated user file
 #include "user_init.cpp"
 	// End generated lines
+
+	// startupLevel : std::string contains the startup level name. Defined in user_init.cpp
+	Engine->m_StartupLevelName = startupLevel;
 
 	// Level selection loop
 	while (true)
@@ -44,9 +45,9 @@ int main()
 			{
 				Engine->load(*item.second);
 				Engine->run();
+				Engine->getCurrentLevel()->onEnd();
 				Engine->cleanUp();
 			}
-
 			// The startup level should contain the logic for when to load the next level
 		}
 	}

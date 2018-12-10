@@ -49,10 +49,12 @@ namespace Rubeus
 		if (m_StartupLevelName == "")
 		{
 			cleanUp();
+
+			return;
 		}
 
-		// If this is not the first time a level is being loaded then
-		// previously allocated level specific components need to be deleted.
+		// If this is not the first time a level is being loaded then previously
+		// allocated level specific components need to be closed and restarted.
 		if (callCount > 1)
 		{
 			delete m_LayerComposition;
@@ -103,16 +105,16 @@ namespace Rubeus
 		// Main game loop
 		while (m_Window->closed() == false)
 		{
-			// Clear window buffer every frame
+			// Clear window buffer
 			m_Window->clearWindow();
 
-			// Tick the entire world once per frame
+			// Tick the entire world once
 			getWorld()->tick();
 
-			// Update physics assuming 60FPS per frame
+			// Update physics assuming 60FPS
 			m_PhysicsEngine->update(1.0f / 60.0f);
 
-			// Draw objects per frame
+			// Draw objects
 			m_LayerComposition->draw();
 
 			// Switch windows draw and display buffers
@@ -121,11 +123,14 @@ namespace Rubeus
 			// Evaluate and display the frame times
 			m_Timer->evaluateFrames();
 
+			// Startup level can be changed to "" by game logic to end the game
 			if (m_StartupLevelName == "")
 			{
 				break;
 			}
 		}
+
+		m_StartupLevelName = "";
 	}
 
 	void REngine::cleanUp()

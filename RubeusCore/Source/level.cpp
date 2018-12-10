@@ -23,10 +23,6 @@ namespace Rubeus
 		delete m_AudioManager;
 	}
 
-	void RLevel::submitObject(RGameObject * gameObject)
-	{
-	}
-
 	void RLevel::begin()
 	{
 	}

@@ -24,7 +24,6 @@ namespace Rubeus
 		RLevel(std::string name);
 		~RLevel();
 
-		virtual void submitObject(RGameObject * gameObject);
 		virtual void begin();
 		virtual void run();
 		void cleanUp();
