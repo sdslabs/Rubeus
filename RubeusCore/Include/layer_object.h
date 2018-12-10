@@ -29,7 +29,6 @@ namespace Rubeus
 			 * @fn		RLayer()
 			 *
 			 * @brief	Default constructor
-			 * @warning
 			 */
 			RLayer() = default;
 
