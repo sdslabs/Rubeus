@@ -22,7 +22,6 @@ namespace Rubeus
 		GraphicComponents::RLayerComposition * m_LayerComposition = NULL;
 		UtilityComponents::RTimer * m_Timer = NULL;
 		UtilityComponents::RLoaderComponent * m_Loader = NULL;
-		std::unordered_map<std::string, RGameObject *> m_Objects;
 
 		RLevel * m_CurrentLevel = NULL;
 
@@ -36,7 +35,6 @@ namespace Rubeus
 		REngine();
 		~REngine();
 
-		void recognize(RLevel * level);
 		void load(RLevel & level);
 		void run();
 		void cleanUp();

@@ -37,6 +37,10 @@ namespace Rubeus
 
 	void RLevel::cleanUp()
 	{
+		for (auto & item : m_World->getActiveObjects())
+		{
+			delete item;
+		}
 	}
 
 	void RLevel::onEnd()

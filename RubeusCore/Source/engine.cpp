@@ -43,6 +43,30 @@ namespace Rubeus
 
 	void REngine::load(RLevel & level)
 	{
+		static int callCount = 0;
+		callCount++;
+
+		if (m_StartupLevelName == "")
+		{
+			cleanUp();
+		}
+
+		// If this is not the first time a level is being loaded then
+		// previously allocated level specific components need to be deleted.
+		if (callCount > 1)
+		{
+			delete m_LayerComposition;
+			m_LayerComposition = new GraphicComponents::RLayerComposition(
+				"Shaders/basic.vert",
+				"Shaders/basic.frag",
+				"Shaders/basic.vert",
+				"Shaders/basic.frag"
+			);
+
+			delete m_PhysicsEngine;
+			delete m_CurrentLevel;
+		}
+
 		for (auto & item : RGameObject::InstantiatedGameObjects)
 		{
 			if (item.second->m_UsedByLevelName == level.m_Name)
@@ -50,16 +74,66 @@ namespace Rubeus
 				level.addGameObject(item.second);
 				m_LayerComposition->add(item.second);
 			}
+			else
+			{
+				delete item.second;
+			}
 		}
+
+		m_CurrentLevel = &level;
+		m_PhysicsEngine = new Rubeus::Awerere::APhysicsEngine(*m_Window, *m_CurrentLevel->m_World, m_Window->getHeight() / 9.0f, m_Window->getHeight() / 16.0f);
+
+		SUCCESS("Loaded : " + level.m_Name);
 	}
 
 	void REngine::run()
 	{
+		LOG("Running level : " + m_CurrentLevel->m_Name);
+
+		// Tick the entire world once with begin() scripts
+		for (auto & item : getWorld()->getActiveObjects())
+		{
+			item->begin();
+		}
+
+		// TODO: Add Message system and send load level calls to asynchronously
+
+		m_Timer->setFrameCounter();
+
+		// Main game loop
+		while (m_Window->closed() == false)
+		{
+			// Clear window buffer every frame
+			m_Window->clearWindow();
+
+			// Tick the entire world once per frame
+			getWorld()->tick();
+
+			// Update physics assuming 60FPS per frame
+			m_PhysicsEngine->update(1.0f / 60.0f);
+
+			// Draw objects per frame
+			m_LayerComposition->draw();
+
+			// Switch windows draw and display buffers
+			m_Window->updateWindow();
+
+			// Evaluate and display the frame times
+			m_Timer->evaluateFrames();
+
+			if (m_StartupLevelName == "")
+			{
+				break;
+			}
+		}
+
+		cleanUp();
 	}
 
 	void REngine::cleanUp()
 	{
 		m_CurrentLevel->cleanUp();
+		delete m_CurrentLevel;
 	}
 
 	void REngine::onMessage(Message * msg)
