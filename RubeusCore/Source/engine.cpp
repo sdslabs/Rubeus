@@ -96,7 +96,7 @@ namespace Rubeus
 			item->begin();
 		}
 
-		// TODO: Add Message system and send load level calls to asynchronously
+		// TODO: Add Message system and send load level calls asynchronously
 
 		m_Timer->setFrameCounter();
 
@@ -126,14 +126,17 @@ namespace Rubeus
 				break;
 			}
 		}
-
-		cleanUp();
 	}
 
 	void REngine::cleanUp()
 	{
 		m_CurrentLevel->cleanUp();
 		delete m_CurrentLevel;
+	}
+
+	void REngine::end()
+	{
+		m_StartupLevelName = "";
 	}
 
 	void REngine::onMessage(Message * msg)

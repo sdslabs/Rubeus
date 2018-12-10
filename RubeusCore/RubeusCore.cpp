@@ -26,7 +26,7 @@ int main()
 	while (true)
 	{
 		/*
-		 * Any running level should call Engine.load("") at the end of the game which
+		 * Any running level should call Engine->end() at the end of the game which
 		 * changes Engine->m_StartupLevelName to "" and in turn also ends the
 		 * level selection loop as seen below. Setting Engine->m_StartupLevelName to
 		 * "" directly will also work.
@@ -39,11 +39,15 @@ int main()
 
 		for (auto & item : RLevel::InstantiatedLevels)
 		{
+			// If level selected is the startup level
 			if (item.first == Engine->m_StartupLevelName)
 			{
 				Engine->load(*item.second);
 				Engine->run();
+				Engine->cleanUp();
 			}
+
+			// The startup level should contain the logic for when to load the next level
 		}
 	}
 	LOG("Rubeus is now exiting");
