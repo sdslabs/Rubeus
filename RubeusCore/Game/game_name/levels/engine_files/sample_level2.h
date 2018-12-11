@@ -20,6 +20,5 @@ public:
 	}
 
 	void begin() override;
-	void run() override;
 	void onEnd() override;
 };

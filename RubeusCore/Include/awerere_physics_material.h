@@ -57,7 +57,7 @@ namespace Rubeus
 			~APhysicsMaterial();
 
 			/**
-			 * @fn		void makeMaterial(const float & mass, RML::Vector2D & gravity, const float & friction, const float & restitution)
+			 * @fn		void makeMaterial(const float & mass, const RML::Vector2D & gravity, const float & friction, const float & restitution)
 			 *
 			 * @brief	Make a material with by specifying physics constants
 			 *
@@ -66,7 +66,7 @@ namespace Rubeus
 			 * @param	friction		Friction coefficient of the surfaces.
 			 * @param	restitution	Restitution coefficient for resolving collisions.
 			 */
-			void makeMaterial(const float & mass, RML::Vector2D & gravity, const float & friction, const float & restitution);
+			void makeMaterial(const float & mass, const RML::Vector2D & gravity, const float & friction, const float & restitution);
 
 			/**
 			 * @fn		inline bool isCollisionEnabled() const

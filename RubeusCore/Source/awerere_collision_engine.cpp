@@ -136,9 +136,13 @@ namespace Rubeus
 				}
 
 				// Record the relative coefficient of restitution
+#ifdef min()
 				float e = min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution);
 				float mu = min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction);
-
+#else
+				float e = std::min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution);
+				float mu = std::min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction);
+#endif
 				// Store temporary variables
 				float m1 = left.m_PhysicsObject->m_PhysicsMaterial.m_Mass;
 				float m2 = right.m_PhysicsObject->m_PhysicsMaterial.m_Mass;
@@ -259,9 +263,9 @@ namespace Rubeus
 			{
 				// Collider types are as follows:
 				//
-				// SPHERE      = 0x0001,       
-				// PLANE       = 0x0010,		
-				// BOX         = 0x0100,		
+				// SPHERE      = 0x0001,
+				// PLANE       = 0x0010,
+				// BOX         = 0x0100,
 				// NO_COLLIDER = 0x1000
 
 				case 0x0001:

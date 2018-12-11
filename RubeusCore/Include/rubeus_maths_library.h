@@ -285,7 +285,7 @@ namespace RML
 		Vector2D& operator+=(const Vector2D &other);
 
 		/**
-			* @fn	Vector2D& operator-=(const Vector2D &other);
+			* @fn	Vector2D operator-=(const Vector2D &other);
 			*
 			* @brief	Subtraction assignment operator
 			*
@@ -293,7 +293,7 @@ namespace RML
 			*
 			* @return	The result of the operation.
 			*/
-		Vector2D& operator-=(const Vector2D &other);
+		Vector2D operator-=(const Vector2D &other);
 
 		/**
 			* @fn	Vector2D& operator*=(const Vector2D &other);

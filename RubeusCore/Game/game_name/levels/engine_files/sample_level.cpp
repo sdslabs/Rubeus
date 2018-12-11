@@ -6,10 +6,6 @@ void USampleLevel::begin()
 	getInputManager()->addKeyToKeyBinding("Space", Rubeus::EKeyboardKeys::__SPACE);
 }
 
-void USampleLevel::run()
-{
-}
-
 void USampleLevel::onEnd()
 {
 }

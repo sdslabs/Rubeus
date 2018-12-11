@@ -14,8 +14,8 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		ACollider::ACollider()
-			: m_Position(RML::Vector3D()), m_Type(EColliderType::NO_COLLIDER)
+		ACollider::ACollider(RML::Vector3D position)
+			: m_Position(position), m_Type(EColliderType::NO_COLLIDER)
 		{
 		}
 
@@ -44,9 +44,9 @@ namespace Rubeus
 			{
 				// Collider types are as follows:
 				//
-				// SPHERE      = 0x0001,       
-				// PLANE       = 0x0010,		
-				// BOX         = 0x0100,		
+				// SPHERE      = 0x0001,
+				// PLANE       = 0x0010,
+				// BOX         = 0x0100,
 				// NO_COLLIDER = 0x1000
 
 				case 0x0001:
