@@ -8,7 +8,6 @@ link_directories(Source/)
 file(GLOB_RECURSE SOURCES
     Source/*.cpp
     Game/*.cpp
-    user_init.cpp
 )
 
 # Remove this line if you want to remove Visual Leak Detection(VLD) reports in Debug mode.
@@ -22,7 +21,7 @@ configure_file(config.h.in config.h)
 # Add source to this project's executable.
 add_executable (RubeusCore "RubeusCore.cpp" "RubeusCore.h" ${SOURCES})
 
-target_include_directories(RubeusCore PUBLIC ./Include)
+target_include_directories(RubeusCore PUBLIC ./Include ./Game)
 include_directories(${OPENGL_INCLUDE_DIRS})
 
 if(WIN32)
