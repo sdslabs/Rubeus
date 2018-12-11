@@ -1,0 +1,492 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="level_8h" kind="file" language="C++">
+    <compoundname>level.h</compoundname>
+    <includes refid="world_8h" local="no">world.h</includes>
+    <includes refid="audio__manager__component_8h" local="no">audio_manager_component.h</includes>
+    <includes refid="input__manager_8h" local="no">input_manager.h</includes>
+    <includedby refid="engine_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/engine.h</includedby>
+    <incdepgraph>
+      <node id="942">
+        <label>awerere_collision_engine.h</label>
+        <link refid="awerere__collision__engine_8h"/>
+        <childnode refid="943" relation="include">
+        </childnode>
+        <childnode refid="944" relation="include">
+        </childnode>
+        <childnode refid="948" relation="include">
+        </childnode>
+        <childnode refid="949" relation="include">
+        </childnode>
+        <childnode refid="941" relation="include">
+        </childnode>
+      </node>
+      <node id="936">
+        <label>shader_component.h</label>
+        <link refid="shader__component_8h"/>
+        <childnode refid="906" relation="include">
+        </childnode>
+        <childnode refid="915" relation="include">
+        </childnode>
+        <childnode refid="926" relation="include">
+        </childnode>
+        <childnode refid="924" relation="include">
+        </childnode>
+        <childnode refid="908" relation="include">
+        </childnode>
+      </node>
+      <node id="943">
+        <label>awerere_collision_grid.h</label>
+        <link refid="awerere__collision__grid_8h"/>
+      </node>
+      <node id="907">
+        <label>game_object.h</label>
+        <link refid="game__object_8h"/>
+        <childnode refid="908" relation="include">
+        </childnode>
+        <childnode refid="911" relation="include">
+        </childnode>
+        <childnode refid="913" relation="include">
+        </childnode>
+        <childnode refid="923" relation="include">
+        </childnode>
+        <childnode refid="926" relation="include">
+        </childnode>
+        <childnode refid="938" relation="include">
+        </childnode>
+        <childnode refid="939" relation="include">
+        </childnode>
+        <childnode refid="940" relation="include">
+        </childnode>
+        <childnode refid="942" relation="include">
+        </childnode>
+      </node>
+      <node id="919">
+        <label>IL/il.h</label>
+      </node>
+      <node id="913">
+        <label>sprite_object.h</label>
+        <link refid="sprite__object_8h"/>
+        <childnode refid="914" relation="include">
+        </childnode>
+      </node>
+      <node id="920">
+        <label>IL/ilu.h</label>
+      </node>
+      <node id="904">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h</label>
+        <link refid="level_8h"/>
+        <childnode refid="905" relation="include">
+        </childnode>
+        <childnode refid="951" relation="include">
+        </childnode>
+        <childnode refid="946" relation="include">
+        </childnode>
+      </node>
+      <node id="949">
+        <label>awerere_hit_event_list.h</label>
+        <link refid="awerere__hit__event__list_8h"/>
+        <childnode refid="950" relation="include">
+        </childnode>
+        <childnode refid="941" relation="include">
+        </childnode>
+      </node>
+      <node id="911">
+        <label>entity_object.h</label>
+        <link refid="entity__object_8h"/>
+        <childnode refid="912" relation="include">
+        </childnode>
+      </node>
+      <node id="912">
+        <label>string</label>
+      </node>
+      <node id="952">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="915">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="951">
+        <label>audio_manager_component.h</label>
+        <link refid="audio__manager__component_8h"/>
+        <childnode refid="906" relation="include">
+        </childnode>
+        <childnode refid="952" relation="include">
+        </childnode>
+        <childnode refid="926" relation="include">
+        </childnode>
+        <childnode refid="934" relation="include">
+        </childnode>
+      </node>
+      <node id="945">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="937">
+        <label>renderer_component.h</label>
+        <link refid="renderer__component_8h"/>
+        <childnode refid="915" relation="include">
+        </childnode>
+        <childnode refid="908" relation="include">
+        </childnode>
+        <childnode refid="926" relation="include">
+        </childnode>
+      </node>
+      <node id="934">
+        <label>message_codes.h</label>
+        <link refid="message__codes_8h"/>
+        <childnode refid="917" relation="include">
+        </childnode>
+      </node>
+      <node id="931">
+        <label>message_object.h</label>
+        <link refid="message__object_8h"/>
+        <childnode refid="912" relation="include">
+        </childnode>
+        <childnode refid="932" relation="include">
+        </childnode>
+        <childnode refid="933" relation="include">
+        </childnode>
+        <childnode refid="934" relation="include">
+        </childnode>
+      </node>
+      <node id="930">
+        <label>message_system.h</label>
+        <link refid="message__system_8h"/>
+        <childnode refid="906" relation="include">
+        </childnode>
+        <childnode refid="931" relation="include">
+        </childnode>
+        <childnode refid="935" relation="include">
+        </childnode>
+      </node>
+      <node id="933">
+        <label>image_object.h</label>
+        <link refid="image__object_8h"/>
+        <childnode refid="912" relation="include">
+        </childnode>
+        <childnode refid="919" relation="include">
+        </childnode>
+      </node>
+      <node id="932">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="947">
+        <label>keys.h</label>
+        <link refid="keys_8h"/>
+      </node>
+      <node id="940">
+        <label>awerere_collider_object.h</label>
+        <link refid="awerere__collider__object_8h"/>
+        <childnode refid="908" relation="include">
+        </childnode>
+        <childnode refid="939" relation="include">
+        </childnode>
+        <childnode refid="941" relation="include">
+        </childnode>
+        <childnode refid="913" relation="include">
+        </childnode>
+      </node>
+      <node id="918">
+        <label>string.h</label>
+      </node>
+      <node id="928">
+        <label>typeinfo</label>
+      </node>
+      <node id="905">
+        <label>world.h</label>
+        <link refid="world_8h"/>
+        <childnode refid="906" relation="include">
+        </childnode>
+        <childnode refid="907" relation="include">
+        </childnode>
+      </node>
+      <node id="921">
+        <label>index_buffer_object.h</label>
+        <link refid="index__buffer__object_8h"/>
+        <childnode refid="915" relation="include">
+        </childnode>
+        <childnode refid="917" relation="include">
+        </childnode>
+      </node>
+      <node id="906">
+        <label>vector</label>
+      </node>
+      <node id="944">
+        <label>window_component.h</label>
+        <link refid="window__component_8h"/>
+        <childnode refid="918" relation="include">
+        </childnode>
+        <childnode refid="915" relation="include">
+        </childnode>
+        <childnode refid="945" relation="include">
+        </childnode>
+        <childnode refid="917" relation="include">
+        </childnode>
+        <childnode refid="924" relation="include">
+        </childnode>
+        <childnode refid="926" relation="include">
+        </childnode>
+        <childnode refid="946" relation="include">
+        </childnode>
+        <childnode refid="938" relation="include">
+        </childnode>
+      </node>
+      <node id="948">
+        <label>awerere_flag.h</label>
+        <link refid="awerere__flag_8h"/>
+        <childnode refid="906" relation="include">
+        </childnode>
+      </node>
+      <node id="941">
+        <label>awerere_collide_data_object.h</label>
+        <link refid="awerere__collide__data__object_8h"/>
+        <childnode refid="908" relation="include">
+        </childnode>
+      </node>
+      <node id="909">
+        <label>math.h</label>
+      </node>
+      <node id="925">
+        <label>cstdlib</label>
+      </node>
+      <node id="935">
+        <label>message_bus.h</label>
+        <link refid="message__bus_8h"/>
+        <childnode refid="906" relation="include">
+        </childnode>
+        <childnode refid="931" relation="include">
+        </childnode>
+      </node>
+      <node id="910">
+        <label>iostream</label>
+      </node>
+      <node id="922">
+        <label>vertex_array_object.h</label>
+        <link refid="vertex__array__object_8h"/>
+        <childnode refid="915" relation="include">
+        </childnode>
+        <childnode refid="906" relation="include">
+        </childnode>
+        <childnode refid="916" relation="include">
+        </childnode>
+      </node>
+      <node id="950">
+        <label>deque</label>
+      </node>
+      <node id="927">
+        <label>unordered_map</label>
+      </node>
+      <node id="916">
+        <label>buffer_object.h</label>
+        <link refid="buffer__object_8h"/>
+        <childnode refid="915" relation="include">
+        </childnode>
+        <childnode refid="917" relation="include">
+        </childnode>
+      </node>
+      <node id="917">
+        <label>logger_component.h</label>
+        <link refid="logger__component_8h_source"/>
+        <childnode refid="910" relation="include">
+        </childnode>
+        <childnode refid="918" relation="include">
+        </childnode>
+        <childnode refid="912" relation="include">
+        </childnode>
+        <childnode refid="915" relation="include">
+        </childnode>
+        <childnode refid="919" relation="include">
+        </childnode>
+        <childnode refid="920" relation="include">
+        </childnode>
+      </node>
+      <node id="939">
+        <label>awerere_physics_material.h</label>
+        <link refid="awerere__physics__material_8h"/>
+        <childnode refid="908" relation="include">
+        </childnode>
+      </node>
+      <node id="908">
+        <label>rubeus_maths_library.h</label>
+        <link refid="rubeus__maths__library_8h"/>
+        <childnode refid="909" relation="include">
+        </childnode>
+        <childnode refid="910" relation="include">
+        </childnode>
+      </node>
+      <node id="923">
+        <label>texture_object.h</label>
+        <link refid="texture__object_8h"/>
+        <childnode refid="915" relation="include">
+        </childnode>
+        <childnode refid="924" relation="include">
+        </childnode>
+      </node>
+      <node id="924">
+        <label>loader_component.h</label>
+        <link refid="loader__component_8h_source"/>
+        <childnode refid="918" relation="include">
+        </childnode>
+        <childnode refid="912" relation="include">
+        </childnode>
+        <childnode refid="925" relation="include">
+        </childnode>
+        <childnode refid="919" relation="include">
+        </childnode>
+        <childnode refid="920" relation="include">
+        </childnode>
+        <childnode refid="917" relation="include">
+        </childnode>
+        <childnode refid="926" relation="include">
+        </childnode>
+        <childnode refid="933" relation="include">
+        </childnode>
+      </node>
+      <node id="938">
+        <label>awerere_physics_object.h</label>
+        <link refid="awerere__physics__object_8h_source"/>
+        <childnode refid="906" relation="include">
+        </childnode>
+        <childnode refid="908" relation="include">
+        </childnode>
+        <childnode refid="939" relation="include">
+        </childnode>
+        <childnode refid="940" relation="include">
+        </childnode>
+      </node>
+      <node id="946">
+        <label>input_manager.h</label>
+        <link refid="input__manager_8h"/>
+        <childnode refid="912" relation="include">
+        </childnode>
+        <childnode refid="927" relation="include">
+        </childnode>
+        <childnode refid="906" relation="include">
+        </childnode>
+        <childnode refid="915" relation="include">
+        </childnode>
+        <childnode refid="945" relation="include">
+        </childnode>
+        <childnode refid="917" relation="include">
+        </childnode>
+        <childnode refid="924" relation="include">
+        </childnode>
+        <childnode refid="908" relation="include">
+        </childnode>
+        <childnode refid="926" relation="include">
+        </childnode>
+        <childnode refid="947" relation="include">
+        </childnode>
+      </node>
+      <node id="926">
+        <label>master_component.h</label>
+        <link refid="master__component_8h_source"/>
+        <childnode refid="912" relation="include">
+        </childnode>
+        <childnode refid="927" relation="include">
+        </childnode>
+        <childnode refid="928" relation="include">
+        </childnode>
+        <childnode refid="929" relation="include">
+        </childnode>
+        <childnode refid="917" relation="include">
+        </childnode>
+        <childnode refid="930" relation="include">
+        </childnode>
+      </node>
+      <node id="929">
+        <label>memory</label>
+      </node>
+      <node id="914">
+        <label>renderable_object.h</label>
+        <link refid="renderable__object_8h"/>
+        <childnode refid="915" relation="include">
+        </childnode>
+        <childnode refid="908" relation="include">
+        </childnode>
+        <childnode refid="916" relation="include">
+        </childnode>
+        <childnode refid="921" relation="include">
+        </childnode>
+        <childnode refid="922" relation="include">
+        </childnode>
+        <childnode refid="923" relation="include">
+        </childnode>
+        <childnode refid="936" relation="include">
+        </childnode>
+        <childnode refid="937" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="953">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h</label>
+        <link refid="level_8h"/>
+        <childnode refid="954" relation="include">
+        </childnode>
+      </node>
+      <node id="954">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/engine.h</label>
+        <link refid="engine_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_rubeus_1_1_r_level" prot="public">Rubeus::RLevel</innerclass>
+    <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
+    <briefdescription>
+<para>Declares the Level class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="world_8h" kindref="compound">world.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="audio__manager__component_8h" kindref="compound">audio_manager_component.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="input__manager_8h" kindref="compound">input_manager.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_rubeus" kindref="compound">Rubeus</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">REngine;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_rubeus_1_1_r_level" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rubeus_1_1_r_level" kindref="compound">RLevel</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26" refid="class_rubeus_1_1_r_level_1a2523b175190f46fac69ba69e79ec2c2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_r_world" kindref="compound">RWorld</ref><sp/>*<sp/><ref refid="class_rubeus_1_1_r_level_1a2523b175190f46fac69ba69e79ec2c2e" kindref="member">m_World</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_rubeus_1_1_r_level_1a332056e3e49dbbde32a3153d46c628a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_r_input_manager" kindref="compound">RInputManager</ref><sp/>*<sp/><ref refid="class_rubeus_1_1_r_level_1a332056e3e49dbbde32a3153d46c628a9" kindref="member">m_InputManager</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_rubeus_1_1_r_level_1a262dcbba989ac479eb7c6b66d7ce220a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony" kindref="compound">AudioComponents::RSymphony</ref><sp/>*<sp/><ref refid="class_rubeus_1_1_r_level_1a262dcbba989ac479eb7c6b66d7ce220a" kindref="member">m_AudioManager</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_rubeus_1_1_r_level_1a62b53a50f4afadf234f3d67e01488cea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_rubeus_1_1_r_level_1a62b53a50f4afadf234f3d67e01488cea" kindref="member">m_Name</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rubeus_1_1_r_engine" kindref="compound">REngine</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="class_rubeus_1_1_r_level_1a0f2487a9442ae5268cc50103d5978e94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::unordered_map&lt;std::string,<sp/>RLevel<sp/>*&gt;<sp/><ref refid="class_rubeus_1_1_r_level_1a0f2487a9442ae5268cc50103d5978e94" kindref="member">InstantiatedLevels</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_r_level_1aa6315e5321bcfca5282201a6d64e7d15" kindref="member">RLevel</ref>(std::string<sp/>name);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_r_level_1aa5dd147b213fb9d63a31a4aa4ba9a1e2" kindref="member">~RLevel</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_level_1accfb4374e3deeffc74d45d8d03d3556b" kindref="member">begin</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_level_1a1a8159f166bbe90cb22425136609fb5e" kindref="member">onEnd</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_level_1a4776b19d0f8313a3d785910e7b39e502" kindref="member">killAliveObjects</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_level_1a2c0545a3e9a6c78f586dc9118ae17b9f" kindref="member">addGameObject</ref>(<ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref><sp/>*<sp/>gameObject);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="class_rubeus_1_1_r_level_1aa664e7c62a62134aeff17d50428a543d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_rubeus_1_1_r_level_1aa664e7c62a62134aeff17d50428a543d" kindref="member">getName</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_level_1a62b53a50f4afadf234f3d67e01488cea" kindref="member">m_Name</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="class_rubeus_1_1_r_level_1a488936e1ca061f8deb49d8ed06cd9373" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_world" kindref="compound">RWorld</ref><sp/>*<sp/><ref refid="class_rubeus_1_1_r_level_1a488936e1ca061f8deb49d8ed06cd9373" kindref="member">getWorld</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_level_1a2523b175190f46fac69ba69e79ec2c2e" kindref="member">m_World</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="class_rubeus_1_1_r_level_1a83010fe62326dc0767a7a041aeff411e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_input_manager" kindref="compound">RInputManager</ref><sp/>*<sp/><ref refid="class_rubeus_1_1_r_level_1a83010fe62326dc0767a7a041aeff411e" kindref="member">getInputManager</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_level_1a332056e3e49dbbde32a3153d46c628a9" kindref="member">m_InputManager</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="class_rubeus_1_1_r_level_1a8d08d9e54f8732f6043c02593d9279c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony" kindref="compound">AudioComponents::RSymphony</ref><sp/>*<sp/><ref refid="class_rubeus_1_1_r_level_1a8d08d9e54f8732f6043c02593d9279c8" kindref="member">getSoundManager</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_level_1a262dcbba989ac479eb7c6b66d7ce220a" kindref="member">m_AudioManager</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h"/>
+  </compounddef>
+</doxygen>

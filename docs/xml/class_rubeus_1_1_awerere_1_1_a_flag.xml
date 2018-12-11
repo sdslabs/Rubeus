@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_awerere_1_1_a_flag" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::Awerere::AFlag</compoundname>
+    <includes refid="awerere__flag_8h" local="no">awerere_flag.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_flag_1a4eb75ebb0c7559becf2fd5948ea6a250" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>std::vector&lt;bool&gt; Rubeus::Awerere::AFlag::m_Data</definition>
+        <argsstring></argsstring>
+        <name>m_Data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_flag.h" line="25" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_flag.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_flag_1a5bf7736d7a10fd256a626ab46e393b11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::Awerere::AFlag::AFlag</definition>
+        <argsstring>(const int &amp;bufferSize=1)</argsstring>
+        <name>AFlag</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>bufferSize</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Set BufferSize by using AFlag::SetBufferSize() to use inside Awerere.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flags buffer size. Default value is BufferSize. If BufferSize is not set before hand, then default is 1. Unusable by Awerere if BufferSize is not set. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_flag.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_flag_1a0e9eb803d966b6dd1dfa019c51a4edd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::Awerere::AFlag::~AFlag</definition>
+        <argsstring>()</argsstring>
+        <name>~AFlag</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_flag.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_flag_1a187b8287e5ac2734b5e0fecc0a965b8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Rubeus::Awerere::AFlag::operator*</definition>
+        <argsstring>(AFlag &amp;right)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="class_rubeus_1_1_awerere_1_1_a_flag" kindref="compound">AFlag</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Operates multiplication on flag values. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Verify length of flag before sending in.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right side of operator.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Result of OR operation. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_flag.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_flag_1a8a1dee9787d492dfb1f053d9727a3100" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const size_t &amp;</type>
+        <definition>const size_t &amp; Rubeus::Awerere::AFlag::getLength</definition>
+        <argsstring>() const</argsstring>
+        <name>getLength</name>
+        <briefdescription>
+<para>Return the length of this flag. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The length of this flag (not in bytes, but count). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_flag.h" line="65" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_flag.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Array based collection of collision flag used in grid based resolution. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_flag.h" line="21" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_flag.h" bodystart="20" bodyend="66"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_flag_1a5bf7736d7a10fd256a626ab46e393b11" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::AFlag</scope><name>AFlag</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_flag_1a8a1dee9787d492dfb1f053d9727a3100" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::AFlag</scope><name>getLength</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_flag_1a4eb75ebb0c7559becf2fd5948ea6a250" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::AFlag</scope><name>m_Data</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_flag_1a187b8287e5ac2734b5e0fecc0a965b8b" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::AFlag</scope><name>operator*</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_flag_1a0e9eb803d966b6dd1dfa019c51a4edd7" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::AFlag</scope><name>~AFlag</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

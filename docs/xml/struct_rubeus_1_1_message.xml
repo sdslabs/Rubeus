@@ -136,29 +136,29 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="18">
+      <node id="90">
         <label>Rubeus::Message</label>
         <link refid="struct_rubeus_1_1_message"/>
-        <childnode refid="19" relation="usage">
+        <childnode refid="91" relation="usage">
           <edgelabel>m_Receiver</edgelabel>
           <edgelabel>m_Sender</edgelabel>
         </childnode>
       </node>
-      <node id="21">
+      <node id="93">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="20">
+      <node id="92">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="21" relation="usage">
+        <childnode refid="93" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="19">
+      <node id="91">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="20" relation="usage">
+        <childnode refid="92" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>

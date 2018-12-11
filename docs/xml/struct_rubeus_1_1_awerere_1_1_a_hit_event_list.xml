@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="struct_rubeus_1_1_awerere_1_1_a_hit_event_list" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::Awerere::AHitEventList</compoundname>
+    <includes refid="awerere__hit__event__list_8h" local="no">awerere_hit_event_list.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="struct_rubeus_1_1_awerere_1_1_a_hit_event_list_1ad97a67f014ae599db94de3cc9a901396" prot="private" static="no" mutable="no">
+        <type>std::deque&lt; <ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data" kindref="compound">ACollideData</ref> &gt;</type>
+        <definition>std::deque&lt;ACollideData&gt; Rubeus::Awerere::AHitEventList::m_Data</definition>
+        <argsstring></argsstring>
+        <name>m_Data</name>
+        <briefdescription>
+<para>Queue of Hit events saved. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_hit_event_list.h" line="27" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_hit_event_list.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_rubeus_1_1_awerere_1_1_a_hit_event_list_1ab6ec34aa632092abd740027022cb6aea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::Awerere::AHitEventList::AHitEventList</definition>
+        <argsstring>()</argsstring>
+        <name>AHitEventList</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_hit_event_list.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_rubeus_1_1_awerere_1_1_a_hit_event_list_1a51eff8229c48a200ba14d93014b96be7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::Awerere::AHitEventList::~AHitEventList</definition>
+        <argsstring>()</argsstring>
+        <name>~AHitEventList</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_hit_event_list.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_rubeus_1_1_awerere_1_1_a_hit_event_list_1ad4a2989b10bda71222721016e08487a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::Awerere::AHitEventList::push</definition>
+        <argsstring>(const ACollideData &amp;additive)</argsstring>
+        <name>push</name>
+        <param>
+          <type>const <ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data" kindref="compound">ACollideData</ref> &amp;</type>
+          <declname>additive</declname>
+        </param>
+        <briefdescription>
+<para>Push a confirmed hit event to queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>additive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Collision data from hit. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_hit_event_list.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_rubeus_1_1_awerere_1_1_a_hit_event_list_1af63ac1201735d601c62c13e85f737597" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::Awerere::AHitEventList::push</definition>
+        <argsstring>(const bool &amp;intersect, const bool &amp;gap, const RML::Vector2D &amp;collisionNormal)</argsstring>
+        <name>push</name>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>intersect</declname>
+        </param>
+        <param>
+          <type>const bool &amp;</type>
+          <declname>gap</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &amp;</type>
+          <declname>collisionNormal</declname>
+        </param>
+        <briefdescription>
+<para>Generate a hit event and add to queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>intersect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If colliders have intersected. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Amount of gap. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>collisionNormal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Collision normal. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_hit_event_list.h" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_rubeus_1_1_awerere_1_1_a_hit_event_list_1a60fce2cb441329461e816d58cc24f543" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data" kindref="compound">ACollideData</ref> &amp;</type>
+        <definition>const ACollideData &amp; Rubeus::Awerere::AHitEventList::pop</definition>
+        <argsstring>()</argsstring>
+        <name>pop</name>
+        <briefdescription>
+<para>Pop a hit event from the queue. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Confirmed hit data. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_hit_event_list.h" line="72" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>List of generated Hit events by collision engine. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_hit_event_list.h" line="23" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_hit_event_list.h" bodystart="22" bodyend="73"/>
+    <listofallmembers>
+      <member refid="struct_rubeus_1_1_awerere_1_1_a_hit_event_list_1ab6ec34aa632092abd740027022cb6aea" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::AHitEventList</scope><name>AHitEventList</name></member>
+      <member refid="struct_rubeus_1_1_awerere_1_1_a_hit_event_list_1ad97a67f014ae599db94de3cc9a901396" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::AHitEventList</scope><name>m_Data</name></member>
+      <member refid="struct_rubeus_1_1_awerere_1_1_a_hit_event_list_1a60fce2cb441329461e816d58cc24f543" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::AHitEventList</scope><name>pop</name></member>
+      <member refid="struct_rubeus_1_1_awerere_1_1_a_hit_event_list_1ad4a2989b10bda71222721016e08487a9" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::AHitEventList</scope><name>push</name></member>
+      <member refid="struct_rubeus_1_1_awerere_1_1_a_hit_event_list_1af63ac1201735d601c62c13e85f737597" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::AHitEventList</scope><name>push</name></member>
+      <member refid="struct_rubeus_1_1_awerere_1_1_a_hit_event_list_1a51eff8229c48a200ba14d93014b96be7" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::AHitEventList</scope><name>~AHitEventList</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

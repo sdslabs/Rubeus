@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="awerere__collide__data__object_8h" kind="file" language="C++">
+    <compoundname>awerere_collide_data_object.h</compoundname>
+    <includes refid="rubeus__maths__library_8h" local="no">rubeus_maths_library.h</includes>
+    <includedby refid="awerere__box__collider__object_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h</includedby>
+    <includedby refid="awerere__collider__object_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collider_object.h</includedby>
+    <includedby refid="awerere__collision__engine_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_engine.h</includedby>
+    <includedby refid="awerere__hit__event__list_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_hit_event_list.h</includedby>
+    <includedby refid="awerere__plane__collider__object_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_plane_collider_object.h</includedby>
+    <includedby refid="awerere__sphere__collider__object_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h</includedby>
+    <incdepgraph>
+      <node id="58">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h</label>
+        <link refid="awerere__collide__data__object_8h"/>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>math.h</label>
+      </node>
+      <node id="61">
+        <label>iostream</label>
+      </node>
+      <node id="59">
+        <label>rubeus_maths_library.h</label>
+        <link refid="rubeus__maths__library_8h"/>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="77">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_engine.h</label>
+        <link refid="awerere__collision__engine_8h"/>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h</label>
+        <link refid="group__object_8h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h</label>
+        <link refid="game__object_8h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h</label>
+        <link refid="level_8h"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_hit_event_list.h</label>
+        <link refid="awerere__hit__event__list_8h"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_plane_collider_object.h</label>
+        <link refid="awerere__plane__collider__object_8h"/>
+      </node>
+      <node id="72">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/ui_layer_object.h</label>
+        <link refid="ui__layer__object_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h</label>
+        <link refid="scene__layer__object_8h_source"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h</label>
+        <link refid="layer__composition__object_8h"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_object.h</label>
+        <link refid="layer__object_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collider_object.h</label>
+        <link refid="awerere__collider__object_8h"/>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/engine.h</label>
+        <link refid="engine_8h"/>
+      </node>
+      <node id="73">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/world.h</label>
+        <link refid="world_8h"/>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h</label>
+        <link refid="window__component_8h"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h</label>
+        <link refid="awerere__collide__data__object_8h"/>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h</label>
+        <link refid="awerere__physics__engine_8h"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h</label>
+        <link refid="awerere__box__collider__object_8h"/>
+      </node>
+      <node id="65">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_object.h</label>
+        <link refid="awerere__physics__object_8h_source"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h</label>
+        <link refid="awerere__sphere__collider__object_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_rubeus_1_1_awerere_1_1_a_collide_data" prot="public">Rubeus::Awerere::ACollideData</innerclass>
+    <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
+    <innernamespace refid="namespace_rubeus_1_1_awerere">Rubeus::Awerere</innernamespace>
+    <briefdescription>
+<para>Declares the Collide data class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="rubeus__maths__library_8h" kindref="compound">rubeus_maths_library.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_rubeus" kindref="compound">Rubeus</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Awerere</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20" refid="class_rubeus_1_1_awerere_1_1_a_collide_data" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data" kindref="compound">ACollideData</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_IsIntersect;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>m_Gap;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref><sp/>m_CollisionNormal;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data_1ad79cdd0023cfc6d65028193528ecce14" kindref="member">ACollideData</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isIntersect,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gap,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref><sp/>collisionNormal);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data_1a30cee04ee5ff42c23beabd201fa3c6be" kindref="member">~ACollideData</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="class_rubeus_1_1_awerere_1_1_a_collide_data_1af4d3410dab0c62879aaf014372acc9ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data_1af4d3410dab0c62879aaf014372acc9ce" kindref="member">getIsIntersect</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_IsIntersect;<sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="class_rubeus_1_1_awerere_1_1_a_collide_data_1a3b367a80c633e614d2aaa2ee92cbb9e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data_1a3b367a80c633e614d2aaa2ee92cbb9e5" kindref="member">getGap</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_Gap;<sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="class_rubeus_1_1_awerere_1_1_a_collide_data_1ada2d967843fb9e84bae350d4a58af127" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref><sp/>&amp;<sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data_1ada2d967843fb9e84bae350d4a58af127" kindref="member">getCollisionNormal</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_CollisionNormal;<sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h"/>
+  </compounddef>
+</doxygen>

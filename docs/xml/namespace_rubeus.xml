@@ -4,13 +4,1122 @@
     <compoundname>Rubeus</compoundname>
     <innerclass refid="struct_rubeus_1_1_audio_modifier" prot="public">Rubeus::AudioModifier</innerclass>
     <innerclass refid="struct_rubeus_1_1_message" prot="public">Rubeus::Message</innerclass>
+    <innerclass refid="class_rubeus_1_1_r_engine" prot="public">Rubeus::REngine</innerclass>
+    <innerclass refid="class_rubeus_1_1_r_entity" prot="public">Rubeus::REntity</innerclass>
+    <innerclass refid="class_rubeus_1_1_r_game_object" prot="public">Rubeus::RGameObject</innerclass>
+    <innerclass refid="class_rubeus_1_1_r_input_manager" prot="public">Rubeus::RInputManager</innerclass>
+    <innerclass refid="class_rubeus_1_1_r_level" prot="public">Rubeus::RLevel</innerclass>
     <innerclass refid="class_rubeus_1_1_r_master_component" prot="public">Rubeus::RMasterComponent</innerclass>
     <innerclass refid="class_rubeus_1_1_r_message_bus" prot="public">Rubeus::RMessageBus</innerclass>
     <innerclass refid="class_rubeus_1_1_r_message_system" prot="public">Rubeus::RMessageSystem</innerclass>
+    <innerclass refid="class_rubeus_1_1_r_world" prot="public">Rubeus::RWorld</innerclass>
     <innernamespace refid="namespace_rubeus_1_1_audio_components">Rubeus::AudioComponents</innernamespace>
+    <innernamespace refid="namespace_rubeus_1_1_awerere">Rubeus::Awerere</innernamespace>
     <innernamespace refid="namespace_rubeus_1_1_graphic_components">Rubeus::GraphicComponents</innernamespace>
     <innernamespace refid="namespace_rubeus_1_1_utility_components">Rubeus::UtilityComponents</innernamespace>
       <sectiondef kind="enum">
+      <memberdef kind="enum" id="keys_8h_1ac04ea80a8fa238524f8582b0a66efdce" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>EMouseButtons</name>
+        <enumvalue id="dummy_1ac04ea80a8fa238524f8582b0a66efdcea823045ebbdd66fd7be1669504834f546" prot="public">
+          <name>__MOUSE_BUTTON_1</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac04ea80a8fa238524f8582b0a66efdceab45176af1ef9b733532d809f488f8a09" prot="public">
+          <name>__MOUSE_BUTTON_2</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac04ea80a8fa238524f8582b0a66efdceac4d7753982dd6414412e5227135159ff" prot="public">
+          <name>__MOUSE_BUTTON_3</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac04ea80a8fa238524f8582b0a66efdcea85e842ba98358870086f3b4b2f933ca3" prot="public">
+          <name>__MOUSE_BUTTON_4</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac04ea80a8fa238524f8582b0a66efdcea3cc607a9faa579c9c9effcea800192ed" prot="public">
+          <name>__MOUSE_BUTTON_5</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac04ea80a8fa238524f8582b0a66efdceafcc803e5e4269413de2d941cc67a6ca5" prot="public">
+          <name>__MOUSE_BUTTON_6</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac04ea80a8fa238524f8582b0a66efdcea50511080cb70367558b6ae32fe4afb64" prot="public">
+          <name>__MOUSE_BUTTON_7</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac04ea80a8fa238524f8582b0a66efdceaf194ce824ccaa692b33cab0c8763e73d" prot="public">
+          <name>__MOUSE_BUTTON_8</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac04ea80a8fa238524f8582b0a66efdceaa7edea8b0405b8f0b94059ee3fd59248" prot="public">
+          <name>__MOUSE_BUTTON_LAST</name>
+          <initializer>= __MOUSE_BUTTON_8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac04ea80a8fa238524f8582b0a66efdcea2e933020ddfe21b50bac69478e1ebcb2" prot="public">
+          <name>__MOUSE_BUTTON_LEFT</name>
+          <initializer>= __MOUSE_BUTTON_1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac04ea80a8fa238524f8582b0a66efdcea6c6377538874aa10c843f901696d181c" prot="public">
+          <name>__MOUSE_BUTTON_RIGHT</name>
+          <initializer>= __MOUSE_BUTTON_2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac04ea80a8fa238524f8582b0a66efdcea781bedd78677aa47e35962f13eb939ce" prot="public">
+          <name>__MOUSE_BUTTON_MIDDLE</name>
+          <initializer>= __MOUSE_BUTTON_3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Mouse buttons supported. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/keys.h" line="17" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/keys.h" bodystart="16" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="enum" id="keys_8h_1ac846721ec08ebc254d389a992230f305" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>EKeyboardKeys</name>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a01f9e772b2cb5589512938487c53d97f" prot="public">
+          <name>__UNKNOWN</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305aa50046ab4782915083f99228cdb9c2bf" prot="public">
+          <name>__SPACE</name>
+          <initializer>= 32</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a3a015076ee3573b25688331935d9340c" prot="public">
+          <name>__APOSTROPHE</name>
+          <initializer>= 39</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a824201f8fc7333609e305d1cd1286154" prot="public">
+          <name>__COMMA</name>
+          <initializer>= 44</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a402d19a1a5db4a6db029b1f8bfd429fa" prot="public">
+          <name>__MINUS</name>
+          <initializer>= 45</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a88478650c2a052b0989e07b2c0fe3419" prot="public">
+          <name>__PERIOD</name>
+          <initializer>= 46</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a685ee646d000690b43c7900271a00860" prot="public">
+          <name>__SLASH</name>
+          <initializer>= 47</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a7443fa9cd36173de4802613959005150" prot="public">
+          <name>__0</name>
+          <initializer>= 48</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a08a9d0bbf3381652f7cca8738b5a8469" prot="public">
+          <name>__1</name>
+          <initializer>= 49</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305aa62c2a79bae538bf3502f1bc482e9893" prot="public">
+          <name>__2</name>
+          <initializer>= 50</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ade124b3cc0e2e82f99cba1b248e420fb" prot="public">
+          <name>__3</name>
+          <initializer>= 51</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a51a27df6ebb9b68dacbde2f3a05da81d" prot="public">
+          <name>__4</name>
+          <initializer>= 52</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a2b739200737fe7dbf581a474e3ad58aa" prot="public">
+          <name>__5</name>
+          <initializer>= 53</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a81184b6ee4d75809b6ed69413a662e3c" prot="public">
+          <name>__6</name>
+          <initializer>= 54</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305adfdee1c7e46088e3825702faa1f861ba" prot="public">
+          <name>__7</name>
+          <initializer>= 55</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ae2d1794b18f1f1eaa75cf88a6ff7963f" prot="public">
+          <name>__8</name>
+          <initializer>= 56</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a41ee4e6076835fb945a96a38b1f1c594" prot="public">
+          <name>__9</name>
+          <initializer>= 57</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305afdc5ba6c7f5c244db7b313e461c3e9a7" prot="public">
+          <name>__SEMICOLON</name>
+          <initializer>= 59</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ad942ffd6d819a077fd3c1660237a5ca6" prot="public">
+          <name>__EQUAL</name>
+          <initializer>= 61</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a7ee4608344da9fa262865e279c888c73" prot="public">
+          <name>__A</name>
+          <initializer>= 65</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305af8a6b04baf7c5e0cc2daba92b7ad7ca8" prot="public">
+          <name>__B</name>
+          <initializer>= 66</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a1f2785efca72209f639fa471a8a8aa6a" prot="public">
+          <name>__C</name>
+          <initializer>= 67</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ae1e79a8f766365d5f98dbcf8ebcdb580" prot="public">
+          <name>__D</name>
+          <initializer>= 68</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305af6dd62fe730748db1dc1ab443d9b8314" prot="public">
+          <name>__E</name>
+          <initializer>= 69</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a14c71bf1ee61a76639e547d7c330dfc9" prot="public">
+          <name>__F</name>
+          <initializer>= 70</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305abfaaabe937ee64ae701cfcf9fd092319" prot="public">
+          <name>__G</name>
+          <initializer>= 71</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a59897944f061764c83614dd61b947cf1" prot="public">
+          <name>__H</name>
+          <initializer>= 72</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305af2c1e2875c9a61c96e26e803a22ae979" prot="public">
+          <name>__I</name>
+          <initializer>= 73</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a009a78bb966e4faeace002bc7139a678" prot="public">
+          <name>__J</name>
+          <initializer>= 74</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a17f37b5be090c3ad6c7bda1df9d5be9d" prot="public">
+          <name>__K</name>
+          <initializer>= 75</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a27564b0f8fc08d6bd0345695785ce4b6" prot="public">
+          <name>__L</name>
+          <initializer>= 76</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a476e4e6d615566b374a12b737083550e" prot="public">
+          <name>__M</name>
+          <initializer>= 77</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305acf0d27a1c12774f09f54a89d86e20ba6" prot="public">
+          <name>__N</name>
+          <initializer>= 78</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a410e8e4fd4ea4f3e1426c170a3cf6623" prot="public">
+          <name>__O</name>
+          <initializer>= 79</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a38cd8577bd5a826f2c4a6bf2ea9011ec" prot="public">
+          <name>__P</name>
+          <initializer>= 80</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305aa2f540337ee8b4701edca9d4c9590f72" prot="public">
+          <name>__Q</name>
+          <initializer>= 81</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a86ce860731d1f87b23e6a81279cabe47" prot="public">
+          <name>__R</name>
+          <initializer>= 82</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305af40fe078ddd73cb3e7cc2600b489b79e" prot="public">
+          <name>__S</name>
+          <initializer>= 83</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305abd8c38af1d7e2706ccc993def9ec2196" prot="public">
+          <name>__T</name>
+          <initializer>= 84</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a0b06dea9bf1cc715c4a3c0abc3b69b5f" prot="public">
+          <name>__U</name>
+          <initializer>= 85</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a68015ebde05eb605a6e28127b465595f" prot="public">
+          <name>__V</name>
+          <initializer>= 86</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305afacc23ee9be9683691974f7457047e6f" prot="public">
+          <name>__W</name>
+          <initializer>= 87</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ae822cd995fbecbc38dab9a6ffa353ec7" prot="public">
+          <name>__X</name>
+          <initializer>= 88</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a59b44582fa1149d0917ea954265279a9" prot="public">
+          <name>__Y</name>
+          <initializer>= 89</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a04f5ef9dfe347e8511938e392561ef2a" prot="public">
+          <name>__Z</name>
+          <initializer>= 90</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a37cc59668d033920e54a97bffbb76f19" prot="public">
+          <name>__LEFT_BRACKET</name>
+          <initializer>= 91</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a208332d66ab42f31d3d2f5dc547098db" prot="public">
+          <name>__BACKSLASH</name>
+          <initializer>= 92</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ada60e4a87ecdf45ca578f6cba9d403fa" prot="public">
+          <name>__RIGHT_BRACKET</name>
+          <initializer>= 93</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a78e72fe2ecbf321e68b01f597a55790c" prot="public">
+          <name>__GRAVE_ACCENT</name>
+          <initializer>= 96</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a6003200d6f3390733fa429a5c2be80e0" prot="public">
+          <name>__WORLD_1</name>
+          <initializer>= 161</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305afec5fd226577ac233f8dce1fd4275506" prot="public">
+          <name>__WORLD_2</name>
+          <initializer>= 162</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305abb9a3de94ad5e159a104fa322cc10d76" prot="public">
+          <name>__ESCAPE</name>
+          <initializer>= 256</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a57c8e0751bba9dbacce8901dd32da857" prot="public">
+          <name>__ENTER</name>
+          <initializer>= 257</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ad9cf7a5a45b812bd5a7e17fdd7b52e85" prot="public">
+          <name>__TAB</name>
+          <initializer>= 258</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a0bd233f8871cd65078f7be877554d877" prot="public">
+          <name>__BACKSPACE</name>
+          <initializer>= 259</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a1d566e942602ce47144d1606bf80d561" prot="public">
+          <name>__INSERT</name>
+          <initializer>= 260</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a4329b527cad86b9cec0ff9164ef52b0b" prot="public">
+          <name>__DELETE</name>
+          <initializer>= 261</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a6553b1a27e7a592e8e580bef49d351ed" prot="public">
+          <name>__RIGHT</name>
+          <initializer>= 262</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a45728cecb5d442708fa69da7dd95e959" prot="public">
+          <name>__LEFT</name>
+          <initializer>= 263</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ada03b10bfdaef66bdef591c79e615b4f" prot="public">
+          <name>__DOWN</name>
+          <initializer>= 264</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a01cdd0aa4abc0f737d7635cc90420dce" prot="public">
+          <name>__UP</name>
+          <initializer>= 265</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a4cc73f4d2fdc5a860b24f3ae44fdafbc" prot="public">
+          <name>__PAGE_UP</name>
+          <initializer>= 266</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ae8d2200de6675aaa66ba573d4abcc70d" prot="public">
+          <name>__PAGE_DOWN</name>
+          <initializer>= 267</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a8c0f8647ffa6a20021efe1ccb5c4f3a8" prot="public">
+          <name>__HOME</name>
+          <initializer>= 268</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a72b49a7cbf0c0e3dff052d091d838252" prot="public">
+          <name>__END</name>
+          <initializer>= 269</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a0fb46fe9163522519bbf0d5ed53e6c20" prot="public">
+          <name>__CAPS_LOCK</name>
+          <initializer>= 280</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a0dd3f5b6460fa1277cd799ba1ddc42dd" prot="public">
+          <name>__SCROLL_LOCK</name>
+          <initializer>= 281</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305abe558b4c46ee863ddf251e74751a1e43" prot="public">
+          <name>__NUM_LOCK</name>
+          <initializer>= 282</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ae844091e8afc79d1fd722bf5bb0a99d7" prot="public">
+          <name>__PRINT_SCREEN</name>
+          <initializer>= 283</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a9751070acf531ae0e696f3cf5ef50b78" prot="public">
+          <name>__PAUSE</name>
+          <initializer>= 284</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a9338fb99fd89072bd9fe275e9fbff5b1" prot="public">
+          <name>__F1</name>
+          <initializer>= 290</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305adc6ed176de40e091d6a131e642a937eb" prot="public">
+          <name>__F2</name>
+          <initializer>= 291</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a40ab9b27f4e60f80a956b371d64c7db8" prot="public">
+          <name>__F3</name>
+          <initializer>= 292</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a2546f5cb5595d2266994b803cf39e311" prot="public">
+          <name>__F4</name>
+          <initializer>= 293</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305afefc81a9a897e5f50cf419e45018709d" prot="public">
+          <name>__F5</name>
+          <initializer>= 294</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305afd7818f64d874bdaa7873e0cbe54aca3" prot="public">
+          <name>__F6</name>
+          <initializer>= 295</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a703d1cab204e59afaef8ba722d914122" prot="public">
+          <name>__F7</name>
+          <initializer>= 296</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305aa397cfd252680cf99843479563e85ea9" prot="public">
+          <name>__F8</name>
+          <initializer>= 297</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ab94e0741c9685fcaa613441dd590c2f9" prot="public">
+          <name>__F9</name>
+          <initializer>= 298</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a02e55a73926c2ca957043987ce5c2e0f" prot="public">
+          <name>__F10</name>
+          <initializer>= 299</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ad3135c36a633eeba19cb3d041b1bd948" prot="public">
+          <name>__F11</name>
+          <initializer>= 300</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a5b1fdffafa9000a0ae5821df4cd02db6" prot="public">
+          <name>__F12</name>
+          <initializer>= 301</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ac94ae3c7748d32d08426e8ba60c47ee9" prot="public">
+          <name>__F13</name>
+          <initializer>= 302</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ae15a8217fdc6ad5e183a1e527cb45984" prot="public">
+          <name>__F14</name>
+          <initializer>= 303</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a1f7cd7e00fdc1977fc2a8f517bd8c352" prot="public">
+          <name>__F15</name>
+          <initializer>= 304</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305afdab55f533d3997cce403719e5f85b47" prot="public">
+          <name>__F16</name>
+          <initializer>= 305</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a8fd5b28fb154aebee82f27ee1f520556" prot="public">
+          <name>__F17</name>
+          <initializer>= 306</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a3d5da2d2d33ee6c93c368b97acdbb717" prot="public">
+          <name>__F18</name>
+          <initializer>= 307</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a7bd65ad29fe34141628c74fe37189bdb" prot="public">
+          <name>__F19</name>
+          <initializer>= 308</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a721dd89e7292151e51dd2369528f48dc" prot="public">
+          <name>__F20</name>
+          <initializer>= 309</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a6783af530010e04de0f128e158b6a84a" prot="public">
+          <name>__F21</name>
+          <initializer>= 310</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ad84bd0de7ec31656d7ad87c31f0185b2" prot="public">
+          <name>__F22</name>
+          <initializer>= 311</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ab6e75743200cacf8e861752e1eb3cef4" prot="public">
+          <name>__F23</name>
+          <initializer>= 312</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305afc8015d0c03e5e7d5bb34bc3b3d7e216" prot="public">
+          <name>__F24</name>
+          <initializer>= 313</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ad9063c2fe998acd1608b5cb55ba11712" prot="public">
+          <name>__F25</name>
+          <initializer>= 314</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305adb320f690ecf42745f04e6d1ddfe1ec6" prot="public">
+          <name>__KP_0</name>
+          <initializer>= 320</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a948aa604e2b6f40eab721d88134951e0" prot="public">
+          <name>__KP_1</name>
+          <initializer>= 321</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305aa51895528895b980a07824408168b432" prot="public">
+          <name>__KP_2</name>
+          <initializer>= 322</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305aa54ed6b5afe56f73325d120cd0c170a1" prot="public">
+          <name>__KP_3</name>
+          <initializer>= 323</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305af32a84f6ae7cd2b6cc743aa115f7b0fd" prot="public">
+          <name>__KP_4</name>
+          <initializer>= 324</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a32df755c5e28e0f46c0ef24b7f9174dd" prot="public">
+          <name>__KP_5</name>
+          <initializer>= 325</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a1ca73b88987c77803d55c9ff237dc5b1" prot="public">
+          <name>__KP_6</name>
+          <initializer>= 326</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a4002865b7bb08d139b29a35db08df0db" prot="public">
+          <name>__KP_7</name>
+          <initializer>= 327</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a3ada1a65c52281e43a0a924d92a13490" prot="public">
+          <name>__KP_8</name>
+          <initializer>= 328</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a8e3d34ef71e2f7a85ae18ad7b6b5f9c9" prot="public">
+          <name>__KP_9</name>
+          <initializer>= 329</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a307b387da0a4d8aea5c7a3c4fafc4c2f" prot="public">
+          <name>__KP_DECIMAL</name>
+          <initializer>= 330</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a0cba49a13f51a6c40c573f8d9065a975" prot="public">
+          <name>__KP_DIVIDE</name>
+          <initializer>= 331</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305aca798edf7447ddfb9d38503976306d16" prot="public">
+          <name>__KP_MULTIPLY</name>
+          <initializer>= 332</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a5b21a220aeab78dd71c0881ed1fc07df" prot="public">
+          <name>__KP_SUBTRACT</name>
+          <initializer>= 333</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ad8754e7cd4c104b82e56409326758ac6" prot="public">
+          <name>__KP_ADD</name>
+          <initializer>= 334</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a06cfe36798a6542fea59d4d418674e60" prot="public">
+          <name>__KP_ENTER</name>
+          <initializer>= 335</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a54308f12c663663303bf76d3f7d7c1ec" prot="public">
+          <name>__KP_EQUAL</name>
+          <initializer>= 336</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a40304533e9f88952702a380b2b1b428d" prot="public">
+          <name>__LEFT_SHIFT</name>
+          <initializer>= 340</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ace462cf7638d7ca9bce9410e85890248" prot="public">
+          <name>__LEFT_CONTROL</name>
+          <initializer>= 341</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a369a648ee60e65ebad8affddf2058a88" prot="public">
+          <name>__LEFT_ALT</name>
+          <initializer>= 342</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305aa79e7e69d8ca83a8e7a0f49e1352b114" prot="public">
+          <name>__LEFT_SUPER</name>
+          <initializer>= 343</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a95ff9e645312ac31d2889bbdf75cc728" prot="public">
+          <name>__RIGHT_SHIFT</name>
+          <initializer>= 344</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305adf928956c2ce0d58343100a7150a0dc1" prot="public">
+          <name>__RIGHT_CONTROL</name>
+          <initializer>= 345</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ae76b28df661317bd1eb8f6a773a44359" prot="public">
+          <name>__RIGHT_ALT</name>
+          <initializer>= 346</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ab2e02dfeb1d48f53794177282b28095b" prot="public">
+          <name>__RIGHT_SUPER</name>
+          <initializer>= 347</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305ab5af70c0c89071e67a6405e1cee649f1" prot="public">
+          <name>__MENU</name>
+          <initializer>= 348</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a9c2613ebd9bdf879f3bda162e9b3a0ba" prot="public">
+          <name>__DEACTIVATED</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1ac846721ec08ebc254d389a992230f305a90027f2141499ed0a9eaadc9b1fed692" prot="public">
+          <name>__ACTIVATED</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Keyboard keys supported. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/keys.h" line="38" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/keys.h" bodystart="37" bodyend="166"/>
+      </memberdef>
       <memberdef kind="enum" id="message__codes_8h_1a82d14ec7bd46347068de3bc5c03a8136" prot="public" static="no" strong="no">
         <type></type>
         <name>EMessageCode</name>
@@ -49,13 +1158,20 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
+        <enumvalue id="message__codes_8h_1a82d14ec7bd46347068de3bc5c03a8136adc852a8c5943c264fcc65be19cb9f46b" prot="public">
+          <name>load_level</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
         <briefdescription>
 <para>Defines all message codes the game requires. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_codes.h" line="19" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_codes.h" bodystart="18" bodyend="39"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_codes.h" line="19" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_codes.h" bodystart="18" bodyend="43"/>
       </memberdef>
       <memberdef kind="enum" id="message__object_8h_1ae1270b4aff91ea4ec19282d79b4da20a" prot="public" static="no" strong="no">
         <type></type>
@@ -109,6 +1225,255 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" line="64" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="awerere__collision__engine_8h_1a1d1fd55940a739ad7dd2eb981270be52" prot="public" static="no" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float Rubeus::FLOAT_APPROXIMATION</definition>
+        <argsstring></argsstring>
+        <name>FLOAT_APPROXIMATION</name>
+        <initializer>= 0.00001f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_engine.h" line="17" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_engine.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="engine_8h_1a65f945ec121d314eba2d3e6ceea5e75b" prot="public" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_r_engine" kindref="compound">REngine</ref> *const</type>
+        <definition>REngine* const Rubeus::Engine</definition>
+        <argsstring></argsstring>
+        <name>Engine</name>
+        <briefdescription>
+<para>The entirety of the Rubeus Engine functionalities. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/engine.h" line="174" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="input__manager_8h_1aacfcb5d781b426a6e1b57f5e68274e33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::mouseButtonCallback</definition>
+        <argsstring>(GLFWwindow *window, int button, int action, int mods)</argsstring>
+        <name>mouseButtonCallback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>button</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mods</declname>
+        </param>
+        <briefdescription>
+<para>Callback function which sets the flag corresponding to a mouse button. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Called only by GLFW when state of a key changes.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GLFW specified window object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GLFW specified mouse button pressed or released. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GLFW specified key action.(Release, Press or Repeat) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mods</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Modifier key pressed along with. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="input__manager_8h_1a769307f85758c7d5e45ff3bed4f37bd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::scrollCallback</definition>
+        <argsstring>(GLFWwindow *window, double xoffset, double yoffset)</argsstring>
+        <name>scrollCallback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xoffset</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>yoffset</declname>
+        </param>
+        <briefdescription>
+<para>Callback function which sets mouse scroll value. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Called only by GLFW when state of a key changes.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GLFW specified window object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xoffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X value of scroll </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yoffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y value of scroll </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="input__manager_8h_1a5dd263446a456f7c3894d2b491522ee8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::keyCallback</definition>
+        <argsstring>(GLFWwindow *window, int key, int scancode, int action, int mods)</argsstring>
+        <name>keyCallback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scancode</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mods</declname>
+        </param>
+        <briefdescription>
+<para>Callback function which sets the flag corresponding to a key. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Called only by GLFW when state of a key changes.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GLFW specified window object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GLFW specified key which was pressed or released. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GLFW specified key action.(Release, Press or Repeat) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mods</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Modifier key pressed along with. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="input__manager_8h_1a5a2e4612469f7116f7713e8431673013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::cursorPositionCallback</definition>
+        <argsstring>(GLFWwindow *window, double xpos, double ypos)</argsstring>
+        <name>cursorPositionCallback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xpos</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ypos</declname>
+        </param>
+        <briefdescription>
+<para>Callback function which sets mouse position value. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Called only by GLFW when state of a key changes.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GLFW specified window object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xpos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X value of position </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ypos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y value of position </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="76" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

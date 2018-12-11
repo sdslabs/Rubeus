@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="awerere__physics__material_8h" kind="file" language="C++">
+    <compoundname>awerere_physics_material.h</compoundname>
+    <includes refid="rubeus__maths__library_8h" local="no">rubeus_maths_library.h</includes>
+    <includedby refid="awerere__collider__object_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collider_object.h</includedby>
+    <includedby refid="awerere__physics__object_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_object.h</includedby>
+    <includedby refid="game__object_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h</includedby>
+    <incdepgraph>
+      <node id="281">
+        <label>math.h</label>
+      </node>
+      <node id="282">
+        <label>iostream</label>
+      </node>
+      <node id="279">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h</label>
+        <link refid="awerere__physics__material_8h"/>
+        <childnode refid="280" relation="include">
+        </childnode>
+      </node>
+      <node id="280">
+        <label>rubeus_maths_library.h</label>
+        <link refid="rubeus__maths__library_8h"/>
+        <childnode refid="281" relation="include">
+        </childnode>
+        <childnode refid="282" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="298">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_engine.h</label>
+        <link refid="awerere__collision__engine_8h"/>
+        <childnode refid="295" relation="include">
+        </childnode>
+        <childnode refid="287" relation="include">
+        </childnode>
+      </node>
+      <node id="288">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h</label>
+        <link refid="group__object_8h"/>
+        <childnode refid="289" relation="include">
+        </childnode>
+      </node>
+      <node id="287">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h</label>
+        <link refid="game__object_8h"/>
+        <childnode refid="288" relation="include">
+        </childnode>
+        <childnode refid="294" relation="include">
+        </childnode>
+      </node>
+      <node id="296">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h</label>
+        <link refid="level_8h"/>
+        <childnode refid="292" relation="include">
+        </childnode>
+      </node>
+      <node id="299">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_plane_collider_object.h</label>
+        <link refid="awerere__plane__collider__object_8h"/>
+      </node>
+      <node id="293">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/ui_layer_object.h</label>
+        <link refid="ui__layer__object_8h"/>
+        <childnode refid="291" relation="include">
+        </childnode>
+      </node>
+      <node id="290">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h</label>
+        <link refid="scene__layer__object_8h_source"/>
+        <childnode refid="291" relation="include">
+        </childnode>
+      </node>
+      <node id="291">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h</label>
+        <link refid="layer__composition__object_8h"/>
+        <childnode refid="292" relation="include">
+        </childnode>
+      </node>
+      <node id="289">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_object.h</label>
+        <link refid="layer__object_8h"/>
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="293" relation="include">
+        </childnode>
+      </node>
+      <node id="284">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collider_object.h</label>
+        <link refid="awerere__collider__object_8h"/>
+        <childnode refid="285" relation="include">
+        </childnode>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="299" relation="include">
+        </childnode>
+        <childnode refid="300" relation="include">
+        </childnode>
+        <childnode refid="287" relation="include">
+        </childnode>
+      </node>
+      <node id="292">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/engine.h</label>
+        <link refid="engine_8h"/>
+      </node>
+      <node id="294">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/world.h</label>
+        <link refid="world_8h"/>
+        <childnode refid="295" relation="include">
+        </childnode>
+        <childnode refid="292" relation="include">
+        </childnode>
+        <childnode refid="296" relation="include">
+        </childnode>
+      </node>
+      <node id="297">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h</label>
+        <link refid="window__component_8h"/>
+        <childnode refid="298" relation="include">
+        </childnode>
+        <childnode refid="292" relation="include">
+        </childnode>
+      </node>
+      <node id="295">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h</label>
+        <link refid="awerere__physics__engine_8h"/>
+        <childnode refid="292" relation="include">
+        </childnode>
+      </node>
+      <node id="283">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h</label>
+        <link refid="awerere__physics__material_8h"/>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="287" relation="include">
+        </childnode>
+      </node>
+      <node id="285">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h</label>
+        <link refid="awerere__box__collider__object_8h"/>
+      </node>
+      <node id="286">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_object.h</label>
+        <link refid="awerere__physics__object_8h_source"/>
+        <childnode refid="287" relation="include">
+        </childnode>
+        <childnode refid="297" relation="include">
+        </childnode>
+      </node>
+      <node id="300">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h</label>
+        <link refid="awerere__sphere__collider__object_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_rubeus_1_1_awerere_1_1_a_physics_material" prot="public">Rubeus::Awerere::APhysicsMaterial</innerclass>
+    <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
+    <innernamespace refid="namespace_rubeus_1_1_awerere">Rubeus::Awerere</innernamespace>
+    <briefdescription>
+<para>Declares the Physics Material structure. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="rubeus__maths__library_8h" kindref="compound">rubeus_maths_library.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_rubeus" kindref="compound">Rubeus</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Awerere</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DEFAULT_MASS<sp/>=<sp/>1.0f;<sp/></highlight><highlight class="comment">//<sp/>kg</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DEFAULT_GRAVITY<sp/>=<sp/>-9.8f;<sp/></highlight><highlight class="comment">//<sp/>m/s^2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DEFAULT_FRICTION<sp/>=<sp/>0.2f;<sp/></highlight><highlight class="comment">//<sp/>[no<sp/>units]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DEFAULT_RESTITUTION<sp/>=<sp/>0.8f;<sp/></highlight><highlight class="comment">//<sp/>[no<sp/>units]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_rubeus_1_1_awerere_1_1_a_physics_material" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material" kindref="compound">APhysicsMaterial</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material" kindref="compound">APhysicsMaterial</ref><sp/>DefaultMaterial;<sp/></highlight><highlight class="comment">//<sp/>Add<sp/>more<sp/>materials<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1aa58e961a07c02db756d46d8ba62089bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1aa58e961a07c02db756d46d8ba62089bd" kindref="member">m_EnableCollision</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1ab6929a66134b29ba9c42cdb47b5e4d74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1ab6929a66134b29ba9c42cdb47b5e4d74" kindref="member">m_Mass</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1ad3c24c2d6648c64a7f267c4eea4a2cb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref><sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1ad3c24c2d6648c64a7f267c4eea4a2cb5" kindref="member">m_Gravity</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1a539ab50b573ad21066e0a6cf9884fdae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1a539ab50b573ad21066e0a6cf9884fdae" kindref="member">m_CoefficientOfFriction</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1ace8534fa774030fd3b3ca4084462bbf3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1ace8534fa774030fd3b3ca4084462bbf3" kindref="member">m_CoefficientOfRestitution</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1aa55773762b3181ea503f972f7d5ec9cf" kindref="member">APhysicsMaterial</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1a19b25f6a11ac6f03b418dc902e5c096d" kindref="member">~APhysicsMaterial</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1aaf93f21ccd15fd93894af24ba74463fa" kindref="member">makeMaterial</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<sp/>mass,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref><sp/>&amp;<sp/>gravity,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<sp/>friction,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<sp/>restitution);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1a7acfbdb1c0001423f4a23fb77b7fc710" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1a7acfbdb1c0001423f4a23fb77b7fc710" kindref="member">isCollisionEnabled</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1aa58e961a07c02db756d46d8ba62089bd" kindref="member">m_EnableCollision</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1ad4cef6d4876687c1cf3b94c385760249" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1ad4cef6d4876687c1cf3b94c385760249" kindref="member">setCollision</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>{<sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1aa58e961a07c02db756d46d8ba62089bd" kindref="member">m_EnableCollision</ref><sp/>=<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h"/>
+  </compounddef>
+</doxygen>

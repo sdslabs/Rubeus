@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_awerere_1_1_a_physics_engine" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::Awerere::APhysicsEngine</compoundname>
+    <includes refid="awerere__physics__engine_8h" local="no">awerere_physics_engine.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_physics_engine_1aa78ad73f5c89d4eb8e59ac80a015b848" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_awerere_1_1_a_collision_engine" kindref="compound">ACollisionEngine</ref></type>
+        <definition>ACollisionEngine Rubeus::Awerere::APhysicsEngine::m_CollisionEngine</definition>
+        <argsstring></argsstring>
+        <name>m_CollisionEngine</name>
+        <briefdescription>
+<para>Associated collision engine. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" line="31" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_physics_engine_1af73d9443fad22e3dee9be6a95f9b31ce" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_r_world" kindref="compound">RWorld</ref> &amp;</type>
+        <definition>RWorld&amp; Rubeus::Awerere::APhysicsEngine::m_World</definition>
+        <argsstring></argsstring>
+        <name>m_World</name>
+        <briefdescription>
+<para>The World object in use. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" line="34" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a5c0432574fd819d2f0c54451ccb8cce4" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; Rubeus::Awerere::APhysicsEngine::m_XFlags</definition>
+        <argsstring></argsstring>
+        <name>m_XFlags</name>
+        <briefdescription>
+<para>Array of collision Xflags assigned to each gameobject. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" line="37" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_physics_engine_1afa822945e4431df89e46ab839c78dc64" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; Rubeus::Awerere::APhysicsEngine::m_YFlags</definition>
+        <argsstring></argsstring>
+        <name>m_YFlags</name>
+        <briefdescription>
+<para>Array of collision Yflags assigned to each gameobject. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" line="40" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_physics_engine_1afd85863e01005f591b61046bd8efa8d3" prot="private" static="yes" mutable="no">
+        <type>std::unordered_map&lt; <ref refid="class_rubeus_1_1_awerere_1_1_a_collider" kindref="compound">ACollider</ref> *, <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &gt;</type>
+        <definition>std::unordered_map&lt;ACollider *, RML::Vector2D&gt; Rubeus::Awerere::APhysicsEngine::ImpulsesGeneratedPerImpulseCalculationFrame</definition>
+        <argsstring></argsstring>
+        <name>ImpulsesGeneratedPerImpulseCalculationFrame</name>
+        <briefdescription>
+<para>The container for all impulses added during a frame render. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" line="43" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a4ae3942f9898504d400da82fdfbcae3a" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Rubeus::Awerere::APhysicsEngine::ImpulseCalculationFrames</definition>
+        <argsstring></argsstring>
+        <name>ImpulseCalculationFrames</name>
+        <briefdescription>
+<para>The max amount of frames the impulse is added. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" line="46" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a4078c7427214008cae228c8814844d33" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Rubeus::Awerere::APhysicsEngine::ImpulseFrames</definition>
+        <argsstring></argsstring>
+        <name>ImpulseFrames</name>
+        <briefdescription>
+<para>Number of frames the impulse have been added. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" line="49" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a2b8231ffbaec0e349b94c91871bbd33b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::Awerere::APhysicsEngine::updateState</definition>
+        <argsstring>(const float &amp;deltaTime)</argsstring>
+        <name>updateState</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Generate hit events. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>timestep for this update </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a946e148b382bf06ddcc51da8a791aea2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::Awerere::APhysicsEngine::decodeCollisionResponse</definition>
+        <argsstring>()</argsstring>
+        <name>decodeCollisionResponse</name>
+        <briefdescription>
+<para>Respond to generated hit events. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" line="65" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a9a223e4771ccfba58e7e5db5b0774c72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::Awerere::APhysicsEngine::APhysicsEngine</definition>
+        <argsstring>(GraphicComponents::RWindowComponent &amp;windowComponent, RWorld &amp;world, const float &amp;cellHeight, const float &amp;cellWidth)</argsstring>
+        <name>APhysicsEngine</name>
+        <param>
+          <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" kindref="compound">GraphicComponents::RWindowComponent</ref> &amp;</type>
+          <declname>windowComponent</declname>
+        </param>
+        <param>
+          <type><ref refid="class_rubeus_1_1_r_world" kindref="compound">RWorld</ref> &amp;</type>
+          <declname>world</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>cellHeight</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>cellWidth</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>windowComponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Window component currently in use. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>world</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The world instantiated in this run. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cellHeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cell height of collision grid. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cellWidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cell width of collision grid. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_physics_engine_1aec828076671ca042660dc78af46601a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::Awerere::APhysicsEngine::~APhysicsEngine</definition>
+        <argsstring>()</argsstring>
+        <name>~APhysicsEngine</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" line="86" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_physics_engine_1aa0239c326459a1d1575c2a8218d14288" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::Awerere::APhysicsEngine::update</definition>
+        <argsstring>(const float deltaTime)</argsstring>
+        <name>update</name>
+        <param>
+          <type>const float</type>
+          <declname>deltaTime</declname>
+        </param>
+        <briefdescription>
+<para>Carry-out frame wise physics update to world. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deltaTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time passed since last update. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" line="95" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a18001114e1a3502170df377681773f5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::Awerere::APhysicsEngine::stopImpulses</definition>
+        <argsstring>()</argsstring>
+        <name>stopImpulses</name>
+        <briefdescription>
+<para>Stops adding impulses and reverts those been added already to the scene. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" line="102" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a39971593960dc144d5a2e7d90e818c1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::Awerere::APhysicsEngine::setWorld</definition>
+        <argsstring>(RWorld &amp;world)</argsstring>
+        <name>setWorld</name>
+        <param>
+          <type><ref refid="class_rubeus_1_1_r_world" kindref="compound">RWorld</ref> &amp;</type>
+          <declname>world</declname>
+        </param>
+        <briefdescription>
+<para>Set the world being used to be used in update. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Keep track of multiple gameObject arrays if active</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>world</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>World object in use. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" line="112" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Apply physics behaviours to gameobjects. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" line="27" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h" bodystart="26" bodyend="116"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a9a223e4771ccfba58e7e5db5b0774c72" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsEngine</scope><name>APhysicsEngine</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a946e148b382bf06ddcc51da8a791aea2" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsEngine</scope><name>decodeCollisionResponse</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a4ae3942f9898504d400da82fdfbcae3a" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsEngine</scope><name>ImpulseCalculationFrames</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a4078c7427214008cae228c8814844d33" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsEngine</scope><name>ImpulseFrames</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1afd85863e01005f591b61046bd8efa8d3" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsEngine</scope><name>ImpulsesGeneratedPerImpulseCalculationFrame</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1aa78ad73f5c89d4eb8e59ac80a015b848" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsEngine</scope><name>m_CollisionEngine</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1af73d9443fad22e3dee9be6a95f9b31ce" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsEngine</scope><name>m_World</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a5c0432574fd819d2f0c54451ccb8cce4" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsEngine</scope><name>m_XFlags</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1afa822945e4431df89e46ab839c78dc64" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsEngine</scope><name>m_YFlags</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a39971593960dc144d5a2e7d90e818c1c" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsEngine</scope><name>setWorld</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a18001114e1a3502170df377681773f5c" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsEngine</scope><name>stopImpulses</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1aa0239c326459a1d1575c2a8218d14288" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsEngine</scope><name>update</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a2b8231ffbaec0e349b94c91871bbd33b" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsEngine</scope><name>updateState</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1aec828076671ca042660dc78af46601a1" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsEngine</scope><name>~APhysicsEngine</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

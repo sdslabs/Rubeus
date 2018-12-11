@@ -6,11 +6,13 @@
     <includes local="no">SFML/Audio.hpp</includes>
     <includes refid="master__component_8h" local="no">master_component.h</includes>
     <includes refid="message__codes_8h" local="no">message_codes.h</includes>
+    <includedby refid="engine_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/engine.h</includedby>
+    <includedby refid="level_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h</includedby>
     <incdepgraph>
-      <node id="11">
+      <node id="12">
         <label>IL/il.h</label>
       </node>
-      <node id="12">
+      <node id="13">
         <label>IL/ilu.h</label>
       </node>
       <node id="4">
@@ -19,7 +21,7 @@
       <node id="2">
         <label>SFML/Audio.hpp</label>
       </node>
-      <node id="10">
+      <node id="11">
         <label>GL/glew.h</label>
       </node>
       <node id="0">
@@ -31,49 +33,49 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
-      <node id="17">
+      <node id="18">
         <label>message_codes.h</label>
         <link refid="message__codes_8h"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
       </node>
-      <node id="14">
+      <node id="15">
         <label>message_object.h</label>
         <link refid="message__object_8h"/>
         <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
       </node>
-      <node id="13">
+      <node id="14">
         <label>message_system.h</label>
         <link refid="message__system_8h"/>
         <childnode refid="1" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
+        <childnode refid="19" relation="include">
         </childnode>
       </node>
-      <node id="16">
+      <node id="17">
         <label>image_object.h</label>
         <link refid="image__object_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="15">
+      <node id="16">
         <label>boost/any.hpp</label>
       </node>
-      <node id="9">
+      <node id="10">
         <label>string.h</label>
       </node>
       <node id="6">
@@ -82,34 +84,34 @@
       <node id="1">
         <label>vector</label>
       </node>
-      <node id="18">
+      <node id="19">
         <label>message_bus.h</label>
         <link refid="message__bus_8h"/>
         <childnode refid="1" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="9">
         <label>iostream</label>
       </node>
       <node id="5">
         <label>unordered_map</label>
       </node>
-      <node id="7">
+      <node id="8">
         <label>logger_component.h</label>
         <link refid="logger__component_8h_source"/>
-        <childnode refid="8" relation="include">
-        </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
         <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -123,11 +125,36 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
+      <node id="7">
+        <label>memory</label>
+      </node>
     </incdepgraph>
-    <innerclass refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager" prot="public">Rubeus::AudioComponents::RAudioManager</innerclass>
+    <invincdepgraph>
+      <node id="22">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h</label>
+        <link refid="level_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h</label>
+        <link refid="audio__manager__component_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/engine.h</label>
+        <link refid="engine_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_rubeus_1_1_audio_components_1_1_r_symphony" prot="public">Rubeus::AudioComponents::RSymphony</innerclass>
     <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
     <innernamespace refid="namespace_rubeus_1_1_audio_components">Rubeus::AudioComponents</innernamespace>
       <sectiondef kind="define">
@@ -176,7 +203,7 @@
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_VOLUME<sp/>100</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VOLUME_STEP<sp/>2</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_e_track_name" kindref="compound">ETrackName</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_e_track_name" kindref="compound">ETrackName</ref><sp/>:<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TRACK_0<sp/>=<sp/>0,</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TRACK_1<sp/>=<sp/>1,</highlight></codeline>
@@ -200,13 +227,13 @@
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TRACK_19<sp/>=<sp/>19</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_e_track_type" kindref="compound">ETrackType</ref></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="class_e_track_type" kindref="compound">ETrackType</ref><sp/>:<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SOUND_TRACK<sp/>=<sp/>0,</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MUSIC_TRACK<sp/>=<sp/>1</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight></codeline>
-<codeline lineno="68" refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager" kindref="compound">RAudioManager</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref></highlight></codeline>
+<codeline lineno="68" refid="class_rubeus_1_1_audio_components_1_1_r_symphony" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony" kindref="compound">RSymphony</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref></highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;sf::SoundBuffer<sp/>*&gt;<sp/>m_SoundBuffers;</highlight></codeline>
@@ -224,36 +251,36 @@
 <codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>validateMusicTrackID(<ref refid="class_e_track_name" kindref="compound">ETrackName</ref><sp/>trackName);</highlight></codeline>
 <codeline lineno="110"><highlight class="normal"></highlight></codeline>
 <codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager_1a3a3334e88c12ab37a528836e8816c948" kindref="member">RAudioManager</ref>();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a05158fa67afff1aa3d41f97644000d62" kindref="member">RSymphony</ref>();</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager_1a2e8033d3a03f79641e164408935bb72b" kindref="member">~RAudioManager</ref>();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a7c3c4d8176470c11fb2afc6a07d660a7" kindref="member">~RSymphony</ref>();</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"></highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager_1a68463b7b420105eda83558eb5b5da636" kindref="member">addSoundTrack</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1aae4f90666e9b8628aecebdbe970e90b1" kindref="member">addSoundTrack</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
 <codeline lineno="135"><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager_1aa38c4cdfe8dab691c7b8c1fa409fb9c5" kindref="member">addMusicTrack</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1abe8be79436074477c6f8c03a47bb2df1" kindref="member">addMusicTrack</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
 <codeline lineno="145"><highlight class="normal"></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager_1a088cb264a5c05d3a3e0d75aee3e4ebce" kindref="member">loadTrack</ref>(<ref refid="class_e_track_type" kindref="compound">ETrackType</ref><sp/>trackType,<sp/><ref refid="class_e_track_name" kindref="compound">ETrackName</ref><sp/>trackName,<sp/>std::string<sp/>filePath,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>volume<sp/>=<sp/>50,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>loopEnabled<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a8693b1aae45f6af05478cfa29f80ef4e" kindref="member">loadTrack</ref>(<ref refid="class_e_track_type" kindref="compound">ETrackType</ref><sp/>trackType,<sp/><ref refid="class_e_track_name" kindref="compound">ETrackName</ref><sp/>trackName,<sp/>std::string<sp/>filePath,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>volume<sp/>=<sp/>50,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>loopEnabled<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="160"><highlight class="normal"></highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager_1ab5acf35fe816cd1d342aee596bdb11a2" kindref="member">playTrack</ref>(<ref refid="class_e_track_type" kindref="compound">ETrackType</ref><sp/>trackType,<sp/><ref refid="class_e_track_name" kindref="compound">ETrackName</ref><sp/>trackName);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a5fcf33dbb92cb783ce7329157b495a92" kindref="member">playTrack</ref>(<ref refid="class_e_track_type" kindref="compound">ETrackType</ref><sp/>trackType,<sp/><ref refid="class_e_track_name" kindref="compound">ETrackName</ref><sp/>trackName);</highlight></codeline>
 <codeline lineno="171"><highlight class="normal"></highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager_1a87bb23c39c80e6847f2ef8bdab31e815" kindref="member">pauseTrack</ref>(<ref refid="class_e_track_type" kindref="compound">ETrackType</ref><sp/>trackType,<sp/><ref refid="class_e_track_name" kindref="compound">ETrackName</ref><sp/>trackName);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a449d8649964c9b46fa3a5d5b3c234af5" kindref="member">pauseTrack</ref>(<ref refid="class_e_track_type" kindref="compound">ETrackType</ref><sp/>trackType,<sp/><ref refid="class_e_track_name" kindref="compound">ETrackName</ref><sp/>trackName);</highlight></codeline>
 <codeline lineno="182"><highlight class="normal"></highlight></codeline>
 <codeline lineno="183"><highlight class="normal"></highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager_1a39f47a1b9da23a07158ca4f16cb2d142" kindref="member">stopTrack</ref>(<ref refid="class_e_track_type" kindref="compound">ETrackType</ref><sp/>trackType,<sp/><ref refid="class_e_track_name" kindref="compound">ETrackName</ref><sp/>trackName);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a60d2a5c59c3c747cae9eada0e442a312" kindref="member">stopTrack</ref>(<ref refid="class_e_track_type" kindref="compound">ETrackType</ref><sp/>trackType,<sp/><ref refid="class_e_track_name" kindref="compound">ETrackName</ref><sp/>trackName);</highlight></codeline>
 <codeline lineno="194"><highlight class="normal"></highlight></codeline>
-<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager_1a6a0f66dbee2db1136733ae9e74152998" kindref="member">stepDownMusicVolume</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>duration,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>floorVolume<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1aeea0b74c635baebea5069a87152155fd" kindref="member">stepDownMusicVolume</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>duration,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>floorVolume<sp/>=<sp/>0);</highlight></codeline>
 <codeline lineno="205"><highlight class="normal"></highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager_1adfe98514be3b55f19e2c28ea9c2d1a45" kindref="member">setVolume</ref>(<ref refid="class_e_track_type" kindref="compound">ETrackType</ref><sp/>trackType,<sp/><ref refid="class_e_track_name" kindref="compound">ETrackName</ref><sp/>trackName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>volume);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a36012e93fac49fba23fff44b21b03df1" kindref="member">setVolume</ref>(<ref refid="class_e_track_type" kindref="compound">ETrackType</ref><sp/>trackType,<sp/><ref refid="class_e_track_name" kindref="compound">ETrackName</ref><sp/>trackName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>volume);</highlight></codeline>
 <codeline lineno="217"><highlight class="normal"></highlight></codeline>
-<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager_1a798e58f873fea491f662c1270df03b80" kindref="member">setPitch</ref>(<ref refid="class_e_track_type" kindref="compound">ETrackType</ref><sp/>trackType,<sp/><ref refid="class_e_track_name" kindref="compound">ETrackName</ref><sp/>trackName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pitch);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1af17e2d7324ad6870da11c606fb81bed9" kindref="member">setPitch</ref>(<ref refid="class_e_track_type" kindref="compound">ETrackType</ref><sp/>trackType,<sp/><ref refid="class_e_track_name" kindref="compound">ETrackName</ref><sp/>trackName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pitch);</highlight></codeline>
 <codeline lineno="229"><highlight class="normal"></highlight></codeline>
-<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager_1a19d8e3b566e39f72ca60ae3f3ea1d170" kindref="member">addToTick</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*</highlight><highlight class="keyword">function</highlight><highlight class="normal">)());</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1af5783ab1abd424de29b2c86519975d93" kindref="member">addToTick</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*</highlight><highlight class="keyword">function</highlight><highlight class="normal">)());</highlight></codeline>
 <codeline lineno="239"><highlight class="normal"></highlight></codeline>
-<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager_1a860f2dc255cbd6ccf755657a10b66f4f" kindref="member">tick</ref>();</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a8115634b201ab5662f493158a1d26824" kindref="member">tick</ref>();</highlight></codeline>
 <codeline lineno="246"><highlight class="normal"></highlight></codeline>
 <codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="248"><highlight class="normal"></highlight></codeline>
-<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager_1a64d2cd1db1da5762413b34711f7c1185" kindref="member">onMessage</ref>(<ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref><sp/>*<sp/>msg)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a7878d51e9364d7ae2268a9d11b0a8a31" kindref="member">onMessage</ref>(<ref refid="struct_rubeus_1_1_message" kindref="compound">Rubeus::Message</ref><sp/>*<sp/>msg)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="260"><highlight class="normal">}</highlight></codeline>

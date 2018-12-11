@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_awerere_1_1_a_physics_material" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::Awerere::APhysicsMaterial</compoundname>
+    <includes refid="awerere__physics__material_8h" local="no">awerere_physics_material.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_physics_material_1ab8d56cee82fd88c7dcd302256ec6185f" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material" kindref="compound">APhysicsMaterial</ref></type>
+        <definition>const APhysicsMaterial Rubeus::Awerere::APhysicsMaterial::DefaultMaterial</definition>
+        <argsstring></argsstring>
+        <name>DefaultMaterial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" line="28" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_physics_material_1aa58e961a07c02db756d46d8ba62089bd" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Rubeus::Awerere::APhysicsMaterial::m_EnableCollision</definition>
+        <argsstring></argsstring>
+        <name>m_EnableCollision</name>
+        <briefdescription>
+<para>Whether enables collision for this type of material or not. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" line="31" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1a7acfbdb1c0001423f4a23fb77b7fc710" compoundref="awerere__physics__material_8h" startline="78" endline="78">isCollisionEnabled</referencedby>
+        <referencedby refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1ad4cef6d4876687c1cf3b94c385760249" compoundref="awerere__physics__material_8h" startline="88" endline="88">setCollision</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_physics_material_1ab6929a66134b29ba9c42cdb47b5e4d74" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Rubeus::Awerere::APhysicsMaterial::m_Mass</definition>
+        <argsstring></argsstring>
+        <name>m_Mass</name>
+        <briefdescription>
+<para>Value of mass of this physics object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" line="34" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_physics_material_1ad3c24c2d6648c64a7f267c4eea4a2cb5" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref></type>
+        <definition>RML::Vector2D Rubeus::Awerere::APhysicsMaterial::m_Gravity</definition>
+        <argsstring></argsstring>
+        <name>m_Gravity</name>
+        <briefdescription>
+<para>Gravity vector acting on a physics object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" line="37" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_physics_material_1a539ab50b573ad21066e0a6cf9884fdae" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Rubeus::Awerere::APhysicsMaterial::m_CoefficientOfFriction</definition>
+        <argsstring></argsstring>
+        <name>m_CoefficientOfFriction</name>
+        <briefdescription>
+<para>Coefficient of friction of this physics material. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" line="40" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_physics_material_1ace8534fa774030fd3b3ca4084462bbf3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Rubeus::Awerere::APhysicsMaterial::m_CoefficientOfRestitution</definition>
+        <argsstring></argsstring>
+        <name>m_CoefficientOfRestitution</name>
+        <briefdescription>
+<para>Coefficient of restitution of this physics material. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" line="43" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_physics_material_1aa55773762b3181ea503f972f7d5ec9cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::Awerere::APhysicsMaterial::APhysicsMaterial</definition>
+        <argsstring>()</argsstring>
+        <name>APhysicsMaterial</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_physics_material_1a19b25f6a11ac6f03b418dc902e5c096d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::Awerere::APhysicsMaterial::~APhysicsMaterial</definition>
+        <argsstring>()</argsstring>
+        <name>~APhysicsMaterial</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_physics_material_1aaf93f21ccd15fd93894af24ba74463fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::Awerere::APhysicsMaterial::makeMaterial</definition>
+        <argsstring>(const float &amp;mass, const RML::Vector2D &amp;gravity, const float &amp;friction, const float &amp;restitution)</argsstring>
+        <name>makeMaterial</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>mass</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &amp;</type>
+          <declname>gravity</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>friction</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>restitution</declname>
+        </param>
+        <briefdescription>
+<para>Make a material with by specifying physics constants. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mass of the material. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gravity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gravity acting on the physics object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>friction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Friction coefficient of the surfaces. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>restitution</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Restitution coefficient for resolving collisions. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_physics_material_1a7acfbdb1c0001423f4a23fb77b7fc710" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Rubeus::Awerere::APhysicsMaterial::isCollisionEnabled</definition>
+        <argsstring>() const</argsstring>
+        <name>isCollisionEnabled</name>
+        <briefdescription>
+<para>Returns if the material has collision enabled. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Whether collision has been enabled. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" line="78" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" bodystart="78" bodyend="78"/>
+        <references refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1aa58e961a07c02db756d46d8ba62089bd" compoundref="awerere__physics__material_8h" startline="31">m_EnableCollision</references>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_physics_material_1ad4cef6d4876687c1cf3b94c385760249" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::Awerere::APhysicsMaterial::setCollision</definition>
+        <argsstring>(bool override=false)</argsstring>
+        <name>setCollision</name>
+        <param>
+          <type>bool</type>
+          <declname>override</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Sets the collision parameter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>override</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New collision value. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" line="88" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" bodystart="88" bodyend="88"/>
+        <references refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1aa58e961a07c02db756d46d8ba62089bd" compoundref="awerere__physics__material_8h" startline="31">m_EnableCollision</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A physics material used to characterise physics objects. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="35">
+        <label>RML::Vector2D</label>
+        <link refid="struct_r_m_l_1_1_vector2_d"/>
+      </node>
+      <node id="34">
+        <label>Rubeus::Awerere::APhysicsMaterial</label>
+        <link refid="class_rubeus_1_1_awerere_1_1_a_physics_material"/>
+        <childnode refid="34" relation="usage">
+          <edgelabel>DefaultMaterial</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>m_Gravity</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" line="26" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" bodystart="25" bodyend="89"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1aa55773762b3181ea503f972f7d5ec9cf" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsMaterial</scope><name>APhysicsMaterial</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1ab8d56cee82fd88c7dcd302256ec6185f" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsMaterial</scope><name>DefaultMaterial</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1a7acfbdb1c0001423f4a23fb77b7fc710" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsMaterial</scope><name>isCollisionEnabled</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1a539ab50b573ad21066e0a6cf9884fdae" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsMaterial</scope><name>m_CoefficientOfFriction</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1ace8534fa774030fd3b3ca4084462bbf3" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsMaterial</scope><name>m_CoefficientOfRestitution</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1aa58e961a07c02db756d46d8ba62089bd" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsMaterial</scope><name>m_EnableCollision</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1ad3c24c2d6648c64a7f267c4eea4a2cb5" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsMaterial</scope><name>m_Gravity</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1ab6929a66134b29ba9c42cdb47b5e4d74" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsMaterial</scope><name>m_Mass</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1aaf93f21ccd15fd93894af24ba74463fa" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsMaterial</scope><name>makeMaterial</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1ad4cef6d4876687c1cf3b94c385760249" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsMaterial</scope><name>setCollision</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_material_1a19b25f6a11ac6f03b418dc902e5c096d" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsMaterial</scope><name>~APhysicsMaterial</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

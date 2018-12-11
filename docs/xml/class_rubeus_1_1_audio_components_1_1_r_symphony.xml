@@ -1,0 +1,670 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_audio_components_1_1_r_symphony" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::AudioComponents::RSymphony</compoundname>
+    <basecompoundref refid="class_rubeus_1_1_r_master_component" prot="public" virt="non-virtual">Rubeus::RMasterComponent</basecompoundref>
+    <includes refid="audio__manager__component_8h" local="no">audio_manager_component.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1a32407fd1c478ec6c18456b0b1fa2d6e0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; sf::SoundBuffer * &gt;</type>
+        <definition>std::vector&lt;sf::SoundBuffer *&gt; Rubeus::AudioComponents::RSymphony::m_SoundBuffers</definition>
+        <argsstring></argsstring>
+        <name>m_SoundBuffers</name>
+        <briefdescription>
+<para>Array of SFML sound effect buffers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="72" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1af5c4a669661a422f3f1c0e58d497b7b1" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; sf::Sound * &gt;</type>
+        <definition>std::vector&lt;sf::Sound *&gt; Rubeus::AudioComponents::RSymphony::m_SoundTracks</definition>
+        <argsstring></argsstring>
+        <name>m_SoundTracks</name>
+        <briefdescription>
+<para>Array of SFML sound tracks. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="75" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1a57b423ee1a29cf8561196f80c8bd15a5" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; sf::Music * &gt;</type>
+        <definition>std::vector&lt;sf::Music *&gt; Rubeus::AudioComponents::RSymphony::m_MusicTracks</definition>
+        <argsstring></argsstring>
+        <name>m_MusicTracks</name>
+        <briefdescription>
+<para>Array of SFML music tracks. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="78" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1a23e1ffa8a56e41678ea12fc3771f5920" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_rubeus_1_1_audio_modifier" kindref="compound">AudioModifier</ref> * &gt;</type>
+        <definition>std::vector&lt;AudioModifier *&gt; Rubeus::AudioComponents::RSymphony::m_AudioTasks</definition>
+        <argsstring></argsstring>
+        <name>m_AudioTasks</name>
+        <briefdescription>
+<para>Array of audio modification messages received. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="81" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1a577b2cefbd1edb6fc83664974966f549" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; void(*)()&gt;</type>
+        <definition>std::vector&lt;void(*)()&gt; Rubeus::AudioComponents::RSymphony::m_TickFunctions</definition>
+        <argsstring></argsstring>
+        <name>m_TickFunctions</name>
+        <briefdescription>
+<para>Array of functions to tick. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="84" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1abf8590aa229f332e206da30e75c6115e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Rubeus::AudioComponents::RSymphony::validateSoundTrackID</definition>
+        <argsstring>(ETrackName trackName)</argsstring>
+        <name>validateSoundTrackID</name>
+        <param>
+          <type><ref refid="class_e_track_name" kindref="compound">ETrackName</ref></type>
+          <declname>trackName</declname>
+        </param>
+        <briefdescription>
+<para>Validates the sound track ID. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Inline function</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trackName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The track ID to check.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if value is valid, else false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="97" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1aaf77ac0d862c37a12a6f6ed6818ce1a9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Rubeus::AudioComponents::RSymphony::validateMusicTrackID</definition>
+        <argsstring>(ETrackName trackName)</argsstring>
+        <name>validateMusicTrackID</name>
+        <param>
+          <type><ref refid="class_e_track_name" kindref="compound">ETrackName</ref></type>
+          <declname>trackName</declname>
+        </param>
+        <briefdescription>
+<para>Validates the music track ID. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Inline function</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trackName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The track ID to check.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if value is valid, else false. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="109" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1a05158fa67afff1aa3d41f97644000d62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::AudioComponents::RSymphony::RSymphony</definition>
+        <argsstring>()</argsstring>
+        <name>RSymphony</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="117" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1a7c3c4d8176470c11fb2afc6a07d660a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::AudioComponents::RSymphony::~RSymphony</definition>
+        <argsstring>()</argsstring>
+        <name>~RSymphony</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="124" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1aae4f90666e9b8628aecebdbe970e90b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::AudioComponents::RSymphony::addSoundTrack</definition>
+        <argsstring>(const int count)</argsstring>
+        <name>addSoundTrack</name>
+        <param>
+          <type>const int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Adds sound tracks to be used later to load sound effect files. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Keep track of how many tracks are actually needed</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of tracks to be constructed. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="134" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1abe8be79436074477c6f8c03a47bb2df1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::AudioComponents::RSymphony::addMusicTrack</definition>
+        <argsstring>(const int count)</argsstring>
+        <name>addMusicTrack</name>
+        <param>
+          <type>const int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Adds music tracks to be used later to play music. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Keep track of how many tracks are actually needed</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of tracks to be constructed. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="144" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1a8693b1aae45f6af05478cfa29f80ef4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::AudioComponents::RSymphony::loadTrack</definition>
+        <argsstring>(ETrackType trackType, ETrackName trackName, std::string filePath, float volume=50, bool loopEnabled=false)</argsstring>
+        <name>loadTrack</name>
+        <param>
+          <type><ref refid="class_e_track_type" kindref="compound">ETrackType</ref></type>
+          <declname>trackType</declname>
+        </param>
+        <param>
+          <type><ref refid="class_e_track_name" kindref="compound">ETrackName</ref></type>
+          <declname>trackName</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>filePath</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>volume</declname>
+          <defval>50</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>loopEnabled</declname>
+          <defname>loop_enabled</defname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Load an audio file to a music track. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Default volume is 50.0f (max volume is 100.0f)</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trackType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of track. Use SOUND_TRACK or MUSIC_TRACK </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trackName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name (Track ID) of the track to load to. Allowed TRACK_0 upto TRACK_19, unless the number of tracks added are less than 20. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the sound file </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>volume</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Volume to be set. Default is 50 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>loopEnabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the music should loop when it ends. Default is false. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="159" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1a5fcf33dbb92cb783ce7329157b495a92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::AudioComponents::RSymphony::playTrack</definition>
+        <argsstring>(ETrackType trackType, ETrackName trackName)</argsstring>
+        <name>playTrack</name>
+        <param>
+          <type><ref refid="class_e_track_type" kindref="compound">ETrackType</ref></type>
+          <declname>trackType</declname>
+        </param>
+        <param>
+          <type><ref refid="class_e_track_name" kindref="compound">ETrackName</ref></type>
+          <declname>trackName</declname>
+        </param>
+        <briefdescription>
+<para>Play a track. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Do not use track IDs that are not yet added</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trackType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of track. Use SOUND_TRACK or MUSIC_TRACK. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trackName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of track. Use Name (Track ID) of the track to load to. Allowed TRACK_0 upto TRACK_19, unless the number of tracks added are less than 20. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="170" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1a449d8649964c9b46fa3a5d5b3c234af5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::AudioComponents::RSymphony::pauseTrack</definition>
+        <argsstring>(ETrackType trackType, ETrackName trackName)</argsstring>
+        <name>pauseTrack</name>
+        <param>
+          <type><ref refid="class_e_track_type" kindref="compound">ETrackType</ref></type>
+          <declname>trackType</declname>
+        </param>
+        <param>
+          <type><ref refid="class_e_track_name" kindref="compound">ETrackName</ref></type>
+          <declname>trackName</declname>
+        </param>
+        <briefdescription>
+<para>Pause a track. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Do not use track IDs that are not yet added</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trackType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of track. Use SOUND_TRACK or MUSIC_TRACK. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trackName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of track. Use Name (Track ID) of the track to load to. Allowed TRACK_0 upto TRACK_19, unless the number of tracks added are less than 20. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="181" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1a60d2a5c59c3c747cae9eada0e442a312" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::AudioComponents::RSymphony::stopTrack</definition>
+        <argsstring>(ETrackType trackType, ETrackName trackName)</argsstring>
+        <name>stopTrack</name>
+        <param>
+          <type><ref refid="class_e_track_type" kindref="compound">ETrackType</ref></type>
+          <declname>trackType</declname>
+        </param>
+        <param>
+          <type><ref refid="class_e_track_name" kindref="compound">ETrackName</ref></type>
+          <declname>trackName</declname>
+        </param>
+        <briefdescription>
+<para>Stop a track. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Do not use track IDs that are not yet added</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trackType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of track. Use SOUND_TRACK or MUSIC_TRACK. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trackName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of track. Use Name (Track ID) of the track to load to. Allowed TRACK_0 upto TRACK_19, unless the number of tracks added are less than 20. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="193" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1aeea0b74c635baebea5069a87152155fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::AudioComponents::RSymphony::stepDownMusicVolume</definition>
+        <argsstring>(const float duration, const float floorVolume=0)</argsstring>
+        <name>stepDownMusicVolume</name>
+        <param>
+          <type>const float</type>
+          <declname>duration</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>floorVolume</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Steps down the volume. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Used only for fade outs/fade ins</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>duration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Duration of fade effect. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>floorVolume</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Volume to stop the fade effect at. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="204" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1a36012e93fac49fba23fff44b21b03df1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::AudioComponents::RSymphony::setVolume</definition>
+        <argsstring>(ETrackType trackType, ETrackName trackName, const float volume)</argsstring>
+        <name>setVolume</name>
+        <param>
+          <type><ref refid="class_e_track_type" kindref="compound">ETrackType</ref></type>
+          <declname>trackType</declname>
+        </param>
+        <param>
+          <type><ref refid="class_e_track_name" kindref="compound">ETrackName</ref></type>
+          <declname>trackName</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>volume</declname>
+        </param>
+        <briefdescription>
+<para>Sets the volume for a track. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Volume ranges from 0.0f to 100.0f</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trackType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of track. Use SOUND_TRACK or MUSIC_TRACK. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trackName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of track. Use Name (Track ID) of the track to load to. Allowed TRACK_0 upto TRACK_19, unless the number of tracks added are less than 20. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>volume</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The volume to set to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="216" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1af17e2d7324ad6870da11c606fb81bed9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::AudioComponents::RSymphony::setPitch</definition>
+        <argsstring>(ETrackType trackType, ETrackName trackName, const float pitch)</argsstring>
+        <name>setPitch</name>
+        <param>
+          <type><ref refid="class_e_track_type" kindref="compound">ETrackType</ref></type>
+          <declname>trackType</declname>
+        </param>
+        <param>
+          <type><ref refid="class_e_track_name" kindref="compound">ETrackName</ref></type>
+          <declname>trackName</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>pitch</declname>
+        </param>
+        <briefdescription>
+<para>Sets the pitch for a track. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Default pitch is 1. Changing pitch also affects the audio duration</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trackType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of track. Use SOUND_TRACK or MUSIC_TRACK. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>trackName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of track. Use Name (Track ID) of the track to load to. Allowed TRACK_0 upto TRACK_19, unless the number of tracks added are less than 20. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pitch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pitch to set to. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="228" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1af5783ab1abd424de29b2c86519975d93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::AudioComponents::RSymphony::addToTick</definition>
+        <argsstring>(void(*function)())</argsstring>
+        <name>addToTick</name>
+        <param>
+          <type>void(*)()</type>
+          <declname>function</declname>
+        </param>
+        <briefdescription>
+<para>Adds a function to be ticked by the audio manager. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Type_a_warning_with_its_use</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function pointer to be woken up at tick. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="238" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1a8115634b201ab5662f493158a1d26824" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::AudioComponents::RSymphony::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <briefdescription>
+<para>Ticks the tickable functions added to audio manager. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="245" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_rubeus_1_1_audio_components_1_1_r_symphony_1a7878d51e9364d7ae2268a9d11b0a8a31" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Rubeus::AudioComponents::RSymphony::onMessage</definition>
+        <argsstring>(Rubeus::Message *msg) override</argsstring>
+        <name>onMessage</name>
+        <reimplements refid="class_rubeus_1_1_r_master_component_1a129a5b04db723423b40cfd4780adcd35">onMessage</reimplements>
+        <param>
+          <type><ref refid="struct_rubeus_1_1_message" kindref="compound">Rubeus::Message</ref> *</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref> handler for audio manager. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>To be used by the message system only</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the message received. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="257" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Manages audio loading, cueing and audio effects. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="257">
+        <label>Rubeus::AudioComponents::RSymphony</label>
+        <link refid="class_rubeus_1_1_audio_components_1_1_r_symphony"/>
+        <childnode refid="258" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="258">
+        <label>Rubeus::RMasterComponent</label>
+        <link refid="class_rubeus_1_1_r_master_component"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="259">
+        <label>Rubeus::AudioComponents::RSymphony</label>
+        <link refid="class_rubeus_1_1_audio_components_1_1_r_symphony"/>
+        <childnode refid="260" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="262">
+        <label>Rubeus::RMessageBus</label>
+        <link refid="class_rubeus_1_1_r_message_bus"/>
+      </node>
+      <node id="261">
+        <label>Rubeus::RMessageSystem</label>
+        <link refid="class_rubeus_1_1_r_message_system"/>
+        <childnode refid="262" relation="usage">
+          <edgelabel>m_MessageBus</edgelabel>
+        </childnode>
+      </node>
+      <node id="260">
+        <label>Rubeus::RMasterComponent</label>
+        <link refid="class_rubeus_1_1_r_master_component"/>
+        <childnode refid="261" relation="usage">
+          <edgelabel>m_MessageSystem</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" line="69" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/audio_manager_component.h" bodystart="68" bodyend="258"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1abe8be79436074477c6f8c03a47bb2df1" prot="public" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>addMusicTrack</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1aae4f90666e9b8628aecebdbe970e90b1" prot="public" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>addSoundTrack</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1af5783ab1abd424de29b2c86519975d93" prot="public" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>addToTick</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1aa8456741bb2402650fc8726cd6768803" prot="public" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>componentsInitialised</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1ada4b85021d96ac2c2153e613d5f14097" prot="public" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>getComponentID</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1ad3c9003c4bc64661ed9ae5961c8cf3fa" prot="public" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>getName</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a8693b1aae45f6af05478cfa29f80ef4e" prot="public" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>loadTrack</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a23e1ffa8a56e41678ea12fc3771f5920" prot="private" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>m_AudioTasks</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1a838bceba7935bb3b11a5b69def0f0fc0" prot="protected" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>m_ComponentID</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1aedb604c4ddfb8d2ba72ff493a74b7025" prot="public" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>m_MessageSystem</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a57b423ee1a29cf8561196f80c8bd15a5" prot="private" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>m_MusicTracks</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a32407fd1c478ec6c18456b0b1fa2d6e0" prot="private" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>m_SoundBuffers</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1af5c4a669661a422f3f1c0e58d497b7b1" prot="private" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>m_SoundTracks</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a577b2cefbd1edb6fc83664974966f549" prot="private" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>m_TickFunctions</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a7878d51e9364d7ae2268a9d11b0a8a31" prot="protected" virt="virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>onMessage</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a449d8649964c9b46fa3a5d5b3c234af5" prot="public" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>pauseTrack</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a5fcf33dbb92cb783ce7329157b495a92" prot="public" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>playTrack</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1aecd982f5c7361dbb23bcc8ac5ec6481c" prot="public" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>RMasterComponent</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a05158fa67afff1aa3d41f97644000d62" prot="public" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>RSymphony</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1af17e2d7324ad6870da11c606fb81bed9" prot="public" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>setPitch</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a36012e93fac49fba23fff44b21b03df1" prot="public" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>setVolume</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1aeea0b74c635baebea5069a87152155fd" prot="public" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>stepDownMusicVolume</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a60d2a5c59c3c747cae9eada0e442a312" prot="public" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>stopTrack</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a8115634b201ab5662f493158a1d26824" prot="public" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>tick</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1aaf77ac0d862c37a12a6f6ed6818ce1a9" prot="private" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>validateMusicTrackID</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1abf8590aa229f332e206da30e75c6115e" prot="private" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>validateSoundTrackID</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1a3ee1666371bfafadd5f3adfa67ac874c" prot="public" virt="virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>~RMasterComponent</name></member>
+      <member refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a7c3c4d8176470c11fb2afc6a07d660a7" prot="public" virt="non-virtual"><scope>Rubeus::AudioComponents::RSymphony</scope><name>~RSymphony</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_awerere_1_1_a_collide_data" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::Awerere::ACollideData</compoundname>
+    <includes refid="awerere__collide__data__object_8h" local="no">awerere_collide_data_object.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_collide_data_1a184f4f8dd30c0bf52c7329a6da7d5bbd" prot="private" static="no" mutable="no">
+        <type>const bool</type>
+        <definition>const bool Rubeus::Awerere::ACollideData::m_IsIntersect</definition>
+        <argsstring></argsstring>
+        <name>m_IsIntersect</name>
+        <briefdescription>
+<para>Variable storing if the two colliders are intersecting. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h" line="25" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_collide_data_1afbe049f1ecfb22763a3369c5deaf5fe4" prot="private" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float Rubeus::Awerere::ACollideData::m_Gap</definition>
+        <argsstring></argsstring>
+        <name>m_Gap</name>
+        <briefdescription>
+<para>Variable storing the value of the gap between the two colliders. (is less than 0 if colliders are intersecting) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h" line="29" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_collide_data_1ac4ecd464d2ebecb66b4d1ff9363150d0" prot="private" static="no" mutable="no">
+        <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref></type>
+        <definition>const RML::Vector2D Rubeus::Awerere::ACollideData::m_CollisionNormal</definition>
+        <argsstring></argsstring>
+        <name>m_CollisionNormal</name>
+        <briefdescription>
+<para>A Vector2D perpendicular to the colliding surfaces and lying in the collision plane. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h" line="32" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_collide_data_1ad79cdd0023cfc6d65028193528ecce14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::Awerere::ACollideData::ACollideData</definition>
+        <argsstring>(const bool isIntersect, const float gap, const RML::Vector2D collisionNormal)</argsstring>
+        <name>ACollideData</name>
+        <param>
+          <type>const bool</type>
+          <declname>isIntersect</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>gap</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref></type>
+          <declname>collisionNormal</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para></para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>isIntersect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bool containing if the colliders are intersecting. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gap</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The penetration distance of the collision. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>collisionNormal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The normal vector of the collision </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_collide_data_1a30cee04ee5ff42c23beabd201fa3c6be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::Awerere::ACollideData::~ACollideData</definition>
+        <argsstring>()</argsstring>
+        <name>~ACollideData</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_collide_data_1af4d3410dab0c62879aaf014372acc9ce" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const bool &amp;</type>
+        <definition>const bool &amp; Rubeus::Awerere::ACollideData::getIsIntersect</definition>
+        <argsstring>() const</argsstring>
+        <name>getIsIntersect</name>
+        <briefdescription>
+<para>Returns if the colliders have intersected. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The intersection boolean. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h" line="62" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_collide_data_1a3b367a80c633e614d2aaa2ee92cbb9e5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const float &amp;</type>
+        <definition>const float &amp; Rubeus::Awerere::ACollideData::getGap</definition>
+        <argsstring>() const</argsstring>
+        <name>getGap</name>
+        <briefdescription>
+<para>Returns the separation gap between the colliders. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The gap in float. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h" line="71" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_collide_data_1ada2d967843fb9e84bae350d4a58af127" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &amp;</type>
+        <definition>const RML::Vector2D &amp; Rubeus::Awerere::ACollideData::getCollisionNormal</definition>
+        <argsstring>() const</argsstring>
+        <name>getCollisionNormal</name>
+        <briefdescription>
+<para>Returns the collision normal. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A Vector2D containing co-ordinates of the collision normal. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h" line="80" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h" bodystart="80" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A container holding information related to detected collisions. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h" line="21" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collide_data_object.h" bodystart="20" bodyend="83"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collide_data_1ad79cdd0023cfc6d65028193528ecce14" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ACollideData</scope><name>ACollideData</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collide_data_1ada2d967843fb9e84bae350d4a58af127" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ACollideData</scope><name>getCollisionNormal</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collide_data_1a3b367a80c633e614d2aaa2ee92cbb9e5" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ACollideData</scope><name>getGap</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collide_data_1af4d3410dab0c62879aaf014372acc9ce" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ACollideData</scope><name>getIsIntersect</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collide_data_1ac4ecd464d2ebecb66b4d1ff9363150d0" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::ACollideData</scope><name>m_CollisionNormal</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collide_data_1afbe049f1ecfb22763a3369c5deaf5fe4" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::ACollideData</scope><name>m_Gap</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collide_data_1a184f4f8dd30c0bf52c7329a6da7d5bbd" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::ACollideData</scope><name>m_IsIntersect</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collide_data_1a30cee04ee5ff42c23beabd201fa3c6be" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ACollideData</scope><name>~ACollideData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

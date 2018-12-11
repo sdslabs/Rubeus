@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="awerere__collision__grid_8h" kind="file" language="C++">
+    <compoundname>awerere_collision_grid.h</compoundname>
+    <includedby refid="awerere__collision__engine_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_engine.h</includedby>
+    <includedby refid="awerere__physics__engine_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h</includedby>
+    <invincdepgraph>
+      <node id="187">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_engine.h</label>
+        <link refid="awerere__collision__engine_8h"/>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+      </node>
+      <node id="191">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h</label>
+        <link refid="group__object_8h"/>
+        <childnode refid="192" relation="include">
+        </childnode>
+      </node>
+      <node id="186">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_grid.h</label>
+        <link refid="awerere__collision__grid_8h"/>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+      </node>
+      <node id="190">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h</label>
+        <link refid="game__object_8h"/>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+      </node>
+      <node id="197">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h</label>
+        <link refid="level_8h"/>
+        <childnode refid="189" relation="include">
+        </childnode>
+      </node>
+      <node id="195">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/ui_layer_object.h</label>
+        <link refid="ui__layer__object_8h"/>
+        <childnode refid="194" relation="include">
+        </childnode>
+      </node>
+      <node id="193">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h</label>
+        <link refid="scene__layer__object_8h_source"/>
+        <childnode refid="194" relation="include">
+        </childnode>
+      </node>
+      <node id="194">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h</label>
+        <link refid="layer__composition__object_8h"/>
+        <childnode refid="189" relation="include">
+        </childnode>
+      </node>
+      <node id="192">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_object.h</label>
+        <link refid="layer__object_8h"/>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+      </node>
+      <node id="189">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/engine.h</label>
+        <link refid="engine_8h"/>
+      </node>
+      <node id="196">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/world.h</label>
+        <link refid="world_8h"/>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+      </node>
+      <node id="188">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h</label>
+        <link refid="awerere__physics__engine_8h"/>
+        <childnode refid="189" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_rubeus_1_1_awerere_1_1_collision_grid" prot="public">Rubeus::Awerere::CollisionGrid</innerclass>
+    <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
+    <innernamespace refid="namespace_rubeus_1_1_awerere">Rubeus::Awerere</innernamespace>
+    <briefdescription>
+<para>Declares the collision grid used for broadphase resolution. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_rubeus" kindref="compound">Rubeus</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Awerere</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18" refid="struct_rubeus_1_1_awerere_1_1_collision_grid" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_rubeus_1_1_awerere_1_1_collision_grid" kindref="compound">CollisionGrid</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21" refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1abbec19ab9c5b816307686e574a34131d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1abbec19ab9c5b816307686e574a34131d" kindref="member">m_GridHeight</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a1bac782a3ab188917ae4ce8cdaa6eab8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a1bac782a3ab188917ae4ce8cdaa6eab8" kindref="member">m_GridWidth</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a76bd8c836316edc681f93f3455a5518f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a76bd8c836316edc681f93f3455a5518f" kindref="member">m_CellHeight</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1ac1e69f11436fdcfaa795c38d2e752ce7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1ac1e69f11436fdcfaa795c38d2e752ce7" kindref="member">m_CellWidth</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a454f84c3f50426db1625317827fa2d68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a454f84c3f50426db1625317827fa2d68" kindref="member">m_XCount</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a532328bcbd5cbf510cf793798c0ced17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a532328bcbd5cbf510cf793798c0ced17" kindref="member">m_YCount</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a56458f64c66009d73c2a729a64cc1e7c" kindref="member">CollisionGrid</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<sp/>gridHeight,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<sp/>gridWidth,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<sp/>cellHeight,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<sp/>cellWidth);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a661a8700f7267e82e7f91b556553acba" kindref="member">~CollisionGrid</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_grid.h"/>
+  </compounddef>
+</doxygen>

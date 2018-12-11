@@ -8,173 +8,410 @@
     <includes refid="logger__component_8h" local="no">logger_component.h</includes>
     <includes refid="loader__component_8h" local="no">loader_component.h</includes>
     <includes refid="master__component_8h" local="no">master_component.h</includes>
-    <includes refid="input__component_8h" local="no">input_component.h</includes>
+    <includes refid="input__manager_8h" local="no">input_manager.h</includes>
+    <includes refid="awerere__physics__object_8h" local="no">awerere_physics_object.h</includes>
+    <includedby refid="awerere__collision__engine_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_engine.h</includedby>
+    <includedby refid="engine_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/engine.h</includedby>
     <incdepgraph>
-      <node id="756">
+      <node id="1801">
+        <label>shader_component.h</label>
+        <link refid="shader__component_8h"/>
+        <childnode refid="1781" relation="include">
+        </childnode>
+        <childnode refid="1767" relation="include">
+        </childnode>
+        <childnode refid="1776" relation="include">
+        </childnode>
+        <childnode refid="1774" relation="include">
+        </childnode>
+        <childnode refid="1788" relation="include">
+        </childnode>
+      </node>
+      <node id="1772">
         <label>IL/il.h</label>
       </node>
-      <node id="757">
+      <node id="1795">
+        <label>sprite_object.h</label>
+        <link refid="sprite__object_8h"/>
+        <childnode refid="1796" relation="include">
+        </childnode>
+      </node>
+      <node id="1773">
         <label>IL/ilu.h</label>
       </node>
-      <node id="755">
+      <node id="1771">
         <label>string</label>
       </node>
-      <node id="751">
+      <node id="1767">
         <label>GL/glew.h</label>
       </node>
-      <node id="752">
+      <node id="1768">
         <label>GLFW/glfw3.h</label>
       </node>
-      <node id="768">
+      <node id="1802">
+        <label>renderer_component.h</label>
+        <link refid="renderer__component_8h"/>
+        <childnode refid="1767" relation="include">
+        </childnode>
+        <childnode refid="1788" relation="include">
+        </childnode>
+        <childnode refid="1776" relation="include">
+        </childnode>
+      </node>
+      <node id="1785">
         <label>message_codes.h</label>
         <link refid="message__codes_8h"/>
-        <childnode refid="753" relation="include">
+        <childnode refid="1769" relation="include">
         </childnode>
       </node>
-      <node id="765">
+      <node id="1782">
         <label>message_object.h</label>
         <link refid="message__object_8h"/>
-        <childnode refid="755" relation="include">
+        <childnode refid="1771" relation="include">
         </childnode>
-        <childnode refid="766" relation="include">
+        <childnode refid="1783" relation="include">
         </childnode>
-        <childnode refid="767" relation="include">
+        <childnode refid="1784" relation="include">
         </childnode>
-        <childnode refid="768" relation="include">
+        <childnode refid="1785" relation="include">
         </childnode>
       </node>
-      <node id="763">
+      <node id="1780">
         <label>message_system.h</label>
         <link refid="message__system_8h"/>
-        <childnode refid="764" relation="include">
+        <childnode refid="1781" relation="include">
         </childnode>
-        <childnode refid="765" relation="include">
+        <childnode refid="1782" relation="include">
         </childnode>
-        <childnode refid="769" relation="include">
+        <childnode refid="1786" relation="include">
         </childnode>
       </node>
-      <node id="767">
+      <node id="1784">
         <label>image_object.h</label>
         <link refid="image__object_8h"/>
-        <childnode refid="755" relation="include">
+        <childnode refid="1771" relation="include">
         </childnode>
-        <childnode refid="756" relation="include">
+        <childnode refid="1772" relation="include">
         </childnode>
       </node>
-      <node id="766">
+      <node id="1783">
         <label>boost/any.hpp</label>
       </node>
-      <node id="750">
+      <node id="1790">
+        <label>keys.h</label>
+        <link refid="keys_8h"/>
+      </node>
+      <node id="1793">
+        <label>awerere_collider_object.h</label>
+        <link refid="awerere__collider__object_8h"/>
+        <childnode refid="1788" relation="include">
+        </childnode>
+        <childnode refid="1792" relation="include">
+        </childnode>
+        <childnode refid="1794" relation="include">
+        </childnode>
+        <childnode refid="1795" relation="include">
+        </childnode>
+      </node>
+      <node id="1766">
         <label>string.h</label>
       </node>
-      <node id="762">
+      <node id="1778">
         <label>typeinfo</label>
       </node>
-      <node id="764">
+      <node id="1798">
+        <label>index_buffer_object.h</label>
+        <link refid="index__buffer__object_8h"/>
+        <childnode refid="1767" relation="include">
+        </childnode>
+        <childnode refid="1769" relation="include">
+        </childnode>
+      </node>
+      <node id="1781">
         <label>vector</label>
       </node>
-      <node id="749">
+      <node id="1765">
         <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h</label>
         <link refid="window__component_8h"/>
-        <childnode refid="750" relation="include">
+        <childnode refid="1766" relation="include">
         </childnode>
-        <childnode refid="751" relation="include">
+        <childnode refid="1767" relation="include">
         </childnode>
-        <childnode refid="752" relation="include">
+        <childnode refid="1768" relation="include">
         </childnode>
-        <childnode refid="753" relation="include">
+        <childnode refid="1769" relation="include">
         </childnode>
-        <childnode refid="758" relation="include">
+        <childnode refid="1774" relation="include">
         </childnode>
-        <childnode refid="760" relation="include">
+        <childnode refid="1776" relation="include">
         </childnode>
-        <childnode refid="770" relation="include">
+        <childnode refid="1787" relation="include">
         </childnode>
-      </node>
-      <node id="770">
-        <label>input_component.h</label>
-        <link refid="input__component_8h_source"/>
-        <childnode refid="750" relation="include">
-        </childnode>
-        <childnode refid="751" relation="include">
-        </childnode>
-        <childnode refid="752" relation="include">
-        </childnode>
-        <childnode refid="753" relation="include">
-        </childnode>
-        <childnode refid="758" relation="include">
-        </childnode>
-        <childnode refid="760" relation="include">
+        <childnode refid="1791" relation="include">
         </childnode>
       </node>
-      <node id="759">
+      <node id="1794">
+        <label>awerere_collide_data_object.h</label>
+        <link refid="awerere__collide__data__object_8h"/>
+        <childnode refid="1788" relation="include">
+        </childnode>
+      </node>
+      <node id="1789">
+        <label>math.h</label>
+      </node>
+      <node id="1775">
         <label>cstdlib</label>
       </node>
-      <node id="769">
+      <node id="1786">
         <label>message_bus.h</label>
         <link refid="message__bus_8h"/>
-        <childnode refid="764" relation="include">
+        <childnode refid="1781" relation="include">
         </childnode>
-        <childnode refid="765" relation="include">
+        <childnode refid="1782" relation="include">
         </childnode>
       </node>
-      <node id="754">
+      <node id="1770">
         <label>iostream</label>
       </node>
-      <node id="761">
+      <node id="1799">
+        <label>vertex_array_object.h</label>
+        <link refid="vertex__array__object_8h"/>
+        <childnode refid="1767" relation="include">
+        </childnode>
+        <childnode refid="1781" relation="include">
+        </childnode>
+        <childnode refid="1797" relation="include">
+        </childnode>
+      </node>
+      <node id="1777">
         <label>unordered_map</label>
       </node>
-      <node id="753">
+      <node id="1797">
+        <label>buffer_object.h</label>
+        <link refid="buffer__object_8h"/>
+        <childnode refid="1767" relation="include">
+        </childnode>
+        <childnode refid="1769" relation="include">
+        </childnode>
+      </node>
+      <node id="1769">
         <label>logger_component.h</label>
         <link refid="logger__component_8h_source"/>
-        <childnode refid="754" relation="include">
+        <childnode refid="1770" relation="include">
         </childnode>
-        <childnode refid="750" relation="include">
+        <childnode refid="1766" relation="include">
         </childnode>
-        <childnode refid="755" relation="include">
+        <childnode refid="1771" relation="include">
         </childnode>
-        <childnode refid="751" relation="include">
+        <childnode refid="1767" relation="include">
         </childnode>
-        <childnode refid="756" relation="include">
+        <childnode refid="1772" relation="include">
         </childnode>
-        <childnode refid="757" relation="include">
+        <childnode refid="1773" relation="include">
         </childnode>
       </node>
-      <node id="758">
+      <node id="1792">
+        <label>awerere_physics_material.h</label>
+        <link refid="awerere__physics__material_8h"/>
+        <childnode refid="1788" relation="include">
+        </childnode>
+      </node>
+      <node id="1788">
+        <label>rubeus_maths_library.h</label>
+        <link refid="rubeus__maths__library_8h"/>
+        <childnode refid="1789" relation="include">
+        </childnode>
+        <childnode refid="1770" relation="include">
+        </childnode>
+      </node>
+      <node id="1800">
+        <label>texture_object.h</label>
+        <link refid="texture__object_8h"/>
+        <childnode refid="1767" relation="include">
+        </childnode>
+        <childnode refid="1774" relation="include">
+        </childnode>
+      </node>
+      <node id="1774">
         <label>loader_component.h</label>
         <link refid="loader__component_8h_source"/>
-        <childnode refid="750" relation="include">
+        <childnode refid="1766" relation="include">
         </childnode>
-        <childnode refid="755" relation="include">
+        <childnode refid="1771" relation="include">
         </childnode>
-        <childnode refid="759" relation="include">
+        <childnode refid="1775" relation="include">
         </childnode>
-        <childnode refid="756" relation="include">
+        <childnode refid="1772" relation="include">
         </childnode>
-        <childnode refid="757" relation="include">
+        <childnode refid="1773" relation="include">
         </childnode>
-        <childnode refid="753" relation="include">
+        <childnode refid="1769" relation="include">
         </childnode>
-        <childnode refid="760" relation="include">
+        <childnode refid="1776" relation="include">
         </childnode>
-        <childnode refid="767" relation="include">
+        <childnode refid="1784" relation="include">
         </childnode>
       </node>
-      <node id="760">
+      <node id="1791">
+        <label>awerere_physics_object.h</label>
+        <link refid="awerere__physics__object_8h_source"/>
+        <childnode refid="1781" relation="include">
+        </childnode>
+        <childnode refid="1788" relation="include">
+        </childnode>
+        <childnode refid="1792" relation="include">
+        </childnode>
+        <childnode refid="1793" relation="include">
+        </childnode>
+      </node>
+      <node id="1787">
+        <label>input_manager.h</label>
+        <link refid="input__manager_8h"/>
+        <childnode refid="1771" relation="include">
+        </childnode>
+        <childnode refid="1777" relation="include">
+        </childnode>
+        <childnode refid="1781" relation="include">
+        </childnode>
+        <childnode refid="1767" relation="include">
+        </childnode>
+        <childnode refid="1768" relation="include">
+        </childnode>
+        <childnode refid="1769" relation="include">
+        </childnode>
+        <childnode refid="1774" relation="include">
+        </childnode>
+        <childnode refid="1788" relation="include">
+        </childnode>
+        <childnode refid="1776" relation="include">
+        </childnode>
+        <childnode refid="1790" relation="include">
+        </childnode>
+      </node>
+      <node id="1776">
         <label>master_component.h</label>
         <link refid="master__component_8h_source"/>
-        <childnode refid="755" relation="include">
+        <childnode refid="1771" relation="include">
         </childnode>
-        <childnode refid="761" relation="include">
+        <childnode refid="1777" relation="include">
         </childnode>
-        <childnode refid="762" relation="include">
+        <childnode refid="1778" relation="include">
         </childnode>
-        <childnode refid="753" relation="include">
+        <childnode refid="1779" relation="include">
         </childnode>
-        <childnode refid="763" relation="include">
+        <childnode refid="1769" relation="include">
+        </childnode>
+        <childnode refid="1780" relation="include">
+        </childnode>
+      </node>
+      <node id="1779">
+        <label>memory</label>
+      </node>
+      <node id="1796">
+        <label>renderable_object.h</label>
+        <link refid="renderable__object_8h"/>
+        <childnode refid="1767" relation="include">
+        </childnode>
+        <childnode refid="1788" relation="include">
+        </childnode>
+        <childnode refid="1797" relation="include">
+        </childnode>
+        <childnode refid="1798" relation="include">
+        </childnode>
+        <childnode refid="1799" relation="include">
+        </childnode>
+        <childnode refid="1800" relation="include">
+        </childnode>
+        <childnode refid="1801" relation="include">
+        </childnode>
+        <childnode refid="1802" relation="include">
         </childnode>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="1804">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_engine.h</label>
+        <link refid="awerere__collision__engine_8h"/>
+        <childnode refid="1805" relation="include">
+        </childnode>
+        <childnode refid="1807" relation="include">
+        </childnode>
+      </node>
+      <node id="1808">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h</label>
+        <link refid="group__object_8h"/>
+        <childnode refid="1809" relation="include">
+        </childnode>
+      </node>
+      <node id="1807">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h</label>
+        <link refid="game__object_8h"/>
+        <childnode refid="1808" relation="include">
+        </childnode>
+        <childnode refid="1813" relation="include">
+        </childnode>
+      </node>
+      <node id="1814">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h</label>
+        <link refid="level_8h"/>
+        <childnode refid="1806" relation="include">
+        </childnode>
+      </node>
+      <node id="1812">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/ui_layer_object.h</label>
+        <link refid="ui__layer__object_8h"/>
+        <childnode refid="1811" relation="include">
+        </childnode>
+      </node>
+      <node id="1810">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h</label>
+        <link refid="scene__layer__object_8h_source"/>
+        <childnode refid="1811" relation="include">
+        </childnode>
+      </node>
+      <node id="1811">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h</label>
+        <link refid="layer__composition__object_8h"/>
+        <childnode refid="1806" relation="include">
+        </childnode>
+      </node>
+      <node id="1809">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_object.h</label>
+        <link refid="layer__object_8h"/>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1812" relation="include">
+        </childnode>
+      </node>
+      <node id="1806">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/engine.h</label>
+        <link refid="engine_8h"/>
+      </node>
+      <node id="1813">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/world.h</label>
+        <link refid="world_8h"/>
+        <childnode refid="1805" relation="include">
+        </childnode>
+        <childnode refid="1806" relation="include">
+        </childnode>
+        <childnode refid="1814" relation="include">
+        </childnode>
+      </node>
+      <node id="1803">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h</label>
+        <link refid="window__component_8h"/>
+        <childnode refid="1804" relation="include">
+        </childnode>
+        <childnode refid="1806" relation="include">
+        </childnode>
+      </node>
+      <node id="1805">
+        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h</label>
+        <link refid="awerere__physics__engine_8h"/>
+        <childnode refid="1806" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" prot="public">Rubeus::GraphicComponents::RWindowComponent</innerclass>
     <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
     <innernamespace refid="namespace_rubeus_1_1_graphic_components">Rubeus::GraphicComponents</innernamespace>
@@ -187,32 +424,33 @@
 <codeline lineno="7"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/glew.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GLFW/glfw3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;logger_component.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;loader_component.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;master_component.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;input_component.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_rubeus" kindref="compound">Rubeus</ref></highlight></codeline>
-<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">GraphicComponents</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="28" refid="window__component_8h_1ab1b8341969a82bc64ecc95a440578f4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="window__component_8h_1ab1b8341969a82bc64ecc95a440578f4e" kindref="member">EWindowParameters</ref></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WINDOWED_MODE,</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FULLSCREEN_MODE,</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NON_RESIZABLE_WINDOW,</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RESIZABLE_WINDOW</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getGLFWErrorLog(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>error,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*description);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51" refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" kindref="compound">RWindowComponent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLFWwindow<sp/>*<sp/>m_Window;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/glew.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GLFW/glfw3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;logger_component.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;loader_component.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;master_component.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="input__manager_8h" kindref="compound">input_manager.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;awerere_physics_object.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_rubeus" kindref="compound">Rubeus</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">GraphicComponents</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30" refid="window__component_8h_1ab1b8341969a82bc64ecc95a440578f4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="window__component_8h_1ab1b8341969a82bc64ecc95a440578f4e" kindref="member">EWindowParameters</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WINDOWED_MODE,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FULLSCREEN_MODE,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NON_RESIZABLE_WINDOW,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RESIZABLE_WINDOW</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getGLFWErrorLog(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>error,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*description);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" kindref="compound">RWindowComponent</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_Width;</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"></highlight></codeline>
@@ -223,44 +461,45 @@
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="68" refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a24b6c4ff6c8558619dd5f97e1a8cfea3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a24b6c4ff6c8558619dd5f97e1a8cfea3" kindref="member">m_X</ref>,<sp/>m_Y;</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a7de46dcdb635adfd4324e7ca5da1b3f0" kindref="member">initWindow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*title,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height,<sp/><ref refid="window__component_8h_1ab1b8341969a82bc64ecc95a440578f4e" kindref="member">EWindowParameters</ref><sp/>windowMode<sp/>=<sp/>EWindowParameters::WINDOWED_MODE,<sp/><ref refid="window__component_8h_1ab1b8341969a82bc64ecc95a440578f4e" kindref="member">EWindowParameters</ref><sp/>windowType<sp/>=<sp/>EWindowParameters::RESIZABLE_WINDOW);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ac61828b6b57dfb3aa398fd0cd5f34224" kindref="member">RWindowComponent</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*title,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height,<sp/><ref refid="window__component_8h_1ab1b8341969a82bc64ecc95a440578f4e" kindref="member">EWindowParameters</ref><sp/>windowMode<sp/>=<sp/>EWindowParameters::WINDOWED_MODE,<sp/><ref refid="window__component_8h_1ab1b8341969a82bc64ecc95a440578f4e" kindref="member">EWindowParameters</ref><sp/>windowType<sp/>=<sp/>EWindowParameters::RESIZABLE_WINDOW,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>setFPS<sp/>=<sp/>1);</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ab56619ea64ad8ebec5f0059a7a5c6638" kindref="member">~RWindowComponent</ref>();</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ab7c5724af3c2d6f3c3db226eb0757263" kindref="member">clearWindow</ref>();</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1af65024825d2b929e9e322570f48aad81" kindref="member">updateWindow</ref>();</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a47a71ace6fce39d9e9213c914b9be2f3" kindref="member">closed</ref>();</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a279b5589ab679da9f44d34a47bcc3966" kindref="member">setWindowTitle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>title);</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Add<sp/>docs</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setWindowIcon(<ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" kindref="compound">RWindowComponent</ref><sp/>GameWindow,<sp/>std::string<sp/>names[]);</highlight></codeline>
+<codeline lineno="71" refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1af445e2e41ff6c10dbcffbb8ffa7959dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLFWwindow<sp/>*<sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1af445e2e41ff6c10dbcffbb8ffa7959dd" kindref="member">m_Window</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a7de46dcdb635adfd4324e7ca5da1b3f0" kindref="member">initWindow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*title,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height,<sp/><ref refid="window__component_8h_1ab1b8341969a82bc64ecc95a440578f4e" kindref="member">EWindowParameters</ref><sp/>windowMode<sp/>=<sp/>EWindowParameters::WINDOWED_MODE,<sp/><ref refid="window__component_8h_1ab1b8341969a82bc64ecc95a440578f4e" kindref="member">EWindowParameters</ref><sp/>windowType<sp/>=<sp/>EWindowParameters::RESIZABLE_WINDOW);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ac61828b6b57dfb3aa398fd0cd5f34224" kindref="member">RWindowComponent</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*title,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height,<sp/><ref refid="window__component_8h_1ab1b8341969a82bc64ecc95a440578f4e" kindref="member">EWindowParameters</ref><sp/>windowMode<sp/>=<sp/>EWindowParameters::WINDOWED_MODE,<sp/><ref refid="window__component_8h_1ab1b8341969a82bc64ecc95a440578f4e" kindref="member">EWindowParameters</ref><sp/>windowType<sp/>=<sp/>EWindowParameters::RESIZABLE_WINDOW,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>setFPS<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ab56619ea64ad8ebec5f0059a7a5c6638" kindref="member">~RWindowComponent</ref>();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ab7c5724af3c2d6f3c3db226eb0757263" kindref="member">clearWindow</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1af65024825d2b929e9e322570f48aad81" kindref="member">updateWindow</ref>();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a47a71ace6fce39d9e9213c914b9be2f3" kindref="member">closed</ref>();</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a279b5589ab679da9f44d34a47bcc3966" kindref="member">setWindowTitle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>title);</highlight></codeline>
 <codeline lineno="146"><highlight class="normal"></highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setWindowIconToDefault();</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"></highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a49b73f0aabec271c81a81efa0f9aacc2" kindref="member">windowCloseCallback</ref>(GLFWwindow<sp/>*<sp/>window);</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"></highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a01e52489c6643d63f4fbca88df2d9c9f" kindref="member">windowResizeCallback</ref>(GLFWwindow<sp/>*<sp/>window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//friend<sp/>class<sp/>RInputComponent;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Add<sp/>docs</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cursorPositionCallback(GLFWwindow<sp/>*window,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xpos,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ypos);</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>mouseButtonCallback(GLFWwindow<sp/>*window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>button,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>action,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mods);</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>scrollCallback(GLFWwindow<sp/>*window,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>xoffset,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>yoffset);</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>keyCallback(GLFWwindow<sp/>*window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scancode,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>action,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mods);</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"></highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a55b12b3208217709e571d6e7811de756" kindref="member">onMessage</ref>(<ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref><sp/>*<sp/>msg)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"></highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Add<sp/>docs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setWindowIcon(<ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" kindref="compound">RWindowComponent</ref><sp/>GameWindow,<sp/>std::string<sp/>names[]);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Add<sp/>docs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setWindowIconToDefault();</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a49b73f0aabec271c81a81efa0f9aacc2" kindref="member">windowCloseCallback</ref>(GLFWwindow<sp/>*<sp/>window);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a01e52489c6643d63f4fbca88df2d9c9f" kindref="member">windowResizeCallback</ref>(GLFWwindow<sp/>*<sp/>window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="181" refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a789cf8e623651ca942d89c952d43ee22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a789cf8e623651ca942d89c952d43ee22" kindref="member">getWidth</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_Width;<sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190" refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a5dde4e474f3c987392f5153da10e3610" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a5dde4e474f3c987392f5153da10e3610" kindref="member">getHeight</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_Height;<sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a55b12b3208217709e571d6e7811de756" kindref="member">onMessage</ref>(<ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref><sp/>*<sp/>msg)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h"/>
   </compounddef>
