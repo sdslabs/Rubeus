@@ -37,12 +37,12 @@ As previously said, we do not expect to have any monetary gains off making this 
 
 ## <a name=setup>How do I use Rubeus?
 
-Rubeus is currently available for Windows, Linux ~and Mac build is getting ready~.
+Rubeus is currently available for use on Windows, Linux ~and Mac build is getting ready~.
 
-### For making a game:
+#### For making a game:
 Follow the [Getting Started guide](https://github.com/sdslabs/Rubeus/wiki).
 
-### For participating in development of Rubeus:
+#### For participating in development of Rubeus:
 Setup instructions for Rubeus are explained [here](SETUP.md). Also make sure to read the [contribution guidelines](CONTRIBUTING.md). A good start would be trying to build Rubeus on your personal systems.
 
 ## <a name=how>How can I contribute?
