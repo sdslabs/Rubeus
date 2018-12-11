@@ -55,4 +55,4 @@ cd docs/
 moxygen --output index.md xml/
 ```
 
-### 4. We are done! Push your changes and review them at https://blog.sdslabs.co/Rubeus/
+### 4. We are done! Push your changes, get them merged to `master` and review them at https://blog.sdslabs.co/Rubeus/
