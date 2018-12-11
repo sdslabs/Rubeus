@@ -27,7 +27,7 @@ namespace Rubeus
 			delete _m_Color;
 		}
 
-		RSprite::RSprite(float & x, float & y, float & width, float & height, RML::Vector4D & color)
+		RSprite::RSprite(float & x, float & y, float & width, float & height, const RML::Vector4D & color)
 			:
 			RRenderableObject(new RML::Vector3D(x, y, 1.0f), new RML::Vector2D(width, height), new RML::Vector4D(color))
 		{

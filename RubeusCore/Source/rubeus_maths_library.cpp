@@ -105,7 +105,7 @@ namespace RML
 		return add(other);
 	}
 
-	Vector2D & Vector2D::operator-=(const Vector2D & other)
+	Vector2D Vector2D::operator-=(const Vector2D & other)
 	{
 		return subtract(other);
 	}

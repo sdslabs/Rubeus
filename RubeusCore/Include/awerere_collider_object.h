@@ -60,11 +60,11 @@ namespace Rubeus
 			GraphicComponents::RSprite * m_Sprite = NULL;
 
 			/**
-			 * @fn		ACollider()
+			 * @fn		ACollider(RML::Vector3D position = RML::Vector3D(0.0f, 0.0f, 0.0f))
 			 *
 			 * @brief	Contructor
 			 */
-			ACollider();
+			ACollider(RML::Vector3D position = RML::Vector3D(0.0f, 0.0f, 0.0f));
 
 			/**
 			 * @fn		ACollider(RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial)

@@ -24,7 +24,7 @@ namespace Rubeus
 		{
 		}
 
-		void APhysicsMaterial::makeMaterial(const float & mass, RML::Vector2D & gravity, const float & friction, const float & restitution)
+		void APhysicsMaterial::makeMaterial(const float & mass, const RML::Vector2D & gravity, const float & friction, const float & restitution)
 		{
 			m_Mass = mass;
 			m_Gravity = gravity;
