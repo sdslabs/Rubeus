@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_r_entity" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::REntity</compoundname>
+    <derivedcompoundref refid="class_rubeus_1_1_r_game_object" prot="public" virt="non-virtual">Rubeus::RGameObject</derivedcompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_r_entity_1ade850425733b077ca98bf9f1fbc49eaa" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Rubeus::REntity::entityCount</definition>
+        <argsstring></argsstring>
+        <name>entityCount</name>
+        <briefdescription>
+<para>Number of entities initialised. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/entity_object.h" line="17" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/entity_object.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_r_entity_1a4a6b38c0f88052f8867d8591cbd776d5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Rubeus::REntity::m_EntityID</definition>
+        <argsstring></argsstring>
+        <name>m_EntityID</name>
+        <briefdescription>
+<para>Unique Entity object ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/entity_object.h" line="20" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/entity_object.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_r_entity_1a5a14e115db6573c5b231c52a23582e2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Rubeus::REntity::tick</definition>
+        <argsstring>()</argsstring>
+        <name>tick</name>
+        <reimplementedby refid="class_rubeus_1_1_r_game_object_1ade6d964c655301870cb762c1b9c02966">tick</reimplementedby>
+        <briefdescription>
+<para>Tick function. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Invoked every frame </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/entity_object.h" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_entity_1a5e9533e6bf1e3c9e5a3af285065d4441" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::REntity::REntity</definition>
+        <argsstring>()</argsstring>
+        <name>REntity</name>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/entity_object.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_entity_1a3ff69a73c97dbe20c3677166205449fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Rubeus::REntity::~REntity</definition>
+        <argsstring>()</argsstring>
+        <name>~REntity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/entity_object.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_entity_1a711b39f7080c54161c642770ae7c73eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Rubeus::REntity::getName</definition>
+        <argsstring>()</argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String containing name of this entity. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/entity_object.h" line="49" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="102">
+        <label>Rubeus::REntity</label>
+        <link refid="class_rubeus_1_1_r_entity"/>
+      </node>
+      <node id="103">
+        <label>Rubeus::RGameObject</label>
+        <link refid="class_rubeus_1_1_r_game_object"/>
+        <childnode refid="102" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>Rubeus::GraphicComponents::RGroup</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_group"/>
+        <childnode refid="103" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/entity_object.h" line="14" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/entity_object.h" bodystart="13" bodyend="52"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_r_entity_1ade850425733b077ca98bf9f1fbc49eaa" prot="public" virt="non-virtual"><scope>Rubeus::REntity</scope><name>entityCount</name></member>
+      <member refid="class_rubeus_1_1_r_entity_1a711b39f7080c54161c642770ae7c73eb" prot="public" virt="non-virtual"><scope>Rubeus::REntity</scope><name>getName</name></member>
+      <member refid="class_rubeus_1_1_r_entity_1a4a6b38c0f88052f8867d8591cbd776d5" prot="public" virt="non-virtual"><scope>Rubeus::REntity</scope><name>m_EntityID</name></member>
+      <member refid="class_rubeus_1_1_r_entity_1a5e9533e6bf1e3c9e5a3af285065d4441" prot="public" virt="non-virtual"><scope>Rubeus::REntity</scope><name>REntity</name></member>
+      <member refid="class_rubeus_1_1_r_entity_1a5a14e115db6573c5b231c52a23582e2d" prot="public" virt="virtual"><scope>Rubeus::REntity</scope><name>tick</name></member>
+      <member refid="class_rubeus_1_1_r_entity_1a3ff69a73c97dbe20c3677166205449fa" prot="public" virt="virtual"><scope>Rubeus::REntity</scope><name>~REntity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

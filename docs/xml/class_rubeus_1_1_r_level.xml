@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_r_level" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::RLevel</compoundname>
+    <includes refid="level_8h" local="no">level.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_r_level_1a2523b175190f46fac69ba69e79ec2c2e" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_r_world" kindref="compound">RWorld</ref> *</type>
+        <definition>RWorld* Rubeus::RLevel::m_World</definition>
+        <argsstring></argsstring>
+        <name>m_World</name>
+        <briefdescription>
+<para>The world of this level. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" line="26" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="class_rubeus_1_1_r_engine_1a917653e80eaaeb9b7f38d55a0e62ee65" compoundref="engine_8h" startline="160" endline="160">Rubeus::REngine::getWorld</referencedby>
+        <referencedby refid="class_rubeus_1_1_r_level_1a488936e1ca061f8deb49d8ed06cd9373" compoundref="level_8h" startline="107" endline="107">getWorld</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_r_level_1a332056e3e49dbbde32a3153d46c628a9" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_r_input_manager" kindref="compound">RInputManager</ref> *</type>
+        <definition>RInputManager* Rubeus::RLevel::m_InputManager</definition>
+        <argsstring></argsstring>
+        <name>m_InputManager</name>
+        <briefdescription>
+<para>Input manager of this level. All keybindings are level specific. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" line="29" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_rubeus_1_1_r_engine_1ac06499662aa41473c66966346afef7ee" compoundref="engine_8h" startline="150" endline="150">Rubeus::REngine::getCurrentLevelInputManager</referencedby>
+        <referencedby refid="class_rubeus_1_1_r_level_1a83010fe62326dc0767a7a041aeff411e" compoundref="level_8h" startline="116" endline="116">getInputManager</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_r_level_1a262dcbba989ac479eb7c6b66d7ce220a" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony" kindref="compound">AudioComponents::RSymphony</ref> *</type>
+        <definition>AudioComponents::RSymphony* Rubeus::RLevel::m_AudioManager</definition>
+        <argsstring></argsstring>
+        <name>m_AudioManager</name>
+        <briefdescription>
+<para>Audio manager of this level. All tracks are level specific. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" line="32" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="class_rubeus_1_1_r_engine_1a2904459651c39133c79900971a624e6a" compoundref="engine_8h" startline="140" endline="140">Rubeus::REngine::getCurrentLevelAudioManager</referencedby>
+        <referencedby refid="class_rubeus_1_1_r_level_1a8d08d9e54f8732f6043c02593d9279c8" compoundref="level_8h" startline="125" endline="125">getSoundManager</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_r_level_1a62b53a50f4afadf234f3d67e01488cea" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Rubeus::RLevel::m_Name</definition>
+        <argsstring></argsstring>
+        <name>m_Name</name>
+        <briefdescription>
+<para>Name of this level. Used to identify game objects to their levels. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" line="35" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="class_rubeus_1_1_r_level_1aa664e7c62a62134aeff17d50428a543d" compoundref="level_8h" startline="98" endline="98">getName</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_rubeus_1_1_r_level_1abbd9bc577675917336fd07ab54e0580c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class REngine</definition>
+        <argsstring></argsstring>
+        <name>REngine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" line="37" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_r_level_1a0f2487a9442ae5268cc50103d5978e94" prot="public" static="yes" mutable="no">
+        <type>std::unordered_map&lt; std::string, <ref refid="class_rubeus_1_1_r_level" kindref="compound">RLevel</ref> * &gt;</type>
+        <definition>std::unordered_map&lt;std::string, RLevel *&gt; Rubeus::RLevel::InstantiatedLevels</definition>
+        <argsstring></argsstring>
+        <name>InstantiatedLevels</name>
+        <briefdescription>
+<para>Pointers to all objects instantiated of this class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" line="42" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_r_level_1aa6315e5321bcfca5282201a6d64e7d15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::RLevel::RLevel</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>RLevel</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of this level. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_level_1aa5dd147b213fb9d63a31a4aa4ba9a1e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::RLevel::~RLevel</definition>
+        <argsstring>()</argsstring>
+        <name>~RLevel</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_level_1accfb4374e3deeffc74d45d8d03d3556b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Rubeus::RLevel::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+<para>User overridable on startup script for this level. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_level_1a1a8159f166bbe90cb22425136609fb5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Rubeus::RLevel::onEnd</definition>
+        <argsstring>()</argsstring>
+        <name>onEnd</name>
+        <briefdescription>
+<para>User overridable script called on end of this level. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_level_1a4776b19d0f8313a3d785910e7b39e502" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::RLevel::killAliveObjects</definition>
+        <argsstring>()</argsstring>
+        <name>killAliveObjects</name>
+        <briefdescription>
+<para>Delete active objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_level_1a2c0545a3e9a6c78f586dc9118ae17b9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::RLevel::addGameObject</definition>
+        <argsstring>(RGameObject *gameObject)</argsstring>
+        <name>addGameObject</name>
+        <param>
+          <type><ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref> *</type>
+          <declname>gameObject</declname>
+        </param>
+        <briefdescription>
+<para>Add a gameobject to this level&apos;s world. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Do not explicitly delete passed in pointers</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object pointer to be passed in. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_level_1aa664e7c62a62134aeff17d50428a543d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Rubeus::RLevel::getName</definition>
+        <argsstring>() const</argsstring>
+        <name>getName</name>
+        <briefdescription>
+<para>Get the name of this level. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>String containing the level name. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" line="98" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" bodystart="98" bodyend="98"/>
+        <references refid="class_rubeus_1_1_r_level_1a62b53a50f4afadf234f3d67e01488cea" compoundref="level_8h" startline="35">m_Name</references>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_level_1a488936e1ca061f8deb49d8ed06cd9373" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_rubeus_1_1_r_world" kindref="compound">RWorld</ref> *</type>
+        <definition>RWorld * Rubeus::RLevel::getWorld</definition>
+        <argsstring>() const</argsstring>
+        <name>getWorld</name>
+        <briefdescription>
+<para>Get the world of this level. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the world of this level. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" line="107" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" bodystart="107" bodyend="107"/>
+        <references refid="class_rubeus_1_1_r_level_1a2523b175190f46fac69ba69e79ec2c2e" compoundref="level_8h" startline="26">m_World</references>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_level_1a83010fe62326dc0767a7a041aeff411e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_rubeus_1_1_r_input_manager" kindref="compound">RInputManager</ref> *</type>
+        <definition>RInputManager * Rubeus::RLevel::getInputManager</definition>
+        <argsstring>() const</argsstring>
+        <name>getInputManager</name>
+        <briefdescription>
+<para>Get the input manager of this level. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the input manager of this level. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" line="116" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" bodystart="116" bodyend="116"/>
+        <references refid="class_rubeus_1_1_r_level_1a332056e3e49dbbde32a3153d46c628a9" compoundref="level_8h" startline="29">m_InputManager</references>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_level_1a8d08d9e54f8732f6043c02593d9279c8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony" kindref="compound">AudioComponents::RSymphony</ref> *</type>
+        <definition>AudioComponents::RSymphony * Rubeus::RLevel::getSoundManager</definition>
+        <argsstring>() const</argsstring>
+        <name>getSoundManager</name>
+        <briefdescription>
+<para>Get the audio manager of this level. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the audio manager of this level. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" line="125" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" bodystart="125" bodyend="125"/>
+        <references refid="class_rubeus_1_1_r_level_1a262dcbba989ac479eb7c6b66d7ce220a" compoundref="level_8h" startline="32">m_AudioManager</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A single container from all access to a level&apos;s contents. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="169">
+        <label>Rubeus::AudioComponents::RSymphony</label>
+        <link refid="class_rubeus_1_1_audio_components_1_1_r_symphony"/>
+        <childnode refid="170" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="173">
+        <label>Rubeus::RInputManager</label>
+        <link refid="class_rubeus_1_1_r_input_manager"/>
+        <childnode refid="170" relation="public-inheritance">
+        </childnode>
+        <childnode refid="174" relation="usage">
+          <edgelabel>MouseScroll</edgelabel>
+          <edgelabel>MousePosition</edgelabel>
+        </childnode>
+      </node>
+      <node id="175">
+        <label>Rubeus::RWorld</label>
+        <link refid="class_rubeus_1_1_r_world"/>
+      </node>
+      <node id="174">
+        <label>RML::Vector2D</label>
+        <link refid="struct_r_m_l_1_1_vector2_d"/>
+      </node>
+      <node id="172">
+        <label>Rubeus::RMessageBus</label>
+        <link refid="class_rubeus_1_1_r_message_bus"/>
+      </node>
+      <node id="171">
+        <label>Rubeus::RMessageSystem</label>
+        <link refid="class_rubeus_1_1_r_message_system"/>
+        <childnode refid="172" relation="usage">
+          <edgelabel>m_MessageBus</edgelabel>
+        </childnode>
+      </node>
+      <node id="170">
+        <label>Rubeus::RMasterComponent</label>
+        <link refid="class_rubeus_1_1_r_master_component"/>
+        <childnode refid="171" relation="usage">
+          <edgelabel>m_MessageSystem</edgelabel>
+        </childnode>
+      </node>
+      <node id="168">
+        <label>Rubeus::RLevel</label>
+        <link refid="class_rubeus_1_1_r_level"/>
+        <childnode refid="169" relation="usage">
+          <edgelabel>m_AudioManager</edgelabel>
+        </childnode>
+        <childnode refid="173" relation="usage">
+          <edgelabel>m_InputManager</edgelabel>
+        </childnode>
+        <childnode refid="175" relation="usage">
+          <edgelabel>m_World</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" line="23" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h" bodystart="22" bodyend="126"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_r_level_1a2c0545a3e9a6c78f586dc9118ae17b9f" prot="public" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>addGameObject</name></member>
+      <member refid="class_rubeus_1_1_r_level_1accfb4374e3deeffc74d45d8d03d3556b" prot="public" virt="virtual"><scope>Rubeus::RLevel</scope><name>begin</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a83010fe62326dc0767a7a041aeff411e" prot="public" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>getInputManager</name></member>
+      <member refid="class_rubeus_1_1_r_level_1aa664e7c62a62134aeff17d50428a543d" prot="public" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>getName</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a8d08d9e54f8732f6043c02593d9279c8" prot="public" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>getSoundManager</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a488936e1ca061f8deb49d8ed06cd9373" prot="public" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>getWorld</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a0f2487a9442ae5268cc50103d5978e94" prot="public" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>InstantiatedLevels</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a4776b19d0f8313a3d785910e7b39e502" prot="public" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>killAliveObjects</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a262dcbba989ac479eb7c6b66d7ce220a" prot="protected" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>m_AudioManager</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a332056e3e49dbbde32a3153d46c628a9" prot="protected" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>m_InputManager</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a62b53a50f4afadf234f3d67e01488cea" prot="protected" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>m_Name</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a2523b175190f46fac69ba69e79ec2c2e" prot="protected" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>m_World</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a1a8159f166bbe90cb22425136609fb5e" prot="public" virt="virtual"><scope>Rubeus::RLevel</scope><name>onEnd</name></member>
+      <member refid="class_rubeus_1_1_r_level_1abbd9bc577675917336fd07ab54e0580c" prot="protected" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>REngine</name></member>
+      <member refid="class_rubeus_1_1_r_level_1aa6315e5321bcfca5282201a6d64e7d15" prot="public" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>RLevel</name></member>
+      <member refid="class_rubeus_1_1_r_level_1aa5dd147b213fb9d63a31a4aa4ba9a1e2" prot="public" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>~RLevel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

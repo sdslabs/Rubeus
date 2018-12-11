@@ -49,21 +49,21 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="2">
+      <node id="72">
         <label>ETrackType</label>
         <link refid="class_e_track_type"/>
       </node>
-      <node id="1">
+      <node id="71">
         <label>Rubeus::AudioModifier</label>
         <link refid="struct_rubeus_1_1_audio_modifier"/>
-        <childnode refid="2" relation="usage">
+        <childnode refid="72" relation="usage">
           <edgelabel>m_TrackToApplyTo</edgelabel>
         </childnode>
-        <childnode refid="3" relation="usage">
+        <childnode refid="73" relation="usage">
           <edgelabel>m_TrackName</edgelabel>
         </childnode>
       </node>
-      <node id="3">
+      <node id="73">
         <label>ETrackName</label>
         <link refid="class_e_track_name"/>
       </node>

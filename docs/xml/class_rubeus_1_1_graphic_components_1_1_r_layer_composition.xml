@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_graphic_components_1_1_r_layer_composition" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::GraphicComponents::RLayerComposition</compoundname>
+    <includes refid="layer__composition__object_8h" local="no">layer_composition_object.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1a8994f0079770954002243f533f39e7fc" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component" kindref="compound">RShaderComponent</ref> *</type>
+        <definition>RShaderComponent* Rubeus::GraphicComponents::RLayerComposition::m_UIShader</definition>
+        <argsstring></argsstring>
+        <name>m_UIShader</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>The UI layer shader. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" line="30" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1af126f60af381d37cd1f468cbab4baa61" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component" kindref="compound">RShaderComponent</ref> *</type>
+        <definition>RShaderComponent* Rubeus::GraphicComponents::RLayerComposition::m_SceneShader</definition>
+        <argsstring></argsstring>
+        <name>m_SceneShader</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>The Scene layer shader. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" line="33" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1aaf0593edcdb3df75ce957114d2e2496c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_u_i_layer" kindref="compound">RUILayer</ref> *</type>
+        <definition>RUILayer* Rubeus::GraphicComponents::RLayerComposition::m_UILayer</definition>
+        <argsstring></argsstring>
+        <name>m_UILayer</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>The UI layer. Renders only UI elements. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" line="36" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1a7412fef9d3484e6c645fdfe5a4e9c7e3" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer" kindref="compound">RSceneLayer</ref> *</type>
+        <definition>RSceneLayer* Rubeus::GraphicComponents::RLayerComposition::m_SceneLayer</definition>
+        <argsstring></argsstring>
+        <name>m_SceneLayer</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>The Scene layer. Renders only scene elements. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" line="39" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1a0a0c4e76f870ef84b8bd278bedea0b31" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_group" kindref="compound">RGroup</ref> *</type>
+        <definition>RGroup* Rubeus::GraphicComponents::RLayerComposition::m_UIGroup</definition>
+        <argsstring></argsstring>
+        <name>m_UIGroup</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>The singular group of all UI objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" line="42" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1a5342332069d952c4c0b081501b49fd0e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_group" kindref="compound">RGroup</ref> *</type>
+        <definition>RGroup* Rubeus::GraphicComponents::RLayerComposition::m_SceneGroup</definition>
+        <argsstring></argsstring>
+        <name>m_SceneGroup</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>The singular group of all scene objects. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" line="45" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1a89f8908ec77e6f5a4aca24f45e92af37" prot="private" static="no" mutable="no">
+        <type>GLint</type>
+        <definition>GLint Rubeus::GraphicComponents::RLayerComposition::m_TextureIDs[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>m_TextureIDs</name>
+        <briefdescription>
+<para>Texture IDs to be used by both UI and Scene shaders. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" line="48" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1abbd9bc577675917336fd07ab54e0580c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class REngine</definition>
+        <argsstring></argsstring>
+        <name>REngine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" line="50" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1a47b73a7af6d7068a536af4dfabda865d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RLayerComposition::RLayerComposition</definition>
+        <argsstring>(const char *pathToUIVertexShader, const char *pathToUIFragmentShader, const char *pathToSceneVertexShader, const char *pathToSceneFragmentShader)</argsstring>
+        <name>RLayerComposition</name>
+        <param>
+          <type>const char *</type>
+          <declname>pathToUIVertexShader</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pathToUIFragmentShader</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pathToSceneVertexShader</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pathToSceneFragmentShader</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pathtoUIVertexShader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to vertex shader for the UI layer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pathtoUIFragmentShader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to fragment shader for the UI layer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pathtoSceneUIShader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to vertex shader for the Scene layer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pathtoSceneFragmentShader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to fragment shader for the Scene layer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1a7d04a3e725ddf80fee09d416c46a56d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RLayerComposition::~RLayerComposition</definition>
+        <argsstring>()</argsstring>
+        <name>~RLayerComposition</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1a834eb1dac5c4ec6a8eca003b00557002" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RLayerComposition::add</definition>
+        <argsstring>(RGameObject *gameObject, bool UIElement=false)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref> *</type>
+          <declname>gameObject</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>UIElement</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Add a gameobject to the layers. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Select a layer with the second parameter</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the game object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>UIElement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the game object is a part of the UI. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" line="83" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1a5019759c35e5ce22be9357b64c6e1e89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RLayerComposition::draw</definition>
+        <argsstring>()</argsstring>
+        <name>draw</name>
+        <briefdescription>
+<para>Draw all layers to screen. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" line="90" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A wrapper around UI and Scene layers of the screen. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" line="26" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h" bodystart="25" bodyend="91"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1a834eb1dac5c4ec6a8eca003b00557002" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RLayerComposition</scope><name>add</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1a5019759c35e5ce22be9357b64c6e1e89" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RLayerComposition</scope><name>draw</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1a5342332069d952c4c0b081501b49fd0e" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RLayerComposition</scope><name>m_SceneGroup</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1a7412fef9d3484e6c645fdfe5a4e9c7e3" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RLayerComposition</scope><name>m_SceneLayer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1af126f60af381d37cd1f468cbab4baa61" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RLayerComposition</scope><name>m_SceneShader</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1a89f8908ec77e6f5a4aca24f45e92af37" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RLayerComposition</scope><name>m_TextureIDs</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1a0a0c4e76f870ef84b8bd278bedea0b31" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RLayerComposition</scope><name>m_UIGroup</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1aaf0593edcdb3df75ce957114d2e2496c" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RLayerComposition</scope><name>m_UILayer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1a8994f0079770954002243f533f39e7fc" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RLayerComposition</scope><name>m_UIShader</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1abbd9bc577675917336fd07ab54e0580c" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RLayerComposition</scope><name>REngine</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1a47b73a7af6d7068a536af4dfabda865d" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RLayerComposition</scope><name>RLayerComposition</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_composition_1a7d04a3e725ddf80fee09d416c46a56d3" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RLayerComposition</scope><name>~RLayerComposition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

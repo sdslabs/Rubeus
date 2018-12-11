@@ -1,0 +1,342 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_awerere_1_1_a_sphere_collider" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::Awerere::ASphereCollider</compoundname>
+    <basecompoundref refid="class_rubeus_1_1_awerere_1_1_a_collider" prot="public" virt="non-virtual">Rubeus::Awerere::ACollider</basecompoundref>
+    <includes refid="awerere__sphere__collider__object_8h" local="no">awerere_sphere_collider_object.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1a689d6d250637820cab7f9199a8497d91" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref> &amp;</type>
+        <definition>RML::Vector3D&amp; Rubeus::Awerere::ASphereCollider::m_Center</definition>
+        <argsstring></argsstring>
+        <name>m_Center</name>
+        <briefdescription>
+<para>Center of the sphere. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h" line="26" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1aaea7f7c1c2f3801d83fd804a96c8f662" prot="private" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float Rubeus::Awerere::ASphereCollider::m_Radius</definition>
+        <argsstring></argsstring>
+        <name>m_Radius</name>
+        <briefdescription>
+<para>Radius of the center. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h" line="29" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1a6ab5187436fc5f90d6d8cde18583c4a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::Awerere::ASphereCollider::ASphereCollider</definition>
+        <argsstring>(RML::Vector3D &amp;center, const float radius)</argsstring>
+        <name>ASphereCollider</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref> &amp;</type>
+          <declname>center</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>radius</declname>
+        </param>
+        <briefdescription>
+<para>Contructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>center</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Center of the sphere. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>radius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Radius of the sphere. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1a0eff60156adb65df970d6c432d2d44a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Rubeus::Awerere::ASphereCollider::selfUpdate</definition>
+        <argsstring>(float deltaX, float deltaY) override</argsstring>
+        <name>selfUpdate</name>
+        <reimplements refid="class_rubeus_1_1_awerere_1_1_a_collider_1ab0088d47ab69b3ecb0b0a020de8c33d6">selfUpdate</reimplements>
+        <param>
+          <type>float</type>
+          <declname>deltaX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaY</declname>
+        </param>
+        <briefdescription>
+<para>Update the center with the parameters passed in. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deltaX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The change in X position. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deltaY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The change in Y position. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1a028018d0d7c3a9537bf9e5fa9e98e7b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data" kindref="compound">ACollideData</ref></type>
+        <definition>ACollideData Rubeus::Awerere::ASphereCollider::tryIntersect</definition>
+        <argsstring>(ASphereCollider &amp;other) override</argsstring>
+        <name>tryIntersect</name>
+        <reimplements refid="class_rubeus_1_1_awerere_1_1_a_collider_1a5a6b4e7886914d394913e570ecbf1fb4">tryIntersect</reimplements>
+        <param>
+          <type><ref refid="class_rubeus_1_1_awerere_1_1_a_sphere_collider" kindref="compound">ASphereCollider</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Generate collision data with a sphere collider. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other sphere collider.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Collision data. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1a0c0c2bda9fd0ce31cbd2f25cd16a24c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data" kindref="compound">ACollideData</ref></type>
+        <definition>ACollideData Rubeus::Awerere::ASphereCollider::tryIntersect</definition>
+        <argsstring>(APlaneCollider &amp;plane) override</argsstring>
+        <name>tryIntersect</name>
+        <reimplements refid="class_rubeus_1_1_awerere_1_1_a_collider_1a18c5893ff435d68cb7495f9c9ddd6d48">tryIntersect</reimplements>
+        <param>
+          <type><ref refid="class_rubeus_1_1_awerere_1_1_a_plane_collider" kindref="compound">APlaneCollider</ref> &amp;</type>
+          <declname>plane</declname>
+        </param>
+        <briefdescription>
+<para>Query collision status with another plane type collider. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Requires a 2D plane collider (straight line)</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The plane collider this collider is being queried with.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Collision data. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1ab6fa12004b816c083a3b9e74924d4866" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data" kindref="compound">ACollideData</ref></type>
+        <definition>ACollideData Rubeus::Awerere::ASphereCollider::tryIntersect</definition>
+        <argsstring>(ABoxCollider &amp;box) override</argsstring>
+        <name>tryIntersect</name>
+        <reimplements refid="class_rubeus_1_1_awerere_1_1_a_collider_1ac9295068ab11ba7b11e7d18f453298bc">tryIntersect</reimplements>
+        <param>
+          <type><ref refid="class_rubeus_1_1_awerere_1_1_a_box_collider" kindref="compound">ABoxCollider</ref> &amp;</type>
+          <declname>box</declname>
+        </param>
+        <briefdescription>
+<para>Generate collision data with a box collider. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>box</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The box collider.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Collision data. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1a9c2cd6372e6abfd841f08047bbe061a3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref> &amp;</type>
+        <definition>const RML::Vector3D &amp; Rubeus::Awerere::ASphereCollider::getCenter</definition>
+        <argsstring>() const</argsstring>
+        <name>getCenter</name>
+        <briefdescription>
+<para>Returns the center of the sphere collider. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Center of the sphere. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h" line="93" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1a8815925a72b1b885669b818480c6059b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const float &amp;</type>
+        <definition>const float &amp; Rubeus::Awerere::ASphereCollider::getRadius</definition>
+        <argsstring>() const</argsstring>
+        <name>getRadius</name>
+        <briefdescription>
+<para>Returns the radius of the sphere collider. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Radius of the sphere. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h" line="102" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h" bodystart="102" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A Sphere Collider for handling spherical collisions. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="60">
+        <label>Rubeus::Awerere::ACollider</label>
+        <link refid="class_rubeus_1_1_awerere_1_1_a_collider"/>
+      </node>
+      <node id="59">
+        <label>Rubeus::Awerere::ASphereCollider</label>
+        <link refid="class_rubeus_1_1_awerere_1_1_a_sphere_collider"/>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="62">
+        <label>Rubeus::Awerere::ACollider</label>
+        <link refid="class_rubeus_1_1_awerere_1_1_a_collider"/>
+        <childnode refid="63" relation="usage">
+          <edgelabel>m_Sprite</edgelabel>
+        </childnode>
+        <childnode refid="69" relation="usage">
+          <edgelabel>m_PhysicsMaterial</edgelabel>
+        </childnode>
+        <childnode refid="67" relation="usage">
+          <edgelabel>m_Force</edgelabel>
+          <edgelabel>m_Momentum</edgelabel>
+        </childnode>
+        <childnode refid="68" relation="usage">
+          <edgelabel>m_Position</edgelabel>
+        </childnode>
+      </node>
+      <node id="65">
+        <label>RML::Vector4D</label>
+        <link refid="struct_r_m_l_1_1_vector4_d"/>
+      </node>
+      <node id="63">
+        <label>Rubeus::GraphicComponents::RSprite</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_sprite"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>RML::Vector3D</label>
+        <link refid="struct_r_m_l_1_1_vector3_d"/>
+      </node>
+      <node id="66">
+        <label>Rubeus::GraphicComponents::RTexture</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_texture"/>
+      </node>
+      <node id="67">
+        <label>RML::Vector2D</label>
+        <link refid="struct_r_m_l_1_1_vector2_d"/>
+      </node>
+      <node id="61">
+        <label>Rubeus::Awerere::ASphereCollider</label>
+        <link refid="class_rubeus_1_1_awerere_1_1_a_sphere_collider"/>
+        <childnode refid="62" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>Rubeus::GraphicComponents::RRenderableObject</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
+        <childnode refid="65" relation="usage">
+          <edgelabel>m_Color</edgelabel>
+        </childnode>
+        <childnode refid="66" relation="usage">
+          <edgelabel>m_Texture</edgelabel>
+        </childnode>
+        <childnode refid="67" relation="usage">
+          <edgelabel>m_Size</edgelabel>
+        </childnode>
+        <childnode refid="68" relation="usage">
+          <edgelabel>m_Position</edgelabel>
+        </childnode>
+      </node>
+      <node id="69">
+        <label>Rubeus::Awerere::APhysicsMaterial</label>
+        <link refid="class_rubeus_1_1_awerere_1_1_a_physics_material"/>
+        <childnode refid="69" relation="usage">
+          <edgelabel>DefaultMaterial</edgelabel>
+        </childnode>
+        <childnode refid="67" relation="usage">
+          <edgelabel>m_Gravity</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h" line="23" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h" bodystart="22" bodyend="103"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a0584d41544674acb77f11cfe038fd1ea" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>ACollider</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1af4862ef42d5f94e16ff3602219b19e83" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>ACollider</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1af4393723cdffa3620d8e3deb3e3fe92f" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>addForce</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a0f91e5056fe7e045865ac60149b83498" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>addImpulse</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1ac65dfdf1c393552fe031af59af2a76cf" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>addMomentum</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1a6ab5187436fc5f90d6d8cde18583c4a8" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>ASphereCollider</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1a9c2cd6372e6abfd841f08047bbe061a3" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>getCenter</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1af7297ef1a5bcc7a82a8c8110a707d37a" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>getMomentum</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1add6aa6d6bf8e9c47bb5f9262c048d3e3" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>getPosition</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1a8815925a72b1b885669b818480c6059b" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>getRadius</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a8d4f849d8d22325ac84e8f9d3ecaa74b" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>getType</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1a689d6d250637820cab7f9199a8497d91" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>m_Center</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a3aea1286d1c31ff389717b07edfe391c" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>m_Force</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a55dd70e134b80d3e64dc3ee5df5388fc" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>m_Momentum</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1abb9155531aa52189943aae04d7a506c2" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>m_PhysicsMaterial</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a86402823b299a7211ab6d2d11c2e512f" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>m_Position</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1aaea7f7c1c2f3801d83fd804a96c8f662" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>m_Radius</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a929eacdcc3a29b8b598666085560b442" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>m_Sprite</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1afac145eb6d70d70e822923b92f1f56d6" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>m_Type</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1a0eff60156adb65df970d6c432d2d44a8" prot="public" virt="virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>selfUpdate</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1afc3bb37605b7032fa75164eea443a199" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>setMaterial</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a0293d08639bec4bdd80700da27962855" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>setMomentum</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1aebc1dbcdc45a252b38415d3bf23be6b3" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>setPosition</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1a028018d0d7c3a9537bf9e5fa9e98e7b8" prot="public" virt="virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>tryIntersect</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1a0c0c2bda9fd0ce31cbd2f25cd16a24c3" prot="public" virt="virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>tryIntersect</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1ab6fa12004b816c083a3b9e74924d4866" prot="public" virt="virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>tryIntersect</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a0c1bf6dacc6f411a4073843d61458c7f" prot="public" virt="non-virtual" ambiguityscope="Rubeus::Awerere::ACollider::"><scope>Rubeus::Awerere::ASphereCollider</scope><name>tryIntersect</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a5f81c81e2a0675319f56a73e30a34e92" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>update</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a10873a3ab1cc36d56b4bf72a9a4c82f4" prot="public" virt="virtual"><scope>Rubeus::Awerere::ASphereCollider</scope><name>~ACollider</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

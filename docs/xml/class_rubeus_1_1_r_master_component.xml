@@ -2,10 +2,13 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
   <compounddef id="class_rubeus_1_1_r_master_component" kind="class" language="C++" prot="public">
     <compoundname>Rubeus::RMasterComponent</compoundname>
-    <derivedcompoundref refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager" prot="public" virt="non-virtual">Rubeus::AudioComponents::RAudioManager</derivedcompoundref>
+    <derivedcompoundref refid="class_rubeus_1_1_audio_components_1_1_r_symphony" prot="public" virt="non-virtual">Rubeus::AudioComponents::RSymphony</derivedcompoundref>
     <derivedcompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RRendererComponent</derivedcompoundref>
     <derivedcompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RShaderComponent</derivedcompoundref>
     <derivedcompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RWindowComponent</derivedcompoundref>
+    <derivedcompoundref refid="class_rubeus_1_1_r_engine" prot="public" virt="non-virtual">Rubeus::REngine</derivedcompoundref>
+    <derivedcompoundref refid="class_rubeus_1_1_r_game_object" prot="public" virt="non-virtual">Rubeus::RGameObject</derivedcompoundref>
+    <derivedcompoundref refid="class_rubeus_1_1_r_input_manager" prot="public" virt="non-virtual">Rubeus::RInputManager</derivedcompoundref>
     <derivedcompoundref refid="class_rubeus_1_1_utility_components_1_1_r_loader_component" prot="public" virt="non-virtual">Rubeus::UtilityComponents::RLoaderComponent</derivedcompoundref>
     <derivedcompoundref refid="class_rubeus_1_1_utility_components_1_1_r_timer" prot="public" virt="non-virtual">Rubeus::UtilityComponents::RTimer</derivedcompoundref>
       <sectiondef kind="protected-attrib">
@@ -20,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="30" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" bodystart="30" bodyend="-1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="31" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-attrib">
@@ -35,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="41" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" bodystart="41" bodyend="-1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="35" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_master_component_1aa8456741bb2402650fc8726cd6768803" prot="public" static="yes" mutable="no">
         <type>unsigned int</type>
@@ -48,35 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="44" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" bodystart="44" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="class_rubeus_1_1_r_master_component_1a613bda5fb5704c0131f53610c99bd7fb" prot="public" static="yes" mutable="no">
-        <type>std::unordered_map&lt; unsigned int, std::unique_ptr&lt; <ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref> &gt; &gt;</type>
-        <definition>std::unordered_map&lt;unsigned int, std::unique_ptr&lt;RMasterComponent&gt; &gt; Rubeus::RMasterComponent::m_ComponentMap</definition>
-        <argsstring></argsstring>
-        <name>m_ComponentMap</name>
-        <briefdescription>
-<para>The component table. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="47" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" bodystart="47" bodyend="-1"/>
-      </memberdef>
-      </sectiondef>
-      <sectiondef kind="protected-func">
-      <memberdef kind="function" id="class_rubeus_1_1_r_master_component_1a6be44507ef5a2ffb653016729661b416" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Rubeus::RMasterComponent::add</definition>
-        <argsstring>()</argsstring>
-        <name>add</name>
-        <briefdescription>
-<para>Adds this component to component table. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="37" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="38" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -91,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="54" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="45" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_master_component_1a3ee1666371bfafadd5f3adfa67ac874c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -104,20 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="61" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="class_rubeus_1_1_r_master_component_1a100b8cb3b0bfb25c090d2c9e7777a641" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Rubeus::RMasterComponent::remove</definition>
-        <argsstring>()</argsstring>
-        <name>remove</name>
-        <briefdescription>
-<para>Removes this component from component table. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="68" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="52" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_master_component_1ada4b85021d96ac2c2153e613d5f14097" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -130,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="77" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="61" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_master_component_1ad3c9003c4bc64661ed9ae5961c8cf3fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
@@ -144,7 +106,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="86" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" bodystart="86" bodyend="86"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="70" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" bodystart="70" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_master_component_1a129a5b04db723423b40cfd4780adcd35" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -152,8 +114,11 @@
         <argsstring>(Message *msg)</argsstring>
         <name>onMessage</name>
         <reimplementedby refid="class_rubeus_1_1_utility_components_1_1_r_loader_component_1a2ca4414ddba0b63415a14b2844d8a5a6">onMessage</reimplementedby>
+        <reimplementedby refid="class_rubeus_1_1_r_game_object_1aa066422f65deb25b9d75dac94f46ca50">onMessage</reimplementedby>
+        <reimplementedby refid="class_rubeus_1_1_r_engine_1a6e8d3d3fa2558e64a2ed2f3aea06f59b">onMessage</reimplementedby>
         <reimplementedby refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a55b12b3208217709e571d6e7811de756">onMessage</reimplementedby>
-        <reimplementedby refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager_1a64d2cd1db1da5762413b34711f7c1185">onMessage</reimplementedby>
+        <reimplementedby refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a7878d51e9364d7ae2268a9d11b0a8a31">onMessage</reimplementedby>
+        <reimplementedby refid="class_rubeus_1_1_r_input_manager_1a5439f24e8e7324484a2ba50a7d9764ad">onMessage</reimplementedby>
         <param>
           <type><ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref> *</type>
           <declname>msg</declname>
@@ -173,7 +138,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="105" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="89" column="1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -197,7 +162,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="95" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="79" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -205,91 +170,112 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="59">
+      <node id="184">
         <label>Rubeus::GraphicComponents::RRendererComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component"/>
-        <childnode refid="57" relation="public-inheritance">
+        <childnode refid="182" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="60">
+      <node id="183">
+        <label>Rubeus::AudioComponents::RSymphony</label>
+        <link refid="class_rubeus_1_1_audio_components_1_1_r_symphony"/>
+        <childnode refid="182" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="185">
         <label>Rubeus::GraphicComponents::RGuerrillaRendererComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component"/>
-        <childnode refid="59" relation="public-inheritance">
+        <childnode refid="184" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="64">
+      <node id="192">
+        <label>Rubeus::RInputManager</label>
+        <link refid="class_rubeus_1_1_r_input_manager"/>
+        <childnode refid="182" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="189">
+        <label>Rubeus::REngine</label>
+        <link refid="class_rubeus_1_1_r_engine"/>
+        <childnode refid="182" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="193">
         <label>Rubeus::UtilityComponents::RLoaderComponent</label>
         <link refid="class_rubeus_1_1_utility_components_1_1_r_loader_component"/>
-        <childnode refid="57" relation="public-inheritance">
+        <childnode refid="182" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="65">
+      <node id="194">
         <label>Rubeus::UtilityComponents::RTimer</label>
         <link refid="class_rubeus_1_1_utility_components_1_1_r_timer"/>
-        <childnode refid="57" relation="public-inheritance">
+        <childnode refid="182" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="63">
+      <node id="188">
         <label>Rubeus::GraphicComponents::RWindowComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_window_component"/>
-        <childnode refid="57" relation="public-inheritance">
+        <childnode refid="182" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="58">
-        <label>Rubeus::AudioComponents::RAudioManager</label>
-        <link refid="class_rubeus_1_1_audio_components_1_1_r_audio_manager"/>
-        <childnode refid="57" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="62">
+      <node id="187">
         <label>Rubeus::GraphicComponents::RShaderComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component"/>
-        <childnode refid="57" relation="public-inheritance">
+        <childnode refid="182" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="61">
+      <node id="190">
+        <label>Rubeus::RGameObject</label>
+        <link refid="class_rubeus_1_1_r_game_object"/>
+        <childnode refid="182" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="186">
         <label>Rubeus::GraphicComponents::RSimpleRendererComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_simple_renderer_component"/>
-        <childnode refid="59" relation="public-inheritance">
+        <childnode refid="184" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="57">
+      <node id="182">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
+      </node>
+      <node id="191">
+        <label>Rubeus::GraphicComponents::RGroup</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_group"/>
+        <childnode refid="190" relation="public-inheritance">
+        </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="68">
+      <node id="197">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="67">
+      <node id="196">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="68" relation="usage">
+        <childnode refid="197" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="66">
+      <node id="195">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="67" relation="usage">
+        <childnode refid="196" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="27" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" bodystart="26" bodyend="108"/>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" line="28" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/master_component.h" bodystart="27" bodyend="92"/>
     <listofallmembers>
-      <member refid="class_rubeus_1_1_r_master_component_1a6be44507ef5a2ffb653016729661b416" prot="protected" virt="non-virtual"><scope>Rubeus::RMasterComponent</scope><name>add</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1aa8456741bb2402650fc8726cd6768803" prot="public" virt="non-virtual"><scope>Rubeus::RMasterComponent</scope><name>componentsInitialised</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1ada4b85021d96ac2c2153e613d5f14097" prot="public" virt="non-virtual"><scope>Rubeus::RMasterComponent</scope><name>getComponentID</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1ad3c9003c4bc64661ed9ae5961c8cf3fa" prot="public" virt="non-virtual"><scope>Rubeus::RMasterComponent</scope><name>getName</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1a838bceba7935bb3b11a5b69def0f0fc0" prot="protected" virt="non-virtual"><scope>Rubeus::RMasterComponent</scope><name>m_ComponentID</name></member>
-      <member refid="class_rubeus_1_1_r_master_component_1a613bda5fb5704c0131f53610c99bd7fb" prot="public" virt="non-virtual"><scope>Rubeus::RMasterComponent</scope><name>m_ComponentMap</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1aedb604c4ddfb8d2ba72ff493a74b7025" prot="public" virt="non-virtual"><scope>Rubeus::RMasterComponent</scope><name>m_MessageSystem</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1a129a5b04db723423b40cfd4780adcd35" prot="public" virt="virtual"><scope>Rubeus::RMasterComponent</scope><name>onMessage</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1a15e635fbf472c83463147b4f277eb492" prot="public" virt="non-virtual"><scope>Rubeus::RMasterComponent</scope><name>operator&lt;&lt;</name></member>
-      <member refid="class_rubeus_1_1_r_master_component_1a100b8cb3b0bfb25c090d2c9e7777a641" prot="public" virt="non-virtual"><scope>Rubeus::RMasterComponent</scope><name>remove</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1aecd982f5c7361dbb23bcc8ac5ec6481c" prot="public" virt="non-virtual"><scope>Rubeus::RMasterComponent</scope><name>RMasterComponent</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1a3ee1666371bfafadd5f3adfa67ac874c" prot="public" virt="virtual"><scope>Rubeus::RMasterComponent</scope><name>~RMasterComponent</name></member>
     </listofallmembers>

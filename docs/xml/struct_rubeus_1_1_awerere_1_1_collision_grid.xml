@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="struct_rubeus_1_1_awerere_1_1_collision_grid" kind="struct" language="C++" prot="public">
+    <compoundname>Rubeus::Awerere::CollisionGrid</compoundname>
+    <includes refid="awerere__collision__grid_8h" local="no">awerere_collision_grid.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_rubeus_1_1_awerere_1_1_collision_grid_1abbec19ab9c5b816307686e574a34131d" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float Rubeus::Awerere::CollisionGrid::m_GridHeight</definition>
+        <argsstring></argsstring>
+        <name>m_GridHeight</name>
+        <briefdescription>
+<para>Height of grid. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_grid.h" line="21" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_grid.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_rubeus_1_1_awerere_1_1_collision_grid_1a1bac782a3ab188917ae4ce8cdaa6eab8" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float Rubeus::Awerere::CollisionGrid::m_GridWidth</definition>
+        <argsstring></argsstring>
+        <name>m_GridWidth</name>
+        <briefdescription>
+<para>Height of grid. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_grid.h" line="24" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_grid.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_rubeus_1_1_awerere_1_1_collision_grid_1a76bd8c836316edc681f93f3455a5518f" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float Rubeus::Awerere::CollisionGrid::m_CellHeight</definition>
+        <argsstring></argsstring>
+        <name>m_CellHeight</name>
+        <briefdescription>
+<para>Height of cell. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_grid.h" line="27" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_grid.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_rubeus_1_1_awerere_1_1_collision_grid_1ac1e69f11436fdcfaa795c38d2e752ce7" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float Rubeus::Awerere::CollisionGrid::m_CellWidth</definition>
+        <argsstring></argsstring>
+        <name>m_CellWidth</name>
+        <briefdescription>
+<para>Width of cell. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_grid.h" line="30" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_grid.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_rubeus_1_1_awerere_1_1_collision_grid_1a454f84c3f50426db1625317827fa2d68" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float Rubeus::Awerere::CollisionGrid::m_XCount</definition>
+        <argsstring></argsstring>
+        <name>m_XCount</name>
+        <briefdescription>
+<para>Count of columns. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_grid.h" line="33" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_grid.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_rubeus_1_1_awerere_1_1_collision_grid_1a532328bcbd5cbf510cf793798c0ced17" prot="public" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float Rubeus::Awerere::CollisionGrid::m_YCount</definition>
+        <argsstring></argsstring>
+        <name>m_YCount</name>
+        <briefdescription>
+<para>Count of rows. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_grid.h" line="36" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_grid.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_rubeus_1_1_awerere_1_1_collision_grid_1a56458f64c66009d73c2a729a64cc1e7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::Awerere::CollisionGrid::CollisionGrid</definition>
+        <argsstring>(const float &amp;gridHeight, const float &amp;gridWidth, const float &amp;cellHeight, const float &amp;cellWidth)</argsstring>
+        <name>CollisionGrid</name>
+        <param>
+          <type>const float &amp;</type>
+          <declname>gridHeight</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>gridWidth</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>cellHeight</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>cellWidth</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gridHeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Height of grid. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gridWidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Width of grid. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cellHeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Height of cell. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cellWidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Width of cell. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_grid.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_rubeus_1_1_awerere_1_1_collision_grid_1a661a8700f7267e82e7f91b556553acba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::Awerere::CollisionGrid::~CollisionGrid</definition>
+        <argsstring>()</argsstring>
+        <name>~CollisionGrid</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_grid.h" line="55" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Grid of cells arranged in a 2D matrix fashion. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_grid.h" line="19" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collision_grid.h" bodystart="18" bodyend="56"/>
+    <listofallmembers>
+      <member refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a56458f64c66009d73c2a729a64cc1e7c" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::CollisionGrid</scope><name>CollisionGrid</name></member>
+      <member refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a76bd8c836316edc681f93f3455a5518f" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::CollisionGrid</scope><name>m_CellHeight</name></member>
+      <member refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1ac1e69f11436fdcfaa795c38d2e752ce7" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::CollisionGrid</scope><name>m_CellWidth</name></member>
+      <member refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1abbec19ab9c5b816307686e574a34131d" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::CollisionGrid</scope><name>m_GridHeight</name></member>
+      <member refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a1bac782a3ab188917ae4ce8cdaa6eab8" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::CollisionGrid</scope><name>m_GridWidth</name></member>
+      <member refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a454f84c3f50426db1625317827fa2d68" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::CollisionGrid</scope><name>m_XCount</name></member>
+      <member refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a532328bcbd5cbf510cf793798c0ced17" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::CollisionGrid</scope><name>m_YCount</name></member>
+      <member refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a661a8700f7267e82e7f91b556553acba" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::CollisionGrid</scope><name>~CollisionGrid</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

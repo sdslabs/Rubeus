@@ -1,0 +1,573 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_r_input_manager" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::RInputManager</compoundname>
+    <basecompoundref refid="class_rubeus_1_1_r_master_component" prot="public" virt="non-virtual">Rubeus::RMasterComponent</basecompoundref>
+    <includes refid="input__manager_8h" local="no">input_manager.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_r_input_manager_1a039c5e90468511ec42eff10d246099d6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Rubeus::RInputManager::m_IsEnabled</definition>
+        <argsstring></argsstring>
+        <name>m_IsEnabled</name>
+        <briefdescription>
+<para>The main switch of the component. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="87" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_r_input_manager_1ad6957c435bd589d850911aeaead58309" prot="private" static="no" mutable="no">
+        <type>const <ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" kindref="compound">GraphicComponents::RWindowComponent</ref> &amp;</type>
+        <definition>const GraphicComponents::RWindowComponent&amp; Rubeus::RInputManager::m_Window</definition>
+        <argsstring></argsstring>
+        <name>m_Window</name>
+        <briefdescription>
+<para>A ref. to a Rubeus Window object which is currently in use. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="90" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_r_input_manager_1a0f72a9459e1fcd1c7608cc04c1f44a92" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::vector&lt; <ref refid="keys_8h_1ac846721ec08ebc254d389a992230f305" kindref="member">EKeyboardKeys</ref> &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::vector&lt;EKeyboardKeys&gt; &gt; Rubeus::RInputManager::m_KeybindingsToKeys</definition>
+        <argsstring></argsstring>
+        <name>m_KeybindingsToKeys</name>
+        <briefdescription>
+<para>Mapping between Keybinding names to Key names. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="93" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_r_input_manager_1ad6e884817ef9ec8938b0ebf9cd80681d" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; <ref refid="keys_8h_1ac846721ec08ebc254d389a992230f305" kindref="member">EKeyboardKeys</ref>, std::string &gt;</type>
+        <definition>std::unordered_map&lt;EKeyboardKeys, std::string&gt; Rubeus::RInputManager::m_KeysToKeybindings</definition>
+        <argsstring></argsstring>
+        <name>m_KeysToKeybindings</name>
+        <briefdescription>
+<para>Mapping between Key names and Keybinding names. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="96" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_r_input_manager_1a7506e8ac2eb3e20a24a355126ecc097d" prot="public" static="yes" mutable="no">
+        <type>std::unordered_map&lt; int, bool &gt;</type>
+        <definition>std::unordered_map&lt;int, bool&gt; Rubeus::RInputManager::KeyMap</definition>
+        <argsstring></argsstring>
+        <name>KeyMap</name>
+        <briefdescription>
+<para>Mapping of all keys and the bool value of whether they are being pressed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="119" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_r_input_manager_1ae6b63f5ed8aa8d58526a912349038f05" prot="public" static="yes" mutable="no">
+        <type>std::unordered_map&lt; int, bool &gt;</type>
+        <definition>std::unordered_map&lt;int, bool&gt; Rubeus::RInputManager::MouseButtonMap</definition>
+        <argsstring></argsstring>
+        <name>MouseButtonMap</name>
+        <briefdescription>
+<para>Mapping of all mouse buttons and the bool value of whether they are being pressed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="122" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_r_input_manager_1a85fe446c1eea7a58362f59dd4f5c4776" prot="public" static="yes" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref></type>
+        <definition>RML::Vector2D Rubeus::RInputManager::MousePosition</definition>
+        <argsstring></argsstring>
+        <name>MousePosition</name>
+        <briefdescription>
+<para>Mouse position of the current active cursor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="125" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="125" bodyend="-1"/>
+        <referencedby refid="class_rubeus_1_1_r_input_manager_1a0e3b50d7deb6568ba309509503ec7d3b" compoundref="input__manager_8h" startline="228" endline="228">getMousePosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_r_input_manager_1a696b2437a850d2f2089766b0d0ad46e8" prot="public" static="yes" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref></type>
+        <definition>RML::Vector2D Rubeus::RInputManager::MouseScroll</definition>
+        <argsstring></argsstring>
+        <name>MouseScroll</name>
+        <briefdescription>
+<para>Scroll value being inputted to input manager. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="128" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="128" bodyend="-1"/>
+        <referencedby refid="class_rubeus_1_1_r_input_manager_1a8680633194478de3b2b3e47a85d221b2" compoundref="input__manager_8h" startline="237" endline="237">getMouseScroll</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1a80063e2eccd871837f7b16fac9b2cfdf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::RInputManager::addKeyBinding</definition>
+        <argsstring>(const std::string &amp;keyBinding)</argsstring>
+        <name>addKeyBinding</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>keyBinding</declname>
+        </param>
+        <briefdescription>
+<para>Add a keybinding to track. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Beware of case-sensitivity and name collisions.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyBinding</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the keybinding. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="106" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1a57f226e272e6df85624cbe6879e685d3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::RInputManager::addKeysToKeyMap</definition>
+        <argsstring>()</argsstring>
+        <name>addKeysToKeyMap</name>
+        <briefdescription>
+<para>Add an entry to track all available keys. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Internal class helper use only </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="114" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1af61b188e07c8e9aa70c0fd185e4242fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::RInputManager::RInputManager</definition>
+        <argsstring>(const GraphicComponents::RWindowComponent &amp;window)</argsstring>
+        <name>RInputManager</name>
+        <param>
+          <type>const <ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" kindref="compound">GraphicComponents::RWindowComponent</ref> &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The window object in current use. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="137" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1aae4dcfbc07a13854788e9b22f4bbef17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::RInputManager::~RInputManager</definition>
+        <argsstring>()</argsstring>
+        <name>~RInputManager</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="144" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1afbfc89b14cd629acb8860f63ea8fde33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::RInputManager::addKeyToKeyBinding</definition>
+        <argsstring>(const std::string &amp;keyBinding, const EKeyboardKeys &amp;keyName)</argsstring>
+        <name>addKeyToKeyBinding</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>keyBinding</declname>
+        </param>
+        <param>
+          <type>const <ref refid="keys_8h_1ac846721ec08ebc254d389a992230f305" kindref="member">EKeyboardKeys</ref> &amp;</type>
+          <declname>keyName</declname>
+        </param>
+        <briefdescription>
+<para>Add a key to a keybinding. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Beware of case-sensitivity</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyBinding</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the keybinding. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the key. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="155" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1a9e8b9f9a738d2ff367b289ffcbde9d32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::RInputManager::addKeysToKeyBinding</definition>
+        <argsstring>(const std::string &amp;keyBinding, const std::vector&lt; EKeyboardKeys &gt; &amp;keyNames)</argsstring>
+        <name>addKeysToKeyBinding</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>keyBinding</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="keys_8h_1ac846721ec08ebc254d389a992230f305" kindref="member">EKeyboardKeys</ref> &gt; &amp;</type>
+          <declname>keyNames</declname>
+        </param>
+        <briefdescription>
+<para>Add an array of keys to a keybinding. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Beware of case-sensitivity</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyBinding</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the keybinding. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keyNames</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of names of the keys. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="166" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1aeb7117ef5b3b07cdfe8c356dd5aeca6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::RInputManager::activate</definition>
+        <argsstring>(const std::string &amp;keyBinding)</argsstring>
+        <name>activate</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>keyBinding</declname>
+        </param>
+        <briefdescription>
+<para>Activate a keybinding. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>All keybindings are activated by default on startup</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyBinding</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The keybinding to be activated. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="176" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1a2cc2fd66220fe8ca02f5321c524eb13b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::RInputManager::deactivate</definition>
+        <argsstring>(const std::string &amp;keyBinding)</argsstring>
+        <name>deactivate</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>keyBinding</declname>
+        </param>
+        <briefdescription>
+<para>Deactivate a keybinding. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>All keybindings are activated by default on startup</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyBinding</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The keybinding to be deactivated. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="186" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1ac5a50fe841938b99b67f29113be7eba4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Rubeus::RInputManager::isKeyBindingPressed</definition>
+        <argsstring>(const std::string &amp;keyBinding)</argsstring>
+        <name>isKeyBindingPressed</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>keyBinding</declname>
+        </param>
+        <briefdescription>
+<para>Check if a key corresponding to a keybinding is being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyBinding</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The keybinding to be checked for use.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Whether any of the keys linked with the keybinding are being pressed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="197" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1a437e6b620a3121a02cf775e25e2eea26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Rubeus::RInputManager::isKeyPressed</definition>
+        <argsstring>(const EKeyboardKeys &amp;keyName)</argsstring>
+        <name>isKeyPressed</name>
+        <param>
+          <type>const <ref refid="keys_8h_1ac846721ec08ebc254d389a992230f305" kindref="member">EKeyboardKeys</ref> &amp;</type>
+          <declname>keyName</declname>
+        </param>
+        <briefdescription>
+<para>Check whether a key is being pressed. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The key to be checked for presses.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Whether the key is being pressed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="208" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1aaa241d9afe13dcef04a22423c78f3a30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Rubeus::RInputManager::isMouseButtonPressed</definition>
+        <argsstring>(const EMouseButtons &amp;buttonName)</argsstring>
+        <name>isMouseButtonPressed</name>
+        <param>
+          <type>const <ref refid="keys_8h_1ac04ea80a8fa238524f8582b0a66efdce" kindref="member">EMouseButtons</ref> &amp;</type>
+          <declname>buttonName</declname>
+        </param>
+        <briefdescription>
+<para>Check whether a mouse button is being pressed. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buttonName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The button to be checked for presses.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Whether the mouse button is being pressed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="219" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1a0e3b50d7deb6568ba309509503ec7d3b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &amp;</type>
+        <definition>const RML::Vector2D &amp; Rubeus::RInputManager::getMousePosition</definition>
+        <argsstring>() const</argsstring>
+        <name>getMousePosition</name>
+        <briefdescription>
+<para>Get the current mouse position. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Vector2D of the mouse position. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="228" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="228" bodyend="228"/>
+        <references refid="class_rubeus_1_1_r_input_manager_1a85fe446c1eea7a58362f59dd4f5c4776" compoundref="input__manager_8h" startline="125">MousePosition</references>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1a8680633194478de3b2b3e47a85d221b2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &amp;</type>
+        <definition>const RML::Vector2D &amp; Rubeus::RInputManager::getMouseScroll</definition>
+        <argsstring>() const</argsstring>
+        <name>getMouseScroll</name>
+        <briefdescription>
+<para>Get the current mouse scroll values. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Vector2D of the mouse scroll values. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="237" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="237" bodyend="237"/>
+        <references refid="class_rubeus_1_1_r_input_manager_1a696b2437a850d2f2089766b0d0ad46e8" compoundref="input__manager_8h" startline="128">MouseScroll</references>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1ae20636f7b9df7cb3f5c0cfcde2fa2c4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::RInputManager::enable</definition>
+        <argsstring>()</argsstring>
+        <name>enable</name>
+        <briefdescription>
+<para>Enable the Input Manager. All input queries will function normally. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Enabled by default on startup </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="245" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="245" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1a52c9396b8a5ee8cc4df2904d246709db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::RInputManager::disable</definition>
+        <argsstring>()</argsstring>
+        <name>disable</name>
+        <briefdescription>
+<para>Disable the Input Manager. All input queries will return false. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Input Manager is enabled by default on startup </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="253" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="253" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1a5439f24e8e7324484a2ba50a7d9764ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Rubeus::RInputManager::onMessage</definition>
+        <argsstring>(Message *msg) override</argsstring>
+        <name>onMessage</name>
+        <reimplements refid="class_rubeus_1_1_r_master_component_1a129a5b04db723423b40cfd4780adcd35">onMessage</reimplements>
+        <param>
+          <type><ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref> *</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Handles messages sent by <ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref> system asynchronously. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Do not call manually</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message sent across. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="263" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The Input manager. Manages key strokes, mouse buttons, and cursor/scroll inputs. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="154">
+        <label>Rubeus::RInputManager</label>
+        <link refid="class_rubeus_1_1_r_input_manager"/>
+        <childnode refid="155" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="155">
+        <label>Rubeus::RMasterComponent</label>
+        <link refid="class_rubeus_1_1_r_master_component"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="156">
+        <label>Rubeus::RInputManager</label>
+        <link refid="class_rubeus_1_1_r_input_manager"/>
+        <childnode refid="157" relation="public-inheritance">
+        </childnode>
+        <childnode refid="160" relation="usage">
+          <edgelabel>MouseScroll</edgelabel>
+          <edgelabel>MousePosition</edgelabel>
+        </childnode>
+      </node>
+      <node id="160">
+        <label>RML::Vector2D</label>
+        <link refid="struct_r_m_l_1_1_vector2_d"/>
+      </node>
+      <node id="159">
+        <label>Rubeus::RMessageBus</label>
+        <link refid="class_rubeus_1_1_r_message_bus"/>
+      </node>
+      <node id="158">
+        <label>Rubeus::RMessageSystem</label>
+        <link refid="class_rubeus_1_1_r_message_system"/>
+        <childnode refid="159" relation="usage">
+          <edgelabel>m_MessageBus</edgelabel>
+        </childnode>
+      </node>
+      <node id="157">
+        <label>Rubeus::RMasterComponent</label>
+        <link refid="class_rubeus_1_1_r_master_component"/>
+        <childnode refid="158" relation="usage">
+          <edgelabel>m_MessageSystem</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="84" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="83" bodyend="266"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_r_input_manager_1aeb7117ef5b3b07cdfe8c356dd5aeca6d" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>activate</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1a80063e2eccd871837f7b16fac9b2cfdf" prot="private" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>addKeyBinding</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1a9e8b9f9a738d2ff367b289ffcbde9d32" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>addKeysToKeyBinding</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1a57f226e272e6df85624cbe6879e685d3" prot="private" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>addKeysToKeyMap</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1afbfc89b14cd629acb8860f63ea8fde33" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>addKeyToKeyBinding</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1aa8456741bb2402650fc8726cd6768803" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>componentsInitialised</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1a2cc2fd66220fe8ca02f5321c524eb13b" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>deactivate</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1a52c9396b8a5ee8cc4df2904d246709db" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>disable</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1ae20636f7b9df7cb3f5c0cfcde2fa2c4d" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>enable</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1ada4b85021d96ac2c2153e613d5f14097" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>getComponentID</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1a0e3b50d7deb6568ba309509503ec7d3b" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>getMousePosition</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1a8680633194478de3b2b3e47a85d221b2" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>getMouseScroll</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1ad3c9003c4bc64661ed9ae5961c8cf3fa" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>getName</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1ac5a50fe841938b99b67f29113be7eba4" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>isKeyBindingPressed</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1a437e6b620a3121a02cf775e25e2eea26" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>isKeyPressed</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1aaa241d9afe13dcef04a22423c78f3a30" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>isMouseButtonPressed</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1a7506e8ac2eb3e20a24a355126ecc097d" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>KeyMap</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1a838bceba7935bb3b11a5b69def0f0fc0" prot="protected" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>m_ComponentID</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1a039c5e90468511ec42eff10d246099d6" prot="private" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>m_IsEnabled</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1a0f72a9459e1fcd1c7608cc04c1f44a92" prot="private" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>m_KeybindingsToKeys</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1ad6e884817ef9ec8938b0ebf9cd80681d" prot="private" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>m_KeysToKeybindings</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1aedb604c4ddfb8d2ba72ff493a74b7025" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>m_MessageSystem</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1ad6957c435bd589d850911aeaead58309" prot="private" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>m_Window</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1ae6b63f5ed8aa8d58526a912349038f05" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>MouseButtonMap</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1a85fe446c1eea7a58362f59dd4f5c4776" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>MousePosition</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1a696b2437a850d2f2089766b0d0ad46e8" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>MouseScroll</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1a5439f24e8e7324484a2ba50a7d9764ad" prot="public" virt="virtual"><scope>Rubeus::RInputManager</scope><name>onMessage</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1af61b188e07c8e9aa70c0fd185e4242fd" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>RInputManager</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1aecd982f5c7361dbb23bcc8ac5ec6481c" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>RMasterComponent</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1aae4dcfbc07a13854788e9b22f4bbef17" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>~RInputManager</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1a3ee1666371bfafadd5f3adfa67ac874c" prot="public" virt="virtual"><scope>Rubeus::RInputManager</scope><name>~RMasterComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

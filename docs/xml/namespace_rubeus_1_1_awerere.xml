@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_rubeus_1_1_awerere" kind="namespace" language="C++">
+    <compoundname>Rubeus::Awerere</compoundname>
+    <innerclass refid="class_rubeus_1_1_awerere_1_1_a_box_collider" prot="public">Rubeus::Awerere::ABoxCollider</innerclass>
+    <innerclass refid="class_rubeus_1_1_awerere_1_1_a_collide_data" prot="public">Rubeus::Awerere::ACollideData</innerclass>
+    <innerclass refid="class_rubeus_1_1_awerere_1_1_a_collider" prot="public">Rubeus::Awerere::ACollider</innerclass>
+    <innerclass refid="class_rubeus_1_1_awerere_1_1_a_collision_engine" prot="public">Rubeus::Awerere::ACollisionEngine</innerclass>
+    <innerclass refid="class_rubeus_1_1_awerere_1_1_a_flag" prot="public">Rubeus::Awerere::AFlag</innerclass>
+    <innerclass refid="struct_rubeus_1_1_awerere_1_1_a_hit_event_list" prot="public">Rubeus::Awerere::AHitEventList</innerclass>
+    <innerclass refid="class_rubeus_1_1_awerere_1_1_a_physics_engine" prot="public">Rubeus::Awerere::APhysicsEngine</innerclass>
+    <innerclass refid="class_rubeus_1_1_awerere_1_1_a_physics_material" prot="public">Rubeus::Awerere::APhysicsMaterial</innerclass>
+    <innerclass refid="class_rubeus_1_1_awerere_1_1_a_physics_object" prot="public">Rubeus::Awerere::APhysicsObject</innerclass>
+    <innerclass refid="class_rubeus_1_1_awerere_1_1_a_plane_collider" prot="public">Rubeus::Awerere::APlaneCollider</innerclass>
+    <innerclass refid="class_rubeus_1_1_awerere_1_1_a_sphere_collider" prot="public">Rubeus::Awerere::ASphereCollider</innerclass>
+    <innerclass refid="struct_rubeus_1_1_awerere_1_1_collision_grid" prot="public">Rubeus::Awerere::CollisionGrid</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="awerere__collider__object_8h_1aa31f43f0fcc41516bb0aa51cb1d88a08" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>EColliderType</name>
+        <enumvalue id="dummy_1aa31f43f0fcc41516bb0aa51cb1d88a08a6f7cea7381e843e2ee0338b4a92b0d43" prot="public">
+          <name>SPHERE</name>
+          <initializer>= 0x1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1aa31f43f0fcc41516bb0aa51cb1d88a08aad6990fc23cd957328515fde2db852a3" prot="public">
+          <name>PLANE</name>
+          <initializer>= 0x10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1aa31f43f0fcc41516bb0aa51cb1d88a08ae657cce1913c857166b0475f18668ef5" prot="public">
+          <name>BOX</name>
+          <initializer>= 0x100</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1aa31f43f0fcc41516bb0aa51cb1d88a08a80cda54f91e5930408b152ed0f86b797" prot="public">
+          <name>NO_COLLIDER</name>
+          <initializer>= 0x1000</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Specifiers for initialising different types of colliders. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collider_object.h" line="28" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_collider_object.h" bodystart="27" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="awerere__physics__material_8h_1aa5297f932dd2baa0ef7105c0d393919b" prot="public" static="no" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float Rubeus::Awerere::DEFAULT_MASS</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_MASS</name>
+        <initializer>= 1.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" line="15" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="awerere__physics__material_8h_1a86b73b44743b643a98fa9224ebd6be95" prot="public" static="no" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float Rubeus::Awerere::DEFAULT_GRAVITY</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_GRAVITY</name>
+        <initializer>= -9.8f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" line="16" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="awerere__physics__material_8h_1a7acd37480720577142881c73f087da7d" prot="public" static="no" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float Rubeus::Awerere::DEFAULT_FRICTION</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_FRICTION</name>
+        <initializer>= 0.2f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" line="17" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="awerere__physics__material_8h_1a2351d8681ac2413f7decd04472ecb283" prot="public" static="no" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float Rubeus::Awerere::DEFAULT_RESTITUTION</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_RESTITUTION</name>
+        <initializer>= 0.8f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" line="18" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_material.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="15" column="1"/>
+  </compounddef>
+</doxygen>

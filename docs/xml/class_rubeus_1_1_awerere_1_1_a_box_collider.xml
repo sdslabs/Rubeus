@@ -1,0 +1,469 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_awerere_1_1_a_box_collider" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::Awerere::ABoxCollider</compoundname>
+    <basecompoundref refid="class_rubeus_1_1_awerere_1_1_a_collider" prot="public" virt="non-virtual">Rubeus::Awerere::ACollider</basecompoundref>
+    <includes refid="awerere__box__collider__object_8h" local="no">awerere_box_collider_object.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a76725863d20593af6992d496fc083045" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref></type>
+        <definition>RML::Vector3D Rubeus::Awerere::ABoxCollider::m_MinExtent</definition>
+        <argsstring></argsstring>
+        <name>m_MinExtent</name>
+        <briefdescription>
+<para>Lower left coordinates of the box collider. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="42" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1abe7fc5858243e7db418809d7a781f590" compoundref="awerere__box__collider__object_8h" startline="118" endline="118">getLowerLeftBound</referencedby>
+        <referencedby refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a7891f0d698ca55f899f34ebffdb84524" compoundref="awerere__box__collider__object_8h" startline="136" endline="136">getUpperLeftBound</referencedby>
+        <referencedby refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a9337b5b543f7157f1fc49bea74e77287" compoundref="awerere__box__collider__object_8h" startline="145" endline="145">getLowerRightBound</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a5deaee32ade54cb23e886cdc1b8dbe8f" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref></type>
+        <definition>RML::Vector3D Rubeus::Awerere::ABoxCollider::m_MaxExtent</definition>
+        <argsstring></argsstring>
+        <name>m_MaxExtent</name>
+        <briefdescription>
+<para>Upper right coordinates of the box collider. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="45" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1af9e0aaed35f689a6acc8da115c51d647" compoundref="awerere__box__collider__object_8h" startline="127" endline="127">getUpperRightBound</referencedby>
+        <referencedby refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a7891f0d698ca55f899f34ebffdb84524" compoundref="awerere__box__collider__object_8h" startline="136" endline="136">getUpperLeftBound</referencedby>
+        <referencedby refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a9337b5b543f7157f1fc49bea74e77287" compoundref="awerere__box__collider__object_8h" startline="145" endline="145">getLowerRightBound</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1afa46e372158fa8d50dc3fa29ed21ced6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref></type>
+        <definition>RML::Vector3D Rubeus::Awerere::ABoxCollider::calculateCenter</definition>
+        <argsstring>(const RML::Vector3D &amp;ll, const RML::Vector3D &amp;ur)</argsstring>
+        <name>calculateCenter</name>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref> &amp;</type>
+          <declname>ll</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref> &amp;</type>
+          <declname>ur</declname>
+        </param>
+        <briefdescription>
+<para>Calclates the collider center using min and max extents. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para></para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ll</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lower left point. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Upper right point.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The center of the box. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="38" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1af82f5a293450e3d45b962ec0ac7a9018" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::Awerere::ABoxCollider::ABoxCollider</definition>
+        <argsstring>(RML::Vector3D &amp;minExtent, const RML::Vector3D &amp;maxExtent)</argsstring>
+        <name>ABoxCollider</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref> &amp;</type>
+          <declname>minExtent</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref> &amp;</type>
+          <declname>maxExtent</declname>
+        </param>
+        <briefdescription>
+<para>Contructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>minExtent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The lower left point of the box. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxExtent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The upper right point of the box. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a5b3d61f82c3629649a8d2f92595bf838" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::Awerere::ABoxCollider::~ABoxCollider</definition>
+        <argsstring>()</argsstring>
+        <name>~ABoxCollider</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a9cb8b9a6d310ffd4c1eb7341b7fa660c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Rubeus::Awerere::ABoxCollider::selfUpdate</definition>
+        <argsstring>(float deltaX, float deltaY) override</argsstring>
+        <name>selfUpdate</name>
+        <reimplements refid="class_rubeus_1_1_awerere_1_1_a_collider_1ab0088d47ab69b3ecb0b0a020de8c33d6">selfUpdate</reimplements>
+        <param>
+          <type>float</type>
+          <declname>deltaX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>deltaY</declname>
+        </param>
+        <briefdescription>
+<para>Update the type specific paramaters of this collider. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Used only inside Awerere</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>deltaX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Change in X position. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deltaY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Change in Y position. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a07938b065f35454887ec6f728ae8a55d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data" kindref="compound">ACollideData</ref></type>
+        <definition>ACollideData Rubeus::Awerere::ABoxCollider::tryIntersect</definition>
+        <argsstring>(ABoxCollider &amp;box) override</argsstring>
+        <name>tryIntersect</name>
+        <reimplements refid="class_rubeus_1_1_awerere_1_1_a_collider_1ac9295068ab11ba7b11e7d18f453298bc">tryIntersect</reimplements>
+        <param>
+          <type><ref refid="class_rubeus_1_1_awerere_1_1_a_box_collider" kindref="compound">ABoxCollider</ref> &amp;</type>
+          <declname>box</declname>
+          <defname>sphere</defname>
+        </param>
+        <briefdescription>
+<para>Returns collision status between 2 different colliders. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para></para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>box</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The box collider to try a collision with.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Collide data, containing collision information.</para></simplesect>
+<simplesect kind="warning"><para></para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The plane collider to try a collision with.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Collide data, containing collision information.</para></simplesect>
+<simplesect kind="warning"><para></para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sphere</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sphere collider to try a collision with.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Collide data, containing collision information. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a6ce8d043e6d69c4e01596bfd51c35e14" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data" kindref="compound">ACollideData</ref></type>
+        <definition>ACollideData Rubeus::Awerere::ABoxCollider::tryIntersect</definition>
+        <argsstring>(APlaneCollider &amp;plane) override</argsstring>
+        <name>tryIntersect</name>
+        <reimplements refid="class_rubeus_1_1_awerere_1_1_a_collider_1a18c5893ff435d68cb7495f9c9ddd6d48">tryIntersect</reimplements>
+        <param>
+          <type><ref refid="class_rubeus_1_1_awerere_1_1_a_plane_collider" kindref="compound">APlaneCollider</ref> &amp;</type>
+          <declname>plane</declname>
+        </param>
+        <briefdescription>
+<para>Query collision status with another plane type collider. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Requires a 2D plane collider (straight line)</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>plane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The plane collider this collider is being queried with.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Collision data. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="97" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a33ff855764ca01bc28021162c652ede3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data" kindref="compound">ACollideData</ref></type>
+        <definition>ACollideData Rubeus::Awerere::ABoxCollider::tryIntersect</definition>
+        <argsstring>(ASphereCollider &amp;sphere) override</argsstring>
+        <name>tryIntersect</name>
+        <reimplements refid="class_rubeus_1_1_awerere_1_1_a_collider_1a5a6b4e7886914d394913e570ecbf1fb4">tryIntersect</reimplements>
+        <param>
+          <type><ref refid="class_rubeus_1_1_awerere_1_1_a_sphere_collider" kindref="compound">ASphereCollider</ref> &amp;</type>
+          <declname>sphere</declname>
+        </param>
+        <briefdescription>
+<para>Query collision status with another sphere type collider. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Requires a 3D sphere collider (circle colliders will work too)</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sphere</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sphere collider this collider is being queried with.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Collision data. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="109" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1abe7fc5858243e7db418809d7a781f590" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref></type>
+        <definition>const RML::Vector3D Rubeus::Awerere::ABoxCollider::getLowerLeftBound</definition>
+        <argsstring>() const</argsstring>
+        <name>getLowerLeftBound</name>
+        <briefdescription>
+<para>Returns the lower left corner of the box collider. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The lower left corner&apos;s position. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="118" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" bodystart="118" bodyend="118"/>
+        <references refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a76725863d20593af6992d496fc083045" compoundref="awerere__box__collider__object_8h" startline="42">m_MinExtent</references>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1af9e0aaed35f689a6acc8da115c51d647" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref></type>
+        <definition>const RML::Vector3D Rubeus::Awerere::ABoxCollider::getUpperRightBound</definition>
+        <argsstring>() const</argsstring>
+        <name>getUpperRightBound</name>
+        <briefdescription>
+<para>Returns the upper right corner of the box collider. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The upper right corner&apos;s position. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="127" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" bodystart="127" bodyend="127"/>
+        <references refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a5deaee32ade54cb23e886cdc1b8dbe8f" compoundref="awerere__box__collider__object_8h" startline="45">m_MaxExtent</references>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a7891f0d698ca55f899f34ebffdb84524" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref></type>
+        <definition>const RML::Vector3D Rubeus::Awerere::ABoxCollider::getUpperLeftBound</definition>
+        <argsstring>() const</argsstring>
+        <name>getUpperLeftBound</name>
+        <briefdescription>
+<para>Returns the upper left corner of the box collider. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The upper left corner&apos;s position. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="136" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" bodystart="136" bodyend="136"/>
+        <references refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a5deaee32ade54cb23e886cdc1b8dbe8f" compoundref="awerere__box__collider__object_8h" startline="45">m_MaxExtent</references>
+        <references refid="struct_r_m_l_1_1_vector3_d_1a967dbb984259d52bc299e9c145ccb59b" compoundref="rubeus__maths__library_8h" startline="332">RML::Vector3D::y</references>
+        <references refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a76725863d20593af6992d496fc083045" compoundref="awerere__box__collider__object_8h" startline="42">m_MinExtent</references>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a9337b5b543f7157f1fc49bea74e77287" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref></type>
+        <definition>const RML::Vector3D Rubeus::Awerere::ABoxCollider::getLowerRightBound</definition>
+        <argsstring>() const</argsstring>
+        <name>getLowerRightBound</name>
+        <briefdescription>
+<para>Returns the lower right corner of the box collider. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The lower right corner&apos;s position. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="145" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" bodystart="145" bodyend="145"/>
+        <references refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a5deaee32ade54cb23e886cdc1b8dbe8f" compoundref="awerere__box__collider__object_8h" startline="45">m_MaxExtent</references>
+        <references refid="struct_r_m_l_1_1_vector3_d_1a6a44f9334ebb4ae0ca6634d195914016" compoundref="rubeus__maths__library_8h" startline="329">RML::Vector3D::x</references>
+        <references refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a76725863d20593af6992d496fc083045" compoundref="awerere__box__collider__object_8h" startline="42">m_MinExtent</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A box collider attached to a Game object through a Physics object. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Rubeus::Awerere::ACollider</label>
+        <link refid="class_rubeus_1_1_awerere_1_1_a_collider"/>
+      </node>
+      <node id="0">
+        <label>Rubeus::Awerere::ABoxCollider</label>
+        <link refid="class_rubeus_1_1_awerere_1_1_a_box_collider"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>Rubeus::Awerere::ACollider</label>
+        <link refid="class_rubeus_1_1_awerere_1_1_a_collider"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_Sprite</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_PhysicsMaterial</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Force</edgelabel>
+          <edgelabel>m_Momentum</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_Position</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>RML::Vector4D</label>
+        <link refid="struct_r_m_l_1_1_vector4_d"/>
+      </node>
+      <node id="4">
+        <label>Rubeus::GraphicComponents::RSprite</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_sprite"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>RML::Vector3D</label>
+        <link refid="struct_r_m_l_1_1_vector3_d"/>
+      </node>
+      <node id="7">
+        <label>Rubeus::GraphicComponents::RTexture</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_texture"/>
+      </node>
+      <node id="8">
+        <label>RML::Vector2D</label>
+        <link refid="struct_r_m_l_1_1_vector2_d"/>
+      </node>
+      <node id="2">
+        <label>Rubeus::Awerere::ABoxCollider</label>
+        <link refid="class_rubeus_1_1_awerere_1_1_a_box_collider"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_MinExtent</edgelabel>
+          <edgelabel>m_MaxExtent</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Rubeus::GraphicComponents::RRenderableObject</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Color</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_Texture</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Size</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_Position</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Rubeus::Awerere::APhysicsMaterial</label>
+        <link refid="class_rubeus_1_1_awerere_1_1_a_physics_material"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>DefaultMaterial</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Gravity</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="25" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" bodystart="24" bodyend="146"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1af82f5a293450e3d45b962ec0ac7a9018" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>ABoxCollider</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a0584d41544674acb77f11cfe038fd1ea" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>ACollider</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1af4862ef42d5f94e16ff3602219b19e83" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>ACollider</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1af4393723cdffa3620d8e3deb3e3fe92f" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>addForce</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a0f91e5056fe7e045865ac60149b83498" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>addImpulse</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1ac65dfdf1c393552fe031af59af2a76cf" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>addMomentum</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1afa46e372158fa8d50dc3fa29ed21ced6" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>calculateCenter</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1abe7fc5858243e7db418809d7a781f590" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getLowerLeftBound</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a9337b5b543f7157f1fc49bea74e77287" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getLowerRightBound</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1af7297ef1a5bcc7a82a8c8110a707d37a" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getMomentum</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1add6aa6d6bf8e9c47bb5f9262c048d3e3" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getPosition</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a8d4f849d8d22325ac84e8f9d3ecaa74b" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getType</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a7891f0d698ca55f899f34ebffdb84524" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getUpperLeftBound</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1af9e0aaed35f689a6acc8da115c51d647" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getUpperRightBound</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a3aea1286d1c31ff389717b07edfe391c" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_Force</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a5deaee32ade54cb23e886cdc1b8dbe8f" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_MaxExtent</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a76725863d20593af6992d496fc083045" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_MinExtent</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a55dd70e134b80d3e64dc3ee5df5388fc" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_Momentum</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1abb9155531aa52189943aae04d7a506c2" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_PhysicsMaterial</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a86402823b299a7211ab6d2d11c2e512f" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_Position</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a929eacdcc3a29b8b598666085560b442" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_Sprite</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1afac145eb6d70d70e822923b92f1f56d6" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_Type</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a9cb8b9a6d310ffd4c1eb7341b7fa660c" prot="public" virt="virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>selfUpdate</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1afc3bb37605b7032fa75164eea443a199" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>setMaterial</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a0293d08639bec4bdd80700da27962855" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>setMomentum</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1aebc1dbcdc45a252b38415d3bf23be6b3" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>setPosition</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a07938b065f35454887ec6f728ae8a55d" prot="public" virt="virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>tryIntersect</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a6ce8d043e6d69c4e01596bfd51c35e14" prot="public" virt="virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>tryIntersect</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a33ff855764ca01bc28021162c652ede3" prot="public" virt="virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>tryIntersect</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a0c1bf6dacc6f411a4073843d61458c7f" prot="public" virt="non-virtual" ambiguityscope="Rubeus::Awerere::ACollider::"><scope>Rubeus::Awerere::ABoxCollider</scope><name>tryIntersect</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a5f81c81e2a0675319f56a73e30a34e92" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>update</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a5b3d61f82c3629649a8d2f92595bf838" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>~ABoxCollider</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a10873a3ab1cc36d56b4bf72a9a4c82f4" prot="public" virt="virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>~ACollider</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

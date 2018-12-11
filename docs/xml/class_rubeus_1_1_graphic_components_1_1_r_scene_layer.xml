@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_rubeus_1_1_graphic_components_1_1_r_scene_layer" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::GraphicComponents::RSceneLayer</compoundname>
+    <basecompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_layer" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RLayer</basecompoundref>
+    <includes refid="scene__layer__object_8h" local="no">scene_layer_object.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a2d489c669a0c55b19dfdb94fed4d3dd0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_rubeus_1_1_graphic_components_1_1_r_group" kindref="compound">RGroup</ref> * &gt;</type>
+        <definition>std::vector&lt;RGroup *&gt; Rubeus::GraphicComponents::RSceneLayer::m_Groups</definition>
+        <argsstring></argsstring>
+        <name>m_Groups</name>
+        <briefdescription>
+<para>Vector array of all the groups handles by this layer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" line="24" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a4a35defcbc822d72b96fe940ac90f3bc" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component" kindref="compound">RGuerrillaRendererComponent</ref> *</type>
+        <definition>RGuerrillaRendererComponent* Rubeus::GraphicComponents::RSceneLayer::m_Renderer</definition>
+        <argsstring></argsstring>
+        <name>m_Renderer</name>
+        <briefdescription>
+<para>The renderer alloted to this layer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" line="27" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a76bad36ffd911f07af57f6deab4a3244" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component" kindref="compound">RShaderComponent</ref> &amp;</type>
+        <definition>RShaderComponent&amp; Rubeus::GraphicComponents::RSceneLayer::m_Shader</definition>
+        <argsstring></argsstring>
+        <name>m_Shader</name>
+        <briefdescription>
+<para>The shader for this layer to use. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" line="30" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a53444858ee8daf82046cd5038cf26b29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RSceneLayer::RSceneLayer</definition>
+        <argsstring>(RShaderComponent &amp;shader)</argsstring>
+        <name>RSceneLayer</name>
+        <param>
+          <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component" kindref="compound">RShaderComponent</ref> &amp;</type>
+          <declname>shader</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. Initialises the layer&apos;s shader. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Do not pass in dereferenced pointers</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>shader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The shader to be alloted to this layer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1af850e6a374a25156be7d10c9797a7b1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Rubeus::GraphicComponents::RSceneLayer::~RSceneLayer</definition>
+        <argsstring>()</argsstring>
+        <name>~RSceneLayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a427f6377ce52bd5fd30f8b71fe228126" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_layer" kindref="compound">RLayer</ref> &amp;</type>
+        <definition>RLayer &amp; Rubeus::GraphicComponents::RSceneLayer::addGroup</definition>
+        <argsstring>(RGroup &amp;group) override</argsstring>
+        <name>addGroup</name>
+        <reimplements refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a5412320eee522831c6d48c85030cc0bd">addGroup</reimplements>
+        <param>
+          <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_group" kindref="compound">RGroup</ref> &amp;</type>
+          <declname>group</declname>
+        </param>
+        <briefdescription>
+<para>Adds the group object to this layer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>group</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The group object to add.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this layer. Allows chaining multiple group additions. E.g.: layer.addGoup(g1).addGroup(g2); </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1aa4824826a3597540690fb67ba6f53d78" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RSceneLayer::draw</definition>
+        <argsstring>() override</argsstring>
+        <name>draw</name>
+        <reimplements refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a1d3a0a6fc1caf1739dceec82d7d1d90c">draw</reimplements>
+        <briefdescription>
+<para>Draws the layer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Call only once per frame </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" line="67" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Rendering Layer used for drawing the game scene (non-UI) to the screen. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="220">
+        <label>Rubeus::GraphicComponents::RSceneLayer</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer"/>
+        <childnode refid="221" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="221">
+        <label>Rubeus::GraphicComponents::RLayer</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_layer"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="222">
+        <label>Rubeus::GraphicComponents::RSceneLayer</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer"/>
+        <childnode refid="223" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="223">
+        <label>Rubeus::GraphicComponents::RLayer</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_layer"/>
+      </node>
+    </collaborationgraph>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" line="21" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" bodystart="20" bodyend="70"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a427f6377ce52bd5fd30f8b71fe228126" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RSceneLayer</scope><name>addGroup</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1aa4824826a3597540690fb67ba6f53d78" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RSceneLayer</scope><name>draw</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a2d489c669a0c55b19dfdb94fed4d3dd0" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSceneLayer</scope><name>m_Groups</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a4a35defcbc822d72b96fe940ac90f3bc" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSceneLayer</scope><name>m_Renderer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a76bad36ffd911f07af57f6deab4a3244" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSceneLayer</scope><name>m_Shader</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a53f1797a973a90568b5ad2e5a5fd3e1b" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSceneLayer</scope><name>RLayer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a53444858ee8daf82046cd5038cf26b29" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSceneLayer</scope><name>RSceneLayer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a7ff5ad86d9ca6a2a3509689a19b68917" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RSceneLayer</scope><name>~RLayer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1af850e6a374a25156be7d10c9797a7b1e" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RSceneLayer</scope><name>~RSceneLayer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

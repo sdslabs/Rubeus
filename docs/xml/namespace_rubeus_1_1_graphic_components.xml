@@ -8,14 +8,16 @@
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component" prot="public">Rubeus::GraphicComponents::RGuerrillaRendererComponent</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_index_buffer" prot="public">Rubeus::GraphicComponents::RIndexBuffer</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_layer" prot="public">Rubeus::GraphicComponents::RLayer</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_layer_composition" prot="public">Rubeus::GraphicComponents::RLayerComposition</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object" prot="public">Rubeus::GraphicComponents::RRenderableObject</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component" prot="public">Rubeus::GraphicComponents::RRendererComponent</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer" prot="public">Rubeus::GraphicComponents::RSceneLayer</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component" prot="public">Rubeus::GraphicComponents::RShaderComponent</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_simple_renderer_component" prot="public">Rubeus::GraphicComponents::RSimpleRendererComponent</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_sprite" prot="public">Rubeus::GraphicComponents::RSprite</innerclass>
-    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_static_layer" prot="public">Rubeus::GraphicComponents::RStaticLayer</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_static_sprite" prot="public">Rubeus::GraphicComponents::RStaticSprite</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_texture" prot="public">Rubeus::GraphicComponents::RTexture</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_u_i_layer" prot="public">Rubeus::GraphicComponents::RUILayer</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_vertex_array" prot="public">Rubeus::GraphicComponents::RVertexArray</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" prot="public">Rubeus::GraphicComponents::RWindowComponent</innerclass>
     <innerclass refid="struct_rubeus_1_1_graphic_components_1_1_vertex_data" prot="public">Rubeus::GraphicComponents::VertexData</innerclass>
@@ -57,122 +59,152 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="29" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" bodystart="28" bodyend="34"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="31" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" bodystart="30" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="guerrilla__renderer__component_8h_1a860626dbfee03ea084dc459a26cedd00" prot="public" static="no" mutable="no">
+        <type>constexpr long</type>
+        <definition>constexpr long Rubeus::GraphicComponents::MAX_SPRITES</definition>
+        <argsstring></argsstring>
+        <name>MAX_SPRITES</name>
+        <initializer>= 60000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="19" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="guerrilla__renderer__component_8h_1adaedec10fdd3d6003f9fbd600003c7ef" prot="public" static="no" mutable="no">
+        <type>constexpr long</type>
+        <definition>constexpr long Rubeus::GraphicComponents::VERTEX_SIZE</definition>
+        <argsstring></argsstring>
+        <name>VERTEX_SIZE</name>
+        <initializer>= sizeof(<ref refid="struct_rubeus_1_1_graphic_components_1_1_vertex_data" kindref="compound">VertexData</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="20" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="guerrilla__renderer__component_8h_1a522a63dca03ca331ffc4b39c8c4857b6" prot="public" static="no" mutable="no">
+        <type>constexpr long</type>
+        <definition>constexpr long Rubeus::GraphicComponents::SPRITE_SIZE</definition>
+        <argsstring></argsstring>
+        <name>SPRITE_SIZE</name>
+        <initializer>= VERTEX_SIZE * 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="21" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="guerrilla__renderer__component_8h_1aac58a92009c8dd5bbcb7b75852026ba1" prot="public" static="no" mutable="no">
+        <type>constexpr long</type>
+        <definition>constexpr long Rubeus::GraphicComponents::BUFFER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>BUFFER_SIZE</name>
+        <initializer>= SPRITE_SIZE * MAX_SPRITES</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="22" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="guerrilla__renderer__component_8h_1a1124508ac5466bcc8221e830644bc815" prot="public" static="no" mutable="no">
+        <type>constexpr long</type>
+        <definition>constexpr long Rubeus::GraphicComponents::INDICES_SIZE</definition>
+        <argsstring></argsstring>
+        <name>INDICES_SIZE</name>
+        <initializer>= MAX_SPRITES * 6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="23" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="guerrilla__renderer__component_8h_1a4c30b8c0f6fdebeeee9c5ab7c8110fd1" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Rubeus::GraphicComponents::SHADER_VERTEX_LOCATION</definition>
+        <argsstring></argsstring>
+        <name>SHADER_VERTEX_LOCATION</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="25" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="guerrilla__renderer__component_8h_1ab26f4cde1d0e0df0eef27e3d34e59a21" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Rubeus::GraphicComponents::SHADER_UV_LOCATION</definition>
+        <argsstring></argsstring>
+        <name>SHADER_UV_LOCATION</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="26" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="guerrilla__renderer__component_8h_1a6fbebba935b1e789388d35d56e977660" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Rubeus::GraphicComponents::SHADER_TEXTURE_ID_LOCATION</definition>
+        <argsstring></argsstring>
+        <name>SHADER_TEXTURE_ID_LOCATION</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="27" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="guerrilla__renderer__component_8h_1a28c2414a40cf42a059e7aeda7167f82e" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Rubeus::GraphicComponents::SHADER_COLOR_LOCATION</definition>
+        <argsstring></argsstring>
+        <name>SHADER_COLOR_LOCATION</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="28" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="guerrilla__renderer__component_8h_1ab748d6754111ebe7bdf55804f2df6157" prot="public" static="no" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int Rubeus::GraphicComponents::MAX_ALLOWED_TEXTURES</definition>
+        <argsstring></argsstring>
+        <name>MAX_ALLOWED_TEXTURES</name>
+        <initializer>= 32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="30" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="input__component_8h_1addd22d20d9c596d67d4cce1380370aba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Rubeus::GraphicComponents::cursorPositionCallback</definition>
-        <argsstring>(GLFWwindow *window, double xpos, double ypos)</argsstring>
-        <name>cursorPositionCallback</name>
-        <param>
-          <type>GLFWwindow *</type>
-          <declname>window</declname>
-        </param>
-        <param>
-          <type>double</type>
-          <declname>xpos</declname>
-        </param>
-        <param>
-          <type>double</type>
-          <declname>ypos</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_component.h" line="15" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="input__component_8h_1aaf029039346532121afb3b2c1a553f12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Rubeus::GraphicComponents::mouseButtonCallback</definition>
-        <argsstring>(GLFWwindow *window, int button, int action, int mods)</argsstring>
-        <name>mouseButtonCallback</name>
-        <param>
-          <type>GLFWwindow *</type>
-          <declname>window</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>button</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>action</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>mods</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_component.h" line="16" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="input__component_8h_1aa164ff0472b9d6dfd38a3b39080703f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Rubeus::GraphicComponents::scrollCallback</definition>
-        <argsstring>(GLFWwindow *window, double xoffset, double yoffset)</argsstring>
-        <name>scrollCallback</name>
-        <param>
-          <type>GLFWwindow *</type>
-          <declname>window</declname>
-        </param>
-        <param>
-          <type>double</type>
-          <declname>xoffset</declname>
-        </param>
-        <param>
-          <type>double</type>
-          <declname>yoffset</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_component.h" line="17" column="1"/>
-      </memberdef>
-      <memberdef kind="function" id="input__component_8h_1ae3b18f62b7bacca1216ec789a7e46f89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Rubeus::GraphicComponents::keyCallback</definition>
-        <argsstring>(GLFWwindow *window, int key, int scancode, int action, int mods)</argsstring>
-        <name>keyCallback</name>
-        <param>
-          <type>GLFWwindow *</type>
-          <declname>window</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>key</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>scancode</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>action</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>mods</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_component.h" line="19" column="1"/>
-      </memberdef>
       <memberdef kind="function" id="window__component_8h_1ae977f0dca420926193fd5c7cd465baf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void Rubeus::GraphicComponents::getGLFWErrorLog</definition>
@@ -207,7 +239,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="44" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/window_component.h" line="46" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

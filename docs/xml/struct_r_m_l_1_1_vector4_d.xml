@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="471" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="471" bodyend="-1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="680" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="680" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_r_m_l_1_1_vector4_d_1a14cae581494b8c58f1721a41ff9c95f5" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="474" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="474" bodyend="-1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="683" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="683" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_r_m_l_1_1_vector4_d_1a6523108955901df4b77ea5f7527b8d4a" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="477" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="477" bodyend="-1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="686" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="686" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_r_m_l_1_1_vector4_d_1a93ab2b98d896c89315742cbb3fcb0ef6" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="480" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="480" bodyend="-1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="689" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="689" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="487" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="696" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1a7c599849961d43002f26db7e888c8662" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -127,7 +127,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="499" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="708" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1a74373f069530627f194e5bba0a23ae3b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -153,7 +153,22 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="510" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="719" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1a386d73ef35785fbb06516df7f302fa32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+        <definition>Vector4D &amp; RML::Vector4D::toUnitVector</definition>
+        <argsstring>()</argsstring>
+        <name>toUnitVector</name>
+        <briefdescription>
+<para>Returns this vector as a modified unit vector. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Works on this object directly</para></simplesect>
+<simplesect kind="return"><para>Unit vector pointing in the direction of this vector. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="729" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1af5bc24e9eaa6c52c1a793755421eddf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref></type>
@@ -167,7 +182,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="520" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="739" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1a19da676c402114eca6556022cbf77aab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
@@ -193,7 +208,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="531" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="750" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1ae643fc3223a85b3c5b4b8f81298c7244" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
@@ -219,7 +234,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="542" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="761" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1a0793689cb56a292f64094bee02dea911" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
@@ -245,7 +260,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="553" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="772" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1a9fc886cda50726d946fd1b6c50da16c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
@@ -271,7 +286,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="565" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="784" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1ad793560a0cd4c6f7af5e355b67b33994" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -297,7 +312,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="636" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="855" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1ac9bd0fc89969166c40590677e239a293" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -323,7 +338,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="647" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="866" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1a96d924fa33e8d53b09c323410ba62c49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
@@ -349,7 +364,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="658" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="877" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1acc5af278f7b72faefb812d9cec641323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
@@ -375,7 +390,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="669" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="888" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1a9e708a9b84793d8ad7a62ffc83a94616" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
@@ -401,7 +416,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="680" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="899" column="1"/>
       </memberdef>
       <memberdef kind="function" id="struct_r_m_l_1_1_vector4_d_1a7f2df730c80c82f0c7d81bdac3d5e340" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
@@ -427,7 +442,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="691" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="910" column="1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -466,7 +481,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="577" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="796" column="1"/>
       </memberdef>
       <memberdef kind="friend" id="struct_r_m_l_1_1_vector4_d_1a1ffba004ed1cab5fdd33667cd3f2d352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
@@ -503,7 +518,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="589" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="808" column="1"/>
       </memberdef>
       <memberdef kind="friend" id="struct_r_m_l_1_1_vector4_d_1af2b73bc6f250d0c8d1002b370d56aa58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
@@ -540,7 +555,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="601" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="820" column="1"/>
       </memberdef>
       <memberdef kind="friend" id="struct_r_m_l_1_1_vector4_d_1a571a0b43449ef23e9d94aaa96e5f566f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
@@ -577,7 +592,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="613" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="832" column="1"/>
       </memberdef>
       <memberdef kind="friend" id="struct_r_m_l_1_1_vector4_d_1a52d83cdab624059568446d23607402a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
@@ -614,14 +629,14 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="625" column="1"/>
+        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="844" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A vector in 4d. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="469" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="468" bodyend="692"/>
+    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="678" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="677" bodyend="911"/>
     <listofallmembers>
       <member refid="struct_r_m_l_1_1_vector4_d_1a19da676c402114eca6556022cbf77aab" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>add</name></member>
       <member refid="struct_r_m_l_1_1_vector4_d_1a9fc886cda50726d946fd1b6c50da16c6" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>divide</name></member>
@@ -640,6 +655,7 @@
       <member refid="struct_r_m_l_1_1_vector4_d_1a59b15f56f8e4c2073cc3709df5055095" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>operator&lt;&lt;</name></member>
       <member refid="struct_r_m_l_1_1_vector4_d_1ad793560a0cd4c6f7af5e355b67b33994" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>operator==</name></member>
       <member refid="struct_r_m_l_1_1_vector4_d_1ae643fc3223a85b3c5b4b8f81298c7244" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>subtract</name></member>
+      <member refid="struct_r_m_l_1_1_vector4_d_1a386d73ef35785fbb06516df7f302fa32" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>toUnitVector</name></member>
       <member refid="struct_r_m_l_1_1_vector4_d_1abb8dcf2e1a1a32030144a5784385b399" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>Vector4D</name></member>
       <member refid="struct_r_m_l_1_1_vector4_d_1a7c599849961d43002f26db7e888c8662" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>Vector4D</name></member>
       <member refid="struct_r_m_l_1_1_vector4_d_1a93ab2b98d896c89315742cbb3fcb0ef6" prot="public" virt="non-virtual"><scope>RML::Vector4D</scope><name>w</name></member>
