@@ -1,7 +1,7 @@
 @mainpage
 
 # Introduction
-Rubeus is a cross-platofrm 2D game engine written in C++17. 
+Rubeus is a cross-platform 2D game engine written in C++17. 
 
 It is specifically designed for people who are new to game development. Rubeus derives its work flow from a lot of popular game engines which will be clearer if you follow the [Getting Start guide](https://github.com/sdslabs/Rubeus/wiki).
 
