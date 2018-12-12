@@ -20,6 +20,11 @@
 
 namespace Rubeus
 {
+	/**
+     * @namespace @Rubeus::UtilityComponents
+	 *
+     * @brief The Utility Components of Rubeus Engine namespace.
+	 */
 	namespace UtilityComponents
 	{
 		/**
@@ -43,14 +48,14 @@ namespace Rubeus
 		public:
 			/**
 			 * @fn		RLoaderComponent()
-			 *		
+			 *
 			 * @brief	Default constructor.
 			 */
 			RLoaderComponent();
 
 			/**
 			 * @fn		~RLoaderComponent()
-			 *		
+			 *
 			 * @brief	Default destructor.
 			 */
 			~RLoaderComponent();

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="class_rubeus_1_1_graphic_components_1_1_r_scene_layer" kind="class" language="C++" prot="public">
     <compoundname>Rubeus::GraphicComponents::RSceneLayer</compoundname>
     <basecompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_layer" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RLayer</basecompoundref>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" line="24" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" bodystart="24" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/scene_layer_object.h" line="30" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/scene_layer_object.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a4a35defcbc822d72b96fe940ac90f3bc" prot="private" static="no" mutable="no">
         <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component" kindref="compound">RGuerrillaRendererComponent</ref> *</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" line="27" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" bodystart="27" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/scene_layer_object.h" line="33" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/scene_layer_object.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a76bad36ffd911f07af57f6deab4a3244" prot="private" static="no" mutable="no">
         <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component" kindref="compound">RShaderComponent</ref> &amp;</type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" line="30" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" bodystart="30" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/scene_layer_object.h" line="36" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/scene_layer_object.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -70,11 +70,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" line="41" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/scene_layer_object.h" line="47" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/scene_layer_object.cpp" bodystart="13" bodyend="19"/>
       </memberdef>
-      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1af850e6a374a25156be7d10c9797a7b1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a6561005830b9ec59cc4b614142b7ba0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
-        <definition>virtual Rubeus::GraphicComponents::RSceneLayer::~RSceneLayer</definition>
+        <definition>Rubeus::GraphicComponents::RSceneLayer::~RSceneLayer</definition>
         <argsstring>()</argsstring>
         <name>~RSceneLayer</name>
         <briefdescription>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" line="48" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/scene_layer_object.h" line="54" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/scene_layer_object.cpp" bodystart="21" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a427f6377ce52bd5fd30f8b71fe228126" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_layer" kindref="compound">RLayer</ref> &amp;</type>
@@ -110,7 +110,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" line="59" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/scene_layer_object.h" line="65" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/scene_layer_object.cpp" bodystart="26" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1aa4824826a3597540690fb67ba6f53d78" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -125,7 +125,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" line="67" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/scene_layer_object.h" line="73" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/scene_layer_object.cpp" bodystart="33" bodyend="51"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -133,30 +133,30 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="220">
+      <node id="216">
         <label>Rubeus::GraphicComponents::RSceneLayer</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer"/>
-        <childnode refid="221" relation="public-inheritance">
+        <childnode refid="217" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="221">
+      <node id="217">
         <label>Rubeus::GraphicComponents::RLayer</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_layer"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="222">
+      <node id="218">
         <label>Rubeus::GraphicComponents::RSceneLayer</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer"/>
-        <childnode refid="223" relation="public-inheritance">
+        <childnode refid="219" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="223">
+      <node id="219">
         <label>Rubeus::GraphicComponents::RLayer</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_layer"/>
       </node>
     </collaborationgraph>
-    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" line="21" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h" bodystart="20" bodyend="70"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/scene_layer_object.h" line="27" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/scene_layer_object.h" bodystart="26" bodyend="76"/>
     <listofallmembers>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a427f6377ce52bd5fd30f8b71fe228126" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RSceneLayer</scope><name>addGroup</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1aa4824826a3597540690fb67ba6f53d78" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RSceneLayer</scope><name>draw</name></member>
@@ -166,7 +166,7 @@
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a53f1797a973a90568b5ad2e5a5fd3e1b" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSceneLayer</scope><name>RLayer</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a53444858ee8daf82046cd5038cf26b29" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSceneLayer</scope><name>RSceneLayer</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a7ff5ad86d9ca6a2a3509689a19b68917" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RSceneLayer</scope><name>~RLayer</name></member>
-      <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1af850e6a374a25156be7d10c9797a7b1e" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RSceneLayer</scope><name>~RSceneLayer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a6561005830b9ec59cc4b614142b7ba0c" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RSceneLayer</scope><name>~RSceneLayer</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

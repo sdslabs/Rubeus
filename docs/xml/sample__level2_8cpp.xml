@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="sample__level2_8cpp" kind="file" language="C++">
+    <compoundname>sample_level2.cpp</compoundname>
+    <includes refid="sample__level2_8h" local="yes">sample_level2.h</includes>
+    <incdepgraph>
+      <node id="20">
+        <label>../RubeusCore.h</label>
+      </node>
+      <node id="19">
+        <label>sample_level2.h</label>
+        <link refid="sample__level2_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files/sample_level2.cpp</label>
+        <link refid="sample__level2_8cpp"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files/sample_level2.cpp"/>
+  </compounddef>
+</doxygen>

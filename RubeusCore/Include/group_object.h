@@ -18,7 +18,7 @@ namespace Rubeus
 	namespace GraphicComponents
 	{
 		/**
-		 * @class	Group
+		 * @class	RGroup
 		 *
 		 * @brief	A group of objects in a family based hierarchy.
 		 */

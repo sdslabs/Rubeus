@@ -16,7 +16,7 @@ API documentation: https://blog.sdslabs.co/Rubeus/
 Rubeus uses Java-Doc style commenting and uses a combination of Doxygen and Moxygen to gather
 all the code documentation into a single markdown file.
 
-### 1. Write complete documentation
+### 1. Edit the documentation
 Rubeus aims at documenting all:
 * classes
 * structures
@@ -32,27 +32,11 @@ Rubeus aims at documenting all:
 * *.h files
 * *.cpp files
 
-### 2. Use Doxygen to generate XML documentation
-Install [Doxygen](https://www.stack.nl/~dimitri/doxygen/manual/install.html)
+### 2. Install Doxygen and a custom Doxygen theme
+Install [Doxygen](https://www.stack.nl/~dimitri/doxygen/manual/install.html).
 
-Generate XML documentation:
+Install the [M.CSS Documentation Doxygen Theme](https://mcss.mosra.cz/doxygen/). Before you go, `Doxyfile` in this directory already has the necessary configurations for a successful build.
 
-```shell
-cd docs/
-doxygen Doxyfile
-```
+### 3. Follow the build steps as provided for installing the theme
 
-### 3. Use Moxygen to convert XML to markdown
-Install [Moxygen](https://sourcey.com/generating-beautiful-markdown-documentation-with-moxygen/):
-```shell
-npm install moxygen -g
-```
-
-Convert XML to Markdown:
-
-```shell
-cd docs/
-moxygen --output index.md xml/
-```
-
-### 4. We are done! Push your changes, get them merged to `master` and review them at https://blog.sdslabs.co/Rubeus/
+### 4. Once reviewed, push your changes, get them merged to `master` and review them at https://blog.sdslabs.co/Rubeus

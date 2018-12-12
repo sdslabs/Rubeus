@@ -265,5 +265,3 @@ namespace Rubeus
 	protected:
 	};
 }
-
-

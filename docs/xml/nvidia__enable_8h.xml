@@ -1,26 +1,24 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="nvidia__enable_8h" kind="file" language="C++">
     <compoundname>nvidia_enable.h</compoundname>
+    <includedby refid="_rubeus_core_8cpp" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/RubeusCore.cpp</includedby>
+    <invincdepgraph>
+      <node id="1993">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/nvidia_enable.h</label>
+        <link refid="nvidia__enable_8h"/>
+        <childnode refid="1994" relation="include">
+        </childnode>
+      </node>
+      <node id="1994">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/RubeusCore.cpp</label>
+        <link refid="_rubeus_core_8cpp"/>
+      </node>
+    </invincdepgraph>
     <briefdescription>
 <para>Allows rendering on the dedicated NVIDIA GPU. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <programlisting>
-<codeline lineno="1"></codeline>
-<codeline lineno="7"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>_declspec(dllexport)<sp/>DWORD<sp/>NvOptimusEnablement<sp/>=<sp/>0x00000001;</highlight></codeline>
-<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
-    </programlisting>
-    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/nvidia_enable.h"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/nvidia_enable.h"/>
   </compounddef>
 </doxygen>

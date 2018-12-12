@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="class_rubeus_1_1_r_input_manager" kind="class" language="C++" prot="public">
     <compoundname>Rubeus::RInputManager</compoundname>
     <basecompoundref refid="class_rubeus_1_1_r_master_component" prot="public" virt="non-virtual">Rubeus::RMasterComponent</basecompoundref>
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="87" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="87" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="87" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" bodystart="87" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_input_manager_1ad6957c435bd589d850911aeaead58309" prot="private" static="no" mutable="no">
         <type>const <ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" kindref="compound">GraphicComponents::RWindowComponent</ref> &amp;</type>
@@ -24,15 +24,15 @@
         <argsstring></argsstring>
         <name>m_Window</name>
         <briefdescription>
-<para>A ref. to a Rubeus Window object which is currently in use. </para>        </briefdescription>
+<para>A ref. to a <ref refid="namespace_rubeus" kindref="compound">Rubeus</ref> Window object which is currently in use. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="90" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="90" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="90" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" bodystart="90" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_input_manager_1a0f72a9459e1fcd1c7608cc04c1f44a92" prot="private" static="no" mutable="no">
-        <type>std::unordered_map&lt; std::string, std::vector&lt; <ref refid="keys_8h_1ac846721ec08ebc254d389a992230f305" kindref="member">EKeyboardKeys</ref> &gt; &gt;</type>
+        <type>std::unordered_map&lt; std::string, std::vector&lt; <ref refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305" kindref="member">EKeyboardKeys</ref> &gt; &gt;</type>
         <definition>std::unordered_map&lt;std::string, std::vector&lt;EKeyboardKeys&gt; &gt; Rubeus::RInputManager::m_KeybindingsToKeys</definition>
         <argsstring></argsstring>
         <name>m_KeybindingsToKeys</name>
@@ -42,10 +42,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="93" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="93" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="93" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" bodystart="93" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_input_manager_1ad6e884817ef9ec8938b0ebf9cd80681d" prot="private" static="no" mutable="no">
-        <type>std::unordered_map&lt; <ref refid="keys_8h_1ac846721ec08ebc254d389a992230f305" kindref="member">EKeyboardKeys</ref>, std::string &gt;</type>
+        <type>std::unordered_map&lt; <ref refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305" kindref="member">EKeyboardKeys</ref>, std::string &gt;</type>
         <definition>std::unordered_map&lt;EKeyboardKeys, std::string&gt; Rubeus::RInputManager::m_KeysToKeybindings</definition>
         <argsstring></argsstring>
         <name>m_KeysToKeybindings</name>
@@ -55,13 +55,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="96" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="96" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="96" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" bodystart="96" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-attrib">
-      <memberdef kind="variable" id="class_rubeus_1_1_r_input_manager_1a7506e8ac2eb3e20a24a355126ecc097d" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="class_rubeus_1_1_r_input_manager_1a24465d5ea96a03afe4b76af7dfb98d71" prot="public" static="yes" mutable="no">
         <type>std::unordered_map&lt; int, bool &gt;</type>
-        <definition>std::unordered_map&lt;int, bool&gt; Rubeus::RInputManager::KeyMap</definition>
+        <definition>std::unordered_map&lt; int, bool &gt; Rubeus::RInputManager::KeyMap</definition>
         <argsstring></argsstring>
         <name>KeyMap</name>
         <briefdescription>
@@ -70,11 +70,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="119" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="119" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="119" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" bodystart="119" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_rubeus_1_1_r_input_manager_1ae6b63f5ed8aa8d58526a912349038f05" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="class_rubeus_1_1_r_input_manager_1a3f9fdd7afa2ce249eb6a08097962ed4e" prot="public" static="yes" mutable="no">
         <type>std::unordered_map&lt; int, bool &gt;</type>
-        <definition>std::unordered_map&lt;int, bool&gt; Rubeus::RInputManager::MouseButtonMap</definition>
+        <definition>std::unordered_map&lt; int, bool &gt; Rubeus::RInputManager::MouseButtonMap</definition>
         <argsstring></argsstring>
         <name>MouseButtonMap</name>
         <briefdescription>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="122" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="122" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="122" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" bodystart="122" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_input_manager_1a85fe446c1eea7a58362f59dd4f5c4776" prot="public" static="yes" mutable="no">
         <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref></type>
@@ -96,8 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="125" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="125" bodyend="-1"/>
-        <referencedby refid="class_rubeus_1_1_r_input_manager_1a0e3b50d7deb6568ba309509503ec7d3b" compoundref="input__manager_8h" startline="228" endline="228">getMousePosition</referencedby>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="125" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" bodystart="125" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_input_manager_1a696b2437a850d2f2089766b0d0ad46e8" prot="public" static="yes" mutable="no">
         <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref></type>
@@ -110,8 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="128" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="128" bodyend="-1"/>
-        <referencedby refid="class_rubeus_1_1_r_input_manager_1a8680633194478de3b2b3e47a85d221b2" compoundref="input__manager_8h" startline="237" endline="237">getMouseScroll</referencedby>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="128" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" bodystart="128" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -139,7 +137,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="106" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="106" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/input_manager.cpp" bodystart="51" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1a57f226e272e6df85624cbe6879e685d3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -153,7 +151,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="114" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="114" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/input_manager.cpp" bodystart="131" bodyend="263"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -180,7 +178,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="137" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="137" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/input_manager.cpp" bodystart="35" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1aae4dcfbc07a13854788e9b22f4bbef17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -193,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="144" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="144" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/input_manager.cpp" bodystart="47" bodyend="49"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1afbfc89b14cd629acb8860f63ea8fde33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -205,7 +203,7 @@
           <declname>keyBinding</declname>
         </param>
         <param>
-          <type>const <ref refid="keys_8h_1ac846721ec08ebc254d389a992230f305" kindref="member">EKeyboardKeys</ref> &amp;</type>
+          <type>const <ref refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305" kindref="member">EKeyboardKeys</ref> &amp;</type>
           <declname>keyName</declname>
         </param>
         <briefdescription>
@@ -230,7 +228,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="155" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="155" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/input_manager.cpp" bodystart="57" bodyend="63"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1a9e8b9f9a738d2ff367b289ffcbde9d32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -242,7 +240,7 @@
           <declname>keyBinding</declname>
         </param>
         <param>
-          <type>const std::vector&lt; <ref refid="keys_8h_1ac846721ec08ebc254d389a992230f305" kindref="member">EKeyboardKeys</ref> &gt; &amp;</type>
+          <type>const std::vector&lt; <ref refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305" kindref="member">EKeyboardKeys</ref> &gt; &amp;</type>
           <declname>keyNames</declname>
         </param>
         <briefdescription>
@@ -267,7 +265,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="166" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="166" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/input_manager.cpp" bodystart="65" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1aeb7117ef5b3b07cdfe8c356dd5aeca6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -293,7 +291,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="176" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="176" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/input_manager.cpp" bodystart="75" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1a2cc2fd66220fe8ca02f5321c524eb13b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -319,7 +317,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="186" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="186" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/input_manager.cpp" bodystart="80" bodyend="83"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1ac5a50fe841938b99b67f29113be7eba4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -345,7 +343,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="197" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="197" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/input_manager.cpp" bodystart="85" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1a437e6b620a3121a02cf775e25e2eea26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -353,7 +351,7 @@
         <argsstring>(const EKeyboardKeys &amp;keyName)</argsstring>
         <name>isKeyPressed</name>
         <param>
-          <type>const <ref refid="keys_8h_1ac846721ec08ebc254d389a992230f305" kindref="member">EKeyboardKeys</ref> &amp;</type>
+          <type>const <ref refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305" kindref="member">EKeyboardKeys</ref> &amp;</type>
           <declname>keyName</declname>
         </param>
         <briefdescription>
@@ -371,7 +369,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="208" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="208" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/input_manager.cpp" bodystart="101" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1aaa241d9afe13dcef04a22423c78f3a30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -379,7 +377,7 @@
         <argsstring>(const EMouseButtons &amp;buttonName)</argsstring>
         <name>isMouseButtonPressed</name>
         <param>
-          <type>const <ref refid="keys_8h_1ac04ea80a8fa238524f8582b0a66efdce" kindref="member">EMouseButtons</ref> &amp;</type>
+          <type>const <ref refid="namespace_rubeus_1ac04ea80a8fa238524f8582b0a66efdce" kindref="member">EMouseButtons</ref> &amp;</type>
           <declname>buttonName</declname>
         </param>
         <briefdescription>
@@ -397,7 +395,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="219" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="219" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/input_manager.cpp" bodystart="111" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1a0e3b50d7deb6568ba309509503ec7d3b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &amp;</type>
@@ -411,8 +409,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="228" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="228" bodyend="228"/>
-        <references refid="class_rubeus_1_1_r_input_manager_1a85fe446c1eea7a58362f59dd4f5c4776" compoundref="input__manager_8h" startline="125">MousePosition</references>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="228" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" bodystart="228" bodyend="228"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1a8680633194478de3b2b3e47a85d221b2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &amp;</type>
@@ -426,8 +423,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="237" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="237" bodyend="237"/>
-        <references refid="class_rubeus_1_1_r_input_manager_1a696b2437a850d2f2089766b0d0ad46e8" compoundref="input__manager_8h" startline="128">MouseScroll</references>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="237" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" bodystart="237" bodyend="237"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1ae20636f7b9df7cb3f5c0cfcde2fa2c4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -441,7 +437,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="245" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="245" bodyend="245"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="245" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" bodystart="245" bodyend="245"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1a52c9396b8a5ee8cc4df2904d246709db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -455,7 +451,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="253" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="253" bodyend="253"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="253" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" bodystart="253" bodyend="253"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_input_manager_1a5439f24e8e7324484a2ba50a7d9764ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -482,7 +478,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="263" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="263" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/input_manager.cpp" bodystart="121" bodyend="129"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -490,52 +486,52 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="154">
+      <node id="147">
         <label>Rubeus::RInputManager</label>
         <link refid="class_rubeus_1_1_r_input_manager"/>
-        <childnode refid="155" relation="public-inheritance">
+        <childnode refid="148" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="155">
+      <node id="148">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="156">
+      <node id="149">
         <label>Rubeus::RInputManager</label>
         <link refid="class_rubeus_1_1_r_input_manager"/>
-        <childnode refid="157" relation="public-inheritance">
+        <childnode refid="150" relation="public-inheritance">
         </childnode>
-        <childnode refid="160" relation="usage">
+        <childnode refid="153" relation="usage">
           <edgelabel>MouseScroll</edgelabel>
           <edgelabel>MousePosition</edgelabel>
         </childnode>
       </node>
-      <node id="160">
+      <node id="153">
         <label>RML::Vector2D</label>
         <link refid="struct_r_m_l_1_1_vector2_d"/>
       </node>
-      <node id="159">
+      <node id="152">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="158">
+      <node id="151">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="159" relation="usage">
+        <childnode refid="152" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="157">
+      <node id="150">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="158" relation="usage">
+        <childnode refid="151" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" line="84" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/input_manager.h" bodystart="83" bodyend="266"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="84" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" bodystart="83" bodyend="266"/>
     <listofallmembers>
       <member refid="class_rubeus_1_1_r_input_manager_1aeb7117ef5b3b07cdfe8c356dd5aeca6d" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>activate</name></member>
       <member refid="class_rubeus_1_1_r_input_manager_1a80063e2eccd871837f7b16fac9b2cfdf" prot="private" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>addKeyBinding</name></member>
@@ -553,21 +549,21 @@
       <member refid="class_rubeus_1_1_r_input_manager_1ac5a50fe841938b99b67f29113be7eba4" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>isKeyBindingPressed</name></member>
       <member refid="class_rubeus_1_1_r_input_manager_1a437e6b620a3121a02cf775e25e2eea26" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>isKeyPressed</name></member>
       <member refid="class_rubeus_1_1_r_input_manager_1aaa241d9afe13dcef04a22423c78f3a30" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>isMouseButtonPressed</name></member>
-      <member refid="class_rubeus_1_1_r_input_manager_1a7506e8ac2eb3e20a24a355126ecc097d" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>KeyMap</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1a24465d5ea96a03afe4b76af7dfb98d71" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>KeyMap</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1a838bceba7935bb3b11a5b69def0f0fc0" prot="protected" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>m_ComponentID</name></member>
       <member refid="class_rubeus_1_1_r_input_manager_1a039c5e90468511ec42eff10d246099d6" prot="private" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>m_IsEnabled</name></member>
       <member refid="class_rubeus_1_1_r_input_manager_1a0f72a9459e1fcd1c7608cc04c1f44a92" prot="private" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>m_KeybindingsToKeys</name></member>
       <member refid="class_rubeus_1_1_r_input_manager_1ad6e884817ef9ec8938b0ebf9cd80681d" prot="private" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>m_KeysToKeybindings</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1aedb604c4ddfb8d2ba72ff493a74b7025" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>m_MessageSystem</name></member>
       <member refid="class_rubeus_1_1_r_input_manager_1ad6957c435bd589d850911aeaead58309" prot="private" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>m_Window</name></member>
-      <member refid="class_rubeus_1_1_r_input_manager_1ae6b63f5ed8aa8d58526a912349038f05" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>MouseButtonMap</name></member>
+      <member refid="class_rubeus_1_1_r_input_manager_1a3f9fdd7afa2ce249eb6a08097962ed4e" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>MouseButtonMap</name></member>
       <member refid="class_rubeus_1_1_r_input_manager_1a85fe446c1eea7a58362f59dd4f5c4776" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>MousePosition</name></member>
       <member refid="class_rubeus_1_1_r_input_manager_1a696b2437a850d2f2089766b0d0ad46e8" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>MouseScroll</name></member>
       <member refid="class_rubeus_1_1_r_input_manager_1a5439f24e8e7324484a2ba50a7d9764ad" prot="public" virt="virtual"><scope>Rubeus::RInputManager</scope><name>onMessage</name></member>
       <member refid="class_rubeus_1_1_r_input_manager_1af61b188e07c8e9aa70c0fd185e4242fd" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>RInputManager</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1aecd982f5c7361dbb23bcc8ac5ec6481c" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>RMasterComponent</name></member>
       <member refid="class_rubeus_1_1_r_input_manager_1aae4dcfbc07a13854788e9b22f4bbef17" prot="public" virt="non-virtual"><scope>Rubeus::RInputManager</scope><name>~RInputManager</name></member>
-      <member refid="class_rubeus_1_1_r_master_component_1a3ee1666371bfafadd5f3adfa67ac874c" prot="public" virt="virtual"><scope>Rubeus::RInputManager</scope><name>~RMasterComponent</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1a03a8ba150ef34447b3c7d22f10dca93a" prot="public" virt="virtual"><scope>Rubeus::RInputManager</scope><name>~RMasterComponent</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

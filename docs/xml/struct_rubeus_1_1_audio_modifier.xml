@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="struct_rubeus_1_1_audio_modifier" kind="struct" language="C++" prot="public">
     <compoundname>Rubeus::AudioModifier</compoundname>
     <includes refid="message__object_8h" local="no">message_object.h</includes>
@@ -15,10 +15,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" line="88" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" bodystart="88" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" line="88" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" bodystart="88" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_rubeus_1_1_audio_modifier_1ad2eb7a3c901111183b6a7c939e952dd4" prot="public" static="no" mutable="no">
-        <type><ref refid="class_e_track_name" kindref="compound">ETrackName</ref></type>
+        <type>ETrackName</type>
         <definition>ETrackName Rubeus::AudioModifier::m_TrackName</definition>
         <argsstring></argsstring>
         <name>m_TrackName</name>
@@ -28,10 +28,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" line="91" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" bodystart="91" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" line="91" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" bodystart="91" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_rubeus_1_1_audio_modifier_1a82cbfe7aeaa656630f415fa83c7c3c96" prot="public" static="no" mutable="no">
-        <type><ref refid="message__object_8h_1ae1270b4aff91ea4ec19282d79b4da20a" kindref="member">EAudioEffect</ref></type>
+        <type><ref refid="namespace_rubeus_1ae1270b4aff91ea4ec19282d79b4da20a" kindref="member">EAudioEffect</ref></type>
         <definition>EAudioEffect Rubeus::AudioModifier::m_EffectToApply</definition>
         <argsstring></argsstring>
         <name>m_EffectToApply</name>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" line="94" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" bodystart="94" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" line="94" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" bodystart="94" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -49,26 +49,19 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="72">
+      <node id="70">
         <label>ETrackType</label>
         <link refid="class_e_track_type"/>
       </node>
-      <node id="71">
+      <node id="69">
         <label>Rubeus::AudioModifier</label>
         <link refid="struct_rubeus_1_1_audio_modifier"/>
-        <childnode refid="72" relation="usage">
+        <childnode refid="70" relation="usage">
           <edgelabel>m_TrackToApplyTo</edgelabel>
         </childnode>
-        <childnode refid="73" relation="usage">
-          <edgelabel>m_TrackName</edgelabel>
-        </childnode>
-      </node>
-      <node id="73">
-        <label>ETrackName</label>
-        <link refid="class_e_track_name"/>
       </node>
     </collaborationgraph>
-    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" line="86" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" bodystart="85" bodyend="95"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" line="86" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" bodystart="85" bodyend="95"/>
     <listofallmembers>
       <member refid="struct_rubeus_1_1_audio_modifier_1a82cbfe7aeaa656630f415fa83c7c3c96" prot="public" virt="non-virtual"><scope>Rubeus::AudioModifier</scope><name>m_EffectToApply</name></member>
       <member refid="struct_rubeus_1_1_audio_modifier_1ad2eb7a3c901111183b6a7c939e952dd4" prot="public" virt="non-virtual"><scope>Rubeus::AudioModifier</scope><name>m_TrackName</name></member>

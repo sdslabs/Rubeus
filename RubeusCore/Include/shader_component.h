@@ -19,7 +19,7 @@ namespace Rubeus
 	namespace GraphicComponents
 	{
 		/**
-		 * @class	RShader
+		 * @class	RShaderComponent
 		 *
 		 * @brief	A shader class. Allows shader code to be sent to OpenGL
 		 */

@@ -11,6 +11,13 @@
 
 namespace Rubeus
 {
+	/**
+     * @namespace @Rubeus::Awerere
+	 *
+     * @brief   The Awerere Physics Engine namespace.
+     *
+     * @warning All Awerere classes start with capital 'A'. Structs are an exception
+	 */
 	namespace Awerere
 	{
 		class APlaneCollider;
@@ -76,7 +83,6 @@ namespace Rubeus
 			 * @fn		ACollideData tryIntersect(ABoxCollider & box) override
 			 *
 			 * @brief	Returns collision status between 2 different colliders
-			 * @warning
 			 *
 			 * @param	box	The box collider to try a collision with.
 			 *
@@ -88,7 +94,6 @@ namespace Rubeus
 			 * @fn		ACollideData tryIntersect(ABoxCollider & plane) override
 			 *
 			 * @brief	Returns collision status between 2 different colliders
-			 * @warning
 			 *
 			 * @param	plane	The plane collider to try a collision with.
 			 *
@@ -100,7 +105,6 @@ namespace Rubeus
 			 * @fn		ACollideData tryIntersect(ABoxCollider & sphere) override
 			 *
 			 * @brief	Returns collision status between 2 different colliders
-			 * @warning
 			 *
 			 * @param	sphere	The sphere collider to try a collision with.
 			 *

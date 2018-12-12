@@ -1,15 +1,16 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="class_rubeus_1_1_r_game_object" kind="class" language="C++" prot="public">
     <compoundname>Rubeus::RGameObject</compoundname>
     <basecompoundref refid="class_rubeus_1_1_r_entity" prot="public" virt="non-virtual">Rubeus::REntity</basecompoundref>
     <basecompoundref refid="class_rubeus_1_1_r_master_component" prot="public" virt="non-virtual">Rubeus::RMasterComponent</basecompoundref>
     <derivedcompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_group" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RGroup</derivedcompoundref>
+    <derivedcompoundref refid="class_usample__object" prot="public" virt="non-virtual">Usample_object</derivedcompoundref>
     <includes refid="game__object_8h" local="no">game_object.h</includes>
       <sectiondef kind="public-static-attrib">
-      <memberdef kind="variable" id="class_rubeus_1_1_r_game_object_1a6fcc68c1386fa2001afba2ebffac2c7b" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="class_rubeus_1_1_r_game_object_1ac91bd9c106e663ce0aeb3a594ad09985" prot="public" static="yes" mutable="no">
         <type>std::unordered_map&lt; std::string, <ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref> * &gt;</type>
-        <definition>std::unordered_map&lt;std::string, RGameObject *&gt; Rubeus::RGameObject::InstantiatedGameObjects</definition>
+        <definition>std::unordered_map&lt; std::string, RGameObject * &gt; Rubeus::RGameObject::InstantiatedGameObjects</definition>
         <argsstring></argsstring>
         <name>InstantiatedGameObjects</name>
         <briefdescription>
@@ -18,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="32" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" bodystart="32" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="32" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -33,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="35" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" bodystart="35" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="35" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_game_object_1a024d28b449055a4ecee919be155cef61" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -46,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="38" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" bodystart="38" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="38" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_game_object_1a141774d17214b4a86e8f4d2ada078574" prot="public" static="no" mutable="no">
         <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_sprite" kindref="compound">GraphicComponents::RSprite</ref> *</type>
@@ -59,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="41" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" bodystart="41" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="41" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_game_object_1a381c5fbf3aabddacb98c9d70100143ea" prot="public" static="no" mutable="no">
         <type><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_object" kindref="compound">Awerere::APhysicsObject</ref> *</type>
@@ -72,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="44" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" bodystart="44" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="44" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_game_object_1a30c59cd4fa242595ab2980f31dfd0f31" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -85,8 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="47" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" bodystart="47" bodyend="-1"/>
-        <referencedby refid="class_rubeus_1_1_r_game_object_1a06e56244cc44db0ab56a2ca38423a546" compoundref="game__object_8h" startline="146" endline="146">addToTickQueue</referencedby>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="47" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_game_object_1a9dc72644b5d8b96240763913e767b885" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="50" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" bodystart="50" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="50" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_game_object_1a37dfcb0ff063ffa0e204b5970fa9d2fa" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="53" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" bodystart="53" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="53" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_game_object_1aa903a9044d22b660f502953e66f084b6" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="56" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" bodystart="56" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="56" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_game_object_1aa8d364e2a65f0bef7b5a90037c46d5ec" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="59" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" bodystart="59" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="59" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" bodystart="59" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -156,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="158" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" bodystart="158" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="158" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" bodystart="158" bodyend="-1"/>
       </memberdef>
       <memberdef kind="friend" id="class_rubeus_1_1_r_game_object_1abbd9bc577675917336fd07ab54e0580c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend class</type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="159" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" bodystart="159" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="159" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" bodystart="159" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -212,9 +212,9 @@
           <defval>false</defval>
         </param>
         <param>
-          <type>const <ref refid="awerere__collider__object_8h_1aa31f43f0fcc41516bb0aa51cb1d88a08" kindref="member">Awerere::EColliderType</ref> &amp;</type>
+          <type>const <ref refid="namespace_rubeus_1_1_awerere_1aa31f43f0fcc41516bb0aa51cb1d88a08" kindref="member">Awerere::EColliderType</ref> &amp;</type>
           <declname>type</declname>
-          <defval>Awerere::EColliderType::NO_COLLIDER</defval>
+          <defval><ref refid="namespace_rubeus_1_1_awerere_1aa31f43f0fcc41516bb0aa51cb1d88a08a80cda54f91e5930408b152ed0f86b797" kindref="member">Awerere::EColliderType::NO_COLLIDER</ref></defval>
         </param>
         <param>
           <type><ref refid="class_rubeus_1_1_awerere_1_1_a_collider" kindref="compound">Awerere::ACollider</ref> *</type>
@@ -323,7 +323,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="81" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="81" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/game_object.cpp" bodystart="14" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_game_object_1aed2b6c42a232def6ce7ee4d1d8e6d124" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -377,9 +377,9 @@
           <defval><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material" kindref="compound">Awerere::APhysicsMaterial</ref>()</defval>
         </param>
         <param>
-          <type>const <ref refid="awerere__collider__object_8h_1aa31f43f0fcc41516bb0aa51cb1d88a08" kindref="member">Awerere::EColliderType</ref> &amp;</type>
+          <type>const <ref refid="namespace_rubeus_1_1_awerere_1aa31f43f0fcc41516bb0aa51cb1d88a08" kindref="member">Awerere::EColliderType</ref> &amp;</type>
           <declname>type</declname>
-          <defval>Awerere::EColliderType::NO_COLLIDER</defval>
+          <defval><ref refid="namespace_rubeus_1_1_awerere_1aa31f43f0fcc41516bb0aa51cb1d88a08a80cda54f91e5930408b152ed0f86b797" kindref="member">Awerere::EColliderType::NO_COLLIDER</ref></defval>
         </param>
         <param>
           <type><ref refid="class_rubeus_1_1_awerere_1_1_a_collider" kindref="compound">Awerere::ACollider</ref> *</type>
@@ -397,7 +397,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="105" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="105" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/game_object.cpp" bodystart="43" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_game_object_1a4c60d9f9133a6f321c50d39b2f2a096e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -410,20 +410,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="112" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="112" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/game_object.cpp" bodystart="72" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_game_object_1a92f2fe2f062e45a168f45db52a7f35c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void Rubeus::RGameObject::begin</definition>
         <argsstring>()</argsstring>
         <name>begin</name>
+        <reimplementedby refid="class_usample__object_1a81ed21dc7a2200ccb20979e6c41f4e40">begin</reimplementedby>
         <briefdescription>
 <para>Called by the engine once before the level starts to run. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="120" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="120" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/game_object.cpp" bodystart="88" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_game_object_1ade6d964c655301870cb762c1b9c02966" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -431,6 +432,7 @@
         <argsstring>() override</argsstring>
         <name>tick</name>
         <reimplements refid="class_rubeus_1_1_r_entity_1a5a14e115db6573c5b231c52a23582e2d">tick</reimplements>
+        <reimplementedby refid="class_usample__object_1a11811f2d7392dbbb039ca090adb21443">tick</reimplementedby>
         <briefdescription>
 <para>Tick function. </para>        </briefdescription>
         <detaileddescription>
@@ -438,7 +440,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="128" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="128" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/game_object.cpp" bodystart="92" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_game_object_1aa137a57fa68332f4966574f123c9944e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -485,7 +487,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="139" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="139" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/game_object.cpp" bodystart="96" bodyend="98"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_game_object_1a06e56244cc44db0ab56a2ca38423a546" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -498,8 +500,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="146" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" bodystart="146" bodyend="146"/>
-        <references refid="class_rubeus_1_1_r_game_object_1a30c59cd4fa242595ab2980f31dfd0f31" compoundref="game__object_8h" startline="47">m_ThisTicks</references>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="146" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" bodystart="146" bodyend="146"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_game_object_1aa066422f65deb25b9d75dac94f46ca50" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -507,6 +508,7 @@
         <argsstring>(Message *msg) override</argsstring>
         <name>onMessage</name>
         <reimplements refid="class_rubeus_1_1_r_master_component_1a129a5b04db723423b40cfd4780adcd35">onMessage</reimplements>
+        <reimplementedby refid="class_usample__object_1a7b003e12f425fcd2bc3f0eeb4ebeecfb">onMessage</reimplementedby>
         <param>
           <type><ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref> *</type>
           <declname>msg</declname>
@@ -526,7 +528,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="156" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="156" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/game_object.cpp" bodystart="100" bodyend="107"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -541,7 +543,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="168" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="168" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/game_object.cpp" bodystart="67" bodyend="70"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -549,146 +551,152 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="107">
+      <node id="99">
         <label>Rubeus::REntity</label>
         <link refid="class_rubeus_1_1_r_entity"/>
       </node>
-      <node id="106">
-        <label>Rubeus::RGameObject</label>
-        <link refid="class_rubeus_1_1_r_game_object"/>
-        <childnode refid="107" relation="public-inheritance">
-        </childnode>
-        <childnode refid="108" relation="public-inheritance">
+      <node id="102">
+        <label>Usample_object</label>
+        <link refid="class_usample__object"/>
+        <childnode refid="98" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="108">
+      <node id="98">
+        <label>Rubeus::RGameObject</label>
+        <link refid="class_rubeus_1_1_r_game_object"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+        <childnode refid="100" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="100">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
       </node>
-      <node id="109">
+      <node id="101">
         <label>Rubeus::GraphicComponents::RGroup</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_group"/>
-        <childnode refid="106" relation="public-inheritance">
+        <childnode refid="98" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="115">
+      <node id="108">
         <label>Rubeus::Awerere::APhysicsObject</label>
         <link refid="class_rubeus_1_1_awerere_1_1_a_physics_object"/>
-        <childnode refid="116" relation="usage">
+        <childnode refid="109" relation="usage">
           <edgelabel>m_Sprite</edgelabel>
         </childnode>
-        <childnode refid="122" relation="usage">
+        <childnode refid="115" relation="usage">
           <edgelabel>m_Collider</edgelabel>
         </childnode>
-        <childnode refid="123" relation="usage">
+        <childnode refid="116" relation="usage">
           <edgelabel>m_PhysicsMaterial</edgelabel>
         </childnode>
       </node>
-      <node id="111">
+      <node id="104">
         <label>Rubeus::REntity</label>
         <link refid="class_rubeus_1_1_r_entity"/>
       </node>
-      <node id="122">
+      <node id="115">
         <label>Rubeus::Awerere::ACollider</label>
         <link refid="class_rubeus_1_1_awerere_1_1_a_collider"/>
-        <childnode refid="116" relation="usage">
+        <childnode refid="109" relation="usage">
           <edgelabel>m_Sprite</edgelabel>
         </childnode>
-        <childnode refid="123" relation="usage">
+        <childnode refid="116" relation="usage">
           <edgelabel>m_PhysicsMaterial</edgelabel>
         </childnode>
-        <childnode refid="120" relation="usage">
+        <childnode refid="113" relation="usage">
           <edgelabel>m_Force</edgelabel>
           <edgelabel>m_Momentum</edgelabel>
         </childnode>
-        <childnode refid="121" relation="usage">
+        <childnode refid="114" relation="usage">
           <edgelabel>m_Position</edgelabel>
         </childnode>
       </node>
-      <node id="118">
+      <node id="111">
         <label>RML::Vector4D</label>
         <link refid="struct_r_m_l_1_1_vector4_d"/>
       </node>
-      <node id="116">
+      <node id="109">
         <label>Rubeus::GraphicComponents::RSprite</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_sprite"/>
-        <childnode refid="117" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="121">
-        <label>RML::Vector3D</label>
-        <link refid="struct_r_m_l_1_1_vector3_d"/>
-      </node>
-      <node id="119">
-        <label>Rubeus::GraphicComponents::RTexture</label>
-        <link refid="class_rubeus_1_1_graphic_components_1_1_r_texture"/>
-      </node>
-      <node id="120">
-        <label>RML::Vector2D</label>
-        <link refid="struct_r_m_l_1_1_vector2_d"/>
-      </node>
-      <node id="117">
-        <label>Rubeus::GraphicComponents::RRenderableObject</label>
-        <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
-        <childnode refid="118" relation="usage">
-          <edgelabel>m_Color</edgelabel>
-        </childnode>
-        <childnode refid="119" relation="usage">
-          <edgelabel>m_Texture</edgelabel>
-        </childnode>
-        <childnode refid="120" relation="usage">
-          <edgelabel>m_Size</edgelabel>
-        </childnode>
-        <childnode refid="121" relation="usage">
-          <edgelabel>m_Position</edgelabel>
+        <childnode refid="110" relation="public-inheritance">
         </childnode>
       </node>
       <node id="114">
+        <label>RML::Vector3D</label>
+        <link refid="struct_r_m_l_1_1_vector3_d"/>
+      </node>
+      <node id="112">
+        <label>Rubeus::GraphicComponents::RTexture</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_texture"/>
+      </node>
+      <node id="113">
+        <label>RML::Vector2D</label>
+        <link refid="struct_r_m_l_1_1_vector2_d"/>
+      </node>
+      <node id="110">
+        <label>Rubeus::GraphicComponents::RRenderableObject</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
+        <childnode refid="111" relation="usage">
+          <edgelabel>m_Color</edgelabel>
+        </childnode>
+        <childnode refid="112" relation="usage">
+          <edgelabel>m_Texture</edgelabel>
+        </childnode>
+        <childnode refid="113" relation="usage">
+          <edgelabel>m_Size</edgelabel>
+        </childnode>
+        <childnode refid="114" relation="usage">
+          <edgelabel>m_Position</edgelabel>
+        </childnode>
+      </node>
+      <node id="107">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="113">
+      <node id="106">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="114" relation="usage">
+        <childnode refid="107" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="110">
+      <node id="103">
         <label>Rubeus::RGameObject</label>
         <link refid="class_rubeus_1_1_r_game_object"/>
-        <childnode refid="111" relation="public-inheritance">
+        <childnode refid="104" relation="public-inheritance">
         </childnode>
-        <childnode refid="112" relation="public-inheritance">
+        <childnode refid="105" relation="public-inheritance">
         </childnode>
-        <childnode refid="115" relation="usage">
+        <childnode refid="108" relation="usage">
           <edgelabel>m_PhysicsObject</edgelabel>
         </childnode>
-        <childnode refid="116" relation="usage">
+        <childnode refid="109" relation="usage">
           <edgelabel>m_Sprite</edgelabel>
         </childnode>
       </node>
-      <node id="112">
+      <node id="105">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="113" relation="usage">
+        <childnode refid="106" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>
-      <node id="123">
+      <node id="116">
         <label>Rubeus::Awerere::APhysicsMaterial</label>
         <link refid="class_rubeus_1_1_awerere_1_1_a_physics_material"/>
-        <childnode refid="123" relation="usage">
+        <childnode refid="116" relation="usage">
           <edgelabel>DefaultMaterial</edgelabel>
         </childnode>
-        <childnode refid="120" relation="usage">
+        <childnode refid="113" relation="usage">
           <edgelabel>m_Gravity</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" line="27" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h" bodystart="26" bodyend="169"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="27" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" bodystart="26" bodyend="169"/>
     <listofallmembers>
       <member refid="class_rubeus_1_1_r_game_object_1aa7f3b03569fe7eaa074085cda3887b03" prot="public" virt="non-virtual"><scope>Rubeus::RGameObject</scope><name>ACollisionEngine</name></member>
       <member refid="class_rubeus_1_1_r_game_object_1a06e56244cc44db0ab56a2ca38423a546" prot="public" virt="non-virtual"><scope>Rubeus::RGameObject</scope><name>addToTickQueue</name></member>
@@ -698,7 +706,7 @@
       <member refid="class_rubeus_1_1_r_master_component_1ada4b85021d96ac2c2153e613d5f14097" prot="public" virt="non-virtual"><scope>Rubeus::RGameObject</scope><name>getComponentID</name></member>
       <member refid="class_rubeus_1_1_r_entity_1a711b39f7080c54161c642770ae7c73eb" prot="public" virt="non-virtual" ambiguityscope="Rubeus::"><scope>Rubeus::RGameObject</scope><name>getName</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1ad3c9003c4bc64661ed9ae5961c8cf3fa" prot="public" virt="non-virtual" ambiguityscope="Rubeus::RMasterComponent::"><scope>Rubeus::RGameObject</scope><name>getName</name></member>
-      <member refid="class_rubeus_1_1_r_game_object_1a6fcc68c1386fa2001afba2ebffac2c7b" prot="public" virt="non-virtual"><scope>Rubeus::RGameObject</scope><name>InstantiatedGameObjects</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1ac91bd9c106e663ce0aeb3a594ad09985" prot="public" virt="non-virtual"><scope>Rubeus::RGameObject</scope><name>InstantiatedGameObjects</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1a838bceba7935bb3b11a5b69def0f0fc0" prot="protected" virt="non-virtual"><scope>Rubeus::RGameObject</scope><name>m_ComponentID</name></member>
       <member refid="class_rubeus_1_1_r_entity_1a4a6b38c0f88052f8867d8591cbd776d5" prot="public" virt="non-virtual"><scope>Rubeus::RGameObject</scope><name>m_EntityID</name></member>
       <member refid="class_rubeus_1_1_r_game_object_1aa8d364e2a65f0bef7b5a90037c46d5ec" prot="public" virt="non-virtual"><scope>Rubeus::RGameObject</scope><name>m_GeneratesHit</name></member>
@@ -720,9 +728,9 @@
       <member refid="class_rubeus_1_1_r_game_object_1a3a512ae142f34273d5cfac0177c58a11" prot="protected" virt="non-virtual"><scope>Rubeus::RGameObject</scope><name>RGameObject</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1aecd982f5c7361dbb23bcc8ac5ec6481c" prot="public" virt="non-virtual"><scope>Rubeus::RGameObject</scope><name>RMasterComponent</name></member>
       <member refid="class_rubeus_1_1_r_game_object_1ade6d964c655301870cb762c1b9c02966" prot="public" virt="virtual"><scope>Rubeus::RGameObject</scope><name>tick</name></member>
-      <member refid="class_rubeus_1_1_r_entity_1a3ff69a73c97dbe20c3677166205449fa" prot="public" virt="virtual"><scope>Rubeus::RGameObject</scope><name>~REntity</name></member>
+      <member refid="class_rubeus_1_1_r_entity_1aef39429d45d98fccaa2633799360e24d" prot="public" virt="virtual"><scope>Rubeus::RGameObject</scope><name>~REntity</name></member>
       <member refid="class_rubeus_1_1_r_game_object_1a4c60d9f9133a6f321c50d39b2f2a096e" prot="public" virt="non-virtual"><scope>Rubeus::RGameObject</scope><name>~RGameObject</name></member>
-      <member refid="class_rubeus_1_1_r_master_component_1a3ee1666371bfafadd5f3adfa67ac874c" prot="public" virt="virtual"><scope>Rubeus::RGameObject</scope><name>~RMasterComponent</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1a03a8ba150ef34447b3c7d22f10dca93a" prot="public" virt="virtual"><scope>Rubeus::RGameObject</scope><name>~RMasterComponent</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

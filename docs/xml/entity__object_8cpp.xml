@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="entity__object_8cpp" kind="file" language="C++">
+    <compoundname>entity_object.cpp</compoundname>
+    <includes refid="entity__object_8h" local="no">entity_object.h</includes>
+    <incdepgraph>
+      <node id="3396">
+        <label>string</label>
+      </node>
+      <node id="3395">
+        <label>entity_object.h</label>
+        <link refid="entity__object_8h"/>
+        <childnode refid="3396" relation="include">
+        </childnode>
+      </node>
+      <node id="3394">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/entity_object.cpp</label>
+        <link refid="entity__object_8cpp"/>
+        <childnode refid="3395" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
+    <briefdescription>
+<para>Defines the Entity class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/entity_object.cpp"/>
+  </compounddef>
+</doxygen>

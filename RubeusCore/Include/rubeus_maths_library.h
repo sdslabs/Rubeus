@@ -11,6 +11,9 @@
 #include <math.h>
 #include <iostream>
 
+/** @namespace RML
+ * @brief The Rubeus Maths Library for Rubeus Engine namespace.
+ */
 namespace RML
 {
 	/**
@@ -918,7 +921,7 @@ namespace RML
 	struct Matrix4
 	{
 		/**
-			* @union	Unnamed
+			* @union	
 			*
 			* @brief	An unnamed union. Used to refer to Matrix4 columns as an array of Vector4Ds
 			*/

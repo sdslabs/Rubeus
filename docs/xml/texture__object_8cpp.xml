@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="texture__object_8cpp" kind="file" language="C++">
+    <compoundname>texture_object.cpp</compoundname>
+    <includes refid="texture__object_8h" local="no">texture_object.h</includes>
+    <includes refid="image__object_8h" local="no">image_object.h</includes>
+    <incdepgraph>
+      <node id="4017">
+        <label>loader_component.h</label>
+        <link refid="loader__component_8h"/>
+        <childnode refid="4018" relation="include">
+        </childnode>
+        <childnode refid="4019" relation="include">
+        </childnode>
+        <childnode refid="4020" relation="include">
+        </childnode>
+        <childnode refid="4021" relation="include">
+        </childnode>
+        <childnode refid="4022" relation="include">
+        </childnode>
+        <childnode refid="4023" relation="include">
+        </childnode>
+        <childnode refid="4025" relation="include">
+        </childnode>
+        <childnode refid="4033" relation="include">
+        </childnode>
+      </node>
+      <node id="4021">
+        <label>IL/il.h</label>
+      </node>
+      <node id="4022">
+        <label>IL/ilu.h</label>
+      </node>
+      <node id="4031">
+        <label>message_object.h</label>
+        <link refid="message__object_8h"/>
+        <childnode refid="4019" relation="include">
+        </childnode>
+        <childnode refid="4032" relation="include">
+        </childnode>
+        <childnode refid="4033" relation="include">
+        </childnode>
+        <childnode refid="4034" relation="include">
+        </childnode>
+      </node>
+      <node id="4019">
+        <label>string</label>
+      </node>
+      <node id="4016">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="4029">
+        <label>message_system.h</label>
+        <link refid="message__system_8h"/>
+        <childnode refid="4030" relation="include">
+        </childnode>
+        <childnode refid="4031" relation="include">
+        </childnode>
+        <childnode refid="4035" relation="include">
+        </childnode>
+      </node>
+      <node id="4032">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="4034">
+        <label>message_codes.h</label>
+        <link refid="message__codes_8h"/>
+        <childnode refid="4023" relation="include">
+        </childnode>
+      </node>
+      <node id="4033">
+        <label>image_object.h</label>
+        <link refid="image__object_8h"/>
+        <childnode refid="4019" relation="include">
+        </childnode>
+        <childnode refid="4021" relation="include">
+        </childnode>
+      </node>
+      <node id="4035">
+        <label>message_bus.h</label>
+        <link refid="message__bus_8h"/>
+        <childnode refid="4030" relation="include">
+        </childnode>
+        <childnode refid="4031" relation="include">
+        </childnode>
+      </node>
+      <node id="4018">
+        <label>string.h</label>
+      </node>
+      <node id="4027">
+        <label>typeinfo</label>
+      </node>
+      <node id="4030">
+        <label>vector</label>
+      </node>
+      <node id="4020">
+        <label>cstdlib</label>
+      </node>
+      <node id="4024">
+        <label>iostream</label>
+      </node>
+      <node id="4025">
+        <label>master_component.h</label>
+        <link refid="master__component_8h"/>
+        <childnode refid="4019" relation="include">
+        </childnode>
+        <childnode refid="4026" relation="include">
+        </childnode>
+        <childnode refid="4027" relation="include">
+        </childnode>
+        <childnode refid="4028" relation="include">
+        </childnode>
+        <childnode refid="4023" relation="include">
+        </childnode>
+        <childnode refid="4029" relation="include">
+        </childnode>
+      </node>
+      <node id="4026">
+        <label>unordered_map</label>
+      </node>
+      <node id="4015">
+        <label>texture_object.h</label>
+        <link refid="texture__object_8h"/>
+        <childnode refid="4016" relation="include">
+        </childnode>
+        <childnode refid="4017" relation="include">
+        </childnode>
+      </node>
+      <node id="4014">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/texture_object.cpp</label>
+        <link refid="texture__object_8cpp"/>
+        <childnode refid="4015" relation="include">
+        </childnode>
+        <childnode refid="4033" relation="include">
+        </childnode>
+      </node>
+      <node id="4028">
+        <label>memory</label>
+      </node>
+      <node id="4023">
+        <label>logger_component.h</label>
+        <link refid="logger__component_8h"/>
+        <childnode refid="4024" relation="include">
+        </childnode>
+        <childnode refid="4018" relation="include">
+        </childnode>
+        <childnode refid="4019" relation="include">
+        </childnode>
+        <childnode refid="4016" relation="include">
+        </childnode>
+        <childnode refid="4021" relation="include">
+        </childnode>
+        <childnode refid="4022" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
+    <innernamespace refid="namespace_rubeus_1_1_graphic_components">Rubeus::GraphicComponents</innernamespace>
+    <briefdescription>
+<para>Implements the Texture class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/texture_object.cpp"/>
+  </compounddef>
+</doxygen>

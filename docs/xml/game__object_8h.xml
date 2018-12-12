@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="game__object_8h" kind="file" language="C++">
     <compoundname>game_object.h</compoundname>
     <includes refid="rubeus__maths__library_8h" local="no">rubeus_maths_library.h</includes>
@@ -11,453 +11,553 @@
     <includes refid="awerere__physics__material_8h" local="no">awerere_physics_material.h</includes>
     <includes refid="awerere__collider__object_8h" local="no">awerere_collider_object.h</includes>
     <includes refid="awerere__collision__engine_8h" local="no">awerere_collision_engine.h</includes>
-    <includedby refid="group__object_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h</includedby>
-    <includedby refid="world_8h" local="no">D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/world.h</includedby>
+    <includedby refid="_rubeus_core_8h" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/RubeusCore.h</includedby>
+    <includedby refid="group__object_8h" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/group_object.h</includedby>
+    <includedby refid="world_8h" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/world.h</includedby>
+    <includedby refid="awerere__collision__engine_8cpp" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_collision_engine.cpp</includedby>
+    <includedby refid="awerere__physics__engine_8cpp" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_physics_engine.cpp</includedby>
+    <includedby refid="game__object_8cpp" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/game_object.cpp</includedby>
     <incdepgraph>
-      <node id="562">
-        <label>awerere_collision_engine.h</label>
-        <link refid="awerere__collision__engine_8h"/>
-        <childnode refid="563" relation="include">
-        </childnode>
-        <childnode refid="564" relation="include">
-        </childnode>
-        <childnode refid="568" relation="include">
-        </childnode>
-        <childnode refid="569" relation="include">
-        </childnode>
-        <childnode refid="561" relation="include">
-        </childnode>
-      </node>
-      <node id="556">
-        <label>shader_component.h</label>
-        <link refid="shader__component_8h"/>
-        <childnode refid="542" relation="include">
-        </childnode>
-        <childnode refid="534" relation="include">
-        </childnode>
-        <childnode refid="546" relation="include">
-        </childnode>
-        <childnode refid="544" relation="include">
-        </childnode>
-        <childnode refid="527" relation="include">
-        </childnode>
-      </node>
-      <node id="563">
-        <label>awerere_collision_grid.h</label>
-        <link refid="awerere__collision__grid_8h"/>
-      </node>
-      <node id="526">
-        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h</label>
-        <link refid="game__object_8h"/>
-        <childnode refid="527" relation="include">
-        </childnode>
-        <childnode refid="530" relation="include">
-        </childnode>
-        <childnode refid="532" relation="include">
-        </childnode>
-        <childnode refid="543" relation="include">
-        </childnode>
-        <childnode refid="546" relation="include">
-        </childnode>
-        <childnode refid="558" relation="include">
-        </childnode>
-        <childnode refid="559" relation="include">
-        </childnode>
-        <childnode refid="560" relation="include">
-        </childnode>
-        <childnode refid="562" relation="include">
-        </childnode>
-      </node>
-      <node id="538">
-        <label>IL/il.h</label>
-      </node>
-      <node id="532">
-        <label>sprite_object.h</label>
-        <link refid="sprite__object_8h"/>
-        <childnode refid="533" relation="include">
-        </childnode>
-      </node>
-      <node id="539">
-        <label>IL/ilu.h</label>
-      </node>
-      <node id="569">
-        <label>awerere_hit_event_list.h</label>
-        <link refid="awerere__hit__event__list_8h"/>
-        <childnode refid="570" relation="include">
-        </childnode>
-        <childnode refid="561" relation="include">
-        </childnode>
-      </node>
-      <node id="530">
-        <label>entity_object.h</label>
-        <link refid="entity__object_8h"/>
-        <childnode refid="531" relation="include">
-        </childnode>
-      </node>
-      <node id="531">
-        <label>string</label>
-      </node>
-      <node id="534">
-        <label>GL/glew.h</label>
-      </node>
-      <node id="565">
-        <label>GLFW/glfw3.h</label>
-      </node>
-      <node id="557">
+      <node id="903">
         <label>renderer_component.h</label>
         <link refid="renderer__component_8h"/>
-        <childnode refid="534" relation="include">
+        <childnode refid="880" relation="include">
         </childnode>
-        <childnode refid="527" relation="include">
+        <childnode refid="873" relation="include">
         </childnode>
-        <childnode refid="546" relation="include">
-        </childnode>
-      </node>
-      <node id="554">
-        <label>message_codes.h</label>
-        <link refid="message__codes_8h"/>
-        <childnode refid="536" relation="include">
+        <childnode refid="892" relation="include">
         </childnode>
       </node>
-      <node id="551">
+      <node id="890">
+        <label>loader_component.h</label>
+        <link refid="loader__component_8h"/>
+        <childnode refid="883" relation="include">
+        </childnode>
+        <childnode refid="877" relation="include">
+        </childnode>
+        <childnode refid="891" relation="include">
+        </childnode>
+        <childnode refid="884" relation="include">
+        </childnode>
+        <childnode refid="885" relation="include">
+        </childnode>
+        <childnode refid="882" relation="include">
+        </childnode>
+        <childnode refid="892" relation="include">
+        </childnode>
+        <childnode refid="899" relation="include">
+        </childnode>
+      </node>
+      <node id="912">
+        <label>input_manager.h</label>
+        <link refid="input__manager_8h"/>
+        <childnode refid="877" relation="include">
+        </childnode>
+        <childnode refid="893" relation="include">
+        </childnode>
+        <childnode refid="888" relation="include">
+        </childnode>
+        <childnode refid="880" relation="include">
+        </childnode>
+        <childnode refid="911" relation="include">
+        </childnode>
+        <childnode refid="882" relation="include">
+        </childnode>
+        <childnode refid="890" relation="include">
+        </childnode>
+        <childnode refid="873" relation="include">
+        </childnode>
+        <childnode refid="892" relation="include">
+        </childnode>
+        <childnode refid="913" relation="include">
+        </childnode>
+      </node>
+      <node id="914">
+        <label>awerere_flag.h</label>
+        <link refid="awerere__flag_8h"/>
+        <childnode refid="888" relation="include">
+        </childnode>
+      </node>
+      <node id="884">
+        <label>IL/il.h</label>
+      </node>
+      <node id="885">
+        <label>IL/ilu.h</label>
+      </node>
+      <node id="878">
+        <label>sprite_object.h</label>
+        <link refid="sprite__object_8h"/>
+        <childnode refid="879" relation="include">
+        </childnode>
+      </node>
+      <node id="897">
         <label>message_object.h</label>
         <link refid="message__object_8h"/>
-        <childnode refid="531" relation="include">
+        <childnode refid="877" relation="include">
         </childnode>
-        <childnode refid="552" relation="include">
+        <childnode refid="898" relation="include">
         </childnode>
-        <childnode refid="553" relation="include">
+        <childnode refid="899" relation="include">
         </childnode>
-        <childnode refid="554" relation="include">
+        <childnode refid="900" relation="include">
         </childnode>
       </node>
-      <node id="550">
+      <node id="877">
+        <label>string</label>
+      </node>
+      <node id="880">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="873">
+        <label>rubeus_maths_library.h</label>
+        <link refid="rubeus__maths__library_8h"/>
+        <childnode refid="874" relation="include">
+        </childnode>
+        <childnode refid="875" relation="include">
+        </childnode>
+      </node>
+      <node id="911">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="904">
+        <label>awerere_physics_object.h</label>
+        <link refid="awerere__physics__object_8h"/>
+        <childnode refid="888" relation="include">
+        </childnode>
+        <childnode refid="873" relation="include">
+        </childnode>
+        <childnode refid="905" relation="include">
+        </childnode>
+        <childnode refid="906" relation="include">
+        </childnode>
+      </node>
+      <node id="902">
+        <label>shader_component.h</label>
+        <link refid="shader__component_8h"/>
+        <childnode refid="888" relation="include">
+        </childnode>
+        <childnode refid="880" relation="include">
+        </childnode>
+        <childnode refid="892" relation="include">
+        </childnode>
+        <childnode refid="890" relation="include">
+        </childnode>
+        <childnode refid="873" relation="include">
+        </childnode>
+      </node>
+      <node id="908">
+        <label>awerere_collision_engine.h</label>
+        <link refid="awerere__collision__engine_8h"/>
+        <childnode refid="909" relation="include">
+        </childnode>
+        <childnode refid="910" relation="include">
+        </childnode>
+        <childnode refid="914" relation="include">
+        </childnode>
+        <childnode refid="915" relation="include">
+        </childnode>
+        <childnode refid="907" relation="include">
+        </childnode>
+      </node>
+      <node id="910">
+        <label>window_component.h</label>
+        <link refid="window__component_8h"/>
+        <childnode refid="883" relation="include">
+        </childnode>
+        <childnode refid="880" relation="include">
+        </childnode>
+        <childnode refid="911" relation="include">
+        </childnode>
+        <childnode refid="882" relation="include">
+        </childnode>
+        <childnode refid="890" relation="include">
+        </childnode>
+        <childnode refid="892" relation="include">
+        </childnode>
+        <childnode refid="912" relation="include">
+        </childnode>
+        <childnode refid="904" relation="include">
+        </childnode>
+      </node>
+      <node id="896">
         <label>message_system.h</label>
         <link refid="message__system_8h"/>
-        <childnode refid="542" relation="include">
+        <childnode refid="888" relation="include">
         </childnode>
-        <childnode refid="551" relation="include">
+        <childnode refid="897" relation="include">
         </childnode>
-        <childnode refid="555" relation="include">
-        </childnode>
-      </node>
-      <node id="553">
-        <label>image_object.h</label>
-        <link refid="image__object_8h"/>
-        <childnode refid="531" relation="include">
-        </childnode>
-        <childnode refid="538" relation="include">
+        <childnode refid="901" relation="include">
         </childnode>
       </node>
-      <node id="552">
+      <node id="898">
         <label>boost/any.hpp</label>
       </node>
-      <node id="567">
+      <node id="900">
+        <label>message_codes.h</label>
+        <link refid="message__codes_8h"/>
+        <childnode refid="882" relation="include">
+        </childnode>
+      </node>
+      <node id="899">
+        <label>image_object.h</label>
+        <link refid="image__object_8h"/>
+        <childnode refid="877" relation="include">
+        </childnode>
+        <childnode refid="884" relation="include">
+        </childnode>
+      </node>
+      <node id="887">
+        <label>vertex_array_object.h</label>
+        <link refid="vertex__array__object_8h"/>
+        <childnode refid="880" relation="include">
+        </childnode>
+        <childnode refid="888" relation="include">
+        </childnode>
+        <childnode refid="881" relation="include">
+        </childnode>
+      </node>
+      <node id="915">
+        <label>awerere_hit_event_list.h</label>
+        <link refid="awerere__hit__event__list_8h"/>
+        <childnode refid="916" relation="include">
+        </childnode>
+        <childnode refid="907" relation="include">
+        </childnode>
+      </node>
+      <node id="901">
+        <label>message_bus.h</label>
+        <link refid="message__bus_8h"/>
+        <childnode refid="888" relation="include">
+        </childnode>
+        <childnode refid="897" relation="include">
+        </childnode>
+      </node>
+      <node id="883">
+        <label>string.h</label>
+      </node>
+      <node id="894">
+        <label>typeinfo</label>
+      </node>
+      <node id="888">
+        <label>vector</label>
+      </node>
+      <node id="876">
+        <label>entity_object.h</label>
+        <link refid="entity__object_8h"/>
+        <childnode refid="877" relation="include">
+        </childnode>
+      </node>
+      <node id="905">
+        <label>awerere_physics_material.h</label>
+        <link refid="awerere__physics__material_8h"/>
+        <childnode refid="873" relation="include">
+        </childnode>
+      </node>
+      <node id="879">
+        <label>renderable_object.h</label>
+        <link refid="renderable__object_8h"/>
+        <childnode refid="880" relation="include">
+        </childnode>
+        <childnode refid="873" relation="include">
+        </childnode>
+        <childnode refid="881" relation="include">
+        </childnode>
+        <childnode refid="886" relation="include">
+        </childnode>
+        <childnode refid="887" relation="include">
+        </childnode>
+        <childnode refid="889" relation="include">
+        </childnode>
+        <childnode refid="902" relation="include">
+        </childnode>
+        <childnode refid="903" relation="include">
+        </childnode>
+      </node>
+      <node id="872">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h</label>
+        <link refid="game__object_8h"/>
+        <childnode refid="873" relation="include">
+        </childnode>
+        <childnode refid="876" relation="include">
+        </childnode>
+        <childnode refid="878" relation="include">
+        </childnode>
+        <childnode refid="889" relation="include">
+        </childnode>
+        <childnode refid="892" relation="include">
+        </childnode>
+        <childnode refid="904" relation="include">
+        </childnode>
+        <childnode refid="905" relation="include">
+        </childnode>
+        <childnode refid="906" relation="include">
+        </childnode>
+        <childnode refid="908" relation="include">
+        </childnode>
+      </node>
+      <node id="886">
+        <label>index_buffer_object.h</label>
+        <link refid="index__buffer__object_8h"/>
+        <childnode refid="880" relation="include">
+        </childnode>
+        <childnode refid="882" relation="include">
+        </childnode>
+      </node>
+      <node id="913">
         <label>keys.h</label>
         <link refid="keys_8h"/>
       </node>
-      <node id="560">
-        <label>awerere_collider_object.h</label>
-        <link refid="awerere__collider__object_8h"/>
-        <childnode refid="527" relation="include">
-        </childnode>
-        <childnode refid="559" relation="include">
-        </childnode>
-        <childnode refid="561" relation="include">
-        </childnode>
-        <childnode refid="532" relation="include">
-        </childnode>
-      </node>
-      <node id="537">
-        <label>string.h</label>
-      </node>
-      <node id="548">
-        <label>typeinfo</label>
-      </node>
-      <node id="540">
-        <label>index_buffer_object.h</label>
-        <link refid="index__buffer__object_8h"/>
-        <childnode refid="534" relation="include">
-        </childnode>
-        <childnode refid="536" relation="include">
-        </childnode>
-      </node>
-      <node id="542">
-        <label>vector</label>
-      </node>
-      <node id="564">
-        <label>window_component.h</label>
-        <link refid="window__component_8h"/>
-        <childnode refid="537" relation="include">
-        </childnode>
-        <childnode refid="534" relation="include">
-        </childnode>
-        <childnode refid="565" relation="include">
-        </childnode>
-        <childnode refid="536" relation="include">
-        </childnode>
-        <childnode refid="544" relation="include">
-        </childnode>
-        <childnode refid="546" relation="include">
-        </childnode>
-        <childnode refid="566" relation="include">
-        </childnode>
-        <childnode refid="558" relation="include">
-        </childnode>
-      </node>
-      <node id="568">
-        <label>awerere_flag.h</label>
-        <link refid="awerere__flag_8h"/>
-        <childnode refid="542" relation="include">
-        </childnode>
-      </node>
-      <node id="561">
-        <label>awerere_collide_data_object.h</label>
-        <link refid="awerere__collide__data__object_8h"/>
-        <childnode refid="527" relation="include">
-        </childnode>
-      </node>
-      <node id="528">
+      <node id="874">
         <label>math.h</label>
       </node>
-      <node id="545">
+      <node id="891">
         <label>cstdlib</label>
       </node>
-      <node id="555">
-        <label>message_bus.h</label>
-        <link refid="message__bus_8h"/>
-        <childnode refid="542" relation="include">
-        </childnode>
-        <childnode refid="551" relation="include">
-        </childnode>
-      </node>
-      <node id="529">
-        <label>iostream</label>
-      </node>
-      <node id="541">
-        <label>vertex_array_object.h</label>
-        <link refid="vertex__array__object_8h"/>
-        <childnode refid="534" relation="include">
-        </childnode>
-        <childnode refid="542" relation="include">
-        </childnode>
-        <childnode refid="535" relation="include">
-        </childnode>
-      </node>
-      <node id="570">
-        <label>deque</label>
-      </node>
-      <node id="547">
-        <label>unordered_map</label>
-      </node>
-      <node id="535">
+      <node id="881">
         <label>buffer_object.h</label>
         <link refid="buffer__object_8h"/>
-        <childnode refid="534" relation="include">
+        <childnode refid="880" relation="include">
         </childnode>
-        <childnode refid="536" relation="include">
-        </childnode>
-      </node>
-      <node id="536">
-        <label>logger_component.h</label>
-        <link refid="logger__component_8h_source"/>
-        <childnode refid="529" relation="include">
-        </childnode>
-        <childnode refid="537" relation="include">
-        </childnode>
-        <childnode refid="531" relation="include">
-        </childnode>
-        <childnode refid="534" relation="include">
-        </childnode>
-        <childnode refid="538" relation="include">
-        </childnode>
-        <childnode refid="539" relation="include">
+        <childnode refid="882" relation="include">
         </childnode>
       </node>
-      <node id="559">
-        <label>awerere_physics_material.h</label>
-        <link refid="awerere__physics__material_8h"/>
-        <childnode refid="527" relation="include">
+      <node id="875">
+        <label>iostream</label>
+      </node>
+      <node id="892">
+        <label>master_component.h</label>
+        <link refid="master__component_8h"/>
+        <childnode refid="877" relation="include">
+        </childnode>
+        <childnode refid="893" relation="include">
+        </childnode>
+        <childnode refid="894" relation="include">
+        </childnode>
+        <childnode refid="895" relation="include">
+        </childnode>
+        <childnode refid="882" relation="include">
+        </childnode>
+        <childnode refid="896" relation="include">
         </childnode>
       </node>
-      <node id="527">
-        <label>rubeus_maths_library.h</label>
-        <link refid="rubeus__maths__library_8h"/>
-        <childnode refid="528" relation="include">
-        </childnode>
-        <childnode refid="529" relation="include">
-        </childnode>
+      <node id="916">
+        <label>deque</label>
       </node>
-      <node id="543">
+      <node id="893">
+        <label>unordered_map</label>
+      </node>
+      <node id="889">
         <label>texture_object.h</label>
         <link refid="texture__object_8h"/>
-        <childnode refid="534" relation="include">
+        <childnode refid="880" relation="include">
         </childnode>
-        <childnode refid="544" relation="include">
-        </childnode>
-      </node>
-      <node id="544">
-        <label>loader_component.h</label>
-        <link refid="loader__component_8h_source"/>
-        <childnode refid="537" relation="include">
-        </childnode>
-        <childnode refid="531" relation="include">
-        </childnode>
-        <childnode refid="545" relation="include">
-        </childnode>
-        <childnode refid="538" relation="include">
-        </childnode>
-        <childnode refid="539" relation="include">
-        </childnode>
-        <childnode refid="536" relation="include">
-        </childnode>
-        <childnode refid="546" relation="include">
-        </childnode>
-        <childnode refid="553" relation="include">
+        <childnode refid="890" relation="include">
         </childnode>
       </node>
-      <node id="558">
-        <label>awerere_physics_object.h</label>
-        <link refid="awerere__physics__object_8h_source"/>
-        <childnode refid="542" relation="include">
+      <node id="906">
+        <label>awerere_collider_object.h</label>
+        <link refid="awerere__collider__object_8h"/>
+        <childnode refid="873" relation="include">
         </childnode>
-        <childnode refid="527" relation="include">
+        <childnode refid="905" relation="include">
         </childnode>
-        <childnode refid="559" relation="include">
+        <childnode refid="907" relation="include">
         </childnode>
-        <childnode refid="560" relation="include">
-        </childnode>
-      </node>
-      <node id="566">
-        <label>input_manager.h</label>
-        <link refid="input__manager_8h"/>
-        <childnode refid="531" relation="include">
-        </childnode>
-        <childnode refid="547" relation="include">
-        </childnode>
-        <childnode refid="542" relation="include">
-        </childnode>
-        <childnode refid="534" relation="include">
-        </childnode>
-        <childnode refid="565" relation="include">
-        </childnode>
-        <childnode refid="536" relation="include">
-        </childnode>
-        <childnode refid="544" relation="include">
-        </childnode>
-        <childnode refid="527" relation="include">
-        </childnode>
-        <childnode refid="546" relation="include">
-        </childnode>
-        <childnode refid="567" relation="include">
+        <childnode refid="878" relation="include">
         </childnode>
       </node>
-      <node id="546">
-        <label>master_component.h</label>
-        <link refid="master__component_8h_source"/>
-        <childnode refid="531" relation="include">
-        </childnode>
-        <childnode refid="547" relation="include">
-        </childnode>
-        <childnode refid="548" relation="include">
-        </childnode>
-        <childnode refid="549" relation="include">
-        </childnode>
-        <childnode refid="536" relation="include">
-        </childnode>
-        <childnode refid="550" relation="include">
+      <node id="909">
+        <label>awerere_collision_grid.h</label>
+        <link refid="awerere__collision__grid_8h"/>
+      </node>
+      <node id="907">
+        <label>awerere_collide_data_object.h</label>
+        <link refid="awerere__collide__data__object_8h"/>
+        <childnode refid="873" relation="include">
         </childnode>
       </node>
-      <node id="549">
+      <node id="895">
         <label>memory</label>
       </node>
-      <node id="533">
-        <label>renderable_object.h</label>
-        <link refid="renderable__object_8h"/>
-        <childnode refid="534" relation="include">
+      <node id="882">
+        <label>logger_component.h</label>
+        <link refid="logger__component_8h"/>
+        <childnode refid="875" relation="include">
         </childnode>
-        <childnode refid="527" relation="include">
+        <childnode refid="883" relation="include">
         </childnode>
-        <childnode refid="535" relation="include">
+        <childnode refid="877" relation="include">
         </childnode>
-        <childnode refid="540" relation="include">
+        <childnode refid="880" relation="include">
         </childnode>
-        <childnode refid="541" relation="include">
+        <childnode refid="884" relation="include">
         </childnode>
-        <childnode refid="543" relation="include">
-        </childnode>
-        <childnode refid="556" relation="include">
-        </childnode>
-        <childnode refid="557" relation="include">
+        <childnode refid="885" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="572">
-        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/group_object.h</label>
-        <link refid="group__object_8h"/>
-        <childnode refid="573" relation="include">
-        </childnode>
+      <node id="931">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/ui_layer_object.cpp</label>
+        <link refid="ui__layer__object_8cpp"/>
       </node>
-      <node id="571">
-        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h</label>
-        <link refid="game__object_8h"/>
-        <childnode refid="572" relation="include">
-        </childnode>
-        <childnode refid="578" relation="include">
-        </childnode>
-      </node>
-      <node id="580">
-        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/level.h</label>
-        <link refid="level_8h"/>
-        <childnode refid="576" relation="include">
-        </childnode>
-      </node>
-      <node id="577">
-        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/ui_layer_object.h</label>
+      <node id="930">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/ui_layer_object.h</label>
         <link refid="ui__layer__object_8h"/>
-        <childnode refid="575" relation="include">
+        <childnode refid="918" relation="include">
+        </childnode>
+        <childnode refid="924" relation="include">
+        </childnode>
+        <childnode refid="931" relation="include">
         </childnode>
       </node>
-      <node id="574">
-        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/scene_layer_object.h</label>
-        <link refid="scene__layer__object_8h_source"/>
-        <childnode refid="575" relation="include">
-        </childnode>
-      </node>
-      <node id="575">
-        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_composition_object.h</label>
+      <node id="924">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/layer_composition_object.h</label>
         <link refid="layer__composition__object_8h"/>
-        <childnode refid="576" relation="include">
+        <childnode refid="925" relation="include">
+        </childnode>
+        <childnode refid="928" relation="include">
         </childnode>
       </node>
-      <node id="573">
-        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/layer_object.h</label>
-        <link refid="layer__object_8h"/>
-        <childnode refid="574" relation="include">
+      <node id="937">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h</label>
+        <link refid="level_8h"/>
+        <childnode refid="925" relation="include">
         </childnode>
-        <childnode refid="577" relation="include">
-        </childnode>
-      </node>
-      <node id="576">
-        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/engine.h</label>
-        <link refid="engine_8h"/>
-      </node>
-      <node id="578">
-        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/world.h</label>
-        <link refid="world_8h"/>
-        <childnode refid="579" relation="include">
-        </childnode>
-        <childnode refid="576" relation="include">
-        </childnode>
-        <childnode refid="580" relation="include">
+        <childnode refid="927" relation="include">
         </childnode>
       </node>
-      <node id="579">
-        <label>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/awerere_physics_engine.h</label>
+      <node id="918">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/RubeusCore.h</label>
+        <link refid="_rubeus_core_8h"/>
+        <childnode refid="919" relation="include">
+        </childnode>
+        <childnode refid="920" relation="include">
+        </childnode>
+      </node>
+      <node id="934">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_physics_engine.h</label>
         <link refid="awerere__physics__engine_8h"/>
-        <childnode refid="576" relation="include">
+        <childnode refid="918" relation="include">
         </childnode>
+        <childnode refid="925" relation="include">
+        </childnode>
+        <childnode refid="935" relation="include">
+        </childnode>
+        <childnode refid="936" relation="include">
+        </childnode>
+      </node>
+      <node id="921">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/group_object.h</label>
+        <link refid="group__object_8h"/>
+        <childnode refid="922" relation="include">
+        </childnode>
+        <childnode refid="932" relation="include">
+        </childnode>
+      </node>
+      <node id="928">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/layer_composition_object.cpp</label>
+        <link refid="layer__composition__object_8cpp"/>
+      </node>
+      <node id="926">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/engine.cpp</label>
+        <link refid="engine_8cpp"/>
+      </node>
+      <node id="933">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/world.h</label>
+        <link refid="world_8h"/>
+        <childnode refid="918" relation="include">
+        </childnode>
+        <childnode refid="934" relation="include">
+        </childnode>
+        <childnode refid="925" relation="include">
+        </childnode>
+        <childnode refid="937" relation="include">
+        </childnode>
+        <childnode refid="938" relation="include">
+        </childnode>
+      </node>
+      <node id="929">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/scene_layer_object.cpp</label>
+        <link refid="scene__layer__object_8cpp"/>
+      </node>
+      <node id="922">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/layer_object.h</label>
+        <link refid="layer__object_8h"/>
+        <childnode refid="923" relation="include">
+        </childnode>
+        <childnode refid="930" relation="include">
+        </childnode>
+      </node>
+      <node id="919">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp</label>
+        <link refid="user__init_8cpp"/>
+      </node>
+      <node id="936">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_physics_engine.cpp</label>
+        <link refid="awerere__physics__engine_8cpp"/>
+      </node>
+      <node id="920">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/RubeusCore.cpp</label>
+        <link refid="_rubeus_core_8cpp"/>
+      </node>
+      <node id="938">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/world.cpp</label>
+        <link refid="world_8cpp"/>
+      </node>
+      <node id="927">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/level.cpp</label>
+        <link refid="level_8cpp"/>
+      </node>
+      <node id="925">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h</label>
+        <link refid="engine_8h"/>
+        <childnode refid="918" relation="include">
+        </childnode>
+        <childnode refid="926" relation="include">
+        </childnode>
+        <childnode refid="927" relation="include">
+        </childnode>
+      </node>
+      <node id="917">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h</label>
+        <link refid="game__object_8h"/>
+        <childnode refid="918" relation="include">
+        </childnode>
+        <childnode refid="921" relation="include">
+        </childnode>
+        <childnode refid="933" relation="include">
+        </childnode>
+        <childnode refid="939" relation="include">
+        </childnode>
+        <childnode refid="936" relation="include">
+        </childnode>
+        <childnode refid="940" relation="include">
+        </childnode>
+      </node>
+      <node id="935">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_collider_object.cpp</label>
+        <link refid="awerere__collider__object_8cpp"/>
+      </node>
+      <node id="923">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/scene_layer_object.h</label>
+        <link refid="scene__layer__object_8h"/>
+        <childnode refid="924" relation="include">
+        </childnode>
+        <childnode refid="929" relation="include">
+        </childnode>
+      </node>
+      <node id="932">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/group_object.cpp</label>
+        <link refid="group__object_8cpp"/>
+      </node>
+      <node id="940">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/game_object.cpp</label>
+        <link refid="game__object_8cpp"/>
+      </node>
+      <node id="939">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_collision_engine.cpp</label>
+        <link refid="awerere__collision__engine_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_rubeus_1_1_r_game_object" prot="public">Rubeus::RGameObject</innerclass>
@@ -466,72 +566,6 @@
 <para>Declares the Game object class. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <programlisting>
-<codeline lineno="1"></codeline>
-<codeline lineno="7"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="rubeus__maths__library_8h" kindref="compound">rubeus_maths_library.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="entity__object_8h" kindref="compound">entity_object.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="sprite__object_8h" kindref="compound">sprite_object.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="texture__object_8h" kindref="compound">texture_object.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;master_component.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;awerere_physics_object.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="awerere__physics__material_8h" kindref="compound">awerere_physics_material.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="awerere__collider__object_8h" kindref="compound">awerere_collider_object.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="awerere__collision__engine_8h" kindref="compound">awerere_collision_engine.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_rubeus" kindref="compound">Rubeus</ref></highlight></codeline>
-<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="26" refid="class_rubeus_1_1_r_game_object" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_entity" kindref="compound">REntity</ref>,<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="32" refid="class_rubeus_1_1_r_game_object_1a6fcc68c1386fa2001afba2ebffac2c7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::unordered_map&lt;std::string,<sp/>RGameObject<sp/>*&gt;<sp/><ref refid="class_rubeus_1_1_r_game_object_1a6fcc68c1386fa2001afba2ebffac2c7b" kindref="member">InstantiatedGameObjects</ref>;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="class_rubeus_1_1_r_game_object_1ad679990c2ce2ab7d7ee9edebcc679dff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_rubeus_1_1_r_game_object_1ad679990c2ce2ab7d7ee9edebcc679dff" kindref="member">m_Name</ref>;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38" refid="class_rubeus_1_1_r_game_object_1a024d28b449055a4ecee919be155cef61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_rubeus_1_1_r_game_object_1a024d28b449055a4ecee919be155cef61" kindref="member">m_UsedByLevelName</ref>;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41" refid="class_rubeus_1_1_r_game_object_1a141774d17214b4a86e8f4d2ada078574" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_graphic_components_1_1_r_sprite" kindref="compound">GraphicComponents::RSprite</ref><sp/>*<sp/><ref refid="class_rubeus_1_1_r_game_object_1a141774d17214b4a86e8f4d2ada078574" kindref="member">m_Sprite</ref>;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="class_rubeus_1_1_r_game_object_1a381c5fbf3aabddacb98c9d70100143ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_object" kindref="compound">Awerere::APhysicsObject</ref><sp/>*<sp/><ref refid="class_rubeus_1_1_r_game_object_1a381c5fbf3aabddacb98c9d70100143ea" kindref="member">m_PhysicsObject</ref>;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47" refid="class_rubeus_1_1_r_game_object_1a30c59cd4fa242595ab2980f31dfd0f31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_game_object_1a30c59cd4fa242595ab2980f31dfd0f31" kindref="member">m_ThisTicks</ref>;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50" refid="class_rubeus_1_1_r_game_object_1a9dc72644b5d8b96240763913e767b885" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_game_object_1a9dc72644b5d8b96240763913e767b885" kindref="member">m_UsesTexture</ref>;</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="53" refid="class_rubeus_1_1_r_game_object_1a37dfcb0ff063ffa0e204b5970fa9d2fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_game_object_1a37dfcb0ff063ffa0e204b5970fa9d2fa" kindref="member">m_IsGroup</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56" refid="class_rubeus_1_1_r_game_object_1aa903a9044d22b660f502953e66f084b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_game_object_1aa903a9044d22b660f502953e66f084b6" kindref="member">m_HasPhysics</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59" refid="class_rubeus_1_1_r_game_object_1aa8d364e2a65f0bef7b5a90037c46d5ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_game_object_1aa8d364e2a65f0bef7b5a90037c46d5ec" kindref="member">m_GeneratesHit</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_r_game_object_1a3a512ae142f34273d5cfac0177c58a11" kindref="member">RGameObject</ref>(std::string<sp/>name,<sp/>std::string<sp/>levelName,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaY,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>imageFilePath,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enablePhysics<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="awerere__collider__object_8h_1aa31f43f0fcc41516bb0aa51cb1d88a08" kindref="member">Awerere::EColliderType</ref><sp/>&amp;<sp/>type<sp/>=<sp/>Awerere::EColliderType::NO_COLLIDER,<sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_collider" kindref="compound">Awerere::ACollider</ref><sp/>*<sp/>collider<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>generatesHit<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material" kindref="compound">Awerere::APhysicsMaterial</ref><sp/>&amp;<sp/>physicsMat<sp/>=<sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material" kindref="compound">Awerere::APhysicsMaterial</ref>());</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_r_game_object_1a3a512ae142f34273d5cfac0177c58a11" kindref="member">RGameObject</ref>(std::string<sp/>name,<sp/>std::string<sp/>levelName,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaY,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<sp/>r,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<sp/>g,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>&amp;<sp/>b,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enablePhysics<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material" kindref="compound">Awerere::APhysicsMaterial</ref><sp/>&amp;<sp/>material<sp/>=<sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material" kindref="compound">Awerere::APhysicsMaterial</ref>(),<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="awerere__collider__object_8h_1aa31f43f0fcc41516bb0aa51cb1d88a08" kindref="member">Awerere::EColliderType</ref><sp/>&amp;<sp/>type<sp/>=<sp/>Awerere::EColliderType::NO_COLLIDER,<sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_collider" kindref="compound">Awerere::ACollider</ref><sp/>*<sp/>collider<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>generatesHit<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_r_game_object_1a4c60d9f9133a6f321c50d39b2f2a096e" kindref="member">~RGameObject</ref>();</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_game_object_1a92f2fe2f062e45a168f45db52a7f35c7" kindref="member">begin</ref>();</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_game_object_1ade6d964c655301870cb762c1b9c02966" kindref="member">tick</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"></highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_game_object_1aa137a57fa68332f4966574f123c9944e" kindref="member">onHit</ref>(<ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref><sp/>*<sp/>hammer,<sp/><ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref><sp/>*<sp/>nail,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data" kindref="compound">Awerere::ACollideData</ref><sp/>&amp;<sp/>collisionData);</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"></highlight></codeline>
-<codeline lineno="146" refid="class_rubeus_1_1_r_game_object_1a06e56244cc44db0ab56a2ca38423a546" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_game_object_1a06e56244cc44db0ab56a2ca38423a546" kindref="member">addToTickQueue</ref>()<sp/>{<sp/><ref refid="class_rubeus_1_1_r_game_object_1a30c59cd4fa242595ab2980f31dfd0f31" kindref="member">m_ThisTicks</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"></highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rubeus_1_1_r_game_object_1aa066422f65deb25b9d75dac94f46ca50" kindref="member">onMessage</ref>(<ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref><sp/>*<sp/>msg)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"></highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ACollisionEngine;</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rubeus_1_1_r_engine" kindref="compound">REngine</ref>;</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"></highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"></highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_rubeus_1_1_r_game_object_1a3a512ae142f34273d5cfac0177c58a11" kindref="member">RGameObject</ref>();</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="170"><highlight class="normal">}</highlight></codeline>
-    </programlisting>
-    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/game_object.h"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h"/>
   </compounddef>
 </doxygen>

@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="test__message__system_8cpp" kind="file" language="C++">
+    <compoundname>test_message_system.cpp</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="test__message__system_8cpp_1a2cbb6420eeea1a788eec254086f8a985" prot="public" static="no" mutable="no">
+        <type>RMessageSystem</type>
+        <definition>RMessageSystem MessageSystem</definition>
+        <argsstring></argsstring>
+        <name>MessageSystem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Tests/test_message_system.cpp" line="1" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Tests/test_message_system.cpp" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test__message__system_8cpp_1a2b855705fa5d4e05a0ccb8a12587ea81" prot="public" static="no" mutable="no">
+        <type>RWindowComponent *</type>
+        <definition>delete GameWindow</definition>
+        <argsstring></argsstring>
+        <name>GameWindow</name>
+        <initializer>= new RWindowComponent(
+	&quot;Hello World&quot;,
+	1280, 720,
+	EWindowParameters::WINDOWED_MODE,
+	EWindowParameters::NON_RESIZABLE_WINDOW,
+	1
+)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Tests/test_message_system.cpp" line="2" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Tests/test_message_system.cpp" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="test__message__system_8cpp_1ac09029be84641a7c4f18d8fe19450f0b" prot="public" static="no" mutable="no">
+        <type>RLoaderComponent *</type>
+        <definition>delete loader</definition>
+        <argsstring></argsstring>
+        <name>loader</name>
+        <initializer>= new RLoaderComponent()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Tests/test_message_system.cpp" line="13" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Tests/test_message_system.cpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="test__message__system_8cpp_1afee4837fa4fddb5a0c5dd797fa00bd7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="test__message__system_8cpp_1a2cbb6420eeea1a788eec254086f8a985" kindref="member">MessageSystem</ref> m_MessageBus</type>
+        <definition>MessageSystem m_MessageBus addSystem</definition>
+        <argsstring>(GameWindow)</argsstring>
+        <name>addSystem</name>
+        <param>
+          <type><ref refid="test__message__system_8cpp_1a2b855705fa5d4e05a0ccb8a12587ea81" kindref="member">GameWindow</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Tests/test_message_system.cpp" line="10" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="test__message__system_8cpp_1a92e46148c77fd6d085e711fd83a10248" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="test__message__system_8cpp_1a2cbb6420eeea1a788eec254086f8a985" kindref="member">MessageSystem</ref></type>
+        <definition>MessageSystem addMessage</definition>
+        <argsstring>(GameWindow, GameWindow, change_window_title, &quot;chal raha hain bro :*)&quot;)</argsstring>
+        <name>addMessage</name>
+        <param>
+          <type><ref refid="test__message__system_8cpp_1a2b855705fa5d4e05a0ccb8a12587ea81" kindref="member">GameWindow</ref></type>
+        </param>
+        <param>
+          <type><ref refid="test__message__system_8cpp_1a2b855705fa5d4e05a0ccb8a12587ea81" kindref="member">GameWindow</ref></type>
+        </param>
+        <param>
+          <type>change_window_title</type>
+        </param>
+        <param>
+          <type>&quot;chal raha hain bro :*</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Tests/test_message_system.cpp" line="11" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="test__message__system_8cpp_1a5a4e8c8ef3cb7d9f497588eac6a407d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="test__message__system_8cpp_1a2cbb6420eeea1a788eec254086f8a985" kindref="member">MessageSystem</ref> m_MessageBus</type>
+        <definition>MessageSystem m_MessageBus addSystem</definition>
+        <argsstring>(loader)</argsstring>
+        <name>addSystem</name>
+        <param>
+          <type><ref refid="test__message__system_8cpp_1ac09029be84641a7c4f18d8fe19450f0b" kindref="member">loader</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Tests/test_message_system.cpp" line="14" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="test__message__system_8cpp_1addfbb63acc79f80c5a76a8ec6d08a1c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="test__message__system_8cpp_1a2b855705fa5d4e05a0ccb8a12587ea81" kindref="member">GameWindow</ref> m_MessageSystem</type>
+        <definition>GameWindow m_MessageSystem addMessage</definition>
+        <argsstring>(GameWindow, loader, EMessageCode::load_image, &quot;Assets/test8.png&quot;)</argsstring>
+        <name>addMessage</name>
+        <param>
+          <type><ref refid="test__message__system_8cpp_1a2b855705fa5d4e05a0ccb8a12587ea81" kindref="member">GameWindow</ref></type>
+        </param>
+        <param>
+          <type><ref refid="test__message__system_8cpp_1ac09029be84641a7c4f18d8fe19450f0b" kindref="member">loader</ref></type>
+        </param>
+        <param>
+          <type>EMessageCode::load_image</type>
+        </param>
+        <param>
+          <type>&quot;Assets/test8.png&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Tests/test_message_system.cpp" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="test__message__system_8cpp_1a7b8dd6a25b93fc3be159911d7feeaf8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>while</definition>
+        <argsstring>(!GameWindow-&gt;closed())</argsstring>
+        <name>while</name>
+        <param>
+          <type>!<ref refid="test__message__system_8cpp_1a2b855705fa5d4e05a0ccb8a12587ea81" kindref="member">GameWindow</ref>-&gt;</type>
+          <declname>closed</declname>
+          <array>()</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Tests/test_message_system.cpp" line="18" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Tests/test_message_system.cpp" bodystart="18" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Tests/test_message_system.cpp"/>
+  </compounddef>
+</doxygen>

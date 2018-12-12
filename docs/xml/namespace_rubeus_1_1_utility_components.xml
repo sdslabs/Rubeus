@@ -1,13 +1,29 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="namespace_rubeus_1_1_utility_components" kind="namespace" language="C++">
     <compoundname>Rubeus::UtilityComponents</compoundname>
     <innerclass refid="class_rubeus_1_1_utility_components_1_1_r_loader_component" prot="public">Rubeus::UtilityComponents::RLoaderComponent</innerclass>
     <innerclass refid="class_rubeus_1_1_utility_components_1_1_r_timer" prot="public">Rubeus::UtilityComponents::RTimer</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_rubeus_1_1_utility_components_1ad70f6448ef81dca7372b50a3413a4cb7" prot="public" static="no" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto Rubeus::UtilityComponents::ONESECONDINMILLISECONDS</definition>
+        <argsstring></argsstring>
+        <name>ONESECONDINMILLISECONDS</name>
+        <initializer>= 1000000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/timer_component.cpp" line="13" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/timer_component.cpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>The Utility Components of <ref refid="namespace_rubeus" kindref="compound">Rubeus</ref> Engine namespace. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/loader_component.h" line="24" column="1"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/loader_component.h" line="23" column="1"/>
   </compounddef>
 </doxygen>

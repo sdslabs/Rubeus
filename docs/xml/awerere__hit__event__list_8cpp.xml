@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="awerere__hit__event__list_8cpp" kind="file" language="C++">
+    <compoundname>awerere_hit_event_list.cpp</compoundname>
+    <includes refid="awerere__hit__event__list_8h" local="no">awerere_hit_event_list.h</includes>
+    <incdepgraph>
+      <node id="3140">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_hit_event_list.cpp</label>
+        <link refid="awerere__hit__event__list_8cpp"/>
+        <childnode refid="3141" relation="include">
+        </childnode>
+      </node>
+      <node id="3144">
+        <label>rubeus_maths_library.h</label>
+        <link refid="rubeus__maths__library_8h"/>
+        <childnode refid="3145" relation="include">
+        </childnode>
+        <childnode refid="3146" relation="include">
+        </childnode>
+      </node>
+      <node id="3141">
+        <label>awerere_hit_event_list.h</label>
+        <link refid="awerere__hit__event__list_8h"/>
+        <childnode refid="3142" relation="include">
+        </childnode>
+        <childnode refid="3143" relation="include">
+        </childnode>
+      </node>
+      <node id="3145">
+        <label>math.h</label>
+      </node>
+      <node id="3146">
+        <label>iostream</label>
+      </node>
+      <node id="3142">
+        <label>deque</label>
+      </node>
+      <node id="3143">
+        <label>awerere_collide_data_object.h</label>
+        <link refid="awerere__collide__data__object_8h"/>
+        <childnode refid="3144" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
+    <innernamespace refid="namespace_rubeus_1_1_awerere">Rubeus::Awerere</innernamespace>
+    <briefdescription>
+<para>Defines the Hit Event List Class used by Collision Engine. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_hit_event_list.cpp"/>
+  </compounddef>
+</doxygen>

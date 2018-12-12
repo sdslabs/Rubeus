@@ -44,7 +44,7 @@
 									LOG((x));\
 									SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7)
 
-// Prints success message passed in, in green			
+// Prints success message passed in, in green
 #define SUCCESS(x) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_INTENSITY);\
                    LOG((x));\
                    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7)

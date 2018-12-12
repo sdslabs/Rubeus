@@ -1,5 +1,5 @@
 /**
- * @file		Include/audio_manager_component.h
+ * @file	Include/audio_manager_component.h
  *
  * @brief	Declares the Audio Manager class
  */
@@ -13,16 +13,28 @@
 #include <master_component.h>
 #include <message_codes.h>
 
+/**
+ * @namespace   Rubeus
+ *
+ * @brief       The Rubeus Engine namespace.
+ *
+ * @warning     All Rubeus classes start with a capital 'R'. Structs are an exception.
+ */
 namespace Rubeus
 {
+	/**
+     * @namespace   @Rubeus::AudioComponents
+     *
+	 * @brief       The Symphony Audio Engine.
+	 */
 	namespace AudioComponents
 	{
 #define MAX_VOLUME 100
 #define VOLUME_STEP 2
 
 		/**
-		 * @class	ETrackName
-		 *
+		 * @enum	ETrackName
+         *
 		 * @brief	List of track names and track numbers.
 		 */
 		enum ETrackName : int
@@ -52,7 +64,7 @@ namespace Rubeus
 		/**
          * @class	ETrackType
          *
-         * @brief	List of track types available.
+         * @brief	List of audio track types available.
          */
 		enum ETrackType : int
 		{
@@ -231,7 +243,6 @@ namespace Rubeus
 			 * @fn		void addToTick(void (*)function())
 			 *
 			 * @brief	Adds a function to be ticked by the audio manager
-			 * @warning	Type_a_warning_with_its_use
 			 *
 			 * @param	function	Function pointer to be woken up at tick.
 			 */

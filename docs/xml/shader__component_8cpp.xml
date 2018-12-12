@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="shader__component_8cpp" kind="file" language="C++">
+    <compoundname>shader_component.cpp</compoundname>
+    <includes refid="shader__component_8h" local="no">shader_component.h</includes>
+    <incdepgraph>
+      <node id="3911">
+        <label>loader_component.h</label>
+        <link refid="loader__component_8h"/>
+        <childnode refid="3902" relation="include">
+        </childnode>
+        <childnode refid="3896" relation="include">
+        </childnode>
+        <childnode refid="3912" relation="include">
+        </childnode>
+        <childnode refid="3903" relation="include">
+        </childnode>
+        <childnode refid="3904" relation="include">
+        </childnode>
+        <childnode refid="3900" relation="include">
+        </childnode>
+        <childnode refid="3895" relation="include">
+        </childnode>
+        <childnode refid="3908" relation="include">
+        </childnode>
+      </node>
+      <node id="3903">
+        <label>IL/il.h</label>
+      </node>
+      <node id="3904">
+        <label>IL/ilu.h</label>
+      </node>
+      <node id="3906">
+        <label>message_object.h</label>
+        <link refid="message__object_8h"/>
+        <childnode refid="3896" relation="include">
+        </childnode>
+        <childnode refid="3907" relation="include">
+        </childnode>
+        <childnode refid="3908" relation="include">
+        </childnode>
+        <childnode refid="3909" relation="include">
+        </childnode>
+      </node>
+      <node id="3896">
+        <label>string</label>
+      </node>
+      <node id="3894">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="3913">
+        <label>rubeus_maths_library.h</label>
+        <link refid="rubeus__maths__library_8h"/>
+        <childnode refid="3914" relation="include">
+        </childnode>
+        <childnode refid="3901" relation="include">
+        </childnode>
+      </node>
+      <node id="3892">
+        <label>shader_component.h</label>
+        <link refid="shader__component_8h"/>
+        <childnode refid="3893" relation="include">
+        </childnode>
+        <childnode refid="3894" relation="include">
+        </childnode>
+        <childnode refid="3895" relation="include">
+        </childnode>
+        <childnode refid="3911" relation="include">
+        </childnode>
+        <childnode refid="3913" relation="include">
+        </childnode>
+      </node>
+      <node id="3905">
+        <label>message_system.h</label>
+        <link refid="message__system_8h"/>
+        <childnode refid="3893" relation="include">
+        </childnode>
+        <childnode refid="3906" relation="include">
+        </childnode>
+        <childnode refid="3910" relation="include">
+        </childnode>
+      </node>
+      <node id="3907">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="3909">
+        <label>message_codes.h</label>
+        <link refid="message__codes_8h"/>
+        <childnode refid="3900" relation="include">
+        </childnode>
+      </node>
+      <node id="3908">
+        <label>image_object.h</label>
+        <link refid="image__object_8h"/>
+        <childnode refid="3896" relation="include">
+        </childnode>
+        <childnode refid="3903" relation="include">
+        </childnode>
+      </node>
+      <node id="3910">
+        <label>message_bus.h</label>
+        <link refid="message__bus_8h"/>
+        <childnode refid="3893" relation="include">
+        </childnode>
+        <childnode refid="3906" relation="include">
+        </childnode>
+      </node>
+      <node id="3902">
+        <label>string.h</label>
+      </node>
+      <node id="3898">
+        <label>typeinfo</label>
+      </node>
+      <node id="3893">
+        <label>vector</label>
+      </node>
+      <node id="3914">
+        <label>math.h</label>
+      </node>
+      <node id="3891">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/shader_component.cpp</label>
+        <link refid="shader__component_8cpp"/>
+        <childnode refid="3892" relation="include">
+        </childnode>
+      </node>
+      <node id="3912">
+        <label>cstdlib</label>
+      </node>
+      <node id="3901">
+        <label>iostream</label>
+      </node>
+      <node id="3895">
+        <label>master_component.h</label>
+        <link refid="master__component_8h"/>
+        <childnode refid="3896" relation="include">
+        </childnode>
+        <childnode refid="3897" relation="include">
+        </childnode>
+        <childnode refid="3898" relation="include">
+        </childnode>
+        <childnode refid="3899" relation="include">
+        </childnode>
+        <childnode refid="3900" relation="include">
+        </childnode>
+        <childnode refid="3905" relation="include">
+        </childnode>
+      </node>
+      <node id="3897">
+        <label>unordered_map</label>
+      </node>
+      <node id="3899">
+        <label>memory</label>
+      </node>
+      <node id="3900">
+        <label>logger_component.h</label>
+        <link refid="logger__component_8h"/>
+        <childnode refid="3901" relation="include">
+        </childnode>
+        <childnode refid="3902" relation="include">
+        </childnode>
+        <childnode refid="3896" relation="include">
+        </childnode>
+        <childnode refid="3894" relation="include">
+        </childnode>
+        <childnode refid="3903" relation="include">
+        </childnode>
+        <childnode refid="3904" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
+    <innernamespace refid="namespace_rubeus_1_1_graphic_components">Rubeus::GraphicComponents</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/shader_component.cpp"/>
+  </compounddef>
+</doxygen>

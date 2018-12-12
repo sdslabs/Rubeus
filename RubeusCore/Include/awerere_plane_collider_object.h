@@ -17,7 +17,7 @@ namespace Rubeus
 	namespace Awerere
 	{
 		/**
-		 * @class	APLaneCollider
+		 * @class	APlaneCollider
 		 *
 		 * @brief	A 2D plane collider, equivalent to a straight line on a 2D screen.
 		 */

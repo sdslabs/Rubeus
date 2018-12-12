@@ -37,7 +37,7 @@ namespace Rubeus
 			 * @fn		Image(ILubyte imageData[ ], unsigned int height, unsigned int width, unsigned int bpp)
 			 *
 			 * @brief	Constructor
-			 * @warning	
+			 * @warning
 			 *
 			 * @param	imageData	Array of byte values storing image data pixel-wise.
 			 * @param	height		Height of the image in pixels.

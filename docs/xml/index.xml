@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.14">
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.15">
   <compound refid="class_rubeus_1_1_awerere_1_1_a_box_collider" kind="class"><name>Rubeus::Awerere::ABoxCollider</name>
     <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a76725863d20593af6992d496fc083045" kind="variable"><name>m_MinExtent</name></member>
     <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a5deaee32ade54cb23e886cdc1b8dbe8f" kind="variable"><name>m_MaxExtent</name></member>
@@ -86,7 +86,7 @@
     <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1af73d9443fad22e3dee9be6a95f9b31ce" kind="variable"><name>m_World</name></member>
     <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a5c0432574fd819d2f0c54451ccb8cce4" kind="variable"><name>m_XFlags</name></member>
     <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1afa822945e4431df89e46ab839c78dc64" kind="variable"><name>m_YFlags</name></member>
-    <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1afd85863e01005f591b61046bd8efa8d3" kind="variable"><name>ImpulsesGeneratedPerImpulseCalculationFrame</name></member>
+    <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a7d3e8b8536fd57487e75d1eaac18ba41" kind="variable"><name>ImpulsesGeneratedPerImpulseCalculationFrame</name></member>
     <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a4ae3942f9898504d400da82fdfbcae3a" kind="variable"><name>ImpulseCalculationFrames</name></member>
     <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a4078c7427214008cae228c8814844d33" kind="variable"><name>ImpulseFrames</name></member>
     <member refid="class_rubeus_1_1_awerere_1_1_a_physics_engine_1a2b8231ffbaec0e349b94c91871bbd33b" kind="function"><name>updateState</name></member>
@@ -132,8 +132,6 @@
     <member refid="class_rubeus_1_1_awerere_1_1_a_plane_collider_1af6e924e8d23c077206574ce8575f786b" kind="function"><name>getNormal</name></member>
     <member refid="class_rubeus_1_1_awerere_1_1_a_plane_collider_1a262912a904c556debde5c6c61af7140d" kind="function"><name>getEmergencePoint</name></member>
   </compound>
-  <compound refid="class_a_p_lane_collider" kind="class"><name>APLaneCollider</name>
-  </compound>
   <compound refid="class_rubeus_1_1_awerere_1_1_a_sphere_collider" kind="class"><name>Rubeus::Awerere::ASphereCollider</name>
     <member refid="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1a689d6d250637820cab7f9199a8497d91" kind="variable"><name>m_Center</name></member>
     <member refid="class_rubeus_1_1_awerere_1_1_a_sphere_collider_1aaea7f7c1c2f3801d83fd804a96c8f662" kind="variable"><name>m_Radius</name></member>
@@ -160,11 +158,7 @@
     <member refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a56458f64c66009d73c2a729a64cc1e7c" kind="function"><name>CollisionGrid</name></member>
     <member refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a661a8700f7267e82e7f91b556553acba" kind="function"><name>~CollisionGrid</name></member>
   </compound>
-  <compound refid="class_e_track_name" kind="class"><name>ETrackName</name>
-  </compound>
   <compound refid="class_e_track_type" kind="class"><name>ETrackType</name>
-  </compound>
-  <compound refid="class_group" kind="class"><name>Group</name>
   </compound>
   <compound refid="struct_rubeus_1_1_graphic_components_1_1_image" kind="struct"><name>Rubeus::GraphicComponents::Image</name>
     <member refid="struct_rubeus_1_1_graphic_components_1_1_image_1ae65adf1715e3380c6443a4591f9dc15c" kind="variable"><name>m_Image</name></member>
@@ -173,8 +167,6 @@
     <member refid="struct_rubeus_1_1_graphic_components_1_1_image_1a0cf4de47391d4481a3b5f44f947cd643" kind="variable"><name>m_BPP</name></member>
     <member refid="struct_rubeus_1_1_graphic_components_1_1_image_1a243c94e8bb69d002bf608dcac068cbe9" kind="function"><name>Image</name></member>
     <member refid="struct_rubeus_1_1_graphic_components_1_1_image_1a1d852d6baa83de3e5dcc2626e1df61d0" kind="function"><name>~Image</name></member>
-  </compound>
-  <compound refid="class_master_component" kind="class"><name>MasterComponent</name>
   </compound>
   <compound refid="struct_r_m_l_1_1_matrix4" kind="struct"><name>RML::Matrix4</name>
     <member refid="struct_r_m_l_1_1_matrix4_1a0168d944094fa74d7f946ad0d79ab08d" kind="variable"><name>elements</name></member>
@@ -185,12 +177,12 @@
     <member refid="struct_r_m_l_1_1_matrix4_1a018d5eead295d1575dd1cfaf4892bb1a" kind="function"><name>multiply</name></member>
     <member refid="struct_r_m_l_1_1_matrix4_1ad12fab1ba72a4c130d7945f51bb0c993" kind="function"><name>multiply</name></member>
     <member refid="struct_r_m_l_1_1_matrix4_1a28d8726ea817c8319d9b3d0437af1f35" kind="function"><name>operator*=</name></member>
-    <member refid="struct_r_m_l_1_1_matrix4_1aadc06ed4632520f877278792b90d81dc" kind="function"><name>identity</name></member>
-    <member refid="struct_r_m_l_1_1_matrix4_1a15053ebac4f9a215ef6e111141a7507b" kind="function"><name>orthographic</name></member>
-    <member refid="struct_r_m_l_1_1_matrix4_1a6a769621695539c0504d86eef3e5285b" kind="function"><name>perspective</name></member>
-    <member refid="struct_r_m_l_1_1_matrix4_1ae185c1e416dc969b345b85ebad8d10fe" kind="function"><name>translation</name></member>
-    <member refid="struct_r_m_l_1_1_matrix4_1a27b9eaf13477e5eac82df25dc64b105b" kind="function"><name>rotation</name></member>
-    <member refid="struct_r_m_l_1_1_matrix4_1a00dec154f240f40ecd6fb4bc067593cf" kind="function"><name>scale</name></member>
+    <member refid="struct_r_m_l_1_1_matrix4_1a5ec8573e280cc57ff4e76c73799f664a" kind="function"><name>identity</name></member>
+    <member refid="struct_r_m_l_1_1_matrix4_1a6637b7c429922afcfda5626f72503921" kind="function"><name>orthographic</name></member>
+    <member refid="struct_r_m_l_1_1_matrix4_1ae788b85bf64484b8c14253cdf63671ce" kind="function"><name>perspective</name></member>
+    <member refid="struct_r_m_l_1_1_matrix4_1abc82ba12a764abb22837172d5f09f9d3" kind="function"><name>translation</name></member>
+    <member refid="struct_r_m_l_1_1_matrix4_1ace4b18b1465fc293d284c37a30990a4c" kind="function"><name>rotation</name></member>
+    <member refid="struct_r_m_l_1_1_matrix4_1aa3f0515043f1b9bf24e0531d9fef0788" kind="function"><name>scale</name></member>
     <member refid="struct_r_m_l_1_1_matrix4_1a62b90a9d339e60b38aafe83338939168" kind="friend"><name>operator&lt;&lt;</name></member>
     <member refid="struct_r_m_l_1_1_matrix4_1aada1dd7495c9b1ea02a1afd62ee4c857" kind="friend"><name>operator*</name></member>
     <member refid="struct_r_m_l_1_1_matrix4_1a8063454b4178078fa6cb1afd67d81e7c" kind="friend"><name>operator*</name></member>
@@ -240,11 +232,11 @@
     <member refid="class_rubeus_1_1_r_entity_1a4a6b38c0f88052f8867d8591cbd776d5" kind="variable"><name>m_EntityID</name></member>
     <member refid="class_rubeus_1_1_r_entity_1a5a14e115db6573c5b231c52a23582e2d" kind="function"><name>tick</name></member>
     <member refid="class_rubeus_1_1_r_entity_1a5e9533e6bf1e3c9e5a3af285065d4441" kind="function"><name>REntity</name></member>
-    <member refid="class_rubeus_1_1_r_entity_1a3ff69a73c97dbe20c3677166205449fa" kind="function"><name>~REntity</name></member>
+    <member refid="class_rubeus_1_1_r_entity_1aef39429d45d98fccaa2633799360e24d" kind="function"><name>~REntity</name></member>
     <member refid="class_rubeus_1_1_r_entity_1a711b39f7080c54161c642770ae7c73eb" kind="function"><name>getName</name></member>
   </compound>
   <compound refid="class_rubeus_1_1_r_game_object" kind="class"><name>Rubeus::RGameObject</name>
-    <member refid="class_rubeus_1_1_r_game_object_1a6fcc68c1386fa2001afba2ebffac2c7b" kind="variable"><name>InstantiatedGameObjects</name></member>
+    <member refid="class_rubeus_1_1_r_game_object_1ac91bd9c106e663ce0aeb3a594ad09985" kind="variable"><name>InstantiatedGameObjects</name></member>
     <member refid="class_rubeus_1_1_r_game_object_1ad679990c2ce2ab7d7ee9edebcc679dff" kind="variable"><name>m_Name</name></member>
     <member refid="class_rubeus_1_1_r_game_object_1a024d28b449055a4ecee919be155cef61" kind="variable"><name>m_UsedByLevelName</name></member>
     <member refid="class_rubeus_1_1_r_game_object_1a141774d17214b4a86e8f4d2ada078574" kind="variable"><name>m_Sprite</name></member>
@@ -273,7 +265,7 @@
     <member refid="class_rubeus_1_1_graphic_components_1_1_r_group_1a65a59f0752a6b2633a1beee72944cc18" kind="function"><name>~RGroup</name></member>
     <member refid="class_rubeus_1_1_graphic_components_1_1_r_group_1afba570254211098554f5975619c28ec8" kind="function"><name>submit</name></member>
     <member refid="class_rubeus_1_1_graphic_components_1_1_r_group_1a8ef556af5d9777d31a735a6e5e1a7a2f" kind="function"><name>add</name></member>
-    <member refid="class_rubeus_1_1_graphic_components_1_1_r_group_1a2cc64ea43fbc98a3719cda1d53da447f" kind="function"><name>add</name></member>
+    <member refid="class_rubeus_1_1_graphic_components_1_1_r_group_1a4a27d8f85f1656f32d1c6ee34415cd3a" kind="function"><name>add</name></member>
   </compound>
   <compound refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component" kind="class"><name>Rubeus::GraphicComponents::RGuerrillaRendererComponent</name>
     <member refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component_1aa874f05bc59ff607e92967c9733947d3" kind="variable"><name>m_VAO</name></member>
@@ -309,8 +301,8 @@
     <member refid="class_rubeus_1_1_r_input_manager_1ad6957c435bd589d850911aeaead58309" kind="variable"><name>m_Window</name></member>
     <member refid="class_rubeus_1_1_r_input_manager_1a0f72a9459e1fcd1c7608cc04c1f44a92" kind="variable"><name>m_KeybindingsToKeys</name></member>
     <member refid="class_rubeus_1_1_r_input_manager_1ad6e884817ef9ec8938b0ebf9cd80681d" kind="variable"><name>m_KeysToKeybindings</name></member>
-    <member refid="class_rubeus_1_1_r_input_manager_1a7506e8ac2eb3e20a24a355126ecc097d" kind="variable"><name>KeyMap</name></member>
-    <member refid="class_rubeus_1_1_r_input_manager_1ae6b63f5ed8aa8d58526a912349038f05" kind="variable"><name>MouseButtonMap</name></member>
+    <member refid="class_rubeus_1_1_r_input_manager_1a24465d5ea96a03afe4b76af7dfb98d71" kind="variable"><name>KeyMap</name></member>
+    <member refid="class_rubeus_1_1_r_input_manager_1a3f9fdd7afa2ce249eb6a08097962ed4e" kind="variable"><name>MouseButtonMap</name></member>
     <member refid="class_rubeus_1_1_r_input_manager_1a85fe446c1eea7a58362f59dd4f5c4776" kind="variable"><name>MousePosition</name></member>
     <member refid="class_rubeus_1_1_r_input_manager_1a696b2437a850d2f2089766b0d0ad46e8" kind="variable"><name>MouseScroll</name></member>
     <member refid="class_rubeus_1_1_r_input_manager_1a80063e2eccd871837f7b16fac9b2cfdf" kind="function"><name>addKeyBinding</name></member>
@@ -356,7 +348,7 @@
     <member refid="class_rubeus_1_1_r_level_1a262dcbba989ac479eb7c6b66d7ce220a" kind="variable"><name>m_AudioManager</name></member>
     <member refid="class_rubeus_1_1_r_level_1a62b53a50f4afadf234f3d67e01488cea" kind="variable"><name>m_Name</name></member>
     <member refid="class_rubeus_1_1_r_level_1abbd9bc577675917336fd07ab54e0580c" kind="friend"><name>REngine</name></member>
-    <member refid="class_rubeus_1_1_r_level_1a0f2487a9442ae5268cc50103d5978e94" kind="variable"><name>InstantiatedLevels</name></member>
+    <member refid="class_rubeus_1_1_r_level_1aac94ae19fc45918278ba69d126c74cc3" kind="variable"><name>InstantiatedLevels</name></member>
     <member refid="class_rubeus_1_1_r_level_1aa6315e5321bcfca5282201a6d64e7d15" kind="function"><name>RLevel</name></member>
     <member refid="class_rubeus_1_1_r_level_1aa5dd147b213fb9d63a31a4aa4ba9a1e2" kind="function"><name>~RLevel</name></member>
     <member refid="class_rubeus_1_1_r_level_1accfb4374e3deeffc74d45d8d03d3556b" kind="function"><name>begin</name></member>
@@ -370,20 +362,20 @@
   </compound>
   <compound refid="class_rubeus_1_1_utility_components_1_1_r_loader_component" kind="class"><name>Rubeus::UtilityComponents::RLoaderComponent</name>
     <member refid="class_rubeus_1_1_utility_components_1_1_r_loader_component_1a873f7f2d8c1079924a0a9fe5880b34c1" kind="variable"><name>m_ImageID</name></member>
-    <member refid="class_rubeus_1_1_utility_components_1_1_r_loader_component_1aca86312f41b339d8e8cd7634fb897d0c" kind="function"><name>initImageLoader</name></member>
+    <member refid="class_rubeus_1_1_utility_components_1_1_r_loader_component_1ac60e89b57710daf56561422a6cc7ae44" kind="function"><name>initImageLoader</name></member>
     <member refid="class_rubeus_1_1_utility_components_1_1_r_loader_component_1ae4a1a7465d9bb7c0a93a1d17ba59cf1c" kind="function"><name>RLoaderComponent</name></member>
     <member refid="class_rubeus_1_1_utility_components_1_1_r_loader_component_1a4bad0754f16152c483e7038eee74cfa4" kind="function"><name>~RLoaderComponent</name></member>
     <member refid="class_rubeus_1_1_utility_components_1_1_r_loader_component_1a6b9ef0187b89c74703d0246c7eb3f320" kind="function"><name>loadTextFileStream</name></member>
     <member refid="class_rubeus_1_1_utility_components_1_1_r_loader_component_1a2ca4414ddba0b63415a14b2844d8a5a6" kind="function"><name>onMessage</name></member>
-    <member refid="class_rubeus_1_1_utility_components_1_1_r_loader_component_1ae1d5a7c78486cab76d9496952f4323d0" kind="function"><name>loadImageFile</name></member>
-    <member refid="class_rubeus_1_1_utility_components_1_1_r_loader_component_1af9f7e56b12da6fe38bb873d069e346ec" kind="function"><name>deleteImage</name></member>
+    <member refid="class_rubeus_1_1_utility_components_1_1_r_loader_component_1a89475d0ad00bd1da6da5c89bbfccf9ad" kind="function"><name>loadImageFile</name></member>
+    <member refid="class_rubeus_1_1_utility_components_1_1_r_loader_component_1abecdb15e02d9f2e69efc17549c7b5053" kind="function"><name>deleteImage</name></member>
   </compound>
   <compound refid="class_rubeus_1_1_r_master_component" kind="class"><name>Rubeus::RMasterComponent</name>
     <member refid="class_rubeus_1_1_r_master_component_1a838bceba7935bb3b11a5b69def0f0fc0" kind="variable"><name>m_ComponentID</name></member>
     <member refid="class_rubeus_1_1_r_master_component_1aedb604c4ddfb8d2ba72ff493a74b7025" kind="variable"><name>m_MessageSystem</name></member>
     <member refid="class_rubeus_1_1_r_master_component_1aa8456741bb2402650fc8726cd6768803" kind="variable"><name>componentsInitialised</name></member>
     <member refid="class_rubeus_1_1_r_master_component_1aecd982f5c7361dbb23bcc8ac5ec6481c" kind="function"><name>RMasterComponent</name></member>
-    <member refid="class_rubeus_1_1_r_master_component_1a3ee1666371bfafadd5f3adfa67ac874c" kind="function"><name>~RMasterComponent</name></member>
+    <member refid="class_rubeus_1_1_r_master_component_1a03a8ba150ef34447b3c7d22f10dca93a" kind="function"><name>~RMasterComponent</name></member>
     <member refid="class_rubeus_1_1_r_master_component_1ada4b85021d96ac2c2153e613d5f14097" kind="function"><name>getComponentID</name></member>
     <member refid="class_rubeus_1_1_r_master_component_1ad3c9003c4bc64661ed9ae5961c8cf3fa" kind="function"><name>getName</name></member>
     <member refid="class_rubeus_1_1_r_master_component_1a129a5b04db723423b40cfd4780adcd35" kind="function"><name>onMessage</name></member>
@@ -433,11 +425,9 @@
     <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a4a35defcbc822d72b96fe940ac90f3bc" kind="variable"><name>m_Renderer</name></member>
     <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a76bad36ffd911f07af57f6deab4a3244" kind="variable"><name>m_Shader</name></member>
     <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a53444858ee8daf82046cd5038cf26b29" kind="function"><name>RSceneLayer</name></member>
-    <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1af850e6a374a25156be7d10c9797a7b1e" kind="function"><name>~RSceneLayer</name></member>
+    <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a6561005830b9ec59cc4b614142b7ba0c" kind="function"><name>~RSceneLayer</name></member>
     <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a427f6377ce52bd5fd30f8b71fe228126" kind="function"><name>addGroup</name></member>
     <member refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1aa4824826a3597540690fb67ba6f53d78" kind="function"><name>draw</name></member>
-  </compound>
-  <compound refid="class_r_shader" kind="class"><name>RShader</name>
   </compound>
   <compound refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component" kind="class"><name>Rubeus::GraphicComponents::RShaderComponent</name>
     <member refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component_1abf56a99defcf4ed8a75f24f9bbe04dbe" kind="variable"><name>m_ShaderID</name></member>
@@ -577,7 +567,25 @@
     <member refid="class_rubeus_1_1_r_world_1a4cc8ab3e46cb4fc5e9d428384231a809" kind="function"><name>setObjectArray</name></member>
     <member refid="class_rubeus_1_1_r_world_1a91e730bb4e177d4d59c2c6c6fd04ccda" kind="function"><name>getActiveObjects</name></member>
   </compound>
-  <compound refid="union_unnamed" kind="union"><name>Unnamed</name>
+  <compound refid="class_usample__object" kind="class"><name>Usample_object</name>
+    <member refid="class_usample__object_1a628bda3e1ececae7d0e9fb19c6d96d8d" kind="function"><name>Usample_object</name></member>
+    <member refid="class_usample__object_1ad20981758c0029de13344e1d3af2c1a9" kind="function"><name>Usample_object</name></member>
+    <member refid="class_usample__object_1a81ed21dc7a2200ccb20979e6c41f4e40" kind="function"><name>begin</name></member>
+    <member refid="class_usample__object_1a6e948c33db26927c58900b8dadefcbd0" kind="function"><name>onHit</name></member>
+    <member refid="class_usample__object_1a7b003e12f425fcd2bc3f0eeb4ebeecfb" kind="function"><name>onMessage</name></member>
+    <member refid="class_usample__object_1a11811f2d7392dbbb039ca090adb21443" kind="function"><name>tick</name></member>
+  </compound>
+  <compound refid="class_u_sample_level" kind="class"><name>USampleLevel</name>
+    <member refid="class_u_sample_level_1a6e0c4a0b8cfae83e04fb555f9e0582a0" kind="function"><name>USampleLevel</name></member>
+    <member refid="class_u_sample_level_1a2ad763b71ba8530b571153fb764dc31d" kind="function"><name>~USampleLevel</name></member>
+    <member refid="class_u_sample_level_1ad71395cdde92803f0b2d6b427bae568b" kind="function"><name>begin</name></member>
+    <member refid="class_u_sample_level_1ad6ea32f57d8e72b680046a13edb4229a" kind="function"><name>onEnd</name></member>
+  </compound>
+  <compound refid="class_u_sample_level2" kind="class"><name>USampleLevel2</name>
+    <member refid="class_u_sample_level2_1a8e33d7125f6c04c3e461c637f33cb08b" kind="function"><name>USampleLevel2</name></member>
+    <member refid="class_u_sample_level2_1aa13d614cc114f65873c672546b99e0da" kind="function"><name>~USampleLevel2</name></member>
+    <member refid="class_u_sample_level2_1adf0be6fb2d7cacaade7b474e2cf777b8" kind="function"><name>begin</name></member>
+    <member refid="class_u_sample_level2_1a1f056eb0d839045b86f1a06f7f11d7de" kind="function"><name>onEnd</name></member>
   </compound>
   <compound refid="struct_r_m_l_1_1_vector2_d" kind="struct"><name>RML::Vector2D</name>
     <member refid="struct_r_m_l_1_1_vector2_d_1ab5c3a92e55c53865ba1662ad2beb6ef2" kind="variable"><name>x</name></member>
@@ -653,7 +661,7 @@
     <member refid="struct_r_m_l_1_1_vector4_d_1a7c599849961d43002f26db7e888c8662" kind="function"><name>Vector4D</name></member>
     <member refid="struct_r_m_l_1_1_vector4_d_1a74373f069530627f194e5bba0a23ae3b" kind="function"><name>getLength</name></member>
     <member refid="struct_r_m_l_1_1_vector4_d_1a386d73ef35785fbb06516df7f302fa32" kind="function"><name>toUnitVector</name></member>
-    <member refid="struct_r_m_l_1_1_vector4_d_1af5bc24e9eaa6c52c1a793755421eddf9" kind="function"><name>normaliseToRGBA</name></member>
+    <member refid="struct_r_m_l_1_1_vector4_d_1aa6505d01fc73177ed47b65cc7df7a630" kind="function"><name>normaliseToRGBA</name></member>
     <member refid="struct_r_m_l_1_1_vector4_d_1a19da676c402114eca6556022cbf77aab" kind="function"><name>add</name></member>
     <member refid="struct_r_m_l_1_1_vector4_d_1ae643fc3223a85b3c5b4b8f81298c7244" kind="function"><name>subtract</name></member>
     <member refid="struct_r_m_l_1_1_vector4_d_1a0793689cb56a292f64094bee02dea911" kind="function"><name>multiply</name></member>
@@ -677,221 +685,276 @@
     <member refid="struct_rubeus_1_1_graphic_components_1_1_vertex_data_1ad38d09def4c05a57e605f77fad0dfcfd" kind="variable"><name>color</name></member>
   </compound>
   <compound refid="namespace_r_m_l" kind="namespace"><name>RML</name>
-    <member refid="rubeus__maths__library_8h_1a172fe5f30b4f649cacce7e1b110e46c6" kind="function"><name>degreeToRadians</name></member>
+    <member refid="namespace_r_m_l_1a172fe5f30b4f649cacce7e1b110e46c6" kind="function"><name>degreeToRadians</name></member>
+    <member refid="namespace_r_m_l_1a6550131c9d0f0580eb2468d24ae7ff79" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="namespace_r_m_l_1a6c19c973936ffecbb94b252839227e57" kind="function"><name>operator+</name></member>
+    <member refid="namespace_r_m_l_1a50b7983bc16b7d43f021217408a24fa7" kind="function"><name>operator-</name></member>
+    <member refid="namespace_r_m_l_1a41e6ad1bb1b97efe4da45cb02e2cd33a" kind="function"><name>operator*</name></member>
+    <member refid="namespace_r_m_l_1a9291a2400bb4179b98f6542c1984f4ac" kind="function"><name>operator*</name></member>
+    <member refid="namespace_r_m_l_1a43d082c2eb2bd85870840b2741b57a61" kind="function"><name>operator*</name></member>
+    <member refid="namespace_r_m_l_1a6e11bb7a6a8954ab6fd0d511aa5975ac" kind="function"><name>operator/</name></member>
+    <member refid="namespace_r_m_l_1a9d0517074a4a8e8bf0c9a8eec12744c1" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="namespace_r_m_l_1a05bb9635d4405d621bd1046181551bb4" kind="function"><name>operator+</name></member>
+    <member refid="namespace_r_m_l_1a60093c81a882d49951a2f77245f1393b" kind="function"><name>operator-</name></member>
+    <member refid="namespace_r_m_l_1a60f2c3eff36ddba3f129a5fd5a0c7f0d" kind="function"><name>operator*</name></member>
+    <member refid="namespace_r_m_l_1ab7a466d7c202f6763ef4b1d0421e46f5" kind="function"><name>operator*</name></member>
+    <member refid="namespace_r_m_l_1a20756463d1df49baf44bb053c6142536" kind="function"><name>operator/</name></member>
+    <member refid="namespace_r_m_l_1a71c84db9193eae62863a1ec5406e4d3f" kind="function"><name>operator/</name></member>
+    <member refid="namespace_r_m_l_1ad648be1ac30c7f3b71a2e90651214103" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="namespace_r_m_l_1acd5984a11d22a4cdb36fe1049b254aa3" kind="function"><name>operator+</name></member>
+    <member refid="namespace_r_m_l_1a9520e86f92592667bf98542015d4f05d" kind="function"><name>operator-</name></member>
+    <member refid="namespace_r_m_l_1ac62e10f995a158fb948ad2df8d86cf01" kind="function"><name>operator*</name></member>
+    <member refid="namespace_r_m_l_1afeb2433bedb1b7765faa502e4b43032d" kind="function"><name>operator/</name></member>
+    <member refid="namespace_r_m_l_1a9ca4bf63de3a4636fbc1a926ef147d4e" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="namespace_r_m_l_1a0c6665e8f62a19e52e8a38d3a17cc9b4" kind="function"><name>operator*</name></member>
+    <member refid="namespace_r_m_l_1a8e2354d1d8e723ba00857c886efe4858" kind="function"><name>operator*</name></member>
   </compound>
   <compound refid="namespace_rubeus" kind="namespace"><name>Rubeus</name>
-    <member refid="keys_8h_1ac04ea80a8fa238524f8582b0a66efdce" kind="enum"><name>EMouseButtons</name></member>
-    <member refid="dummy_1ac04ea80a8fa238524f8582b0a66efdcea823045ebbdd66fd7be1669504834f546" kind="enumvalue"><name>__MOUSE_BUTTON_1</name></member>
-    <member refid="dummy_1ac04ea80a8fa238524f8582b0a66efdceab45176af1ef9b733532d809f488f8a09" kind="enumvalue"><name>__MOUSE_BUTTON_2</name></member>
-    <member refid="dummy_1ac04ea80a8fa238524f8582b0a66efdceac4d7753982dd6414412e5227135159ff" kind="enumvalue"><name>__MOUSE_BUTTON_3</name></member>
-    <member refid="dummy_1ac04ea80a8fa238524f8582b0a66efdcea85e842ba98358870086f3b4b2f933ca3" kind="enumvalue"><name>__MOUSE_BUTTON_4</name></member>
-    <member refid="dummy_1ac04ea80a8fa238524f8582b0a66efdcea3cc607a9faa579c9c9effcea800192ed" kind="enumvalue"><name>__MOUSE_BUTTON_5</name></member>
-    <member refid="dummy_1ac04ea80a8fa238524f8582b0a66efdceafcc803e5e4269413de2d941cc67a6ca5" kind="enumvalue"><name>__MOUSE_BUTTON_6</name></member>
-    <member refid="dummy_1ac04ea80a8fa238524f8582b0a66efdcea50511080cb70367558b6ae32fe4afb64" kind="enumvalue"><name>__MOUSE_BUTTON_7</name></member>
-    <member refid="dummy_1ac04ea80a8fa238524f8582b0a66efdceaf194ce824ccaa692b33cab0c8763e73d" kind="enumvalue"><name>__MOUSE_BUTTON_8</name></member>
-    <member refid="dummy_1ac04ea80a8fa238524f8582b0a66efdceaa7edea8b0405b8f0b94059ee3fd59248" kind="enumvalue"><name>__MOUSE_BUTTON_LAST</name></member>
-    <member refid="dummy_1ac04ea80a8fa238524f8582b0a66efdcea2e933020ddfe21b50bac69478e1ebcb2" kind="enumvalue"><name>__MOUSE_BUTTON_LEFT</name></member>
-    <member refid="dummy_1ac04ea80a8fa238524f8582b0a66efdcea6c6377538874aa10c843f901696d181c" kind="enumvalue"><name>__MOUSE_BUTTON_RIGHT</name></member>
-    <member refid="dummy_1ac04ea80a8fa238524f8582b0a66efdcea781bedd78677aa47e35962f13eb939ce" kind="enumvalue"><name>__MOUSE_BUTTON_MIDDLE</name></member>
-    <member refid="keys_8h_1ac846721ec08ebc254d389a992230f305" kind="enum"><name>EKeyboardKeys</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a01f9e772b2cb5589512938487c53d97f" kind="enumvalue"><name>__UNKNOWN</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305aa50046ab4782915083f99228cdb9c2bf" kind="enumvalue"><name>__SPACE</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a3a015076ee3573b25688331935d9340c" kind="enumvalue"><name>__APOSTROPHE</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a824201f8fc7333609e305d1cd1286154" kind="enumvalue"><name>__COMMA</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a402d19a1a5db4a6db029b1f8bfd429fa" kind="enumvalue"><name>__MINUS</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a88478650c2a052b0989e07b2c0fe3419" kind="enumvalue"><name>__PERIOD</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a685ee646d000690b43c7900271a00860" kind="enumvalue"><name>__SLASH</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a7443fa9cd36173de4802613959005150" kind="enumvalue"><name>__0</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a08a9d0bbf3381652f7cca8738b5a8469" kind="enumvalue"><name>__1</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305aa62c2a79bae538bf3502f1bc482e9893" kind="enumvalue"><name>__2</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ade124b3cc0e2e82f99cba1b248e420fb" kind="enumvalue"><name>__3</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a51a27df6ebb9b68dacbde2f3a05da81d" kind="enumvalue"><name>__4</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a2b739200737fe7dbf581a474e3ad58aa" kind="enumvalue"><name>__5</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a81184b6ee4d75809b6ed69413a662e3c" kind="enumvalue"><name>__6</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305adfdee1c7e46088e3825702faa1f861ba" kind="enumvalue"><name>__7</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ae2d1794b18f1f1eaa75cf88a6ff7963f" kind="enumvalue"><name>__8</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a41ee4e6076835fb945a96a38b1f1c594" kind="enumvalue"><name>__9</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305afdc5ba6c7f5c244db7b313e461c3e9a7" kind="enumvalue"><name>__SEMICOLON</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ad942ffd6d819a077fd3c1660237a5ca6" kind="enumvalue"><name>__EQUAL</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a7ee4608344da9fa262865e279c888c73" kind="enumvalue"><name>__A</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305af8a6b04baf7c5e0cc2daba92b7ad7ca8" kind="enumvalue"><name>__B</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a1f2785efca72209f639fa471a8a8aa6a" kind="enumvalue"><name>__C</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ae1e79a8f766365d5f98dbcf8ebcdb580" kind="enumvalue"><name>__D</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305af6dd62fe730748db1dc1ab443d9b8314" kind="enumvalue"><name>__E</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a14c71bf1ee61a76639e547d7c330dfc9" kind="enumvalue"><name>__F</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305abfaaabe937ee64ae701cfcf9fd092319" kind="enumvalue"><name>__G</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a59897944f061764c83614dd61b947cf1" kind="enumvalue"><name>__H</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305af2c1e2875c9a61c96e26e803a22ae979" kind="enumvalue"><name>__I</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a009a78bb966e4faeace002bc7139a678" kind="enumvalue"><name>__J</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a17f37b5be090c3ad6c7bda1df9d5be9d" kind="enumvalue"><name>__K</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a27564b0f8fc08d6bd0345695785ce4b6" kind="enumvalue"><name>__L</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a476e4e6d615566b374a12b737083550e" kind="enumvalue"><name>__M</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305acf0d27a1c12774f09f54a89d86e20ba6" kind="enumvalue"><name>__N</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a410e8e4fd4ea4f3e1426c170a3cf6623" kind="enumvalue"><name>__O</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a38cd8577bd5a826f2c4a6bf2ea9011ec" kind="enumvalue"><name>__P</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305aa2f540337ee8b4701edca9d4c9590f72" kind="enumvalue"><name>__Q</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a86ce860731d1f87b23e6a81279cabe47" kind="enumvalue"><name>__R</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305af40fe078ddd73cb3e7cc2600b489b79e" kind="enumvalue"><name>__S</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305abd8c38af1d7e2706ccc993def9ec2196" kind="enumvalue"><name>__T</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a0b06dea9bf1cc715c4a3c0abc3b69b5f" kind="enumvalue"><name>__U</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a68015ebde05eb605a6e28127b465595f" kind="enumvalue"><name>__V</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305afacc23ee9be9683691974f7457047e6f" kind="enumvalue"><name>__W</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ae822cd995fbecbc38dab9a6ffa353ec7" kind="enumvalue"><name>__X</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a59b44582fa1149d0917ea954265279a9" kind="enumvalue"><name>__Y</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a04f5ef9dfe347e8511938e392561ef2a" kind="enumvalue"><name>__Z</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a37cc59668d033920e54a97bffbb76f19" kind="enumvalue"><name>__LEFT_BRACKET</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a208332d66ab42f31d3d2f5dc547098db" kind="enumvalue"><name>__BACKSLASH</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ada60e4a87ecdf45ca578f6cba9d403fa" kind="enumvalue"><name>__RIGHT_BRACKET</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a78e72fe2ecbf321e68b01f597a55790c" kind="enumvalue"><name>__GRAVE_ACCENT</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a6003200d6f3390733fa429a5c2be80e0" kind="enumvalue"><name>__WORLD_1</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305afec5fd226577ac233f8dce1fd4275506" kind="enumvalue"><name>__WORLD_2</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305abb9a3de94ad5e159a104fa322cc10d76" kind="enumvalue"><name>__ESCAPE</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a57c8e0751bba9dbacce8901dd32da857" kind="enumvalue"><name>__ENTER</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ad9cf7a5a45b812bd5a7e17fdd7b52e85" kind="enumvalue"><name>__TAB</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a0bd233f8871cd65078f7be877554d877" kind="enumvalue"><name>__BACKSPACE</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a1d566e942602ce47144d1606bf80d561" kind="enumvalue"><name>__INSERT</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a4329b527cad86b9cec0ff9164ef52b0b" kind="enumvalue"><name>__DELETE</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a6553b1a27e7a592e8e580bef49d351ed" kind="enumvalue"><name>__RIGHT</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a45728cecb5d442708fa69da7dd95e959" kind="enumvalue"><name>__LEFT</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ada03b10bfdaef66bdef591c79e615b4f" kind="enumvalue"><name>__DOWN</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a01cdd0aa4abc0f737d7635cc90420dce" kind="enumvalue"><name>__UP</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a4cc73f4d2fdc5a860b24f3ae44fdafbc" kind="enumvalue"><name>__PAGE_UP</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ae8d2200de6675aaa66ba573d4abcc70d" kind="enumvalue"><name>__PAGE_DOWN</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a8c0f8647ffa6a20021efe1ccb5c4f3a8" kind="enumvalue"><name>__HOME</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a72b49a7cbf0c0e3dff052d091d838252" kind="enumvalue"><name>__END</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a0fb46fe9163522519bbf0d5ed53e6c20" kind="enumvalue"><name>__CAPS_LOCK</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a0dd3f5b6460fa1277cd799ba1ddc42dd" kind="enumvalue"><name>__SCROLL_LOCK</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305abe558b4c46ee863ddf251e74751a1e43" kind="enumvalue"><name>__NUM_LOCK</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ae844091e8afc79d1fd722bf5bb0a99d7" kind="enumvalue"><name>__PRINT_SCREEN</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a9751070acf531ae0e696f3cf5ef50b78" kind="enumvalue"><name>__PAUSE</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a9338fb99fd89072bd9fe275e9fbff5b1" kind="enumvalue"><name>__F1</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305adc6ed176de40e091d6a131e642a937eb" kind="enumvalue"><name>__F2</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a40ab9b27f4e60f80a956b371d64c7db8" kind="enumvalue"><name>__F3</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a2546f5cb5595d2266994b803cf39e311" kind="enumvalue"><name>__F4</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305afefc81a9a897e5f50cf419e45018709d" kind="enumvalue"><name>__F5</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305afd7818f64d874bdaa7873e0cbe54aca3" kind="enumvalue"><name>__F6</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a703d1cab204e59afaef8ba722d914122" kind="enumvalue"><name>__F7</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305aa397cfd252680cf99843479563e85ea9" kind="enumvalue"><name>__F8</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ab94e0741c9685fcaa613441dd590c2f9" kind="enumvalue"><name>__F9</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a02e55a73926c2ca957043987ce5c2e0f" kind="enumvalue"><name>__F10</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ad3135c36a633eeba19cb3d041b1bd948" kind="enumvalue"><name>__F11</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a5b1fdffafa9000a0ae5821df4cd02db6" kind="enumvalue"><name>__F12</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ac94ae3c7748d32d08426e8ba60c47ee9" kind="enumvalue"><name>__F13</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ae15a8217fdc6ad5e183a1e527cb45984" kind="enumvalue"><name>__F14</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a1f7cd7e00fdc1977fc2a8f517bd8c352" kind="enumvalue"><name>__F15</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305afdab55f533d3997cce403719e5f85b47" kind="enumvalue"><name>__F16</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a8fd5b28fb154aebee82f27ee1f520556" kind="enumvalue"><name>__F17</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a3d5da2d2d33ee6c93c368b97acdbb717" kind="enumvalue"><name>__F18</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a7bd65ad29fe34141628c74fe37189bdb" kind="enumvalue"><name>__F19</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a721dd89e7292151e51dd2369528f48dc" kind="enumvalue"><name>__F20</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a6783af530010e04de0f128e158b6a84a" kind="enumvalue"><name>__F21</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ad84bd0de7ec31656d7ad87c31f0185b2" kind="enumvalue"><name>__F22</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ab6e75743200cacf8e861752e1eb3cef4" kind="enumvalue"><name>__F23</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305afc8015d0c03e5e7d5bb34bc3b3d7e216" kind="enumvalue"><name>__F24</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ad9063c2fe998acd1608b5cb55ba11712" kind="enumvalue"><name>__F25</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305adb320f690ecf42745f04e6d1ddfe1ec6" kind="enumvalue"><name>__KP_0</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a948aa604e2b6f40eab721d88134951e0" kind="enumvalue"><name>__KP_1</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305aa51895528895b980a07824408168b432" kind="enumvalue"><name>__KP_2</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305aa54ed6b5afe56f73325d120cd0c170a1" kind="enumvalue"><name>__KP_3</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305af32a84f6ae7cd2b6cc743aa115f7b0fd" kind="enumvalue"><name>__KP_4</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a32df755c5e28e0f46c0ef24b7f9174dd" kind="enumvalue"><name>__KP_5</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a1ca73b88987c77803d55c9ff237dc5b1" kind="enumvalue"><name>__KP_6</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a4002865b7bb08d139b29a35db08df0db" kind="enumvalue"><name>__KP_7</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a3ada1a65c52281e43a0a924d92a13490" kind="enumvalue"><name>__KP_8</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a8e3d34ef71e2f7a85ae18ad7b6b5f9c9" kind="enumvalue"><name>__KP_9</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a307b387da0a4d8aea5c7a3c4fafc4c2f" kind="enumvalue"><name>__KP_DECIMAL</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a0cba49a13f51a6c40c573f8d9065a975" kind="enumvalue"><name>__KP_DIVIDE</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305aca798edf7447ddfb9d38503976306d16" kind="enumvalue"><name>__KP_MULTIPLY</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a5b21a220aeab78dd71c0881ed1fc07df" kind="enumvalue"><name>__KP_SUBTRACT</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ad8754e7cd4c104b82e56409326758ac6" kind="enumvalue"><name>__KP_ADD</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a06cfe36798a6542fea59d4d418674e60" kind="enumvalue"><name>__KP_ENTER</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a54308f12c663663303bf76d3f7d7c1ec" kind="enumvalue"><name>__KP_EQUAL</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a40304533e9f88952702a380b2b1b428d" kind="enumvalue"><name>__LEFT_SHIFT</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ace462cf7638d7ca9bce9410e85890248" kind="enumvalue"><name>__LEFT_CONTROL</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a369a648ee60e65ebad8affddf2058a88" kind="enumvalue"><name>__LEFT_ALT</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305aa79e7e69d8ca83a8e7a0f49e1352b114" kind="enumvalue"><name>__LEFT_SUPER</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a95ff9e645312ac31d2889bbdf75cc728" kind="enumvalue"><name>__RIGHT_SHIFT</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305adf928956c2ce0d58343100a7150a0dc1" kind="enumvalue"><name>__RIGHT_CONTROL</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ae76b28df661317bd1eb8f6a773a44359" kind="enumvalue"><name>__RIGHT_ALT</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ab2e02dfeb1d48f53794177282b28095b" kind="enumvalue"><name>__RIGHT_SUPER</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305ab5af70c0c89071e67a6405e1cee649f1" kind="enumvalue"><name>__MENU</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a9c2613ebd9bdf879f3bda162e9b3a0ba" kind="enumvalue"><name>__DEACTIVATED</name></member>
-    <member refid="dummy_1ac846721ec08ebc254d389a992230f305a90027f2141499ed0a9eaadc9b1fed692" kind="enumvalue"><name>__ACTIVATED</name></member>
-    <member refid="message__codes_8h_1a82d14ec7bd46347068de3bc5c03a8136" kind="enum"><name>EMessageCode</name></member>
-    <member refid="message__codes_8h_1a82d14ec7bd46347068de3bc5c03a8136a3294d58c419911fbd2f74272f2c003a1" kind="enumvalue"><name>system_ok</name></member>
-    <member refid="message__codes_8h_1a82d14ec7bd46347068de3bc5c03a8136a44604123c3a732c9ccbf038630324845" kind="enumvalue"><name>change_window_title</name></member>
-    <member refid="message__codes_8h_1a82d14ec7bd46347068de3bc5c03a8136a90597347ef0c417e74f6ebe2a56e4642" kind="enumvalue"><name>load_image</name></member>
-    <member refid="message__codes_8h_1a82d14ec7bd46347068de3bc5c03a8136a4fb5e214b2cfce7e037b402d4751008b" kind="enumvalue"><name>get_loaded_image</name></member>
-    <member refid="message__codes_8h_1a82d14ec7bd46347068de3bc5c03a8136ae8f437bd38e0a44dc12fe701ef06dd0b" kind="enumvalue"><name>modify_audio</name></member>
-    <member refid="message__codes_8h_1a82d14ec7bd46347068de3bc5c03a8136adc852a8c5943c264fcc65be19cb9f46b" kind="enumvalue"><name>load_level</name></member>
-    <member refid="message__object_8h_1ae1270b4aff91ea4ec19282d79b4da20a" kind="enum"><name>EAudioEffect</name></member>
-    <member refid="message__object_8h_1ae1270b4aff91ea4ec19282d79b4da20aa5b2bb66f8760967a16031a07b86e5130" kind="enumvalue"><name>fade_out</name></member>
-    <member refid="message__object_8h_1ae1270b4aff91ea4ec19282d79b4da20aad4089f3b652d320e396c9232cc8ec9db" kind="enumvalue"><name>fade_in</name></member>
-    <member refid="message__object_8h_1aebe1aa8b8a70dcc7bf2eca4e222bdd95" kind="typedef"><name>RAsyncMessage</name></member>
-    <member refid="message__object_8h_1a5c62010c7a09ffdfbbeced800697c075" kind="typedef"><name>RSyncMessage</name></member>
-    <member refid="awerere__collision__engine_8h_1a1d1fd55940a739ad7dd2eb981270be52" kind="variable"><name>FLOAT_APPROXIMATION</name></member>
-    <member refid="engine_8h_1a65f945ec121d314eba2d3e6ceea5e75b" kind="variable"><name>Engine</name></member>
-    <member refid="input__manager_8h_1aacfcb5d781b426a6e1b57f5e68274e33" kind="function"><name>mouseButtonCallback</name></member>
-    <member refid="input__manager_8h_1a769307f85758c7d5e45ff3bed4f37bd4" kind="function"><name>scrollCallback</name></member>
-    <member refid="input__manager_8h_1a5dd263446a456f7c3894d2b491522ee8" kind="function"><name>keyCallback</name></member>
-    <member refid="input__manager_8h_1a5a2e4612469f7116f7713e8431673013" kind="function"><name>cursorPositionCallback</name></member>
+    <member refid="namespace_rubeus_1ac04ea80a8fa238524f8582b0a66efdce" kind="enum"><name>EMouseButtons</name></member>
+    <member refid="namespace_rubeus_1ac04ea80a8fa238524f8582b0a66efdcea823045ebbdd66fd7be1669504834f546" kind="enumvalue"><name>__MOUSE_BUTTON_1</name></member>
+    <member refid="namespace_rubeus_1ac04ea80a8fa238524f8582b0a66efdceab45176af1ef9b733532d809f488f8a09" kind="enumvalue"><name>__MOUSE_BUTTON_2</name></member>
+    <member refid="namespace_rubeus_1ac04ea80a8fa238524f8582b0a66efdceac4d7753982dd6414412e5227135159ff" kind="enumvalue"><name>__MOUSE_BUTTON_3</name></member>
+    <member refid="namespace_rubeus_1ac04ea80a8fa238524f8582b0a66efdcea85e842ba98358870086f3b4b2f933ca3" kind="enumvalue"><name>__MOUSE_BUTTON_4</name></member>
+    <member refid="namespace_rubeus_1ac04ea80a8fa238524f8582b0a66efdcea3cc607a9faa579c9c9effcea800192ed" kind="enumvalue"><name>__MOUSE_BUTTON_5</name></member>
+    <member refid="namespace_rubeus_1ac04ea80a8fa238524f8582b0a66efdceafcc803e5e4269413de2d941cc67a6ca5" kind="enumvalue"><name>__MOUSE_BUTTON_6</name></member>
+    <member refid="namespace_rubeus_1ac04ea80a8fa238524f8582b0a66efdcea50511080cb70367558b6ae32fe4afb64" kind="enumvalue"><name>__MOUSE_BUTTON_7</name></member>
+    <member refid="namespace_rubeus_1ac04ea80a8fa238524f8582b0a66efdceaf194ce824ccaa692b33cab0c8763e73d" kind="enumvalue"><name>__MOUSE_BUTTON_8</name></member>
+    <member refid="namespace_rubeus_1ac04ea80a8fa238524f8582b0a66efdceaa7edea8b0405b8f0b94059ee3fd59248" kind="enumvalue"><name>__MOUSE_BUTTON_LAST</name></member>
+    <member refid="namespace_rubeus_1ac04ea80a8fa238524f8582b0a66efdcea2e933020ddfe21b50bac69478e1ebcb2" kind="enumvalue"><name>__MOUSE_BUTTON_LEFT</name></member>
+    <member refid="namespace_rubeus_1ac04ea80a8fa238524f8582b0a66efdcea6c6377538874aa10c843f901696d181c" kind="enumvalue"><name>__MOUSE_BUTTON_RIGHT</name></member>
+    <member refid="namespace_rubeus_1ac04ea80a8fa238524f8582b0a66efdcea781bedd78677aa47e35962f13eb939ce" kind="enumvalue"><name>__MOUSE_BUTTON_MIDDLE</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305" kind="enum"><name>EKeyboardKeys</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a01f9e772b2cb5589512938487c53d97f" kind="enumvalue"><name>__UNKNOWN</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305aa50046ab4782915083f99228cdb9c2bf" kind="enumvalue"><name>__SPACE</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a3a015076ee3573b25688331935d9340c" kind="enumvalue"><name>__APOSTROPHE</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a824201f8fc7333609e305d1cd1286154" kind="enumvalue"><name>__COMMA</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a402d19a1a5db4a6db029b1f8bfd429fa" kind="enumvalue"><name>__MINUS</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a88478650c2a052b0989e07b2c0fe3419" kind="enumvalue"><name>__PERIOD</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a685ee646d000690b43c7900271a00860" kind="enumvalue"><name>__SLASH</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a7443fa9cd36173de4802613959005150" kind="enumvalue"><name>__0</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a08a9d0bbf3381652f7cca8738b5a8469" kind="enumvalue"><name>__1</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305aa62c2a79bae538bf3502f1bc482e9893" kind="enumvalue"><name>__2</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ade124b3cc0e2e82f99cba1b248e420fb" kind="enumvalue"><name>__3</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a51a27df6ebb9b68dacbde2f3a05da81d" kind="enumvalue"><name>__4</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a2b739200737fe7dbf581a474e3ad58aa" kind="enumvalue"><name>__5</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a81184b6ee4d75809b6ed69413a662e3c" kind="enumvalue"><name>__6</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305adfdee1c7e46088e3825702faa1f861ba" kind="enumvalue"><name>__7</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ae2d1794b18f1f1eaa75cf88a6ff7963f" kind="enumvalue"><name>__8</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a41ee4e6076835fb945a96a38b1f1c594" kind="enumvalue"><name>__9</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305afdc5ba6c7f5c244db7b313e461c3e9a7" kind="enumvalue"><name>__SEMICOLON</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ad942ffd6d819a077fd3c1660237a5ca6" kind="enumvalue"><name>__EQUAL</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a7ee4608344da9fa262865e279c888c73" kind="enumvalue"><name>__A</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305af8a6b04baf7c5e0cc2daba92b7ad7ca8" kind="enumvalue"><name>__B</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a1f2785efca72209f639fa471a8a8aa6a" kind="enumvalue"><name>__C</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ae1e79a8f766365d5f98dbcf8ebcdb580" kind="enumvalue"><name>__D</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305af6dd62fe730748db1dc1ab443d9b8314" kind="enumvalue"><name>__E</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a14c71bf1ee61a76639e547d7c330dfc9" kind="enumvalue"><name>__F</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305abfaaabe937ee64ae701cfcf9fd092319" kind="enumvalue"><name>__G</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a59897944f061764c83614dd61b947cf1" kind="enumvalue"><name>__H</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305af2c1e2875c9a61c96e26e803a22ae979" kind="enumvalue"><name>__I</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a009a78bb966e4faeace002bc7139a678" kind="enumvalue"><name>__J</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a17f37b5be090c3ad6c7bda1df9d5be9d" kind="enumvalue"><name>__K</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a27564b0f8fc08d6bd0345695785ce4b6" kind="enumvalue"><name>__L</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a476e4e6d615566b374a12b737083550e" kind="enumvalue"><name>__M</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305acf0d27a1c12774f09f54a89d86e20ba6" kind="enumvalue"><name>__N</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a410e8e4fd4ea4f3e1426c170a3cf6623" kind="enumvalue"><name>__O</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a38cd8577bd5a826f2c4a6bf2ea9011ec" kind="enumvalue"><name>__P</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305aa2f540337ee8b4701edca9d4c9590f72" kind="enumvalue"><name>__Q</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a86ce860731d1f87b23e6a81279cabe47" kind="enumvalue"><name>__R</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305af40fe078ddd73cb3e7cc2600b489b79e" kind="enumvalue"><name>__S</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305abd8c38af1d7e2706ccc993def9ec2196" kind="enumvalue"><name>__T</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a0b06dea9bf1cc715c4a3c0abc3b69b5f" kind="enumvalue"><name>__U</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a68015ebde05eb605a6e28127b465595f" kind="enumvalue"><name>__V</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305afacc23ee9be9683691974f7457047e6f" kind="enumvalue"><name>__W</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ae822cd995fbecbc38dab9a6ffa353ec7" kind="enumvalue"><name>__X</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a59b44582fa1149d0917ea954265279a9" kind="enumvalue"><name>__Y</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a04f5ef9dfe347e8511938e392561ef2a" kind="enumvalue"><name>__Z</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a37cc59668d033920e54a97bffbb76f19" kind="enumvalue"><name>__LEFT_BRACKET</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a208332d66ab42f31d3d2f5dc547098db" kind="enumvalue"><name>__BACKSLASH</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ada60e4a87ecdf45ca578f6cba9d403fa" kind="enumvalue"><name>__RIGHT_BRACKET</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a78e72fe2ecbf321e68b01f597a55790c" kind="enumvalue"><name>__GRAVE_ACCENT</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a6003200d6f3390733fa429a5c2be80e0" kind="enumvalue"><name>__WORLD_1</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305afec5fd226577ac233f8dce1fd4275506" kind="enumvalue"><name>__WORLD_2</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305abb9a3de94ad5e159a104fa322cc10d76" kind="enumvalue"><name>__ESCAPE</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a57c8e0751bba9dbacce8901dd32da857" kind="enumvalue"><name>__ENTER</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ad9cf7a5a45b812bd5a7e17fdd7b52e85" kind="enumvalue"><name>__TAB</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a0bd233f8871cd65078f7be877554d877" kind="enumvalue"><name>__BACKSPACE</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a1d566e942602ce47144d1606bf80d561" kind="enumvalue"><name>__INSERT</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a4329b527cad86b9cec0ff9164ef52b0b" kind="enumvalue"><name>__DELETE</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a6553b1a27e7a592e8e580bef49d351ed" kind="enumvalue"><name>__RIGHT</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a45728cecb5d442708fa69da7dd95e959" kind="enumvalue"><name>__LEFT</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ada03b10bfdaef66bdef591c79e615b4f" kind="enumvalue"><name>__DOWN</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a01cdd0aa4abc0f737d7635cc90420dce" kind="enumvalue"><name>__UP</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a4cc73f4d2fdc5a860b24f3ae44fdafbc" kind="enumvalue"><name>__PAGE_UP</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ae8d2200de6675aaa66ba573d4abcc70d" kind="enumvalue"><name>__PAGE_DOWN</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a8c0f8647ffa6a20021efe1ccb5c4f3a8" kind="enumvalue"><name>__HOME</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a72b49a7cbf0c0e3dff052d091d838252" kind="enumvalue"><name>__END</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a0fb46fe9163522519bbf0d5ed53e6c20" kind="enumvalue"><name>__CAPS_LOCK</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a0dd3f5b6460fa1277cd799ba1ddc42dd" kind="enumvalue"><name>__SCROLL_LOCK</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305abe558b4c46ee863ddf251e74751a1e43" kind="enumvalue"><name>__NUM_LOCK</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ae844091e8afc79d1fd722bf5bb0a99d7" kind="enumvalue"><name>__PRINT_SCREEN</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a9751070acf531ae0e696f3cf5ef50b78" kind="enumvalue"><name>__PAUSE</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a9338fb99fd89072bd9fe275e9fbff5b1" kind="enumvalue"><name>__F1</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305adc6ed176de40e091d6a131e642a937eb" kind="enumvalue"><name>__F2</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a40ab9b27f4e60f80a956b371d64c7db8" kind="enumvalue"><name>__F3</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a2546f5cb5595d2266994b803cf39e311" kind="enumvalue"><name>__F4</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305afefc81a9a897e5f50cf419e45018709d" kind="enumvalue"><name>__F5</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305afd7818f64d874bdaa7873e0cbe54aca3" kind="enumvalue"><name>__F6</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a703d1cab204e59afaef8ba722d914122" kind="enumvalue"><name>__F7</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305aa397cfd252680cf99843479563e85ea9" kind="enumvalue"><name>__F8</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ab94e0741c9685fcaa613441dd590c2f9" kind="enumvalue"><name>__F9</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a02e55a73926c2ca957043987ce5c2e0f" kind="enumvalue"><name>__F10</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ad3135c36a633eeba19cb3d041b1bd948" kind="enumvalue"><name>__F11</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a5b1fdffafa9000a0ae5821df4cd02db6" kind="enumvalue"><name>__F12</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ac94ae3c7748d32d08426e8ba60c47ee9" kind="enumvalue"><name>__F13</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ae15a8217fdc6ad5e183a1e527cb45984" kind="enumvalue"><name>__F14</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a1f7cd7e00fdc1977fc2a8f517bd8c352" kind="enumvalue"><name>__F15</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305afdab55f533d3997cce403719e5f85b47" kind="enumvalue"><name>__F16</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a8fd5b28fb154aebee82f27ee1f520556" kind="enumvalue"><name>__F17</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a3d5da2d2d33ee6c93c368b97acdbb717" kind="enumvalue"><name>__F18</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a7bd65ad29fe34141628c74fe37189bdb" kind="enumvalue"><name>__F19</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a721dd89e7292151e51dd2369528f48dc" kind="enumvalue"><name>__F20</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a6783af530010e04de0f128e158b6a84a" kind="enumvalue"><name>__F21</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ad84bd0de7ec31656d7ad87c31f0185b2" kind="enumvalue"><name>__F22</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ab6e75743200cacf8e861752e1eb3cef4" kind="enumvalue"><name>__F23</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305afc8015d0c03e5e7d5bb34bc3b3d7e216" kind="enumvalue"><name>__F24</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ad9063c2fe998acd1608b5cb55ba11712" kind="enumvalue"><name>__F25</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305adb320f690ecf42745f04e6d1ddfe1ec6" kind="enumvalue"><name>__KP_0</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a948aa604e2b6f40eab721d88134951e0" kind="enumvalue"><name>__KP_1</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305aa51895528895b980a07824408168b432" kind="enumvalue"><name>__KP_2</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305aa54ed6b5afe56f73325d120cd0c170a1" kind="enumvalue"><name>__KP_3</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305af32a84f6ae7cd2b6cc743aa115f7b0fd" kind="enumvalue"><name>__KP_4</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a32df755c5e28e0f46c0ef24b7f9174dd" kind="enumvalue"><name>__KP_5</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a1ca73b88987c77803d55c9ff237dc5b1" kind="enumvalue"><name>__KP_6</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a4002865b7bb08d139b29a35db08df0db" kind="enumvalue"><name>__KP_7</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a3ada1a65c52281e43a0a924d92a13490" kind="enumvalue"><name>__KP_8</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a8e3d34ef71e2f7a85ae18ad7b6b5f9c9" kind="enumvalue"><name>__KP_9</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a307b387da0a4d8aea5c7a3c4fafc4c2f" kind="enumvalue"><name>__KP_DECIMAL</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a0cba49a13f51a6c40c573f8d9065a975" kind="enumvalue"><name>__KP_DIVIDE</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305aca798edf7447ddfb9d38503976306d16" kind="enumvalue"><name>__KP_MULTIPLY</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a5b21a220aeab78dd71c0881ed1fc07df" kind="enumvalue"><name>__KP_SUBTRACT</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ad8754e7cd4c104b82e56409326758ac6" kind="enumvalue"><name>__KP_ADD</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a06cfe36798a6542fea59d4d418674e60" kind="enumvalue"><name>__KP_ENTER</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a54308f12c663663303bf76d3f7d7c1ec" kind="enumvalue"><name>__KP_EQUAL</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a40304533e9f88952702a380b2b1b428d" kind="enumvalue"><name>__LEFT_SHIFT</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ace462cf7638d7ca9bce9410e85890248" kind="enumvalue"><name>__LEFT_CONTROL</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a369a648ee60e65ebad8affddf2058a88" kind="enumvalue"><name>__LEFT_ALT</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305aa79e7e69d8ca83a8e7a0f49e1352b114" kind="enumvalue"><name>__LEFT_SUPER</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a95ff9e645312ac31d2889bbdf75cc728" kind="enumvalue"><name>__RIGHT_SHIFT</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305adf928956c2ce0d58343100a7150a0dc1" kind="enumvalue"><name>__RIGHT_CONTROL</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ae76b28df661317bd1eb8f6a773a44359" kind="enumvalue"><name>__RIGHT_ALT</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ab2e02dfeb1d48f53794177282b28095b" kind="enumvalue"><name>__RIGHT_SUPER</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305ab5af70c0c89071e67a6405e1cee649f1" kind="enumvalue"><name>__MENU</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a9c2613ebd9bdf879f3bda162e9b3a0ba" kind="enumvalue"><name>__DEACTIVATED</name></member>
+    <member refid="namespace_rubeus_1ac846721ec08ebc254d389a992230f305a90027f2141499ed0a9eaadc9b1fed692" kind="enumvalue"><name>__ACTIVATED</name></member>
+    <member refid="namespace_rubeus_1a82d14ec7bd46347068de3bc5c03a8136" kind="enum"><name>EMessageCode</name></member>
+    <member refid="namespace_rubeus_1a82d14ec7bd46347068de3bc5c03a8136a3294d58c419911fbd2f74272f2c003a1" kind="enumvalue"><name>system_ok</name></member>
+    <member refid="namespace_rubeus_1a82d14ec7bd46347068de3bc5c03a8136a44604123c3a732c9ccbf038630324845" kind="enumvalue"><name>change_window_title</name></member>
+    <member refid="namespace_rubeus_1a82d14ec7bd46347068de3bc5c03a8136a90597347ef0c417e74f6ebe2a56e4642" kind="enumvalue"><name>load_image</name></member>
+    <member refid="namespace_rubeus_1a82d14ec7bd46347068de3bc5c03a8136a4fb5e214b2cfce7e037b402d4751008b" kind="enumvalue"><name>get_loaded_image</name></member>
+    <member refid="namespace_rubeus_1a82d14ec7bd46347068de3bc5c03a8136ae8f437bd38e0a44dc12fe701ef06dd0b" kind="enumvalue"><name>modify_audio</name></member>
+    <member refid="namespace_rubeus_1a82d14ec7bd46347068de3bc5c03a8136adc852a8c5943c264fcc65be19cb9f46b" kind="enumvalue"><name>load_level</name></member>
+    <member refid="namespace_rubeus_1ae1270b4aff91ea4ec19282d79b4da20a" kind="enum"><name>EAudioEffect</name></member>
+    <member refid="namespace_rubeus_1ae1270b4aff91ea4ec19282d79b4da20aa5b2bb66f8760967a16031a07b86e5130" kind="enumvalue"><name>fade_out</name></member>
+    <member refid="namespace_rubeus_1ae1270b4aff91ea4ec19282d79b4da20aad4089f3b652d320e396c9232cc8ec9db" kind="enumvalue"><name>fade_in</name></member>
+    <member refid="namespace_rubeus_1aebe1aa8b8a70dcc7bf2eca4e222bdd95" kind="typedef"><name>RAsyncMessage</name></member>
+    <member refid="namespace_rubeus_1a5c62010c7a09ffdfbbeced800697c075" kind="typedef"><name>RSyncMessage</name></member>
+    <member refid="namespace_rubeus_1a1d1fd55940a739ad7dd2eb981270be52" kind="variable"><name>FLOAT_APPROXIMATION</name></member>
+    <member refid="namespace_rubeus_1a6271515c042526fd0df332714c1d843f" kind="variable"><name>Engine</name></member>
+    <member refid="namespace_rubeus_1aacfcb5d781b426a6e1b57f5e68274e33" kind="function"><name>mouseButtonCallback</name></member>
+    <member refid="namespace_rubeus_1a769307f85758c7d5e45ff3bed4f37bd4" kind="function"><name>scrollCallback</name></member>
+    <member refid="namespace_rubeus_1a5dd263446a456f7c3894d2b491522ee8" kind="function"><name>keyCallback</name></member>
+    <member refid="namespace_rubeus_1a5a2e4612469f7116f7713e8431673013" kind="function"><name>cursorPositionCallback</name></member>
+    <member refid="namespace_rubeus_1ad9e32b5851bed8632841e7730ee25acb" kind="function"><name>operator&lt;&lt;</name></member>
   </compound>
   <compound refid="namespace_rubeus_1_1_audio_components" kind="namespace"><name>Rubeus::AudioComponents</name>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9" kind="enum"><name>ETrackName</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9acf32b5881642ecefcaf02bd6f3ea8a3b" kind="enumvalue"><name>TRACK_0</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9aa9b3bda58201c2edee67d7e23a827ccb" kind="enumvalue"><name>TRACK_1</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9a207292998d3bb61916e7ed274e1bcf78" kind="enumvalue"><name>TRACK_2</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9af74badc6b78aed6bc84cb7a0e4bebd63" kind="enumvalue"><name>TRACK_3</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9a73170d16654f449159ad90f1c787f807" kind="enumvalue"><name>TRACK_4</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9ab6cb2a0fa212d59a433d3737f80bb3e4" kind="enumvalue"><name>TRACK_5</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9ab5a6ff4fd50ac5e1441a96a2c001cdc7" kind="enumvalue"><name>TRACK_6</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9a77e13439ad916c26deacfc5dc3c7b707" kind="enumvalue"><name>TRACK_7</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9a52e068bc524d1c27bd13dbe60ec96d2e" kind="enumvalue"><name>TRACK_8</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9a48f70206acea27aba337f05961c9c80f" kind="enumvalue"><name>TRACK_9</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9aeec2799f80e0e1651620770508d4b2ef" kind="enumvalue"><name>TRACK_10</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9a609b6d0b9c8c4998b1b519d9b890f3a2" kind="enumvalue"><name>TRACK_11</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9aebdb4a6a54074838d25f074d87ddd091" kind="enumvalue"><name>TRACK_12</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9a59cbcd43323674db14832ec36eef657a" kind="enumvalue"><name>TRACK_13</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9a2dc3e68af3b71237f627f8cc85202362" kind="enumvalue"><name>TRACK_14</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9a4d73763291c58293454927fc085c8fd6" kind="enumvalue"><name>TRACK_15</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9a221a260c36361db5f3ba9d5d9dc1432d" kind="enumvalue"><name>TRACK_16</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9a3d6130a9c51fab1fa19c0262f0a346d2" kind="enumvalue"><name>TRACK_17</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9aafd8bd0627b3c811c4cc47344ff192df" kind="enumvalue"><name>TRACK_18</name></member>
-    <member refid="audio__manager__component_8h_1a48f892bb3f261a22692cf2770f5463b9a1dc93d81f726c6eaf045881795d6a1ad" kind="enumvalue"><name>TRACK_19</name></member>
-    <member refid="audio__manager__component_8h_1a58c80b502626bade8073fadfac19adc5" kind="enum"><name>ETrackType</name></member>
-    <member refid="audio__manager__component_8h_1a58c80b502626bade8073fadfac19adc5a3ed7a6f3706467d3345d0146e25d936c" kind="enumvalue"><name>SOUND_TRACK</name></member>
-    <member refid="audio__manager__component_8h_1a58c80b502626bade8073fadfac19adc5a9b960865c61b3114bbdd7252f61b024a" kind="enumvalue"><name>MUSIC_TRACK</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9" kind="enum"><name>ETrackName</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9acf32b5881642ecefcaf02bd6f3ea8a3b" kind="enumvalue"><name>TRACK_0</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9aa9b3bda58201c2edee67d7e23a827ccb" kind="enumvalue"><name>TRACK_1</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9a207292998d3bb61916e7ed274e1bcf78" kind="enumvalue"><name>TRACK_2</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9af74badc6b78aed6bc84cb7a0e4bebd63" kind="enumvalue"><name>TRACK_3</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9a73170d16654f449159ad90f1c787f807" kind="enumvalue"><name>TRACK_4</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9ab6cb2a0fa212d59a433d3737f80bb3e4" kind="enumvalue"><name>TRACK_5</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9ab5a6ff4fd50ac5e1441a96a2c001cdc7" kind="enumvalue"><name>TRACK_6</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9a77e13439ad916c26deacfc5dc3c7b707" kind="enumvalue"><name>TRACK_7</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9a52e068bc524d1c27bd13dbe60ec96d2e" kind="enumvalue"><name>TRACK_8</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9a48f70206acea27aba337f05961c9c80f" kind="enumvalue"><name>TRACK_9</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9aeec2799f80e0e1651620770508d4b2ef" kind="enumvalue"><name>TRACK_10</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9a609b6d0b9c8c4998b1b519d9b890f3a2" kind="enumvalue"><name>TRACK_11</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9aebdb4a6a54074838d25f074d87ddd091" kind="enumvalue"><name>TRACK_12</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9a59cbcd43323674db14832ec36eef657a" kind="enumvalue"><name>TRACK_13</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9a2dc3e68af3b71237f627f8cc85202362" kind="enumvalue"><name>TRACK_14</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9a4d73763291c58293454927fc085c8fd6" kind="enumvalue"><name>TRACK_15</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9a221a260c36361db5f3ba9d5d9dc1432d" kind="enumvalue"><name>TRACK_16</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9a3d6130a9c51fab1fa19c0262f0a346d2" kind="enumvalue"><name>TRACK_17</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9aafd8bd0627b3c811c4cc47344ff192df" kind="enumvalue"><name>TRACK_18</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a48f892bb3f261a22692cf2770f5463b9a1dc93d81f726c6eaf045881795d6a1ad" kind="enumvalue"><name>TRACK_19</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a58c80b502626bade8073fadfac19adc5" kind="enum"><name>ETrackType</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a58c80b502626bade8073fadfac19adc5a3ed7a6f3706467d3345d0146e25d936c" kind="enumvalue"><name>SOUND_TRACK</name></member>
+    <member refid="namespace_rubeus_1_1_audio_components_1a58c80b502626bade8073fadfac19adc5a9b960865c61b3114bbdd7252f61b024a" kind="enumvalue"><name>MUSIC_TRACK</name></member>
   </compound>
   <compound refid="namespace_rubeus_1_1_awerere" kind="namespace"><name>Rubeus::Awerere</name>
-    <member refid="awerere__collider__object_8h_1aa31f43f0fcc41516bb0aa51cb1d88a08" kind="enum"><name>EColliderType</name></member>
-    <member refid="dummy_1aa31f43f0fcc41516bb0aa51cb1d88a08a6f7cea7381e843e2ee0338b4a92b0d43" kind="enumvalue"><name>SPHERE</name></member>
-    <member refid="dummy_1aa31f43f0fcc41516bb0aa51cb1d88a08aad6990fc23cd957328515fde2db852a3" kind="enumvalue"><name>PLANE</name></member>
-    <member refid="dummy_1aa31f43f0fcc41516bb0aa51cb1d88a08ae657cce1913c857166b0475f18668ef5" kind="enumvalue"><name>BOX</name></member>
-    <member refid="dummy_1aa31f43f0fcc41516bb0aa51cb1d88a08a80cda54f91e5930408b152ed0f86b797" kind="enumvalue"><name>NO_COLLIDER</name></member>
-    <member refid="awerere__physics__material_8h_1aa5297f932dd2baa0ef7105c0d393919b" kind="variable"><name>DEFAULT_MASS</name></member>
-    <member refid="awerere__physics__material_8h_1a86b73b44743b643a98fa9224ebd6be95" kind="variable"><name>DEFAULT_GRAVITY</name></member>
-    <member refid="awerere__physics__material_8h_1a7acd37480720577142881c73f087da7d" kind="variable"><name>DEFAULT_FRICTION</name></member>
-    <member refid="awerere__physics__material_8h_1a2351d8681ac2413f7decd04472ecb283" kind="variable"><name>DEFAULT_RESTITUTION</name></member>
+    <member refid="namespace_rubeus_1_1_awerere_1aa31f43f0fcc41516bb0aa51cb1d88a08" kind="enum"><name>EColliderType</name></member>
+    <member refid="namespace_rubeus_1_1_awerere_1aa31f43f0fcc41516bb0aa51cb1d88a08a6f7cea7381e843e2ee0338b4a92b0d43" kind="enumvalue"><name>SPHERE</name></member>
+    <member refid="namespace_rubeus_1_1_awerere_1aa31f43f0fcc41516bb0aa51cb1d88a08aad6990fc23cd957328515fde2db852a3" kind="enumvalue"><name>PLANE</name></member>
+    <member refid="namespace_rubeus_1_1_awerere_1aa31f43f0fcc41516bb0aa51cb1d88a08ae657cce1913c857166b0475f18668ef5" kind="enumvalue"><name>BOX</name></member>
+    <member refid="namespace_rubeus_1_1_awerere_1aa31f43f0fcc41516bb0aa51cb1d88a08a80cda54f91e5930408b152ed0f86b797" kind="enumvalue"><name>NO_COLLIDER</name></member>
+    <member refid="namespace_rubeus_1_1_awerere_1aa5297f932dd2baa0ef7105c0d393919b" kind="variable"><name>DEFAULT_MASS</name></member>
+    <member refid="namespace_rubeus_1_1_awerere_1a86b73b44743b643a98fa9224ebd6be95" kind="variable"><name>DEFAULT_GRAVITY</name></member>
+    <member refid="namespace_rubeus_1_1_awerere_1a7acd37480720577142881c73f087da7d" kind="variable"><name>DEFAULT_FRICTION</name></member>
+    <member refid="namespace_rubeus_1_1_awerere_1a2351d8681ac2413f7decd04472ecb283" kind="variable"><name>DEFAULT_RESTITUTION</name></member>
   </compound>
   <compound refid="namespace_rubeus_1_1_graphic_components" kind="namespace"><name>Rubeus::GraphicComponents</name>
-    <member refid="window__component_8h_1ab1b8341969a82bc64ecc95a440578f4e" kind="enum"><name>EWindowParameters</name></member>
-    <member refid="dummy_1ab1b8341969a82bc64ecc95a440578f4eabc914ca15710cdd16bb445e1590265c0" kind="enumvalue"><name>WINDOWED_MODE</name></member>
-    <member refid="dummy_1ab1b8341969a82bc64ecc95a440578f4ea40a830d18c0be1067f79d8984b772003" kind="enumvalue"><name>FULLSCREEN_MODE</name></member>
-    <member refid="dummy_1ab1b8341969a82bc64ecc95a440578f4eae0cb079325e65f05d71c9a26c7fd0780" kind="enumvalue"><name>NON_RESIZABLE_WINDOW</name></member>
-    <member refid="dummy_1ab1b8341969a82bc64ecc95a440578f4eadc5e3959d9acf540fa255f2a8178e6c4" kind="enumvalue"><name>RESIZABLE_WINDOW</name></member>
-    <member refid="guerrilla__renderer__component_8h_1a860626dbfee03ea084dc459a26cedd00" kind="variable"><name>MAX_SPRITES</name></member>
-    <member refid="guerrilla__renderer__component_8h_1adaedec10fdd3d6003f9fbd600003c7ef" kind="variable"><name>VERTEX_SIZE</name></member>
-    <member refid="guerrilla__renderer__component_8h_1a522a63dca03ca331ffc4b39c8c4857b6" kind="variable"><name>SPRITE_SIZE</name></member>
-    <member refid="guerrilla__renderer__component_8h_1aac58a92009c8dd5bbcb7b75852026ba1" kind="variable"><name>BUFFER_SIZE</name></member>
-    <member refid="guerrilla__renderer__component_8h_1a1124508ac5466bcc8221e830644bc815" kind="variable"><name>INDICES_SIZE</name></member>
-    <member refid="guerrilla__renderer__component_8h_1a4c30b8c0f6fdebeeee9c5ab7c8110fd1" kind="variable"><name>SHADER_VERTEX_LOCATION</name></member>
-    <member refid="guerrilla__renderer__component_8h_1ab26f4cde1d0e0df0eef27e3d34e59a21" kind="variable"><name>SHADER_UV_LOCATION</name></member>
-    <member refid="guerrilla__renderer__component_8h_1a6fbebba935b1e789388d35d56e977660" kind="variable"><name>SHADER_TEXTURE_ID_LOCATION</name></member>
-    <member refid="guerrilla__renderer__component_8h_1a28c2414a40cf42a059e7aeda7167f82e" kind="variable"><name>SHADER_COLOR_LOCATION</name></member>
-    <member refid="guerrilla__renderer__component_8h_1ab748d6754111ebe7bdf55804f2df6157" kind="variable"><name>MAX_ALLOWED_TEXTURES</name></member>
-    <member refid="window__component_8h_1ae977f0dca420926193fd5c7cd465baf0" kind="function"><name>getGLFWErrorLog</name></member>
+    <member refid="namespace_rubeus_1_1_graphic_components_1ab1b8341969a82bc64ecc95a440578f4e" kind="enum"><name>EWindowParameters</name></member>
+    <member refid="namespace_rubeus_1_1_graphic_components_1ab1b8341969a82bc64ecc95a440578f4eabc914ca15710cdd16bb445e1590265c0" kind="enumvalue"><name>WINDOWED_MODE</name></member>
+    <member refid="namespace_rubeus_1_1_graphic_components_1ab1b8341969a82bc64ecc95a440578f4ea40a830d18c0be1067f79d8984b772003" kind="enumvalue"><name>FULLSCREEN_MODE</name></member>
+    <member refid="namespace_rubeus_1_1_graphic_components_1ab1b8341969a82bc64ecc95a440578f4eae0cb079325e65f05d71c9a26c7fd0780" kind="enumvalue"><name>NON_RESIZABLE_WINDOW</name></member>
+    <member refid="namespace_rubeus_1_1_graphic_components_1ab1b8341969a82bc64ecc95a440578f4eadc5e3959d9acf540fa255f2a8178e6c4" kind="enumvalue"><name>RESIZABLE_WINDOW</name></member>
+    <member refid="namespace_rubeus_1_1_graphic_components_1a860626dbfee03ea084dc459a26cedd00" kind="variable"><name>MAX_SPRITES</name></member>
+    <member refid="namespace_rubeus_1_1_graphic_components_1adaedec10fdd3d6003f9fbd600003c7ef" kind="variable"><name>VERTEX_SIZE</name></member>
+    <member refid="namespace_rubeus_1_1_graphic_components_1a522a63dca03ca331ffc4b39c8c4857b6" kind="variable"><name>SPRITE_SIZE</name></member>
+    <member refid="namespace_rubeus_1_1_graphic_components_1aac58a92009c8dd5bbcb7b75852026ba1" kind="variable"><name>BUFFER_SIZE</name></member>
+    <member refid="namespace_rubeus_1_1_graphic_components_1a1124508ac5466bcc8221e830644bc815" kind="variable"><name>INDICES_SIZE</name></member>
+    <member refid="namespace_rubeus_1_1_graphic_components_1a4c30b8c0f6fdebeeee9c5ab7c8110fd1" kind="variable"><name>SHADER_VERTEX_LOCATION</name></member>
+    <member refid="namespace_rubeus_1_1_graphic_components_1ab26f4cde1d0e0df0eef27e3d34e59a21" kind="variable"><name>SHADER_UV_LOCATION</name></member>
+    <member refid="namespace_rubeus_1_1_graphic_components_1a6fbebba935b1e789388d35d56e977660" kind="variable"><name>SHADER_TEXTURE_ID_LOCATION</name></member>
+    <member refid="namespace_rubeus_1_1_graphic_components_1a28c2414a40cf42a059e7aeda7167f82e" kind="variable"><name>SHADER_COLOR_LOCATION</name></member>
+    <member refid="namespace_rubeus_1_1_graphic_components_1ab748d6754111ebe7bdf55804f2df6157" kind="variable"><name>MAX_ALLOWED_TEXTURES</name></member>
+    <member refid="namespace_rubeus_1_1_graphic_components_1ae977f0dca420926193fd5c7cd465baf0" kind="function"><name>getGLFWErrorLog</name></member>
+    <member refid="namespace_rubeus_1_1_graphic_components_1a2668090315cc223e175f10bf0d1dfd9a" kind="function"><name>windowCloseCallback</name></member>
+    <member refid="namespace_rubeus_1_1_graphic_components_1a8bc002d3ec48e267ef31c030a34a02ba" kind="function"><name>windowResizeCallback</name></member>
   </compound>
   <compound refid="namespace_rubeus_1_1_utility_components" kind="namespace"><name>Rubeus::UtilityComponents</name>
+    <member refid="namespace_rubeus_1_1_utility_components_1ad70f6448ef81dca7372b50a3413a4cb7" kind="variable"><name>ONESECONDINMILLISECONDS</name></member>
+  </compound>
+  <compound refid="directories_8dox" kind="file"><name>directories.dox</name>
+  </compound>
+  <compound refid="mainpage_8md" kind="file"><name>mainpage.md</name>
+  </compound>
+  <compound refid="pages_8md" kind="file"><name>pages.md</name>
+  </compound>
+  <compound refid="config_8h" kind="file"><name>config.h</name>
+    <member refid="config_8h_1a03a2a1a9477bd3c1581cae7f4f02492b" kind="define"><name>_COMPILE_UNIT_TESTS_</name></member>
+  </compound>
+  <compound refid="sample__level_8cpp" kind="file"><name>sample_level.cpp</name>
+  </compound>
+  <compound refid="sample__level_8h" kind="file"><name>sample_level.h</name>
+  </compound>
+  <compound refid="sample__level2_8cpp" kind="file"><name>sample_level2.cpp</name>
+  </compound>
+  <compound refid="sample__level2_8h" kind="file"><name>sample_level2.h</name>
+  </compound>
+  <compound refid="sample__object_8cpp" kind="file"><name>sample_object.cpp</name>
+  </compound>
+  <compound refid="sample__object_8h" kind="file"><name>sample_object.h</name>
+  </compound>
+  <compound refid="user__init_8cpp" kind="file"><name>user_init.cpp</name>
+    <member refid="user__init_8cpp_1ab15f2312de6ddc1ff5802cb892115905" kind="variable"><name>startupLevel</name></member>
+    <member refid="user__init_8cpp_1a0dad574dd3cb69cf861369c927e9f02b" kind="variable"><name>sample_level</name></member>
+    <member refid="user__init_8cpp_1a24f19ee1453bb8135cc466dc454c27e4" kind="variable"><name>sample_level2</name></member>
+    <member refid="user__init_8cpp_1a00777ff66d7ba8cef3a1bd519c4f77ff" kind="variable"><name>sample_object</name></member>
+  </compound>
+  <compound refid="user__init_8h" kind="file"><name>user_init.h</name>
   </compound>
   <compound refid="audio__manager__component_8h" kind="file"><name>audio_manager_component.h</name>
     <member refid="audio__manager__component_8h_1a7ed6a6db7ec466a04b820f3de267708a" kind="define"><name>MAX_VOLUME</name></member>
@@ -1006,8 +1069,132 @@
   </compound>
   <compound refid="world_8h" kind="file"><name>world.h</name>
   </compound>
-  <compound refid="dir_23fef25541c7f2a6ddf150530691075d" kind="dir"><name>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include</name>
+  <compound refid="_rubeus_core_8cpp" kind="file"><name>RubeusCore.cpp</name>
+    <member refid="_rubeus_core_8cpp_1ab15f2312de6ddc1ff5802cb892115905" kind="variable"><name>startupLevel</name></member>
+    <member refid="_rubeus_core_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
   </compound>
-  <compound refid="dir_d7b2ae570141163dad272f46859a8af2" kind="dir"><name>D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore</name>
+  <compound refid="_rubeus_core_8h" kind="file"><name>RubeusCore.h</name>
+    <member refid="_rubeus_core_8h_1ab2ebd66ae81f2e85ee9cf6ea8bf54294" kind="define"><name>ILUT_USE_OPENGL</name></member>
+  </compound>
+  <compound refid="audio__manager__component_8cpp" kind="file"><name>audio_manager_component.cpp</name>
+  </compound>
+  <compound refid="awerere__box__collider__object_8cpp" kind="file"><name>awerere_box_collider_object.cpp</name>
+  </compound>
+  <compound refid="awerere__collide__data__object_8cpp" kind="file"><name>awerere_collide_data_object.cpp</name>
+  </compound>
+  <compound refid="awerere__collider__object_8cpp" kind="file"><name>awerere_collider_object.cpp</name>
+  </compound>
+  <compound refid="awerere__collision__engine_8cpp" kind="file"><name>awerere_collision_engine.cpp</name>
+  </compound>
+  <compound refid="awerere__collision__grid_8cpp" kind="file"><name>awerere_collision_grid.cpp</name>
+  </compound>
+  <compound refid="awerere__flag_8cpp" kind="file"><name>awerere_flag.cpp</name>
+  </compound>
+  <compound refid="awerere__hit__event__list_8cpp" kind="file"><name>awerere_hit_event_list.cpp</name>
+  </compound>
+  <compound refid="awerere__physics__engine_8cpp" kind="file"><name>awerere_physics_engine.cpp</name>
+  </compound>
+  <compound refid="awerere__physics__material_8cpp" kind="file"><name>awerere_physics_material.cpp</name>
+  </compound>
+  <compound refid="awerere__physics__object_8cpp" kind="file"><name>awerere_physics_object.cpp</name>
+  </compound>
+  <compound refid="awerere__plane__collider__object_8cpp" kind="file"><name>awerere_plane_collider_object.cpp</name>
+  </compound>
+  <compound refid="awerere__sphere__collider__object_8cpp" kind="file"><name>awerere_sphere_collider_object.cpp</name>
+  </compound>
+  <compound refid="buffer__object_8cpp" kind="file"><name>buffer_object.cpp</name>
+  </compound>
+  <compound refid="engine_8cpp" kind="file"><name>engine.cpp</name>
+  </compound>
+  <compound refid="entity__object_8cpp" kind="file"><name>entity_object.cpp</name>
+  </compound>
+  <compound refid="game__object_8cpp" kind="file"><name>game_object.cpp</name>
+  </compound>
+  <compound refid="group__object_8cpp" kind="file"><name>group_object.cpp</name>
+  </compound>
+  <compound refid="guerrilla__renderer__component_8cpp" kind="file"><name>guerrilla_renderer_component.cpp</name>
+  </compound>
+  <compound refid="image__object_8cpp" kind="file"><name>image_object.cpp</name>
+  </compound>
+  <compound refid="index__buffer__object_8cpp" kind="file"><name>index_buffer_object.cpp</name>
+  </compound>
+  <compound refid="input__manager_8cpp" kind="file"><name>input_manager.cpp</name>
+  </compound>
+  <compound refid="layer__composition__object_8cpp" kind="file"><name>layer_composition_object.cpp</name>
+  </compound>
+  <compound refid="level_8cpp" kind="file"><name>level.cpp</name>
+  </compound>
+  <compound refid="loader__component_8cpp" kind="file"><name>loader_component.cpp</name>
+  </compound>
+  <compound refid="logger__component_8cpp" kind="file"><name>logger_component.cpp</name>
+    <member refid="logger__component_8cpp_1a299d6947bc18d65c9e2b83ec1c38dbf0" kind="function"><name>toHex</name></member>
+    <member refid="logger__component_8cpp_1a6103a9a9cceabf330103f2502f088649" kind="function"><name>GLClearError</name></member>
+    <member refid="logger__component_8cpp_1a3f5bf6cd6f7b15ed36da100f3ee029ec" kind="function"><name>DevILClearError</name></member>
+  </compound>
+  <compound refid="master__component_8cpp" kind="file"><name>master_component.cpp</name>
+  </compound>
+  <compound refid="message__bus_8cpp" kind="file"><name>message_bus.cpp</name>
+  </compound>
+  <compound refid="message__object_8cpp" kind="file"><name>message_object.cpp</name>
+  </compound>
+  <compound refid="message__system_8cpp" kind="file"><name>message_system.cpp</name>
+  </compound>
+  <compound refid="renderable__object_8cpp" kind="file"><name>renderable_object.cpp</name>
+  </compound>
+  <compound refid="rubeus__maths__library_8cpp" kind="file"><name>rubeus_maths_library.cpp</name>
+  </compound>
+  <compound refid="scene__layer__object_8cpp" kind="file"><name>scene_layer_object.cpp</name>
+  </compound>
+  <compound refid="shader__component_8cpp" kind="file"><name>shader_component.cpp</name>
+  </compound>
+  <compound refid="simple__renderer__component_8cpp" kind="file"><name>simple_renderer_component.cpp</name>
+  </compound>
+  <compound refid="sprite__object_8cpp" kind="file"><name>sprite_object.cpp</name>
+  </compound>
+  <compound refid="static__sprite__object_8cpp" kind="file"><name>static_sprite_object.cpp</name>
+  </compound>
+  <compound refid="texture__object_8cpp" kind="file"><name>texture_object.cpp</name>
+  </compound>
+  <compound refid="timer__component_8cpp" kind="file"><name>timer_component.cpp</name>
+  </compound>
+  <compound refid="ui__layer__object_8cpp" kind="file"><name>ui_layer_object.cpp</name>
+  </compound>
+  <compound refid="vertex__array__object_8cpp" kind="file"><name>vertex_array_object.cpp</name>
+  </compound>
+  <compound refid="window__component_8cpp" kind="file"><name>window_component.cpp</name>
+  </compound>
+  <compound refid="world_8cpp" kind="file"><name>world.cpp</name>
+  </compound>
+  <compound refid="test__message__system_8cpp" kind="file"><name>test_message_system.cpp</name>
+    <member refid="test__message__system_8cpp_1a2cbb6420eeea1a788eec254086f8a985" kind="variable"><name>MessageSystem</name></member>
+    <member refid="test__message__system_8cpp_1a2b855705fa5d4e05a0ccb8a12587ea81" kind="variable"><name>GameWindow</name></member>
+    <member refid="test__message__system_8cpp_1ac09029be84641a7c4f18d8fe19450f0b" kind="variable"><name>loader</name></member>
+    <member refid="test__message__system_8cpp_1afee4837fa4fddb5a0c5dd797fa00bd7d" kind="function"><name>addSystem</name></member>
+    <member refid="test__message__system_8cpp_1a92e46148c77fd6d085e711fd83a10248" kind="function"><name>addMessage</name></member>
+    <member refid="test__message__system_8cpp_1a5a4e8c8ef3cb7d9f497588eac6a407d7" kind="function"><name>addSystem</name></member>
+    <member refid="test__message__system_8cpp_1addfbb63acc79f80c5a76a8ec6d08a1c2" kind="function"><name>addMessage</name></member>
+    <member refid="test__message__system_8cpp_1a7b8dd6a25b93fc3be159911d7feeaf8f" kind="function"><name>while</name></member>
+  </compound>
+  <compound refid="_0Dm_keywords" kind="page"><name>@m_keywords</name>
+  </compound>
+  <compound refid="_a_p_i" kind="page"><name>API</name>
+  </compound>
+  <compound refid="dir_d0fce2c9cc208ced23add81355d7cd2f" kind="dir"><name>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files</name>
+  </compound>
+  <compound refid="dir_c09d7e06f2530dd5e48c306aeb7181e5" kind="dir"><name>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game</name>
+  </compound>
+  <compound refid="dir_18b86446946202065a249ff8cf298676" kind="dir"><name>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name</name>
+  </compound>
+  <compound refid="dir_23fef25541c7f2a6ddf150530691075d" kind="dir"><name>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include</name>
+  </compound>
+  <compound refid="dir_12315e64ecc1645263c2399a07a0f7cd" kind="dir"><name>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels</name>
+  </compound>
+  <compound refid="dir_d7b2ae570141163dad272f46859a8af2" kind="dir"><name>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore</name>
+  </compound>
+  <compound refid="dir_8fb5acc26ddeb9774f523b76ee0f8b24" kind="dir"><name>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source</name>
+  </compound>
+  <compound refid="dir_eeb58c74ef07eed6e875d993adafc5e5" kind="dir"><name>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Tests</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
   </compound>
 </doxygenindex>

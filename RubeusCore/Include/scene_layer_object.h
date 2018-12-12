@@ -1,3 +1,9 @@
+/**
+* @file     Include/scene_layer_object.h
+*
+* @brief    Declares the Scene Layer
+*/
+
 #pragma once
 
 #include <vector>

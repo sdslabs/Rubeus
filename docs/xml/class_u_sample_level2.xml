@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_u_sample_level2" kind="class" language="C++" prot="public">
+    <compoundname>USampleLevel2</compoundname>
+    <basecompoundref refid="class_rubeus_1_1_r_level" prot="public" virt="non-virtual">Rubeus::RLevel</basecompoundref>
+    <includes refid="sample__level2_8h" local="no">sample_level2.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_u_sample_level2_1a8e33d7125f6c04c3e461c637f33cb08b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>USampleLevel2::USampleLevel2</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>USampleLevel2</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files/sample_level2.h" line="13" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files/sample_level2.h" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_sample_level2_1aa13d614cc114f65873c672546b99e0da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>USampleLevel2::~USampleLevel2</definition>
+        <argsstring>()</argsstring>
+        <name>~USampleLevel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files/sample_level2.h" line="18" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files/sample_level2.h" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_sample_level2_1adf0be6fb2d7cacaade7b474e2cf777b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void USampleLevel2::begin</definition>
+        <argsstring>() override</argsstring>
+        <name>begin</name>
+        <reimplements refid="class_rubeus_1_1_r_level_1accfb4374e3deeffc74d45d8d03d3556b">begin</reimplements>
+        <briefdescription>
+<para>User overridable on startup script for this level. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files/sample_level2.h" line="22" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files/sample_level2.cpp" bodystart="3" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="class_u_sample_level2_1a1f056eb0d839045b86f1a06f7f11d7de" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void USampleLevel2::onEnd</definition>
+        <argsstring>() override</argsstring>
+        <name>onEnd</name>
+        <reimplements refid="class_rubeus_1_1_r_level_1a1a8159f166bbe90cb22425136609fb5e">onEnd</reimplements>
+        <briefdescription>
+<para>User overridable script called on end of this level. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files/sample_level2.h" line="23" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files/sample_level2.cpp" bodystart="9" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="309">
+        <label>USampleLevel2</label>
+        <link refid="class_u_sample_level2"/>
+        <childnode refid="310" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="310">
+        <label>Rubeus::RLevel</label>
+        <link refid="class_rubeus_1_1_r_level"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="313">
+        <label>Rubeus::AudioComponents::RSymphony</label>
+        <link refid="class_rubeus_1_1_audio_components_1_1_r_symphony"/>
+        <childnode refid="314" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="317">
+        <label>Rubeus::RInputManager</label>
+        <link refid="class_rubeus_1_1_r_input_manager"/>
+        <childnode refid="314" relation="public-inheritance">
+        </childnode>
+        <childnode refid="318" relation="usage">
+          <edgelabel>MouseScroll</edgelabel>
+          <edgelabel>MousePosition</edgelabel>
+        </childnode>
+      </node>
+      <node id="311">
+        <label>USampleLevel2</label>
+        <link refid="class_u_sample_level2"/>
+        <childnode refid="312" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="319">
+        <label>Rubeus::RWorld</label>
+        <link refid="class_rubeus_1_1_r_world"/>
+      </node>
+      <node id="318">
+        <label>RML::Vector2D</label>
+        <link refid="struct_r_m_l_1_1_vector2_d"/>
+      </node>
+      <node id="316">
+        <label>Rubeus::RMessageBus</label>
+        <link refid="class_rubeus_1_1_r_message_bus"/>
+      </node>
+      <node id="315">
+        <label>Rubeus::RMessageSystem</label>
+        <link refid="class_rubeus_1_1_r_message_system"/>
+        <childnode refid="316" relation="usage">
+          <edgelabel>m_MessageBus</edgelabel>
+        </childnode>
+      </node>
+      <node id="314">
+        <label>Rubeus::RMasterComponent</label>
+        <link refid="class_rubeus_1_1_r_master_component"/>
+        <childnode refid="315" relation="usage">
+          <edgelabel>m_MessageSystem</edgelabel>
+        </childnode>
+      </node>
+      <node id="312">
+        <label>Rubeus::RLevel</label>
+        <link refid="class_rubeus_1_1_r_level"/>
+        <childnode refid="313" relation="usage">
+          <edgelabel>m_AudioManager</edgelabel>
+        </childnode>
+        <childnode refid="317" relation="usage">
+          <edgelabel>m_InputManager</edgelabel>
+        </childnode>
+        <childnode refid="319" relation="usage">
+          <edgelabel>m_World</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files/sample_level2.h" line="6" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files/sample_level2.h" bodystart="5" bodyend="24"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_r_level_1a2c0545a3e9a6c78f586dc9118ae17b9f" prot="public" virt="non-virtual"><scope>USampleLevel2</scope><name>addGameObject</name></member>
+      <member refid="class_u_sample_level2_1adf0be6fb2d7cacaade7b474e2cf777b8" prot="public" virt="virtual"><scope>USampleLevel2</scope><name>begin</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a83010fe62326dc0767a7a041aeff411e" prot="public" virt="non-virtual"><scope>USampleLevel2</scope><name>getInputManager</name></member>
+      <member refid="class_rubeus_1_1_r_level_1aa664e7c62a62134aeff17d50428a543d" prot="public" virt="non-virtual"><scope>USampleLevel2</scope><name>getName</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a8d08d9e54f8732f6043c02593d9279c8" prot="public" virt="non-virtual"><scope>USampleLevel2</scope><name>getSoundManager</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a488936e1ca061f8deb49d8ed06cd9373" prot="public" virt="non-virtual"><scope>USampleLevel2</scope><name>getWorld</name></member>
+      <member refid="class_rubeus_1_1_r_level_1aac94ae19fc45918278ba69d126c74cc3" prot="public" virt="non-virtual"><scope>USampleLevel2</scope><name>InstantiatedLevels</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a4776b19d0f8313a3d785910e7b39e502" prot="public" virt="non-virtual"><scope>USampleLevel2</scope><name>killAliveObjects</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a262dcbba989ac479eb7c6b66d7ce220a" prot="protected" virt="non-virtual"><scope>USampleLevel2</scope><name>m_AudioManager</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a332056e3e49dbbde32a3153d46c628a9" prot="protected" virt="non-virtual"><scope>USampleLevel2</scope><name>m_InputManager</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a62b53a50f4afadf234f3d67e01488cea" prot="protected" virt="non-virtual"><scope>USampleLevel2</scope><name>m_Name</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a2523b175190f46fac69ba69e79ec2c2e" prot="protected" virt="non-virtual"><scope>USampleLevel2</scope><name>m_World</name></member>
+      <member refid="class_u_sample_level2_1a1f056eb0d839045b86f1a06f7f11d7de" prot="public" virt="virtual"><scope>USampleLevel2</scope><name>onEnd</name></member>
+      <member refid="class_rubeus_1_1_r_level_1aa6315e5321bcfca5282201a6d64e7d15" prot="public" virt="non-virtual"><scope>USampleLevel2</scope><name>RLevel</name></member>
+      <member refid="class_u_sample_level2_1a8e33d7125f6c04c3e461c637f33cb08b" prot="public" virt="non-virtual"><scope>USampleLevel2</scope><name>USampleLevel2</name></member>
+      <member refid="class_rubeus_1_1_r_level_1aa5dd147b213fb9d63a31a4aa4ba9a1e2" prot="public" virt="non-virtual"><scope>USampleLevel2</scope><name>~RLevel</name></member>
+      <member refid="class_u_sample_level2_1aa13d614cc114f65873c672546b99e0da" prot="public" virt="non-virtual"><scope>USampleLevel2</scope><name>~USampleLevel2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

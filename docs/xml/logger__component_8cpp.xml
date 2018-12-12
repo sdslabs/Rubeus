@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="logger__component_8cpp" kind="file" language="C++">
+    <compoundname>logger_component.cpp</compoundname>
+    <includes refid="logger__component_8h" local="no">logger_component.h</includes>
+    <includes local="no">math.h</includes>
+    <incdepgraph>
+      <node id="3729">
+        <label>IL/il.h</label>
+      </node>
+      <node id="3730">
+        <label>IL/ilu.h</label>
+      </node>
+      <node id="3727">
+        <label>string</label>
+      </node>
+      <node id="3728">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="3726">
+        <label>string.h</label>
+      </node>
+      <node id="3723">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/logger_component.cpp</label>
+        <link refid="logger__component_8cpp"/>
+        <childnode refid="3724" relation="include">
+        </childnode>
+        <childnode refid="3731" relation="include">
+        </childnode>
+      </node>
+      <node id="3731">
+        <label>math.h</label>
+      </node>
+      <node id="3725">
+        <label>iostream</label>
+      </node>
+      <node id="3724">
+        <label>logger_component.h</label>
+        <link refid="logger__component_8h"/>
+        <childnode refid="3725" relation="include">
+        </childnode>
+        <childnode refid="3726" relation="include">
+        </childnode>
+        <childnode refid="3727" relation="include">
+        </childnode>
+        <childnode refid="3728" relation="include">
+        </childnode>
+        <childnode refid="3729" relation="include">
+        </childnode>
+        <childnode refid="3730" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="logger__component_8cpp_1a299d6947bc18d65c9e2b83ec1c38dbf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int toHex</definition>
+        <argsstring>(int decimal)</argsstring>
+        <name>toHex</name>
+        <param>
+          <type>int</type>
+          <declname>decimal</declname>
+        </param>
+        <briefdescription>
+<para>Converts a decimal to a hexadecimal. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>decimal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The decimal.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Decimal as an int. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/logger_component.cpp" line="10" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/logger_component.cpp" bodystart="10" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="logger__component_8cpp_1a6103a9a9cceabf330103f2502f088649" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GLClearError</definition>
+        <argsstring>()</argsstring>
+        <name>GLClearError</name>
+        <briefdescription>
+<para>Clear all OpenGL error flags. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/logger_component.cpp" line="23" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/logger_component.cpp" bodystart="23" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="logger__component_8cpp_1a3f5bf6cd6f7b15ed36da100f3ee029ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DevILClearError</definition>
+        <argsstring>()</argsstring>
+        <name>DevILClearError</name>
+        <briefdescription>
+<para>Clears the DevIL error stack. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/logger_component.cpp" line="29" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/logger_component.cpp" bodystart="29" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/logger_component.cpp"/>
+  </compounddef>
+</doxygen>

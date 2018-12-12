@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="struct_rubeus_1_1_message" kind="struct" language="C++" prot="public">
     <compoundname>Rubeus::Message</compoundname>
     <includes refid="message__object_8h" local="no">message_object.h</includes>
@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" line="32" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" bodystart="32" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" line="32" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_rubeus_1_1_message_1a8349daaa98ce0a45f42d457430748347" prot="public" static="no" mutable="no">
         <type><ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref> *</type>
@@ -28,10 +28,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" line="35" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" bodystart="35" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" line="35" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_rubeus_1_1_message_1ae4bf54f564c9a4803be37d341313e157" prot="public" static="no" mutable="no">
-        <type><ref refid="message__codes_8h_1a82d14ec7bd46347068de3bc5c03a8136" kindref="member">EMessageCode</ref></type>
+        <type><ref refid="namespace_rubeus_1a82d14ec7bd46347068de3bc5c03a8136" kindref="member">EMessageCode</ref></type>
         <definition>EMessageCode Rubeus::Message::m_Type</definition>
         <argsstring></argsstring>
         <name>m_Type</name>
@@ -41,10 +41,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" line="38" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" bodystart="38" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" line="38" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_rubeus_1_1_message_1a4ebdd7a1445d43bb44cfe4c10fef4988" prot="public" static="no" mutable="no">
-        <type>var</type>
+        <type><ref refid="message__object_8h_1aa1f422da0e0c2bd47d96464982aac6a4" kindref="member">var</ref></type>
         <definition>var Rubeus::Message::m_Data</definition>
         <argsstring></argsstring>
         <name>m_Data</name>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" line="41" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" bodystart="41" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" line="41" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -72,11 +72,11 @@
           <declname>receiver</declname>
         </param>
         <param>
-          <type><ref refid="message__codes_8h_1a82d14ec7bd46347068de3bc5c03a8136" kindref="member">EMessageCode</ref></type>
+          <type><ref refid="namespace_rubeus_1a82d14ec7bd46347068de3bc5c03a8136" kindref="member">EMessageCode</ref></type>
           <declname>type</declname>
         </param>
         <param>
-          <type>var</type>
+          <type><ref refid="message__object_8h_1aa1f422da0e0c2bd47d96464982aac6a4" kindref="member">var</ref></type>
           <declname>data</declname>
           <defval>NULL</defval>
         </param>
@@ -115,7 +115,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" line="53" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" line="53" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/message_object.cpp" bodystart="11" bodyend="14"/>
       </memberdef>
       <memberdef kind="function" id="struct_rubeus_1_1_message_1a80f0a41ca48055eaa6143d413325097e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" line="60" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" line="60" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/message_object.cpp" bodystart="16" bodyend="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -136,34 +136,34 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="90">
+      <node id="81">
         <label>Rubeus::Message</label>
         <link refid="struct_rubeus_1_1_message"/>
-        <childnode refid="91" relation="usage">
+        <childnode refid="82" relation="usage">
           <edgelabel>m_Receiver</edgelabel>
           <edgelabel>m_Sender</edgelabel>
         </childnode>
       </node>
-      <node id="93">
+      <node id="84">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="92">
+      <node id="83">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="93" relation="usage">
+        <childnode refid="84" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="91">
+      <node id="82">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="92" relation="usage">
+        <childnode refid="83" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" line="30" column="1" bodyfile="D:/CPP Projects/Rubeus Project/Rubeus/RubeusCore/Include/message_object.h" bodystart="29" bodyend="61"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" line="30" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" bodystart="29" bodyend="61"/>
     <listofallmembers>
       <member refid="struct_rubeus_1_1_message_1a4ebdd7a1445d43bb44cfe4c10fef4988" prot="public" virt="non-virtual"><scope>Rubeus::Message</scope><name>m_Data</name></member>
       <member refid="struct_rubeus_1_1_message_1a8349daaa98ce0a45f42d457430748347" prot="public" virt="non-virtual"><scope>Rubeus::Message</scope><name>m_Receiver</name></member>

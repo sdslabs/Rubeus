@@ -1,5 +1,5 @@
 /**
- * @file		Source\master_component.h.
+ * @file		Include\master_component.h.
  *
  * @brief	Declares the master class
  */
@@ -19,7 +19,7 @@
 namespace Rubeus
 {
 	/**
-	* @class		MasterComponent
+	* @class		RMasterComponent
 	*
 	* @brief		A master component.
 	* 			Serves as parent class for all components

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="buffer__object_8cpp" kind="file" language="C++">
+    <compoundname>buffer_object.cpp</compoundname>
+    <includes refid="buffer__object_8h" local="no">buffer_object.h</includes>
+    <incdepgraph>
+      <node id="3328">
+        <label>IL/il.h</label>
+      </node>
+      <node id="3329">
+        <label>IL/ilu.h</label>
+      </node>
+      <node id="3327">
+        <label>string</label>
+      </node>
+      <node id="3323">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="3326">
+        <label>string.h</label>
+      </node>
+      <node id="3322">
+        <label>buffer_object.h</label>
+        <link refid="buffer__object_8h"/>
+        <childnode refid="3323" relation="include">
+        </childnode>
+        <childnode refid="3324" relation="include">
+        </childnode>
+      </node>
+      <node id="3325">
+        <label>iostream</label>
+      </node>
+      <node id="3324">
+        <label>logger_component.h</label>
+        <link refid="logger__component_8h"/>
+        <childnode refid="3325" relation="include">
+        </childnode>
+        <childnode refid="3326" relation="include">
+        </childnode>
+        <childnode refid="3327" relation="include">
+        </childnode>
+        <childnode refid="3323" relation="include">
+        </childnode>
+        <childnode refid="3328" relation="include">
+        </childnode>
+        <childnode refid="3329" relation="include">
+        </childnode>
+      </node>
+      <node id="3321">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/buffer_object.cpp</label>
+        <link refid="buffer__object_8cpp"/>
+        <childnode refid="3322" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
+    <innernamespace refid="namespace_rubeus_1_1_graphic_components">Rubeus::GraphicComponents</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/buffer_object.cpp"/>
+  </compounddef>
+</doxygen>

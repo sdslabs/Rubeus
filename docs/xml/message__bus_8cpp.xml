@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="message__bus_8cpp" kind="file" language="C++">
+    <compoundname>message_bus.cpp</compoundname>
+    <includes refid="message__bus_8h" local="no">message_bus.h</includes>
+    <incdepgraph>
+      <node id="3760">
+        <label>IL/il.h</label>
+      </node>
+      <node id="3766">
+        <label>IL/ilu.h</label>
+      </node>
+      <node id="3756">
+        <label>message_object.h</label>
+        <link refid="message__object_8h"/>
+        <childnode refid="3757" relation="include">
+        </childnode>
+        <childnode refid="3758" relation="include">
+        </childnode>
+        <childnode refid="3759" relation="include">
+        </childnode>
+        <childnode refid="3761" relation="include">
+        </childnode>
+      </node>
+      <node id="3757">
+        <label>string</label>
+      </node>
+      <node id="3765">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="3753">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/message_bus.cpp</label>
+        <link refid="message__bus_8cpp"/>
+        <childnode refid="3754" relation="include">
+        </childnode>
+      </node>
+      <node id="3758">
+        <label>boost/any.hpp</label>
+      </node>
+      <node id="3761">
+        <label>message_codes.h</label>
+        <link refid="message__codes_8h"/>
+        <childnode refid="3762" relation="include">
+        </childnode>
+      </node>
+      <node id="3759">
+        <label>image_object.h</label>
+        <link refid="image__object_8h"/>
+        <childnode refid="3757" relation="include">
+        </childnode>
+        <childnode refid="3760" relation="include">
+        </childnode>
+      </node>
+      <node id="3754">
+        <label>message_bus.h</label>
+        <link refid="message__bus_8h"/>
+        <childnode refid="3755" relation="include">
+        </childnode>
+        <childnode refid="3756" relation="include">
+        </childnode>
+      </node>
+      <node id="3764">
+        <label>string.h</label>
+      </node>
+      <node id="3755">
+        <label>vector</label>
+      </node>
+      <node id="3763">
+        <label>iostream</label>
+      </node>
+      <node id="3762">
+        <label>logger_component.h</label>
+        <link refid="logger__component_8h"/>
+        <childnode refid="3763" relation="include">
+        </childnode>
+        <childnode refid="3764" relation="include">
+        </childnode>
+        <childnode refid="3757" relation="include">
+        </childnode>
+        <childnode refid="3765" relation="include">
+        </childnode>
+        <childnode refid="3760" relation="include">
+        </childnode>
+        <childnode refid="3766" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
+    <briefdescription>
+<para>Implements the mesage bus class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/message_bus.cpp"/>
+  </compounddef>
+</doxygen>

@@ -12,6 +12,11 @@
 
 namespace Rubeus
 {
+	/**
+     * @namespace @Rubeus::GraphicComponents
+	 *
+     * @brief The Graphic Components of Rubeus Engine namespace.
+	 */
 	namespace GraphicComponents
 	{
 		/**
