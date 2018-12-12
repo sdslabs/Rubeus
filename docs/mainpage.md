@@ -13,7 +13,7 @@ If you want to contribute to the documentation, then have a look at [our README 
 
 # How to use this Documentation?
 
-The Rubeus Documentation is supposed to only be treated as the API documentation. This is probably not a good place to start if you want to start building a game with Rubeus. We have our [Getting Start guide](https://github.com/sdslabs/Rubeus/wiki) for it. This is for those people who are interested in knowing what class structure Rubeus uses and reveal extra features that Rubeus provides, which you may not see through Intellsense or code completion.
+The Rubeus Documentation is supposed to only be treated as the API documentation. This is probably not a good place to start if you want to start building a game with Rubeus. We have our [Getting Start guide](https://github.com/sdslabs/Rubeus/wiki) for it. This is for those people who are interested in knowing what class structure Rubeus uses and reveal extra features that Rubeus provides, which you may not see through Intellisense or code completion.
 
 Use the **Search** option at the top right hand corner to search for items. 
 
