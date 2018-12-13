@@ -1,5 +1,5 @@
 /**
- * @file	Include\shader_component.h.
+ * @file	Include/shader_component.h.
  *
  * @brief	Declares the shader component class
  */

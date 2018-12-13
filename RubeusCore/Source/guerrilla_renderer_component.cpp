@@ -1,5 +1,5 @@
 /**
- * @file		Source\guerrilla_renderer_component.cpp.
+ * @file		Source/guerrilla_renderer_component.cpp.
  *
  * @brief	Implements the guerrilla renderer component class
  */

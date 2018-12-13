@@ -1,5 +1,5 @@
 /**
- * @file		Source\simple_renderer_component.cpp.
+ * @file		Source/simple_renderer_component.cpp.
  *
  * @brief	Implements the simple renderer
  */

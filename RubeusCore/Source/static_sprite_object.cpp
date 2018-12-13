@@ -1,5 +1,5 @@
 /**
- * @file		Source\static_sprite_object.cpp.
+ * @file		Source/static_sprite_object.cpp.
  *
  * @brief	Implements the static sprite class
  */

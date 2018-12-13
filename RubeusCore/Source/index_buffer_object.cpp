@@ -1,5 +1,5 @@
 /**
- * @file		Source\index_buffer_object.cpp.
+ * @file		Source/index_buffer_object.cpp.
  *
  * @brief	Implements the index buffer class
  */

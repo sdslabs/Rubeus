@@ -1,5 +1,5 @@
 /**
- * @file		Source\timer_component.cpp.
+ * @file		Source/timer_component.cpp.
  *
  * @brief	Implements the timer component class
  */

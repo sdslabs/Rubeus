@@ -1,5 +1,5 @@
 /**
- * @file		Source\rubeus_maths_library.cpp.
+ * @file		Source/rubeus_maths_library.cpp.
  *
  * @brief	Implements the RML (Rubeus Maths Library)
  */

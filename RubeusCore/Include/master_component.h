@@ -1,5 +1,5 @@
 /**
- * @file		Include\master_component.h.
+ * @file		Include/master_component.h.
  *
  * @brief	Declares the master class
  */

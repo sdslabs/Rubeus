@@ -1,5 +1,5 @@
 /**
- * @file		Include\ui_layer_object.h.
+ * @file		Include/ui_layer_object.h.
  *
  * @brief	Declares the UI layer class
  */

@@ -1,5 +1,5 @@
 /**
- * @file		Source\shader_component.cpp.
+ * @file		Source/shader_component.cpp.
  *
  * @brief	Implements the shader component class
  */

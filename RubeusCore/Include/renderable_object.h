@@ -1,5 +1,5 @@
 /**
- * @file		Include\renderable_object.h.
+ * @file		Include/renderable_object.h.
  *
  * @brief	Declares the renderable object class
  */

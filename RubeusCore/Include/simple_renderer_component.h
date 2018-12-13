@@ -1,5 +1,5 @@
 /**
- * @file		Include\simple_renderer_component.h.
+ * @file		Include/simple_renderer_component.h.
  *
  * @brief	Declares the simple renderer
  */

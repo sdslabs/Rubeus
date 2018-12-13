@@ -1,5 +1,5 @@
 /**
- * @file		Include\index_buffer_object.h
+ * @file		Include/index_buffer_object.h
  *
  * @brief	Declares the Index buffer class
  */

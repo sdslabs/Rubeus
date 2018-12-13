@@ -1,5 +1,5 @@
 /**
- * @file		Include\group_object.h
+ * @file		Include/group_object.h
  *
  * @brief	Declares the group structure.
  */

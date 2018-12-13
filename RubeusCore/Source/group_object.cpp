@@ -1,5 +1,5 @@
 /**
- * @file		Source\group_object.cpp.
+ * @file		Source/group_object.cpp.
  *
  * @brief	Implements the group object structure
  */

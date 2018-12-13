@@ -1,5 +1,5 @@
 /**
- * @file		Source\buffer.cpp.
+ * @file		Source/buffer.cpp.
  *
  * @brief	Implements the buffer class
  */

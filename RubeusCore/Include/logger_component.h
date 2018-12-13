@@ -1,5 +1,5 @@
 /**
- * @file		Source\logger_component.h.
+ * @file		Source/logger_component.h.
  *
  * @brief	Declares the logger macro
  */
