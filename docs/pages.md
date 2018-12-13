@@ -8,6 +8,6 @@ Search for what your are looking for by pressing `Tab` or using the Search butto
 
 * [Namespaces](./namespaces.html)
 
-* [Classes](./classes.html)
+* [Classes](./annotated.html)
 
 * [Files](./files.html)
