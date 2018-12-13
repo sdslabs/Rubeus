@@ -772,17 +772,17 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>left</parametername>
+<parametername>vector</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The left operand. </para></parameterdescription>
+<para>The vector. </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>right</parametername>
+<parametername>other</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The right operand.</para></parameterdescription>
+<para>The float to multiply.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
 <simplesect kind="return"><para>The result of the operation. </para></simplesect>
@@ -791,9 +791,9 @@
         </inbodydescription>
         <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="571" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="358" bodyend="361"/>
       </memberdef>
-      <memberdef kind="friend" id="struct_r_m_l_1_1_vector3_d_1a1331e2fbb42bb468bcd9cec0794bce7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="friend" id="struct_r_m_l_1_1_vector3_d_1a649e1adf56382b00d0334481e62eba12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
-        <definition>Vector3D &amp; RML::Vector3D::operator/</definition>
+        <definition>Vector3D &amp; operator/</definition>
         <argsstring>(Vector3D left, const Vector3D &amp;right)</argsstring>
         <name>operator/</name>
         <param>
@@ -828,9 +828,9 @@
         </inbodydescription>
         <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="583" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="368" bodyend="371"/>
       </memberdef>
-      <memberdef kind="friend" id="struct_r_m_l_1_1_vector3_d_1a6a9aa42a570373cf07a5beba48218352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="friend" id="struct_r_m_l_1_1_vector3_d_1aa33bf8c1e82768b9fda6882eacf7b572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
-        <definition>Vector3D &amp; RML::Vector3D::operator/</definition>
+        <definition>Vector3D &amp; operator/</definition>
         <argsstring>(const Vector3D vector, const float &amp;other)</argsstring>
         <name>operator/</name>
         <param>
@@ -840,24 +840,23 @@
         <param>
           <type>const float &amp;</type>
           <declname>other</declname>
-          <defname>right</defname>
         </param>
         <briefdescription>
 <para>Float division operator. (Down scaling) </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>left</parametername>
+<parametername>vector</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The left operand. </para></parameterdescription>
+<para>The vector operand. </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>right</parametername>
+<parametername>other</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The right operand.</para></parameterdescription>
+<para>The float to divide with.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
 <simplesect kind="return"><para>The result of the operation. </para></simplesect>
@@ -894,8 +893,8 @@
       <member refid="struct_r_m_l_1_1_vector3_d_1aa4132db4ccf37586c84e4dab071085e5" prot="public" virt="non-virtual"><scope>RML::Vector3D</scope><name>operator+=</name></member>
       <member refid="struct_r_m_l_1_1_vector3_d_1ab61d3901bae4ab8fb099c19f86d5065e" prot="public" virt="non-virtual"><scope>RML::Vector3D</scope><name>operator-</name></member>
       <member refid="struct_r_m_l_1_1_vector3_d_1a7267d6915bb2b74d41c0a06d24ce9ef9" prot="public" virt="non-virtual"><scope>RML::Vector3D</scope><name>operator-=</name></member>
-      <member refid="struct_r_m_l_1_1_vector3_d_1a1331e2fbb42bb468bcd9cec0794bce7b" prot="public" virt="non-virtual"><scope>RML::Vector3D</scope><name>operator/</name></member>
-      <member refid="struct_r_m_l_1_1_vector3_d_1a6a9aa42a570373cf07a5beba48218352" prot="public" virt="non-virtual"><scope>RML::Vector3D</scope><name>operator/</name></member>
+      <member refid="struct_r_m_l_1_1_vector3_d_1a649e1adf56382b00d0334481e62eba12" prot="public" virt="non-virtual"><scope>RML::Vector3D</scope><name>operator/</name></member>
+      <member refid="struct_r_m_l_1_1_vector3_d_1aa33bf8c1e82768b9fda6882eacf7b572" prot="public" virt="non-virtual"><scope>RML::Vector3D</scope><name>operator/</name></member>
       <member refid="struct_r_m_l_1_1_vector3_d_1a4bf33c2319ba86127295fdbf0f4ee7b9" prot="public" virt="non-virtual"><scope>RML::Vector3D</scope><name>operator/=</name></member>
       <member refid="struct_r_m_l_1_1_vector3_d_1a9c0cc562b338de248976b51a71a9be09" prot="public" virt="non-virtual"><scope>RML::Vector3D</scope><name>operator&lt;&lt;</name></member>
       <member refid="struct_r_m_l_1_1_vector3_d_1a048a3d9ed505aee2e637117036d23d43" prot="public" virt="non-virtual"><scope>RML::Vector3D</scope><name>operator==</name></member>

@@ -71,9 +71,19 @@
           <declname>filePath</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Loads text file to a string using streams. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="warning"><para>Use only after initialising the image loader through initImageLoader()</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Full pathname of the file.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The text file in a string. </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/loader_component.h" line="74" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/loader_component.cpp" bodystart="25" bodyend="62"/>
@@ -117,9 +127,18 @@
           <declname>path</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Loads image and returns it in the form of a <ref refid="namespace_rubeus" kindref="compound">Rubeus</ref> Image. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The image file path</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The image object. </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/loader_component.h" line="85" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/loader_component.cpp" bodystart="64" bodyend="79"/>
@@ -130,7 +149,7 @@
         <argsstring>()</argsstring>
         <name>deleteImage</name>
         <briefdescription>
-<para>Frees the image data. </para>        </briefdescription>
+<para>Frees the loaded image data. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>

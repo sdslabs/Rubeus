@@ -31,7 +31,7 @@ For general FAQs, we have prepared answers to some basic questions [in our READM
 
 There is no GUI for now. We have developed [broCLI](https://github.com/sdslabs/broCLI) which an CLI tool to generate project files for Rubeus and it gives you everything you need to start making your game. Follow the [Getting Start guide](https://github.com/sdslabs/Rubeus/wiki) to know how to use [broCLI](https://github.com/sdslabs/broCLI).
 
-*This is the official Rubeus Engine Documentation. Head over to [Pages](./pages.html) for specific API documentation.*
+This is the official Rubeus Engine Documentation. Head over to [Pages](./pages.html) for specific API documentation.
 
 ---
 

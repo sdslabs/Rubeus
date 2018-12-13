@@ -61,7 +61,7 @@ namespace Rubeus
 			~RLoaderComponent();
 
 			/**
-			 * @fn		std::string RLoaderComponent::LoadTextFileStream(const char * filePath)
+			 * @fn		std::string loadTextFileStream(const char * filePath)
 			 *
 			 * @brief	Loads text file to a string using streams
 			 *
@@ -69,25 +69,25 @@ namespace Rubeus
 			 *
 			 * @param	filePath	Full pathname of the file.
 			 *
-			 * @return	The text file stream.
+			 * @return	The text file in a string.
 			 */
 			std::string loadTextFileStream(const char * filePath);
 
 			/**
-			 * @fn		static GraphicComponents::Image LoadImageFile(const char * path)
+			 * @fn		static GraphicComponents::Image loadImageFile(const char * path)
 			 *
-			 * @brief	Loads image
+			 * @brief	Loads image and returns it in the form of a Rubeus Image
 			 *
 			 * @param	path		The image file path
 			 *
-			 * @return	Pointer to the image object.
+			 * @return	The image object.
 			 */
 			static GraphicComponents::Image loadImageFile(const char * path);
 
 			/**
 			 * @fn		static void deleteImage()
 			 *
-			 * @brief	Frees the image data
+			 * @brief	Frees the loaded image data
 			 */
 			static void deleteImage();
 

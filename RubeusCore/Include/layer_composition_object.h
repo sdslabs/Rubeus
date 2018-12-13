@@ -56,10 +56,10 @@ namespace Rubeus
 			 *
 			 * @brief	Constructor
 			 *
-			 * @param	pathtoUIVertexShader		Path to vertex shader for the UI layer.
-			 * @param	pathtoUIFragmentShader	Path to fragment shader for the UI layer.
-			 * @param	pathtoSceneUIShader		Path to vertex shader for the Scene layer.
-			 * @param	pathtoSceneFragmentShader	Path to fragment shader for the Scene layer.
+			 * @param	pathToUIVertexShader		Path to vertex shader for the UI layer.
+			 * @param	pathToUIFragmentShader	Path to fragment shader for the UI layer.
+			 * @param	pathToSceneVertexShader		Path to vertex shader for the Scene layer.
+			 * @param	pathToSceneFragmentShader	Path to fragment shader for the Scene layer.
 			 */
 			RLayerComposition(const char * pathToUIVertexShader, const char * pathToUIFragmentShader,
 							  const char * pathToSceneVertexShader, const char * pathToSceneFragmentShader);

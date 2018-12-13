@@ -171,7 +171,7 @@ namespace RML
 		Vector2D& divide(const Vector2D &other);
 
 		/**
-			* @fn	std::ostream& operator<<(std::ostream& stream, const Vector2D& vector)
+			* @fn	friend std::ostream& operator<<(std::ostream& stream, const Vector2D& vector)
 			*
 			* @brief	Put to operator
 			*
@@ -183,7 +183,7 @@ namespace RML
 		friend std::ostream& operator<<(std::ostream& stream, const Vector2D& vector);
 
 		/**
-			* @fn	Vector2D& operator+(Vector2D left, const Vector2D &right);
+			* @fn	friend Vector2D& operator+(Vector2D left, const Vector2D &right);
 			*
 			* @brief	Addition operator
 			*
@@ -195,7 +195,7 @@ namespace RML
 		friend Vector2D& operator+(Vector2D left, const Vector2D &right);
 
 		/**
-			* @fn	Vector2D operator-(Vector2D left, const Vector2D &right);
+			* @fn	friend Vector2D operator-(Vector2D left, const Vector2D &right);
 			*
 			* @brief	Subtraction operator
 			*
@@ -207,7 +207,7 @@ namespace RML
 		friend Vector2D operator-(Vector2D left, const Vector2D &right);
 
 		/**
-			* @fn	Vector2D& operator*(Vector2D left, const Vector2D &right);
+			* @fn	friend Vector2D& operator*(Vector2D left, const Vector2D &right);
 			*
 			* @brief	Multiplication operator
 			*
@@ -219,7 +219,7 @@ namespace RML
 		friend Vector2D& operator*(Vector2D left, const Vector2D &right);
 
 		/**
-			* @fn	Vector2D& operator*(Vector2D left, const float &right);
+			* @fn	friend Vector2D& operator*(Vector2D left, const float &right);
 			*
 			* @brief	Float multiplication operator
 			*
@@ -231,7 +231,7 @@ namespace RML
 		friend Vector2D& operator*(Vector2D left, const float &right);
 
 		/**
-			* @fn	Vector2D& operator*(Vector2D left, const Vector2D &right);
+			* @fn	friendd float operator*(Vector2D & left, const Vector2D & right);
 			*
 			* @brief	Dot multiplication operator
 			*
@@ -563,15 +563,15 @@ namespace RML
 			*
 			* @brief	Float multiplication operator. (Scaling)
 			*
-			* @param	left	The left operand.
-			* @param	right	The right operand.
+			* @param	vector	The vector.
+			* @param	other	The float to multiply.
 			*
 			* @return	The result of the operation.
 			*/
 		friend Vector3D& operator*(const Vector3D vector, const float &other);
 
 		/**
-			* @fn	Vector3D& operator/(Vector3D left, const Vector3D &right);
+			* @fn	friend Vector3D& operator/(Vector3D left, const Vector3D &right);
 			*
 			* @brief	Division operator
 			*
@@ -583,12 +583,12 @@ namespace RML
 		friend Vector3D& operator/(Vector3D left, const Vector3D &right);
 
 		/**
-			* @fn	Vector3D& operator/(Vector3D left, const float &right);
+			* @fn	friend Vector3D& operator/(const Vector3D vector, const float &other);
 			*
 			* @brief	Float division operator. (Down scaling)
 			*
-			* @param	left	The left operand.
-			* @param	right	The right operand.
+			* @param	vector	The vector operand.
+			* @param	other	The float to divide with.
 			*
 			* @return	The result of the operation.
 			*/
@@ -921,7 +921,7 @@ namespace RML
 	struct Matrix4
 	{
 		/**
-			* @union	
+			* @union
 			*
 			* @brief	An unnamed union. Used to refer to Matrix4 columns as an array of Vector4Ds
 			*/

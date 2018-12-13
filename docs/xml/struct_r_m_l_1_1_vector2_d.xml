@@ -507,9 +507,9 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
-      <memberdef kind="friend" id="struct_r_m_l_1_1_vector2_d_1a06b6908d4cc6d42b97f8e170d207f704" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="friend" id="struct_r_m_l_1_1_vector2_d_1aaccea35daf914efd450edb08e1357b22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend std::ostream &amp;</type>
-        <definition>std::ostream &amp; RML::Vector2D::operator&lt;&lt;</definition>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
         <argsstring>(std::ostream &amp;stream, const Vector2D &amp;vector)</argsstring>
         <name>operator&lt;&lt;</name>
         <param>
@@ -544,9 +544,9 @@
         </inbodydescription>
         <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="183" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="123" bodyend="127"/>
       </memberdef>
-      <memberdef kind="friend" id="struct_r_m_l_1_1_vector2_d_1a0f7d18328dd2439ce8c22448d6fc3a43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="friend" id="struct_r_m_l_1_1_vector2_d_1a7d851007ffb272ba5d3f36b4df2be263" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
-        <definition>Vector2D &amp; RML::Vector2D::operator+</definition>
+        <definition>Vector2D &amp; operator+</definition>
         <argsstring>(Vector2D left, const Vector2D &amp;right)</argsstring>
         <name>operator+</name>
         <param>
@@ -581,9 +581,9 @@
         </inbodydescription>
         <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="195" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="129" bodyend="132"/>
       </memberdef>
-      <memberdef kind="friend" id="struct_r_m_l_1_1_vector2_d_1a0bbd4c1f824ee0ee3df0b1d872d5c8a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="friend" id="struct_r_m_l_1_1_vector2_d_1a69bee8baf7af0d5fe5dfd33a93b103e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
-        <definition>Vector2D RML::Vector2D::operator-</definition>
+        <definition>Vector2D operator-</definition>
         <argsstring>(Vector2D left, const Vector2D &amp;right)</argsstring>
         <name>operator-</name>
         <param>
@@ -618,9 +618,9 @@
         </inbodydescription>
         <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="207" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="134" bodyend="137"/>
       </memberdef>
-      <memberdef kind="friend" id="struct_r_m_l_1_1_vector2_d_1afc2ee110866e616b8acfd6d1eea64eee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="friend" id="struct_r_m_l_1_1_vector2_d_1a28f234c9603ea4c593ba011aabc8e633" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
-        <definition>Vector2D &amp; RML::Vector2D::operator*</definition>
+        <definition>Vector2D &amp; operator*</definition>
         <argsstring>(Vector2D left, const Vector2D &amp;right)</argsstring>
         <name>operator*</name>
         <param>
@@ -634,7 +634,7 @@
         <briefdescription>
 <para>Multiplication operator. </para>        </briefdescription>
         <detaileddescription>
-<para>Dot multiplication operator.</para><para><parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>left</parametername>
 </parameternamelist>
@@ -649,31 +649,15 @@
 <para>The right operand.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>The result of the operation.</para></simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>left</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The left operand. </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>right</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The right operand.</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>The result of the dot operation. </para></simplesect>
+<simplesect kind="return"><para>The result of the operation. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="219" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="139" bodyend="142"/>
       </memberdef>
-      <memberdef kind="friend" id="struct_r_m_l_1_1_vector2_d_1a2c1f055b16db33d70a50e9c79eab3519" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="friend" id="struct_r_m_l_1_1_vector2_d_1aab52138a64a79290970de82bed994b66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
-        <definition>Vector2D &amp; RML::Vector2D::operator*</definition>
+        <definition>Vector2D &amp; operator*</definition>
         <argsstring>(Vector2D left, const float &amp;right)</argsstring>
         <name>operator*</name>
         <param>
@@ -708,9 +692,9 @@
         </inbodydescription>
         <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="231" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="144" bodyend="147"/>
       </memberdef>
-      <memberdef kind="friend" id="struct_r_m_l_1_1_vector2_d_1af110c4cca9740be9d2468de09c53846e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="friend" id="struct_r_m_l_1_1_vector2_d_1a6fca50a7a4c07f54b63d2941953b996b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend float</type>
-        <definition>float operator*</definition>
+        <definition>friendd float RML::Vector2D::operator*</definition>
         <argsstring>(Vector2D &amp;left, const Vector2D &amp;right)</argsstring>
         <name>operator*</name>
         <param>
@@ -722,9 +706,25 @@
           <declname>right</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Dot multiplication operator. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The left operand. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The right operand.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The result of the dot operation. </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="243" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="149" bodyend="152"/>
@@ -781,17 +781,17 @@
       <member refid="struct_r_m_l_1_1_vector2_d_1a546a699a61147c25f1bf25dfc8b1801b" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>multiplyDot</name></member>
       <member refid="struct_r_m_l_1_1_vector2_d_1a5924353951367561c4a0c234fda6ca7e" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>multiplyFloat</name></member>
       <member refid="struct_r_m_l_1_1_vector2_d_1ad0fd2b1ac014d6345224d03f258a1164" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator!=</name></member>
-      <member refid="struct_r_m_l_1_1_vector2_d_1afc2ee110866e616b8acfd6d1eea64eee" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator*</name></member>
-      <member refid="struct_r_m_l_1_1_vector2_d_1a2c1f055b16db33d70a50e9c79eab3519" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator*</name></member>
-      <member refid="struct_r_m_l_1_1_vector2_d_1af110c4cca9740be9d2468de09c53846e" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator*</name></member>
+      <member refid="struct_r_m_l_1_1_vector2_d_1a28f234c9603ea4c593ba011aabc8e633" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator*</name></member>
+      <member refid="struct_r_m_l_1_1_vector2_d_1aab52138a64a79290970de82bed994b66" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator*</name></member>
+      <member refid="struct_r_m_l_1_1_vector2_d_1a6fca50a7a4c07f54b63d2941953b996b" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator*</name></member>
       <member refid="struct_r_m_l_1_1_vector2_d_1a4caff2a72c5abc5d89218809d899e90d" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator*=</name></member>
-      <member refid="struct_r_m_l_1_1_vector2_d_1a0f7d18328dd2439ce8c22448d6fc3a43" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator+</name></member>
+      <member refid="struct_r_m_l_1_1_vector2_d_1a7d851007ffb272ba5d3f36b4df2be263" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator+</name></member>
       <member refid="struct_r_m_l_1_1_vector2_d_1a933787f37217402094ecec3f3e3de01c" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator+=</name></member>
-      <member refid="struct_r_m_l_1_1_vector2_d_1a0bbd4c1f824ee0ee3df0b1d872d5c8a4" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator-</name></member>
+      <member refid="struct_r_m_l_1_1_vector2_d_1a69bee8baf7af0d5fe5dfd33a93b103e2" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator-</name></member>
       <member refid="struct_r_m_l_1_1_vector2_d_1ae84dd5464e4d694434eaa3686203a85f" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator-=</name></member>
       <member refid="struct_r_m_l_1_1_vector2_d_1a27011a9d9baf6c52476d5a5d27ceeea9" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator/</name></member>
       <member refid="struct_r_m_l_1_1_vector2_d_1a879806aa7dc16c51349208bf7da904e4" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator/=</name></member>
-      <member refid="struct_r_m_l_1_1_vector2_d_1a06b6908d4cc6d42b97f8e170d207f704" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator&lt;&lt;</name></member>
+      <member refid="struct_r_m_l_1_1_vector2_d_1aaccea35daf914efd450edb08e1357b22" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator&lt;&lt;</name></member>
       <member refid="struct_r_m_l_1_1_vector2_d_1a4d39c5e0743400d7d14d0683ff168a5a" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>operator==</name></member>
       <member refid="struct_r_m_l_1_1_vector2_d_1a1ca89d3ad291914b972438af6a9daa27" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>roundTo</name></member>
       <member refid="struct_r_m_l_1_1_vector2_d_1a5a4ea7ff7f1036a4fa7d94a67b72c620" prot="public" virt="non-virtual"><scope>RML::Vector2D</scope><name>subtract</name></member>

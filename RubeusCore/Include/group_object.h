@@ -37,7 +37,7 @@ namespace Rubeus
 			 *
 			 * @brief	Constructor
 			 *
-			 * @param	tranform	The tranformation matrix that displaces the childs of this group.
+			 * @param	transform	The tranformation matrix that displaces the childs of this group.
 			 */
 			RGroup(const RML::Matrix4 & transform);
 

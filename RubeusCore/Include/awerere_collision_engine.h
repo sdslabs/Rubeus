@@ -50,7 +50,7 @@ namespace Rubeus
 			 *
 			 * @brief	Constructor
 			 *
-			 * @param	gameobjects	Reference to array of active gameobjects.
+			 * @param	gameObjects	Reference to array of active gameobjects.
 			 * @param	gridHeight	Height of collision grid.
 			 * @param	gridWidth	Width of collision grid.
 			 * @param	cellWidth	Width of collision grid cell.
@@ -71,7 +71,7 @@ namespace Rubeus
 			 * @brief	Assign grid flags for each game object
 			 * @warning	Uses a 2D grid
 			 *
-			 * @param	The timestep for the update
+			 * @param	deltaTime   The timestep for the update
 			 */
 			void updateAndAssignFlags(const float & deltaTime);
 

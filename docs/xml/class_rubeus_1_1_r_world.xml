@@ -116,17 +116,16 @@
         <param>
           <type>const std::vector&lt; <ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref> *&gt; &amp;</type>
           <declname>gameObjects</declname>
-          <defname>gameObject</defname>
         </param>
         <briefdescription>
 <para>Add an array of gameobjects to the world. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>gameObject</parametername>
+<parametername>gameObjects</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The gameobject to be added. </para></parameterdescription>
+<para>The gameobjects to be added. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>

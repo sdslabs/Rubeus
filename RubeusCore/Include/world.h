@@ -64,11 +64,11 @@ namespace Rubeus
 		void add(RGameObject & gameObject);
 
 		/**
-		 * @fn		void add(const std::vector<RGameObject *> & gameObject)
+		 * @fn		void add(const std::vector<RGameObject *> & gameObjects)
 		 *
 		 * @brief	Add an array of gameobjects to the world
 		 *
-		 * @param	gameObject	The gameobject to be added.
+		 * @param	gameObjects	The gameobjects to be added.
 		 */
 		void add(const std::vector<RGameObject *> & gameObjects);
 
