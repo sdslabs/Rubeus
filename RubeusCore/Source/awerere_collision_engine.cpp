@@ -46,7 +46,7 @@ namespace Rubeus
 
 			for (int i = 0; i < gameObjectsCount; i++)
 			{
-				if (m_GameObjects[i]->m_HasPhysics)
+				if (m_GameObjects[i]->m_PhysicsObject != NULL)
 				{
 					m_GameObjects[i]->m_PhysicsObject->m_Collider->update(deltaTime);
 				}
@@ -144,8 +144,8 @@ namespace Rubeus
 				float mu = std::min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction);
 #endif
 				// Store temporary variables
-				float m1 = left.m_PhysicsObject->m_PhysicsMaterial.m_Mass;
-				float m2 = right.m_PhysicsObject->m_PhysicsMaterial.m_Mass;
+				float m1 = left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Mass;
+				float m2 = right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Mass;
 				float invm1 = (m1 >= 1000000.0f) ? 0.0f : 1.0f / m1;
 				float invm2 = (m2 >= 1000000.0f) ? 0.0f : 1.0f / m2;
 
@@ -214,8 +214,10 @@ namespace Rubeus
 				{
 					v2_parallelFinal.x = v1_parallel.x * m1 + v2_parallel.x * m2 + (v1_parallel.x - v2_parallel.x) * m1 * e;
 					v2_parallelFinal.y = v1_parallel.y * m1 + v2_parallel.y * m2 + (v1_parallel.y - v2_parallel.y) * m1 * e;
+
 					v2_parallelFinal.x /= m1 + m2;
 					v2_parallelFinal.y /= m1 + m2;
+
 					v2_parallelFinal.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
 				}
 				else
@@ -228,8 +230,10 @@ namespace Rubeus
 				{
 					v1_parallelFinal.x = (v1_parallel.x - v2_parallel.x) * e + v2_parallelFinal.x;
 					v1_parallelFinal.y = (v1_parallel.y - v2_parallel.y) * e + v2_parallelFinal.y;
+
 					v1_parallelFinal.x /= m1 + m2;
 					v1_parallelFinal.y /= m1 + m2;
+
 					v1_parallelFinal.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
 				}
 				else
@@ -241,11 +245,18 @@ namespace Rubeus
 				// Set the final values in the objects
 				if (left.m_HasPhysics)
 				{
-					left.m_PhysicsObject->m_Collider->m_Momentum = (v1_parallelFinal + v1_perpFinal) * m1;
+					if (invm1 != 0.0f)
+					{
+						left.m_PhysicsObject->m_Collider->m_Momentum = (v1_parallelFinal + v1_perpFinal) * m1;
+					}
 				}
+
 				if (right.m_HasPhysics)
 				{
-					right.m_PhysicsObject->m_Collider->m_Momentum = (v2_parallelFinal + v2_perpFinal) * m2;
+					if (invm2 != 0.0f)
+					{
+						right.m_PhysicsObject->m_Collider->m_Momentum = (v2_parallelFinal + v2_perpFinal) * m2;
+					}
 				}
 
 				if (left.m_GeneratesHit || right.m_GeneratesHit)

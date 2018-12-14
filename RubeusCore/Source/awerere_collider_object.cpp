@@ -19,7 +19,7 @@ namespace Rubeus
 		{
 		}
 
-		ACollider::ACollider(RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat)
+		ACollider::ACollider(const RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat)
 			:
 			m_Position(position),
 			m_Momentum(velocity),

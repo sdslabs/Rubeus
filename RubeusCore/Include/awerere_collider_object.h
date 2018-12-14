@@ -42,7 +42,7 @@ namespace Rubeus
 		public:
 
 			/** @brief	The central position of the collider */
-			RML::Vector3D & m_Position;
+			RML::Vector3D m_Position;
 
 			/** @brief	Momentum of the collider in 2D space */
 			RML::Vector2D m_Momentum;
@@ -62,20 +62,20 @@ namespace Rubeus
 			/**
 			 * @fn		ACollider(RML::Vector3D position = RML::Vector3D(0.0f, 0.0f, 0.0f))
 			 *
-			 * @brief	Contructor
+			 * @brief	Constructor
 			 */
 			ACollider(RML::Vector3D position = RML::Vector3D(0.0f, 0.0f, 0.0f));
 
 			/**
-			 * @fn		ACollider(RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial)
+			 * @fn		ACollider(const RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial)
 			 *
-			 * @brief	Contructor
+			 * @brief	Constructor
 			 *
 			 * @param	position		The position of the collider.
 			 * @param	velocity		The velocity of the collider.
 			 * @param	physicsMat	The physics material of this collider. Default is DefualtMaterial
 			 */
-			ACollider(RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial);
+			ACollider(const RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial);
 
 			/**
 			 * @fn		~ACollider()
@@ -163,7 +163,7 @@ namespace Rubeus
 			/**
 			 * @fn		inline RML::Vector3D getPosition() const
 			 *
-			 * @brief	Returns the position of this position
+			 * @brief	Returns the position of this collider
 			 *
 			 * @return	Position of this collider.
 			 */
