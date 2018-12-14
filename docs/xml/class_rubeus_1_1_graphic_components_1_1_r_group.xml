@@ -160,155 +160,155 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="120">
+      <node id="171">
         <label>Rubeus::REntity</label>
         <link refid="class_rubeus_1_1_r_entity"/>
       </node>
-      <node id="118">
+      <node id="169">
         <label>Rubeus::GraphicComponents::RRenderableObject</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
       </node>
-      <node id="119">
+      <node id="170">
         <label>Rubeus::RGameObject</label>
         <link refid="class_rubeus_1_1_r_game_object"/>
-        <childnode refid="120" relation="public-inheritance">
+        <childnode refid="171" relation="public-inheritance">
         </childnode>
-        <childnode refid="121" relation="public-inheritance">
+        <childnode refid="172" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="121">
+      <node id="172">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
       </node>
-      <node id="117">
+      <node id="168">
         <label>Rubeus::GraphicComponents::RGroup</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_group"/>
-        <childnode refid="118" relation="public-inheritance">
+        <childnode refid="169" relation="public-inheritance">
         </childnode>
-        <childnode refid="119" relation="public-inheritance">
+        <childnode refid="170" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="133">
+      <node id="184">
         <label>Rubeus::Awerere::APhysicsObject</label>
         <link refid="class_rubeus_1_1_awerere_1_1_a_physics_object"/>
-        <childnode refid="134" relation="usage">
+        <childnode refid="185" relation="usage">
           <edgelabel>m_Sprite</edgelabel>
         </childnode>
-        <childnode refid="135" relation="usage">
+        <childnode refid="186" relation="usage">
           <edgelabel>m_Collider</edgelabel>
         </childnode>
-        <childnode refid="136" relation="usage">
+        <childnode refid="187" relation="usage">
           <edgelabel>m_PhysicsMaterial</edgelabel>
         </childnode>
       </node>
-      <node id="129">
+      <node id="180">
         <label>Rubeus::REntity</label>
         <link refid="class_rubeus_1_1_r_entity"/>
       </node>
-      <node id="135">
+      <node id="186">
         <label>Rubeus::Awerere::ACollider</label>
         <link refid="class_rubeus_1_1_awerere_1_1_a_collider"/>
-        <childnode refid="134" relation="usage">
+        <childnode refid="185" relation="usage">
           <edgelabel>m_Sprite</edgelabel>
         </childnode>
-        <childnode refid="136" relation="usage">
+        <childnode refid="187" relation="usage">
           <edgelabel>m_PhysicsMaterial</edgelabel>
         </childnode>
-        <childnode refid="126" relation="usage">
+        <childnode refid="177" relation="usage">
           <edgelabel>m_Force</edgelabel>
           <edgelabel>m_Momentum</edgelabel>
         </childnode>
-        <childnode refid="127" relation="usage">
+        <childnode refid="178" relation="usage">
           <edgelabel>m_Position</edgelabel>
         </childnode>
       </node>
-      <node id="124">
+      <node id="175">
         <label>RML::Vector4D</label>
         <link refid="struct_r_m_l_1_1_vector4_d"/>
       </node>
-      <node id="134">
+      <node id="185">
         <label>Rubeus::GraphicComponents::RSprite</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_sprite"/>
-        <childnode refid="123" relation="public-inheritance">
+        <childnode refid="174" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="127">
+      <node id="178">
         <label>RML::Vector3D</label>
         <link refid="struct_r_m_l_1_1_vector3_d"/>
       </node>
-      <node id="125">
+      <node id="176">
         <label>Rubeus::GraphicComponents::RTexture</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_texture"/>
       </node>
-      <node id="126">
+      <node id="177">
         <label>RML::Vector2D</label>
         <link refid="struct_r_m_l_1_1_vector2_d"/>
       </node>
-      <node id="123">
+      <node id="174">
         <label>Rubeus::GraphicComponents::RRenderableObject</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
-        <childnode refid="124" relation="usage">
+        <childnode refid="175" relation="usage">
           <edgelabel>m_Color</edgelabel>
         </childnode>
-        <childnode refid="125" relation="usage">
+        <childnode refid="176" relation="usage">
           <edgelabel>m_Texture</edgelabel>
         </childnode>
-        <childnode refid="126" relation="usage">
+        <childnode refid="177" relation="usage">
           <edgelabel>m_Size</edgelabel>
         </childnode>
-        <childnode refid="127" relation="usage">
+        <childnode refid="178" relation="usage">
           <edgelabel>m_Position</edgelabel>
         </childnode>
       </node>
-      <node id="132">
+      <node id="183">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="131">
+      <node id="182">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="132" relation="usage">
+        <childnode refid="183" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="128">
+      <node id="179">
         <label>Rubeus::RGameObject</label>
         <link refid="class_rubeus_1_1_r_game_object"/>
-        <childnode refid="129" relation="public-inheritance">
+        <childnode refid="180" relation="public-inheritance">
         </childnode>
-        <childnode refid="130" relation="public-inheritance">
+        <childnode refid="181" relation="public-inheritance">
         </childnode>
-        <childnode refid="133" relation="usage">
+        <childnode refid="184" relation="usage">
           <edgelabel>m_PhysicsObject</edgelabel>
         </childnode>
-        <childnode refid="134" relation="usage">
+        <childnode refid="185" relation="usage">
           <edgelabel>m_Sprite</edgelabel>
         </childnode>
       </node>
-      <node id="130">
+      <node id="181">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="131" relation="usage">
+        <childnode refid="182" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>
-      <node id="122">
+      <node id="173">
         <label>Rubeus::GraphicComponents::RGroup</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_group"/>
-        <childnode refid="123" relation="public-inheritance">
+        <childnode refid="174" relation="public-inheritance">
         </childnode>
-        <childnode refid="128" relation="public-inheritance">
+        <childnode refid="179" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="136">
+      <node id="187">
         <label>Rubeus::Awerere::APhysicsMaterial</label>
         <link refid="class_rubeus_1_1_awerere_1_1_a_physics_material"/>
-        <childnode refid="136" relation="usage">
+        <childnode refid="187" relation="usage">
           <edgelabel>DefaultMaterial</edgelabel>
         </childnode>
-        <childnode refid="126" relation="usage">
+        <childnode refid="177" relation="usage">
           <edgelabel>m_Gravity</edgelabel>
         </childnode>
       </node>

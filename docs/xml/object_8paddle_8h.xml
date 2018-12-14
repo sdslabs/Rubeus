@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
-  <compounddef id="sample__object_8h" kind="file" language="C++">
-    <compoundname>sample_object.h</compoundname>
+  <compounddef id="object_8paddle_8h" kind="file" language="C++">
+    <compoundname>object.paddle.h</compoundname>
     <includes local="yes">../RubeusCore.h</includes>
-    <includedby refid="sample__object_8cpp" local="yes">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files/sample_object.cpp</includedby>
+    <includedby refid="object_8paddle_8cpp" local="yes">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/engine_files/object.paddle.cpp</includedby>
     <includedby refid="user__init_8h" local="yes">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.h</includedby>
     <incdepgraph>
       <node id="32">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files/sample_object.h</label>
-        <link refid="sample__object_8h"/>
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/engine_files/object.paddle.h</label>
+        <link refid="object_8paddle_8h"/>
         <childnode refid="33" relation="include">
         </childnode>
       </node>
@@ -18,8 +18,8 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="34">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files/sample_object.h</label>
-        <link refid="sample__object_8h"/>
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/engine_files/object.paddle.h</label>
+        <link refid="object_8paddle_8h"/>
         <childnode refid="35" relation="include">
         </childnode>
         <childnode refid="36" relation="include">
@@ -30,8 +30,8 @@
         <link refid="user__init_8cpp"/>
       </node>
       <node id="35">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files/sample_object.cpp</label>
-        <link refid="sample__object_8cpp"/>
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/engine_files/object.paddle.cpp</label>
+        <link refid="object_8paddle_8cpp"/>
       </node>
       <node id="36">
         <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.h</label>
@@ -40,11 +40,11 @@
         </childnode>
       </node>
     </invincdepgraph>
-    <innerclass refid="class_usample__object" prot="public">Usample_object</innerclass>
+    <innerclass refid="classpaddle" prot="public">paddle</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files/sample_object.h"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/engine_files/object.paddle.h"/>
   </compounddef>
 </doxygen>

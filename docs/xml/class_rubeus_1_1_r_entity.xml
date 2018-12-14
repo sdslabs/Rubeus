@@ -41,7 +41,8 @@
         <definition>void Rubeus::REntity::tick</definition>
         <argsstring>()</argsstring>
         <name>tick</name>
-        <reimplementedby refid="class_usample__object_1a11811f2d7392dbbb039ca090adb21443">tick</reimplementedby>
+        <reimplementedby refid="classpaddle_1aff95a6b014b08259d1c2b3c19df4dd25">tick</reimplementedby>
+        <reimplementedby refid="classball_1a8507b463ed52e9d713be2ac078a8dc1f">tick</reimplementedby>
         <reimplementedby refid="class_rubeus_1_1_r_game_object_1ade6d964c655301870cb762c1b9c02966">tick</reimplementedby>
         <briefdescription>
 <para>Tick function. </para>        </briefdescription>
@@ -98,26 +99,32 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="93">
+      <node id="142">
         <label>Rubeus::REntity</label>
         <link refid="class_rubeus_1_1_r_entity"/>
       </node>
-      <node id="96">
-        <label>Usample_object</label>
-        <link refid="class_usample__object"/>
-        <childnode refid="94" relation="public-inheritance">
+      <node id="144">
+        <label>ball</label>
+        <link refid="classball"/>
+        <childnode refid="143" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="94">
+      <node id="145">
+        <label>paddle</label>
+        <link refid="classpaddle"/>
+        <childnode refid="143" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="143">
         <label>Rubeus::RGameObject</label>
         <link refid="class_rubeus_1_1_r_game_object"/>
-        <childnode refid="93" relation="public-inheritance">
+        <childnode refid="142" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="95">
+      <node id="146">
         <label>Rubeus::GraphicComponents::RGroup</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_group"/>
-        <childnode refid="94" relation="public-inheritance">
+        <childnode refid="143" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>

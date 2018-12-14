@@ -2,31 +2,25 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="user__init_8h" kind="file" language="C++">
     <compoundname>user_init.h</compoundname>
-    <includes refid="sample__level_8h" local="yes">../Game/game_name/levels/engine_files/sample_level.h</includes>
-    <includes refid="sample__level2_8h" local="yes">../Game/game_name/levels/engine_files/sample_level2.h</includes>
-    <includes refid="sample__object_8h" local="yes">../Game/game_name/levels/engine_files/sample_object.h</includes>
+    <includes refid="level_8play__level_8h" local="yes">ping_pong/engine_files/level.play_level.h</includes>
+    <includes refid="object_8ball_8h" local="yes">ping_pong/engine_files/object.ball.h</includes>
+    <includes refid="object_8paddle_8h" local="yes">ping_pong/engine_files/object.paddle.h</includes>
     <includedby refid="user__init_8cpp" local="yes">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp</includedby>
     <incdepgraph>
       <node id="117">
-        <label>../Game/game_name/levels/engine_files/sample_object.h</label>
-        <link refid="sample__object_8h"/>
+        <label>ping_pong/engine_files/object.paddle.h</label>
+        <link refid="object_8paddle_8h"/>
+        <childnode refid="115" relation="include">
+        </childnode>
+      </node>
+      <node id="114">
+        <label>ping_pong/engine_files/level.play_level.h</label>
+        <link refid="level_8play__level_8h"/>
         <childnode refid="115" relation="include">
         </childnode>
       </node>
       <node id="115">
         <label>../RubeusCore.h</label>
-      </node>
-      <node id="116">
-        <label>../Game/game_name/levels/engine_files/sample_level2.h</label>
-        <link refid="sample__level2_8h"/>
-        <childnode refid="115" relation="include">
-        </childnode>
-      </node>
-      <node id="114">
-        <label>../Game/game_name/levels/engine_files/sample_level.h</label>
-        <link refid="sample__level_8h"/>
-        <childnode refid="115" relation="include">
-        </childnode>
       </node>
       <node id="113">
         <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.h</label>
@@ -36,6 +30,12 @@
         <childnode refid="116" relation="include">
         </childnode>
         <childnode refid="117" relation="include">
+        </childnode>
+      </node>
+      <node id="116">
+        <label>ping_pong/engine_files/object.ball.h</label>
+        <link refid="object_8ball_8h"/>
+        <childnode refid="115" relation="include">
         </childnode>
       </node>
     </incdepgraph>

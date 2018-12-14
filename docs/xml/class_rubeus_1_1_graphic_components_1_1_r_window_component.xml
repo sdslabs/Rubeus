@@ -492,39 +492,39 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="271">
+      <node id="322">
         <label>Rubeus::GraphicComponents::RWindowComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_window_component"/>
-        <childnode refid="272" relation="public-inheritance">
+        <childnode refid="323" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="272">
+      <node id="323">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="273">
+      <node id="324">
         <label>Rubeus::GraphicComponents::RWindowComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_window_component"/>
-        <childnode refid="274" relation="public-inheritance">
+        <childnode refid="325" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="276">
+      <node id="327">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="275">
+      <node id="326">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="276" relation="usage">
+        <childnode refid="327" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="274">
+      <node id="325">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="275" relation="usage">
+        <childnode refid="326" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>

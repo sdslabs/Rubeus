@@ -180,39 +180,39 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="259">
+      <node id="310">
         <label>Rubeus::UtilityComponents::RTimer</label>
         <link refid="class_rubeus_1_1_utility_components_1_1_r_timer"/>
-        <childnode refid="260" relation="public-inheritance">
+        <childnode refid="311" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="260">
+      <node id="311">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="261">
+      <node id="312">
         <label>Rubeus::UtilityComponents::RTimer</label>
         <link refid="class_rubeus_1_1_utility_components_1_1_r_timer"/>
-        <childnode refid="262" relation="public-inheritance">
+        <childnode refid="313" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="264">
+      <node id="315">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="263">
+      <node id="314">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="264" relation="usage">
+        <childnode refid="315" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="262">
+      <node id="313">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="263" relation="usage">
+        <childnode refid="314" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>

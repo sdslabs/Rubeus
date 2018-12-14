@@ -188,54 +188,54 @@
 <para><simplesect kind="warning"><para>Use only while testing the simple renderer. </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="244">
+      <node id="295">
         <label>Rubeus::GraphicComponents::RRenderableObject</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
       </node>
-      <node id="243">
+      <node id="294">
         <label>Rubeus::GraphicComponents::RStaticSprite</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_static_sprite"/>
-        <childnode refid="244" relation="public-inheritance">
+        <childnode refid="295" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="247">
+      <node id="298">
         <label>RML::Vector4D</label>
         <link refid="struct_r_m_l_1_1_vector4_d"/>
       </node>
-      <node id="250">
+      <node id="301">
         <label>RML::Vector3D</label>
         <link refid="struct_r_m_l_1_1_vector3_d"/>
       </node>
-      <node id="248">
+      <node id="299">
         <label>Rubeus::GraphicComponents::RTexture</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_texture"/>
       </node>
-      <node id="249">
+      <node id="300">
         <label>RML::Vector2D</label>
         <link refid="struct_r_m_l_1_1_vector2_d"/>
       </node>
-      <node id="246">
+      <node id="297">
         <label>Rubeus::GraphicComponents::RRenderableObject</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
-        <childnode refid="247" relation="usage">
+        <childnode refid="298" relation="usage">
           <edgelabel>m_Color</edgelabel>
         </childnode>
-        <childnode refid="248" relation="usage">
+        <childnode refid="299" relation="usage">
           <edgelabel>m_Texture</edgelabel>
         </childnode>
-        <childnode refid="249" relation="usage">
+        <childnode refid="300" relation="usage">
           <edgelabel>m_Size</edgelabel>
         </childnode>
-        <childnode refid="250" relation="usage">
+        <childnode refid="301" relation="usage">
           <edgelabel>m_Position</edgelabel>
         </childnode>
       </node>
-      <node id="245">
+      <node id="296">
         <label>Rubeus::GraphicComponents::RStaticSprite</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_static_sprite"/>
-        <childnode refid="246" relation="public-inheritance">
+        <childnode refid="297" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>

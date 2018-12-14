@@ -597,39 +597,39 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="251">
+      <node id="302">
         <label>Rubeus::AudioComponents::RSymphony</label>
         <link refid="class_rubeus_1_1_audio_components_1_1_r_symphony"/>
-        <childnode refid="252" relation="public-inheritance">
+        <childnode refid="303" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="252">
+      <node id="303">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="253">
+      <node id="304">
         <label>Rubeus::AudioComponents::RSymphony</label>
         <link refid="class_rubeus_1_1_audio_components_1_1_r_symphony"/>
-        <childnode refid="254" relation="public-inheritance">
+        <childnode refid="305" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="256">
+      <node id="307">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="255">
+      <node id="306">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="256" relation="usage">
+        <childnode refid="307" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="254">
+      <node id="305">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="255" relation="usage">
+        <childnode refid="306" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>

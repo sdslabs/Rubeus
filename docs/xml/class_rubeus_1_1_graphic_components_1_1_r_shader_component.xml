@@ -377,48 +377,48 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="220">
+      <node id="271">
         <label>Rubeus::GraphicComponents::RShaderComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component"/>
-        <childnode refid="221" relation="public-inheritance">
+        <childnode refid="272" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="221">
+      <node id="272">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="226">
+      <node id="277">
         <label>Rubeus::UtilityComponents::RLoaderComponent</label>
         <link refid="class_rubeus_1_1_utility_components_1_1_r_loader_component"/>
-        <childnode refid="223" relation="public-inheritance">
+        <childnode refid="274" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="225">
+      <node id="276">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="224">
+      <node id="275">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="225" relation="usage">
+        <childnode refid="276" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="222">
+      <node id="273">
         <label>Rubeus::GraphicComponents::RShaderComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component"/>
-        <childnode refid="223" relation="public-inheritance">
+        <childnode refid="274" relation="public-inheritance">
         </childnode>
-        <childnode refid="226" relation="usage">
+        <childnode refid="277" relation="usage">
           <edgelabel>m_Loader</edgelabel>
         </childnode>
       </node>
-      <node id="223">
+      <node id="274">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="224" relation="usage">
+        <childnode refid="275" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>

@@ -121,51 +121,51 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="208">
+      <node id="259">
         <label>Rubeus::GraphicComponents::RRendererComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component"/>
-        <childnode refid="209" relation="public-inheritance">
+        <childnode refid="260" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="210">
+      <node id="261">
         <label>Rubeus::GraphicComponents::RGuerrillaRendererComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component"/>
-        <childnode refid="208" relation="public-inheritance">
+        <childnode refid="259" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="211">
+      <node id="262">
         <label>Rubeus::GraphicComponents::RSimpleRendererComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_simple_renderer_component"/>
-        <childnode refid="208" relation="public-inheritance">
+        <childnode refid="259" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="209">
+      <node id="260">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="212">
+      <node id="263">
         <label>Rubeus::GraphicComponents::RRendererComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component"/>
-        <childnode refid="213" relation="public-inheritance">
+        <childnode refid="264" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="215">
+      <node id="266">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="214">
+      <node id="265">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="215" relation="usage">
+        <childnode refid="266" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="213">
+      <node id="264">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="214" relation="usage">
+        <childnode refid="265" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>

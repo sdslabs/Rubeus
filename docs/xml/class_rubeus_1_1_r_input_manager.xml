@@ -486,47 +486,47 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="147">
+      <node id="198">
         <label>Rubeus::RInputManager</label>
         <link refid="class_rubeus_1_1_r_input_manager"/>
-        <childnode refid="148" relation="public-inheritance">
+        <childnode refid="199" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="148">
+      <node id="199">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="149">
+      <node id="200">
         <label>Rubeus::RInputManager</label>
         <link refid="class_rubeus_1_1_r_input_manager"/>
-        <childnode refid="150" relation="public-inheritance">
+        <childnode refid="201" relation="public-inheritance">
         </childnode>
-        <childnode refid="153" relation="usage">
+        <childnode refid="204" relation="usage">
           <edgelabel>MouseScroll</edgelabel>
           <edgelabel>MousePosition</edgelabel>
         </childnode>
       </node>
-      <node id="153">
+      <node id="204">
         <label>RML::Vector2D</label>
         <link refid="struct_r_m_l_1_1_vector2_d"/>
       </node>
-      <node id="152">
+      <node id="203">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="151">
+      <node id="202">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="152" relation="usage">
+        <childnode refid="203" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="150">
+      <node id="201">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="151" relation="usage">
+        <childnode refid="202" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>

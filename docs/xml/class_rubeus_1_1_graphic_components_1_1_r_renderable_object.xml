@@ -315,59 +315,59 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="201">
+      <node id="252">
         <label>Rubeus::GraphicComponents::RSprite</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_sprite"/>
-        <childnode refid="199" relation="public-inheritance">
+        <childnode refid="250" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="199">
+      <node id="250">
         <label>Rubeus::GraphicComponents::RRenderableObject</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
       </node>
-      <node id="202">
+      <node id="253">
         <label>Rubeus::GraphicComponents::RStaticSprite</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_static_sprite"/>
-        <childnode refid="199" relation="public-inheritance">
+        <childnode refid="250" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="200">
+      <node id="251">
         <label>Rubeus::GraphicComponents::RGroup</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_group"/>
-        <childnode refid="199" relation="public-inheritance">
+        <childnode refid="250" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="204">
+      <node id="255">
         <label>RML::Vector4D</label>
         <link refid="struct_r_m_l_1_1_vector4_d"/>
       </node>
-      <node id="207">
+      <node id="258">
         <label>RML::Vector3D</label>
         <link refid="struct_r_m_l_1_1_vector3_d"/>
       </node>
-      <node id="205">
+      <node id="256">
         <label>Rubeus::GraphicComponents::RTexture</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_texture"/>
       </node>
-      <node id="206">
+      <node id="257">
         <label>RML::Vector2D</label>
         <link refid="struct_r_m_l_1_1_vector2_d"/>
       </node>
-      <node id="203">
+      <node id="254">
         <label>Rubeus::GraphicComponents::RRenderableObject</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
-        <childnode refid="204" relation="usage">
+        <childnode refid="255" relation="usage">
           <edgelabel>m_Color</edgelabel>
         </childnode>
-        <childnode refid="205" relation="usage">
+        <childnode refid="256" relation="usage">
           <edgelabel>m_Texture</edgelabel>
         </childnode>
-        <childnode refid="206" relation="usage">
+        <childnode refid="257" relation="usage">
           <edgelabel>m_Size</edgelabel>
         </childnode>
-        <childnode refid="207" relation="usage">
+        <childnode refid="258" relation="usage">
           <edgelabel>m_Position</edgelabel>
         </childnode>
       </node>

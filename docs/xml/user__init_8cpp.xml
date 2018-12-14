@@ -5,6 +5,12 @@
     <includes refid="user__init_8h" local="yes">user_init.h</includes>
     <includes refid="_rubeus_core_8h" local="yes">../RubeusCore.h</includes>
     <incdepgraph>
+      <node id="43">
+        <label>ping_pong/engine_files/object.paddle.h</label>
+        <link refid="object_8paddle_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
       <node id="83">
         <label>renderer_component.h</label>
         <link refid="renderer__component_8h"/>
@@ -91,12 +97,6 @@
         <childnode refid="50" relation="include">
         </childnode>
       </node>
-      <node id="43">
-        <label>../Game/game_name/levels/engine_files/sample_object.h</label>
-        <link refid="sample__object_8h"/>
-        <childnode refid="41" relation="include">
-        </childnode>
-      </node>
       <node id="56">
         <label>IL/il.h</label>
       </node>
@@ -166,6 +166,12 @@
         <childnode refid="73" relation="include">
         </childnode>
         <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>ping_pong/engine_files/level.play_level.h</label>
+        <link refid="level_8play__level_8h"/>
+        <childnode refid="41" relation="include">
         </childnode>
       </node>
       <node id="95">
@@ -435,12 +441,6 @@
       <node id="64">
         <label>vector</label>
       </node>
-      <node id="42">
-        <label>../Game/game_name/levels/engine_files/sample_level2.h</label>
-        <link refid="sample__level2_8h"/>
-        <childnode refid="41" relation="include">
-        </childnode>
-      </node>
       <node id="89">
         <label>entity_object.h</label>
         <link refid="entity__object_8h"/>
@@ -535,12 +535,6 @@
         <childnode refid="55" relation="include">
         </childnode>
       </node>
-      <node id="40">
-        <label>../Game/game_name/levels/engine_files/sample_level.h</label>
-        <link refid="sample__level_8h"/>
-        <childnode refid="41" relation="include">
-        </childnode>
-      </node>
       <node id="71">
         <label>keys.h</label>
         <link refid="keys_8h"/>
@@ -590,6 +584,12 @@
       </node>
       <node id="101">
         <label>cstddef</label>
+      </node>
+      <node id="42">
+        <label>ping_pong/engine_files/object.ball.h</label>
+        <link refid="object_8ball_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
       </node>
       <node id="94">
         <label>deque</label>
@@ -715,63 +715,85 @@
         <definition>std::string startupLevel</definition>
         <argsstring></argsstring>
         <name>startupLevel</name>
-        <initializer>= &quot;sample_level&quot;</initializer>
+        <initializer>= &quot;play_level&quot;</initializer>
         <briefdescription>
 <para>The startup level of the engine. Set this in <ref refid="user__init_8cpp" kindref="compound">user_init.cpp</ref>. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp" line="4" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp" bodystart="4" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp" line="20" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp" bodystart="20" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="user__init_8cpp_1a0dad574dd3cb69cf861369c927e9f02b" prot="public" static="no" mutable="no">
-        <type><ref refid="class_u_sample_level" kindref="compound">USampleLevel</ref> *</type>
-        <definition>USampleLevel* sample_level</definition>
+      <memberdef kind="variable" id="user__init_8cpp_1a70bb1b3cf4eb83ce82874cae0d72a874" prot="public" static="no" mutable="no">
+        <type><ref refid="classplay__level" kindref="compound">play_level</ref> *</type>
+        <definition>play_level* playLevel</definition>
         <argsstring></argsstring>
-        <name>sample_level</name>
-        <initializer>= new <ref refid="class_u_sample_level" kindref="compound">USampleLevel</ref>(&quot;sample_level&quot;)</initializer>
+        <name>playLevel</name>
+        <initializer>= new <ref refid="classplay__level" kindref="compound">play_level</ref>(&quot;play_level&quot;)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp" line="6" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp" bodystart="6" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp" line="22" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp" bodystart="22" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="user__init_8cpp_1a24f19ee1453bb8135cc466dc454c27e4" prot="public" static="no" mutable="no">
-        <type><ref refid="class_u_sample_level2" kindref="compound">USampleLevel2</ref> *</type>
-        <definition>USampleLevel2* sample_level2</definition>
+      <memberdef kind="variable" id="user__init_8cpp_1a44dafda6791ad2f5a893ac9fafff1f3d" prot="public" static="no" mutable="no">
+        <type><ref refid="classpaddle" kindref="compound">paddle</ref> *</type>
+        <definition>paddle* leftPaddle</definition>
         <argsstring></argsstring>
-        <name>sample_level2</name>
-        <initializer>= new <ref refid="class_u_sample_level2" kindref="compound">USampleLevel2</ref>(&quot;sample_level2&quot;)</initializer>
+        <name>leftPaddle</name>
+        <initializer>= new <ref refid="classpaddle" kindref="compound">paddle</ref>(&quot;left_paddle&quot;, &quot;<ref refid="classplay__level" kindref="compound">play_level</ref>&quot;, 0.0f, 0.0f, 0.5f, 3.0f,
+								 &quot;Assets/debug.png&quot;, true,
+								 Rubeus::Awerere::EColliderType::BOX,
+								 new Rubeus::Awerere::ABoxCollider(RML::Vector3D(0.0f, 0.0f, 1.0f),
+																   RML::Vector3D(0.5f, 3.0f, 1.0f)),
+								 true)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp" line="7" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp" bodystart="7" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp" line="24" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp" bodystart="24" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="user__init_8cpp_1a00777ff66d7ba8cef3a1bd519c4f77ff" prot="public" static="no" mutable="no">
-        <type><ref refid="class_usample__object" kindref="compound">Usample_object</ref> *</type>
-        <definition>Usample_object* sample_object</definition>
+      <memberdef kind="variable" id="user__init_8cpp_1a2665ae31f67fc01936742eb761f2a06a" prot="public" static="no" mutable="no">
+        <type><ref refid="classpaddle" kindref="compound">paddle</ref> *</type>
+        <definition>paddle* rightPaddle</definition>
         <argsstring></argsstring>
-        <name>sample_object</name>
-        <initializer>= new <ref refid="class_usample__object" kindref="compound">Usample_object</ref>(
-	&quot;sample_object&quot;,
-	&quot;<ref refid="user__init_8cpp_1a0dad574dd3cb69cf861369c927e9f02b" kindref="member">sample_level</ref>&quot;,
-	6.0f, 3.0f,
-	3.0f, 3.0f,
-	&quot;Assets/debug.png&quot;,
-	false
-)</initializer>
+        <name>rightPaddle</name>
+        <initializer>= new <ref refid="classpaddle" kindref="compound">paddle</ref>(&quot;right_paddle&quot;, &quot;<ref refid="classplay__level" kindref="compound">play_level</ref>&quot;, 15.5f, 0.0f, 0.5f, 3.0f,
+								  &quot;Assets/debug.png&quot;, true,
+								  Rubeus::Awerere::EColliderType::BOX,
+								  new Rubeus::Awerere::ABoxCollider(RML::Vector3D(15.5f, 0.0f, 1.0f),
+																	RML::Vector3D(16.0f, 3.0f, 1.0f)),
+								  true)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp" line="9" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp" bodystart="9" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp" line="31" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="user__init_8cpp_1aa78ef9a8bfe0b8abc2a4d5e601381673" prot="public" static="no" mutable="no">
+        <type><ref refid="classball" kindref="compound">ball</ref> *</type>
+        <definition>ball* Ball</definition>
+        <argsstring></argsstring>
+        <name>Ball</name>
+        <initializer>= new <ref refid="classball" kindref="compound">ball</ref>(&quot;ball&quot;, &quot;<ref refid="classplay__level" kindref="compound">play_level</ref>&quot;, 8.0f, 4.5f, 0.5f, 0.5f,
+					   &quot;Assets/debug.png&quot;, true,
+					   Rubeus::Awerere::EColliderType::BOX,
+					   new Rubeus::Awerere::ABoxCollider(RML::Vector3D(8.0f, 4.5f, 1.0f),
+														 RML::Vector3D(8.5f, 5.0f, 1.0f)),
+					   true)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp" line="38" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp" bodystart="38" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

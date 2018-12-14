@@ -2,8 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="class_rubeus_1_1_r_level" kind="class" language="C++" prot="public">
     <compoundname>Rubeus::RLevel</compoundname>
-    <derivedcompoundref refid="class_u_sample_level" prot="public" virt="non-virtual">USampleLevel</derivedcompoundref>
-    <derivedcompoundref refid="class_u_sample_level2" prot="public" virt="non-virtual">USampleLevel2</derivedcompoundref>
+    <derivedcompoundref refid="classplay__level" prot="public" virt="non-virtual">play_level</derivedcompoundref>
     <includes refid="level_8h" local="no">level.h</includes>
       <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="class_rubeus_1_1_r_level_1a2523b175190f46fac69ba69e79ec2c2e" prot="protected" static="no" mutable="no">
@@ -133,8 +132,7 @@
         <definition>void Rubeus::RLevel::begin</definition>
         <argsstring>()</argsstring>
         <name>begin</name>
-        <reimplementedby refid="class_u_sample_level2_1adf0be6fb2d7cacaade7b474e2cf777b8">begin</reimplementedby>
-        <reimplementedby refid="class_u_sample_level_1ad71395cdde92803f0b2d6b427bae568b">begin</reimplementedby>
+        <reimplementedby refid="classplay__level_1a24e80f7d1618ec1b968ee1ba023a9fdf">begin</reimplementedby>
         <briefdescription>
 <para>User overridable on startup script for this level. </para>        </briefdescription>
         <detaileddescription>
@@ -148,8 +146,7 @@
         <definition>void Rubeus::RLevel::onEnd</definition>
         <argsstring>()</argsstring>
         <name>onEnd</name>
-        <reimplementedby refid="class_u_sample_level2_1a1f056eb0d839045b86f1a06f7f11d7de">onEnd</reimplementedby>
-        <reimplementedby refid="class_u_sample_level_1ad6ea32f57d8e72b680046a13edb4229a">onEnd</reimplementedby>
+        <reimplementedby refid="classplay__level_1a3f32749e94c27cdecbcee71394c8e8ce">onEnd</reimplementedby>
         <briefdescription>
 <para>User overridable script called on end of this level. </para>        </briefdescription>
         <detaileddescription>
@@ -259,76 +256,70 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="162">
-        <label>USampleLevel2</label>
-        <link refid="class_u_sample_level2"/>
-        <childnode refid="160" relation="public-inheritance">
+      <node id="212">
+        <label>play_level</label>
+        <link refid="classplay__level"/>
+        <childnode refid="211" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="161">
-        <label>USampleLevel</label>
-        <link refid="class_u_sample_level"/>
-        <childnode refid="160" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="160">
+      <node id="211">
         <label>Rubeus::RLevel</label>
         <link refid="class_rubeus_1_1_r_level"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="164">
+      <node id="214">
         <label>Rubeus::AudioComponents::RSymphony</label>
         <link refid="class_rubeus_1_1_audio_components_1_1_r_symphony"/>
-        <childnode refid="165" relation="public-inheritance">
+        <childnode refid="215" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="168">
+      <node id="218">
         <label>Rubeus::RInputManager</label>
         <link refid="class_rubeus_1_1_r_input_manager"/>
-        <childnode refid="165" relation="public-inheritance">
+        <childnode refid="215" relation="public-inheritance">
         </childnode>
-        <childnode refid="169" relation="usage">
+        <childnode refid="219" relation="usage">
           <edgelabel>MouseScroll</edgelabel>
           <edgelabel>MousePosition</edgelabel>
         </childnode>
       </node>
-      <node id="170">
+      <node id="220">
         <label>Rubeus::RWorld</label>
         <link refid="class_rubeus_1_1_r_world"/>
       </node>
-      <node id="169">
+      <node id="219">
         <label>RML::Vector2D</label>
         <link refid="struct_r_m_l_1_1_vector2_d"/>
       </node>
-      <node id="167">
+      <node id="217">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="166">
+      <node id="216">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="167" relation="usage">
+        <childnode refid="217" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="165">
+      <node id="215">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="166" relation="usage">
+        <childnode refid="216" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>
-      <node id="163">
+      <node id="213">
         <label>Rubeus::RLevel</label>
         <link refid="class_rubeus_1_1_r_level"/>
-        <childnode refid="164" relation="usage">
+        <childnode refid="214" relation="usage">
           <edgelabel>m_AudioManager</edgelabel>
         </childnode>
-        <childnode refid="168" relation="usage">
+        <childnode refid="218" relation="usage">
           <edgelabel>m_InputManager</edgelabel>
         </childnode>
-        <childnode refid="170" relation="usage">
+        <childnode refid="220" relation="usage">
           <edgelabel>m_World</edgelabel>
         </childnode>
       </node>

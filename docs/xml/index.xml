@@ -26,14 +26,14 @@
     <member refid="class_rubeus_1_1_awerere_1_1_a_collide_data_1ada2d967843fb9e84bae350d4a58af127" kind="function"><name>getCollisionNormal</name></member>
   </compound>
   <compound refid="class_rubeus_1_1_awerere_1_1_a_collider" kind="class"><name>Rubeus::Awerere::ACollider</name>
-    <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a86402823b299a7211ab6d2d11c2e512f" kind="variable"><name>m_Position</name></member>
+    <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1ae241ea4b4d3139f06356e5eb522cdb0c" kind="variable"><name>m_Position</name></member>
     <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a55dd70e134b80d3e64dc3ee5df5388fc" kind="variable"><name>m_Momentum</name></member>
     <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a3aea1286d1c31ff389717b07edfe391c" kind="variable"><name>m_Force</name></member>
     <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1abb9155531aa52189943aae04d7a506c2" kind="variable"><name>m_PhysicsMaterial</name></member>
     <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1afac145eb6d70d70e822923b92f1f56d6" kind="variable"><name>m_Type</name></member>
     <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a929eacdcc3a29b8b598666085560b442" kind="variable"><name>m_Sprite</name></member>
     <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a0584d41544674acb77f11cfe038fd1ea" kind="function"><name>ACollider</name></member>
-    <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1af4862ef42d5f94e16ff3602219b19e83" kind="function"><name>ACollider</name></member>
+    <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a7868c1b6467867bc7eea95c8cc7e450c" kind="function"><name>ACollider</name></member>
     <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a10873a3ab1cc36d56b4bf72a9a4c82f4" kind="function"><name>~ACollider</name></member>
     <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a0c1bf6dacc6f411a4073843d61458c7f" kind="function"><name>tryIntersect</name></member>
     <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1ac9295068ab11ba7b11e7d18f453298bc" kind="function"><name>tryIntersect</name></member>
@@ -148,6 +148,14 @@
     <member refid="struct_rubeus_1_1_audio_modifier_1ad2eb7a3c901111183b6a7c939e952dd4" kind="variable"><name>m_TrackName</name></member>
     <member refid="struct_rubeus_1_1_audio_modifier_1a82cbfe7aeaa656630f415fa83c7c3c96" kind="variable"><name>m_EffectToApply</name></member>
   </compound>
+  <compound refid="classball" kind="class"><name>ball</name>
+    <member refid="classball_1a6e904ed322e02bc7cf63c7e3868fe86d" kind="function"><name>ball</name></member>
+    <member refid="classball_1afb72f566c263e7935c3e41594d1a60ac" kind="function"><name>ball</name></member>
+    <member refid="classball_1ace580e8b1a9f709edfd773cf86890d52" kind="function"><name>begin</name></member>
+    <member refid="classball_1acb4f6b613c50da5525f68966581f74ed" kind="function"><name>onHit</name></member>
+    <member refid="classball_1a45ebc6576d95df0ce805464d63e79806" kind="function"><name>onMessage</name></member>
+    <member refid="classball_1a8507b463ed52e9d713be2ac078a8dc1f" kind="function"><name>tick</name></member>
+  </compound>
   <compound refid="struct_rubeus_1_1_awerere_1_1_collision_grid" kind="struct"><name>Rubeus::Awerere::CollisionGrid</name>
     <member refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1abbec19ab9c5b816307686e574a34131d" kind="variable"><name>m_GridHeight</name></member>
     <member refid="struct_rubeus_1_1_awerere_1_1_collision_grid_1a1bac782a3ab188917ae4ce8cdaa6eab8" kind="variable"><name>m_GridWidth</name></member>
@@ -194,6 +202,20 @@
     <member refid="struct_rubeus_1_1_message_1a4ebdd7a1445d43bb44cfe4c10fef4988" kind="variable"><name>m_Data</name></member>
     <member refid="struct_rubeus_1_1_message_1aff3ce9330654214b79baa908d37e7b7a" kind="function"><name>Message</name></member>
     <member refid="struct_rubeus_1_1_message_1a80f0a41ca48055eaa6143d413325097e" kind="function"><name>~Message</name></member>
+  </compound>
+  <compound refid="classpaddle" kind="class"><name>paddle</name>
+    <member refid="classpaddle_1a927d797b0ab26f6a65af00d98d872910" kind="function"><name>paddle</name></member>
+    <member refid="classpaddle_1a4885f9d26867036d168cbadf71562752" kind="function"><name>paddle</name></member>
+    <member refid="classpaddle_1a017e830704cf775605b63cc877497db6" kind="function"><name>begin</name></member>
+    <member refid="classpaddle_1a3901d1d3ff4e8de2317b62331fd0651f" kind="function"><name>onHit</name></member>
+    <member refid="classpaddle_1a07ed2362c3bbc53782eb46d711f94474" kind="function"><name>onMessage</name></member>
+    <member refid="classpaddle_1aff95a6b014b08259d1c2b3c19df4dd25" kind="function"><name>tick</name></member>
+  </compound>
+  <compound refid="classplay__level" kind="class"><name>play_level</name>
+    <member refid="classplay__level_1acc3ca2bfe6ec3631e69507c1bce0e726" kind="function"><name>play_level</name></member>
+    <member refid="classplay__level_1a22cb17e9b76114b38e198be7428278e5" kind="function"><name>~play_level</name></member>
+    <member refid="classplay__level_1a24e80f7d1618ec1b968ee1ba023a9fdf" kind="function"><name>begin</name></member>
+    <member refid="classplay__level_1a3f32749e94c27cdecbcee71394c8e8ce" kind="function"><name>onEnd</name></member>
   </compound>
   <compound refid="class_rubeus_1_1_graphic_components_1_1_r_buffer" kind="class"><name>Rubeus::GraphicComponents::RBuffer</name>
     <member refid="class_rubeus_1_1_graphic_components_1_1_r_buffer_1a78d2c2155be0a9013685a61e266153d7" kind="variable"><name>m_BufferID</name></member>
@@ -567,26 +589,6 @@
     <member refid="class_rubeus_1_1_r_world_1a4cc8ab3e46cb4fc5e9d428384231a809" kind="function"><name>setObjectArray</name></member>
     <member refid="class_rubeus_1_1_r_world_1a91e730bb4e177d4d59c2c6c6fd04ccda" kind="function"><name>getActiveObjects</name></member>
   </compound>
-  <compound refid="class_usample__object" kind="class"><name>Usample_object</name>
-    <member refid="class_usample__object_1a628bda3e1ececae7d0e9fb19c6d96d8d" kind="function"><name>Usample_object</name></member>
-    <member refid="class_usample__object_1ad20981758c0029de13344e1d3af2c1a9" kind="function"><name>Usample_object</name></member>
-    <member refid="class_usample__object_1a81ed21dc7a2200ccb20979e6c41f4e40" kind="function"><name>begin</name></member>
-    <member refid="class_usample__object_1a6e948c33db26927c58900b8dadefcbd0" kind="function"><name>onHit</name></member>
-    <member refid="class_usample__object_1a7b003e12f425fcd2bc3f0eeb4ebeecfb" kind="function"><name>onMessage</name></member>
-    <member refid="class_usample__object_1a11811f2d7392dbbb039ca090adb21443" kind="function"><name>tick</name></member>
-  </compound>
-  <compound refid="class_u_sample_level" kind="class"><name>USampleLevel</name>
-    <member refid="class_u_sample_level_1a6e0c4a0b8cfae83e04fb555f9e0582a0" kind="function"><name>USampleLevel</name></member>
-    <member refid="class_u_sample_level_1a2ad763b71ba8530b571153fb764dc31d" kind="function"><name>~USampleLevel</name></member>
-    <member refid="class_u_sample_level_1ad71395cdde92803f0b2d6b427bae568b" kind="function"><name>begin</name></member>
-    <member refid="class_u_sample_level_1ad6ea32f57d8e72b680046a13edb4229a" kind="function"><name>onEnd</name></member>
-  </compound>
-  <compound refid="class_u_sample_level2" kind="class"><name>USampleLevel2</name>
-    <member refid="class_u_sample_level2_1a8e33d7125f6c04c3e461c637f33cb08b" kind="function"><name>USampleLevel2</name></member>
-    <member refid="class_u_sample_level2_1aa13d614cc114f65873c672546b99e0da" kind="function"><name>~USampleLevel2</name></member>
-    <member refid="class_u_sample_level2_1adf0be6fb2d7cacaade7b474e2cf777b8" kind="function"><name>begin</name></member>
-    <member refid="class_u_sample_level2_1a1f056eb0d839045b86f1a06f7f11d7de" kind="function"><name>onEnd</name></member>
-  </compound>
   <compound refid="struct_r_m_l_1_1_vector2_d" kind="struct"><name>RML::Vector2D</name>
     <member refid="struct_r_m_l_1_1_vector2_d_1ab5c3a92e55c53865ba1662ad2beb6ef2" kind="variable"><name>x</name></member>
     <member refid="struct_r_m_l_1_1_vector2_d_1a05f39d7943bb201be12d409246fc7bae" kind="variable"><name>y</name></member>
@@ -936,23 +938,24 @@
   <compound refid="config_8h" kind="file"><name>config.h</name>
     <member refid="config_8h_1a03a2a1a9477bd3c1581cae7f4f02492b" kind="define"><name>_COMPILE_UNIT_TESTS_</name></member>
   </compound>
-  <compound refid="sample__level_8cpp" kind="file"><name>sample_level.cpp</name>
+  <compound refid="level_8play__level_8cpp" kind="file"><name>level.play_level.cpp</name>
   </compound>
-  <compound refid="sample__level_8h" kind="file"><name>sample_level.h</name>
+  <compound refid="level_8play__level_8h" kind="file"><name>level.play_level.h</name>
   </compound>
-  <compound refid="sample__level2_8cpp" kind="file"><name>sample_level2.cpp</name>
+  <compound refid="object_8ball_8cpp" kind="file"><name>object.ball.cpp</name>
   </compound>
-  <compound refid="sample__level2_8h" kind="file"><name>sample_level2.h</name>
+  <compound refid="object_8ball_8h" kind="file"><name>object.ball.h</name>
   </compound>
-  <compound refid="sample__object_8cpp" kind="file"><name>sample_object.cpp</name>
+  <compound refid="object_8paddle_8cpp" kind="file"><name>object.paddle.cpp</name>
   </compound>
-  <compound refid="sample__object_8h" kind="file"><name>sample_object.h</name>
+  <compound refid="object_8paddle_8h" kind="file"><name>object.paddle.h</name>
   </compound>
   <compound refid="user__init_8cpp" kind="file"><name>user_init.cpp</name>
     <member refid="user__init_8cpp_1ab15f2312de6ddc1ff5802cb892115905" kind="variable"><name>startupLevel</name></member>
-    <member refid="user__init_8cpp_1a0dad574dd3cb69cf861369c927e9f02b" kind="variable"><name>sample_level</name></member>
-    <member refid="user__init_8cpp_1a24f19ee1453bb8135cc466dc454c27e4" kind="variable"><name>sample_level2</name></member>
-    <member refid="user__init_8cpp_1a00777ff66d7ba8cef3a1bd519c4f77ff" kind="variable"><name>sample_object</name></member>
+    <member refid="user__init_8cpp_1a70bb1b3cf4eb83ce82874cae0d72a874" kind="variable"><name>playLevel</name></member>
+    <member refid="user__init_8cpp_1a44dafda6791ad2f5a893ac9fafff1f3d" kind="variable"><name>leftPaddle</name></member>
+    <member refid="user__init_8cpp_1a2665ae31f67fc01936742eb761f2a06a" kind="variable"><name>rightPaddle</name></member>
+    <member refid="user__init_8cpp_1aa78ef9a8bfe0b8abc2a4d5e601381673" kind="variable"><name>Ball</name></member>
   </compound>
   <compound refid="user__init_8h" kind="file"><name>user_init.h</name>
   </compound>
@@ -1179,15 +1182,13 @@
   </compound>
   <compound refid="_0Dm_keyword" kind="page"><name>@m_keyword</name>
   </compound>
-  <compound refid="dir_d0fce2c9cc208ced23add81355d7cd2f" kind="dir"><name>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels/engine_files</name>
+  <compound refid="dir_e5b1e8cbb8f7936d4d68e6f220027d41" kind="dir"><name>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/engine_files</name>
   </compound>
   <compound refid="dir_c09d7e06f2530dd5e48c306aeb7181e5" kind="dir"><name>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game</name>
   </compound>
-  <compound refid="dir_18b86446946202065a249ff8cf298676" kind="dir"><name>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name</name>
-  </compound>
   <compound refid="dir_23fef25541c7f2a6ddf150530691075d" kind="dir"><name>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include</name>
   </compound>
-  <compound refid="dir_12315e64ecc1645263c2399a07a0f7cd" kind="dir"><name>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/game_name/levels</name>
+  <compound refid="dir_f28b997a6f241a831caf7ae29c2320d6" kind="dir"><name>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong</name>
   </compound>
   <compound refid="dir_d7b2ae570141163dad272f46859a8af2" kind="dir"><name>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore</name>
   </compound>

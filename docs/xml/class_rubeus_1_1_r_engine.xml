@@ -334,39 +334,39 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="87">
+      <node id="136">
         <label>Rubeus::REngine</label>
         <link refid="class_rubeus_1_1_r_engine"/>
-        <childnode refid="88" relation="public-inheritance">
+        <childnode refid="137" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="88">
+      <node id="137">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="89">
+      <node id="138">
         <label>Rubeus::REngine</label>
         <link refid="class_rubeus_1_1_r_engine"/>
-        <childnode refid="90" relation="public-inheritance">
+        <childnode refid="139" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="92">
+      <node id="141">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="91">
+      <node id="140">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="92" relation="usage">
+        <childnode refid="141" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="90">
+      <node id="139">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="91" relation="usage">
+        <childnode refid="140" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>

@@ -216,53 +216,53 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="235">
+      <node id="286">
         <label>Rubeus::GraphicComponents::RSprite</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_sprite"/>
-        <childnode refid="236" relation="public-inheritance">
+        <childnode refid="287" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="236">
+      <node id="287">
         <label>Rubeus::GraphicComponents::RRenderableObject</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="239">
+      <node id="290">
         <label>RML::Vector4D</label>
         <link refid="struct_r_m_l_1_1_vector4_d"/>
       </node>
-      <node id="237">
+      <node id="288">
         <label>Rubeus::GraphicComponents::RSprite</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_sprite"/>
-        <childnode refid="238" relation="public-inheritance">
+        <childnode refid="289" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="242">
+      <node id="293">
         <label>RML::Vector3D</label>
         <link refid="struct_r_m_l_1_1_vector3_d"/>
       </node>
-      <node id="240">
+      <node id="291">
         <label>Rubeus::GraphicComponents::RTexture</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_texture"/>
       </node>
-      <node id="241">
+      <node id="292">
         <label>RML::Vector2D</label>
         <link refid="struct_r_m_l_1_1_vector2_d"/>
       </node>
-      <node id="238">
+      <node id="289">
         <label>Rubeus::GraphicComponents::RRenderableObject</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
-        <childnode refid="239" relation="usage">
+        <childnode refid="290" relation="usage">
           <edgelabel>m_Color</edgelabel>
         </childnode>
-        <childnode refid="240" relation="usage">
+        <childnode refid="291" relation="usage">
           <edgelabel>m_Texture</edgelabel>
         </childnode>
-        <childnode refid="241" relation="usage">
+        <childnode refid="292" relation="usage">
           <edgelabel>m_Size</edgelabel>
         </childnode>
-        <childnode refid="242" relation="usage">
+        <childnode refid="293" relation="usage">
           <edgelabel>m_Position</edgelabel>
         </childnode>
       </node>
