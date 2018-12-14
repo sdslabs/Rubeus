@@ -273,7 +273,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>deltaX</parametername>
+<parametername>deltaY</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Vertical span of the object. </para></parameterdescription>
@@ -393,9 +393,109 @@
           <defval>false</defval>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Constructor. Uses pure colors as textures. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="warning"><para>All pointers passed in will be owned by the game object. Heap objects will be deleted by this object.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of this game object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>levelName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of level that uses this object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x coordinate of the lower left point. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y coordinate of the lower left point. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deltaX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Horizontal span of the object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>deltaY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vertical span of the object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Red channel value. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>g</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Green channel value. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Blue channel value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enablePhysics</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the object obeys physics. Default is false. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>material</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Provide a physics material to be used to respond to hit events. Defaults to DefaultPhysicsMat. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Collider type to be assigned to this gameobject. Defaults to NO_COLLIDER. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>collider</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The collider object to be used. Defaults to NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generatesHit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether the object generates hit events. Default is false. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h" line="105" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/game_object.cpp" bodystart="43" bodyend="65"/>

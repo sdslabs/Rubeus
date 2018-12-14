@@ -70,7 +70,7 @@ namespace Rubeus
 		 * @param	x				x coordinate of the lower left point.
 		 * @param	y				y coordinate of the lower left point.
 		 * @param	deltaX			Horizontal span of the object.
-		 * @param	deltaX			Vertical span of the object.
+		 * @param	deltaY			Vertical span of the object.
 		 * @param	imageFilePath		Path to the image to be used as texture.
 		 * @param	enablePhysics		Whether the object obeys physics. Default is false.
 		 * @param	type				Collider type to be assigned to this gameobject. Defaults to NO_COLLIDER
@@ -81,7 +81,7 @@ namespace Rubeus
 		RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, const Awerere::EColliderType & type = Awerere::EColliderType::NO_COLLIDER, Awerere::ACollider * collider = NULL, bool generatesHit = false, const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial());
 
 		/**
-		 * @fn		RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, const float & r, const float & g, bool enablePhysics = false, Awerere::APhysicsObject * physicsObject = NULL)
+		 * @fn		RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, float & r, float & g, float & b, bool enablePhysics = false, const Awerere::APhysicsMaterial & material = Awerere::APhysicsMaterial(), const Awerere::EColliderType & type = Awerere::EColliderType::NO_COLLIDER, Awerere::ACollider * collider = NULL, bool generatesHit = false)
 		 *
 		 * @brief	Constructor. Uses pure colors as textures.
 		 * @warning	All pointers passed in will be owned by the game object.
@@ -92,7 +92,7 @@ namespace Rubeus
 		 * @param	x				x coordinate of the lower left point.
 		 * @param	y				y coordinate of the lower left point.
 		 * @param	deltaX			Horizontal span of the object.
-		 * @param	deltaX			Vertical span of the object.
+		 * @param	deltaY			Vertical span of the object.
 		 * @param	r				Red channel value.
 		 * @param	g				Green channel value.
 		 * @param	b				Blue channel value

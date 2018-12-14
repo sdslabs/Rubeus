@@ -107,6 +107,23 @@
             </dt>
             <dd>Constructor. Uses images as textures.</dd>
             <dt>
+              <span class="m-dox-wrap-bumper"><a href="#aed2b6c42a232def6ce7ee4d1d8e6d124" class="m-dox">RGameObject</a>(</span><span class="m-dox-wrap">std::string name,
+              std::string levelName,
+              float x,
+              float y,
+              float deltaX,
+              float deltaY,
+              float&amp; r,
+              float&amp; g,
+              float&amp; b,
+              bool enablePhysics = false,
+              const <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html" class="m-dox">Awerere::<wbr />APhysicsMaterial</a>&amp; material = <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html" class="m-dox">Awerere::<wbr />APhysicsMaterial</a>(),
+              const <a href="namespace_rubeus_1_1_awerere.html#aa31f43f0fcc41516bb0aa51cb1d88a08" class="m-dox">Awerere::<wbr />EColliderType</a>&amp; type = <a href="namespace_rubeus_1_1_awerere.html#aa31f43f0fcc41516bb0aa51cb1d88a08a80cda54f91e5930408b152ed0f86b797" class="m-dox">Awerere::<wbr />EColliderType::<wbr />NO_COLLIDER</a>,
+              <a href="class_rubeus_1_1_awerere_1_1_a_collider.html" class="m-dox">Awerere::<wbr />ACollider</a>* collider = NULL,
+              bool generatesHit = false)</span>
+            </dt>
+            <dd>Constructor. Uses pure colors as textures.</dd>
+            <dt>
               <span class="m-dox-wrap-bumper"><a href="#a4c60d9f9133a6f321c50d39b2f2a096e" class="m-dox-self" name="a4c60d9f9133a6f321c50d39b2f2a096e">~RGameObject</a>(</span><span class="m-dox-wrap">)</span>
             </dt>
             <dd>Destructor.</dd>
@@ -207,11 +224,11 @@
                 </tr>
                 <tr>
                   <td>deltaX</td>
-                  <td>Vertical span of the object.</td>
+                  <td>Horizontal span of the object.</td>
                 </tr>
                 <tr>
                   <td>deltaY</td>
-                  <td></td>
+                  <td>Vertical span of the object.</td>
                 </tr>
                 <tr>
                   <td>imageFilePath</td>
@@ -240,6 +257,89 @@
               </tbody>
             </table>
 <aside class="m-note m-danger"><h4>Warning</h4><p>All pointers passed in will be owned by the game object. Heap objects will be deleted by the object automatically.</p></aside>
+          </div></section>
+          <section class="m-dox-details" id="aed2b6c42a232def6ce7ee4d1d8e6d124"><div>
+            <h3>
+              <span class="m-dox-wrap-bumper"> Rubeus::<wbr />RGameObject::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#aed2b6c42a232def6ce7ee4d1d8e6d124" class="m-dox-self">RGameObject</a>(</span><span class="m-dox-wrap">std::string name,
+              std::string levelName,
+              float x,
+              float y,
+              float deltaX,
+              float deltaY,
+              float&amp; r,
+              float&amp; g,
+              float&amp; b,
+              bool enablePhysics = false,
+              const <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html" class="m-dox">Awerere::<wbr />APhysicsMaterial</a>&amp; material = <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html" class="m-dox">Awerere::<wbr />APhysicsMaterial</a>(),
+              const <a href="namespace_rubeus_1_1_awerere.html#aa31f43f0fcc41516bb0aa51cb1d88a08" class="m-dox">Awerere::<wbr />EColliderType</a>&amp; type = <a href="namespace_rubeus_1_1_awerere.html#aa31f43f0fcc41516bb0aa51cb1d88a08a80cda54f91e5930408b152ed0f86b797" class="m-dox">Awerere::<wbr />EColliderType::<wbr />NO_COLLIDER</a>,
+              <a href="class_rubeus_1_1_awerere_1_1_a_collider.html" class="m-dox">Awerere::<wbr />ACollider</a>* collider = NULL,
+              bool generatesHit = false)</span></span>
+            </h3>
+            <p>Constructor. Uses pure colors as textures.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">name</td>
+                  <td>Name of this game object.</td>
+                </tr>
+                <tr>
+                  <td>levelName</td>
+                  <td>Name of level that uses this object.</td>
+                </tr>
+                <tr>
+                  <td>x</td>
+                  <td>x coordinate of the lower left point.</td>
+                </tr>
+                <tr>
+                  <td>y</td>
+                  <td>y coordinate of the lower left point.</td>
+                </tr>
+                <tr>
+                  <td>deltaX</td>
+                  <td>Horizontal span of the object.</td>
+                </tr>
+                <tr>
+                  <td>deltaY</td>
+                  <td>Vertical span of the object.</td>
+                </tr>
+                <tr>
+                  <td>r</td>
+                  <td>Red channel value.</td>
+                </tr>
+                <tr>
+                  <td>g</td>
+                  <td>Green channel value.</td>
+                </tr>
+                <tr>
+                  <td>b</td>
+                  <td>Blue channel value</td>
+                </tr>
+                <tr>
+                  <td>enablePhysics</td>
+                  <td>Whether the object obeys physics. Default is false.</td>
+                </tr>
+                <tr>
+                  <td>material</td>
+                  <td>Provide a physics material to be used to respond to hit events. Defaults to DefaultPhysicsMat.</td>
+                </tr>
+                <tr>
+                  <td>type</td>
+                  <td>Collider type to be assigned to this gameobject. Defaults to NO_COLLIDER.</td>
+                </tr>
+                <tr>
+                  <td>collider</td>
+                  <td>The collider object to be used. Defaults to NULL.</td>
+                </tr>
+                <tr>
+                  <td>generatesHit</td>
+                  <td>Whether the object generates hit events. Default is false.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-danger"><h4>Warning</h4><p>All pointers passed in will be owned by the game object. Heap objects will be deleted by this object.</p></aside>
           </div></section>
           <section class="m-dox-details" id="ade6d964c655301870cb762c1b9c02966"><div>
             <h3>
