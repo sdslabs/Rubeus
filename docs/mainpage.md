@@ -1,5 +1,7 @@
 @mainpage
 
+<img src="../rubeus_dark.png">
+
 # Introduction
 Rubeus is a cross-platform 2D game engine written in C++17. 
 
