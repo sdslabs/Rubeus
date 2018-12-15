@@ -9,14 +9,14 @@ Created by SDSLabs with :heart:
 ## Setting up the build environment 
 1. You can use any IDE/text-editor you fancy for contributing to Rubeus.
 2. Rubeus uses Visual Leak Detector v2.5.1 for catching memory leaks. Unfortunately, it is not available for Linux, which means that you may have to use some other dynamic code profiling tool like [Valgrind](http://valgrind.org/).
-3. Install [CMake](https://cmake.org/)
+3. Install [CMake](https://cmake.org/) (preferably a version above or same as 3.11).
 4. Clone this repository:
 ```shell
 $ git clone https://github.com/sdslabs/Rubeus
 ```
 
 ## Building required dependencies
-1. Install [Vcpkg](https://github.com/Microsoft/vcpkg), a cross-platform C++ package manager and place it in a suitable directory. Follow basic installation commands provided in the vcpkg readme.
+1. Install [Vcpkg](https://github.com/Microsoft/vcpkg), a cross-platform C++ package manager and place it in a suitable directory. Follow basic installation commands provided in the vcpkg readme. Make sure you have a version above or same as 0.0.113.
 2. Update vcpkg first:
 ```shell
 $ path/to/vcpkg/vcpkg update
