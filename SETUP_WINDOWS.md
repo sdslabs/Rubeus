@@ -9,14 +9,14 @@ Created by SDSLabs with :heart:
 ## Setting up the build environment
 1. Install [Microsoft Visual Studio 2017](https://www.visualstudio.com/)
 2. Rubeus uses Visual Leak Detector v2.5.1 for catching memory leaks. Find it [here](https://github.com/KindDragon/vld/releases/tag/v2.5.1). However, if you wish to not use this tool, just remove `add_definitions(-DVLD)` from /RubeusCore/CMakeLists.txt.
-3. Install [CMake](https://cmake.org/)
+3. Install [CMake](https://cmake.org/) (preferably a version above or same as 3.11).
 4. Clone this repository:
 ```shell
 $ git clone https://github.com/sdslabs/Rubeus
 ```
 
 ## Building required dependencies
-1. Install [Vcpkg](https://github.com/Microsoft/vcpkg), a cross-platform C++ package manager and place it in a suitable directory. Follow basic installation commands provided in the vcpkg readme.
+1. Install [Vcpkg](https://github.com/Microsoft/vcpkg), a cross-platform C++ package manager and place it in a suitable directory. Follow basic installation commands provided in the vcpkg readme. Make sure you have a version above or same as 0.0.113.
 2. Update vcpkg first:
 ```shell
 $ path/to/vcpkg/vcpkg.exe update
