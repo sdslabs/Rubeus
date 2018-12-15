@@ -1,5 +1,5 @@
-<p>
-<h1 align=center><strong>Rubeus</strong></h1>
+<p align=center>
+<img src="ReadmeAssets/rubeus_light.png">
 <p/>
 
 <p align=center>
@@ -16,7 +16,7 @@ Created by SDSLabs with :heart:
 
 ## <a name=what>What is Rubeus?
 
-A cross-platform 2D game engine written in C++17 using OpenGL 3.3. The main objective of making this engine is to provide a simple and fast API to help people realize their game ideas efficiently. 
+A cross-platform 2D game engine written in C++17 using OpenGL 3.3. The main objective of making this engine is to provide a simple and fast API to help people realize their game ideas efficiently.
 
 Rubeus uses [broCLI](https://github.com/sdslabs/broCLI), a Go based CLI tool that helps create the project structure for using Rubeus.
 
@@ -49,11 +49,11 @@ Setup instructions for Rubeus are explained [here](SETUP.md). Also make sure to 
 Everyone reading this is invited to contribute to Rubeus either through opening issues on Github, making pull requests, adding [Wiki pages](https://github.com/sdslabs/Rubeus/wiki) and talking to the community at [our chat website](https://chat.sdslabs.co). Make sure to read the [contribution guidelines](CONTRIBUTING.md) to ease your way in.
 
 ## <a name=remarks>Remarks
- 
+
 * Credits to the owners of helper code:
   * Guerrilla Renderer, the main rendering engine, highly inspired by the [Sparky Engine](https://github.com/TheCherno/Sparky)
   * Awerere Physics collision system, the physics update engine using a homebrewed maths library i.e. Rubeus Maths Library (RML)
   * Symphony Audio Engine, audio effects and cueing engine using SFML as the backend.
   * Easy to use workflow, efforts are being made to release as little information to the user as possible without compromising flexibility.
-* v1.0 is available for use. 
+* v1.0 is available for use.
 * v2.0 is a work in production.
