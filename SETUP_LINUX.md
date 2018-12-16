@@ -21,7 +21,12 @@ $ git clone https://github.com/sdslabs/Rubeus
 ```shell
 $ path/to/vcpkg/vcpkg update
 ```
-1. Install GLEW, OpenGL Extension Wrangler library (preferably glew:x64-linux) by running:
+1. First install OpenGL:
+```shell
+$ sudo apt install mesa-common-dev
+```
+
+Install GLEW, OpenGL Extension Wrangler library (preferably glew:x64-linux) by running:
 ```shell
 $ path/to/vcpkg/vcpkg install glew
 ```
