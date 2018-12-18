@@ -44,7 +44,7 @@ $ path/to/vcpkg/vcpkg.exe install sfml
 
 ## Initialising CMake with vcpkg
 1. For VS 2017 project files, press `⊞ Win + X` and choose `Command Prompt(Admin)` from the dialog box.
-2. Open CMake GUI. Select `Visual Studio project files` from the drop down menu and set source code and build destination as the same as the repository directory. Click on Configure.
+2. Open CMake GUI. Select `Visual Studio project files` from the drop down menu and set source code and build destination as the same as the repository directory.
 3. Select 'Specify options for cross-compiling with CMake'. Specify the platform name (i.e. Windows) and specify the C and C++ compilers (`gcc.exe` and `g++.exe` preferably). Click on `Configure`. 
 4. Navigate to the cloned repository. 
 > Quick-tips: For CMD, `X:` command will navigate to the X: drive. `dir` command works the same as the Unix `ls -la` and `cd` still works the same. You can also use Git Bash for general navigation.
