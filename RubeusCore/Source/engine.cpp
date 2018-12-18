@@ -114,9 +114,17 @@ namespace Rubeus
 
 		m_Timer->setFrameCounter();
 
+        float lastFrameEndTime = glfwGetTime();
+
 		// Main game loop
 		while (m_Window->closed() == false)
 		{
+            while(true)
+            {
+                if(glfwGetTime() - lastFrameEndTime >= 1.0f / 60.0f)
+                break;
+            }
+
 			// Clear window buffer
 			m_Window->clearWindow();
 
@@ -140,6 +148,8 @@ namespace Rubeus
 			{
 				break;
 			}
+
+            lastFrameEndTime = glfwGetTime();
 		}
 
 		m_StartupLevelName = "";
