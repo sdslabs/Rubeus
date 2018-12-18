@@ -55,16 +55,17 @@ $ cmake-gui
 ```
 2.  Select `Unix Makefiles` from the drop down menu and set source code and build destination as the same as the repository directory. Click on Configure.
 3. Select 'Specify options for cross-compiling with CMake'. Specify the platform name (i.e. Linux) and specify the C and C++ compilers (`gcc` and `g++` preferably).
-4. Navigate to the cloned repository.
-5. To use libraries acquired by vcpkg, run:
+4. Click on `Configure`.
+5. Navigate to the cloned repository.
+6. To use libraries acquired by vcpkg, run:
 ```shell
 $ path/to/vcpkg/vcpkg integrate install
 ```
-6. Instruct CMake to acquire libraries already built by vcpkg, by running:
+7. Instruct CMake to acquire libraries already built by vcpkg, by running:
 ```shell
 $ cmake -DCMAKE_TOOLCHAIN_FILE=path/to/vcpkg/scripts/buildsystems/vcpkg.cmake ./
 ```
-7. Run CMake by executing
+8. Run CMake by executing
 ```shell
 $ cmake ./
 ```
@@ -73,7 +74,15 @@ $ cmake ./
 1. Open the Rubeus root directory in your IDE/text-editor.
 2. All `.h` files will be present in `/RubeusCore/Include` and all of their implementations(if any) will be present in `/RubeusCore/Source` as `.cpp` files. No need to edit CMakeLists.txt anywhere unless there are any linking errors popping up.
 3. Use any CMake extensions available for your environment to ease building the project using CMake.
-4. Add `/RubeusCore/Include` as your include directory.
-5. Build the project using a `g++` extension or manually compile the entire project.
+4. Add `/RubeusCore/Include` as your include directory, if it's not already.
 
+## Building Rubeus using Makefiles
+1. After running `cmake ./` in the Rubeus root directory you will find that CMake has generated a Makefile. To use this Makefile to build Rubeus, just run:
+```shell
+$ make
+```
+2. This will generate a binary in the Rubeus directory by the name `RubeusCore`. Run Rubeus using:
+```shell
+$ ./RubeusCore
+```
 Remember to go through the [contribution guidelines](CONTRIBUTING.md) for further guidance.
