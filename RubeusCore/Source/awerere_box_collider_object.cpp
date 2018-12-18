@@ -19,7 +19,7 @@ namespace Rubeus
 			return RML::Vector3D(ll + ur) * 0.5f;
 		}
 
-		ABoxCollider::ABoxCollider(RML::Vector3D & minExtent, const RML::Vector3D & maxExtent)
+		ABoxCollider::ABoxCollider(const RML::Vector3D & minExtent, const RML::Vector3D & maxExtent)
 			: ACollider(minExtent, RML::Vector2D()), m_MinExtent(minExtent), m_MaxExtent(maxExtent)
 		{
 			m_Type = EColliderType::BOX;
