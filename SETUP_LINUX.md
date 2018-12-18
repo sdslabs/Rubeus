@@ -15,18 +15,21 @@ Created by SDSLabs with :heart:
 $ git clone https://github.com/sdslabs/Rubeus
 ```
 
+## Acquiring system dependent dependencies:
+1. The system package manager on Ubuntu can be commanded to get system specific libraries to run Rubeus. Run:
+```shell
+$ sudo apt install mesa-common-dev libxinerama-dev libxcursor-dev mesa-vulkan-drivers vulkan-utils cmake-gui
+$ sudo apt-get install libgl-dev xorg-dev libglu1-mesa-dev libx11-dev libxrandr-dev libxi-dev libudev-dev mesa-common-dev 
+$ hash -r
+```
+
 ## Building required dependencies
 1. Install [Vcpkg](https://github.com/Microsoft/vcpkg), a cross-platform C++ package manager and place it in a suitable directory. Follow basic installation commands provided in the vcpkg readme. Make sure you have a version above or same as 0.0.113.
 2. Update vcpkg first:
 ```shell
 $ path/to/vcpkg/vcpkg update
 ```
-1. First install OpenGL:
-```shell
-$ sudo apt install mesa-common-dev
-```
-
-Install GLEW, OpenGL Extension Wrangler library (preferably glew:x64-linux) by running:
+3. Install GLEW, OpenGL Extension Wrangler library (preferably glew:x64-linux) by running:
 ```shell
 $ path/to/vcpkg/vcpkg install glew
 ```
@@ -81,7 +84,7 @@ $ cmake ./
 ```shell
 $ make
 ```
-2. This will generate a binary in the Rubeus directory by the name `RubeusCore`. Run Rubeus using:
+2. This will generate a binary in the `RubeusCore/` directory by the name `RubeusCore`. Run Rubeus using:
 ```shell
 $ cd RubeusCore/
 $ ./RubeusCore
