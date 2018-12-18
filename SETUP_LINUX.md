@@ -83,6 +83,7 @@ $ make
 ```
 2. This will generate a binary in the Rubeus directory by the name `RubeusCore`. Run Rubeus using:
 ```shell
+$ cd RubeusCore/
 $ ./RubeusCore
 ```
 Remember to go through the [contribution guidelines](CONTRIBUTING.md) for further guidance.
