@@ -1,1 +1,0 @@
-#define _COMPILE_UNIT_TESTS_

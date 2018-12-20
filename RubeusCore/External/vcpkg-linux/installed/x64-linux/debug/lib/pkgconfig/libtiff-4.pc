@@ -1,0 +1,11 @@
+prefix=/home/serious/Desktop/vcpkg/packages/tiff_x64-linux/debug
+exec_prefix=/home/serious/Desktop/vcpkg/packages/tiff_x64-linux/debug
+libdir=/home/serious/Desktop/vcpkg/packages/tiff_x64-linux/debug/lib
+includedir=/home/serious/Desktop/vcpkg/packages/tiff_x64-linux/debug/include
+
+Name: libtiff
+Description:  Tag Image File Format (TIFF) library.
+Version: 4.0.9
+Libs: -L/home/serious/Desktop/vcpkg/packages/tiff_x64-linux/debug/lib -ltiff
+Libs.private: 
+Cflags: -I/home/serious/Desktop/vcpkg/packages/tiff_x64-linux/debug/include
