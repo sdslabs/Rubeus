@@ -1,0 +1,13 @@
+prefix=/home/serious/Desktop/vcpkg/packages/glfw3_x64-linux
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: GLFW
+Description: A multi-platform library for OpenGL, window and input
+Version: 3.2.1
+URL: http://www.glfw.org/
+Requires.private:  x11 xrandr xinerama xxf86vm xcursor
+Libs: -L${libdir} -lglfw3
+Libs.private:  -lrt -lm -ldl
+Cflags: -I${includedir}
