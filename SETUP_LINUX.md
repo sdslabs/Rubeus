@@ -8,7 +8,7 @@ Created by SDSLabs with :heart:
 
 ## Setting up the build environment 
 1. You can use any IDE/text-editor you fancy for contributing to Rubeus.
-2. Rubeus uses Visual Leak Detector v2.5.1 for catching memory leaks. Unfortunately, it is not available for Linux, which means that you may have to use some other dynamic code profiling tool like [Valgrind](http://valgrind.org/).
+2. Rubeus uses Visual Leak Detector v2.5.1 for catching memory leaks. Unfortunately, it is not available for Linux, which means that you can use some other dynamic code profiling tool like [Valgrind](http://valgrind.org/) if you like. You can also just ignore VLD altogether.
 3. Install [CMake](https://cmake.org/) (preferably a version above or same as 3.11).
 4. Clone this repository:
 ```shell
