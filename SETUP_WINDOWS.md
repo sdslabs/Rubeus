@@ -69,4 +69,4 @@ $ cmake ./
 1. Open `RubeusCore.sln` (generates after running CMake).
 2. Check if you are running in Debug mode and press F5.
 
-All libraries are relatively linked thus your project is ready to boot up in Visual Studio. Remember to go through the [contribution guidelines](CONTRIBUTING.md) for further guidance.
+We are done! All libraries are relatively linked thus your project is ready to boot up in Visual Studio. Remember to go through the [contribution guidelines](CONTRIBUTING.md) for further guidance.
