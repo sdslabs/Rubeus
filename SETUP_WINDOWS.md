@@ -32,16 +32,14 @@ $ path/to/vcpkg/vcpkg.exe install glew glfw3 devil boost-any sfml
 ```shell
 $ path/to/vcpkg/vcpkg.exe integrate install
 ```
-This will output a string which we will need later. Keep it saved somewhere.
 
 ## Initialising CMake with vcpkg
-1. Press `⊞ + S` and search for `CMD`. Open CMD as admin.
-2. Navigate to `Rubeus/`.
-3. Type `cmake`, add a \<space\> and paste the string that we saved from the last step. This means effectively you will be running something similar to:
-```shell
-$ cmake -DCMAKE_TOOLCHAIN_FILE=path/to/vcpkg/scripts/buildsystems/vcpkg.cmake
-```
-5. Now you can observe that there is a `RubeusCore.sln` in `Rubeus/`.
+1. Press `⊞ + S` and search for "CMake GUI". Open CMake-GUI as admin.
+2. Set source directory as the Rubeus repository root. Set the build directory as the same as source directory. Click on `Configure`.
+3. Select `Visual Studio 15 2017` as the generator. Select `Specify native compilers`. Click on `Next`.
+4. Specify the C and C++ MinGW compiler locations. Most probably they can be in `C:/MinGW/bin/`. Leave Fortran compiler location empty. Click `Finish`.
+5. When CMake-GUI finishes the configuration, click `Generate`.
+5. Now you will observe that there is a `RubeusCore.sln` file in `Rubeus/`.
 
 ## Setting up Rubeus source in Visual Studio 2017
 1. Open `RubeusCore.sln` in VS and right click on `RubeusCore` and `Set as StartUp project`. [Screenshot](https://imgur.com/a/xadxwsG)
