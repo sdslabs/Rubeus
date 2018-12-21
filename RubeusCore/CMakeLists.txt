@@ -31,7 +31,7 @@ endif(WIN32)
 if(UNIX)
     add_library(vorbis STATIC IMPORTED)
 
-    target_link_libraries(RubeusCore -ldl sfml-audio sfml-network sfml-graphics sfml-window sfml-system ${OPENGL_LIBRARIES} GLEW glfw openal ${IL_LIBRARIES} ${ILU_LIBRARIES})
+    target_link_libraries(RubeusCore -lILU -lIL -lILUT -ldl sfml-audio sfml-network sfml-graphics sfml-window sfml-system ${OPENGL_LIBRARIES} GLEW glfw openal ${IL_LIBRARIES} ${ILU_LIBRARIES} -lstdc++)
 endif(UNIX)
 
 # TODO: Add tests and install targets if needed.
