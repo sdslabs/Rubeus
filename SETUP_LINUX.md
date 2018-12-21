@@ -47,7 +47,7 @@ This command will output a string which is supposed to be appended to a future C
 ```shell
 $ cmake-gui
 ```
-2.  Select `Unix Makefiles` from the drop down menu and set source code and build destination as the same as the repository directory. Click on Configure.
+2.  Select `Unix Makefiles` from the drop down menu and set source code and build destination same as the repository directory. Click on Configure.
 3. Select 'Specify options for cross-compiling with CMake'. Specify the platform name (i.e. Linux) and specify the C and C++ compilers (`gcc` and `g++` preferably).
 4. Click on `Configure`.
 5. Navigate to the cloned repository.
