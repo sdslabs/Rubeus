@@ -44,7 +44,13 @@ Rubeus was at first an initiative by SDSLabs to inculcate the spirit of game dev
 As previously said, we do not expect to have any monetary gains off making this project open-source, nor from any of the games that we might be developing on Rubeus.
 
 Currently Rubeus supports:
-*
+* Colour and image textured 2D sprites
+* Collision detection and resolution of boxes, circles and planes.
+* Cueing music and sound effects with a single line of code. 
+* Taking user inputs through mouse and keyboard.
+* Easy first look interface for a beginner
+
+More advanced features are scheduled for the next release.
 
 ## <a name=setup>How do I use Rubeus?
 
