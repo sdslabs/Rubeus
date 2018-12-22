@@ -27,7 +27,7 @@ Read the [Getting Started guide](https://github.com/sdslabs/Rubeus/wiki) and pre
 <img src=ReadmeAssets/demo_game.png width=600 align=middle alt="Screenshot from a demo game">
 </p>
 <p align="center">
-<i>The ping-pong demo game Rubeus comes with</i>
+<i>The ping-pong demo game that Rubeus comes with</i>
 </p>
 <p align="center">
 <img src=ReadmeAssets/10_9_8.png width=600 alt="Multiple textures">
