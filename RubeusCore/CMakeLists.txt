@@ -3,6 +3,8 @@
 
 cmake_minimum_required (VERSION 3.8)
 
+set(CMAKE_MODULE_PATH "./cmake_modules" ${CMAKE_MODULE_PATH})
+
 link_directories(Source/)
 
 file(GLOB_RECURSE SOURCES
