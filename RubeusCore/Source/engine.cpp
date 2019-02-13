@@ -6,7 +6,7 @@
 
 #include <engine.h>
 
-#include <boost/any.hpp>
+#include <any>
 
 namespace Rubeus
 {
@@ -192,7 +192,7 @@ namespace Rubeus
 			{
 				LOG("Loading level: " + std::string(getCurrentLevel()->getName()));
 
-				auto search = RLevel::InstantiatedLevels.find(boost::any_cast<std::string>(msg->m_Data));
+				auto search = RLevel::InstantiatedLevels.find(std::any_cast<std::string>(msg->m_Data));
 
 				if (search != RLevel::InstantiatedLevels.end())
 				{

@@ -6,7 +6,7 @@ set (CMAKE_CXX_STANDARD 17)
 
 project ("RubeusCore")
 
-set(SFML_STATIC false)
+set(SFML_STATIC true)
 
 if(WIN32)
 	FIND_PACKAGE(OpenGL REQUIRED)
