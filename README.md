@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sdslabs/Rubeus.svg?branch=master)](https://travis-ci.org/sdslabs/Rubeus)
+
 <p align=center>
 <img src="ReadmeAssets/rubeus_light.png">
 <p/>
