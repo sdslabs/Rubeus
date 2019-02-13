@@ -16,6 +16,20 @@ file(GLOB_RECURSE HEADERS
 	../vendor/SFML-repo/include/*.hpp
 )
 
+file(GLOB_RECURSE DevIL_SOURCES
+	../vendor/DevIL-repo/DevIL/src-IL/src/*.cpp
+	../vendor/DevIL-repo/DevIL/src-ILU/src/*.cpp
+	../vendor/DevIL-repo/DevIL/src-ILUT/src/*.cpp
+)
+
+file(GLOB_RECURSE GLFW_SOURCES
+	../vendor/GLFW-repo/src/*.c
+)
+
+file(GLOB_RECURSE SFML_SOURCES
+	../vendor/SFML-repo/src/SFML/*.cpp
+)
+
 file(GLOB_RECURSE SOURCES
 	Source/*.cpp
 	Game/*.cpp
@@ -54,8 +68,13 @@ target_include_directories(RubeusCore PUBLIC
 
 include_directories(${OPENGL_INCLUDE_DIRS})
 
+add_library(devil ${DevIL_SOURCES})
+add_library(glfw ${GLFW_SOURCES})
+add_library(sfml ${SFML_SOURCES})
+
 if(WIN32)
-    target_link_libraries(RubeusCore ${OPENGL_LIBRARIES})
+	add_definitions(-D_GLFW_WIN32)
+    target_link_libraries(RubeusCore ${OPENGL_LIBRARIES} devil glfw sfml)
 endif(WIN32)
 
 if(UNIX)
