@@ -8,12 +8,12 @@
 
 #include <string>
 
-#include <boost/any.hpp>
+#include <any>
 
 #include <image_object.h>
 #include <message_codes.h>
 
-typedef boost::any var;
+typedef std::any var;
 
 namespace Rubeus
 {

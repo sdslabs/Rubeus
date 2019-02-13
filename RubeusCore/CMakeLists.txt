@@ -5,10 +5,20 @@ cmake_minimum_required (VERSION 3.8)
 
 link_directories(Source/)
 
+file(GLOB_RECURSE HEADERS
+	../vendor/DevIL-repo/DevIL/include/*.h
+	../vendor/DevIL-repo/DevIL/include/*.hpp
+	../vendor/GLEW-repo/include/*.h
+	../vendor/GLEW-repo/include/*.hpp
+	../vendor/GLFW-repo/include/*.h
+	../vendor/GLFW-repo/include/*.hpp
+	../vendor/SFML-repo/include/*.h
+	../vendor/SFML-repo/include/*.hpp
+)
+
 file(GLOB_RECURSE SOURCES
-	vendor/*.cpp
-    Source/*.cpp
-    Game/*.cpp
+	Source/*.cpp
+	Game/*.cpp
 )
 
 # Remove this line if you want to remove Visual Leak Detection(VLD) reports in Debug mode.
@@ -20,15 +30,20 @@ set(OTHER_CONSTANT OFF) # Not configurable by user
 configure_file(config.h.in config.h)
 
 # Add source to this project's executable.
-add_executable (RubeusCore "RubeusCore.cpp" "RubeusCore.h" ${SOURCES})
+add_executable (
+	RubeusCore 
+	"RubeusCore.cpp" 
+	"RubeusCore.h"
+	${HEADERS}
+	${SOURCES}
+)
 
-target_include_directories(RubeusCore PUBLIC 
+target_include_directories(RubeusCore PUBLIC
 	# Dependencies
-	./vendor/Boost.Any-repo/include
-	./vendor/DevIL-repo/DevIL/include
-	./vendor/GLEW-repo/include
-	./vendor/GLFW-repo/include
-	./vendor/SFML-repo/include
+	../vendor/DevIL-repo/DevIL/include
+	../vendor/GLEW-repo/include
+	../vendor/GLFW-repo/include
+	../vendor/SFML-repo/include
 
 	# Rubeus Engine files
 	./Include

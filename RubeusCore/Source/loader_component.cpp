@@ -84,7 +84,7 @@ namespace Rubeus
 			{
 				case load_image:
 				{
-					GraphicComponents::Image temp = loadImageFile(boost::any_cast<const char *>(msg->m_Data));
+					GraphicComponents::Image temp = loadImageFile(std::any_cast<const char *>(msg->m_Data));
 					m_MessageSystem.addMessage(this, msg->m_Sender, get_loaded_image, temp);
 				}
 				break;

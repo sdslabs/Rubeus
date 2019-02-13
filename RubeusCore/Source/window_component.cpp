@@ -196,13 +196,13 @@ namespace Rubeus
 					break;
 
 				case change_window_title:
-					setWindowTitle(boost::any_cast<const char *>(msg->m_Data));
+					setWindowTitle(std::any_cast<const char *>(msg->m_Data));
 					break;
 
 				case get_loaded_image:
 				{
 					ASSERT("Image received");
-					Image & image = boost::any_cast<Image &>(msg->m_Data);
+					Image & image = std::any_cast<Image &>(msg->m_Data);
 
 					for (unsigned int i = 0; i < image.m_Height * image.m_Width * 3; i += 3)
 					{
