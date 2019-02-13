@@ -6,6 +6,7 @@ cmake_minimum_required (VERSION 3.8)
 link_directories(Source/)
 
 file(GLOB_RECURSE SOURCES
+	vendor/*.cpp
     Source/*.cpp
     Game/*.cpp
 )
@@ -21,7 +22,21 @@ configure_file(config.h.in config.h)
 # Add source to this project's executable.
 add_executable (RubeusCore "RubeusCore.cpp" "RubeusCore.h" ${SOURCES})
 
-target_include_directories(RubeusCore PUBLIC ./Include ./Game)
+target_include_directories(RubeusCore PUBLIC 
+	# Dependencies
+	./vendor/Boost.Any-repo/include
+	./vendor/DevIL-repo/DevIL/include
+	./vendor/GLEW-repo/include
+	./vendor/GLFW-repo/include
+	./vendor/SFML-repo/include
+
+	# Rubeus Engine files
+	./Include
+	
+	# Rubeus Game files
+	./Game
+)
+
 include_directories(${OPENGL_INCLUDE_DIRS})
 
 if(WIN32)
