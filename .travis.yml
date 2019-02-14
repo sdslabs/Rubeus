@@ -8,7 +8,7 @@ os:
     - linux
 
 before_script:
-    - sudo apt install mesa-common-dev libxinerama-dev libxcursor-dev mesa-vulkan-drivers vulkan-utils cmake-qt-gui libglew-dev
+    - sudo apt install mesa-common-dev libxinerama-dev libxcursor-dev cmake-qt-gui libglew-dev
     - sudo apt-get install libgl-dev xorg-dev libglu1-mesa-dev libx11-dev libxrandr-dev libxi-dev libudev-dev mesa-common-dev libopenal-dev libdevil1c2 libdevil-dev libsfml-dev
     - cmake ./
     
