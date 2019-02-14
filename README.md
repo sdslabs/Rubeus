@@ -1,4 +1,5 @@
-![Build Status](https://ci.appveyor.com/api/projects/status/uttu357/Rubeus?branch=master&retina=true)
+![Build Status](https://ci.appveyor.com/api/projects/status/9o0hca3aoeeyj5un/branch/master?retina=true&svg=true)
+
 
 <p align=center>
 <img src="ReadmeAssets/rubeus_light.png">
