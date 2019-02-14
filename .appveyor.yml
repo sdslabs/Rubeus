@@ -29,7 +29,7 @@ init:
 before_build:
 - cmd: |-
     cmake --version
-    cmake ./
+    cmake ./ -DAppVeyor=ON
 
 build:
   project: c:\projects\Rubeus\RubeusCore.sln
