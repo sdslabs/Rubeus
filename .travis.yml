@@ -9,9 +9,9 @@ compiler:
     - clang
 
 before_script:
-    - mkdir build
-    - cd build
-    - cmake ..
+    - cmake .
 
 script:
-    - make
+    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then make                             ; fi
+    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then make                           ; fi
+    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then choco install make; mingw32-make ; fi
