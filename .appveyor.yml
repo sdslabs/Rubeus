@@ -1,0 +1,37 @@
+version: '{build}'
+
+clone_folder: c:\projects\Rubeus
+
+image:
+- Visual Studio 2017
+
+configuration:
+- Release
+- Debug
+
+environment:
+  matrix:
+  - arch: Win32
+
+matrix:
+  fast_finish: true
+
+init:
+- set arch=
+- if "%arch%"=="Win32" ( set arch= Win32)
+- echo %arch%
+- echo %APPVEYOR_BUILD_WORKER_IMAGE%
+- if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2017" ( set generator="Visual Studio 15 2017%arch%" )
+- if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2015" ( set generator="Visual Studio 14 2015%arch%" )
+- if "%APPVEYOR_BUILD_WORKER_IMAGE%"=="Visual Studio 2013" ( set generator="Visual Studio 12 2013%arch%" )
+- echo %generator%
+
+before_build:
+- cmd: |-
+    cmake --version
+    cmake ./ -DAppVeyor=ON
+
+build:
+  project: c:\projects\Rubeus\RubeusCore.sln
+  verbosity: minimal
+  parallel: false

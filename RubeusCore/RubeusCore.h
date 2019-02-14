@@ -13,7 +13,9 @@
 // Dynamic Program Analysis Tools
 #ifdef _DEBUG
 #ifdef VLD
+#ifndef NO_VLD
 #include <vld.h>
+#endif
 #endif
 #endif
 
