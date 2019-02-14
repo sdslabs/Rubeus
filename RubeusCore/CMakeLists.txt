@@ -40,7 +40,7 @@ if(WIN32)
 
 	add_custom_command(TARGET RubeusCore POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
-        "../vendor/bin/Win"
+        "../vendor/libraries/Win/DLLs"
         $<TARGET_FILE_DIR:RubeusCore>)
 endif(WIN32)
 
