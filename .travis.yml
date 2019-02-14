@@ -1,17 +1,16 @@
 language: cpp
+sudo: required
 
 compiler:
     - gcc
-    - clang
-
+    
 os:
-    - windows
-        before_script:
-          - cmake .
-        script:
-          - devenv RubeusCore.sln /Build Debug /Project RubeusCore/RubeusCore.vcxproj
     - linux
-        before_script:
-          - cmake .
-        script:
-          - make
+
+before_script:
+    - sudo apt install mesa-common-dev libxinerama-dev libxcursor-dev cmake-qt-gui libglew-dev
+    - sudo apt-get install xorg-dev libx11-dev libxrandr-dev libxi-dev libudev-dev libopenal-dev libdevil1c2 libdevil-dev libsfml-dev
+    - cmake ./
+    
+script:
+    - make
