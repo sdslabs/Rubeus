@@ -13,8 +13,8 @@ file(GLOB_RECURSE HEADERS
 	../vendor/include/*.hpp
 )
 
-file(GLOB_RECURSE VENDOR_LIBRARIES
-	../vendor/bin/Win/*.lib
+file(GLOB_RECURSE VENDOR_WIN_LIBRARIES
+	../vendor/libraries/Win/*.lib
 )
 
 # Remove this line if you want to remove Visual Leak Detection(VLD) reports in Debug mode.
@@ -35,13 +35,14 @@ target_include_directories(RubeusCore PUBLIC
 if(WIN32)
     target_link_libraries(RubeusCore PUBLIC
         ${OPENGL_LIBRARIES}
-		${VENDOR_LIBRARIES}
+		${VENDOR_WIN_LIBRARIES}
     )
 
 	add_custom_command(TARGET RubeusCore POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
         "../vendor/libraries/Win/DLLs"
         $<TARGET_FILE_DIR:RubeusCore>)
+	Message(STATUS "DLLs have been written to target build directory")
 endif(WIN32)
 
 if(UNIX)
