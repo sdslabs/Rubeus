@@ -18,8 +18,8 @@ $ git clone https://github.com/sdslabs/Rubeus
 ## Acquiring system dependent dependencies:
 1. The system package manager on Ubuntu can be commanded to get system specific libraries to run Rubeus. Run:
 ```shell
-$ sudo apt install mesa-common-dev libxinerama-dev libxcursor-dev mesa-vulkan-drivers vulkan-utils cmake-gui libglew-dev
-$ sudo apt-get install libgl-dev xorg-dev libglu1-mesa-dev libx11-dev libxrandr-dev libxi-dev libudev-dev mesa-common-dev libopenal-dev libdevil1c2 libdevil-dev
+$ sudo apt install mesa-common-dev libxinerama-dev libxcursor-dev mesa-vulkan-drivers vulkan-utils cmake-gui libglew-dev 
+$ sudo apt-get install libgl-dev xorg-dev libglu1-mesa-dev libx11-dev libxrandr-dev libxi-dev libudev-dev mesa-common-dev libopenal-dev libdevil1c2 libdevil-dev libsfml-dev
 $ hash -r
 ```
 

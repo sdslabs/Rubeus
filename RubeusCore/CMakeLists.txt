@@ -1,11 +1,11 @@
-﻿# CMakeList.txt : CMake project for RubeusCore, include source and define
+﻿# CMakeList.txt:CMake project for RubeusCore, include source and define
 # project specific logic here.
 
 cmake_minimum_required (VERSION 3.8)
 
 file(GLOB_RECURSE SOURCES
     Source/*.cpp
-    Game/*.cpp
+    Game/* .cpp
 )
 
 file(GLOB_RECURSE HEADERS
@@ -17,10 +17,15 @@ file(GLOB_RECURSE VENDOR_WIN_LIBRARIES
 	../vendor/libraries/Win/*.lib
 )
 
+file(GLOB_RECURSE VENDOR_LINUX_LIBRARIES
+	../vendor/libraries/Linux/*.a
+)
+
 # Remove this line if you want to remove Visual Leak Detection(VLD) reports in Debug mode.
 # Keep this line if you want to have VLD reports to detect memory leaks
 add_definitions(-DVLD)
 add_definitions(-DGLEW_STATIC)
+add_definitions(-DGLFW_DLL)
 
 # This adds the source to this project's executable.
 add_executable (RubeusCore "RubeusCore.cpp" "RubeusCore.h" ${SOURCES})
@@ -42,13 +47,20 @@ if(WIN32)
     COMMAND ${CMAKE_COMMAND} -E copy_directory
         "../vendor/libraries/Win/DLLs"
         $<TARGET_FILE_DIR:RubeusCore>)
+
 	Message(STATUS "DLLs have been written to target build directory")
 endif(WIN32)
 
 if(UNIX)
-    add_library(vorbis STATIC IMPORTED)
-
-    target_link_libraries(RubeusCore -lILU -lIL -lILUT -ldl sfml-audio sfml-network sfml-graphics sfml-window sfml-system ${OPENGL_LIBRARIES} GLEW glfw openal ${IL_LIBRARIES} ${ILU_LIBRARIES} -lstdc++)
+    target_link_libraries(RubeusCore PUBLIC
+        ${OPENGL_LIBRARIES}
+        -lGLEW
+        ${SFML_LIBRARIES}
+        ${GLFW_LIBRARIES}
+        ${IL_LIBRARIES}
+        ${ILU_LIBRARIES}
+        ${VENDOR_LINUX_LIBRARIES}
+    )
 endif(UNIX)
 
 # TODO: Add tests and install targets if needed.
