@@ -1,4 +1,5 @@
 language: cpp
+dist: xenial
 sudo: required
 
 compiler:
@@ -8,8 +9,18 @@ os:
     - linux
 
 before_script:
+    - sudo apt install wget unzip
+    - version="3.2.1" && \
+        wget "https://github.com/glfw/glfw/releases/download/${version}/glfw-${version}.zip" && \
+        unzip glfw-${version}.zip && \
+        cd glfw-${version} && \
+        sudo apt-get install cmake xorg-dev libglu1-mesa-dev && \
+        sudo cmake -G "Unix Makefiles" && \
+        sudo make && \
+        sudo make install
+        cd ..
     - sudo apt install mesa-common-dev libxinerama-dev libxcursor-dev cmake-qt-gui libglew-dev
-    - sudo apt-get install libglwf3-dev xorg-dev libx11-dev libxrandr-dev libxi-dev libudev-dev libopenal-dev libdevil1c2 libdevil-dev libsfml-dev
+    - sudo apt-get install xorg-dev libx11-dev libxrandr-dev libxi-dev libudev-dev libopenal-dev libdevil1c2 libdevil-dev libsfml-dev
     - cmake ./
     
 script:
