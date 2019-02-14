@@ -55,8 +55,6 @@ if(UNIX)
     target_link_libraries(RubeusCore PUBLIC
         ${OPENGL_LIBRARIES}
         -lGLEW
-        -lX11
-        /usr/lib/gcc/x86_64-linux-gnu/libX11.so
         ${SFML_LIBRARIES}
         ${GLFW_LIBRARIES}
         ${IL_LIBRARIES}
