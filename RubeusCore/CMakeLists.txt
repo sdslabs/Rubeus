@@ -55,6 +55,7 @@ if(UNIX)
     target_link_libraries(RubeusCore PUBLIC
         ${OPENGL_LIBRARIES}
         -lGLEW
+        -lX11
         ${SFML_LIBRARIES}
         ${GLFW_LIBRARIES}
         ${IL_LIBRARIES}
