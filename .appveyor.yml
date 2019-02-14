@@ -9,9 +9,6 @@ configuration:
 - Release
 - Debug
 
-platform:
-- x86
-
 environment:
   matrix:
   - arch: Win32
@@ -33,7 +30,7 @@ before_build:
 - cmd: |-
     "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars32.bat"
     cmake --version
-    cmake ./ -G %generator%
+    cmake ./
 
 build:
   project: c:\projects\Rubeus\RubeusCore.sln
