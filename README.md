@@ -1,4 +1,4 @@
-![Build Status](https://ci.appveyor.com/api/projects/status/sdslabs/Rubeus?branch=master&retina=true)
+![Build Status](https://ci.appveyor.com/api/projects/status/uttu357/Rubeus?branch=master&retina=true)
 
 <p align=center>
 <img src="ReadmeAssets/rubeus_light.png">
