@@ -1,5 +1,5 @@
 language: cpp
-dist: xenial
+dist: trusty
 sudo: required
 
 compiler:
@@ -8,7 +8,17 @@ compiler:
 os:
     - linux
 
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - gcc-7
+      - g++-7
+
 before_script:
+    - export CC=gcc-7
+    - export CXX=g++-7
     - sudo apt install wget unzip
     - version="3.2.1"
     - wget "https://github.com/glfw/glfw/releases/download/${version}/glfw-${version}.zip"

@@ -5,7 +5,7 @@ cmake_minimum_required (VERSION 3.8)
 set (CMAKE_CXX_STANDARD 17)
 
 project ("RubeusCore")
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "/usr/share/SFML/cmake/Modules/")
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "./cmake_modules/")
 set(SFML_STATIC false)
 
 if (WIN32)
