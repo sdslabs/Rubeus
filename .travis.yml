@@ -2,16 +2,12 @@ language: cpp
 
 compiler:
     - gcc
-    - clang
-
+    
 os:
-    - windows
-        before_script:
-          - cmake .
-        script:
-          - devenv RubeusCore.sln /Build Debug /Project RubeusCore/RubeusCore.vcxproj
     - linux
-        before_script:
-          - cmake .
-        script:
-          - make
+
+before_script:
+    - cmake .
+
+script:
+    - make
