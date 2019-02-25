@@ -114,7 +114,7 @@ namespace Rubeus
 
 		m_Timer->setFrameCounter();
 
-        float lastFrameEndTime = glfwGetTime();
+        float lastFrameEndTime = (float)glfwGetTime();
 
 		// Main game loop
 		while (m_Window->closed() == false)
@@ -149,7 +149,7 @@ namespace Rubeus
 				break;
 			}
 
-            lastFrameEndTime = glfwGetTime();
+            lastFrameEndTime = (float)glfwGetTime();
 		}
 
 		m_StartupLevelName = "";

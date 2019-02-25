@@ -17,14 +17,14 @@ namespace Rubeus
 
 	void scrollCallback(GLFWwindow *window, double xoffset, double yoffset)
 	{
-		RInputManager::MouseScroll.x = xoffset;
-		RInputManager::MouseScroll.y = yoffset;
+		RInputManager::MouseScroll.x = (float)xoffset;
+		RInputManager::MouseScroll.y = (float)yoffset;
 	}
 
 	void cursorPositionCallback(GLFWwindow *window, double xpos, double ypos)
 	{
-		RInputManager::MousePosition.x = xpos;
-		RInputManager::MousePosition.y = ypos;
+		RInputManager::MousePosition.x = (float)xpos;
+		RInputManager::MousePosition.y = (float)ypos;
 	}
 
 	void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods)

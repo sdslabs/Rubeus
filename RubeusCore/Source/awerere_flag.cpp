@@ -27,7 +27,7 @@ namespace Rubeus
 		{
 			int accum = 0;
 
-			for (int i = 0; i < m_Data.size(); i++)
+			for (size_t i = 0; i < m_Data.size(); i++)
 			{
 				accum = accum + (this->m_Data[i] * other.m_Data[i]);
 			}

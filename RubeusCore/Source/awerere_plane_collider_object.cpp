@@ -61,7 +61,7 @@ namespace Rubeus
 
 			return ACollideData(
 				!ans,
-				ans == false ? -1 : +1,
+				(float)(ans == false ? -1 : +1),
 				m_Normal.getVector2D()
 			);
 		}
