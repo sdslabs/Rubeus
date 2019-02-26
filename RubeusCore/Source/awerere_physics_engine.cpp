@@ -28,7 +28,7 @@ namespace Rubeus
 
 		APhysicsEngine::APhysicsEngine(GraphicComponents::RWindowComponent & windowComponent, RWorld & world, const float & cellHeight, const float & cellWidth)
 			:
-			m_CollisionEngine(world.getActiveObjects(), windowComponent.getHeight(), windowComponent.getWidth(), cellHeight, cellWidth),
+			m_CollisionEngine(world.getActiveObjects(), (float)windowComponent.getHeight(), (float)windowComponent.getWidth(), cellHeight, cellWidth),
 			m_World(world)
 		{
 			m_CollisionEngine.m_GameObjects = world.getActiveObjects();

@@ -34,6 +34,7 @@
 #ifdef WIN32
 
 #include <Windows.h>
+#undef APIENTRY
 // Prints to console an error message that is passed in, in red
 #define ERRORLOG(x) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 12);\
                     LOGEXTENDED((x));\

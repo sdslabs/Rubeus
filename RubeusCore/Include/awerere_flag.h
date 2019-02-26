@@ -56,13 +56,13 @@ namespace Rubeus
 			bool operator*(AFlag & right);
 
 			/**
-			 * @fn		inline const size_t & getLength() const
+			 * @fn		inline size_t getLength() const
 			 *
 			 * @brief	Return the length of this flag
 			 *
 			 * @return	The length of this flag (not in bytes, but count).
 			 */
-			inline const size_t & getLength() const { return m_Data.size(); }
+			inline size_t getLength() const { return m_Data.size(); }
 		};
 	}
 }

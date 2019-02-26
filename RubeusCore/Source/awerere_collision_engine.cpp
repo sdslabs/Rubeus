@@ -22,7 +22,7 @@ namespace Rubeus
 			size_t i = 0;
 			while (i < m_GameObjects.size())
 			{
-				m_XFlags.push_back(AFlag(m_CollisionGrid.m_XCount));
+				m_XFlags.push_back(AFlag((int)m_CollisionGrid.m_XCount));
 
 				i++;
 			}
@@ -30,7 +30,7 @@ namespace Rubeus
 			i = 0;
 			while (i < m_GameObjects.size())
 			{
-				m_YFlags.push_back(AFlag(m_CollisionGrid.m_YCount));
+				m_YFlags.push_back(AFlag((int)m_CollisionGrid.m_YCount));
 
 				i++;
 			}
@@ -44,7 +44,7 @@ namespace Rubeus
 		{
 			size_t gameObjectsCount = m_GameObjects.size();
 
-			for (int i = 0; i < gameObjectsCount; i++)
+			for (size_t i = 0; i < gameObjectsCount; i++)
 			{
 				if (m_GameObjects[i]->m_PhysicsObject != NULL)
 				{
@@ -63,13 +63,13 @@ namespace Rubeus
 			// X AXIS FLAGGING
 			if (m_GameObjects[i]->m_HasPhysics == true)
 			{
-				leftFlag = m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().x / m_CollisionGrid.m_CellWidth;
-				rightFlag = (m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().x + m_GameObjects[i]->m_Sprite->getSize().x) / m_CollisionGrid.m_CellWidth;
+				leftFlag = (int)m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().x / m_CollisionGrid.m_CellWidth;
+				rightFlag = (int)(m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().x + m_GameObjects[i]->m_Sprite->getSize().x) / m_CollisionGrid.m_CellWidth;
 			}
 			else
 			{
-				leftFlag = m_GameObjects[i]->m_Sprite->getPosition().x / m_CollisionGrid.m_CellWidth;
-				rightFlag = (m_GameObjects[i]->m_Sprite->getPosition().x + m_GameObjects[i]->m_Sprite->getSize().x) / m_CollisionGrid.m_CellWidth;
+				leftFlag = (int)m_GameObjects[i]->m_Sprite->getPosition().x / m_CollisionGrid.m_CellWidth;
+				rightFlag = (int)(m_GameObjects[i]->m_Sprite->getPosition().x + m_GameObjects[i]->m_Sprite->getSize().x) / m_CollisionGrid.m_CellWidth;
 			}
 
 			for (int p = 0; p < m_CollisionGrid.m_XCount; p++)
@@ -80,13 +80,13 @@ namespace Rubeus
 			// Y AXIS FLAGGING
 			if (m_GameObjects[i]->m_HasPhysics == false)
 			{
-				leftFlag = m_GameObjects[i]->m_Sprite->getPosition().y / m_CollisionGrid.m_CellHeight;
-				rightFlag = (m_GameObjects[i]->m_Sprite->getPosition().y + m_GameObjects[i]->m_Sprite->getSize().y) / m_CollisionGrid.m_CellHeight;
+				leftFlag = (int)m_GameObjects[i]->m_Sprite->getPosition().y / m_CollisionGrid.m_CellHeight;
+				rightFlag = (int)(m_GameObjects[i]->m_Sprite->getPosition().y + m_GameObjects[i]->m_Sprite->getSize().y) / m_CollisionGrid.m_CellHeight;
 			}
 			else
 			{
-				leftFlag = m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().y / m_CollisionGrid.m_CellHeight;
-				rightFlag = (m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().y + m_GameObjects[i]->m_Sprite->getSize().y) / m_CollisionGrid.m_CellHeight;
+				leftFlag = (int)m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().y / m_CollisionGrid.m_CellHeight;
+				rightFlag = (int)(m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().y + m_GameObjects[i]->m_Sprite->getSize().y) / m_CollisionGrid.m_CellHeight;
 			}
 
 			for (int p = 0; p < m_CollisionGrid.m_YCount; p++)
@@ -99,9 +99,9 @@ namespace Rubeus
 
 		void ACollisionEngine::collisionResolution()
 		{
-			for (int i = 0; i < m_GameObjects.size(); i++)
+			for (size_t i = 0; i < m_GameObjects.size(); i++)
 			{
-				for (int j = i + 1; j < m_GameObjects.size(); j++)
+				for (size_t j = i + 1; j < m_GameObjects.size(); j++)
 				{
 					if ((m_XFlags[i] * m_XFlags[j]) && (m_YFlags[i] * m_YFlags[j]))
 					{
@@ -136,7 +136,7 @@ namespace Rubeus
 				}
 
 				// Record the relative coefficient of restitution
-#ifdef min()
+#ifdef min
 				float e = min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfRestitution);
 				float mu = min(left.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction, right.m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_CoefficientOfFriction);
 #else

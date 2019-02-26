@@ -498,7 +498,7 @@ namespace RML
 
 	Matrix4::Matrix4()
 	{
-		memset((char*)elements, 0.0f, sizeof(elements));
+		memset((char*)elements, 0, sizeof(elements));
 	}
 
 	Matrix4::Matrix4(float diagonal)
