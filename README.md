@@ -77,3 +77,7 @@ Everyone reading this is invited to contribute to Rubeus either through opening 
   * Easy to use workflow, efforts are being made to release as little information to the user as possible without compromising flexibility.
 * v1.0 is available for use.
 * v2.0 is a work in production.
+
+## <a name=license>License
+
+This project is under the MIT license
