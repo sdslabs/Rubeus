@@ -16,6 +16,7 @@ Created by SDSLabs with :heart:
 * [How do I use Rubeus?](#setup)
 * [How can I contribute?](#how)
 * [Remarks](#remarks)
+* [License](#license)
 
 ## <a name=what>What is Rubeus?
 
