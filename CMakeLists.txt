@@ -12,7 +12,7 @@ if (AppVeyor)
     Message(STATUS "VLD has been turned off")
 endif(AppVeyor)
 
-set(CMAKE_MODULE_PATH $ {CMAKE_MODULE_PATH}"./cmake_modules/")
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "./cmake_modules/")
 set(SFML_STATIC false)
 
 if (WIN32)
