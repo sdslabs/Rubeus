@@ -9,12 +9,17 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/RubeusCore/RubeusCore",
-            "args": ["-D_DEBUG"],
+            "args": [""],
             "stopAtEntry": false,
+            "preLaunchTask": "build Rubeus",
             "cwd": "${workspaceFolder}/RubeusCore",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb"
+             },
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",

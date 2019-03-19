@@ -50,6 +50,40 @@
                    LOG((x));\
                    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7)
 
+#else
+	// In case non Windows system is the build target
+
+	// DO NOT USE
+#define ERRORLOG(x) LOGEXTENDED((x))
+
+// DO NOT USE
+#define ASSERT(x) LOGEXTENDED((x))
+
+// DO NOT USE
+#define SUCCESS(x) LOGEXTENDED((x))
+
+#endif
+
+#else
+// In case the build configuration is not "Debug"
+
+// Deprecated for non-debug builds
+#define LOG(x) std::cout << x << std::endl;
+
+// Deprecated for non-debug builds
+#define LOGEXTENDED(x) LOG(x)
+
+// Deprecated for non-debug builds
+#define ERRORLOG(x) LOG(x)
+
+// Deprecated for non-debug builds
+#define ASSERT(x) LOG(x)
+
+// Deprecated for non-debug builds
+#define SUCCESS(x) LOG(x)
+#endif
+#endif
+
 // Pass in OpenGL calls for debugging errors while executing OpenGL code
 #define GLCall(x) GLClearError();																									\
                   x;																												\
@@ -71,45 +105,6 @@
 							 std::cin.get();																						\
 						 }																											\
                      }
-#else
-	// In case non Windows system is the build target
-
-	// DO NOT USE
-#define ERRORLOG(x) LOGEXTENDED((x))
-
-// DO NOT USE
-#define ASSERT(x) LOGEXTENDED((x))
-
-// DO NOT USE
-#define SUCCESS(x) LOGEXTENDED((x))
-
-#endif
-
-#else
-// In case the build configuration is not "Debug"
-
-// Deprecated for non-debug builds
-#define LOG(x) std::cout << x <<std::endl;
-
-// Deprecated for non-debug builds
-#define LOGEXTENDED(x)
-
-// Deprecated for non-debug builds
-#define ERRORLOG(x)
-
-// Deprecated for non-debug builds
-#define ASSERT(x)
-
-// Deprecated for non-debug builds
-#define SUCCESS(x)
-
-// No error reporting in non-debug builds
-#define GLCall(x) x
-
-// No error reporting in non-debug builds
-#define DevILCall(x) x
-#endif
-#endif
 
 /**
  * @fn		static int toHex(int decimal);

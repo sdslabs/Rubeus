@@ -21,9 +21,6 @@ file(GLOB_RECURSE VENDOR_LINUX_LIBRARIES
 	../vendor/libraries/Linux/*.a
 )
 
-# Remove this line if you want to remove Visual Leak Detection(VLD) reports in Debug mode.
-# Keep this line if you want to have VLD reports to detect memory leaks
-add_definitions(-DVLD)
 add_definitions(-DGLEW_STATIC)
 add_definitions(-DGLFW_DLL)
 
@@ -34,10 +31,14 @@ target_include_directories(RubeusCore PUBLIC
     ./Include
     ./Game
     ${OPENGL_INCLUDE_DIRS}
-	../vendor/include/
+    ../vendor/include/
 )
 
 if(WIN32)
+    # Remove this line if you want to remove Visual Leak Detection(VLD) reports in Debug mode.
+    # Keep this line if you want to have VLD reports to detect memory leaks    
+    add_definitions(-DVLD)
+
     target_link_libraries(RubeusCore PUBLIC
         ${OPENGL_LIBRARIES}
 		${VENDOR_WIN_LIBRARIES}
