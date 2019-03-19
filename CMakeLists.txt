@@ -13,7 +13,15 @@ if (AppVeyor)
 endif(AppVeyor)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "./cmake_modules/")
-set(SFML_STATIC false)
+
+if(${CMAKE_BUILD_TYPE} MATCHES "debug")
+    Message(STATUS "Debug build activated")
+    add_definitions(-D_DEBUG)
+else()
+    Message(STATUS "Custom build detected")
+endif()
+
+set(SFML_STATIC true)
 
 if (WIN32)
 	FIND_PACKAGE(OpenGL REQUIRED)
