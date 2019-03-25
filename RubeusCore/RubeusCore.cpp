@@ -4,9 +4,6 @@
 
 #include <nvidia_enable.h>
 
-/** @brief	The startup level of the engine. Set this in user_init.cpp */
-extern std::string startupLevel;
-
 int main()
 {
 	using namespace Rubeus;
@@ -16,19 +13,22 @@ int main()
 	using namespace RML;
 	using namespace Awerere;
 
-	// startupLevel : std::string contains the startup level name. Defined in user_init.cpp
-	Engine->m_StartupLevelName = startupLevel;
+	RGame * currentGame = RGame::getActiveGame();
 
-	// Level selection loop
+	// startupLevel : std::string contains the startup level name. Defined in user_init.cpp
+	currentGame->getEngine()->m_StartupLevelName = currentGame->m_StartupLevel;
+
 	while (true)
 	{
+		currentGame->init();
+
 		/*
 		 * Any running level should call Engine->end() at the end of the game which
-		 * changes Engine->m_StartupLevelName to "" and in turn also ends the
-		 * level selection loop as seen below. Setting Engine->m_StartupLevelName to
+		 * changes currentEngine->m_StartupLevelName to "" and in turn also ends the
+		 * level selection loop as seen below. Setting currentEngine->m_StartupLevelName to
 		 * "" directly will also work.
 		 */
-		if (Engine->m_StartupLevelName == "")
+		if (currentGame->getEngine()->m_StartupLevelName == "")
 		{
 			LOG("Startup level name was erased");
 			break;
@@ -36,20 +36,20 @@ int main()
 
 		for (auto & item : RLevel::InstantiatedLevels)
 		{
-			// If level selected is the startup level
-			if (item.first == Engine->m_StartupLevelName)
+			if (item.first == currentGame->getEngine()->m_StartupLevelName)
 			{
-				Engine->load(*item.second);
-				Engine->run();
-				Engine->getCurrentLevel()->onEnd();
-				Engine->killAliveLevel();
+				currentGame->getEngine()->load(*item.second);
+				currentGame->getEngine()->run();
+				currentGame->getEngine()->getCurrentLevel()->onEnd();
+				currentGame->getEngine()->killAliveLevel();
+				currentGame->end();
 			}
 			// The startup level should contain the logic for when to load the next level
 		}
 	}
 	LOG("Rubeus is now exiting");
 
-	delete Rubeus::Engine;
+	delete currentGame;
 
 	return 0;
 }

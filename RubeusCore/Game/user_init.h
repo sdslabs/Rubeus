@@ -9,3 +9,7 @@
 // Objects
 #include "ping_pong/engine_files/object.ball.h"
 #include "ping_pong/engine_files/object.paddle.h"
+
+// Game class
+
+class PingPong;

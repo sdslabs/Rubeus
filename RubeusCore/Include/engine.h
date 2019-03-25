@@ -169,7 +169,4 @@ namespace Rubeus
 		 */
 		void onMessage(Message * msg) override;
 	};
-
-	/** @brief	The entirety of the Rubeus Engine functionalities */
-	extern REngine * const Engine;
 }
