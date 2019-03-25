@@ -4,7 +4,7 @@ void paddle::begin()
 {
 	this->m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Gravity.y = 0.0f;
 
-	auto * inputManager = Rubeus::Engine->getCurrentLevelInputManager();
+	auto * inputManager = Rubeus::RGame::getEngine()->getCurrentLevelInputManager();
 
 	inputManager->addKeyToKeyBinding("Ascend", Rubeus::EKeyboardKeys::__UP);
 	inputManager->addKeyToKeyBinding("Descend", Rubeus::EKeyboardKeys::__DOWN);
@@ -20,11 +20,11 @@ void paddle::onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awere
 
 void paddle::tick()
 {
-	if (Rubeus::Engine->getCurrentLevelInputManager()->isKeyBindingPressed("Ascend"))
+	if (Rubeus::RGame::getEngine()->getCurrentLevelInputManager()->isKeyBindingPressed("Ascend"))
 	{
 		this->m_PhysicsObject->m_Collider->m_Momentum.y = +3.0f;
 	}
-	else if (Rubeus::Engine->getCurrentLevelInputManager()->isKeyBindingPressed("Descend"))
+	else if (Rubeus::RGame::getEngine()->getCurrentLevelInputManager()->isKeyBindingPressed("Descend"))
 	{
 		this->m_PhysicsObject->m_Collider->m_Momentum.y = -3.0f;
 	}

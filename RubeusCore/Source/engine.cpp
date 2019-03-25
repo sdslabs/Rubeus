@@ -10,8 +10,6 @@
 
 namespace Rubeus
 {
-	REngine * const Engine = new REngine();
-
 	std::unordered_map<int, bool> RInputManager::KeyMap;
 	std::unordered_map<int, bool> RInputManager::MouseButtonMap;
 	RML::Vector2D RInputManager::MousePosition;
