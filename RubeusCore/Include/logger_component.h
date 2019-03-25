@@ -9,10 +9,18 @@
 #include <iostream>
 #include <string.h>
 #include <string>
-
+#include <map>
 #include <GL/glew.h>
 #include <IL/il.h>
 #include <IL/ilu.h>
+
+
+class ColorCoder{
+    public: //For testing
+    static std::map<std::string, short> foregroundColorMap;
+    static std::map<std::string, short> backgroundColorMap;
+    static std::map<std::string, std::string> severityMap;
+};
 
  // TODO: Remove logger before shipping
 
@@ -68,7 +76,7 @@
 // In case the build configuration is not "Debug"
 
 // Deprecated for non-debug builds
-#define LOG(x) std::cout << x << std::endl;
+#define LOG(x) std::cout  << "\033[1;" << ColorCoder::foregroundColorMap["yellow"] << "m" << x << "\033[0m" << std::endl;
 
 // Deprecated for non-debug builds
 #define LOGEXTENDED(x) LOG(x)

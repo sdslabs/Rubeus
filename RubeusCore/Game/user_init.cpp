@@ -19,7 +19,7 @@
 
 std::string startupLevel = "play_level";
 
-play_level * playLevel = new play_level("play_level");
+/*play_level * playLevel = new play_level("play_level");
 
 paddle * leftPaddle = new paddle("left_paddle", "play_level", 0.0f, 0.0f, 0.5f, 3.0f,
 								 "Assets/debug.png", true,
@@ -41,3 +41,4 @@ ball * Ball = new ball("ball", "play_level", 8.0f, 4.5f, 0.5f, 0.5f,
 					   new Rubeus::Awerere::ABoxCollider(RML::Vector3D(8.0f, 4.5f, 1.0f),
 														 RML::Vector3D(8.5f, 5.0f, 1.0f)),
 					   true);
+*/
