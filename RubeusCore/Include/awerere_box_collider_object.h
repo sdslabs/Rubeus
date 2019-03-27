@@ -137,7 +137,7 @@ namespace Rubeus
 			 *
 			 * @return	The upper left corner's position.
 			 */
-			inline RML::Vector3D getUpperLeftBound() const { return m_MaxExtent + RML::Vector3D(0, m_MaxExtent.y - m_MinExtent.y, 0); }
+			inline RML::Vector3D getUpperLeftBound() const { return m_MinExtent + RML::Vector3D(0, m_MaxExtent.y - m_MinExtent.y, 0); }
 
 			/**
 			 * @fn	inline const RML::Vector3D getLowerRightBound() const
