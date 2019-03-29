@@ -76,6 +76,7 @@ namespace Rubeus
 			//}
 
 			// TODO: Remove this when LoaderComponent::LoadImageWindows() is completed
+			// TODO: Remove this when LoaderComponent::LoadImageWindows() is completed
 			ERRORLOG("ABORT! Incomplete code used");
 
 			//delete[] images;

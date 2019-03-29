@@ -9,7 +9,7 @@
 #include <iostream>
 #include <string.h>
 #include <string>
-
+#include <map>
 #include <GL/glew.h>
 #include <IL/il.h>
 #include <IL/ilu.h>
@@ -22,6 +22,22 @@
 
 #define USERLOG(x) std::cout << (x) << std::endl
 
+
+namespace Rubeus {
+	namespace UtilityComponents {
+		class RLogger {
+			std::map<std::string, short> foregroundColorMap;
+			std::map<std::string, short> backgroundColorMap;
+			std::map<std::string, std::string> severityMap;
+		public:
+			void printLog(std::string logMessage);
+			void printExtendedLog(std::string logMessage, std::string file, std::string line);
+			void printExtendedLog(std::string logMessage, std::string severity, std::string file, std::string line);
+		};
+	}
+}
+
+
 #ifdef _DEBUG
 
 // Prints to the console anything that is passed in
@@ -29,9 +45,11 @@
 
 // Prints to console with file name and line number
 // Use LOG() for shorter version
-#define LOGEXTENDED(x) std::cout << "RubeusLog:" << __FILE__ << ":" << __LINE__ << ":" << (x) << "\n"
+//#define LOGEXTENDED(x) std::cout << "RubeusLog:" << __FILE__ << ":" << __LINE__ << ":" << (x) << "\n"
+#define LOGEXTENDED(x) Rubeus::RGame::getEngine()->getLogger()->printExtendedLog((x), __FILE__, __LINE__)
 
-#ifdef WIN32
+
+/*#ifdef WIN32
 
 #include <Windows.h>
 #undef APIENTRY
@@ -50,17 +68,17 @@
                    LOG((x));\
                    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7)
 
-#else
+#else */
 	// In case non Windows system is the build target
 
 	// DO NOT USE
-#define ERRORLOG(x) LOGEXTENDED((x))
+#define ERRORLOG(x) Rubeus::RGame::getEngine()->getLogger()->printExtendedLog((x), "ERROR", __FILE__, __LINE__)
 
 // DO NOT USE
-#define ASSERT(x) LOGEXTENDED((x))
+#define ASSERT(x) Rubeus::RGame::getEngine()->getLogger()->printExtendedLog((x), "ASSERT", __FILE__, __LINE__)
 
 // DO NOT USE
-#define SUCCESS(x) LOGEXTENDED((x))
+#define SUCCESS(x) Rubeus::RGame::getEngine()->getLogger()->printExtendedLog((x), "SUCCESS", __FILE__, __LINE__)
 
 #endif
 
@@ -81,7 +99,6 @@
 
 // Deprecated for non-debug builds
 #define SUCCESS(x) LOG(x)
-#endif
 #endif
 
 // Pass in OpenGL calls for debugging errors while executing OpenGL code
