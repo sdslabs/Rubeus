@@ -15,13 +15,6 @@
 #include <IL/ilu.h>
 
 
-class ColorCoder{
-    public: //For testing
-    static std::map<std::string, short> foregroundColorMap;
-    static std::map<std::string, short> backgroundColorMap;
-    static std::map<std::string, std::string> severityMap;
-};
-
  // TODO: Remove logger before shipping
 
 #ifndef LOGS
