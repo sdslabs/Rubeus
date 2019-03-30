@@ -32,10 +32,11 @@ namespace Rubeus
 		ACollideData APlaneCollider::tryIntersect(APlaneCollider & plane)
 		{
 			float pdt = m_Normal.multiplyCross(plane.m_Normal);
-
+			float pgap = ((plane.getNormal().toUnitVector()).multiplyFloat((m_EmergencePoint - plane.m_EmergencePoint).multiplyDot(plane.getNormal()))).getLength();
+			
 			return ACollideData(
 				pdt == 0,
-				RML::Vector2D(m_EmergencePoint - plane.m_EmergencePoint).multiplyDot(plane.getNormal()),
+				pgap,
 				m_Normal
 			);
 		}
@@ -43,11 +44,11 @@ namespace Rubeus
 		ACollideData APlaneCollider::tryIntersect(ASphereCollider & sphere)
 		{
 			RML::Vector2D slantGap = sphere.getCenter() - m_EmergencePoint;
-			float gap = slantGap.multiplyDot(m_Normal.toUnitVector());
+			float gap = (m_Normal.toUnitVector()).multiplyFloat(slantGap.multiplyDot(m_Normal.toUnitVector())).getLength();
 
 			return ACollideData(gap < sphere.getRadius(),
 								gap - sphere.getRadius(),
-								m_Normal);
+								m_Normal); 
 		}
 
 		ACollideData APlaneCollider::tryIntersect(ABoxCollider & box)
