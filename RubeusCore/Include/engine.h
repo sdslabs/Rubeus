@@ -29,9 +29,6 @@ namespace Rubeus
 	{
 	private:
 
-		/** @brief	The ref to the logger  */
-		UtilityComponents::RLogger * m_Logger = NULL;
-
 		/** @brief	The ref to physics engine in current use */
 		Awerere::APhysicsEngine * m_PhysicsEngine = NULL;
 
@@ -123,15 +120,6 @@ namespace Rubeus
 		 * @return	Pointer to the current level.
 		 */
 		inline RLevel * getCurrentLevel() const { return m_CurrentLevel; }
-
-		/**
-		 * @fn		inline RLevel * getCurrentLevel() const
-		 *
-		 * @brief	Get the logger
-		 *
-		 * @return	Pointer to the logger object.
-		 */
-		inline UtilityComponents::RLogger * getLogger() const { return m_Logger; }
 
 		/**
 		 * @fn		inline GraphicComponents::RWindowComponent * getCurrentWindow() const

@@ -1,5 +1,7 @@
 #include <game.h>
 
+#include <engine.h>
+
 namespace Rubeus
 {
 	RGame * RGame::CurrentGame = NULL;

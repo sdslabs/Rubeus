@@ -17,7 +17,6 @@ namespace Rubeus
 
 	REngine::REngine()
 		:
-		m_Logger(new UtilityComponents::RLogger()),
 		m_LayerComposition(new GraphicComponents::RLayerComposition(
 			"Shaders/basic.vert",
 			"Shaders/basic.frag",
@@ -44,7 +43,6 @@ namespace Rubeus
 		delete m_Window;
 		delete m_Timer;
 		delete m_Loader;
-		delete m_Logger;
 	}
 
 	void REngine::load(RLevel & level)

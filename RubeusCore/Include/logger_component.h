@@ -10,10 +10,12 @@
 #include <string.h>
 #include <string>
 #include <map>
+
 #include <GL/glew.h>
 #include <IL/il.h>
 #include <IL/ilu.h>
 
+#include <game.h>
 
  // TODO: Remove logger before shipping
 
@@ -27,13 +29,17 @@
 namespace Rubeus {
 	namespace UtilityComponents {
 		class RLogger {
+			static RLogger * CurrentInstance;
 			std::map<std::string, short> foregroundColorMap;
 			std::map<std::string, short> backgroundColorMap;
 			std::map<std::string, std::string> severityMap;
 		public:
+			RLogger();
+			~RLogger();
 			void printLog(std::string logMessage);
-			void printExtendedLog(std::string logMessage, std::string file, std::string line);
-			void printExtendedLog(std::string logMessage, std::string severity, std::string file, std::string line);
+			void printExtendedLog(std::string logMessage, std::string file, int line);
+			void printExtendedLog(std::string logMessage, std::string severity, std::string file, int line);
+			static inline RLogger * getInstance() { return CurrentInstance; }
 		};
 	}
 }
@@ -47,8 +53,7 @@ namespace Rubeus {
 // Prints to console with file name and line number
 // Use LOG() for shorter version
 //#define LOGEXTENDED(x) std::cout << "RubeusLog:" << __FILE__ << ":" << __LINE__ << ":" << (x) << "\n"
-#define LOGEXTENDED(x) Rubeus::RGame::getEngine()->getLogger()->printExtendedLog((x), __FILE__, __LINE__)
-
+#define LOGEXTENDED(x) ::Rubeus::UtilityComponents::RLogger::getInstance()->printExtendedLog((x), __FILE__, __LINE__)
 
 /*#ifdef WIN32
 
@@ -73,13 +78,13 @@ namespace Rubeus {
 	// In case non Windows system is the build target
 
 	// DO NOT USE
-#define ERRORLOG(x) Rubeus::RGame::getEngine()->getLogger()->printExtendedLog((x), "ERROR", __FILE__, __LINE__)
+#define ERRORLOG(x) ::Rubeus::UtilityComponents::RLogger::getInstance()->printExtendedLog(std::string((x)), "ERROR", __FILE__, __LINE__)
 
 // DO NOT USE
-#define ASSERT(x) Rubeus::RGame::getEngine()->getLogger()->printExtendedLog((x), "ASSERT", __FILE__, __LINE__)
+#define ASSERT(x) ::Rubeus::UtilityComponents::RLogger::getInstance()->printExtendedLog(std::string((x)), "ASSERT", __FILE__, __LINE__)
 
 // DO NOT USE
-#define SUCCESS(x) Rubeus::RGame::getEngine()->getLogger()->printExtendedLog((x), "SUCCESS", __FILE__, __LINE__)
+#define SUCCESS(x) ::Rubeus::UtilityComponents::RLogger::getInstance()->printExtendedLog(std::string((x)), "SUCCESS", __FILE__, __LINE__)
 
 #endif
 

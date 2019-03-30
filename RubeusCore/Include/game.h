@@ -1,9 +1,11 @@
 #pragma once
 
-#include <engine.h>
+#include <string>
 
 namespace Rubeus
 {
+	class REngine;
+
 	class RGame
 	{
 	protected:
