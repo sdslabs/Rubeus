@@ -62,9 +62,9 @@ Rubeus::UtilityComponents::RLogger::RLogger() {
 void Rubeus::UtilityComponents::RLogger::printLog(std::string logMessage) {
 	std::cout << "Rubeus: " << logMessage << std::endl;
 }
-void Rubeus::UtilityComponents::RLogger::printExtendedLog(std::string logMessage, std::string file, std::string line) {
+void Rubeus::UtilityComponents::RLogger::printExtendedLog(std::string logMessage, std::string file, int line) {
 	std::cout << "RubeusLog:" << file << ":" << line << ":" << logMessage << "\n";
 }
-void Rubeus::UtilityComponents::RLogger::printExtendedLog(std::string logMessage, std::string severity, std::string file, std::string line) {
+void Rubeus::UtilityComponents::RLogger::printExtendedLog(std::string logMessage, std::string severity, std::string file, int line) {
 	std::cout << "\033[1;" << foregroundColorMap[ severityMap[severity] ] << "m" << "RubeusLog:" << file << ":" << line << ":" << logMessage << "\033[0m" << std::endl;
 }

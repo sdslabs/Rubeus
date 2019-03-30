@@ -17,6 +17,7 @@
 #include <timer_component.h>
 #include <window_component.h>
 #include <level.h>
+#include <logger_component.h>
 
 namespace Rubeus
 {
@@ -28,9 +29,6 @@ namespace Rubeus
 	class REngine : public RMasterComponent
 	{
 	private:
-
-		/** @brief	The ref to the logger  */
-		UtilityComponents::RLogger * m_Logger = NULL;
 
 		/** @brief	The ref to physics engine in current use */
 		Awerere::APhysicsEngine * m_PhysicsEngine = NULL;
@@ -49,6 +47,9 @@ namespace Rubeus
 
 		/** @brief	The level currently in play */
 		RLevel * m_CurrentLevel = NULL;
+
+		/** @brief	The ref to the logger  */
+		UtilityComponents::RLogger * m_Logger = NULL;
 
 		friend class RLevel;
 

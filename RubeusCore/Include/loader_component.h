@@ -15,7 +15,6 @@
 
 #include <logger_component.h>
 #include <master_component.h>
-#include <logger_component.h>
 #include <image_object.h>
 
 namespace Rubeus

@@ -5,7 +5,9 @@
  */
 
 #include <audio_manager_component.h>
-
+namespace Rubeus {
+	class RGame;
+}
 namespace Rubeus
 {
 	namespace AudioComponents

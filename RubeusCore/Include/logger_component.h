@@ -13,14 +13,11 @@
 #include <GL/glew.h>
 #include <IL/il.h>
 #include <IL/ilu.h>
+//#include <game.h>
 
-
-class ColorCoder{
-    public: //For testing
-    static std::map<std::string, short> foregroundColorMap;
-    static std::map<std::string, short> backgroundColorMap;
-    static std::map<std::string, std::string> severityMap;
-};
+namespace Rubeus {
+    class RGame;
+}
 
  // TODO: Remove logger before shipping
 
@@ -38,9 +35,10 @@ namespace Rubeus {
 			std::map<std::string, short> backgroundColorMap;
 			std::map<std::string, std::string> severityMap;
 		public:
+			RLogger();
 			void printLog(std::string logMessage);
-			void printExtendedLog(std::string logMessage, std::string file, std::string line);
-			void printExtendedLog(std::string logMessage, std::string severity, std::string file, std::string line);
+			void printExtendedLog(std::string logMessage, std::string file, int line);
+			void printExtendedLog(std::string logMessage, std::string severity, std::string file, int line);
 		};
 	}
 }
