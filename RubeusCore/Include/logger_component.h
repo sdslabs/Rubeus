@@ -10,7 +10,8 @@
 #include <string.h>
 #include <string>
 #include <map>
-
+#include <fstream>
+#include <ctime>
 #include <GL/glew.h>
 #include <IL/il.h>
 #include <IL/ilu.h>
@@ -30,9 +31,10 @@ namespace Rubeus {
 	namespace UtilityComponents {
 		class RLogger {
 			static RLogger * CurrentInstance;
-			std::map<std::string, short> foregroundColorMap;
-			std::map<std::string, short> backgroundColorMap;
-			std::map<std::string, std::string> severityMap;
+			static std::map<std::string, short> foregroundColorMap;
+			static std::map<std::string, short> BackgroundColorMap;
+			static std::map<std::string, std::string> SeverityMap;
+			static std::ofstream LogFile;
 		public:
 			RLogger();
 			~RLogger();
@@ -40,6 +42,8 @@ namespace Rubeus {
 			void printExtendedLog(std::string logMessage, std::string file, int line);
 			void printExtendedLog(std::string logMessage, std::string severity, std::string file, int line);
 			static inline RLogger * getInstance() { return CurrentInstance; }
+			static void CreateLogFile();
+			static void CloseLogFile();
 		};
 	}
 }
