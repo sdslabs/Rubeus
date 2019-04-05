@@ -15,7 +15,7 @@ namespace Rubeus
 	namespace Awerere
 	{
 		ACollider::ACollider(RML::Vector3D position)
-			: m_Position(position), m_Type(EColliderType::NO_COLLIDER)
+			: m_Position(position), m_Type(EColliderType::NO_COLLIDER), m_Zindex(0)
 		{
 		}
 
@@ -25,7 +25,8 @@ namespace Rubeus
 			m_Momentum(velocity),
 			m_Force(RML::Vector2D(0.0f, 0.0f)),
 			m_PhysicsMaterial(physicsMat),
-			m_Type(EColliderType::NO_COLLIDER)
+			m_Type(EColliderType::NO_COLLIDER),
+			m_Zindex(0)
 		{
 		}
 
