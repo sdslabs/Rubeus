@@ -164,15 +164,8 @@ namespace Rubeus
 				closestPoint.y = center.y;
 			}
 
-			// Set the z axis
-			// closestPoint.z = center.z;
-
 			// Find distance of original sphere center from the closest point
 			float penetrationDistance = RML::Vector2D(closestPoint - center).getLength();
-
-			//RML::Vector2D normal = RML::Vector2D(this->m_MinExtent + this->m_MaxExtent).multiplyCross(sphere.getCenter());
-
-			//normal = normal / (4.0f * normal.getLength());
 
 			RML::Vector2D normal = RML::Vector2D(closestPoint - center);
 			normal = normal.toUnitVector();
