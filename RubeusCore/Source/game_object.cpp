@@ -11,7 +11,7 @@ namespace Rubeus
 {
 	std::unordered_map<std::string, RGameObject *> RGameObject::InstantiatedGameObjects;
 
-	RGameObject::RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics, const Awerere::EColliderType & type, Awerere::ACollider * collider, bool generatesHit, const Awerere::APhysicsMaterial & physicsMat)
+	RGameObject::RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics, const Awerere::EColliderType & type, Awerere::ACollider * collider, bool generatesHit, const Awerere::APhysicsMaterial & physicsMat, GraphicComponents::RGroup * parent)
 		:
 		m_Name(name),
 		m_UsedByLevelName(levelName),
@@ -20,7 +20,8 @@ namespace Rubeus
 		m_ThisTicks(false),
 		m_UsesTexture(true),
 		m_HasPhysics(enablePhysics),
-		m_GeneratesHit(generatesHit)
+		m_GeneratesHit(generatesHit),
+		m_Parent(parent)
 	{
 		InstantiatedGameObjects.insert(std::pair<std::string, RGameObject *>(name, this));
 
@@ -40,7 +41,7 @@ namespace Rubeus
 		}
 	}
 
-	RGameObject::RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, float & r, float & g, float & b, bool enablePhysics, const Awerere::APhysicsMaterial & material, const Awerere::EColliderType & type, Awerere::ACollider * collider, bool generatesHit)
+	RGameObject::RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, float & r, float & g, float & b, bool enablePhysics, const Awerere::APhysicsMaterial & material, const Awerere::EColliderType & type, Awerere::ACollider * collider, bool generatesHit, GraphicComponents::RGroup * parent)
 		:
 		m_Name(name),
 		m_UsedByLevelName(levelName),
@@ -49,7 +50,8 @@ namespace Rubeus
 		m_ThisTicks(false),
 		m_UsesTexture(false),
 		m_HasPhysics(enablePhysics),
-		m_GeneratesHit(generatesHit)
+		m_GeneratesHit(generatesHit),
+		m_Parent(parent)
 	{
 		InstantiatedGameObjects.insert(std::pair<std::string, RGameObject *>(name, this));
 

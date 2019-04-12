@@ -43,6 +43,8 @@ namespace Rubeus
 		/** @brief	Physics object that handles collisions/response */
 		Awerere::APhysicsObject * m_PhysicsObject;
 
+		GraphicComponents::RGroup * m_Parent = NULL;
+
 		/** @brief	Whether this gameobject ticks */
 		bool m_ThisTicks;
 

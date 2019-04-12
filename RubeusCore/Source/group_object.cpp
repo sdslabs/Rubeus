@@ -39,7 +39,7 @@ namespace Rubeus
 
 			for(auto child : m_Children)
 			{
-				if(child->m_IsGroup == false)
+				if(child->m_Parent != NULL)
 				{
 					child->m_Sprite->submit(renderer);
 				}

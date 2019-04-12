@@ -12,6 +12,7 @@
 #include <renderable_object.h>
 #include <game_object.h>
 #include <guerrilla_renderer_component.h>
+#include <cstdarg>
 
 namespace Rubeus
 {
