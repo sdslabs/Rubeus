@@ -27,68 +27,48 @@
 #define USERLOG(x) std::cout << (x) << std::endl
 
 
-namespace Rubeus {
-	namespace UtilityComponents {
-		class RLogger {
-			static RLogger * CurrentInstance;
+namespace Rubeus
+{
+	namespace UtilityComponents
+	{
+		class RLogger
+		{
+		private:
+			static std::ofstream LogFile;
 			static std::map<std::string, short> foregroundColorMap;
 			static std::map<std::string, short> BackgroundColorMap;
 			static std::map<std::string, std::string> SeverityMap;
-			static std::ofstream LogFile;
+
 		public:
-			RLogger();
-			~RLogger();
-			void printLog(std::string logMessage);
-			void printExtendedLog(std::string logMessage, std::string file, int line);
-			void printExtendedLog(std::string logMessage, std::string severity, std::string file, int line);
-			static inline RLogger * getInstance() { return CurrentInstance; }
+			RLogger() = delete;
+
+			static void Init();
+			static void PrintLog(std::string logMessage);
+			static void PrintExtendedLog(std::string logMessage, std::string file, int line);
+			static void PrintExtendedLog(std::string logMessage, std::string severity, std::string file, int line);
 			static void CreateLogFile();
 			static void CloseLogFile();
 		};
 	}
 }
 
-
 #ifdef _DEBUG
 
 // Prints to the console anything that is passed in
-#define LOG(x) std::cout << "Rubeus: " << (x) << std::endl
+#define LOG(x) ::Rubeus::UtilityComponents::RLogger::PrintLog((x))
 
 // Prints to console with file name and line number
 // Use LOG() for shorter version
-//#define LOGEXTENDED(x) std::cout << "RubeusLog:" << __FILE__ << ":" << __LINE__ << ":" << (x) << "\n"
-#define LOGEXTENDED(x) ::Rubeus::UtilityComponents::RLogger::getInstance()->printExtendedLog((x), __FILE__, __LINE__)
+#define LOGEXTENDED(x) ::Rubeus::UtilityComponents::RLogger::PrintExtendedLog((x), __FILE__, __LINE__)
 
-/*#ifdef WIN32
-
-#include <Windows.h>
-#undef APIENTRY
 // Prints to console an error message that is passed in, in red
-#define ERRORLOG(x) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 12);\
-                    LOGEXTENDED((x));\
-                    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7)
+#define ERRORLOG(x) ::Rubeus::UtilityComponents::RLogger::PrintExtendedLog(std::string((x)), "ERROR", __FILE__, __LINE__)
 
 // Prints to console an assertion that is passed in, in yellow
-#define ASSERT(x) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 6);\
-									LOG((x));\
-									SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7)
+#define ASSERT(x) ::Rubeus::UtilityComponents::RLogger::PrintExtendedLog(std::string((x)), "ASSERT", __FILE__, __LINE__)
 
 // Prints success message passed in, in green
-#define SUCCESS(x) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_INTENSITY);\
-                   LOG((x));\
-                   SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7)
-
-#else */
-	// In case non Windows system is the build target
-
-	// DO NOT USE
-#define ERRORLOG(x) ::Rubeus::UtilityComponents::RLogger::getInstance()->printExtendedLog(std::string((x)), "ERROR", __FILE__, __LINE__)
-
-// DO NOT USE
-#define ASSERT(x) ::Rubeus::UtilityComponents::RLogger::getInstance()->printExtendedLog(std::string((x)), "ASSERT", __FILE__, __LINE__)
-
-// DO NOT USE
-#define SUCCESS(x) ::Rubeus::UtilityComponents::RLogger::getInstance()->printExtendedLog(std::string((x)), "SUCCESS", __FILE__, __LINE__)
+#define SUCCESS(x) ::Rubeus::UtilityComponents::RLogger::PrintExtendedLog(std::string((x)), "SUCCESS", __FILE__, __LINE__)
 
 #endif
 
@@ -96,7 +76,7 @@ namespace Rubeus {
 // In case the build configuration is not "Debug"
 
 // Deprecated for non-debug builds
-#define LOG(x) std::cout  << "\033[1;" << ColorCoder::foregroundColorMap["yellow"] << "m" << x << "\033[0m" << std::endl;
+#define LOG(x) ::Rubeus::UtilityComponents::RLogger::printLog((x))
 
 // Deprecated for non-debug builds
 #define LOGEXTENDED(x) LOG(x)

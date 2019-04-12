@@ -38,7 +38,6 @@ namespace Rubeus
 	namespace UtilityComponents
 	{
 		std::ofstream RLogger::LogFile;
-		RLogger * RLogger::CurrentInstance;
 		std::map<std::string, short> RLogger::foregroundColorMap = {
 				{"black", 30},
 				{"red", 31},
@@ -65,14 +64,12 @@ namespace Rubeus
 			{"SUCCESS", "green"}
 		};
 
-		RLogger::RLogger() {
-			CurrentInstance = this;
-		}
-		RLogger::~RLogger()
+		void RLogger::Init()
 		{
+			LOG("Logger is initialised. Logs will be saved in game directory");
 		}
 
-		void RLogger::printLog(std::string logMessage)
+		void RLogger::PrintLog(std::string logMessage)
 		{
 			std::cout << "Rubeus: " << logMessage << std::endl;
 			if (LogFile)
@@ -80,7 +77,8 @@ namespace Rubeus
 				LogFile << "Rubeus: " << logMessage << std::endl;
 			}
 		}
-		void RLogger::printExtendedLog(std::string logMessage, std::string file, int line)
+
+		void RLogger::PrintExtendedLog(std::string logMessage, std::string file, int line)
 		{
 			std::cout << "RubeusLog:" << file << ":" << line << ":" << logMessage << "\n";
 			if (LogFile)
@@ -88,13 +86,16 @@ namespace Rubeus
 				LogFile << "RubeusLog:" << file << ":" << line << ":" << logMessage << std::endl;
 			}
 		}
-		void RLogger::printExtendedLog(std::string logMessage, std::string severity, std::string file, int line) {
+
+		void RLogger::PrintExtendedLog(std::string logMessage, std::string severity, std::string file, int line)
+		{
 			std::cout << "\033[1;" << foregroundColorMap[SeverityMap[severity]] << "m" << "RubeusLog:" << file << ":" << line << ":" << logMessage << "\033[0m" << std::endl;
 			if (LogFile)
 			{
 				LogFile << "RubeusLog:" << file << ":" << line << ":" << logMessage << std::endl;
 			}
 		}
+
 		void RLogger::CreateLogFile()
 		{
 			std::string filename = "";
@@ -115,12 +116,18 @@ namespace Rubeus
 			char buffer[80];
 			strftime(buffer, 80, "_%Y%m%d_%H%M%S.log", now);
 			filename.append(buffer);
-			LogFile.open(filename);
+			LogFile.open(filename, std::ios_base::out | std::ios_base::app);
+
 			if (!LogFile)
-				ERRORLOG("Log file creation failed, Logs in this session will be lost");
+			{
+				ERRORLOG("Log file creation failed, logs in this session will be lost");
+			}
 			else
-				SUCCESS("Log file creation successfull");
+			{
+				std::cout << "Log file creation successfull" << std::endl;
+			}
 		}
+
 		void RLogger::CloseLogFile()
 		{
 			LogFile.close();

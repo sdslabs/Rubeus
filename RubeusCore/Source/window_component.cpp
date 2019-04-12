@@ -206,16 +206,6 @@ namespace Rubeus
 				{
 					ASSERT("Image received");
 					Image & image = std::any_cast<Image &>(msg->m_Data);
-
-					for (unsigned int i = 0; i < image.m_Height * image.m_Width * 3; i += 3)
-					{
-						LOG("Red:");
-						LOG((int)image.m_Image[i]);
-						LOG("Green:");
-						LOG((int)image.m_Image[i + 1]);
-						LOG("Blue:");
-						LOG((int)image.m_Image[i + 2]);
-					}
 				}
 				break;
 

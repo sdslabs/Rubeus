@@ -51,7 +51,7 @@ int main()
 
 	delete currentGame;
 
-	Rubeus::UtilityComponents::RLogger::CloseLogFile();
+	RLogger::CloseLogFile();
 
 	return 0;
 }
