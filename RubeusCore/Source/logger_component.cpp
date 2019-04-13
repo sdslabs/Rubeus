@@ -39,28 +39,28 @@ namespace Rubeus
 	{
 		std::ofstream* RLogger::LogFile = NULL;
 		std::map<std::string, short> RLogger::foregroundColorMap = {
-				{"black", 30},
-				{"red", 31},
-				{"green", 32},
-				{"yellow", 33},
-				{"blue", 34},
-				{"magenta", 35},
-				{"cyan", 36},
-				{"white", 37}
+			{"black",   30},
+			{"red",     31},
+			{"green",   32},
+			{"yellow",  33},
+			{"blue",    34},
+			{"magenta", 35},
+			{"cyan",    36},
+			{"white",   37}
 		};
 		std::map<std::string, short> RLogger::BackgroundColorMap = {
-			{"black", 40},
-			{"red", 41},
-			{"green", 42},
-			{"yellow", 43},
-			{"blue", 44},
+			{"black",   40},
+			{"red",     41},
+			{"green",   42},
+			{"yellow",  43},
+			{"blue",    44},
 			{"magenta", 45},
-			{"cyan", 46},
-			{"white", 47}
+			{"cyan",    46},
+			{"white",   47}
 		};
 		std::map<std::string, std::string> RLogger::SeverityMap ={
-			{"ERROR", "red"},
-			{"ASSERT", "yellow"},
+			{"ERROR",   "red"},
+			{"ASSERT",  "yellow"},
 			{"SUCCESS", "green"}
 		};
 

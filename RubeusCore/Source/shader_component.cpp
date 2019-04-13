@@ -12,15 +12,7 @@ namespace Rubeus
 	{
 		GLuint RShaderComponent::loadShader()
 		{
-			//GLCall(GLuint program = glCreateProgram());
-			GLClearError();																									\
-                  GLuint program = glCreateProgram();																												\
-                  while(GLenum error = glGetError())																				\
-                  {																													\
-                      int z = toHex(error);																							\
-                      ERRORLOG("OpenGL Error: 0x" + ((z < 0x1000)? "0" + std::to_string(z) : std::to_string(z)));					\
-                      std::cin.get();																								\
-                  }
+			GLCall(GLuint program = glCreateProgram());
 			GLCall(GLuint vertexShaderID = glCreateShader(GL_VERTEX_SHADER));
 			GLCall(GLuint fragmentShaderID = glCreateShader(GL_FRAGMENT_SHADER));
 
