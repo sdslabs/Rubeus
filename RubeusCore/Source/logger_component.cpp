@@ -37,7 +37,7 @@ namespace Rubeus
 {
 	namespace UtilityComponents
 	{
-		std::ofstream RLogger::LogFile;
+		std::ofstream* RLogger::LogFile = NULL;
 		std::map<std::string, short> RLogger::foregroundColorMap = {
 				{"black", 30},
 				{"red", 31},
@@ -74,7 +74,7 @@ namespace Rubeus
 			std::cout << "Rubeus: " << logMessage << std::endl;
 			if (LogFile)
 			{
-				LogFile << "Rubeus: " << logMessage << std::endl;
+				*LogFile << "Rubeus: " << logMessage << std::endl;
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace Rubeus
 			std::cout << "RubeusLog:" << file << ":" << line << ":" << logMessage << "\n";
 			if (LogFile)
 			{
-				LogFile << "RubeusLog:" << file << ":" << line << ":" << logMessage << std::endl;
+				*LogFile << "RubeusLog:" << file << ":" << line << ":" << logMessage << std::endl;
 			}
 		}
 
@@ -92,7 +92,7 @@ namespace Rubeus
 			std::cout << "\033[1;" << foregroundColorMap[SeverityMap[severity]] << "m" << "RubeusLog:" << file << ":" << line << ":" << logMessage << "\033[0m" << std::endl;
 			if (LogFile)
 			{
-				LogFile << "RubeusLog:" << file << ":" << line << ":" << logMessage << std::endl;
+				*LogFile << "RubeusLog:" << file << ":" << line << ":" << logMessage << std::endl;
 			}
 		}
 
@@ -116,7 +116,7 @@ namespace Rubeus
 			char buffer[80];
 			strftime(buffer, 80, "_%Y%m%d_%H%M%S.log", now);
 			filename.append(buffer);
-			LogFile.open(filename, std::ios_base::out | std::ios_base::app);
+			LogFile = new std::ofstream(filename, std::ios_base::out | std::ios_base::app);	
 
 			if (!LogFile)
 			{
@@ -130,7 +130,7 @@ namespace Rubeus
 
 		void RLogger::CloseLogFile()
 		{
-			LogFile.close();
+			LogFile->close();
 		}
 	}
 } 

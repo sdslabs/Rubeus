@@ -34,7 +34,7 @@ namespace Rubeus
 		class RLogger
 		{
 		private:
-			static std::ofstream LogFile;
+			static std::ofstream* LogFile;
 			static std::map<std::string, short> foregroundColorMap;
 			static std::map<std::string, short> BackgroundColorMap;
 			static std::map<std::string, std::string> SeverityMap;
@@ -70,13 +70,13 @@ namespace Rubeus
 // Prints success message passed in, in green
 #define SUCCESS(x) ::Rubeus::UtilityComponents::RLogger::PrintExtendedLog(std::string((x)), "SUCCESS", __FILE__, __LINE__)
 
-#endif
+
 
 #else
 // In case the build configuration is not "Debug"
 
 // Deprecated for non-debug builds
-#define LOG(x) ::Rubeus::UtilityComponents::RLogger::printLog((x))
+#define LOG(x) ::Rubeus::UtilityComponents::RLogger::PrintLog((x))
 
 // Deprecated for non-debug builds
 #define LOGEXTENDED(x) LOG(x)
@@ -112,6 +112,7 @@ namespace Rubeus
 							 std::cin.get();																						\
 						 }																											\
                      }
+#endif
 
 /**
  * @fn		static int toHex(int decimal);
