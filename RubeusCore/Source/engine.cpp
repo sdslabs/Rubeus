@@ -18,12 +18,6 @@ namespace Rubeus
 	REngine::REngine()
 	{
 		UtilityComponents::RLogger::Init();
-		m_LayerComposition = new GraphicComponents::RLayerComposition(
-			"Shaders/basic.vert",
-			"Shaders/basic.frag",
-			"Shaders/basic.vert",
-			"Shaders/basic.frag"
-		);
 		m_Window = new GraphicComponents::RWindowComponent(
 			"Hello World",
 			1280,
@@ -31,6 +25,12 @@ namespace Rubeus
 			GraphicComponents::EWindowParameters::WINDOWED_MODE,
 			GraphicComponents::EWindowParameters::NON_RESIZABLE_WINDOW,
 			1
+		);
+		m_LayerComposition = new GraphicComponents::RLayerComposition(
+			"Shaders/basic.vert",
+			"Shaders/basic.frag",
+			"Shaders/basic.vert",
+			"Shaders/basic.frag"
 		);
 		m_Timer = new UtilityComponents::RTimer(10);
 		m_Loader = new UtilityComponents::RLoaderComponent();
