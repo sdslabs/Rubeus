@@ -33,22 +33,93 @@ namespace Rubeus
 {
 	namespace UtilityComponents
 	{
+		/**
+		 * @class	RLogger
+		 *
+		 * @brief	A contaier class that contains all logger utilities.
+		 */
 		class RLogger
 		{
 		private:
+
+			/** @brief	The ref to Log file in use */
 			static std::ofstream* LogFile;
+
+			/** @brief	Map containing foreground bash color formatting codes */
 			static std::map<std::string, short> foregroundColorMap;
+
+			/** @brief	Map containing background bash color formatting codes */
 			static std::map<std::string, short> BackgroundColorMap;
+
+			/** @brief	Map containing colors corresponding to severity levels */
 			static std::map<std::string, std::string> SeverityMap;
 
 		public:
+
+			/**
+			 * @fn		RLogger()
+			 *
+			 * @brief	The logger constructor
+			 *
+			 * @warning	Do not make multiple copies of the logger
+			 */
 			RLogger() = delete;
 
+			/**
+			 * @fn		void Init()
+			 *
+			 * @brief	Initialises LogFile
+			 */
 			static void Init();
+
+			/**
+			 * @fn		void PrintLog(RLevel & level)
+			 *
+			 * @brief	prints brief log without color formatting
+			 *
+			 * @param	logMessage	The log message to be printed.
+			 */
 			static void PrintLog(std::string logMessage);
+
+			/**
+			 * @fn		void PrintExtendedLog(std::string logMessage, std::string file, int line);
+			 *
+			 * @brief	prints brief extended log without color formatting
+			 *
+			 * @param	logMessage	The log message to be printed.
+			 * @param	file	The file in which this log macro is called(__FILE__).
+			 * @param	line	The line in which this log macro is called(__LINE__).
+			 */
 			static void PrintExtendedLog(std::string logMessage, std::string file, int line);
+
+			/**
+			 * @fn		void PrintExtendedLog(std::string logMessage, std::string severity, std::string file, int line)
+			 *
+			 * @brief	prints brief extended log with color formatting
+			 *
+			 * @param	logMessage	The log message to be printed.
+			 * @param	severity	The severity level of the log to be printed, sould be in compliance with the severityMap.
+			 * @param	file	The file in which this log macro is called(__FILE__).
+			 * @param	line	The line in which this log macro is called(__LINE__).
+			 */
 			static void PrintExtendedLog(std::string logMessage, std::string severity, std::string file, int line);
+
+			/**
+			 * @fn		static void CreateLogFile()
+			 *
+			 * @brief	Creates Log file and folder
+			 *
+			 * @warning	Do not make multiple log files in one run
+			 */
 			static void CreateLogFile();
+
+			/**
+			 * @fn		static void CloseLogFile()
+			 *
+			 * @brief	Closes Log file and deleted the pointer to it
+			 *
+			 * @warning	Do not make multiple log files in one run
+			 */
 			static void CloseLogFile();
 		};
 	}
