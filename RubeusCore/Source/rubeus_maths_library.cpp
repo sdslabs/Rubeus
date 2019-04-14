@@ -37,7 +37,7 @@ namespace RML
 
 	float Vector2D::getLength() const
 	{
-		return x * x + y * y;
+		return sqrt(x * x + y * y);
 	}
 
 	Vector2D Vector2D::toUnitVector()
