@@ -15,7 +15,7 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		ACollider::ACollider(RML::Vector3D position)
+		ACollider::ACollider(RML::Vector2D position)
 			: m_Position(position), m_Type(EColliderType::NO_COLLIDER), m_ZIndex(0)
 		{
 		}
