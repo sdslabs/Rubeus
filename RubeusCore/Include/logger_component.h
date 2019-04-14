@@ -12,6 +12,8 @@
 #include <map>
 #include <fstream>
 #include <ctime>
+#include <experimental/filesystem>
+
 #include <GL/glew.h>
 #include <IL/il.h>
 #include <IL/ilu.h>

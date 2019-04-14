@@ -115,7 +115,13 @@ namespace Rubeus
 			struct tm * now = localtime(&t);
 			char buffer[80];
 			strftime(buffer, 80, "_%Y%m%d_%H%M%S.log", now);
+			int dirCreationStatus = std::experimental::filesystem::create_directory("Logs");
+			int dirExistStatus = std::experimental::filesystem::exists("Logs");
 			filename.append(buffer);
+			if( dirExistStatus | dirCreationStatus)
+				filename.insert(0, "Logs/");
+			else
+				ERRORLOG("Log directory creation failed, logs in this session will be saved in same directory as executable");		
 			LogFile = new std::ofstream(filename, std::ios_base::out | std::ios_base::app);	
 
 			if (!LogFile)

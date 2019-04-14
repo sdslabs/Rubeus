@@ -42,6 +42,7 @@ if(WIN32)
     target_link_libraries(RubeusCore PUBLIC
         ${OPENGL_LIBRARIES}
 		${VENDOR_WIN_LIBRARIES}
+        -lstdc++fs
     )
 
 	add_custom_command(TARGET RubeusCore POST_BUILD
@@ -61,6 +62,7 @@ if(UNIX)
         ${IL_LIBRARIES}
         ${ILU_LIBRARIES}
         ${VENDOR_LINUX_LIBRARIES}
+        -lstdc++fs
     )
 endif(UNIX)
 
