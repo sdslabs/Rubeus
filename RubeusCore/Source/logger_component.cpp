@@ -37,35 +37,39 @@ namespace Rubeus
 {
 	namespace UtilityComponents
 	{
-		std::ofstream* RLogger::LogFile = NULL;
-		std::map<std::string, short> RLogger::foregroundColorMap = {
-			{"black",   30},
-			{"red",     31},
-			{"green",   32},
-			{"yellow",  33},
-			{"blue",    34},
-			{"magenta", 35},
-			{"cyan",    36},
-			{"white",   37}
-		};
-		std::map<std::string, short> RLogger::BackgroundColorMap = {
-			{"black",   40},
-			{"red",     41},
-			{"green",   42},
-			{"yellow",  43},
-			{"blue",    44},
-			{"magenta", 45},
-			{"cyan",    46},
-			{"white",   47}
-		};
-		std::map<std::string, std::string> RLogger::SeverityMap ={
-			{"ERROR",   "red"},
-			{"ASSERT",  "yellow"},
-			{"SUCCESS", "green"}
-		};
+		std::ofstream * RLogger::LogFile = NULL;
+		std::map<std::string, short> * RLogger::ForegroundColorMap;
+		std::map<std::string, short> * RLogger::BackgroundColorMap;
+		std::map<std::string, std::string> * RLogger::SeverityMap;
 
 		void RLogger::Init()
 		{
+			ForegroundColorMap = new std::map<std::string, short>({
+				{"black",   30},
+				{"red",     31},
+				{"green",   32},
+				{"yellow",  33},
+				{"blue",    34},
+				{"magenta", 35},
+				{"cyan",    36},
+				{"white",   37}
+			});
+			BackgroundColorMap = new std::map<std::string, short>({
+				{"black",   40},
+				{"red",     41},
+				{"green",   42},
+				{"yellow",  43},
+				{"blue",    44},
+				{"magenta", 45},
+				{"cyan",    46},
+				{"white",   47}
+			});
+			SeverityMap = new std::map<std::string, std::string>({
+				{"ERROR",   "red"},
+				{"ASSERT",  "yellow"},
+				{"SUCCESS", "green"}
+			});
+
 			LOG("Logger is initialised. Logs will be saved in game directory");
 		}
 
@@ -89,7 +93,7 @@ namespace Rubeus
 
 		void RLogger::PrintExtendedLog(std::string logMessage, std::string severity, std::string file, int line)
 		{
-			std::cout << "\033[1;" << foregroundColorMap[SeverityMap[severity]] << "m" << "RubeusLog:" << file << ":" << line << ":" << logMessage << "\033[0m" << std::endl;
+			std::cout << "\033[1;" << (*ForegroundColorMap)[(*SeverityMap)[severity]] << "m" << "RubeusLog:" << file << ":" << line << ":" << logMessage << "\033[0m" << std::endl;
 			if (LogFile)
 			{
 				*LogFile << "RubeusLog:" << file << ":" << line << ":" << logMessage << std::endl;
@@ -115,13 +119,20 @@ namespace Rubeus
 			struct tm * now = localtime(&t);
 			char buffer[80];
 			strftime(buffer, 80, "_%Y%m%d_%H%M%S.log", now);
+
 			int dirCreationStatus = std::experimental::filesystem::create_directory("Logs");
 			int dirExistStatus = std::experimental::filesystem::exists("Logs");
 			filename.append(buffer);
-			if( dirExistStatus | dirCreationStatus)
+
+			if(dirExistStatus | dirCreationStatus)
+			{
 				filename.insert(0, "Logs/");
+			}
 			else
+			{
 				ERRORLOG("Log directory creation failed, logs in this session will be saved in same directory as executable");		
+			}
+
 			LogFile = new std::ofstream(filename, std::ios_base::out | std::ios_base::app);	
 
 			if (!LogFile)
@@ -137,6 +148,11 @@ namespace Rubeus
 		void RLogger::CloseLogFile()
 		{
 			LogFile->close();
+
+			delete LogFile;
+			delete SeverityMap;
+			delete BackgroundColorMap;
+			delete ForegroundColorMap;
 		}
 	}
 } 

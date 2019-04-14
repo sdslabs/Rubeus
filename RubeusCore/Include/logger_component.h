@@ -1,7 +1,7 @@
 /**
  * @file		Source/logger_component.h.
  *
- * @brief	Declares the logger macro
+ * @brief	Declares the logger macros
  */
 
 #pragma once
@@ -20,14 +20,12 @@
 
 #include <game.h>
 
- // TODO: Remove logger before shipping
+// TODO: Remove logger before shipping
 
 #ifndef LOGS
-
 #define LOGS
 
 #define USERLOG(x) std::cout << (x) << std::endl
-
 
 namespace Rubeus
 {
@@ -43,16 +41,16 @@ namespace Rubeus
 		private:
 
 			/** @brief	The ref to Log file in use */
-			static std::ofstream* LogFile;
+			static std::ofstream * LogFile;
 
 			/** @brief	Map containing foreground bash color formatting codes */
-			static std::map<std::string, short> foregroundColorMap;
+			static std::map<std::string, short> * ForegroundColorMap;
 
 			/** @brief	Map containing background bash color formatting codes */
-			static std::map<std::string, short> BackgroundColorMap;
+			static std::map<std::string, short> * BackgroundColorMap;
 
 			/** @brief	Map containing colors corresponding to severity levels */
-			static std::map<std::string, std::string> SeverityMap;
+			static std::map<std::string, std::string> * SeverityMap;
 
 		public:
 
