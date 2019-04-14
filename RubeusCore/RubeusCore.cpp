@@ -51,5 +51,7 @@ int main()
 
 	delete currentGame;
 
+	RLogger::CloseLogFile();
+
 	return 0;
 }

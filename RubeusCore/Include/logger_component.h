@@ -1,7 +1,7 @@
 /**
  * @file		Source/logger_component.h.
  *
- * @brief	Declares the logger macro
+ * @brief	Declares the logger macros
  */
 
 #pragma once
@@ -9,66 +9,145 @@
 #include <iostream>
 #include <string.h>
 #include <string>
+#include <map>
+#include <fstream>
+#include <ctime>
+#include <experimental/filesystem>
 
 #include <GL/glew.h>
 #include <IL/il.h>
 #include <IL/ilu.h>
 
- // TODO: Remove logger before shipping
+#include <game.h>
+
+// TODO: Remove logger before shipping
 
 #ifndef LOGS
-
 #define LOGS
 
 #define USERLOG(x) std::cout << (x) << std::endl
 
+namespace Rubeus
+{
+	namespace UtilityComponents
+	{
+		/**
+		 * @class	RLogger
+		 *
+		 * @brief	A contaier class that contains all logger utilities.
+		 */
+		class RLogger
+		{
+		private:
+
+			/** @brief	The ref to Log file in use */
+			static std::ofstream * LogFile;
+
+			/** @brief	Map containing foreground bash color formatting codes */
+			static std::map<std::string, short> * ForegroundColorMap;
+
+			/** @brief	Map containing background bash color formatting codes */
+			static std::map<std::string, short> * BackgroundColorMap;
+
+			/** @brief	Map containing colors corresponding to severity levels */
+			static std::map<std::string, std::string> * SeverityMap;
+
+		public:
+
+			/**
+			 * @fn		RLogger()
+			 *
+			 * @brief	The logger constructor
+			 *
+			 * @warning	Do not make multiple copies of the logger
+			 */
+			RLogger() = delete;
+
+			/**
+			 * @fn		void Init()
+			 *
+			 * @brief	Initialises LogFile
+			 */
+			static void Init();
+
+			/**
+			 * @fn		void PrintLog(RLevel & level)
+			 *
+			 * @brief	prints brief log without color formatting
+			 *
+			 * @param	logMessage	The log message to be printed.
+			 */
+			static void PrintLog(std::string logMessage);
+
+			/**
+			 * @fn		void PrintExtendedLog(std::string logMessage, std::string file, int line);
+			 *
+			 * @brief	prints brief extended log without color formatting
+			 *
+			 * @param	logMessage	The log message to be printed.
+			 * @param	file	The file in which this log macro is called(__FILE__).
+			 * @param	line	The line in which this log macro is called(__LINE__).
+			 */
+			static void PrintExtendedLog(std::string logMessage, std::string file, int line);
+
+			/**
+			 * @fn		void PrintExtendedLog(std::string logMessage, std::string severity, std::string file, int line)
+			 *
+			 * @brief	prints brief extended log with color formatting
+			 *
+			 * @param	logMessage	The log message to be printed.
+			 * @param	severity	The severity level of the log to be printed, sould be in compliance with the severityMap.
+			 * @param	file	The file in which this log macro is called(__FILE__).
+			 * @param	line	The line in which this log macro is called(__LINE__).
+			 */
+			static void PrintExtendedLog(std::string logMessage, std::string severity, std::string file, int line);
+
+			/**
+			 * @fn		static void CreateLogFile()
+			 *
+			 * @brief	Creates Log file and folder
+			 *
+			 * @warning	Do not make multiple log files in one run
+			 */
+			static void CreateLogFile();
+
+			/**
+			 * @fn		static void CloseLogFile()
+			 *
+			 * @brief	Closes Log file and deleted the pointer to it
+			 *
+			 * @warning	Do not make multiple log files in one run
+			 */
+			static void CloseLogFile();
+		};
+	}
+}
+
 #ifdef _DEBUG
 
 // Prints to the console anything that is passed in
-#define LOG(x) std::cout << "Rubeus: " << (x) << std::endl
+#define LOG(x) ::Rubeus::UtilityComponents::RLogger::PrintLog((x))
 
 // Prints to console with file name and line number
 // Use LOG() for shorter version
-#define LOGEXTENDED(x) std::cout << "RubeusLog:" << __FILE__ << ":" << __LINE__ << ":" << (x) << "\n"
+#define LOGEXTENDED(x) ::Rubeus::UtilityComponents::RLogger::PrintExtendedLog((x), __FILE__, __LINE__)
 
-#ifdef WIN32
-
-#include <Windows.h>
-#undef APIENTRY
 // Prints to console an error message that is passed in, in red
-#define ERRORLOG(x) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 12);\
-                    LOGEXTENDED((x));\
-                    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7)
+#define ERRORLOG(x) ::Rubeus::UtilityComponents::RLogger::PrintExtendedLog(std::string((x)), "ERROR", __FILE__, __LINE__)
 
 // Prints to console an assertion that is passed in, in yellow
-#define ASSERT(x) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 6);\
-									LOG((x));\
-									SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7)
+#define ASSERT(x) ::Rubeus::UtilityComponents::RLogger::PrintExtendedLog(std::string((x)), "ASSERT", __FILE__, __LINE__)
 
 // Prints success message passed in, in green
-#define SUCCESS(x) SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_INTENSITY);\
-                   LOG((x));\
-                   SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7)
+#define SUCCESS(x) ::Rubeus::UtilityComponents::RLogger::PrintExtendedLog(std::string((x)), "SUCCESS", __FILE__, __LINE__)
 
-#else
-	// In case non Windows system is the build target
 
-	// DO NOT USE
-#define ERRORLOG(x) LOGEXTENDED((x))
-
-// DO NOT USE
-#define ASSERT(x) LOGEXTENDED((x))
-
-// DO NOT USE
-#define SUCCESS(x) LOGEXTENDED((x))
-
-#endif
 
 #else
 // In case the build configuration is not "Debug"
 
 // Deprecated for non-debug builds
-#define LOG(x) std::cout << x << std::endl;
+#define LOG(x) ::Rubeus::UtilityComponents::RLogger::PrintLog((x))
 
 // Deprecated for non-debug builds
 #define LOGEXTENDED(x) LOG(x)
@@ -81,7 +160,6 @@
 
 // Deprecated for non-debug builds
 #define SUCCESS(x) LOG(x)
-#endif
 #endif
 
 // Pass in OpenGL calls for debugging errors while executing OpenGL code
@@ -105,6 +183,7 @@
 							 std::cin.get();																						\
 						 }																											\
                      }
+#endif
 
 /**
  * @fn		static int toHex(int decimal);

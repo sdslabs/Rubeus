@@ -16,24 +16,24 @@ namespace Rubeus
 	RML::Vector2D RInputManager::MouseScroll;
 
 	REngine::REngine()
-		:
-		m_LayerComposition(new GraphicComponents::RLayerComposition(
-			"Shaders/basic.vert",
-			"Shaders/basic.frag",
-			"Shaders/basic.vert",
-			"Shaders/basic.frag"
-		)),
-		m_Window(new GraphicComponents::RWindowComponent(
+	{
+		UtilityComponents::RLogger::Init();
+		m_Window = new GraphicComponents::RWindowComponent(
 			"Hello World",
 			1280,
 			720,
 			GraphicComponents::EWindowParameters::WINDOWED_MODE,
 			GraphicComponents::EWindowParameters::NON_RESIZABLE_WINDOW,
 			1
-		)),
-		m_Timer(new UtilityComponents::RTimer(10)),
-		m_Loader(new UtilityComponents::RLoaderComponent())
-	{
+		);
+		m_LayerComposition = new GraphicComponents::RLayerComposition(
+			"Shaders/basic.vert",
+			"Shaders/basic.frag",
+			"Shaders/basic.vert",
+			"Shaders/basic.frag"
+		);
+		m_Timer = new UtilityComponents::RTimer(10);
+		m_Loader = new UtilityComponents::RLoaderComponent();
 	}
 
 	REngine::~REngine()
