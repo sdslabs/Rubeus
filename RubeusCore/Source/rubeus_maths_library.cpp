@@ -24,8 +24,8 @@ namespace RML
 
 	Vector2D & Vector2D::roundTo(const float & pivotX, const float & errorX, const float & pivotY, const float & errorY)
 	{
-		this->x = abs(x - pivotX) <= errorX ? pivotX : x;
-		this->y = abs(y - pivotY) <= errorY ? pivotY : y;
+		this->x = std::abs(x - pivotX) <= errorX ? pivotX : x;
+		this->y = std::abs(y - pivotY) <= errorY ? pivotY : y;
 
 		return *this;
 	}
@@ -37,7 +37,7 @@ namespace RML
 
 	float Vector2D::getLength() const
 	{
-		return x * x + y * y;
+		return sqrt(x * x + y * y);
 	}
 
 	Vector2D Vector2D::toUnitVector()
@@ -230,6 +230,11 @@ namespace RML
 		return *this;
 	}
 
+	float Vector2D::multiplyCross(const Vector2D & other)
+	{
+		return (x * other.y - other.x * y);
+	}
+
 	Vector3D & Vector3D::multiplyFloat(const float & other)
 	{
 		x *= other;
@@ -248,12 +253,11 @@ namespace RML
 		return *this;
 	}
 
-	Vector3D Vector3D::maxVector(const Vector3D & other)
+	Vector2D Vector2D::maxVector(const Vector2D & other)
 	{
-		return Vector3D(
+		return Vector2D(
 			other.x > this->x ? other.x : this->x,
-			other.y > this->y ? other.y : this->y,
-			other.z > this->z ? other.z : this->z
+			other.y > this->y ? other.y : this->y
 		);
 	}
 
@@ -271,7 +275,7 @@ namespace RML
 				return z;
 	}
 
-	float Vector3D::maxXYComponent()
+	float Vector2D::maxXYComponent()
 	{
 		if (x > y)
 			return x;
@@ -294,6 +298,14 @@ namespace RML
 		this->x = std::abs(x);
 		this->y = std::abs(y);
 		this->z = std::abs(z);
+
+		return *this;
+	}
+
+	Vector2D & Vector2D::abs()
+	{
+		this->x = std::abs(x);
+		this->y = std::abs(y);
 
 		return *this;
 	}

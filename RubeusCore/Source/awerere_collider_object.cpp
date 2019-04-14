@@ -5,6 +5,7 @@
  */
 
 #include <awerere_collider_object.h>
+
 #include <awerere_sphere_collider_object.h>
 #include <awerere_plane_collider_object.h>
 #include <awerere_physics_engine.h>
@@ -19,7 +20,7 @@ namespace Rubeus
 		{
 		}
 
-		ACollider::ACollider(const RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat)
+		ACollider::ACollider(const RML::Vector2D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat)
 			:
 			m_Position(position),
 			m_Momentum(velocity),

@@ -1,16 +1,18 @@
 #pragma once
 
-#include <engine.h>
+#include <string>
 
 namespace Rubeus
 {
+	class REngine;
+
 	class RGame
 	{
 	protected:
 		static RGame * CurrentGame;
 
 		/** @brief	The entirety of the Rubeus Engine */
-		REngine * const m_Engine;
+		REngine * m_Engine;
 
 	public:
 		std::string m_StartupLevel;

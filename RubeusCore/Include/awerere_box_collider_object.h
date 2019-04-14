@@ -32,7 +32,7 @@ namespace Rubeus
 		{
 		private:
 			/**
-			 * @fn		RML::Vector3D calculateCenter(RML::Vector3D & ll, RML::Vector3D & ur)
+			 * @fn		RML::Vector2D calculateCenter(RML::Vector2D & ll, RML::Vector2D & ur)
 			 *
 			 * @brief	Calclates the collider center using min and max extents
 			 * @warning
@@ -42,24 +42,24 @@ namespace Rubeus
 			 *
 			 * @return	The center of the box.
 			 */
-			RML::Vector3D calculateCenter(const RML::Vector3D & ll, const RML::Vector3D & ur);
+			RML::Vector2D calculateCenter(const RML::Vector2D & ll, const RML::Vector2D & ur);
 
 		public:
 			/** @brief	Lower left coordinates of the box collider */
-			RML::Vector3D m_MinExtent;
+			RML::Vector2D m_MinExtent;
 
 			/** @brief	Upper right coordinates of the box collider */
-			RML::Vector3D m_MaxExtent;
+			RML::Vector2D m_MaxExtent;
 
 			/**
-			 * @fn		ABoxCollider(const RML::Vector3D & minExtent, const RML::Vector3D & maxExtent)
+			 * @fn		ABoxCollider(const RML::Vector2D & minExtent, const RML::Vector2D & maxExtent)
 			 *
 			 * @brief	Contructor
 			 *
 			 * @param	minExtent	The lower left point of the box.
 			 * @param	maxExtent	The upper right point of the box.
 			 */
-			ABoxCollider(const RML::Vector3D & minExtent, const RML::Vector3D & maxExtent);
+			ABoxCollider(const RML::Vector2D & minExtent, const RML::Vector2D & maxExtent);
 
 			/**
 			 * @fn		~ABoxCollider()
@@ -113,40 +113,40 @@ namespace Rubeus
 			ACollideData tryIntersect(ASphereCollider & sphere) override;
 
 			/**
-			 * @fn		inline const RML::Vector3D getLowerLeftBound() const
+			 * @fn		inline const RML::Vector2D getLowerLeftBound() const
 			 *
 			 * @brief	Returns the lower left corner of the box collider
 			 *
 			 * @return	The lower left corner's position.
 			 */
-			inline const RML::Vector3D getLowerLeftBound() const { return m_MinExtent; }
+			inline const RML::Vector2D getLowerLeftBound() const { return m_MinExtent; }
 
 			/**
-			 * @fn		inline const RML::Vector3D getUpperRightBound() const
+			 * @fn		inline const RML::Vector2D getUpperRightBound() const
 			 *
 			 * @brief	Returns the upper right corner of the box collider
 			 *
 			 * @return	The upper right corner's position.
 			 */
-			inline const RML::Vector3D getUpperRightBound() const { return m_MaxExtent; }
+			inline const RML::Vector2D getUpperRightBound() const { return m_MaxExtent; }
 
 			/**
-			 * @fn		inline const RML::Vector3D getUpperLeftBound() const
+			 * @fn		inline const RML::Vector2D getUpperLeftBound() const
 			 *
 			 * @brief	Returns the upper left corner of the box collider
 			 *
 			 * @return	The upper left corner's position.
 			 */
-			inline RML::Vector3D getUpperLeftBound() const { return m_MaxExtent + RML::Vector3D(0, m_MaxExtent.y - m_MinExtent.y, 0); }
+			inline RML::Vector2D getUpperLeftBound() const { return m_MinExtent + RML::Vector2D(0, m_MaxExtent.y - m_MinExtent.y); }
 
 			/**
-			 * @fn	inline const RML::Vector3D getLowerRightBound() const
+			 * @fn	inline const RML::Vector2D getLowerRightBound() const
 			 *
 			 * @brief	Returns the lower right corner of the box collider
 			 *
 			 * @return	The lower right corner's position.
 			 */
-			inline RML::Vector3D getLowerRightBound() const { return m_MaxExtent + RML::Vector3D(m_MaxExtent.x - m_MinExtent.x, 0, 0); }
+			inline RML::Vector2D getLowerRightBound() const { return m_MaxExtent + RML::Vector2D(m_MaxExtent.x - m_MinExtent.x, 0); }
 		};
 	}
 }

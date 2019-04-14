@@ -42,7 +42,7 @@ namespace Rubeus
 		public:
 
 			/** @brief	The central position of the collider */
-			RML::Vector3D m_Position;
+			RML::Vector2D m_Position;
 
 			/** @brief	Momentum of the collider in 2D space */
 			RML::Vector2D m_Momentum;
@@ -63,14 +63,14 @@ namespace Rubeus
 			unsigned int m_ZIndex;
 
 			/**
-			 * @fn		ACollider(RML::Vector3D position = RML::Vector3D(0.0f, 0.0f, 0.0f))
+			 * @fn		ACollider(RML::Vector2D position = RML::Vector2D(0.0f, 0.0f))
 			 *
 			 * @brief	Constructor
 			 */
-			ACollider(RML::Vector3D position = RML::Vector3D(0.0f, 0.0f, 0.0f));
+			ACollider(RML::Vector2D position = RML::Vector2D(0.0f, 0.0f));
 
 			/**
-			 * @fn		ACollider(const RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial)
+			 * @fn		ACollider(const RML::Vector2D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial)
 			 *
 			 * @brief	Constructor
 			 *
@@ -78,7 +78,7 @@ namespace Rubeus
 			 * @param	velocity		The velocity of the collider.
 			 * @param	physicsMat	The physics material of this collider. Default is DefualtMaterial
 			 */
-			ACollider(const RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial);
+			ACollider(const RML::Vector2D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial);
 
 			/**
 			 * @fn		~ACollider()
@@ -164,13 +164,13 @@ namespace Rubeus
 			void addImpulse(RML::Vector2D & impulse);
 
 			/**
-			 * @fn		inline RML::Vector3D getPosition() const
+			 * @fn		inline RML::Vector2D getPosition() const
 			 *
 			 * @brief	Returns the position of this collider
 			 *
 			 * @return	Position of this collider.
 			 */
-			inline RML::Vector3D getPosition() const { return m_Position; }
+			inline RML::Vector2D getPosition() const { return m_Position; }
 
 			/**
 			 * @fn		inline RML::Vector2D getMomentum() const
@@ -197,7 +197,7 @@ namespace Rubeus
 			 *
 			 * @param	position		The newer position value.
 			 */
-			inline void setPosition(const RML::Vector3D & position) { m_Position = position; }
+			inline void setPosition(const RML::Vector2D & position) { m_Position = position; }
 
 			/**
 			 * @fn		inline void setMomentum(const RML::Vector2D & velocity)

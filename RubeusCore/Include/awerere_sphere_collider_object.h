@@ -23,14 +23,14 @@ namespace Rubeus
 		{
 		private:
 			/** @brief	Center of the sphere */
-			RML::Vector3D & m_Center;
+			RML::Vector2D & m_Center;
 
 			/** @brief	Radius of the center */
 			const float m_Radius;
 
 		public:
 			/**
-			 * @fn		ASphereCollider(RML::Vector3D & center, const float radius)
+			 * @fn		ASphereCollider(RML::Vector2D & center, const float radius)
 			 *
 			 * @brief	Contructor
 			 *
@@ -38,7 +38,7 @@ namespace Rubeus
 			 * @param	radius	Radius of the sphere.
 			 *
 			 */
-			ASphereCollider(RML::Vector3D & center, const float radius);
+			ASphereCollider(RML::Vector2D & center, const float radius);
 
 			/**
 			 * @fn		void selfUpdate(float deltaX, float deltaY) override
@@ -84,13 +84,13 @@ namespace Rubeus
 			ACollideData tryIntersect(ABoxCollider & box) override;
 
 			/**
-			 * @fn		inline const RML::Vector3D & getCenter() const
+			 * @fn		inline const RML::Vector2D & getCenter() const
 			 *
 			 * @brief	Returns the center of the sphere collider
 			 *
 			 * @return	Center of the sphere.
 			 */
-			inline const RML::Vector3D & getCenter() const { return m_Center; }
+			inline const RML::Vector2D & getCenter() const { return m_Center; }
 
 			/**
 			 * @fn		inline const float & getRadius() const
