@@ -103,6 +103,47 @@ namespace RML
 		Vector2D toUnitVector();
 
 		/**
+			* @fn	Vector2D maxVector(const Vector2D &other);
+			*
+			* @brief	Returns a Vector2D with only the maximum coordinates on each axes
+					as compared to the given other.
+			*
+			* @param	other	The other.
+			*
+			* @return	A reference to a Vector2D.
+			*/
+		Vector2D maxVector(const Vector2D &other);
+
+		/**
+			* @fn	float maxComponent()
+			*
+			* @brief	Return the maximum coordinate across X and Y axes
+			*
+			* @return	The maximum coordinate.
+			*/
+		float maxXYComponent();
+
+		/**
+			* @fn	Vector2D & abs()
+			*
+			* @brief	Take modulus of all coordinates
+			*
+			* @return	The abs vector.
+			*/
+		Vector2D & abs();
+
+		/**
+			* @fn	float multiplyCross(const Vector2D &other);
+			*
+			* @brief	Multiplies the given other (Cross product).
+			*
+			* @param	other	The other.
+			*
+			* @return	A result of the operation.
+			*/
+		float multiplyCross(const Vector2D &other);
+
+		/**
 			* @fn	Vector2D& add(const Vector2D &other);
 			*
 			* @brief	Adds other
@@ -463,18 +504,6 @@ namespace RML
 		Vector3D& divide(const Vector3D &other);
 
 		/**
-			* @fn	Vector3D maxVector(const Vector3D &other);
-			*
-			* @brief	Returns a Vector3D with only the maximum coordinates on each axes
-					as compared to the given other.
-			*
-			* @param	other	The other.
-			*
-			* @return	A reference to a Vector3D.
-			*/
-		Vector3D maxVector(const Vector3D &other);
-
-		/**
 			* @fn	float maxComponent()
 			*
 			* @brief	Return the maximum coordinate across all axes
@@ -482,15 +511,6 @@ namespace RML
 			* @return	The maximum coordinate.
 			*/
 		float maxComponent();
-
-		/**
-			* @fn	float maxComponent()
-			*
-			* @brief	Return the maximum coordinate across X and Y axes
-			*
-			* @return	The maximum coordinate.
-			*/
-		float maxXYComponent();
 
 		/**
 			* @fn	Vector3D & toUnitVector()

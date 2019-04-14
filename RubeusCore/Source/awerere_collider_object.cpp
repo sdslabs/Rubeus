@@ -15,12 +15,12 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		ACollider::ACollider(RML::Vector3D position)
+		ACollider::ACollider(RML::Vector2D position)
 			: m_Position(position), m_Type(EColliderType::NO_COLLIDER)
 		{
 		}
 
-		ACollider::ACollider(const RML::Vector3D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat)
+		ACollider::ACollider(const RML::Vector2D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat)
 			:
 			m_Position(position),
 			m_Momentum(velocity),

@@ -25,10 +25,10 @@ namespace Rubeus
 		{
 		private:
 			/** @brief	Normal vector used to define a plane in 3D */
-			mutable RML::Vector3D m_Normal;
+			mutable RML::Vector2D m_Normal;
 
 			/** @brief	A fixed point through which the 2D plane plasses through */
-			RML::Vector3D m_EmergencePoint;
+			RML::Vector2D m_EmergencePoint;
 
 		public:
 
@@ -40,7 +40,7 @@ namespace Rubeus
 			 * @param	normal			The normal vector of the 2D plane.
 			 * @param	emergencePoint	The fixed point through which the plane is defined.
 			 */
-			APlaneCollider(const RML::Vector3D & normal, RML::Vector3D & emergencePoint);
+			APlaneCollider(const RML::Vector2D & normal, RML::Vector2D & emergencePoint);
 
 			/**
 			 * @fn		~APlaneCollider()
@@ -104,22 +104,22 @@ namespace Rubeus
 			RML::Vector3D normalised(const RML::Vector3D & vector) const;
 
 			/**
-			 * @fn		inline RML::Vector3D getNormal() const
+			 * @fn		inline RML::Vector2D getNormal() const
 			 *
 			 * @brief	Returns the normal of this plane
 			 *
-			 * @return	The vector 3D normal.
+			 * @return	The vector 2D normal.
 			 */
-			inline RML::Vector3D getNormal() const { return m_Normal; }
+			inline RML::Vector2D getNormal() const { return m_Normal; }
 
 			/**
-			 * @fn		inline RML::Vector3D getEmergencePoint() const
+			 * @fn		inline RML::Vector2D getEmergencePoint() const
 			 *
 			 * @brief	Returns a fixed point on the plane
 			 *
 			 * @return	Position vector of the emergence point.
 			 */
-			inline RML::Vector3D getEmergencePoint() const { return m_EmergencePoint; }
+			inline RML::Vector2D getEmergencePoint() const { return m_EmergencePoint; }
 		};
 	}
 }

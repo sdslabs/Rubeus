@@ -14,12 +14,12 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		RML::Vector3D ABoxCollider::calculateCenter(const RML::Vector3D & ll, const RML::Vector3D & ur)
+		RML::Vector2D ABoxCollider::calculateCenter(const RML::Vector2D & ll, const RML::Vector2D & ur)
 		{
-			return RML::Vector3D(ll + ur) * 0.5f;
+			return RML::Vector2D(ll + ur) * 0.5f;
 		}
 
-		ABoxCollider::ABoxCollider(const RML::Vector3D & minExtent, const RML::Vector3D & maxExtent)
+		ABoxCollider::ABoxCollider(const RML::Vector2D & minExtent, const RML::Vector2D & maxExtent)
 			: ACollider(minExtent, RML::Vector2D()), m_MinExtent(minExtent), m_MaxExtent(maxExtent)
 		{
 			m_Type = EColliderType::BOX;
@@ -42,15 +42,15 @@ namespace Rubeus
 		{
 			// Don't touch this. Proceed to ignore this warning if you know what you are doing
 
-			RML::Vector3D gap1 = box.getLowerLeftBound() - m_MaxExtent;
-			RML::Vector3D gap2 = m_MinExtent - box.getUpperRightBound();
+			RML::Vector2D gap1 = box.getLowerLeftBound() - m_MaxExtent;
+			RML::Vector2D gap2 = m_MinExtent - box.getUpperRightBound();
 
-			RML::Vector3D maxGap = gap1.maxVector(gap2);
+			RML::Vector2D maxGap = gap1.maxVector(gap2);
 			float maxDistance = maxGap.maxXYComponent();
 			float approximation = 1.0e-5f;
 
 			RML::Vector2D normal(0.0f, 0.0f);
-			RML::Vector3D boxSize(RML::Vector3D(box.m_MinExtent - box.m_MaxExtent).abs());
+			RML::Vector2D boxSize(RML::Vector2D(box.m_MinExtent - box.m_MaxExtent).abs());
 
 			if (maxDistance < 0.0f)
 			{
@@ -133,8 +133,8 @@ namespace Rubeus
 
 		ACollideData ABoxCollider::tryIntersect(ASphereCollider & sphere)
 		{
-			RML::Vector3D closestPoint;
-			const RML::Vector3D & center = sphere.getCenter();
+			RML::Vector2D closestPoint;
+			const RML::Vector2D & center = sphere.getCenter();
 
 			// Find the closest x offset
 			if (center.x <= m_MinExtent.x)
@@ -164,20 +164,16 @@ namespace Rubeus
 				closestPoint.y = center.y;
 			}
 
-			// Set the z axis
-			closestPoint.z = center.z;
-
 			// Find distance of original sphere center from the closest point
-			float penetrationDistance = RML::Vector3D(closestPoint - center).getLength();
+			float penetrationDistance = RML::Vector2D(closestPoint - center).getLength();
 
-			RML::Vector3D normal = RML::Vector3D(this->m_MinExtent + this->m_MaxExtent).multiplyCross(sphere.getCenter());
-
-			normal = normal / (4.0f * normal.getLength());
+			RML::Vector2D normal = RML::Vector2D(closestPoint - center);
+			normal = normal.toUnitVector();
 
 			return ACollideData(
 				penetrationDistance < sphere.getRadius(),
 				penetrationDistance - sphere.getRadius(),
-				normal.getVector2D()
+				normal
 			);
 		}
 	}
