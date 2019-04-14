@@ -59,6 +59,9 @@ namespace Rubeus
 			/** @brief	The sprite linked to this collider */
 			GraphicComponents::RSprite * m_Sprite = NULL;
 
+			/** @brief	z-index of this collider */
+			unsigned int m_ZIndex;
+
 			/**
 			 * @fn		ACollider(RML::Vector2D position = RML::Vector2D(0.0f, 0.0f))
 			 *
@@ -231,6 +234,24 @@ namespace Rubeus
 			 * @param	momentum	The momentum to be added.
 			 */
 			inline void addMomentum(RML::Vector2D & momentum) { m_Momentum += momentum; }
+
+			/**
+			* @fn		void setZIndex(const unsigned int & zindex)
+			*
+			* @brief	Sets z-index of collider
+			*
+			* @param	zindex		z-index to be assigned.
+			*/
+			void setZIndex(const unsigned int & zindex) { m_ZIndex = zindex; }
+
+			/**
+			* @fn		unsigned int getZIndex()
+			*
+			* @brief	Returns the z-index of this collider
+			*
+			* @return	z-index of this collider
+			*/
+			unsigned int getZIndex() { return m_ZIndex; }
 		};
 	}
 }

@@ -103,7 +103,9 @@ namespace Rubeus
 			{
 				for (size_t j = i + 1; j < m_GameObjects.size(); j++)
 				{
-					if ((m_XFlags[i] * m_XFlags[j]) && (m_YFlags[i] * m_YFlags[j]))
+					if ((m_XFlags[i] * m_XFlags[j]) &&
+						(m_YFlags[i] * m_YFlags[j]) &&
+						(m_GameObjects[i]->m_PhysicsObject->m_Collider->m_ZIndex == m_GameObjects[j]->m_PhysicsObject->m_Collider->m_ZIndex))
 					{
 						narrowPhaseResolution(*m_GameObjects[i], *m_GameObjects[j]);
 					}
