@@ -25,7 +25,7 @@ void main()
 	if(fs_in.texID >= 1.0) 
 	{                            
 		int tid = int(fs_in.texID - 0.5);
-		colorTex = texture(textures[tid], fs_in.uv);
+		colorTex = fs_in.color;
 	}
 	else
 	{
