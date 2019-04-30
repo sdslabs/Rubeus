@@ -27,7 +27,7 @@ The [Getting Start guide](https://github.com/sdslabs/Rubeus/wiki) should set you
 
 # I have some questions
 
-For general FAQs, we have prepared answers to some basic questions [in our README present here](https://github.com/sdslabs/Rubeus/). If you have any further doubts, you can reach out to us at [chat.sdslabs.co](chat.sdslabs.co). We will be setting up a communication server (probably on Gitter, Discord, Slack, or IRC) in the near future. Until then don't hesitate to ping us.
+For general FAQs, we have prepared answers to some basic questions [in our README present here](https://github.com/sdslabs/Rubeus/). You can also hang out with us at our Discord server (https://discord.gg/Cva2VFQ) or chat with us at [chat.sdslabs.co](chat.sdslabs.co).
 
 # Wait, where's the GUI?
 
