@@ -38,14 +38,7 @@ namespace Rubeus
 			RSprite();
 
 			/**
-			 * @fn		virtual ~RSprite()
-			 *
-			 * @brief	Destructor
-			 */
-			virtual ~RSprite();
-
-			/**
-			 * @fn		RSprite::RSprite(float & x, float & y, float & width, float & height, const RML::Vector4D & color);
+			 * @fn		RSprite::RSprite(const float & x, const float & y, const float & width, const float & height, const RML::Vector4D & color);
 			 *
 			 * @brief	Constructor
 			 *
@@ -55,10 +48,10 @@ namespace Rubeus
 			 * @param	height	The height.
 			 * @param	color 	The color of this sprite.
 			 */
-			RSprite(float & x, float & y, float & width, float & height, const RML::Vector4D & color);
+			RSprite(const float & x, const float & y, const float & width, const float & height, const RML::Vector4D & color);
 
 			/**
-			 * @fn		RSprite::RSprite(float & x, float & y, float & width, float & height, RTexture * texture);
+			 * @fn		RSprite::RSprite(const float & x, const float & y, const float & width, const float & height, RTexture * texture);
 			 *
 			 * @brief	Constructor
 			 *
@@ -66,9 +59,18 @@ namespace Rubeus
 			 * @param	y	  	The y offset.
 			 * @param	width 	The width.
 			 * @param	height	The height.
-			 * @param	texture 	Pointer to the texture to be used.
+			 * @param	texture Pointer to the texture to be used.
 			 */
-			RSprite(float & x, float & y, float & width, float & height, RTexture * texture);
+			RSprite(const float & x, const float & y, const float & width, const float & height, RTexture * texture);
+
+			RSprite(RSprite & sprite);
+
+			/**
+			 * @fn		virtual ~RSprite()
+			 *
+			 * @brief	Destructor
+			 */
+			virtual ~RSprite();
 
 		protected:
 		};

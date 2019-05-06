@@ -44,17 +44,16 @@ namespace Rubeus
 			APhysicsObject();
 
 			/**
-			 * @fn		APhysicsObject(const APhysicsMaterial & material, const bool & enablePhysics = false, const EColliderType & type = EColliderType::NO_COLLIDER, ACollider * collider = NULL, GraphicComponents::RSprite * sprite = NULL)
+			 * @fn		APhysicsObject(const APhysicsMaterial & material, const bool & enablePhysics = false, ACollider * collider = NULL, GraphicComponents::RSprite * sprite = NULL)
 			 *
 			 * @brief	Generates a physics object for linking within a game object
 			 *
 			 * @param	material		Material to be used by the physics object.
 			 * @param	enablePhysics	Whether physics should be enabled for the game object. Default is false
-			 * @param	type			Type of collider to be used. Default is NO_COLLIDER
 			 * @param	collider		Collider object to be used. Default is NULL
-			 * @param	sprite		Sprite object associated to be used. Default is NULL
+			 * @param	sprite			Sprite object associated to be used. Default is NULL
 			 */
-			APhysicsObject(const APhysicsMaterial & material, const bool & enablePhysics = false, const EColliderType & type = EColliderType::NO_COLLIDER, ACollider * collider = NULL, GraphicComponents::RSprite * sprite = NULL);
+			APhysicsObject(const APhysicsMaterial & material, const bool & enablePhysics = false, ACollider * collider = NULL, GraphicComponents::RSprite * sprite = NULL);
 
 			/**
 			 * @fn		~APhysicsObject()

@@ -21,13 +21,13 @@ namespace Rubeus
 		{
 		}
 
-		APhysicsObject::APhysicsObject(const APhysicsMaterial & material, const bool & enablePhysics, const EColliderType & type, ACollider * collider, GraphicComponents::RSprite * sprite)
+		APhysicsObject::APhysicsObject(const APhysicsMaterial & material, const bool & enablePhysics, ACollider * collider, GraphicComponents::RSprite * sprite)
 			: m_PhysicsMaterial(material), m_Collider(collider), m_Sprite(sprite)
 		{
-			if (type == EColliderType::BOX
-				|| type == EColliderType::PLANE
-				|| type == EColliderType::SPHERE
-				|| type == EColliderType::NO_COLLIDER)
+			if (collider->m_Type == EColliderType::BOX ||
+				collider->m_Type == EColliderType::PLANE ||
+				collider->m_Type == EColliderType::SPHERE ||
+				collider->m_Type == EColliderType::NO_COLLIDER)
 			{
 				m_Collider = collider;
 				m_EnablePhysics = enablePhysics;

@@ -46,9 +46,9 @@ namespace Rubeus
 			{
 				// Collider types are as follows:
 				//
-				// SPHERE      = 0x0001,
-				// PLANE       = 0x0010,
-				// BOX         = 0x0100,
+				// SPHERE      = 0x0001
+				// PLANE       = 0x0010
+				// BOX         = 0x0100
 				// NO_COLLIDER = 0x1000
 
 				case 0x0001:

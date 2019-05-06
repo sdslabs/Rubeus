@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <level.h>
 
 namespace Rubeus
 {
@@ -15,6 +16,7 @@ namespace Rubeus
 		REngine * m_Engine;
 
 	public:
+		static RLevel * m_RunningLevel;
 		std::string m_StartupLevel;
 
 		virtual void init() = 0;
@@ -23,7 +25,8 @@ namespace Rubeus
 		RGame(/* Preferably take configuration variables here */);
 		~RGame();
 
-		inline static RGame * getActiveGame() { return CurrentGame; }
+		inline static RGame* getActiveGame() { return CurrentGame; }
+		inline static RLevel * getActiveLevel() { return m_RunningLevel; }
 		inline static REngine * const getEngine() { return CurrentGame->m_Engine; }
 	};
 }

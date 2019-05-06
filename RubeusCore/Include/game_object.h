@@ -11,6 +11,7 @@
 #include <sprite_object.h>
 #include <texture_object.h>
 #include <master_component.h>
+#include <level.h>
 #include <awerere_physics_object.h>
 #include <awerere_physics_material.h>
 #include <awerere_collider_object.h>
@@ -35,7 +36,7 @@ namespace Rubeus
 		std::string m_Name;
 
 		/** @brief	The level context during which this object lives */
-		std::string m_UsedByLevelName;
+		RLevel & m_UsedByLevelName;
 
 		/** @brief	Sprite used for the rendering process */
 		GraphicComponents::RSprite * m_Sprite;
@@ -59,50 +60,28 @@ namespace Rubeus
 		bool m_GeneratesHit = false;
 
 		/**
-		 * @fn		RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, const Awerere::EColliderType & type = Awerere::EColliderType::NO_COLLIDER, Awerere::ACollider * collider = NULL, bool generatesHit = false, const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial())
+		 * @fn		RGameObject(std::string name, RLevel levelName, GraphicComponents::RSprite & sprite, bool enablePhysics = false, Awerere::ACollider * collider = NULL, bool generatesHit = false, const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial())
 		 *
 		 * @brief	Constructor. Uses images as textures.
 		 * @warning	All pointers passed in will be owned by the game object.
 					Heap objects will be deleted by the object automatically.
 		 *
 		 * @param	name				Name of this game object.
-		 * @param	levelName		Name of level that uses this object.
-		 * @param	x				x coordinate of the lower left point.
-		 * @param	y				y coordinate of the lower left point.
-		 * @param	deltaX			Horizontal span of the object.
-		 * @param	deltaY			Vertical span of the object.
-		 * @param	imageFilePath		Path to the image to be used as texture.
-		 * @param	enablePhysics		Whether the object obeys physics. Default is false.
-		 * @param	type				Collider type to be assigned to this gameobject. Defaults to NO_COLLIDER
-		 * @param	collider			The collider object to be used. Defaults to NULL.
+		 * @param	levelName			Name of level that uses this object.
+		 * @param	sprite				Sprite object that this object renders as on the screen.
+		 * @param	enablePhysics		Whether this object reacts to physical elements.
 		 * @param	generatesHit		Whether the object generates hit events. Default is false.
-		 * @param	physicsMat		Provide a physics material to be used to respond to hit events. Defaults to DefaultPhysicsMat.
+		 * @param	physicsMat			Provide a physics material to be used to respond to hit events. Defaults to DefaultPhysicsMat.
 		 */
-		RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, const char * imageFilePath, bool enablePhysics = false, const Awerere::EColliderType & type = Awerere::EColliderType::NO_COLLIDER, Awerere::ACollider * collider = NULL, bool generatesHit = false, const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial());
-
-		/**
-		 * @fn		RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, float & r, float & g, float & b, bool enablePhysics = false, const Awerere::APhysicsMaterial & material = Awerere::APhysicsMaterial(), const Awerere::EColliderType & type = Awerere::EColliderType::NO_COLLIDER, Awerere::ACollider * collider = NULL, bool generatesHit = false)
-		 *
-		 * @brief	Constructor. Uses pure colors as textures.
-		 * @warning	All pointers passed in will be owned by the game object.
-					Heap objects will be deleted by this object.
-		 *
-		 * @param	name				Name of this game object.
-		 * @param	levelName		Name of level that uses this object.
-		 * @param	x				x coordinate of the lower left point.
-		 * @param	y				y coordinate of the lower left point.
-		 * @param	deltaX			Horizontal span of the object.
-		 * @param	deltaY			Vertical span of the object.
-		 * @param	r				Red channel value.
-		 * @param	g				Green channel value.
-		 * @param	b				Blue channel value
-		 * @param	enablePhysics		Whether the object obeys physics. Default is false.
-		 * @param	material			Provide a physics material to be used to respond to hit events. Defaults to DefaultPhysicsMat.
-		 * @param	type				Collider type to be assigned to this gameobject. Defaults to NO_COLLIDER.
-		 * @param	collider			The collider object to be used. Defaults to NULL.
-		 * @param	generatesHit		Whether the object generates hit events. Default is false.
-		 */
-		RGameObject(std::string name, std::string levelName, float x, float y, float deltaX, float deltaY, float & r, float & g, float & b, bool enablePhysics = false, const Awerere::APhysicsMaterial & material = Awerere::APhysicsMaterial(), const Awerere::EColliderType & type = Awerere::EColliderType::NO_COLLIDER, Awerere::ACollider * collider = NULL, bool generatesHit = false);
+		RGameObject(
+			std::string name,
+			RLevel levelName,
+			GraphicComponents::RSprite & sprite,
+			bool enablePhysics = false,
+			Awerere::ACollider * collider = NULL,
+			bool generatesHit = false,
+			const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial()
+		);
 
 		/**
 		 * @fn		~RGameObject()
@@ -132,7 +111,7 @@ namespace Rubeus
 		 *
 		 * @brief	User defined function called whenever a hit event is generated
 		 *
-		 * @param	hammer			The hitting object.
+		 * @param	hammer				The hitting object.
 		 * @param	nail				The object getting hit
 		 * @param	collisionData		Details of the collision
 		 */
