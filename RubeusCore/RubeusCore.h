@@ -8,6 +8,32 @@
 #include <string>
 #include <unordered_map>
 
+// Rubeus Macros
+#define REGISTERGAMECLASS(x) 									  	 												 \
+public:x(std::string name, 															                                 \
+    Rubeus::RLevel * levelName,																						 \
+    Rubeus::GraphicComponents::RSprite & sprite,																	 \
+    bool enablePhysics = false,																						 \
+    Rubeus::Awerere::ACollider* collider = NULL,																	 \
+    bool generatesHit = false,																						 \
+    const Rubeus::Awerere::APhysicsMaterial & physicsMat = Rubeus::Awerere::APhysicsMaterial()) 					 \
+: RGameObject(name, levelName, sprite, enablePhysics, collider, generatesHit, physicsMat) {}						 \
+																													 \
+	void begin() override;																							 \
+	void onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awerere::ACollideData& collisionData) override; \
+	void onMessage(Rubeus::Message* msg) override;																	 \
+	void tick() override;																							 \
+
+#define REGISTERLEVELCLASS(x)                                      \
+public:x(std::string name)                                         \
+	: RLevel(name){}											   \
+																   \
+~x()													           \
+{}																   \
+																   \
+void begin() override;											   \
+void onEnd() override;											   \
+
 // TODO: Reference additional headers your program requires here.
 
 // Dynamic Program Analysis Tools

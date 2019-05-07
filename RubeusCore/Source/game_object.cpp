@@ -13,7 +13,7 @@ namespace Rubeus
 
 	RGameObject::RGameObject(
 		std::string name,
-		RLevel levelName,
+		RLevel * levelName,
 		GraphicComponents::RSprite& sprite,
 		bool enablePhysics = false,
 		Awerere::ACollider* collider = NULL,
@@ -49,7 +49,7 @@ namespace Rubeus
 	}
 
 	RGameObject::RGameObject()
-		: m_UsedByLevelName(*Rubeus::RGame::getActiveLevel())
+		: m_UsedByLevelName(Rubeus::RGame::getActiveLevel())
 	{
 		m_IsGroup = true;
 	}

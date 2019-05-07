@@ -11,5 +11,4 @@
 #include "ping_pong/engine_files/object.paddle.h"
 
 // Game class
-
 class PingPong;

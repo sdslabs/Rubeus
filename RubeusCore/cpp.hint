@@ -1,0 +1,27 @@
+// Hint files help the Visual Studio IDE interpret Visual C++ identifiers
+// such as names of functions and macros.
+// For more information see https://go.microsoft.com/fwlink/?linkid=865984
+#define REGISTERGAMECLASS(x) 									  	 												 \
+public:x(std::string name, 															                                 \
+    std::string levelName,																							 \
+    Rubeus::GraphicComponents::RSprite& sprite,																		 \
+    bool enablePhysics = false,																						 \
+    Rubeus::Awerere::ACollider* collider = NULL,																	 \
+    bool generatesHit = false,																						 \
+    const Rubeus::Awerere::APhysicsMaterial& physicsMat = Rubeus::Awerere::APhysicsMaterial()) 						 \
+: RGameObject(name, levelName, sprite, enablePhysics, collider, generatesHit, physicsMat) {}						 \
+																													 \
+	void begin() override;																							 \
+	void onHit(RGameObject* hammer, RGameObject* nail, const Rubeus::Awerere::ACollideData& collisionData) override; \
+	void onMessage(Rubeus::Message* msg) override;																	 \
+	void tick() override;																							 \
+
+#define REGISTERLEVELCLASS(x)
+public:play_level(std::string name)                                \
+	: RLevel(name){}											   \
+																   \
+~play_level()													   \
+{}																   \
+																   \
+void begin() override;											   \
+void onEnd() override;											   \

@@ -20,30 +20,29 @@ protected:
 		RTexture texture("Assets/test9.png");
 		RSprite sprite(0.0f, 0.0f, 0.5f, 3.0f, &texture);
 
-		leftPaddle = new paddle("left_paddle",
+		leftPaddle = new paddle(
+			"left_paddle",
 			playLevel,
+			sprite,
 			true,
 			new ABoxCollider(RML::Vector2D(0.0f, 0.0f),
 				RML::Vector2D(0.5f, 3.0f)),
 			true);
 
-		rightPaddle = new paddle("right_paddle", "play_level",
-			15.5f, 0.0f,
-			0.5f, 3.0f,
-			"Assets/test8.png",
+		rightPaddle = new paddle(
+			"right_paddle",
+			playLevel,
+			sprite,
 			true,
-			EColliderType::BOX,
 			new ABoxCollider(RML::Vector2D(15.5f, 0.0f),
 				RML::Vector2D(16.0f, 3.0f)),
 			true);
 
-		matchBall = new ball("ball",
-			"play_level",
-			8.0f, 4.5f,
-			0.5f, 0.5f,
-			"Assets/test8.png",
+		matchBall = new ball(
+			"ball",
+			playLevel,
+			sprite,
 			true,
-			EColliderType::BOX,
 			new ABoxCollider(RML::Vector2D(8.0f, 4.5f),
 				RML::Vector2D(8.5f, 5.0f)),
 			true);

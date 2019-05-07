@@ -25,7 +25,7 @@ namespace Rubeus
 		RGame(/* Preferably take configuration variables here */);
 		~RGame();
 
-		inline static RGame* getActiveGame() { return CurrentGame; }
+		inline static RGame * getActiveGame() { return CurrentGame; }
 		inline static RLevel * getActiveLevel() { return m_RunningLevel; }
 		inline static REngine * const getEngine() { return CurrentGame->m_Engine; }
 	};

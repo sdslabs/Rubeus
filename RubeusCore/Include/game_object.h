@@ -11,7 +11,6 @@
 #include <sprite_object.h>
 #include <texture_object.h>
 #include <master_component.h>
-#include <level.h>
 #include <awerere_physics_object.h>
 #include <awerere_physics_material.h>
 #include <awerere_collider_object.h>
@@ -36,7 +35,7 @@ namespace Rubeus
 		std::string m_Name;
 
 		/** @brief	The level context during which this object lives */
-		RLevel & m_UsedByLevelName;
+		RLevel * m_UsedByLevelName;
 
 		/** @brief	Sprite used for the rendering process */
 		GraphicComponents::RSprite * m_Sprite;
@@ -60,7 +59,7 @@ namespace Rubeus
 		bool m_GeneratesHit = false;
 
 		/**
-		 * @fn		RGameObject(std::string name, RLevel levelName, GraphicComponents::RSprite & sprite, bool enablePhysics = false, Awerere::ACollider * collider = NULL, bool generatesHit = false, const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial())
+		 * @fn		RGameObject(std::string name, RLevel * levelName, GraphicComponents::RSprite & sprite, bool enablePhysics = false, Awerere::ACollider * collider = NULL, bool generatesHit = false, const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial())
 		 *
 		 * @brief	Constructor. Uses images as textures.
 		 * @warning	All pointers passed in will be owned by the game object.
@@ -75,7 +74,7 @@ namespace Rubeus
 		 */
 		RGameObject(
 			std::string name,
-			RLevel levelName,
+			RLevel * levelName,
 			GraphicComponents::RSprite & sprite,
 			bool enablePhysics = false,
 			Awerere::ACollider * collider = NULL,
