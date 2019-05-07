@@ -12,12 +12,12 @@
 #define REGISTERGAMECLASS(x) 									  	 												 \
 public:x(std::string name, 															                                 \
     Rubeus::RLevel * levelName,																						 \
-    Rubeus::GraphicComponents::RSprite & sprite,																	 \
+    Rubeus::GraphicComponents::RSprite * sprite,																	 \
     bool enablePhysics = false,																						 \
     Rubeus::Awerere::ACollider* collider = NULL,																	 \
     bool generatesHit = false,																						 \
     const Rubeus::Awerere::APhysicsMaterial & physicsMat = Rubeus::Awerere::APhysicsMaterial()) 					 \
-: RGameObject(name, levelName, sprite, enablePhysics, collider, generatesHit, physicsMat) {}						 \
+: RGameObject(name, levelName, *sprite, enablePhysics, collider, generatesHit, physicsMat) {}						 \
 																													 \
 	void begin() override;																							 \
 	void onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awerere::ACollideData& collisionData) override; \

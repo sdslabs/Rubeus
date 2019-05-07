@@ -15,14 +15,14 @@ namespace Rubeus
 		std::string name,
 		RLevel * levelName,
 		GraphicComponents::RSprite& sprite,
-		bool enablePhysics = false,
-		Awerere::ACollider* collider = NULL,
-		bool generatesHit = false,
-		const Awerere::APhysicsMaterial& physicsMat = Awerere::APhysicsMaterial()
+		bool enablePhysics,
+		Awerere::ACollider* collider,
+		bool generatesHit,
+		const Awerere::APhysicsMaterial& physicsMat
 	)
 		:
 		m_Name(name),
-		m_UsedByLevelName(levelName),
+		m_ContainingLevel(levelName),
 		m_Sprite(&sprite),
 		m_PhysicsObject(enablePhysics == true ? new Awerere::APhysicsObject(physicsMat, enablePhysics, collider, m_Sprite) : NULL),
 		m_ThisTicks(false),
@@ -49,7 +49,7 @@ namespace Rubeus
 	}
 
 	RGameObject::RGameObject()
-		: m_UsedByLevelName(Rubeus::RGame::getActiveLevel())
+		: m_ContainingLevel(Rubeus::RGame::getActiveLevel())
 	{
 		m_IsGroup = true;
 	}

@@ -9,6 +9,8 @@ protected:
 	paddle* rightPaddle;
 	ball* matchBall;
 
+	Rubeus::GraphicComponents::RSprite* sprite;
+
 	void init() override
 	{
 		using namespace Rubeus;
@@ -18,7 +20,7 @@ protected:
 		playLevel = new play_level("play_level");
 
 		RTexture texture("Assets/test9.png");
-		RSprite sprite(0.0f, 0.0f, 0.5f, 3.0f, &texture);
+		sprite = new RSprite(0.0f, 0.0f, 0.5f, 3.0f, &texture);
 
 		leftPaddle = new paddle(
 			"left_paddle",

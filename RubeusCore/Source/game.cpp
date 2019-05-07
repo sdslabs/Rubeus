@@ -5,6 +5,7 @@
 namespace Rubeus
 {
 	RGame * RGame::CurrentGame = NULL;
+	RLevel * RGame::CurrentLevel = NULL;
 
 	RGame::RGame()
 		: m_StartupLevel("")

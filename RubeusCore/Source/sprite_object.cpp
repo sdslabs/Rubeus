@@ -15,7 +15,7 @@ namespace Rubeus
 		{
 		}
 
-		RSprite::RSprite(float & x, float & y, float & width, float & height, const RML::Vector4D & color)
+		RSprite::RSprite(const float & x, const float & y, const float & width, const float & height, const RML::Vector4D & color)
 			:
 			RRenderableObject(&RML::Vector3D(x, y, 1.0f), &RML::Vector2D(width, height), &RML::Vector4D(color))
 		{
@@ -26,7 +26,7 @@ namespace Rubeus
 			_m_Color = &this->m_Color;
 		}
 
-		RSprite::RSprite(float & x, float & y, float & width, float & height, RTexture * texture)
+		RSprite::RSprite(const float & x, const float & y, const float & width, const float & height, RTexture * texture)
 			:
 			RRenderableObject(&RML::Vector3D(x, y, 1.0f), &RML::Vector2D(width, height), &RML::Vector4D(0.314f, 0.314f, 0.314f, 0.0f)) // Using values of PI to catch errors while debugging
 		{

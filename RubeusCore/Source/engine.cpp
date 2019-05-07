@@ -77,7 +77,7 @@ namespace Rubeus
 		{
 			if (item.first != "")
 			{
-				if (item.second->m_UsedByLevelName == level.m_Name)
+				if (item.second->m_ContainingLevel->m_Name == level.m_Name)
 				{
 					level.addGameObject(item.second);
 					m_LayerComposition->add(item.second);
@@ -90,6 +90,7 @@ namespace Rubeus
 		}
 
 		m_CurrentLevel = &level;
+		RGame::CurrentLevel = &level;
 		m_PhysicsEngine = new Rubeus::Awerere::APhysicsEngine(*m_Window, *m_CurrentLevel->m_World, m_Window->getHeight() / 9.0f, m_Window->getHeight() / 16.0f);
 
 		SUCCESS("Loaded : " + level.m_Name);
