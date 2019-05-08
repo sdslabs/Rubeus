@@ -108,7 +108,7 @@ namespace Rubeus
 		 */
 		~RGameObject();
 
-		void submit(GraphicComponents::RRendererComponent & renderer) const;
+		void submit(GraphicComponents::RRendererComponent & renderer);
 
 		/**
 		 * @fn		virtual void begin()

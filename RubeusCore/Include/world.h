@@ -82,13 +82,13 @@ namespace Rubeus
 		inline void setObjectArray(std::vector<RGameObject *> & gameObjects);
 
 		/**
-		 * @fn		inline std::vector<RGameObject *> & getActiveObjects() const
+		 * @fn		inline const std::vector<RGameObject *> & getActiveObjects() const
 		 *
 		 * @brief	Returns the array of gameObjects in use
 		 *
 		 * @return	The gameObject array in use
 		 */
-		inline std::vector<RGameObject *> & getActiveObjects() const { return m_ActiveGameObjects; }
+		inline const std::vector<RGameObject *> & getActiveObjects() const { return m_ActiveGameObjects; }
 
 	protected:
 	};

@@ -1,5 +1,5 @@
 ![Build Status](https://ci.appveyor.com/api/projects/status/9o0hca3aoeeyj5un/branch/master?retina=true&svg=true)
-
+[![](https://discordapp.com/api/guilds/568806860816252929/embed.png)](https://discord.gg/Cva2VFQ)
 
 <p align=center>
 <img src="ReadmeAssets/rubeus_light.png">
@@ -50,7 +50,7 @@ As previously said, we do not expect to have any monetary gains off making this 
 Currently Rubeus supports:
 * Colour and image textured 2D sprites
 * Collision detection and resolution of boxes, circles and planes.
-* Cueing music and sound effects with a single line of code. 
+* Cueing music and sound effects with a single line of code.
 * Taking user inputs through mouse and keyboard.
 * Easy first look interface for a beginner
 
@@ -63,11 +63,11 @@ Rubeus is currently available for use on Windows, Linux ~and Mac build is gettin
 #### For making a game:
 Follow the [Getting Started guide](https://github.com/sdslabs/Rubeus/wiki).
 
-#### For participating in development of Rubeus:
-Setup instructions for Rubeus are explained [here](SETUP.md). Also make sure to read the [contribution guidelines](CONTRIBUTING.md). A good start would be trying to build Rubeus on your personal systems.
+#### For participating in Rubeus:
+Setup instructions for Rubeus are explained [here](SETUP.md). Also make sure to read the [contribution guidelines](CONTRIBUTING.md). A good start would be trying to build Rubeus on your personal systems. Join our Discord server: https://discord.gg/Cva2VFQ.
 
 ## <a name=how>How can I contribute?
-Everyone reading this is invited to contribute to Rubeus either through opening issues on Github, making pull requests, adding [Wiki pages](https://github.com/sdslabs/Rubeus/wiki) and talking to the community at [our chat website](https://chat.sdslabs.co). Make sure to read the [contribution guidelines](CONTRIBUTING.md) to ease your way in.
+Everyone reading this is invited to contribute to Rubeus either through opening issues on Github, making pull requests, adding [Wiki pages](https://github.com/sdslabs/Rubeus/wiki) and talking to us at our [Discord server](https://discord.gg/Cva2VFQ), or [our chat hookup](https://chat.sdslabs.co) to talk to SDSLabs. Make sure to read the [contribution guidelines](CONTRIBUTING.md) to ease your way in.
 
 ## <a name=remarks>Remarks
 

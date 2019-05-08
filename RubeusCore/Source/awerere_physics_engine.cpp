@@ -26,24 +26,15 @@ namespace Rubeus
 		{
 		}
 
-		APhysicsEngine::APhysicsEngine(GraphicComponents::RWindowComponent & windowComponent, RWorld & world, const float & cellHeight, const float & cellWidth)
+		APhysicsEngine::APhysicsEngine(const GraphicComponents::RWindowComponent & windowComponent, const RWorld & world, const float & cellHeight, const float & cellWidth)
 			:
-			m_CollisionEngine(world.getActiveObjects(), (float)windowComponent.getHeight(), (float)windowComponent.getWidth(), cellHeight, cellWidth),
-			m_World(world)
+			m_CollisionEngine(world.getActiveObjects(), (float)windowComponent.getHeight(), (float)windowComponent.getWidth(), cellHeight, cellWidth)
 		{
 			m_CollisionEngine.m_GameObjects = world.getActiveObjects();
-
-			m_XFlags.reserve(world.getActiveObjects().size());
-			m_YFlags.reserve(world.getActiveObjects().size());
 		}
 
 		APhysicsEngine::~APhysicsEngine()
 		{
-		}
-
-		void APhysicsEngine::setWorld(RWorld & world)
-		{
-			m_World = world;
 		}
 
 		void APhysicsEngine::update(const float deltaTime)

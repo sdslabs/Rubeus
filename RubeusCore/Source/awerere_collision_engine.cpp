@@ -14,7 +14,7 @@ namespace Rubeus
 {
 	namespace Awerere
 	{
-		ACollisionEngine::ACollisionEngine(std::vector<RGameObject *> & gameObjects, const float & gridHeight, const float & gridWidth, const float & cellHeight, const float & cellWidth)
+		ACollisionEngine::ACollisionEngine(const std::vector<RGameObject *> & gameObjects, const float & gridHeight, const float & gridWidth, const float & cellHeight, const float & cellWidth)
 			:
 			m_CollisionGrid(9, 16, 1, 1),
 			m_GameObjects(gameObjects)
@@ -22,7 +22,7 @@ namespace Rubeus
 			size_t i = 0;
 			while (i < m_GameObjects.size())
 			{
-				m_XFlags.push_back(AFlag((int)m_CollisionGrid.m_XCount));
+				m_XFlags.push_back(new AFlag((int)m_CollisionGrid.m_XCount));
 
 				i++;
 			}
@@ -30,7 +30,7 @@ namespace Rubeus
 			i = 0;
 			while (i < m_GameObjects.size())
 			{
-				m_YFlags.push_back(AFlag((int)m_CollisionGrid.m_YCount));
+				m_YFlags.push_back(new AFlag((int)m_CollisionGrid.m_YCount));
 
 				i++;
 			}
@@ -38,6 +38,15 @@ namespace Rubeus
 
 		ACollisionEngine::~ACollisionEngine()
 		{
+			for (auto * item : m_XFlags)
+			{
+				delete item;
+			}
+
+			for (auto * item : m_YFlags)
+			{
+				delete item;
+			}
 		}
 
 		void ACollisionEngine::updateAndAssignFlags(const float & deltaTime)
@@ -74,7 +83,7 @@ namespace Rubeus
 
 			for (int p = 0; p < m_CollisionGrid.m_XCount; p++)
 			{
-				m_XFlags[i].m_Data[p] = ((p >= leftFlag) && (p <= rightFlag)) ? true : false;
+				m_XFlags[i]->m_Data[p] = ((p >= leftFlag) && (p <= rightFlag)) ? true : false;
 			}
 
 			// Y AXIS FLAGGING
@@ -91,7 +100,7 @@ namespace Rubeus
 
 			for (int p = 0; p < m_CollisionGrid.m_YCount; p++)
 			{
-				m_YFlags[i].m_Data[p] = ((p >= leftFlag) && (p <= rightFlag)) ? true : false;
+				m_YFlags[i]->m_Data[p] = ((p >= leftFlag) && (p <= rightFlag)) ? true : false;
 			}
 
 			// https://gamedev.stackexchange.com/questions/72030/using-uniform-grids-for-collision-detection-efficient-way-to-keep-track-of-wha
@@ -103,8 +112,8 @@ namespace Rubeus
 			{
 				for (size_t j = i + 1; j < m_GameObjects.size(); j++)
 				{
-					if ((m_XFlags[i] * m_XFlags[j]) &&
-						(m_YFlags[i] * m_YFlags[j]) &&
+					if (( (*m_XFlags[i]) * (*m_XFlags[j]) ) &&
+						( (*m_YFlags[i]) * (*m_YFlags[j]) ) &&
 						(m_GameObjects[i]->m_PhysicsObject->m_Collider->m_ZIndex == m_GameObjects[j]->m_PhysicsObject->m_Collider->m_ZIndex))
 					{
 						narrowPhaseResolution(*m_GameObjects[i], *m_GameObjects[j]);

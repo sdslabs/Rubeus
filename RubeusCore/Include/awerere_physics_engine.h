@@ -30,15 +30,6 @@ namespace Rubeus
 			/** @brief	Associated collision engine */
 			ACollisionEngine m_CollisionEngine;
 
-			/** @brief	The World object in use */
-			RWorld & m_World;
-
-			/** @brief	Array of collision Xflags assigned to each gameobject */
-			std::vector<std::string> m_XFlags;
-
-			/** @brief	Array of collision Yflags assigned to each gameobject */
-			std::vector<std::string> m_YFlags;
-
 			/** @brief	The container for all impulses added during a frame render */
 			static std::unordered_map<ACollider *, RML::Vector2D> ImpulsesGeneratedPerImpulseCalculationFrame;
 
@@ -67,7 +58,7 @@ namespace Rubeus
 		public:
 
 			/**
-			 * @fn		APhysicsEngine(GraphicComponents::RWindowComponent & windowComponent, RWorld & world, const float & cellHeight, const float & cellWidth)
+			 * @fn		APhysicsEngine(const GraphicComponents::RWindowComponent & windowComponent, const RWorld & world, const float & cellHeight, const float & cellWidth)
 			 *
 			 * @brief	Constructor
 			 *
@@ -76,7 +67,7 @@ namespace Rubeus
 			 * @param	cellHeight		Cell height of collision grid.
 			 * @param	cellWidth		Cell width of collision grid.
 			 */
-			APhysicsEngine(GraphicComponents::RWindowComponent & windowComponent, RWorld & world, const float & cellHeight, const float & cellWidth);
+			APhysicsEngine(const GraphicComponents::RWindowComponent & windowComponent, const RWorld & world, const float & cellHeight, const float & cellWidth);
 
 			/**
 			 * @fn		~APhysicsEngine()

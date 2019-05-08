@@ -36,17 +36,17 @@ namespace Rubeus
 			std::vector<RGameObject *> m_GameObjects;
 
 			/** @brief	Array of grid unit flags across X axis for each game object */
-			std::vector<AFlag> m_XFlags;
+			std::vector<AFlag *> m_XFlags;
 
 			/** @brief	Array of grid unit flags across Y axis for each game object */
-			std::vector<AFlag> m_YFlags;
+			std::vector<AFlag *> m_YFlags;
 
 			friend class APhysicsEngine;
 
 		public:
 
 			/**
-			 * @fn		ACollisionEngine(std::vector<RGameObject *> & gameObjects, const float & gridHeight, const float & gridWidth, const float & cellHeight, const float & cellWidth);
+			 * @fn		ACollisionEngine(const std::vector<RGameObject *> & gameObjects, const float & gridHeight, const float & gridWidth, const float & cellHeight, const float & cellWidth);
 			 *
 			 * @brief	Constructor
 			 *
@@ -56,7 +56,7 @@ namespace Rubeus
 			 * @param	cellWidth	Width of collision grid cell.
 			 * @param	cellWidth	Width of collision grid cell.
 			 */
-			ACollisionEngine(std::vector<RGameObject *> & gameObjects, const float & gridHeight, const float & gridWidth, const float & cellHeight, const float & cellWidth);
+			ACollisionEngine(const std::vector<RGameObject *> & gameObjects, const float & gridHeight, const float & gridWidth, const float & cellHeight, const float & cellWidth);
 
 			/**
 			 * @fn		~ACollisionEngine()

@@ -89,12 +89,13 @@ namespace Rubeus
 		}
 	}
 
-	void RGameObject::submit(GraphicComponents::RRendererComponent & renderer) const
+	void RGameObject::submit(GraphicComponents::RRendererComponent & renderer)
 	{
 		renderer.push(m_TransformationMatrix);
 
 		if (this->m_IsSubmitted == false)
 		{
+			this->m_IsSubmitted = true;
 			this->m_Sprite->submit(renderer);
 		}
 

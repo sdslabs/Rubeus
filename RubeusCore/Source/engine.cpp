@@ -145,6 +145,11 @@ namespace Rubeus
 			}
 
             lastFrameEndTime = (float)glfwGetTime();
+
+			for (auto & item : m_CurrentLevel->getWorld()->getActiveObjects())
+			{
+				item->m_IsSubmitted = false;
+			}
 		}
 
 		m_StartupLevelName = "";
