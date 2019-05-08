@@ -40,7 +40,7 @@ namespace Rubeus
 			 * @param	transform	The tranformation matrix that displaces the childs of this group.
 			 */
 			RGroup(const RML::Matrix4 & transform);
-
+			RGroup(const RML::Matrix4 & transform, int count, ...);
 			/**
 			 * @fn		~RGroup()
 			 *

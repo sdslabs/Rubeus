@@ -49,6 +49,9 @@ protected:
 				RML::Vector2D(8.5f, 5.0f)),
 			true);
 
+		Rubeus::GraphicComponents::RGroup * test = new Rubeus::GraphicComponents::RGroup(
+			RML::Matrix4::translation(RML::Vector3D(100.0f, 1.0f, 1.0f)),
+			2,leftPaddle, rightPaddle);
 	}
 
 	void end() override

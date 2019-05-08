@@ -39,6 +39,7 @@ if(WIN32)
     # Keep this line if you want to have VLD reports to detect memory leaks  
 	  add_definitions(-DVLD) 
 
+
     target_link_libraries(RubeusCore PUBLIC
         ${OPENGL_LIBRARIES}
 		${VENDOR_WIN_LIBRARIES}
