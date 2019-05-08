@@ -10,48 +10,33 @@ namespace Rubeus
 {
 	namespace GraphicComponents
 	{
-		RLayerComposition::RLayerComposition(const char * pathToUIVertexShader,
-											 const char * pathToUIFragmentShader,
-											 const char * pathToSceneVertexShader,
-											 const char * pathToSceneFragmentShader)
+		RGameScene::RGameScene(const char * pathToUIVertexShader,
+							   const char * pathToUIFragmentShader)
 			:
-			m_UIShader(new RShaderComponent(pathToUIVertexShader, pathToUIFragmentShader)),
-			m_SceneShader(new RShaderComponent(pathToSceneVertexShader, pathToSceneFragmentShader)),
-			m_UILayer(new RUILayer(*m_UIShader)),
-			m_SceneLayer(new RSceneLayer(*m_SceneShader)),
-			m_UIGroup(new RGroup(RML::Matrix4::translation(RML::Vector3D(0.0f, 0.0f, 0.0f)))),
-			m_SceneGroup(new RGroup(RML::Matrix4::translation(RML::Vector3D(0.0f, 0.0f, 0.0f))))
+			m_ProgramShader(new RShaderComponent(pathToUIVertexShader, pathToUIFragmentShader))
+			m_RenderableScene(new RUILayer(*m_ProgramShader))
+			m_UIGroup(new RGroup(RML::Matrix4::translation(RML::Vector3D(0.0f, 0.0f, 0.0f))))
 		{
-			m_UILayer->addGroup(*m_UIGroup);
-			m_SceneLayer->addGroup(*m_SceneGroup);
+			m_RenderableScene->addGroup(*m_UIGroup);
 
 			for (int i = 0; i < 32; i++)
 			{
 				m_TextureIDs[i] = i;
 			}
 
-			m_UIShader->enableShader();
-			m_UIShader->setUniform1iv("textures", m_TextureIDs, 32);
-			m_UIShader->disableShader();
-
-			m_SceneShader->enableShader();
-			m_SceneShader->setUniform1iv("textures", m_TextureIDs, 32);
-			m_SceneShader->disableShader();
+			m_ProgramShader->enableShader();
+			m_ProgramShader->setUniform1iv("textures", m_TextureIDs, 32);
+			m_ProgramShader->disableShader();
 		}
 
-		RLayerComposition::~RLayerComposition()
+		RGameScene::~RGameScene()
 		{
-			delete m_UILayer;
-			delete m_SceneLayer;
-
-			delete m_UIShader;
-			delete m_SceneShader;
-
+			delete m_RenderableScene;
+			delete m_ProgramShader;
 			delete m_UIGroup;
-			delete m_SceneGroup;
 		}
 
-		void RLayerComposition::add(RGameObject * gameObject, bool UIElement)
+		void RGameScene::add(RGameObject * gameObject, bool UIElement)
 		{
 			if (UIElement == true)
 			{
@@ -63,10 +48,9 @@ namespace Rubeus
 			}
 		}
 
-		void RLayerComposition::draw()
+		void RGameScene::draw()
 		{
-			m_SceneLayer->draw();
-			m_UILayer->draw();
+			m_RenderableScene->draw();
 		}
 	}
 }

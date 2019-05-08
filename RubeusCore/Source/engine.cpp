@@ -26,7 +26,7 @@ namespace Rubeus
 			GraphicComponents::EWindowParameters::NON_RESIZABLE_WINDOW,
 			1
 		);
-		m_LayerComposition = new GraphicComponents::RLayerComposition(
+		m_LayerComposition = new GraphicComponents::RGameScene(
 			"Shaders/basic.vert",
 			"Shaders/basic.frag",
 			"Shaders/basic.vert",
@@ -62,7 +62,7 @@ namespace Rubeus
 		if (callCount > 1)
 		{
 			delete m_LayerComposition;
-			m_LayerComposition = new GraphicComponents::RLayerComposition(
+			m_LayerComposition = new GraphicComponents::RGameScene(
 				"Shaders/basic.vert",
 				"Shaders/basic.frag",
 				"Shaders/basic.vert",

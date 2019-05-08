@@ -18,31 +18,19 @@ namespace Rubeus
 	{
 
 		/**
-		 * @class	RLayerComposition
+		 * @class	RGameScene
 		 *
-		 * @brief	A wrapper around UI and Scene layers of the screen.
+		 * @brief	Contains the entire scene on display.
 		 */
-		class RLayerComposition
+		class RGameScene
 		{
 		private:
 
 			/** @brief	The UI layer shader */
-			RShaderComponent * m_UIShader = NULL;
-
-			/** @brief	The Scene layer shader */
-			RShaderComponent * m_SceneShader = NULL;
+			RShaderComponent * m_ProgramShader = NULL;
 
 			/** @brief	The UI layer. Renders only UI elements */
-			RUILayer * m_UILayer = NULL;
-
-			/** @brief	The Scene layer. Renders only scene elements */
-			RSceneLayer * m_SceneLayer = NULL;
-
-			/** @brief	The singular group of all UI objects */
-			RGroup * m_UIGroup = NULL;
-
-			/** @brief	The singular group of all scene objects */
-			RGroup * m_SceneGroup = NULL;
+			RUILayer * m_RenderableScene = NULL;
 
 			/** @brief	Texture IDs to be used by both UI and Scene shaders */
 			GLint m_TextureIDs[32];
@@ -52,7 +40,7 @@ namespace Rubeus
 		public:
 
 			/**
-			 * @fn		RLayerComposition(const char * pathToUIVertexShader, const char * pathToUIFragmentShader, const char * pathToSceneVertexShader, const char * pathToSceneFragmentShader)
+			 * @fn		RGameScene(const char * pathToUIVertexShader, const char * pathToUIFragmentShader, const char * pathToSceneVertexShader, const char * pathToSceneFragmentShader)
 			 *
 			 * @brief	Constructor
 			 *
@@ -61,15 +49,15 @@ namespace Rubeus
 			 * @param	pathToSceneVertexShader		Path to vertex shader for the Scene layer.
 			 * @param	pathToSceneFragmentShader	Path to fragment shader for the Scene layer.
 			 */
-			RLayerComposition(const char * pathToUIVertexShader, const char * pathToUIFragmentShader,
+			RGameScene(const char * pathToUIVertexShader, const char * pathToUIFragmentShader,
 							  const char * pathToSceneVertexShader, const char * pathToSceneFragmentShader);
 
 			/**
-			 * @fn		~RLayerComposition()
+			 * @fn		~RGameScene()
 			 *
 			 * @brief	Destructor
 			 */
-			~RLayerComposition();
+			~RGameScene();
 
 			/**
 			 * @fn		void add(RGameObject * gameObject, bool UIElement = false)

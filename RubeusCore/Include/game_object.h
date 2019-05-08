@@ -6,10 +6,13 @@
 
 #pragma once
 
+#include <cstdarg>
+
 #include <rubeus_maths_library.h>
 #include <entity_object.h>
 #include <sprite_object.h>
 #include <texture_object.h>
+#include <renderer_component.h>
 #include <master_component.h>
 #include <awerere_physics_object.h>
 #include <awerere_physics_material.h>
@@ -65,7 +68,7 @@ namespace Rubeus
 		bool m_GeneratesHit = false;
 
 		/**
-		 * @fn		RGameObject(std::string name, RLevel * levelName, GraphicComponents::RSprite & sprite, bool enablePhysics = false, Awerere::ACollider * collider = NULL, bool generatesHit = false, const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial())
+		 * @fn		RGameObject(std::string name, RLevel * levelName, GraphicComponents::RSprite & sprite, RML::Matrix4 transform, bool enablePhysics = false, Awerere::ACollider * collider = NULL, bool generatesHit = false, const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial(), int count = 0, ...)
 		 *
 		 * @brief	Constructor. Uses images as textures.
 		 * @warning	All pointers passed in will be owned by the game object.
@@ -74,18 +77,24 @@ namespace Rubeus
 		 * @param	name				Name of this game object.
 		 * @param	levelName			Name of level that uses this object.
 		 * @param	sprite				Sprite object that this object renders as on the screen.
+		 * @param	transform			Transform matrix that positions this object.
 		 * @param	enablePhysics		Whether this object reacts to physical elements.
 		 * @param	generatesHit		Whether the object generates hit events. Default is false.
 		 * @param	physicsMat			Provide a physics material to be used to respond to hit events. Defaults to DefaultPhysicsMat.
+		 * @param	childCount			Number of child objects.
+		 * @param	...					Pass by references of child objects.
 		 */
 		RGameObject(
 			std::string name,
 			RLevel * levelName,
 			GraphicComponents::RSprite & sprite,
+			RML::Matrix4 transform,
 			bool enablePhysics = false,
 			Awerere::ACollider * collider = NULL,
 			bool generatesHit = false,
-			const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial()
+			const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial(),
+			int childCount = 0,
+			...
 		);
 
 		/**
@@ -94,6 +103,8 @@ namespace Rubeus
 		 * @brief	Destructor
 		 */
 		~RGameObject();
+
+		void submit(GraphicComponents::RRendererComponent & renderer) const;
 
 		/**
 		 * @fn		virtual void begin()
@@ -132,7 +143,7 @@ namespace Rubeus
 		/**
 		 * @fn		RGameObject & add(RGameObject * gameObject)
 		 *
-		 * @brief	Adds a game object as the children of this object
+		 * @brief	Adds a game object as the child of this object
 		 * @warning	Do not manually delete passed in pointers. This object intends to take ownership of the passed in renderable object.
 		 *
 		 * @param	gameObject	The game object to be added to this group.

@@ -14,16 +14,20 @@ namespace Rubeus
 	RGameObject::RGameObject(
 		std::string name,
 		RLevel * levelName,
-		GraphicComponents::RSprite& sprite,
+		GraphicComponents::RSprite & sprite,
+		RML::Matrix4 transform,
 		bool enablePhysics,
-		Awerere::ACollider* collider,
+		Awerere::ACollider * collider,
 		bool generatesHit,
-		const Awerere::APhysicsMaterial& physicsMat
+		const Awerere::APhysicsMaterial & physicsMat,
+		int childCount = 0,
+		...
 	)
 		:
 		m_Name(name),
 		m_ContainingLevel(levelName),
 		m_Sprite(&sprite),
+		m_TransformationMatrix(transform),
 		m_PhysicsObject(enablePhysics == true ? new Awerere::APhysicsObject(physicsMat, enablePhysics, collider, m_Sprite) : NULL),
 		m_ThisTicks(false),
 		m_UsesTexture(true),
@@ -31,6 +35,16 @@ namespace Rubeus
 		m_GeneratesHit(generatesHit)
 	{
 		InstantiatedGameObjects.insert(std::pair<std::string, RGameObject *>(name, this));
+
+		// Populate the children array
+		va_list list;
+
+		va_start(list, childCount);
+
+		for (int arg = 0; arg < childCount; ++arg)
+			this->add(va_arg(list, RGameObject *));
+
+		va_end(list);
 
 		if (enablePhysics == true && m_PhysicsObject == NULL)
 		{
@@ -70,6 +84,28 @@ namespace Rubeus
 		}
 	}
 
+	void RGameObject::submit(GraphicComponents::RRendererComponent & renderer) const
+	{
+		renderer.push(m_TransformationMatrix);
+
+		for (auto child : m_Children)
+		{
+			if (child->m_IsGroup == false)
+			{
+				child->m_Sprite->submit(renderer);
+			}
+			else
+			{
+				for (auto groupChild : (dynamic_cast<RGroup *>(child))->m_Children)
+				{
+					groupChild->m_Sprite->submit(renderer);
+				}
+			}
+		}
+
+		renderer.pop();
+	}
+
 	void RGameObject::begin()
 	{
 		// Leave this empty
@@ -83,6 +119,13 @@ namespace Rubeus
 	void RGameObject::onHit(RGameObject * hammer, RGameObject * nail, const Awerere::ACollideData & collisionData)
 	{
 		// Leave this empty
+	}
+
+	RGameObject & RGameObject::add(RGameObject * gameObject)
+	{
+		m_Children.push_back(gameObject);
+
+		return *this;
 	}
 
 	void RGameObject::onMessage(Message * msg)

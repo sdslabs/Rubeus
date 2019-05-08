@@ -7,6 +7,7 @@
 #pragma once
 
 #include <vector>
+#include <cstdarg>
 
 #include <rubeus_maths_library.h>
 #include <renderable_object.h>

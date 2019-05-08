@@ -6,16 +6,15 @@
 
 #include <group_object.h>
 
-
 namespace Rubeus
 {
 	namespace GraphicComponents
 	{
-
 		RGroup::RGroup(const RML::Matrix4 & transform)
 			: m_TransformationMatrix(transform)
 		{
 		}
+
 		RGroup::RGroup(const RML::Matrix4 & transform, int count = 0, ...)
 			: m_TransformationMatrix(transform)
 		{
