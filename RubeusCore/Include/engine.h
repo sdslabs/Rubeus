@@ -12,7 +12,7 @@
 #include <input_manager.h>
 #include <audio_manager_component.h>
 #include <awerere_physics_engine.h>
-#include <layer_composition_object.h>
+#include <game_scene.h>
 #include <world.h>
 #include <timer_component.h>
 #include <window_component.h>

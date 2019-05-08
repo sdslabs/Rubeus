@@ -7,22 +7,26 @@
 #include <iostream>
 #include <string>
 #include <unordered_map>
+#include <initializer_list>
 
 // Rubeus Macros
-#define REGISTERGAMECLASS(x) 									  	 												 \
-public:x(std::string name, 															                                 \
-    Rubeus::RLevel * levelName,																						 \
-    Rubeus::GraphicComponents::RSprite * sprite,																	 \
-    bool enablePhysics = false,																						 \
-    Rubeus::Awerere::ACollider* collider = NULL,																	 \
-    bool generatesHit = false,																						 \
-    const Rubeus::Awerere::APhysicsMaterial & physicsMat = Rubeus::Awerere::APhysicsMaterial()) 					 \
-: RGameObject(name, levelName, *sprite, enablePhysics, collider, generatesHit, physicsMat) {}						 \
-																													 \
-	void begin() override;																							 \
-	void onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awerere::ACollideData& collisionData) override; \
-	void onMessage(Rubeus::Message* msg) override;																	 \
-	void tick() override;																							 \
+#define REGISTERGAMECLASS(x)																									  \
+public:x(																														  \
+	std::string name,																											  \
+	Rubeus::RLevel * levelName,																									  \
+	Rubeus::GraphicComponents::RSprite & sprite,																				  \
+	RML::Matrix4 transform,																										  \
+	bool enablePhysics = false,																									  \
+	Rubeus::Awerere::ACollider * collider = NULL,																				  \
+	bool generatesHit = false,																									  \
+	const Rubeus::Awerere::APhysicsMaterial & physicsMat = Rubeus::Awerere::APhysicsMaterial(),									  \
+	int childCount = 0,																											  \
+	std::initializer_list<RGameObject *> children = {})																			  \
+	: RGameObject(name, levelName, sprite, transform, enablePhysics, collider, generatesHit, physicsMat, childCount, children) {} \
+	   void begin() override;																									  \
+	   void onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awerere::ACollideData& collisionData) override;		  \
+	   void onMessage(Rubeus::Message* msg) override;																			  \
+	   void tick() override;																									  \
 
 #define REGISTERLEVELCLASS(x)                                      \
 public:x(std::string name)                                         \
@@ -69,7 +73,8 @@ void onEnd() override;											   \
 #include <sprite_object.h>
 #include <static_sprite_object.h>
 #include <timer_component.h>
-#include <ui_layer_object.h>
+#include <main_layer.h>
+#include <level.h>
 #include <message_system.h>
 #include <texture_object.h>
 #include <audio_manager_component.h>

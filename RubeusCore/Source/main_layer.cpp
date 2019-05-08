@@ -1,16 +1,18 @@
 /**
- * @file		Source/scene_layer_object.cpp.
+ * @file		Source/main_layer.cpp.
  *
- * @brief	Defines the Scene layer object
+ * @brief	Implements the main layer class
  */
 
-#include <scene_layer_object.h>
+#include <main_layer.h>
+
+#include <game_object.h>
 
 namespace Rubeus
 {
 	namespace GraphicComponents
 	{
-		RSceneLayer::RSceneLayer(RShaderComponent& shader)
+		RMainLayer::RMainLayer(RShaderComponent& shader)
 			: m_Renderer(new RGuerrillaRendererComponent()), m_Shader(shader)
 		{
 			m_Shader.enableShader();
@@ -18,29 +20,29 @@ namespace Rubeus
 			m_Shader.disableShader();
 		}
 
-		RSceneLayer::~RSceneLayer()
+		RMainLayer::~RMainLayer()
 		{
 			delete m_Renderer;
 		}
 
-		RLayer & RSceneLayer::addGroup(RGroup & group)
+		RLayer & RMainLayer::addGameObject(RGameObject * gameObject)
 		{
-			m_Groups.push_back(&group);
+			m_GameObjects.push_back(gameObject);
 
 			return *this;
 		}
 
-		void RSceneLayer::draw()
+		void RMainLayer::draw()
 		{
 			m_Shader.enableShader();
 
 			m_Renderer->begin();
 
-			for (size_t i = 0; i < m_Groups.size(); i++)
+			for (size_t i = 0; i < m_GameObjects.size(); i++)
 			{
-				if (m_Groups[i] != NULL)
+				if (m_GameObjects[i] != NULL)
 				{
-					m_Groups[i]->submit(*m_Renderer);
+					m_GameObjects[i]->submit(*m_Renderer);
 				}
 			}
 

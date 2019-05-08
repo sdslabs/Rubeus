@@ -6,8 +6,6 @@
 
 #pragma once
 
-#include <cstdarg>
-
 #include <rubeus_maths_library.h>
 #include <entity_object.h>
 #include <sprite_object.h>
@@ -21,6 +19,8 @@
 
 namespace Rubeus
 {
+	class RMainLayer;
+
 	/**
 	 * @class	RGameObject
 	 *
@@ -49,6 +49,8 @@ namespace Rubeus
 		/** @brief	The transform used to place the children of this game object */
 		RML::Matrix4 m_TransformationMatrix;
 
+		RGameObject * m_Parent = NULL;
+
 		/** @brief	Vector array of child objects. */
 		std::vector<RGameObject *> m_Children;
 
@@ -67,8 +69,10 @@ namespace Rubeus
 		/** @brief	Whether this gameobject generates hit events */
 		bool m_GeneratesHit = false;
 
+		bool m_IsSubmitted = false;
+
 		/**
-		 * @fn		RGameObject(std::string name, RLevel * levelName, GraphicComponents::RSprite & sprite, RML::Matrix4 transform, bool enablePhysics = false, Awerere::ACollider * collider = NULL, bool generatesHit = false, const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial(), int count = 0, ...)
+		 * @fn		RGameObject(std::string name, RLevel * levelName, GraphicComponents::RSprite & sprite, RML::Matrix4 transform, bool enablePhysics = false, Awerere::ACollider * collider = NULL, bool generatesHit = false, const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial(), int childCount = 0, RGameObject*[] children = NULL)
 		 *
 		 * @brief	Constructor. Uses images as textures.
 		 * @warning	All pointers passed in will be owned by the game object.
@@ -82,7 +86,7 @@ namespace Rubeus
 		 * @param	generatesHit		Whether the object generates hit events. Default is false.
 		 * @param	physicsMat			Provide a physics material to be used to respond to hit events. Defaults to DefaultPhysicsMat.
 		 * @param	childCount			Number of child objects.
-		 * @param	...					Pass by references of child objects.
+		 * @param	children			Classic C Array of child objects.
 		 */
 		RGameObject(
 			std::string name,
@@ -94,7 +98,7 @@ namespace Rubeus
 			bool generatesHit = false,
 			const Awerere::APhysicsMaterial & physicsMat = Awerere::APhysicsMaterial(),
 			int childCount = 0,
-			...
+			std::initializer_list<RGameObject *> children = {}
 		);
 
 		/**

@@ -70,7 +70,7 @@ namespace Rubeus
 			ACollider(RML::Vector2D position = RML::Vector2D(0.0f, 0.0f));
 
 			/**
-			 * @fn		ACollider(const RML::Vector2D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial)
+			 * @fn		ACollider(const RML::Vector2D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial, const int & zIndex = 0)
 			 *
 			 * @brief	Constructor
 			 *
@@ -78,7 +78,7 @@ namespace Rubeus
 			 * @param	velocity		The velocity of the collider.
 			 * @param	physicsMat	The physics material of this collider. Default is DefualtMaterial
 			 */
-			ACollider(const RML::Vector2D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial);
+			ACollider(const RML::Vector2D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat = APhysicsMaterial::DefaultMaterial, const int & zIndex = 0);
 
 			/**
 			 * @fn		~ACollider()

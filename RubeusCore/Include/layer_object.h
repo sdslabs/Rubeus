@@ -41,16 +41,16 @@ namespace Rubeus
 			virtual ~RLayer() = default;
 
 			/**
-			 * @fn		virtual RLayer & addGroup(Group & group) = 0
+			 * @fn		virtual RLayer & addGameObject(RGameObject * gameObject) = 0
 			 *
-			 * @brief	Adds a group object to this layer
+			 * @brief	Adds a game object to this layer
 			 * @warning	No removal capability.
 			 *
-			 * @param	group	The group object to pass in.
+			 * @param	gameObject	The game object to pass in.
 			 *
-			 * @return	Reference to this layer. Provides chaining group additions. E.g. layer.addgroup(g1).addgroup(g2);
+			 * @return	Reference to this layer. Provides chaining group additions. E.g. layer.addGameObject(g1).addGameObject(g2);
 			 */
-			virtual RLayer & addGroup(RGroup & group) = 0;
+			virtual RLayer & addGameObject(RGameObject * gameObject) = 0;
 
 			/**
 			 * @fn		virtual void draw() = 0

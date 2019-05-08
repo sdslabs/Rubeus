@@ -20,14 +20,14 @@ namespace Rubeus
 		{
 		}
 
-		ACollider::ACollider(const RML::Vector2D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat)
+		ACollider::ACollider(const RML::Vector2D & position, const RML::Vector2D & velocity, const APhysicsMaterial & physicsMat, const int & zIndex)
 			:
 			m_Position(position),
 			m_Momentum(velocity),
 			m_Force(RML::Vector2D(0.0f, 0.0f)),
 			m_PhysicsMaterial(physicsMat),
 			m_Type(EColliderType::NO_COLLIDER),
-			m_ZIndex(0)
+			m_ZIndex(zIndex)
 		{
 		}
 

@@ -28,8 +28,6 @@ namespace Rubeus
 		);
 		m_LayerComposition = new GraphicComponents::RGameScene(
 			"Shaders/basic.vert",
-			"Shaders/basic.frag",
-			"Shaders/basic.vert",
 			"Shaders/basic.frag"
 		);
 		m_Timer = new UtilityComponents::RTimer(10);
@@ -63,8 +61,6 @@ namespace Rubeus
 		{
 			delete m_LayerComposition;
 			m_LayerComposition = new GraphicComponents::RGameScene(
-				"Shaders/basic.vert",
-				"Shaders/basic.frag",
 				"Shaders/basic.vert",
 				"Shaders/basic.frag"
 			);

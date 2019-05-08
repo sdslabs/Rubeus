@@ -1,8 +1,8 @@
 /**
-* @file     Include/scene_layer_object.h
-*
-* @brief    Declares the Scene Layer
-*/
+ * @file		Include/main_layer.h.
+ *
+ * @brief	Declares the main layer class
+ */
 
 #pragma once
 
@@ -19,50 +19,40 @@ namespace Rubeus
 	namespace GraphicComponents
 	{
 		/**
-		 * @class	RSceneLayer
+		 * @class	RMainLayer
 		 *
-		 * @brief	Rendering Layer used for drawing the game scene (non-UI) to the screen.
+		 * @brief	Rendering Layer used for drawing UI elements to the screen.
 		 */
-		class RSceneLayer : public RLayer
+		class RMainLayer : public RLayer
 		{
 		private:
-			/** @brief	Vector array of all the groups handles by this layer */
-			std::vector<RGroup *> m_Groups;
-
 			/** @brief	The renderer alloted to this layer */
 			RGuerrillaRendererComponent * m_Renderer;
+
+			std::vector<RGameObject *> m_GameObjects;
 
 			/** @brief	The shader for this layer to use */
 			RShaderComponent & m_Shader;
 
 		public:
 			/**
-			 * @fn		RSceneLayer(RShaderComponent& shader)
+			 * @fn		RMainLayer(RShaderComponent& shader)
 			 *
 			 * @brief	Constructor. Initialises the layer's shader.
 			 * @warning	Do not pass in dereferenced pointers
 			 *
 			 * @param	shader	The shader to be alloted to this layer.
 			 */
-			RSceneLayer(RShaderComponent& shader);
+			RMainLayer(RShaderComponent& shader);
 
 			/**
-			 * @fn		virtual ~RUILayer()
+			 * @fn		virtual ~RMainLayer()
 			 *
 			 * @brief	Destructor
 			 */
-			virtual ~RSceneLayer();
+			virtual ~RMainLayer();
 
-			/**
-			 * @fn		RLayer & addGroup(RGroup & group) override
-			 *
-			 * @brief	Adds the group object to this layer.
-			 *
-			 * @param	group	The group object to add.
-			 *
-			 * @return	Reference to this layer. Allows chaining multiple group additions. E.g.: layer.addGoup(g1).addGroup(g2);
-			 */
-			RLayer & addGroup(RGroup & group) override;
+			RLayer & addGameObject(RGameObject * gameObject) override;
 
 			/**
 			 * @fn		void draw() override

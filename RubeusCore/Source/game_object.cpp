@@ -20,8 +20,8 @@ namespace Rubeus
 		Awerere::ACollider * collider,
 		bool generatesHit,
 		const Awerere::APhysicsMaterial & physicsMat,
-		int childCount = 0,
-		...
+		int childCount,
+		std::initializer_list<RGameObject *> children
 	)
 		:
 		m_Name(name),
@@ -36,19 +36,24 @@ namespace Rubeus
 	{
 		InstantiatedGameObjects.insert(std::pair<std::string, RGameObject *>(name, this));
 
-		// Populate the children array
-		va_list list;
-
-		va_start(list, childCount);
-
-		for (int arg = 0; arg < childCount; ++arg)
-			this->add(va_arg(list, RGameObject *));
-
-		va_end(list);
+		if (children.size() != 0)
+		{
+			// Populate the children array
+			for (auto & child : children)
+			{
+				if (this->m_Name == child->m_Name)
+				{
+					ASSERT("Warning! " + name + " has the same name as its child");
+				}
+				
+				this->add(child);
+				child->m_Parent = this;
+			}
+		}
 
 		if (enablePhysics == true && m_PhysicsObject == NULL)
 		{
-			ERRORLOG("Invalid game object. Physics has been enabled. Specify a physics object for " + name);
+			ERRORLOG("Invalid game object. Physics has been enabled for an object. Specify the physics object for " + name);
 		}
 		
 		if (m_PhysicsObject != NULL)
@@ -90,16 +95,10 @@ namespace Rubeus
 
 		for (auto child : m_Children)
 		{
-			if (child->m_IsGroup == false)
+			if (child->m_IsSubmitted == false)
 			{
+				child->m_IsSubmitted = true;
 				child->m_Sprite->submit(renderer);
-			}
-			else
-			{
-				for (auto groupChild : (dynamic_cast<RGroup *>(child))->m_Children)
-				{
-					groupChild->m_Sprite->submit(renderer);
-				}
 			}
 		}
 
