@@ -43,6 +43,12 @@ namespace Rubeus
 		/** @brief	Physics object that handles collisions/response */
 		Awerere::APhysicsObject * m_PhysicsObject;
 
+		/** @brief	The transform used to place the children of this game object */
+		RML::Matrix4 m_TransformationMatrix;
+
+		/** @brief	Vector array of child objects. */
+		std::vector<RGameObject *> m_Children;
+
 		/** @brief	Whether this gameobject ticks */
 		bool m_ThisTicks;
 
@@ -117,11 +123,23 @@ namespace Rubeus
 		virtual void onHit(RGameObject * hammer, RGameObject * nail, const Awerere::ACollideData & collisionData);
 
 		/**
-		 * @fn		inline void addToTickQueue()
+		 * @fn		inline void enableTick()
 		 *
 		 * @brief	Set this object for tick by update function
 		 */
-		inline void addToTickQueue() { m_ThisTicks = true; }
+		inline void enableTick() { m_ThisTicks = true; }
+
+		/**
+		 * @fn		RGameObject & add(RGameObject * gameObject)
+		 *
+		 * @brief	Adds a game object as the children of this object
+		 * @warning	Do not manually delete passed in pointers. This object intends to take ownership of the passed in renderable object.
+		 *
+		 * @param	gameObject	The game object to be added to this group.
+		 *
+		 * @return	Reference to this group object. Allows chaining add() calls. E.g. object.add(r1).add(r2);
+		 */
+		RGameObject & add(RGameObject * gameObject);
 
 		/**
 		 * @fn		virtual void onMessage(Message * msg)

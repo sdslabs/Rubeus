@@ -72,14 +72,17 @@ namespace Rubeus
 
 	void RGameObject::begin()
 	{
+		// Leave this empty
 	}
 
 	void RGameObject::tick()
 	{
+		// Leave this empty
 	}
 
 	void RGameObject::onHit(RGameObject * hammer, RGameObject * nail, const Awerere::ACollideData & collisionData)
 	{
+		// Leave this empty
 	}
 
 	void RGameObject::onMessage(Message * msg)
