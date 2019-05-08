@@ -50,6 +50,6 @@ namespace Rubeus
 
 	void RLevel::addGameObject(RGameObject * gameObject)
 	{
-		m_World->add(*gameObject);
+		m_World->add(gameObject);
 	}
 }

@@ -27,9 +27,9 @@ namespace Rubeus
 		// Objcet deletion is handled by the RLevel object associated with this RWorld
 	}
 
-	void RWorld::add(RGameObject & gameObject)
+	void RWorld::add(RGameObject * gameObject)
 	{
-		m_ActiveGameObjects.push_back(&gameObject);
+		m_ActiveGameObjects.push_back(gameObject);
 	}
 
 	void RWorld::add(const std::vector<RGameObject *> & gameObjects)

@@ -93,7 +93,12 @@ namespace Rubeus
 	{
 		renderer.push(m_TransformationMatrix);
 
-		for (auto child : m_Children)
+		if (this->m_IsSubmitted == false)
+		{
+			this->m_Sprite->submit(renderer);
+		}
+
+		for (auto & child : m_Children)
 		{
 			if (child->m_IsSubmitted == false)
 			{

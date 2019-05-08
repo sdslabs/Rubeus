@@ -55,13 +55,13 @@ namespace Rubeus
 		void tick();
 
 		/**
-		 * @fn		void add(RGameObject & gameObject)
+		 * @fn		void add(RGameObject * gameObject)
 		 *
 		 * @brief	Add a gameobject to the world
 		 *
 		 * @param	gameObject	The gameobject to be added.
 		 */
-		void add(RGameObject & gameObject);
+		void add(RGameObject * gameObject);
 
 		/**
 		 * @fn		void add(const std::vector<RGameObject *> & gameObjects)

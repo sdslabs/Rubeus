@@ -26,7 +26,7 @@ namespace Rubeus
 			GraphicComponents::EWindowParameters::NON_RESIZABLE_WINDOW,
 			1
 		);
-		m_LayerComposition = new GraphicComponents::RGameScene(
+		m_GameScene = new GraphicComponents::RGameScene(
 			"Shaders/basic.vert",
 			"Shaders/basic.frag"
 		);
@@ -37,7 +37,7 @@ namespace Rubeus
 	REngine::~REngine()
 	{
 		delete m_PhysicsEngine;
-		delete m_LayerComposition;
+		delete m_GameScene;
 		delete m_Window;
 		delete m_Timer;
 		delete m_Loader;
@@ -59,8 +59,8 @@ namespace Rubeus
 		// allocated level specific components need to be closed and restarted.
 		if (callCount > 1)
 		{
-			delete m_LayerComposition;
-			m_LayerComposition = new GraphicComponents::RGameScene(
+			delete m_GameScene;
+			m_GameScene = new GraphicComponents::RGameScene(
 				"Shaders/basic.vert",
 				"Shaders/basic.frag"
 			);
@@ -76,7 +76,7 @@ namespace Rubeus
 				if (item.second->m_ContainingLevel->m_Name == level.m_Name)
 				{
 					level.addGameObject(item.second);
-					m_LayerComposition->add(item.second);
+					m_GameScene->add(item.second);
 				}
 				else
 				{
@@ -130,7 +130,7 @@ namespace Rubeus
 			m_PhysicsEngine->update(1.0f / 60.0f);
 
 			// Draw objects
-			m_LayerComposition->draw();
+			m_GameScene->draw();
 
 			// Switch windows draw and display buffers
 			m_Window->updateWindow();
@@ -170,7 +170,7 @@ namespace Rubeus
 				LOG("Running Engine checks...");
 				if (m_PhysicsEngine == NULL ||
 					m_Window == NULL ||
-					m_LayerComposition == NULL ||
+					m_GameScene == NULL ||
 					m_Timer == NULL ||
 					m_Loader == NULL)
 				{

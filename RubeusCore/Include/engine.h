@@ -36,7 +36,7 @@ namespace Rubeus
 		GraphicComponents::RWindowComponent * m_Window = NULL;
 
 		/** @brief	The ref to layers in use (for renderering) */
-		GraphicComponents::RGameScene * m_LayerComposition = NULL;
+		GraphicComponents::RGameScene * m_GameScene = NULL;
 
 		/** @brief	The ref to the timer in use */
 		UtilityComponents::RTimer * m_Timer = NULL;
