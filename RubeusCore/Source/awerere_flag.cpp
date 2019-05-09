@@ -12,22 +12,20 @@ namespace Rubeus
 	{
 
 		AFlag::AFlag(const int & bufferSize)
+			: m_Data(new int[bufferSize]), m_Size(bufferSize)
 		{
-			for (int i = 0; i < bufferSize; i++)
-			{
-				m_Data.push_back(false);
-			}
 		}
 
 		AFlag::~AFlag()
 		{
+			delete[] m_Data;
 		}
 
 		bool AFlag::operator*(AFlag & other)
 		{
 			int accum = 0;
 
-			for (size_t i = 0; i < m_Data.size(); i++)
+			for (size_t i = 0; i < m_Size; i++)
 			{
 				accum = accum + (this->m_Data[i] * other.m_Data[i]);
 			}

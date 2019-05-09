@@ -11,27 +11,21 @@ namespace Rubeus
 	namespace GraphicComponents
 	{
 		RRenderableObject::RRenderableObject(RML::Vector3D * position, RML::Vector2D * size, RML::Vector4D * color)
-			:m_Position(*position), m_Size(*size), m_Color(*color)
+			:m_Position(position), m_Size(size), m_Color(color)
 		{
 			setUV();
 		}
 
 		RRenderableObject::~RRenderableObject()
 		{
+			delete m_Position;
+			delete m_Size;
+			delete m_Color;
 		}
 
 		void RRenderableObject::submit(RRendererComponent & renderer) const
 		{
 			renderer.submit(this);
-		}
-
-		RRenderableObject::RRenderableObject(RML::Vector3D position, RML::Vector2D size, RML::Vector4D color)
-			:
-			m_Position(position),
-			m_Size(size),
-			m_Color(color)
-		{
-			setUV();
 		}
 
 		inline void RRenderableObject::setUV()

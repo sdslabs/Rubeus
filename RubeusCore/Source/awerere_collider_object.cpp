@@ -105,8 +105,8 @@ namespace Rubeus
 
 			// Update sprite with the same change in position to allow sprites having
 			// different dimensions than its collider.
-			m_Sprite->m_Position.x += deltaX;
-			m_Sprite->m_Position.y += deltaY;
+			m_Sprite->m_Position->x += deltaX;
+			m_Sprite->m_Position->y += deltaY;
 
 			// Update collider shape specific properties
 			selfUpdate(deltaX, deltaY);

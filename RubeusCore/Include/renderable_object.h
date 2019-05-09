@@ -56,13 +56,13 @@ namespace Rubeus
 			unsigned int m_ObjectID;
 
 			/** @brief	The position of the sprite */
-			RML::Vector3D & m_Position;
+			RML::Vector3D * m_Position;
 
 			/** @brief	The size of the sprite */
-			RML::Vector2D & m_Size;
+			RML::Vector2D * m_Size;
 
 			/** @brief	The color of the sprite */
-			RML::Vector4D & m_Color;
+			RML::Vector4D * m_Color;
 
 			/** @brief	The UV/texture coordinates of the current texture being utilised */
 			std::vector<RML::Vector2D> m_UV;
@@ -105,7 +105,7 @@ namespace Rubeus
 			 *
 			 * @return	The position.
 			 */
-			inline const RML::Vector3D & getPosition() const { return m_Position; }
+			inline const RML::Vector3D & getPosition() const { return *m_Position; }
 
 			/**
 			 * @fn		inline const RML::Vector2D& RRenderableObject::getSize()
@@ -114,7 +114,7 @@ namespace Rubeus
 			 *
 			 * @return	The size.
 			 */
-			inline const RML::Vector2D & getSize() const { return m_Size; }
+			inline const RML::Vector2D & getSize() const { return *m_Size; }
 
 			/**
 			 * @fn		inline const RML::Vector4D& RRenderableObject::getColor()
@@ -123,7 +123,7 @@ namespace Rubeus
 			 *
 			 * @return	The color.
 			 */
-			inline const RML::Vector4D & getColor() const { return m_Color; }
+			inline const RML::Vector4D & getColor() const { return *m_Color; }
 
 			/**
 			 * @fn		inline const std::vector<RML::Vector2D> & getUV() const
@@ -144,22 +144,6 @@ namespace Rubeus
 			inline const GLuint getTextureID() const { return (m_Texture == NULL) ? 0 : m_Texture->getID(); }
 
 		protected:
-			/**
-			 * @fn		RRenderableObject(RML::Vector3D position = RML::Vector3D(0.0f, 0.0f, 0.0f),
-                                          RML::Vector2D size = RML::Vector2D(0.0f, 0.0f),
-                                          RML::Vector4D color = RML::Vector4D(0.0f, 0.0f, 0.0f, 0.0f))
-			 *
-			 * @brief	Constructor
-			 * @warning	To be called only by child classes
-             *
-             * @param   position    The default position
-             * @param   size        The default size
-             * @param   color       The default color
-			 */
-			RRenderableObject(RML::Vector3D position = RML::Vector3D(0.0f, 0.0f, 0.0f),
-                              RML::Vector2D size = RML::Vector2D(0.0f, 0.0f),
-                              RML::Vector4D color = RML::Vector4D(0.0f, 0.0f, 0.0f, 0.0f));
-
 			/**
 			 * @fn		inline void setUV()
 			 *

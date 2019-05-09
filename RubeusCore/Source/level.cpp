@@ -16,7 +16,7 @@ namespace Rubeus
 	RLevel::RLevel(std::string name)
 		:
 		m_World(new RWorld()),
-		m_InputManager(new RInputManager(*Rubeus::RGame::getEngine()->getCurrentWindow())),
+		m_InputManager(new RInputManager(Rubeus::RGame::getEngine()->getCurrentWindow())),
 		m_AudioManager(new AudioComponents::RSymphony()),
 		m_Name(name)
 	{

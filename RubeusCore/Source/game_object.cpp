@@ -77,12 +77,6 @@ namespace Rubeus
 	{
 		InstantiatedGameObjects[m_Name] = NULL;
 
-		if (m_IsGroup == false)
-		{
-			delete m_Sprite->m_Texture;
-			delete m_Sprite;
-		}
-
 		if (m_HasPhysics == true)
 		{
 			delete m_PhysicsObject;

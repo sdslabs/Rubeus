@@ -32,8 +32,8 @@ namespace Rubeus
 		RInputManager::KeyMap[key] = action == GLFW_RELEASE ? 0 : 1;
 	}
 
-	RInputManager::RInputManager(const GraphicComponents::RWindowComponent & window)
-		: m_IsEnabled(true), m_Window(window)
+	RInputManager::RInputManager(const GraphicComponents::RWindowComponent * window)
+		: m_IsEnabled(true), m_Window(*window)
 	{
 		addKeysToKeyMap();
 

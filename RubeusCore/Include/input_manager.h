@@ -128,13 +128,13 @@ namespace Rubeus
 		static RML::Vector2D MouseScroll;
 
 		/**
-		 * @fn		RInputManager(const GraphicComponents::RWindowComponent & window)
+		 * @fn		RInputManager(const GraphicComponents::RWindowComponent * window)
 		 *
 		 * @brief	Constructor
 		 *
 		 * @param	window	The window object in current use.
 		 */
-		RInputManager(const GraphicComponents::RWindowComponent & window);
+		RInputManager(const GraphicComponents::RWindowComponent * window);
 
 		/**
 		 * @fn		~RInputManager()

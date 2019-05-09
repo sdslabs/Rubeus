@@ -22,7 +22,8 @@ namespace Rubeus
 		private:
 
 		public:
-			std::vector<bool> m_Data;
+			int m_Size;
+			int * m_Data;
 
 			/**
 			 * @fn		AFlag(const int & bufferSize = 1)
@@ -62,7 +63,7 @@ namespace Rubeus
 			 *
 			 * @return	The length of this flag (not in bytes, but count).
 			 */
-			inline size_t getLength() const { return m_Data.size(); }
+			inline size_t getLength() const { return m_Size; }
 		};
 	}
 }

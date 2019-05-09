@@ -8,7 +8,7 @@
 #include <map>
 
 #include <renderable_object.h>
-#include <group_object.h>
+#include <game_object.h>
 #include <guerrilla_renderer_component.h>
 
 namespace Rubeus

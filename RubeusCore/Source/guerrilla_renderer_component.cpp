@@ -85,11 +85,11 @@ namespace Rubeus
 
 		void RGuerrillaRendererComponent::submit(const RRenderableObject * renderable)
 		{
-			const RML::Vector3D & position = renderable->getPosition();
-			const RML::Vector2D & size = renderable->getSize();
-			const RML::Vector4D & color = renderable->getColor();
-			const std::vector<RML::Vector2D> & uv = renderable->getUV();
-			const GLuint & textureID = renderable->getTextureID();
+			const RML::Vector3D position = renderable->getPosition();
+			const RML::Vector2D size = renderable->getSize();
+			const RML::Vector4D color = renderable->getColor();
+			const std::vector<RML::Vector2D> uv = renderable->getUV();
+			const GLuint textureID = renderable->getTextureID();
 
 			float tempTID = 0.0f;
 
