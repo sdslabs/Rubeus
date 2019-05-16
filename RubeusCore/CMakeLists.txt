@@ -27,11 +27,35 @@ add_definitions(-DGLFW_DLL)
 # This adds the source to this project's executable.
 add_executable (RubeusCore "RubeusCore.cpp" "RubeusCore.h" ${SOURCES})
 
+
+include_directories(PUBLIC
+    ${OPENGL_INCLUDE_DIRS}
+    ../vendor/include/
+	../vendor/source/
+)
+
 target_include_directories(RubeusCore PUBLIC
     ./Include
     ./Game
-    ${OPENGL_INCLUDE_DIRS}
-    ../vendor/include/
+)
+
+
+set(imgui_root ../vendor/source/ImGui)
+add_library(imgui STATIC
+    ${imgui_root}/imgui.h
+    ${imgui_root}/imstb_rectpack.h 
+    ${imgui_root}/imstb_textedit.h 
+    ${imgui_root}/imstb_truetype.h
+    ${imgui_root}/imgui_internal.h
+    ${imgui_root}/imgui.cpp
+    ${imgui_root}/imgui_demo.cpp
+    ${imgui_root}/imgui_draw.cpp
+    ${imgui_root}/imgui_widgets.cpp
+    ${imgui_root}/imgui_impl_glfw.cpp
+    ${imgui_root}/imgui_impl_glfw.h
+	${imgui_root}/imgui_impl_opengl3.cpp
+    ${imgui_root}/imgui_impl_opengl3.h
+	../vendor/include/
 )
 
 if(WIN32)
@@ -44,6 +68,7 @@ if(WIN32)
         ${OPENGL_LIBRARIES}
 		${VENDOR_WIN_LIBRARIES}
         -lstdc++fs
+		imgui
     )
 
 	add_custom_command(TARGET RubeusCore POST_BUILD
@@ -64,6 +89,7 @@ if(UNIX)
         ${ILU_LIBRARIES}
         ${VENDOR_LINUX_LIBRARIES}
         -lstdc++fs
+		imgui
     )
 endif(UNIX)
 
