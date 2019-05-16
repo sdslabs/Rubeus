@@ -66,7 +66,7 @@ add_library(imgui STATIC
 	${imgui_root}/imgui_impl_opengl3.cpp
     ${imgui_root}/imgui_impl_opengl3.h
 	../vendor/include/
-
+)
 
 if(WIN32)
     # Remove this line if you want to remove Visual Leak Detection(VLD) reports in Debug mode.
