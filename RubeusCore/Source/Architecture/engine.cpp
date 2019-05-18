@@ -42,6 +42,7 @@ namespace Rubeus
 		delete m_PhysicsEngine;
 		delete m_GameScene;
 		delete m_Window;
+		delete i_Window;
 		delete m_Timer;
 		delete m_Loader;
 	}
@@ -125,6 +126,7 @@ namespace Rubeus
 
 			// Clear window buffer
 			m_Window->clearWindow();
+			i_Window->clearWindow();
 
 			// Tick the entire world once
 			getWorld()->tick();
@@ -137,6 +139,7 @@ namespace Rubeus
 
 			// Switch windows draw and display buffers
 			m_Window->updateWindow();
+			i_Window->updateWindow();
 
 			// Evaluate and display the frame times
 			m_Timer->evaluateFrames();
