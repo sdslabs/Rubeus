@@ -35,6 +35,8 @@ namespace Rubeus
 		/** @brief	The ref to Window in current use */
 		GraphicComponents::RWindowComponent * m_Window = NULL;
 
+		GraphicComponents::RWindowComponent * i_Window = NULL;
+
 		/** @brief	The ref to layers in use (for renderering) */
 		GraphicComponents::RGameScene * m_GameScene = NULL;
 

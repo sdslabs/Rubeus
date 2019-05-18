@@ -29,6 +29,16 @@ namespace Rubeus
 			GraphicComponents::EWindowParameters::NON_RESIZABLE_WINDOW,
 			1
 		);
+
+		i_Window = new GraphicComponents::RWindowComponent(
+			"ImGui",
+			1280,
+			720,
+			GraphicComponents::EWindowParameters::WINDOWED_MODE,
+			GraphicComponents::EWindowParameters::NON_RESIZABLE_WINDOW,
+			1
+		);
+		
 		m_GameScene = new GraphicComponents::RGameScene(
 			"Shaders/basic.vert",
 			"Shaders/basic.frag"
@@ -42,6 +52,7 @@ namespace Rubeus
 		delete m_PhysicsEngine;
 		delete m_GameScene;
 		delete m_Window;
+		delete i_Window;
 		delete m_Timer;
 		delete m_Loader;
 	}
@@ -115,7 +126,7 @@ namespace Rubeus
         float lastFrameEndTime = (float)glfwGetTime();
 
 		ImGui::CreateContext();
-		ImGui_ImplGlfw_InitForOpenGL(m_Window->m_Window, true);
+		ImGui_ImplGlfw_InitForOpenGL(i_Window->m_Window, true);
 		ImGui_ImplOpenGL3_Init("#version 130");
 		ImGui::StyleColorsDark();
 		bool show_demo_window = true;
@@ -133,6 +144,7 @@ namespace Rubeus
 
 			// Clear window buffer
 			m_Window->clearWindow();
+			i_Window->clearWindow();
 
 			ImGui_ImplOpenGL3_NewFrame();
 			ImGui_ImplGlfw_NewFrame();
@@ -188,6 +200,7 @@ namespace Rubeus
 
 			// Switch windows draw and display buffers
 			m_Window->updateWindow();
+			i_Window->updateWindow();
 
 			// Evaluate and display the frame times
 			m_Timer->evaluateFrames();
