@@ -20,7 +20,6 @@ namespace Rubeus
 
 	REngine::REngine()
 	{
-		UtilityComponents::RLogger::Init();
 		m_Window = new GraphicComponents::RWindowComponent(
 			"Hello World",
 			1280,

@@ -23,7 +23,7 @@ file(GLOB_RECURSE VENDOR_LINUX_LIBRARIES
 
 add_definitions(-DGLEW_STATIC)
 add_definitions(-DGLFW_DLL)
-
+add_definitions(-DIMGUI_IMPL_OPENGL_LOADER_GLEW)
 # This adds the source to this project's executable.
 add_executable (RubeusCore "RubeusCore.cpp" "RubeusCore.h" ${SOURCES})
 

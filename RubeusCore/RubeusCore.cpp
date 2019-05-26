@@ -13,6 +13,12 @@ int main()
 	using namespace RML;
 	using namespace Awerere;
 
+
+	RLogger::CreateLogFile();
+	RLogger::Init();
+	RProjectManager m_ProjectManager;
+	m_ProjectManager.run();
+
 	RGame * currentGame = RGame::getActiveGame();
 
 	// startupLevel : std::string contains the startup level name. Defined in user_init.cpp

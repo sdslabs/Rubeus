@@ -10,7 +10,7 @@ namespace Rubeus
 	RGame::RGame()
 		: m_StartupLevel("")
 	{
-		Rubeus::UtilityComponents::RLogger::CreateLogFile();
+
 		m_Engine = new Rubeus::REngine();
 		CurrentGame = this;
 	}
