@@ -44,7 +44,7 @@ void onEnd() override;											   \
 #ifdef _DEBUG
 #ifdef VLD
 #ifndef NO_VLD
-//#include <vld.h>
+#include <vld.h>
 #endif
 #endif
 #endif

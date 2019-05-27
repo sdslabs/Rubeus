@@ -36,14 +36,6 @@ namespace Rubeus
 	{
 	}
 
-	void RLevel::killAliveObjects()
-	{
-		for (auto & item : m_World->getActiveObjects())
-		{
-			delete item;
-		}
-	}
-
 	void RLevel::onEnd()
 	{
 	}

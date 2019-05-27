@@ -71,6 +71,12 @@ protected:
 
 	void end() override
 	{
+		delete matchBall;
+		delete matchBall2;
+		delete leftPaddle;
+		delete rightPaddle;
+		delete sprite;
+		delete texture;
 	}
 
 public:
