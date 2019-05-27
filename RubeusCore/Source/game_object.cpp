@@ -25,7 +25,7 @@ namespace Rubeus
 	)
 		:
 		m_Name(name),
-		m_ContainingLevel(levelName),
+		m_ParentLevel(levelName),
 		m_Sprite(&sprite),
 		m_TransformationMatrix(transform),
 		m_PhysicsObject(enablePhysics == true ? new Awerere::APhysicsObject(physicsMat, enablePhysics, collider, m_Sprite) : NULL),
@@ -68,7 +68,7 @@ namespace Rubeus
 	}
 
 	RGameObject::RGameObject()
-		: m_ContainingLevel(Rubeus::RGame::getActiveLevel())
+		: m_ParentLevel(Rubeus::RGame::getActiveLevel())
 	{
 		m_IsGroup = true;
 	}
@@ -77,7 +77,7 @@ namespace Rubeus
 	{
 		InstantiatedGameObjects[m_Name] = NULL;
 
-		if (m_HasPhysics == true)
+		if (m_PhysicsObject != NULL)
 		{
 			delete m_PhysicsObject;
 		}
