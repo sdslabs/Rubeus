@@ -3,12 +3,13 @@
 
 cmake_minimum_required (VERSION 3.8)
 
-file(GLOB_RECURSE SOURCES
+file(GLOB_RECURSE RUBEUS_SOURCES
     Source/*.cpp
-    Game/* .cpp
+    Game/*.cpp
 )
 
 file(GLOB_RECURSE HEADERS
+    Source/**
 	../vendor/include/*.h
 	../vendor/include/*.hpp
 )
@@ -25,11 +26,18 @@ add_definitions(-DGLEW_STATIC)
 add_definitions(-DGLFW_DLL)
 
 # This adds the source to this project's executable.
-add_executable (RubeusCore "RubeusCore.cpp" "RubeusCore.h" ${SOURCES})
+add_executable (RubeusCore "RubeusCore.cpp" "RubeusCore.h" ${RUBEUS_SOURCES} ${HEADERS})
 
 target_include_directories(RubeusCore PUBLIC
-    ./Include
     ./Game
+    ./Source/Architecture
+    ./Source/AudioComponents
+    ./Source/Awerere
+    ./Source/GraphicComponents
+    ./Source/InputManager
+    ./Source/MessageSystem
+    ./Source/RML
+    ./Source/UtilityComponents
     ${OPENGL_INCLUDE_DIRS}
     ../vendor/include/
 )
@@ -37,8 +45,7 @@ target_include_directories(RubeusCore PUBLIC
 if(WIN32)
     # Remove this line if you want to remove Visual Leak Detection(VLD) reports in Debug mode.
     # Keep this line if you want to have VLD reports to detect memory leaks  
-	 add_definitions(-DVLD) 
-
+	add_definitions(-DVLD) 
 
     target_link_libraries(RubeusCore PUBLIC
         ${OPENGL_LIBRARIES}
