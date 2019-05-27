@@ -73,7 +73,7 @@ namespace Rubeus
 		{
 			if (item.first != "")
 			{
-				if (item.second->m_ContainingLevel->m_Name == level.m_Name)
+				if (item.second->m_ParentLevel->m_Name == level.m_Name)
 				{
 					level.addGameObject(item.second);
 					m_GameScene->add(item.second);
@@ -157,7 +157,6 @@ namespace Rubeus
 
 	void REngine::killAliveLevel()
 	{
-		m_CurrentLevel->killAliveObjects();
 		delete m_CurrentLevel;
 	}
 

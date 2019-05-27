@@ -55,7 +55,7 @@ namespace Rubeus
 		 *
 		 * @brief	Destructor
 		 */
-		~RLevel();
+		virtual ~RLevel();
 
 		/**
 		 * @fn		virtual void begin()
@@ -70,13 +70,6 @@ namespace Rubeus
 		 * @brief	User overridable script called on end of this level
 		 */
 		virtual void onEnd();
-
-		/**
-		 * @fn		void killAliveObjects()
-		 *
-		 * @brief	Delete active objects
-		 */
-		void killAliveObjects();
 
 		/**
 		 * @fn		void addGameObject(RGameObject * gameObject)
