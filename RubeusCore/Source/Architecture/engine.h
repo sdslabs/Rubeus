@@ -47,6 +47,9 @@ namespace Rubeus
 		/** @brief	The level currently in play */
 		RLevel * m_CurrentLevel = NULL;
 
+		/** @brief The ref to message system */
+		RMessageSystem * m_MessageSystem = NULL;
+
 		friend class RLevel;
 
 	public:
@@ -168,5 +171,7 @@ namespace Rubeus
 		 * @param	msg	The message object sent across.
 		 */
 		void onMessage(Message * msg) override;
+
+		void func();
 	};
 }
