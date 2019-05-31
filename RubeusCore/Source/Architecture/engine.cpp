@@ -42,7 +42,6 @@ namespace Rubeus
 		delete m_Window;
 		delete m_Timer;
 		delete m_Loader;
-		//delete ooh;
 	}
 
 	void REngine::load(RLevel & level)
