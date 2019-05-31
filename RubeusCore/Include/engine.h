@@ -171,7 +171,5 @@ namespace Rubeus
 		 * @param	msg	The message object sent across.
 		 */
 		void onMessage(Message * msg) override;
-
-		void func();
 	};
 }
