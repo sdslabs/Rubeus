@@ -65,10 +65,10 @@ namespace Rubeus
 
 		public:
 			/** @brief	Mouse positions */
-			static int m_X, m_Y;
+			static int MouseX, Y;
 
 			/** @brief	GLFW Window object */
-			GLFWwindow * m_Window;
+			GLFWwindow * m_GLFWWindow;
 
 			/**
 			 * @fn		bool RWindowComponent::initWindow(const char *title, int width, int height, EWindowParameters windowMode = EWindowParameters::WINDOWED_MODE, EWindowParameters windowType = EWindowParameters::RESIZABLE_WINDOW);
@@ -195,7 +195,7 @@ namespace Rubeus
 			 * @brief	Handles the message received
 			 * @warning	Only to be used by the message system
 			 *
-			 * @param	msg	The message object recieved.
+			 * @param	msg	The message object received.
 			 */
 			void onMessage(Message * msg) override;
 
