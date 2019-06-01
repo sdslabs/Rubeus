@@ -14,6 +14,8 @@ namespace Rubeus
 
 		RLoaderComponent::RLoaderComponent()
 		{
+			ilInit();
+			iluInit();
 		}
 
 		RLoaderComponent::~RLoaderComponent()
@@ -61,15 +63,11 @@ namespace Rubeus
 
 		GraphicComponents::Image RLoaderComponent::loadImageFile(const char * path)
 		{
-			ilInit();
-			iluInit();
-			ilutInit();
-
 			initImageLoader();
 
 			ASSERT(std::string("Loading image: ") + std::string(path));
 
-			DevILCall(ilLoadImage(path));
+			DevILCall(ilLoadImage((ILstring) path));
 			DevILCall(iluFlipImage());
 
 			return GraphicComponents::Image(
