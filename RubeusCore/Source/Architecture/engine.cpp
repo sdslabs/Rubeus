@@ -106,6 +106,7 @@ namespace Rubeus
 			item->begin();
 		}
 
+		m_MessageSystem->addMessage(this ,Rubeus::RGame::getEngine(), Rubeus::EMessageCode::system_ok);
 		// Send load level calls asynchronously
 		std::thread th(&RMessageSystem::evaluateMessages, *m_MessageSystem);
 		th.detach();
@@ -117,10 +118,10 @@ namespace Rubeus
 		// Main game loop
 		while (m_Window->closed() == false)
 		{
-			while (true)
+			while(true)
 			{
-				if (glfwGetTime() - lastFrameEndTime >= 1.0f / 60.0f)
-					break;
+				if(glfwGetTime() - lastFrameEndTime >= 1.0f / 60.0f)
+				break;
 			}
 
 			// Clear window buffer
@@ -172,40 +173,40 @@ namespace Rubeus
 	{
 		switch (msg->m_Type)
 		{
-		case system_ok:
-		{
-			LOG("Running Engine checks...");
-			if (m_PhysicsEngine == NULL ||
-				m_Window == NULL ||
-				m_GameScene == NULL ||
-				m_Timer == NULL ||
-				m_Loader == NULL)
+			case system_ok:
 			{
-				ERRORLOG("Core systems not active");
+				LOG("Running Engine checks...");
+				if (m_PhysicsEngine == NULL ||
+					m_Window == NULL ||
+					m_GameScene == NULL ||
+					m_Timer == NULL ||
+					m_Loader == NULL)
+				{
+					ERRORLOG("Core systems not active");
+				}
+				else
+				{
+					SUCCESS("All systems initialised");
+				}
 			}
-			else
-			{
-				SUCCESS("All systems initialised");
-			}
-		}
-		break;
+			break;
 
-		case load_level:
-		{
-			LOG("Loading level: " + std::string(getCurrentLevel()->getName()));
-
-			auto search = RLevel::InstantiatedLevels.find(std::any_cast<std::string>(msg->m_Data));
-
-			if (search != RLevel::InstantiatedLevels.end())
+			case load_level:
 			{
-				this->load(*search->second);
+				LOG("Loading level: " + std::string(getCurrentLevel()->getName()));
+
+				auto search = RLevel::InstantiatedLevels.find(std::any_cast<std::string>(msg->m_Data));
+
+				if (search != RLevel::InstantiatedLevels.end())
+				{
+					this->load(*search->second);
+				}
+				else
+				{
+					ERRORLOG("Level " + search->first + "not Found");
+				}
 			}
-			else
-			{
-				ERRORLOG("Level " + search->first + "not Found");
-			}
-		}
-		break;
+			break;
 		}
 	}
 }
