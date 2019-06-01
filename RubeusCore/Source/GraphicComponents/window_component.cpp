@@ -14,8 +14,8 @@ namespace Rubeus
 {
 	namespace GraphicComponents
 	{
-		int RWindowComponent::m_X;
-		int RWindowComponent::m_Y;
+		int RWindowComponent::MouseX;
+		int RWindowComponent::Y;
 
 		void getGLFWErrorLog(int error, const char * description)
 		{
@@ -57,12 +57,12 @@ namespace Rubeus
 
 		bool RWindowComponent::closed()
 		{
-			return glfwWindowShouldClose(m_Window);
+			return glfwWindowShouldClose(m_GLFWWindow);
 		}
 
 		void RWindowComponent::setWindowTitle(const char * title)
 		{
-			glfwSetWindowTitle(m_Window, title);
+			glfwSetWindowTitle(m_GLFWWindow, title);
 			ASSERT("Window title set to: " + (std::string) title);
 		}
 
@@ -97,7 +97,7 @@ namespace Rubeus
 		void RWindowComponent::updateWindow()
 		{
 			glfwPollEvents();
-			glfwSwapBuffers(m_Window);
+			glfwSwapBuffers(m_GLFWWindow);
 		}
 
 		bool RWindowComponent::initWindow(const char * title, int width, int height, EWindowParameters windowMode, EWindowParameters windowType)
@@ -134,13 +134,13 @@ namespace Rubeus
 			// Create a window of specified mode, title, width and height
 			if (windowMode == EWindowParameters::WINDOWED_MODE)
 			{
-				m_Window = glfwCreateWindow(width, height, title, NULL, NULL);
+				m_GLFWWindow = glfwCreateWindow(width, height, title, NULL, NULL);
 			}
 			else
 			{
 				if (windowMode == EWindowParameters::FULLSCREEN_MODE)
 				{
-					m_Window = glfwCreateWindow(width, height, title, glfwGetPrimaryMonitor(), NULL);
+					m_GLFWWindow = glfwCreateWindow(width, height, title, glfwGetPrimaryMonitor(), NULL);
 				}
 				else
 				{
@@ -148,7 +148,7 @@ namespace Rubeus
 				}
 			}
 
-			if (!m_Window)
+			if (!m_GLFWWindow)
 			{
 				glfwTerminate();
 				ERRORLOG("Failed to create window");
@@ -158,23 +158,23 @@ namespace Rubeus
 
 
 			// Set the new window as the current context
-			glfwMakeContextCurrent(m_Window);
-			glfwSetWindowUserPointer(m_Window, this);
+			glfwMakeContextCurrent(m_GLFWWindow);
+			glfwSetWindowUserPointer(m_GLFWWindow, this);
 
 			SUCCESS("Window creation successful");
 
 			glfwSetErrorCallback(getGLFWErrorLog);
-			glfwSetWindowCloseCallback(m_Window, windowCloseCallback);
-			glfwSetFramebufferSizeCallback(m_Window, windowResizeCallback);
+			glfwSetWindowCloseCallback(m_GLFWWindow, windowCloseCallback);
+			glfwSetFramebufferSizeCallback(m_GLFWWindow, windowResizeCallback);
 
 
-			glfwSetCursorPosCallback(m_Window, cursorPositionCallback);
-			glfwSetMouseButtonCallback(m_Window, mouseButtonCallback);
-			glfwSetInputMode(m_Window, GLFW_STICKY_MOUSE_BUTTONS, 1);
-			glfwSetScrollCallback(m_Window, scrollCallback);
+			glfwSetCursorPosCallback(m_GLFWWindow, cursorPositionCallback);
+			glfwSetMouseButtonCallback(m_GLFWWindow, mouseButtonCallback);
+			glfwSetInputMode(m_GLFWWindow, GLFW_STICKY_MOUSE_BUTTONS, 1);
+			glfwSetScrollCallback(m_GLFWWindow, scrollCallback);
 
-			glfwSetKeyCallback(m_Window, keyCallback);
-			glfwSetInputMode(m_Window, GLFW_STICKY_KEYS, 1);
+			glfwSetKeyCallback(m_GLFWWindow, keyCallback);
+			glfwSetInputMode(m_GLFWWindow, GLFW_STICKY_KEYS, 1);
 
 
 			if (glewInit() != GLEW_OK)
