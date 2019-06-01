@@ -177,7 +177,7 @@ namespace Rubeus
                      x;																												\
                      while(ILenum error = ilGetError())																				\
                      {																												\
-                         ERRORLOG(std::string("DevIL Error: ") + iluErrorString(error));											\
+                         ERRORLOG(std::string("DevIL Error (")+ std::to_string(error) + "): " + iluErrorString(error));				\
                          if(error == ILU_OUT_OF_MEMORY)																				\
                          {																											\
 							 std::cin.get();																						\
