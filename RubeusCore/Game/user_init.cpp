@@ -8,7 +8,9 @@ protected:
 	paddle* leftPaddle;
 	paddle* rightPaddle;
 	ball* matchBall;
-	Rubeus::GraphicComponents::RTexture* texture;
+	Rubeus::GraphicComponents::RTexture* texture1;
+	Rubeus::GraphicComponents::RTexture* texture2;
+	Rubeus::GraphicComponents::RTexture* texture3;
 
 	Rubeus::GraphicComponents::RSprite* sprite1;
 	Rubeus::GraphicComponents::RSprite* sprite2;
@@ -22,10 +24,12 @@ protected:
 
 		playLevel = new play_level("play_level");
 
-		texture = new RTexture("Assets/test9.png");
-		sprite1 = new RSprite(0.0f, 0.0f, 0.5f, 3.0f, RML::Vector4D(0.5f, 0.5f, 0.5f, 1.0f));
-		sprite2 = new RSprite(0.0f, 0.0f, 0.5f, 3.0f, RML::Vector4D(0.5f, 0.5f, 0.5f, 1.0f));
-		sprite3 = new RSprite(0.0f, 0.0f, 0.5f, 3.0f, RML::Vector4D(0.5f, 0.5f, 0.5f, 1.0f));
+		texture1 = new RTexture("Assets/test9.png");
+		texture2 = new RTexture("Assets/test9.png");
+		texture3 = new RTexture("Assets/test9.png");
+		sprite1 = new RSprite(0.0f, 0.0f, 0.5f, 3.0f, texture1);
+		sprite2 = new RSprite(0.0f, 0.0f, 0.5f, 3.0f, texture2);
+		sprite3 = new RSprite(0.0f, 0.0f, 0.5f, 3.0f, texture3);
 
 		leftPaddle = new paddle(
 			"left_paddle",
@@ -70,7 +74,9 @@ protected:
 		delete sprite1;
 		delete sprite2;
 		delete sprite3;
-		delete texture;
+		delete texture1;
+		delete texture2;
+		delete texture3;
 	}
 
 public:
