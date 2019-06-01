@@ -41,7 +41,8 @@ namespace Rubeus
 			// Populate the children array
 			for (auto & child : children)
 			{
-				if (this->m_Name == child->m_Name)
+				if ((!child) &&
+					(this->m_Name == child->m_Name))
 				{
 					ASSERT("Warning! " + name + " has the same name as its child");
 				}

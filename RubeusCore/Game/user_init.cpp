@@ -8,7 +8,6 @@ protected:
 	paddle* leftPaddle;
 	paddle* rightPaddle;
 	ball* matchBall;
-	ball* matchBall2;
 	Rubeus::GraphicComponents::RTexture* texture;
 
 	Rubeus::GraphicComponents::RSprite* sprite;
@@ -28,7 +27,7 @@ protected:
 			"left_paddle",
 			playLevel,
 			*sprite,
-			RML::Matrix4::translation(sprite->getPosition()),
+			RML::Matrix4::translation(RML::Vector3D(0.0f, 0.0f, 0.0f)),
 			true,
 			new ABoxCollider(RML::Vector2D(0.0f, 0.0f),
 				RML::Vector2D(0.5f, 3.0f)),
@@ -39,40 +38,29 @@ protected:
 			"right_paddle",
 			playLevel,
 			*sprite,
-			RML::Matrix4::translation(sprite->getPosition()),
+			RML::Matrix4::translation(RML::Vector3D(5.0f, 0.0f, 0.0f)),
 			true,
-			new ABoxCollider(RML::Vector2D(15.5f, 0.0f),
-				RML::Vector2D(16.0f, 3.0f)),
-			true);
-
-		matchBall2 = new ball(
-			"ball2",
-			playLevel,
-			*sprite,
-			RML::Matrix4::translation(sprite->getPosition()),
-			true,
-			new ABoxCollider(RML::Vector2D(8.0f, 4.5f),
-				RML::Vector2D(8.5f, 5.0f)),
-			true,
-			APhysicsMaterial::DefaultMaterial);
+			new ABoxCollider(RML::Vector2D(5.0f, 0.0f),
+				RML::Vector2D(5.5f, 3.0f)),
+			true
+		);
 
 		matchBall = new ball(
 			"ball",
 			playLevel,
 			*sprite,
-			RML::Matrix4::translation(sprite->getPosition()),
+			RML::Matrix4::translation(RML::Vector3D(7.0f, 0.0f, 0.0f)),
 			true,
-			new ABoxCollider(RML::Vector2D(8.0f, 4.5f),
-				RML::Vector2D(8.5f, 5.0f)),
+			new ABoxCollider(RML::Vector2D(7.0f, 0.0f),
+				RML::Vector2D(7.5f, 3.0f)),
 			true,
-			APhysicsMaterial::DefaultMaterial,
-			1, { matchBall2 });
+			APhysicsMaterial::DefaultMaterial
+		);
 	}
 
 	void end() override
 	{
 		delete matchBall;
-		delete matchBall2;
 		delete leftPaddle;
 		delete rightPaddle;
 		delete sprite;
