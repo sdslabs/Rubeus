@@ -22,7 +22,7 @@ protected:
 		playLevel = new play_level("play_level");
 
 		texture = new RTexture("Assets/test9.png");
-		sprite = new RSprite(0.0f, 0.0f, 0.5f, 3.0f, texture);
+		sprite = new RSprite(0.0f, 0.0f, 0.5f, 3.0f, RML::Vector4D(0.5f, 0.5f, 0.5f, 1.0f));
 
 		leftPaddle = new paddle(
 			"left_paddle",

@@ -30,7 +30,7 @@ namespace Rubeus
 			:
 			m_CollisionEngine(world.getActiveObjects(), (float)windowComponent.getHeight(), (float)windowComponent.getWidth(), cellHeight, cellWidth)
 		{
-			m_CollisionEngine.m_GameObjects = world.getActiveObjects();
+			*m_CollisionEngine.m_GameObjects = world.getActiveObjects();
 		}
 
 		APhysicsEngine::~APhysicsEngine()
