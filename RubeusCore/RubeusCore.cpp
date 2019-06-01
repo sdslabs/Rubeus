@@ -20,14 +20,19 @@ int main()
 
 	while (true)
 	{
+		if (currentGame->getEngine()->getCurrentWindow()->closed() == true)
+		{
+			break;
+		}
+
 		currentGame->init();
 
 		/*
-		 * Any running level should call Engine->end() at the end of the game which
-		 * changes currentEngine->m_StartupLevelName to "" and in turn also ends the
-		 * level selection loop as seen below. Setting currentEngine->m_StartupLevelName to
-		 * "" directly will also work.
-		 */
+			* Any running level should call Engine->end() at the end of the game which
+			* changes currentEngine->m_StartupLevelName to "" and in turn also ends the
+			* level selection loop as seen below. Setting currentEngine->m_StartupLevelName to
+			* "" directly will also work.
+			*/
 		if (currentGame->getEngine()->m_StartupLevelName == "")
 		{
 			LOG("Startup level name was erased");
@@ -52,6 +57,5 @@ int main()
 	delete currentGame;
 
 	RLogger::CloseLogFile();
-
 	return 0;
 }
