@@ -8,9 +8,13 @@ protected:
 	paddle* leftPaddle;
 	paddle* rightPaddle;
 	ball* matchBall;
-	Rubeus::GraphicComponents::RTexture* texture;
+	Rubeus::GraphicComponents::RTexture* texture1;
+	Rubeus::GraphicComponents::RTexture* texture2;
+	Rubeus::GraphicComponents::RTexture* texture3;
 
-	Rubeus::GraphicComponents::RSprite* sprite;
+	Rubeus::GraphicComponents::RSprite* sprite1;
+	Rubeus::GraphicComponents::RSprite* sprite2;
+	Rubeus::GraphicComponents::RSprite* sprite3;
 
 	void init() override
 	{
@@ -20,13 +24,17 @@ protected:
 
 		playLevel = new play_level("play_level");
 
-		texture = new RTexture("Assets/test9.png");
-		sprite = new RSprite(0.0f, 0.0f, 0.5f, 3.0f, RML::Vector4D(0.5f, 0.5f, 0.5f, 1.0f));
+		texture1 = new RTexture("Assets/test9.png");
+		texture2 = new RTexture("Assets/test9.png");
+		texture3 = new RTexture("Assets/test9.png");
+		sprite1 = new RSprite(0.0f, 0.0f, 0.5f, 3.0f, texture1);
+		sprite2 = new RSprite(0.0f, 0.0f, 0.5f, 3.0f, texture2);
+		sprite3 = new RSprite(0.0f, 0.0f, 0.5f, 3.0f, texture3);
 
 		leftPaddle = new paddle(
 			"left_paddle",
 			playLevel,
-			*sprite,
+			*sprite1,
 			RML::Matrix4::translation(RML::Vector3D(0.0f, 0.0f, 0.0f)),
 			true,
 			new ABoxCollider(RML::Vector2D(0.0f, 0.0f),
@@ -37,7 +45,7 @@ protected:
 		rightPaddle = new paddle(
 			"right_paddle",
 			playLevel,
-			*sprite,
+			*sprite2,
 			RML::Matrix4::translation(RML::Vector3D(5.0f, 0.0f, 0.0f)),
 			true,
 			new ABoxCollider(RML::Vector2D(5.0f, 0.0f),
@@ -48,7 +56,7 @@ protected:
 		matchBall = new ball(
 			"ball",
 			playLevel,
-			*sprite,
+			*sprite3,
 			RML::Matrix4::translation(RML::Vector3D(7.0f, 0.0f, 0.0f)),
 			true,
 			new ABoxCollider(RML::Vector2D(7.0f, 0.0f),
@@ -63,8 +71,12 @@ protected:
 		delete matchBall;
 		delete leftPaddle;
 		delete rightPaddle;
-		delete sprite;
-		delete texture;
+		delete sprite1;
+		delete sprite2;
+		delete sprite3;
+		delete texture1;
+		delete texture2;
+		delete texture3;
 	}
 
 public:
