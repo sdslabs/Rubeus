@@ -54,7 +54,7 @@ public:
     /// \param Z Z coordinate
     ///
     ////////////////////////////////////////////////////////////
-    Vector3(T X, T Y, T Z);
+    Vector3(T MouseX, T MouseY, T Z);
 
     ////////////////////////////////////////////////////////////
     /// \brief Construct the vector from another type of vector
