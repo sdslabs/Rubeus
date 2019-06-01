@@ -6,6 +6,8 @@
 
 #include <entity_object.h>
 
+#include <typeinfo>
+
 namespace Rubeus
 {
 	int REntity::entityCount = 0;

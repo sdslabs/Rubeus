@@ -141,7 +141,7 @@ namespace Rubeus
 		 *
 		 * @brief	Destructor
 		 */
-		~RInputManager();
+		virtual ~RInputManager();
 
 		/**
 		 * @fn		void addKeyToKeyBinding(const std::string & keyBinding, const EKeyboardKeys & keyName)

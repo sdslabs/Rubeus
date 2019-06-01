@@ -38,7 +38,7 @@ namespace Rubeus
 		std::string m_Name;
 
 		/** @brief	The level context during which this object lives */
-		RLevel * m_ContainingLevel;
+		RLevel * m_ParentLevel;
 
 		/** @brief	Sprite used for the rendering process */
 		GraphicComponents::RSprite * m_Sprite;
