@@ -7,7 +7,7 @@ namespace Rubeus
 			UtilityComponents::RLogger::Init();
 			Rubeus::UtilityComponents::RLogger::CreateLogFile();
 			m_Window = new GraphicComponents::RWindowComponent(
-				"ImGui",
+				"hehehehehe",
 				1280,
 				720,
 				GraphicComponents::EWindowParameters::WINDOWED_MODE,
@@ -24,6 +24,7 @@ namespace Rubeus
 		}
 
 		void RProjectManager::run() {
+			SUCCESS("project window running");
 			//SUCCESS("Running level : " + m_CurrentLevel->m_Name);
 
 			m_Timer->setFrameCounter();
