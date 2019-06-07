@@ -106,7 +106,9 @@ namespace Rubeus
 			item->begin();
 		}
 
+		// Add default system_ok message to the Message_System 
 		m_MessageSystem->addMessage(this ,Rubeus::RGame::getEngine(), Rubeus::EMessageCode::system_ok);
+
 		// Send load level calls asynchronously
 		std::thread th(&RMessageSystem::evaluateMessages, *m_MessageSystem);
 		th.detach();
