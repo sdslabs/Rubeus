@@ -6,6 +6,7 @@
 
 #include <texture_object.h>
 #include <image_object.h>
+#include <game.h>
 
 namespace Rubeus
 {

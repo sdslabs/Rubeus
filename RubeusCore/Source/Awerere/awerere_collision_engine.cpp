@@ -17,10 +17,10 @@ namespace Rubeus
 		ACollisionEngine::ACollisionEngine(const std::vector<RGameObject *> & gameObjects, const float & gridHeight, const float & gridWidth, const float & cellHeight, const float & cellWidth)
 			:
 			m_CollisionGrid(9, 16, 1, 1),
-			m_GameObjects(gameObjects)
+			m_GameObjects(const_cast<std::vector<RGameObject *> *>(&gameObjects))
 		{
 			size_t i = 0;
-			while (i < m_GameObjects.size())
+			while (i < m_GameObjects->size())
 			{
 				m_XFlags.push_back(new AFlag((int)m_CollisionGrid.m_XCount));
 
@@ -28,7 +28,7 @@ namespace Rubeus
 			}
 
 			i = 0;
-			while (i < m_GameObjects.size())
+			while (i < m_GameObjects->size())
 			{
 				m_YFlags.push_back(new AFlag((int)m_CollisionGrid.m_YCount));
 
@@ -51,13 +51,13 @@ namespace Rubeus
 
 		void ACollisionEngine::updateAndAssignFlags(const float & deltaTime)
 		{
-			size_t gameObjectsCount = m_GameObjects.size();
+			size_t gameObjectsCount = m_GameObjects->size();
 
 			for (size_t i = 0; i < gameObjectsCount; i++)
 			{
-				if (m_GameObjects[i]->m_PhysicsObject != NULL)
+				if ((*m_GameObjects)[i]->m_PhysicsObject != NULL)
 				{
-					m_GameObjects[i]->m_PhysicsObject->m_Collider->update(deltaTime);
+					(*m_GameObjects)[i]->m_PhysicsObject->m_Collider->update(deltaTime);
 				}
 
 				checkCollisions(i);
@@ -70,15 +70,15 @@ namespace Rubeus
 			int rightFlag;
 
 			// X AXIS FLAGGING
-			if (m_GameObjects[i]->m_HasPhysics == true)
+			if ((*m_GameObjects)[i]->m_HasPhysics == true)
 			{
-				leftFlag = (int)m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().x / m_CollisionGrid.m_CellWidth;
-				rightFlag = (int)(m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().x + m_GameObjects[i]->m_Sprite->getSize().x) / m_CollisionGrid.m_CellWidth;
+				leftFlag = (int)(*m_GameObjects)[i]->m_PhysicsObject->m_Collider->getPosition().x / m_CollisionGrid.m_CellWidth;
+				rightFlag = (int)((*m_GameObjects)[i]->m_PhysicsObject->m_Collider->getPosition().x + (*m_GameObjects)[i]->m_Sprite->getSize().x) / m_CollisionGrid.m_CellWidth;
 			}
 			else
 			{
-				leftFlag = (int)m_GameObjects[i]->m_Sprite->getPosition().x / m_CollisionGrid.m_CellWidth;
-				rightFlag = (int)(m_GameObjects[i]->m_Sprite->getPosition().x + m_GameObjects[i]->m_Sprite->getSize().x) / m_CollisionGrid.m_CellWidth;
+				leftFlag = (int)(*m_GameObjects)[i]->m_Sprite->getPosition().x / m_CollisionGrid.m_CellWidth;
+				rightFlag = (int)((*m_GameObjects)[i]->m_Sprite->getPosition().x + (*m_GameObjects)[i]->m_Sprite->getSize().x) / m_CollisionGrid.m_CellWidth;
 			}
 
 			for (int p = 0; p < m_CollisionGrid.m_XCount; p++)
@@ -87,15 +87,15 @@ namespace Rubeus
 			}
 
 			// Y AXIS FLAGGING
-			if (m_GameObjects[i]->m_HasPhysics == false)
+			if ((*m_GameObjects)[i]->m_HasPhysics == false)
 			{
-				leftFlag = (int)m_GameObjects[i]->m_Sprite->getPosition().y / m_CollisionGrid.m_CellHeight;
-				rightFlag = (int)(m_GameObjects[i]->m_Sprite->getPosition().y + m_GameObjects[i]->m_Sprite->getSize().y) / m_CollisionGrid.m_CellHeight;
+				leftFlag = (int)(*m_GameObjects)[i]->m_Sprite->getPosition().y / m_CollisionGrid.m_CellHeight;
+				rightFlag = (int)((*m_GameObjects)[i]->m_Sprite->getPosition().y + (*m_GameObjects)[i]->m_Sprite->getSize().y) / m_CollisionGrid.m_CellHeight;
 			}
 			else
 			{
-				leftFlag = (int)m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().y / m_CollisionGrid.m_CellHeight;
-				rightFlag = (int)(m_GameObjects[i]->m_PhysicsObject->m_Collider->getPosition().y + m_GameObjects[i]->m_Sprite->getSize().y) / m_CollisionGrid.m_CellHeight;
+				leftFlag = (int)(*m_GameObjects)[i]->m_PhysicsObject->m_Collider->getPosition().y / m_CollisionGrid.m_CellHeight;
+				rightFlag = (int)((*m_GameObjects)[i]->m_PhysicsObject->m_Collider->getPosition().y + (*m_GameObjects)[i]->m_Sprite->getSize().y) / m_CollisionGrid.m_CellHeight;
 			}
 
 			for (int p = 0; p < m_CollisionGrid.m_YCount; p++)
@@ -108,15 +108,15 @@ namespace Rubeus
 
 		void ACollisionEngine::collisionResolution()
 		{
-			for (size_t i = 0; i < m_GameObjects.size(); i++)
+			for (size_t i = 0; i < (*m_GameObjects).size(); i++)
 			{
-				for (size_t j = i + 1; j < m_GameObjects.size(); j++)
+				for (size_t j = i + 1; j < (*m_GameObjects).size(); j++)
 				{
-					if (( (*m_XFlags[i]) * (*m_XFlags[j]) ) &&
-						( (*m_YFlags[i]) * (*m_YFlags[j]) ) &&
-						(m_GameObjects[i]->m_PhysicsObject->m_Collider->m_ZIndex == m_GameObjects[j]->m_PhysicsObject->m_Collider->m_ZIndex))
+					if (((*m_XFlags[i]) * (*m_XFlags[j])) &&
+						((*m_YFlags[i]) * (*m_YFlags[j])) &&
+						((*m_GameObjects)[i]->m_PhysicsObject->m_Collider->m_ZIndex == (*m_GameObjects)[j]->m_PhysicsObject->m_Collider->m_ZIndex))
 					{
-						narrowPhaseResolution(*m_GameObjects[i], *m_GameObjects[j]);
+						narrowPhaseResolution(*(*m_GameObjects)[i], *(*m_GameObjects)[j]);
 					}
 				}
 			}
