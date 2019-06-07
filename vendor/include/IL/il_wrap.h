@@ -3,7 +3,7 @@
 
 /*#include <il/il.h>
 #include <il/ilu.h>*/
-#include <IL/ilut.h>  // Probably only have to #include this one
+#include <il/ilut.h>  // Probably only have to #include this one
 
 #ifdef _MSC_VER
 	#ifndef _IL_WRAP_BUILD_LIB
@@ -29,44 +29,44 @@ public:
 	ILboolean	ActiveImage(ILuint);
 	ILboolean	ActiveLayer(ILuint);
 	ILboolean	ActiveMipmap(ILuint);
-	ILboolean	Clear(void);
-	ILvoid		ClearColour(ILclampf, ILclampf, ILclampf, ILclampf);
+	ILboolean	Clear(ILvoid);
+	ILvoid		ClearColour(ILubyte, ILubyte, ILubyte, ILubyte);
 	ILboolean	Convert(ILenum);
 	ILboolean	Copy(ILuint);
-	ILboolean	Default(void);
-	ILboolean	Flip(void);
-	ILboolean	SwapColours(void);
+	ILboolean	Default(ILvoid);
+	ILboolean	Flip(ILvoid);
+	ILboolean	SwapColours(ILvoid);
 	ILboolean	Resize(ILuint, ILuint, ILuint);
 	ILboolean	TexImage(ILuint, ILuint, ILuint, ILubyte, ILenum, ILenum, ILvoid*);
 
 	
 	// Image handling
-	ILvoid		Bind(void) const;
+	ILvoid		Bind(ILvoid) const;
 	ILvoid		Bind(ILuint);
-	ILvoid		Close(void) { this->Delete(); }
-	ILvoid		Delete(void);
+	ILvoid		Close(ILvoid) { this->Delete(); }
+	ILvoid		Delete(ILvoid);
 	ILvoid		iGenBind();
-	ILenum		PaletteAlphaIndex();
+
 
 	// Image characteristics
-	ILuint		Width(void);
-	ILuint		Height(void);
-	ILuint		Depth(void);
-	ILubyte		Bpp(void);
-	ILubyte		Bitpp(void);
-	ILenum		PaletteType(void);
-	ILenum		Format(void);
-	ILenum		Type(void);
-	ILuint		NumImages(void);
-	ILuint		NumMipmaps(void);
-	ILuint		GetId(void) const;
-        ILenum      GetOrigin(void);
-	ILubyte		*GetData(void);
-	ILubyte		*GetPalette(void);
+	ILuint		Width(ILvoid);
+	ILuint		Height(ILvoid);
+	ILuint		Depth(ILvoid);
+	ILubyte		Bpp(ILvoid);
+	ILubyte		Bitpp(ILvoid);
+	ILenum		PaletteType(ILvoid);
+	ILenum		Format(ILvoid);
+	ILenum		Type(ILvoid);
+	ILuint		NumImages(ILvoid);
+	ILuint		NumMipmaps(ILvoid);
+	ILuint		GetId(ILvoid) const;
+    ILenum      GetOrigin(ILvoid);
+	ILubyte		*GetData(ILvoid);
+	ILubyte		*GetPalette(ILvoid);
 
 
 	// Rendering
-	ILuint		BindImage(void);
+	ILuint		BindImage(ILvoid);
 	ILuint		BindImage(ILenum);
 
 
@@ -111,12 +111,12 @@ public:
 class ilOgl
 {
 public:
-	static ILvoid		Init(void);
+	static ILvoid		Init(ILvoid);
 	static GLuint		BindTex(ilImage &);
 	static ILboolean	Upload(ilImage &, ILuint);
 	static GLuint		Mipmap(ilImage &);
-	static ILboolean	Screen(void);
-	static ILboolean	Screenie(void);
+	static ILboolean	Screen(ILvoid);
+	static ILboolean	Screenie(ILvoid);
 };
 #endif//ILUT_USE_OPENGL
 
@@ -125,7 +125,7 @@ public:
 class ilAlleg
 {
 public:
-	static ILvoid	Init(void);
+	static ILvoid	Init(ILvoid);
 	static BITMAP	*Convert(ilImage &);
 };
 #endif//ILUT_USE_ALLEGRO
@@ -135,7 +135,7 @@ public:
 class ilWin32
 {
 public:
-	static ILvoid		Init(void);
+	static ILvoid		Init(ILvoid);
 	static HBITMAP		Convert(ilImage &);
 	static ILboolean	GetClipboard(ilImage &);
 	static ILvoid		GetInfo(ilImage &, BITMAPINFO *Info);
@@ -175,7 +175,7 @@ public:
 	static ILboolean		IsDisabled(ILenum);
 	static ILboolean		IsEnabled(ILenum);
 	static ILboolean		Origin(ILenum);
-	static ILvoid			Pop(void);
+	static ILvoid			Pop(ILvoid);
 	static ILvoid			Push(ILuint);
 
 
@@ -191,8 +191,8 @@ class ilError
 public:
 	static ILvoid		Check(ILvoid (*Callback)(const char*));
 	static ILvoid		Check(ILvoid (*Callback)(ILenum));
-	static ILenum		Get(void);
-	static const char	*String(void);
+	static ILenum		Get(ILvoid);
+	static const char	*String(ILvoid);
 	static const char	*String(ILenum);
 
 protected:

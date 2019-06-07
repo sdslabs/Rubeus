@@ -175,21 +175,9 @@ namespace Rubeus
 // Pass in DevIL calls for checking for errors in image management
 #define DevILCall(x) DevILClearError();																								\
                      x;																												\
-                     while(ILenum error = ilGetError())																				\
+                      while(ILenum error = ilGetError())																				\
                      {																												\
-<<<<<<< Updated upstream
-                         ERRORLOG(std::string("DevIL Error: ") + iluErrorString(error));											\
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
                          ERRORLOG(std::string("DevIL Error (") + std::to_string(error) + "): " + iluErrorString(error));				\
-=======
-                         ERRORLOG(std::string("DevIL Error (")+ std::to_string(error) + "): " + iluErrorString(error));				\
->>>>>>> Switch to using DevIL 1.6.7 instead of DevIL 1.8
-=======
-                         ERRORLOG(std::string("DevIL Error (") + std::to_string(error) + "): " + iluErrorString(error));				\
->>>>>>> Switch to using actual color values
->>>>>>> Stashed changes
                          if(error == ILU_OUT_OF_MEMORY)																				\
                          {																											\
 							 std::cin.get();																						\

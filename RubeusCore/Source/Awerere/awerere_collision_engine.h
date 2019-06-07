@@ -33,7 +33,7 @@ namespace Rubeus
 			CollisionGrid m_CollisionGrid;
 
 			/** @brief	Array of game objects to be checked for collision events */
-			std::vector<RGameObject *> m_GameObjects;
+			std::vector<RGameObject *> * m_GameObjects;
 
 			/** @brief	Array of grid unit flags across X axis for each game object */
 			std::vector<AFlag *> m_XFlags;
@@ -119,11 +119,11 @@ namespace Rubeus
 			/**
 			 * @fn		inline void setWorld(std::vector<RGameObject *> gameObjects)
 			 *
-			 * @brief	Set the game object array for use in collision deteciton (if not already sent through the collision engine contructor)
+			 * @brief	Set the game object array for use in collision detection (if not already sent through the collision engine contructor)
 			 *
 			 * @param	gameObjects	The container with all the game objects.
 			 */
-			inline void setGameObjectArray(std::vector<RGameObject *> gameObjects) { m_GameObjects = gameObjects; }
+			inline void setGameObjectArray(std::vector<RGameObject *> & gameObjects) { m_GameObjects = &gameObjects; }
 
 		protected:
 
