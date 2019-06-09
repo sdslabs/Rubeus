@@ -14,6 +14,19 @@ file(GLOB_RECURSE HEADERS
 	../vendor/include/*.hpp
 )
 
+file(GLOB_RECURSE PROJECT_MANAGER_HEADERS
+	../vendor/include/*.h
+	../vendor/include/*.hpp
+	Source/GraphicComponents/*.h
+	Source/RML/*.h
+	Source/UtilityComponents/*.h
+)
+file(GLOB_RECURSE PROJECT_MANAGER_SOURCES
+	Source/GraphicComponents/*.cpp
+	Source/RML/*.cpp
+	Source/UtilityComponents/*.cpp
+)
+
 file(GLOB_RECURSE VENDOR_WIN_LIBRARIES
 	../vendor/libraries/Win/*.lib
 )
@@ -27,6 +40,7 @@ add_definitions(-DGLFW_DLL)
 add_definitions(-DIMGUI_IMPL_OPENGL_LOADER_GLEW)
 # This adds the source to this project's executable.
 add_executable (RubeusCore "RubeusCore.cpp" "RubeusCore.h" ${RUBEUS_SOURCES} ${HEADERS})
+add_executable (ProjectManager ${RUBEUS_SOURCES} ${HEADERS})
 
 
 include_directories(PUBLIC
@@ -45,10 +59,24 @@ target_include_directories(RubeusCore PUBLIC
     ./Source/MessageSystem
     ./Source/RML
     ./Source/UtilityComponents
+	./Source/ProjectManager
     ${OPENGL_INCLUDE_DIRS}
     ../vendor/include/
 )
-
+target_include_directories(ProjectManager PUBLIC
+    ./Game
+    ./Source/Architecture
+    ./Source/AudioComponents
+    ./Source/Awerere
+    ./Source/GraphicComponents
+    ./Source/InputManager
+    ./Source/MessageSystem
+    ./Source/RML
+    ./Source/UtilityComponents
+	./Source/ProjectManager
+    ${OPENGL_INCLUDE_DIRS}
+    ../vendor/include/
+)
 
 set(imgui_root ../vendor/source/ImGui)
 add_library(imgui STATIC
@@ -71,9 +99,15 @@ add_library(imgui STATIC
 if(WIN32)
     # Remove this line if you want to remove Visual Leak Detection(VLD) reports in Debug mode.
     # Keep this line if you want to have VLD reports to detect memory leaks  
-	add_definitions(-DVLD) 
+	#add_definitions(-DVLD) 
 
     target_link_libraries(RubeusCore PUBLIC
+        ${OPENGL_LIBRARIES}
+		${VENDOR_WIN_LIBRARIES}
+        -lstdc++fs
+		imgui
+    )
+	target_link_libraries(ProjectManager PUBLIC
         ${OPENGL_LIBRARIES}
 		${VENDOR_WIN_LIBRARIES}
         -lstdc++fs
@@ -90,6 +124,17 @@ endif(WIN32)
 
 if(UNIX)
     target_link_libraries(RubeusCore PUBLIC
+        ${OPENGL_LIBRARIES}
+        -lGLEW
+        ${SFML_LIBRARIES}
+        ${GLFW_LIBRARIES}
+        ${IL_LIBRARIES}
+        ${ILU_LIBRARIES}
+        ${VENDOR_LINUX_LIBRARIES}
+        -lstdc++fs
+		imgui
+    )
+		target_link_libraries(ProjectManager PUBLIC
         ${OPENGL_LIBRARIES}
         -lGLEW
         ${SFML_LIBRARIES}

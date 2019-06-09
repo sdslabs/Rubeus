@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A1C2706D-5035-3FAB-AC13-FC3C97A467BE}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ProjectManager</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Rubeus\RubeusCore\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ProjectManager.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ProjectManager</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Rubeus\RubeusCore\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ProjectManager.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ProjectManager</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Rubeus\RubeusCore\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">ProjectManager.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">ProjectManager</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Rubeus\RubeusCore\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">ProjectManager.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">ProjectManager</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Rubeus\RubeusCore\PUBLIC;D:\Rubeus\RubeusCore\..\vendor\include;D:\Rubeus\RubeusCore\..\vendor\source;D:\Rubeus\RubeusCore\.\Game;D:\Rubeus\RubeusCore\.\Source\Architecture;D:\Rubeus\RubeusCore\.\Source\AudioComponents;D:\Rubeus\RubeusCore\.\Source\Awerere;D:\Rubeus\RubeusCore\.\Source\GraphicComponents;D:\Rubeus\RubeusCore\.\Source\InputManager;D:\Rubeus\RubeusCore\.\Source\MessageSystem;D:\Rubeus\RubeusCore\.\Source\RML;D:\Rubeus\RubeusCore\.\Source\UtilityComponents;D:\Rubeus\RubeusCore\.\Source\ProjectManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;GLEW_STATIC;GLFW_DLL;IMGUI_IMPL_OPENGL_LOADER_GLEW;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;GLEW_STATIC;GLFW_DLL;IMGUI_IMPL_OPENGL_LOADER_GLEW;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Rubeus\RubeusCore\PUBLIC;D:\Rubeus\RubeusCore\..\vendor\include;D:\Rubeus\RubeusCore\..\vendor\source;D:\Rubeus\RubeusCore\.\Game;D:\Rubeus\RubeusCore\.\Source\Architecture;D:\Rubeus\RubeusCore\.\Source\AudioComponents;D:\Rubeus\RubeusCore\.\Source\Awerere;D:\Rubeus\RubeusCore\.\Source\GraphicComponents;D:\Rubeus\RubeusCore\.\Source\InputManager;D:\Rubeus\RubeusCore\.\Source\MessageSystem;D:\Rubeus\RubeusCore\.\Source\RML;D:\Rubeus\RubeusCore\.\Source\UtilityComponents;D:\Rubeus\RubeusCore\.\Source\ProjectManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Rubeus\RubeusCore\PUBLIC;D:\Rubeus\RubeusCore\..\vendor\include;D:\Rubeus\RubeusCore\..\vendor\source;D:\Rubeus\RubeusCore\.\Game;D:\Rubeus\RubeusCore\.\Source\Architecture;D:\Rubeus\RubeusCore\.\Source\AudioComponents;D:\Rubeus\RubeusCore\.\Source\Awerere;D:\Rubeus\RubeusCore\.\Source\GraphicComponents;D:\Rubeus\RubeusCore\.\Source\InputManager;D:\Rubeus\RubeusCore\.\Source\MessageSystem;D:\Rubeus\RubeusCore\.\Source\RML;D:\Rubeus\RubeusCore\.\Source\UtilityComponents;D:\Rubeus\RubeusCore\.\Source\ProjectManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;..\vendor\libraries\Win\DevIL.lib;..\vendor\libraries\Win\ILU.lib;..\vendor\libraries\Win\ILUT.lib;..\vendor\libraries\Win\flac.lib;..\vendor\libraries\Win\glew32s.lib;..\vendor\libraries\Win\glfw3.lib;..\vendor\libraries\Win\glfw3dll.lib;..\vendor\libraries\Win\ogg.lib;..\vendor\libraries\Win\openal32.lib;..\vendor\libraries\Win\sfml-audio-d.lib;..\vendor\libraries\Win\sfml-audio-s-d.lib;..\vendor\libraries\Win\sfml-audio-s.lib;..\vendor\libraries\Win\sfml-audio.lib;..\vendor\libraries\Win\sfml-system-d.lib;..\vendor\libraries\Win\sfml-system-s-d.lib;..\vendor\libraries\Win\sfml-system-s.lib;..\vendor\libraries\Win\sfml-system.lib;..\vendor\libraries\Win\vorbis.lib;..\vendor\libraries\Win\vorbisenc.lib;..\vendor\libraries\Win\vorbisfile.lib;-lstdc++fs;Debug\imgui.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Rubeus/RubeusCore/Debug/ProjectManager.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Rubeus/RubeusCore/Debug/ProjectManager.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Rubeus\RubeusCore\PUBLIC;D:\Rubeus\RubeusCore\..\vendor\include;D:\Rubeus\RubeusCore\..\vendor\source;D:\Rubeus\RubeusCore\.\Game;D:\Rubeus\RubeusCore\.\Source\Architecture;D:\Rubeus\RubeusCore\.\Source\AudioComponents;D:\Rubeus\RubeusCore\.\Source\Awerere;D:\Rubeus\RubeusCore\.\Source\GraphicComponents;D:\Rubeus\RubeusCore\.\Source\InputManager;D:\Rubeus\RubeusCore\.\Source\MessageSystem;D:\Rubeus\RubeusCore\.\Source\RML;D:\Rubeus\RubeusCore\.\Source\UtilityComponents;D:\Rubeus\RubeusCore\.\Source\ProjectManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;GLFW_DLL;IMGUI_IMPL_OPENGL_LOADER_GLEW;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;GLFW_DLL;IMGUI_IMPL_OPENGL_LOADER_GLEW;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Rubeus\RubeusCore\PUBLIC;D:\Rubeus\RubeusCore\..\vendor\include;D:\Rubeus\RubeusCore\..\vendor\source;D:\Rubeus\RubeusCore\.\Game;D:\Rubeus\RubeusCore\.\Source\Architecture;D:\Rubeus\RubeusCore\.\Source\AudioComponents;D:\Rubeus\RubeusCore\.\Source\Awerere;D:\Rubeus\RubeusCore\.\Source\GraphicComponents;D:\Rubeus\RubeusCore\.\Source\InputManager;D:\Rubeus\RubeusCore\.\Source\MessageSystem;D:\Rubeus\RubeusCore\.\Source\RML;D:\Rubeus\RubeusCore\.\Source\UtilityComponents;D:\Rubeus\RubeusCore\.\Source\ProjectManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Rubeus\RubeusCore\PUBLIC;D:\Rubeus\RubeusCore\..\vendor\include;D:\Rubeus\RubeusCore\..\vendor\source;D:\Rubeus\RubeusCore\.\Game;D:\Rubeus\RubeusCore\.\Source\Architecture;D:\Rubeus\RubeusCore\.\Source\AudioComponents;D:\Rubeus\RubeusCore\.\Source\Awerere;D:\Rubeus\RubeusCore\.\Source\GraphicComponents;D:\Rubeus\RubeusCore\.\Source\InputManager;D:\Rubeus\RubeusCore\.\Source\MessageSystem;D:\Rubeus\RubeusCore\.\Source\RML;D:\Rubeus\RubeusCore\.\Source\UtilityComponents;D:\Rubeus\RubeusCore\.\Source\ProjectManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;..\vendor\libraries\Win\DevIL.lib;..\vendor\libraries\Win\ILU.lib;..\vendor\libraries\Win\ILUT.lib;..\vendor\libraries\Win\flac.lib;..\vendor\libraries\Win\glew32s.lib;..\vendor\libraries\Win\glfw3.lib;..\vendor\libraries\Win\glfw3dll.lib;..\vendor\libraries\Win\ogg.lib;..\vendor\libraries\Win\openal32.lib;..\vendor\libraries\Win\sfml-audio-d.lib;..\vendor\libraries\Win\sfml-audio-s-d.lib;..\vendor\libraries\Win\sfml-audio-s.lib;..\vendor\libraries\Win\sfml-audio.lib;..\vendor\libraries\Win\sfml-system-d.lib;..\vendor\libraries\Win\sfml-system-s-d.lib;..\vendor\libraries\Win\sfml-system-s.lib;..\vendor\libraries\Win\sfml-system.lib;..\vendor\libraries\Win\vorbis.lib;..\vendor\libraries\Win\vorbisenc.lib;..\vendor\libraries\Win\vorbisfile.lib;-lstdc++fs;Release\imgui.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Rubeus/RubeusCore/Release/ProjectManager.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Rubeus/RubeusCore/Release/ProjectManager.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Rubeus\RubeusCore\PUBLIC;D:\Rubeus\RubeusCore\..\vendor\include;D:\Rubeus\RubeusCore\..\vendor\source;D:\Rubeus\RubeusCore\.\Game;D:\Rubeus\RubeusCore\.\Source\Architecture;D:\Rubeus\RubeusCore\.\Source\AudioComponents;D:\Rubeus\RubeusCore\.\Source\Awerere;D:\Rubeus\RubeusCore\.\Source\GraphicComponents;D:\Rubeus\RubeusCore\.\Source\InputManager;D:\Rubeus\RubeusCore\.\Source\MessageSystem;D:\Rubeus\RubeusCore\.\Source\RML;D:\Rubeus\RubeusCore\.\Source\UtilityComponents;D:\Rubeus\RubeusCore\.\Source\ProjectManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;GLFW_DLL;IMGUI_IMPL_OPENGL_LOADER_GLEW;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;GLFW_DLL;IMGUI_IMPL_OPENGL_LOADER_GLEW;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Rubeus\RubeusCore\PUBLIC;D:\Rubeus\RubeusCore\..\vendor\include;D:\Rubeus\RubeusCore\..\vendor\source;D:\Rubeus\RubeusCore\.\Game;D:\Rubeus\RubeusCore\.\Source\Architecture;D:\Rubeus\RubeusCore\.\Source\AudioComponents;D:\Rubeus\RubeusCore\.\Source\Awerere;D:\Rubeus\RubeusCore\.\Source\GraphicComponents;D:\Rubeus\RubeusCore\.\Source\InputManager;D:\Rubeus\RubeusCore\.\Source\MessageSystem;D:\Rubeus\RubeusCore\.\Source\RML;D:\Rubeus\RubeusCore\.\Source\UtilityComponents;D:\Rubeus\RubeusCore\.\Source\ProjectManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Rubeus\RubeusCore\PUBLIC;D:\Rubeus\RubeusCore\..\vendor\include;D:\Rubeus\RubeusCore\..\vendor\source;D:\Rubeus\RubeusCore\.\Game;D:\Rubeus\RubeusCore\.\Source\Architecture;D:\Rubeus\RubeusCore\.\Source\AudioComponents;D:\Rubeus\RubeusCore\.\Source\Awerere;D:\Rubeus\RubeusCore\.\Source\GraphicComponents;D:\Rubeus\RubeusCore\.\Source\InputManager;D:\Rubeus\RubeusCore\.\Source\MessageSystem;D:\Rubeus\RubeusCore\.\Source\RML;D:\Rubeus\RubeusCore\.\Source\UtilityComponents;D:\Rubeus\RubeusCore\.\Source\ProjectManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;..\vendor\libraries\Win\DevIL.lib;..\vendor\libraries\Win\ILU.lib;..\vendor\libraries\Win\ILUT.lib;..\vendor\libraries\Win\flac.lib;..\vendor\libraries\Win\glew32s.lib;..\vendor\libraries\Win\glfw3.lib;..\vendor\libraries\Win\glfw3dll.lib;..\vendor\libraries\Win\ogg.lib;..\vendor\libraries\Win\openal32.lib;..\vendor\libraries\Win\sfml-audio-d.lib;..\vendor\libraries\Win\sfml-audio-s-d.lib;..\vendor\libraries\Win\sfml-audio-s.lib;..\vendor\libraries\Win\sfml-audio.lib;..\vendor\libraries\Win\sfml-system-d.lib;..\vendor\libraries\Win\sfml-system-s-d.lib;..\vendor\libraries\Win\sfml-system-s.lib;..\vendor\libraries\Win\sfml-system.lib;..\vendor\libraries\Win\vorbis.lib;..\vendor\libraries\Win\vorbisenc.lib;..\vendor\libraries\Win\vorbisfile.lib;-lstdc++fs;MinSizeRel\imgui.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Rubeus/RubeusCore/MinSizeRel/ProjectManager.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Rubeus/RubeusCore/MinSizeRel/ProjectManager.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Rubeus\RubeusCore\PUBLIC;D:\Rubeus\RubeusCore\..\vendor\include;D:\Rubeus\RubeusCore\..\vendor\source;D:\Rubeus\RubeusCore\.\Game;D:\Rubeus\RubeusCore\.\Source\Architecture;D:\Rubeus\RubeusCore\.\Source\AudioComponents;D:\Rubeus\RubeusCore\.\Source\Awerere;D:\Rubeus\RubeusCore\.\Source\GraphicComponents;D:\Rubeus\RubeusCore\.\Source\InputManager;D:\Rubeus\RubeusCore\.\Source\MessageSystem;D:\Rubeus\RubeusCore\.\Source\RML;D:\Rubeus\RubeusCore\.\Source\UtilityComponents;D:\Rubeus\RubeusCore\.\Source\ProjectManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;GLFW_DLL;IMGUI_IMPL_OPENGL_LOADER_GLEW;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;GLFW_DLL;IMGUI_IMPL_OPENGL_LOADER_GLEW;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Rubeus\RubeusCore\PUBLIC;D:\Rubeus\RubeusCore\..\vendor\include;D:\Rubeus\RubeusCore\..\vendor\source;D:\Rubeus\RubeusCore\.\Game;D:\Rubeus\RubeusCore\.\Source\Architecture;D:\Rubeus\RubeusCore\.\Source\AudioComponents;D:\Rubeus\RubeusCore\.\Source\Awerere;D:\Rubeus\RubeusCore\.\Source\GraphicComponents;D:\Rubeus\RubeusCore\.\Source\InputManager;D:\Rubeus\RubeusCore\.\Source\MessageSystem;D:\Rubeus\RubeusCore\.\Source\RML;D:\Rubeus\RubeusCore\.\Source\UtilityComponents;D:\Rubeus\RubeusCore\.\Source\ProjectManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Rubeus\RubeusCore\PUBLIC;D:\Rubeus\RubeusCore\..\vendor\include;D:\Rubeus\RubeusCore\..\vendor\source;D:\Rubeus\RubeusCore\.\Game;D:\Rubeus\RubeusCore\.\Source\Architecture;D:\Rubeus\RubeusCore\.\Source\AudioComponents;D:\Rubeus\RubeusCore\.\Source\Awerere;D:\Rubeus\RubeusCore\.\Source\GraphicComponents;D:\Rubeus\RubeusCore\.\Source\InputManager;D:\Rubeus\RubeusCore\.\Source\MessageSystem;D:\Rubeus\RubeusCore\.\Source\RML;D:\Rubeus\RubeusCore\.\Source\UtilityComponents;D:\Rubeus\RubeusCore\.\Source\ProjectManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;..\vendor\libraries\Win\DevIL.lib;..\vendor\libraries\Win\ILU.lib;..\vendor\libraries\Win\ILUT.lib;..\vendor\libraries\Win\flac.lib;..\vendor\libraries\Win\glew32s.lib;..\vendor\libraries\Win\glfw3.lib;..\vendor\libraries\Win\glfw3dll.lib;..\vendor\libraries\Win\ogg.lib;..\vendor\libraries\Win\openal32.lib;..\vendor\libraries\Win\sfml-audio-d.lib;..\vendor\libraries\Win\sfml-audio-s-d.lib;..\vendor\libraries\Win\sfml-audio-s.lib;..\vendor\libraries\Win\sfml-audio.lib;..\vendor\libraries\Win\sfml-system-d.lib;..\vendor\libraries\Win\sfml-system-s-d.lib;..\vendor\libraries\Win\sfml-system-s.lib;..\vendor\libraries\Win\sfml-system.lib;..\vendor\libraries\Win\vorbis.lib;..\vendor\libraries\Win\vorbisenc.lib;..\vendor\libraries\Win\vorbisfile.lib;-lstdc++fs;RelWithDebInfo\imgui.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Rubeus/RubeusCore/RelWithDebInfo/ProjectManager.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Rubeus/RubeusCore/RelWithDebInfo/ProjectManager.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Rubeus\RubeusCore\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/Rubeus/RubeusCore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -HD:/Rubeus -BD:/Rubeus --check-stamp-file D:/Rubeus/RubeusCore/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/Rubeus/RubeusCore/CMakeLists.txt;D:\Rubeus\RubeusCore\CMakeLists.txt;D:\Rubeus\RubeusCore\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Rubeus\RubeusCore\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/Rubeus/RubeusCore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -HD:/Rubeus -BD:/Rubeus --check-stamp-file D:/Rubeus/RubeusCore/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/Rubeus/RubeusCore/CMakeLists.txt;D:\Rubeus\RubeusCore\CMakeLists.txt;D:\Rubeus\RubeusCore\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Rubeus\RubeusCore\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/Rubeus/RubeusCore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -HD:/Rubeus -BD:/Rubeus --check-stamp-file D:/Rubeus/RubeusCore/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/Rubeus/RubeusCore/CMakeLists.txt;D:\Rubeus\RubeusCore\CMakeLists.txt;D:\Rubeus\RubeusCore\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Rubeus\RubeusCore\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/Rubeus/RubeusCore/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -HD:/Rubeus -BD:/Rubeus --check-stamp-file D:/Rubeus/RubeusCore/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/Rubeus/RubeusCore/CMakeLists.txt;D:\Rubeus\RubeusCore\CMakeLists.txt;D:\Rubeus\RubeusCore\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Rubeus\RubeusCore\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Architecture\engine.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Architecture\entity_object.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Architecture\game.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Architecture\game_object.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Architecture\level.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Architecture\master_component.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Architecture\world.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\AudioComponents\audio_manager_component.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_box_collider_object.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_collide_data_object.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_collider_object.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_collision_engine.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_collision_grid.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_flag.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_hit_event_list.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_physics_engine.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_physics_material.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_physics_object.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_plane_collider_object.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_sphere_collider_object.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\buffer_object.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\game_scene.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\guerrilla_renderer_component.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\image_object.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\index_buffer_object.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\main_layer.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\renderable_object.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\shader_component.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\simple_renderer_component.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\sprite_object.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\static_sprite_object.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\texture_object.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\vertex_array_object.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\window_component.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\InputManager\input_manager.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\MessageSystem\message_bus.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\MessageSystem\message_object.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\MessageSystem\message_system.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\ProjectManager\project_manager.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\RML\rubeus_maths_library.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\UtilityComponents\loader_component.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\UtilityComponents\logger_component.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Source\UtilityComponents\timer_component.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Game\ping_pong\engine_files\level.play_level.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Game\ping_pong\engine_files\object.ball.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Game\ping_pong\engine_files\object.paddle.cpp" />
+    <ClCompile Include="D:\Rubeus\RubeusCore\Game\user_init.cpp" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Architecture\engine.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Architecture\entity_object.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Architecture\game.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Architecture\game_object.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Architecture\level.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Architecture\master_component.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Architecture\world.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\AudioComponents\audio_manager_component.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_box_collider_object.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_collide_data_object.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_collider_object.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_collision_engine.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_collision_grid.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_flag.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_hit_event_list.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_physics_engine.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_physics_material.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_physics_object.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_plane_collider_object.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\Awerere\awerere_sphere_collider_object.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\buffer_object.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\game_scene.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\guerrilla_renderer_component.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\image_object.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\index_buffer_object.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\layer_object.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\main_layer.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\nvidia_enable.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\renderable_object.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\renderer_component.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\shader_component.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\simple_renderer_component.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\sprite_object.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\static_sprite_object.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\texture_object.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\vertex_array_object.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\GraphicComponents\window_component.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\InputManager\input_manager.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\InputManager\keys.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\MessageSystem\message_bus.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\MessageSystem\message_codes.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\MessageSystem\message_object.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\MessageSystem\message_system.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\ProjectManager\project_manager.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\RML\rubeus_maths_library.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\UtilityComponents\loader_component.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\UtilityComponents\logger_component.h" />
+    <ClInclude Include="D:\Rubeus\RubeusCore\Source\UtilityComponents\timer_component.h" />
+    <ClInclude Include="D:\Rubeus\vendor\include\GL\eglew.h" />
+    <ClInclude Include="D:\Rubeus\vendor\include\GL\glew.h" />
+    <ClInclude Include="D:\Rubeus\vendor\include\GL\glxew.h" />
+    <ClInclude Include="D:\Rubeus\vendor\include\GL\wglew.h" />
+    <ClInclude Include="D:\Rubeus\vendor\include\GLFW\glfw3.h" />
+    <ClInclude Include="D:\Rubeus\vendor\include\GLFW\glfw3native.h" />
+    <ClInclude Include="D:\Rubeus\vendor\include\IL\config.h" />
+    <ClInclude Include="D:\Rubeus\vendor\include\IL\devil_internal_exports.h" />
+    <ClInclude Include="D:\Rubeus\vendor\include\IL\il.h" />
+    <ClInclude Include="D:\Rubeus\vendor\include\IL\il_wrap.h" />
+    <ClInclude Include="D:\Rubeus\vendor\include\IL\ilu.h" />
+    <ClInclude Include="D:\Rubeus\vendor\include\IL\ilu_region.h" />
+    <ClInclude Include="D:\Rubeus\vendor\include\IL\ilut.h" />
+    <ClInclude Include="D:\Rubeus\vendor\include\IL\ilut_config.h" />
+    <ClInclude Include="D:\Rubeus\vendor\include\IL\devil_cpp_wrapper.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\Audio.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\Audio\AlResource.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\Audio\Export.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\Audio\InputSoundFile.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\Audio\Listener.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\Audio\Music.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\Audio\OutputSoundFile.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\Audio\Sound.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\Audio\SoundBuffer.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\Audio\SoundBufferRecorder.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\Audio\SoundFileFactory.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\Audio\SoundFileReader.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\Audio\SoundFileWriter.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\Audio\SoundRecorder.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\Audio\SoundSource.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\Audio\SoundStream.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\Config.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\Clock.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\Err.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\Export.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\FileInputStream.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\InputStream.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\Lock.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\MemoryInputStream.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\Mutex.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\NativeActivity.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\NonCopyable.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\Sleep.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\String.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\Thread.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\ThreadLocal.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\ThreadLocalPtr.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\Time.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\Utf.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\Vector2.hpp" />
+    <ClInclude Include="D:\Rubeus\vendor\include\SFML\System\Vector3.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Rubeus\ZERO_CHECK.vcxproj">
+      <Project>{817CD231-EBDE-3BE3-A1A1-CD495ABC6585}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Rubeus\RubeusCore\imgui.vcxproj">
+      <Project>{68858766-958B-3CC9-BC60-CCCF38A29CD7}</Project>
+      <Name>imgui</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

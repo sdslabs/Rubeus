@@ -32,7 +32,7 @@ namespace Rubeus
 			float lastFrameEndTime = (float)glfwGetTime();
 
 			ImGui::CreateContext();
-			ImGui_ImplGlfw_InitForOpenGL(m_Window->m_Window, true);
+			ImGui_ImplGlfw_InitForOpenGL(m_Window->m_GLFWWindow, true);
 			ImGui_ImplOpenGL3_Init("#version 130");
 			ImGui::StyleColorsDark();
 			bool show_demo_window = true;
@@ -108,4 +108,17 @@ namespace Rubeus
 			ImGui::DestroyContext();
 
 		}
+}
+int main() {
+	using namespace Rubeus;
+	using namespace GraphicComponents;
+	using namespace UtilityComponents;
+	using namespace RML;
+	using namespace Awerere;
+
+	std::cout << "lol";
+	RLogger::CreateLogFile();
+	RLogger::Init();
+	RProjectManager m_ProjectManager;
+	m_ProjectManager.run();
 }
