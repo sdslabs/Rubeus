@@ -28,9 +28,6 @@ namespace Rubeus
 	 */
 	struct Message
 	{
-		/** @brief	The sender's address */
-		RMasterComponent * m_Sender;
-
 		/** @brief	The receiver's address */
 		RMasterComponent * m_Receiver;
 
@@ -41,16 +38,15 @@ namespace Rubeus
 		var m_Data;
 
 		/**
-		 * @fn		Message(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, var data = NULL)
+		 * @fn		Message(RMasterComponent * receiver, EMessageCode type, var data = NULL)
 		 *
 		 * @brief	Constructor
 		 *
-		 * @param	sender	The sender's address.
 		 * @param	receiver	The receiver's address.
 		 * @param	type		The type of message.
 		 * @param	data		The data to be transmitted.
 		 */
-		Message(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, var data = NULL);
+		Message(RMasterComponent * receiver, EMessageCode type, var data = NULL);
 
 		/**
 		 * @fn		~Message()
