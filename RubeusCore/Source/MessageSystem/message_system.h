@@ -37,11 +37,10 @@ namespace Rubeus
 		 *
 		 * @brief	Adds a message to the message queue
 		 *
-		 * @param	sender	Pointer to the sender.
 		 * @param	receiver	Pointer to the receiver.
 		 * @param	type		Type of message command.
 		 * @param	data		The data object to be sent. See 'var' typedef for transmittable data
 		 */
-		void addMessage(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, var data = NULL);
+		void addMessage(RMasterComponent * receiver, EMessageCode type, var data = NULL);
 	};
 }

@@ -20,16 +20,16 @@ namespace Rubeus
 				auto temp = m_MessageBus.pop();
 
 				temp->m_Receiver->onMessage(temp);
-				LOG(temp->m_Sender->getName() + " messaged " + temp->m_Receiver->getName());
+				LOG(temp->m_Receiver->getName() + " received message ");
 
 				delete temp;
 			}
 		}
 	}
 
-	void RMessageSystem::addMessage(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, var data)
+	void RMessageSystem::addMessage(RMasterComponent * receiver, EMessageCode type, var data)
 	{
-		Message * message = new Message(sender, receiver, type, data);
+		Message * message = new Message(receiver, type, data);
 		m_MessageBus.post(message);
 	}
 }
