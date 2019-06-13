@@ -19,7 +19,8 @@ namespace Rubeus
 			{
 				auto temp = m_MessageBus.pop();
 
-				temp->m_Receiver->onMessage(temp);
+				std::map<std::string, SignalSignature>::iterator message = RMailBox::CommandsMap.find(temp->m_Command);
+				message->second.foo(temp->m_Data);
 				LOG(temp->m_Receiver->getName() + " received message ");
 
 				delete temp;
@@ -27,9 +28,9 @@ namespace Rubeus
 		}
 	}
 
-	void RMessageSystem::addMessage(RMasterComponent * receiver, EMessageCode type, var data)
+	void RMessageSystem::addMessage(RMasterComponent * receiver, std::string command, var data)
 	{
-		Message * message = new Message(receiver, type, data);
+		Message * message = new Message(receiver, command, data);
 		m_MessageBus.post(message);
 	}
 }

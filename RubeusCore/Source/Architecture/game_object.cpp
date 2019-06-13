@@ -128,12 +128,8 @@ namespace Rubeus
 		return *this;
 	}
 
-	void RGameObject::onMessage(Message * msg)
+	void RGameObject::gameobject_ok(var data)
 	{
-		switch (msg->m_Type)
-		{
-			case system_ok:
-				LOG(this->RMasterComponent::getName() + std::string(" is OK"));
-		}
+		LOG(this->RMasterComponent::getName() + std::string(" is OK"));
 	}
 }

@@ -118,14 +118,9 @@ namespace Rubeus
 		return false;
 	}
 
-	void RInputManager::onMessage(Message * msg)
-	{
-		switch (msg->m_Type)
-		{
-			case system_ok:
-				LOG("Input Manager is OK");
-				break;
-		}
+	void RInputManager::InputManager_ok(var data)
+	{		
+		LOG("Input Manager is OK");
 	}
 
 	void RInputManager::addKeysToKeyMap()

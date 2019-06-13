@@ -32,7 +32,7 @@ namespace Rubeus
 		RMasterComponent * m_Receiver;
 
 		/** @brief	The type of this message */
-		EMessageCode m_Type;
+		std::string m_Command;
 
 		/** @brief	The data union to be sent with this message */
 		var m_Data;
@@ -46,7 +46,7 @@ namespace Rubeus
 		 * @param	type		The type of message.
 		 * @param	data		The data to be transmitted.
 		 */
-		Message(RMasterComponent * receiver, EMessageCode type, var data = NULL);
+		Message(RMasterComponent * receiver, std::string command, var data = NULL);
 
 		/**
 		 * @fn		~Message()
@@ -56,6 +56,7 @@ namespace Rubeus
 		~Message();
 	};
 
+	
 	typedef Message RAsyncMessage;
 	typedef Message RSyncMessage;
 

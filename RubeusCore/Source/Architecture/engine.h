@@ -162,14 +162,8 @@ namespace Rubeus
 		 */
 		inline RWorld * getWorld() const { return m_CurrentLevel->m_World; }
 
-		/**
-		 * @fn		void onMessage(Message * msg) override
-		 *
-		 * @brief	Message handler of the engine
-		 * @warning	Handles engine's asynchronous calls
-		 *
-		 * @param	msg	The message object sent across.
-		 */
-		void onMessage(Message * msg) override;
+		void load_level(var data = NULL);
+
+		void engine_ok(var data = NULL);
 	};
 }

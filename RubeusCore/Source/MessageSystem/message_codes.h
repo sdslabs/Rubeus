@@ -7,9 +7,43 @@
 #pragma once
 
 #include <logger_component.h>
+#include <message_object.h>
+
+#include <any>
+
+typedef std::any var;
 
 namespace Rubeus
 {
+	class RMasterComponent;
+
+	struct SignalSignature
+	{
+		RMasterComponent * m_Receiver;
+		void * foo(var);
+
+		SignalSignature(RMasterComponent * Receiver, void *(func(var data)));
+
+		~SignalSignature();
+
+	};
+
+	class RMailBox
+	{
+	public:
+		
+		static std::map<std::string, SignalSignature> CommandsMap;
+
+		void sendSignal(std::string command, var data = NULL);
+
+		void RegisterCommand(RMasterComponent * m_Receiver, std::string your_commamd_here, void * funcfoo(var));
+
+		void addEngineCommands();
+	};
+
+
+
+
 	/**
 	 * @enum		EMessageCode
 	 *

@@ -190,28 +190,16 @@ namespace Rubeus
 			return true;
 		}
 
-		void RWindowComponent::onMessage(Message * msg)
+		void RWindowComponent::change_window_title(var data)
 		{
-			switch (msg->m_Type)
-			{
-				case system_ok:
-					ASSERT("Message system OK");
-					break;
-
-				case change_window_title:
-					setWindowTitle(std::any_cast<const char *>(msg->m_Data));
-					break;
-
-				case get_loaded_image:
-				{
-					ASSERT("Image received");
-					Image & image = std::any_cast<Image &>(msg->m_Data);
-				}
-				break;
-
-				default:
-					break;
-			}
+			setWindowTitle(std::any_cast<const char *>(data));
 		}
+				
+		void RWindowComponent::get_loaded_image(var data )
+		{
+			ASSERT("Image received");
+			Image & image = std::any_cast<Image &>(data);
+		}
+				
 	}
 }

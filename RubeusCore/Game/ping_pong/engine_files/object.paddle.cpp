@@ -34,6 +34,3 @@ void paddle::tick()
 	}
 }
 
-void paddle::onMessage(Rubeus::Message * msg)
-{
-}

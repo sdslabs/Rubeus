@@ -256,16 +256,6 @@ namespace Rubeus
 			void tick();
 
 		protected:
-
-			/**
-			 * @fn		void onMessage(Message * msg) override
-			 *
-			 * @brief	Message handler for audio manager
-			 * @warning	To be used by the message system only
-			 *
-			 * @param	msg	Pointer to the message received.
-			 */
-			void onMessage(Rubeus::Message * msg) override;
 		};
 	}
 }

@@ -252,15 +252,7 @@ namespace Rubeus
 		 */
 		inline void disable() { m_IsEnabled = false; }
 
-		/**
-		 * @fn		void onMessage(Message * msg) override
-		 *
-		 * @brief	Handles messages sent by Message system asynchronously
-		 * @warning	Do not call manually
-		 *
-		 * @param	msg	The message sent across.
-		 */
-		void onMessage(Message * msg) override;
+		void InputManager_ok(var data = NULL);
 
 	protected:
 	};
