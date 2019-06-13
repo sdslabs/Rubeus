@@ -91,15 +91,7 @@ namespace Rubeus
 			 */
 			static void deleteImage();
 
-			/**
-			 * @fn		void onMessage(Message * msg) override
-			 *
-			 * @brief	Handles the message received
-			 * @warning	Use only with the message system
-			 *
-			 * @param	msg	Pointer to the message sent.
-			 */
-			void onMessage(Message * msg) override;
+			void load_image(var data = NULL);
 
 		protected:
 		};

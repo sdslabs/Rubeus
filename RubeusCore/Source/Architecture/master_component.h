@@ -78,16 +78,6 @@ namespace Rubeus
 		 */
 		friend std::ostream & operator<<(std::ostream & stream, RMasterComponent & component);
 
-		/**
-		 * @fn		virtual void onMessage(Message * msg)
-		 *
-		 * @brief	Handles message from messaging system
-		 * @warning	Not intended to be used by the user, it may be overriden by child classes
-		 *
-		 * @param	msg	The message object received.
-		 */
-		virtual void onMessage(Message * msg);
-
 	protected:
 	};
 }

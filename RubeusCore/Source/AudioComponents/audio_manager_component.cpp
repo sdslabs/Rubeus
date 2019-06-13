@@ -260,9 +260,5 @@ namespace Rubeus
 				}
 			}
 		}
-
-		void RSymphony::onMessage(Message * msg)
-		{
-		}
 	}
 }

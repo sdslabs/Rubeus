@@ -25,8 +25,8 @@ public:x(																														  \
 	: RGameObject(name, levelName, sprite, transform, enablePhysics, collider, generatesHit, physicsMat, childCount, children) {} \
 	   void begin() override;																									  \
 	   void onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awerere::ACollideData& collisionData) override;		  \
-	   void onMessage(Rubeus::Message* msg) override;																			  \
 	   void tick() override;																									  \
+	   																									  
 
 #define REGISTERLEVELCLASS(x)                                      \
 public:x(std::string name)                                         \

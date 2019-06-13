@@ -189,15 +189,9 @@ namespace Rubeus
 			 */
 			inline const int & getHeight() const { return m_Height; }
 
-			/**
-			 * @fn		void onMessage(Message * msg) override
-			 *
-			 * @brief	Handles the message received
-			 * @warning	Only to be used by the message system
-			 *
-			 * @param	msg	The message object received.
-			 */
-			void onMessage(Message * msg) override;
+			void change_window_title(var data);
+
+			void get_loaded_image(var data);
 
 		protected:
 		};

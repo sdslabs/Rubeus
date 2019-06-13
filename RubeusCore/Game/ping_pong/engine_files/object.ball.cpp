@@ -14,6 +14,3 @@ void ball::tick()
 {
 }
 
-void ball::onMessage(Rubeus::Message * msg)
-{
-}
