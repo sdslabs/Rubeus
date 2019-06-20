@@ -18,7 +18,10 @@
 #include <IL/il.h>
 #include <IL/ilu.h>
 
+#ifndef PM
 #include <game.h>
+#endif
+
 
 // TODO: Remove logger before shipping
 

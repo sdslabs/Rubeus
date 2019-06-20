@@ -81,7 +81,6 @@ void onEnd() override;											   \
 #include <game_object.h>
 #include <game.h>
 #include <world.h>
-#include <project_manager.h>
 
 // Awerere specific includes
 #include <awerere_collider_object.h>

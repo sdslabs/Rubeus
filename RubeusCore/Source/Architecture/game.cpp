@@ -1,7 +1,6 @@
 #include <game.h>
 
 #include <engine.h>
-#include <logger_component.h>
 
 namespace Rubeus
 {
@@ -11,10 +10,7 @@ namespace Rubeus
 	RGame::RGame()
 		: m_StartupLevel("")
 	{
-<<<<<<< HEAD
-=======
-		UtilityComponents::RLogger::Init();
->>>>>>> Fix breaking logger due to uninitialised color maps
+		Rubeus::UtilityComponents::RLogger::CreateLogFile();
 		m_Engine = new Rubeus::REngine();
 		CurrentGame = this;
 	}

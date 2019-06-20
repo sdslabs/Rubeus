@@ -14,6 +14,11 @@ file(GLOB_RECURSE HEADERS
 	../vendor/include/*.hpp
 )
 
+file(GLOB_RECURSE PM_HEADERS
+	../vendor/include/*.h
+	../vendor/include/*.hpp
+)
+
 file(GLOB_RECURSE VENDOR_WIN_LIBRARIES
 	../vendor/libraries/Win/*.lib
 )
@@ -27,6 +32,8 @@ add_definitions(-DGLFW_DLL)
 add_definitions(-DIMGUI_IMPL_OPENGL_LOADER_GLEW)
 # This adds the source to this project's executable.
 add_executable (RubeusCore "RubeusCore.cpp" "RubeusCore.h" ${RUBEUS_SOURCES} ${HEADERS})
+
+add_executable (ProjectManager "ProjectManager/ProjectManager.cpp" "ProjectManager/ProjectManager.h" ${PM_HEADERS})
 
 
 include_directories(PUBLIC
@@ -76,7 +83,11 @@ if(WIN32)
     target_link_libraries(RubeusCore PUBLIC
         ${OPENGL_LIBRARIES}
 		${VENDOR_WIN_LIBRARIES}
-        -lstdc++fs
+		imgui
+    )
+	target_link_libraries(ProjectManager PUBLIC
+        ${OPENGL_LIBRARIES}
+		${VENDOR_WIN_LIBRARIES}
 		imgui
     )
 
@@ -84,6 +95,10 @@ if(WIN32)
     COMMAND ${CMAKE_COMMAND} -E copy_directory
         "../vendor/libraries/Win/DLLs"
         $<TARGET_FILE_DIR:RubeusCore>)
+	add_custom_command(TARGET ProjectManager POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "../vendor/libraries/Win/DLLs"
+        $<TARGET_FILE_DIR:ProjectManager>)
 
 	Message(STATUS "DLLs have been written to target build directory")
 endif(WIN32)
