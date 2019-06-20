@@ -1,5 +1,5 @@
 #include "user_init.h"
-#include "../RubeusCore.h"
+#include "../../RubeusCore.h"
 
 class PingPong : Rubeus::RGame
 {
