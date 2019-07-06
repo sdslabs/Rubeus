@@ -53,6 +53,14 @@ RubeusCore.vcxproj
 RubeusCore.vcxproj.filters
 RubeusCore.vcxproj.user
 RubeusCore.dir
+imgui.vcxproj
+imgui.vcxproj.filters
+imgui.vcxproj.user
+imgui.dir
+ProjectManager.vcxproj
+ProjectManager.vcxproj.filters
+ProjectManager.vcxproj.user
+ProjectManager.dir
 
 # Externally acquirable libraries
 Boost_libraries/
@@ -295,3 +303,6 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+#imgui generated files
+imgui.ini
