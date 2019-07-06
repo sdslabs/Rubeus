@@ -32,15 +32,12 @@ class ProjectManager {
 	bool show_demo_window = true;
 	bool show_another_window = false;
 public:
-	ProjectManager() :CurrentView(1)
+	ProjectManager() :CurrentView(0)
 	{
 		//ImGuiStyle& style = ImGui::GetStyle();
 
 
 		memset(RootPath, 0, sizeof(RootPath));
-
-		//REMOVE THIS
-		strcpy(RootPath, "D:/Rubeus");
 
 		GameFiles.insert({ "UserInitH", R"V0G0N("#pragma once
 			// Include Game levels here as
