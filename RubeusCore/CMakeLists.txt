@@ -33,8 +33,9 @@ add_definitions(-DIMGUI_IMPL_OPENGL_LOADER_GLEW)
 # This adds the source to this project's executable.
 add_executable (RubeusCore "RubeusCore.cpp" "RubeusCore.h" ${RUBEUS_SOURCES} ${HEADERS})
 
+set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ProjectManager/)
 add_executable (ProjectManager "ProjectManager/ProjectManager.cpp" "ProjectManager/ProjectManager.h" ${PM_HEADERS})
-
+set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ./)
 
 include_directories(PUBLIC
     ${OPENGL_INCLUDE_DIRS}
@@ -111,6 +112,13 @@ if(UNIX)
         ${GLFW_LIBRARIES}
         ${IL_LIBRARIES}
         ${ILU_LIBRARIES}
+        ${VENDOR_LINUX_LIBRARIES}
+        -lstdc++fs
+    )
+    target_link_libraries(ProjectManager PUBLIC
+        ${OPENGL_LIBRARIES}
+        -lGLEW
+        ${GLFW_LIBRARIES}
         ${VENDOR_LINUX_LIBRARIES}
         -lstdc++fs
 		imgui

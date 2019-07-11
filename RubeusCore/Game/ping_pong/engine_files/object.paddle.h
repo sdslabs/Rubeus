@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../RubeusCore.h"
+#include "../../RubeusCore.h"
 
 class paddle : public Rubeus::RGameObject
 {

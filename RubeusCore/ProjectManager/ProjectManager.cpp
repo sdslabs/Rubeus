@@ -245,10 +245,10 @@ void %s::onMessage(Rubeus::Message * msg)
 						CurrentProjectObjects.emplace_back(dirEntry.path().stem().string().substr(7, dirEntry.path().string().length() - 1), dirEntry.path());
 				}
 	}
-	void displayProjectFiles(std::vector<std::pair<std::string, fs::path>> &test, char* childName)
+	void displayProjectFiles(std::vector<std::pair<std::string, fs::path>> &test, std::string childName)
 	{
 		ImGuiWindowFlags window_flags = ImGuiWindowFlags_HorizontalScrollbar;
-		ImGui::BeginChild(childName, ImVec2(ImGui::GetWindowContentRegionWidth(), 100), false, window_flags);
+		ImGui::BeginChild(childName.c_str(), ImVec2(ImGui::GetWindowContentRegionWidth(), 100), false, window_flags);
 
 		ImVec2 button_sz(180, 80);
 		ImGuiStyle& style = ImGui::GetStyle();
