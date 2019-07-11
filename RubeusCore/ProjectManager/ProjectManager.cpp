@@ -1,5 +1,6 @@
 #include <fstream>
 #include <iostream>
+#include <cstdio>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <ImGui/imgui.h>
@@ -20,7 +21,6 @@ class ProjectManager {
 	std::map<std::string, std::string> GameFiles;
 
 	std::array< std::function<void(void)>, 3> viewFunctions;
-	//void (ProjectManager::* viewFunctions[2])();
 	bool ProjectWindow = true;
 	int CurrentView;
 	char RootPath[1024];
@@ -40,12 +40,11 @@ public:
 		memset(RootPath, 0, sizeof(RootPath));
 
 		GameFiles.insert({ "UserInitH", R"V0G0N("#pragma once
-			// Include Game levels here as
-			// #include "game_name/engine_files/level.level_name.h"
-		)V0G0N" });
+// Include Game levels here as
+// #include "game_name/engine_files/level.level_name.h")V0G0N" });
 
-		GameFiles.insert({ "UserInitCpp", R"V0G0N("#include "user_init.h"
-#include "../RubeusCore.h"
+		GameFiles.insert({ "UserInitCpp", R"V0G0N(#include "user_init.h"
+#include "../../RubeusCore.h"
 // Initialise levels here as
 // SampleLevel * sample_level = new SampleLevel("sample_level");
 // Add startup level as
@@ -58,11 +57,10 @@ public:
 // 	   3.0f, 3.0f,
 // 	   "Assets/debug.png",
 // 	   false
-// );
-		)V0G0N" });
+// );)V0G0N" });
 
-		GameFiles.insert({ "LevelH", R"V0G0N("#pragma once
-#include "../RubeusCore.h"
+		GameFiles.insert({ "LevelH", R"V0G0N(#pragma once
+#include "../../RubeusCore.h"
 class %s : public Rubeus::RLevel
 {
 protected:
@@ -78,20 +76,18 @@ public:
 }
 void begin() override;
 void onEnd() override;
-};
-		)V0G0N" });
+};)V0G0N" });
 
-		GameFiles.insert({ "LevelCpp", R"V0G0N("#include "%s.h"
+		GameFiles.insert({ "LevelCpp", R"V0G0N(#include "%s.h"
 void %s::begin()
 {
 }
 void %s::onEnd()
 {
-}
-		)V0G0N" });
+})V0G0N" });
 
-		GameFiles.insert({ "ObjectH", R"V0G0N("#pragma once
-#include "../RubeusCore.h"
+		GameFiles.insert({ "ObjectH", R"V0G0N(#pragma once
+#include "../../RubeusCore.h"
 class %s : public Rubeus::RGameObject
 {
 // User members
@@ -110,10 +106,9 @@ void begin() override;
 void onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awerere::ACollideData & collisionData) override;
 void onMessage(Rubeus::Message * msg) override;
 void tick() override;
-};
-		)V0G0N" });
+};)V0G0N" });
 
-		GameFiles.insert({ "ObjectCpp", R"V0G0N("#include "%s.h"
+		GameFiles.insert({ "ObjectCpp", R"V0G0N(#include "%s.h"
 void %s::begin()
 {
 }
@@ -125,8 +120,7 @@ void %s::tick()
 }
 void %s::onMessage(Rubeus::Message * msg)
 {
-}
-		)V0G0N" });
+})V0G0N" });
 
 		viewFunctions = { { std::bind(&ProjectManager::landingPage, this), std::bind(&ProjectManager::allProjectsPage, this), std::bind(&ProjectManager::currentProjectPage, this) } };
 		showWindow();
@@ -307,18 +301,34 @@ void %s::onMessage(Rubeus::Message * msg)
 			Name_h = BasePath + "/user_init.h";
 			Name_cpp = BasePath + "/user_init.cpp";
 		}
-		std::ofstream NewFile(Name_h);
-		if (NewFile.fail())
+		FILE* NewFileH = fopen(Name_h.c_str(), "w");
+		if (NewFileH == NULL)
 			return 1;
-		NewFile << GameFiles[Type + "H"];
-		NewFile.close();
-		NewFile.open(Name_cpp);
-		if (NewFile.fail())
+		FILE* NewFileCpp = fopen(Name_cpp.c_str(), "w");
+		if (NewFileCpp == NULL)
 		{
 			fs::remove(fs::path(Name_h));
 			return 1;
 		}
-		NewFile << GameFiles[Type + "Cpp"];
+		char NameCStr[1024];
+		strcpy(NameCStr, Name.c_str());
+		if (Type == "UserInit")
+		{
+			fprintf(NewFileH, GameFiles[Type + "H"].c_str());
+			fprintf(NewFileCpp, GameFiles[Type + "Cpp"].c_str());
+		}
+		else if (Type == "Object")
+		{
+			fprintf(NewFileH, GameFiles[Type + "H"].c_str(), NameCStr, NameCStr, NameCStr);
+			fprintf(NewFileCpp, GameFiles[Type + "Cpp"].c_str(), NameCStr, NameCStr, NameCStr, NameCStr, NameCStr);
+		}
+		else if (Type == "Level")
+		{
+			fprintf(NewFileH, GameFiles[Type + "H"].c_str(), NameCStr, NameCStr, NameCStr);
+			fprintf(NewFileCpp, GameFiles[Type + "Cpp"].c_str(), NameCStr, NameCStr, NameCStr);
+		}
+		fclose(NewFileCpp);
+		fclose(NewFileH);
 		updateEngineFilesLists();
 		return 0;
 	}
@@ -377,7 +387,8 @@ void %s::onMessage(Rubeus::Message * msg)
 			}
 			if (ImGui::BeginPopupContextItem())
 			{
-				if (ImGui::Button("Delete")) {
+				if (ImGui::Button("Delete"))
+				{
 					fs::remove_all(ProjectList[i]);
 					updateProjectList();
 					ImGui::CloseCurrentPopup();

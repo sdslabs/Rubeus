@@ -304,5 +304,9 @@ paket-files/
 __pycache__/
 *.pyc
 
-#imgui generated files
+# imgui generated files
 imgui.ini
+
+# Excluding user projects except sample project
+RubeusCore/Game/*
+!RubeusCore/Game/ping_pong
