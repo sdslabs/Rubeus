@@ -3,10 +3,10 @@
 
 cmake_minimum_required (VERSION 3.8)
 
-if(DEFINED _GAMEDIR)
+if(DEFINED _PROJECT OR DEFINED _DEV)
     file(GLOB_RECURSE RUBEUS_SOURCES
         Source/*.cpp
-        ${_GAMEDIR}
+        Game/${_PROJECT}/*.cpp
     )
 else()
     file(GLOB_RECURSE RUBEUS_SOURCES

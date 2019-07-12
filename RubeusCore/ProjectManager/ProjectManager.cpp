@@ -219,6 +219,8 @@ void %s::onMessage(Rubeus::Message * msg)
 	
 	void updateEngineFilesLists(std::string& Warning)
 	{
+		CurrentProjectLevels.clear();
+		CurrentProjectObjects.clear();
 		for (const auto& dirEntry : fs::directory_iterator(fs::path(CurrentProject / "engine_files")))
 			if (dirEntry.path().extension() == fs::path(".cpp"))
 				if (fs::exists((dirEntry.path().parent_path() / dirEntry.path().stem()).string() + ".h"))
@@ -248,7 +250,7 @@ void %s::onMessage(Rubeus::Message * msg)
 	void displayProjectFiles(std::vector<std::pair<std::string, fs::path>> &test, std::string childName)
 	{
 		ImGuiWindowFlags window_flags = ImGuiWindowFlags_HorizontalScrollbar;
-		ImGui::BeginChild(childName.c_str(), ImVec2(ImGui::GetWindowContentRegionWidth(), 100), false, window_flags);
+		ImGui::BeginChild(childName.c_str(), ImVec2(ImGui::GetWindowContentRegionWidth(), 90), false, window_flags);
 
 		ImVec2 button_sz(180, 80);
 		ImGuiStyle& style = ImGui::GetStyle();
@@ -486,7 +488,7 @@ void %s::onMessage(Rubeus::Message * msg)
 		ImGui::Text("Current Project- ");
 		ImGui::SameLine();
 		ImGui::Text(CurrentProject.string().c_str());
-		ImGui::Dummy(ImVec2(0.0f, 20.0f));
+		ImGui::Dummy(ImVec2(0.0f, 8.0f));
 		ImGui::Text("Levels-");
 		ImGui::Dummy(ImVec2(0.0f, 5.0f));
 		ImGui::Separator();
@@ -503,13 +505,13 @@ void %s::onMessage(Rubeus::Message * msg)
 		}
 		if (NewLevelError)
 			ImGui::Text("ERROR: level files creation failed, try changing level name");
-		ImGui::Dummy(ImVec2(0.0f, 10.0f));
+		ImGui::Dummy(ImVec2(0.0f, 8.0f));
 		ImGui::Text("Objects-");
-		ImGui::Dummy(ImVec2(0.0f, 5.0f));
+		ImGui::Dummy(ImVec2(0.0f, 3.0f));
 		ImGui::Separator();
-		ImGui::Dummy(ImVec2(0.0f, 5.0f));
+		ImGui::Dummy(ImVec2(0.0f, 3.0f));
 		displayProjectFiles(CurrentProjectObjects, "Child2");
-		ImGui::Dummy(ImVec2(0.0f, 5.0f));
+		ImGui::Dummy(ImVec2(0.0f, 3.0f));
 		ImGui::InputText("##source2", NewObjectName, IM_ARRAYSIZE(NewObjectName));
 		ImGui::SameLine();
 		if (ImGui::Button("Create New Object") && NewObjectName[0] != 0)
@@ -521,14 +523,20 @@ void %s::onMessage(Rubeus::Message * msg)
 		if (NewObjectError)
 			ImGui::Text("ERROR: Object files creation failed, try changing object name");
 		ImGui::Dummy(ImVec2(0.0f, 5.0f));
-		if (ImGui::Button("Set as current project"))
+		if (ImGui::Button("USE THIS PROJECT"))
 		{
-			std::string Command("cmake -D_GAMEDIR=Game/");
-			Command += CurrentProject.stem().string();
-			Command += "/*.cpp ";
+			std::string Command("cmake -D_PROJECT=" + CurrentProject.stem().string() + " ");
 			Command.append(RootPath);
-			std::cout << system(Command.c_str());
+			system(Command.c_str());
 		}
+		ImGui::SameLine();
+		if(ImGui::Button("DEV MODE"))
+		{
+			std::string Command("cmake -D_PROJECTMANAGER=1 -D_PROJECT=" + CurrentProject.stem().string() + " ");
+			Command.append(RootPath);
+			system(Command.c_str());
+		}
+		ImGui::Text("Look at the command windows after pressing above buttons and ignore warning related\nto unused variables");
 	}
 };
 
