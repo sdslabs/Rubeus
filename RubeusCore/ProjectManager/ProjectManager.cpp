@@ -78,7 +78,7 @@ void begin() override;
 void onEnd() override;
 };)V0G0N" });
 
-		GameFiles.insert({ "LevelCpp", R"V0G0N(#include "%s.h"
+		GameFiles.insert({ "LevelCpp", R"V0G0N(#include "level.%s.h"
 void %s::begin()
 {
 }
@@ -108,7 +108,7 @@ void onMessage(Rubeus::Message * msg) override;
 void tick() override;
 };)V0G0N" });
 
-		GameFiles.insert({ "ObjectCpp", R"V0G0N(#include "%s.h"
+		GameFiles.insert({ "ObjectCpp", R"V0G0N(#include "object.%s.h"
 void %s::begin()
 {
 }
@@ -520,6 +520,15 @@ void %s::onMessage(Rubeus::Message * msg)
 		}
 		if (NewObjectError)
 			ImGui::Text("ERROR: Object files creation failed, try changing object name");
+		ImGui::Dummy(ImVec2(0.0f, 5.0f));
+		if (ImGui::Button("Set as current project"))
+		{
+			std::string Command("cmake -D_GAMEDIR=Game/");
+			Command += CurrentProject.stem().string();
+			Command += "/*.cpp ";
+			Command.append(RootPath);
+			std::cout << system(Command.c_str());
+		}
 	}
 };
 

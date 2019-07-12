@@ -60,6 +60,9 @@ include_directories(PUBLIC
 
 # Include sub - projects.
 add_subdirectory ("RubeusCore")
-if(DEFINED _PM)
+if(DEFINED _PROJECTMANAGER)
     add_subdirectory ("RubeusCore/ProjectManager")
-ENDIF()
+    MESSAGE(STATUS ${_PROJECTMANAGER})
+    unset(_PM CACHE)
+    MESSAGE(STATUS ${_PROJECTMANAGER})
+endif()
