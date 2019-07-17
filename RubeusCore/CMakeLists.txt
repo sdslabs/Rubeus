@@ -11,7 +11,7 @@ if(DEFINED _PROJECT OR DEFINED _DEV)
 else()
     file(GLOB_RECURSE RUBEUS_SOURCES
         Source/*.cpp
-        Game/*.cpp
+        Game/ping_pong/*.cpp
     )
 endif()
 

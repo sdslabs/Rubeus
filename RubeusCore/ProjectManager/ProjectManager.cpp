@@ -500,7 +500,7 @@ void ProjectManager::currentProjectPage()
 	ImGui::SameLine();
 	if (ImGui::Button("DEV MODE"))
 	{
-		std::string Command("cmake -D_PROJECTMANAGER=1 -D_PROJECT=" + CurrentProject.stem().string() + " ");
+		std::string Command("cmake -D_DEV=1 -D_PROJECT=" + CurrentProject.stem().string() + " ");
 		Command.append(RootPath);
 		system(Command.c_str());
 	}
