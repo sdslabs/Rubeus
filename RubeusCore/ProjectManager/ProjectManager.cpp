@@ -262,10 +262,10 @@ void ProjectManager::allProjectsPage()
 	}
 	ImGui::Dummy(ImVec2(0.0f, 15.0f));
 	ImGui::SameLine(20.0f);
-	ImGui::Text("Your projects-");
-	ImGui::Dummy(ImVec2(0.0f, 40.0f));
+	ImGui::Text("All projects-");
+	ImGui::Dummy(ImVec2(0.0f, 20.0f));
 	ImGui::Separator();
-	ImGui::BeginChild("Child1", ImVec2(ImGui::GetWindowContentRegionWidth(), 250), false);
+	ImGui::BeginChild("Child1", ImVec2(ImGui::GetWindowContentRegionWidth(), 220), false);
 
 
 	ImVec2 button_sz(160, 80);
@@ -299,7 +299,7 @@ void ProjectManager::allProjectsPage()
 	ImGui::EndChild();
 	ImGui::Separator();
 	ImGui::Dummy(ImVec2(0.0f, 20.0f));
-	if (ImGui::Button("New Project", ImVec2(160, 80)))
+	if (ImGui::Button("New Project", ImVec2(160, 40)))
 		ImGui::OpenPopup("New Project");
 
 	if (ImGui::BeginPopupModal("New Project", NULL, ImGuiWindowFlags_AlwaysAutoResize))
@@ -340,6 +340,15 @@ void ProjectManager::allProjectsPage()
 		}
 		ImGui::EndPopup();
 	}
+	if (ImGui::Button("SIMPLE DEV MODE", ImVec2(160, 40)))
+	{
+		std::string Command = "cmake -D_DEV=1 ";
+		Command.append(RootPath);
+		system(Command.c_str());
+	}
+	ImGui::Text("SIMPLE DEV MODE uses last used Project and ping_pong if this is a first time use");
+	ImGui::Text("Look at the command window after pressing it and ignore warning related\nto unused variables");
+
 }
 void ProjectManager::selectedProjectPage()
 {
@@ -429,7 +438,7 @@ void ProjectManager::selectedProjectPage()
 		Command.append(RootPath);
 		system(Command.c_str());
 	}
-	ImGui::Text("Look at the command windows after pressing above buttons and ignore warning related\nto unused variables");
+	ImGui::Text("Look at the command window after pressing above buttons and ignore warning related\nto unused variables");
 }
 
 int ProjectManager::init()
@@ -457,7 +466,6 @@ int ProjectManager::init()
 	ImGui_ImplGlfw_InitForOpenGL(window, true);
 	ImGui_ImplOpenGL3_Init("#version 130");
 	ImGui::StyleColorsDark();
-	bool show_project_window = false;
 	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 	ImGuiStyle& style = ImGui::GetStyle();
 	style.WindowPadding = ImVec2(20, 20);
