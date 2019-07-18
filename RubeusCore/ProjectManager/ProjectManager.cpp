@@ -90,90 +90,11 @@ void %s::onMessage(Rubeus::Message * msg)
 {
 })V0G0N" });
 
-	viewFunctions = { { std::bind(&ProjectManager::landingPage, this), std::bind(&ProjectManager::allProjectsPage, this), std::bind(&ProjectManager::currentProjectPage, this) } };
-	showWindow();
+	viewFunctions = { { std::bind(&ProjectManager::landingPage, this), std::bind(&ProjectManager::allProjectsPage, this), std::bind(&ProjectManager::selectedProjectPage, this) } };
 }
 ProjectManager::~ProjectManager()
 {
-	glfwTerminate();
-}
-void ProjectManager::initImGuiStyle()
-{
-	ImGuiStyle& style = ImGui::GetStyle();
-	style.WindowPadding = ImVec2(20, 20);
-	style.WindowRounding = 0.0f;
-	style.WindowBorderSize = 0.0f;
-	style.WindowMinSize = ImVec2(100, 200);
-	style.WindowTitleAlign = ImVec2(0.2f, 0.5f);
-}
-
-int ProjectManager::showWindow()
-{
-	if (!glfwInit())
-		return -1;
-
-	/* Create a windowed mode window and its OpenGL context */
-	window = glfwCreateWindow(640, 480, "Rubeus Project Manager", NULL, NULL);
-	if (!window)
-	{
-		glfwTerminate();
-		return -1;
-	}
-
-	/* Make the window's context current */
-	glfwMakeContextCurrent(window);
-
-	if (glewInit() != GLEW_OK)
-	{
-		std::cout << "GLEW initialisation failed";
-
-		return false;
-	}
-
-	ImGui::CreateContext();
-	ImGui_ImplGlfw_InitForOpenGL(window, true);
-	ImGui_ImplOpenGL3_Init("#version 130");
-	ImGui::StyleColorsDark();
-	bool show_project_window = false;
-	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
-	initImGuiStyle();
-
-	/* Loop until the user closes the window */
-	while (!glfwWindowShouldClose(window))
-	{
-
-		/* Render here */
-		glClear(GL_COLOR_BUFFER_BIT);
-
-		ImGui_ImplOpenGL3_NewFrame();
-		ImGui_ImplGlfw_NewFrame();
-		ImGui::NewFrame();
-
-		if (ProjectWindow)
-		{
-			static bool WindowLocationInit = false;
-			ImGui::Begin("Rubeus Project Manager", &ProjectWindow, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoTitleBar);
-			ImGui::SetWindowSize(ImVec2((float)640, (float)480));
-			if (!WindowLocationInit)
-			{
-				ImGui::SetWindowPos(ImVec2(0, 0));
-				WindowLocationInit = true;
-			}
-			viewFunctions[CurrentView]();
-			ImGui::End();
-		}
-
-		ImGui::Render();
-		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-
-		/* Swap front and back buffers */
-		glfwSwapBuffers(window);
-
-		/* Poll for and process events */
-		glfwPollEvents();
-
-	}
-
+	
 }
 
 //HELPER FUNCTIONS
@@ -185,67 +106,69 @@ void ProjectManager::updateProjectList()
 		ProjectList.push_back(entry.path());
 }
 
-void ProjectManager::updateEngineFilesLists(std::string& Warning)
+void ProjectManager::updateProjectFilesLists(std::string& Warning)
 {
 	CurrentProjectLevels.clear();
 	CurrentProjectObjects.clear();
-	for (const auto& dirEntry : fs::directory_iterator(fs::path(CurrentProject / "engine_files")))
-		if (dirEntry.path().extension() == fs::path(".cpp"))
-			if (fs::exists((dirEntry.path().parent_path() / dirEntry.path().stem()).string() + ".h"))
+	for (const auto& DirEntry : fs::directory_iterator(fs::path(CurrentProjectPath / "engine_files")))
+		if (DirEntry.path().extension() == fs::path(".cpp"))
+			if (fs::exists((DirEntry.path().parent_path() / DirEntry.path().stem()).string() + ".h"))
 			{
-				if (dirEntry.path().stem().string().substr(0, 6) == "level.")
-					CurrentProjectLevels.emplace_back(dirEntry.path().stem().string().substr(6, dirEntry.path().string().length() - 1), dirEntry.path());
-				else if (dirEntry.path().stem().string().substr(0, 7) == "object.")
-					CurrentProjectObjects.emplace_back(dirEntry.path().stem().string().substr(7, dirEntry.path().string().length() - 1), dirEntry.path());
+				std::string DirEntryStemString = DirEntry.path().stem().string();
+				if (DirEntryStemString.substr(0, 6) == "level.")
+					CurrentProjectLevels.emplace_back(DirEntryStemString.substr(6, DirEntry.path().string().length() - 1), DirEntry.path());
+				else if (DirEntryStemString.substr(0, 7) == "object.")
+					CurrentProjectObjects.emplace_back(DirEntryStemString.substr(7, DirEntry.path().string().length() - 1), DirEntry.path());
 			}
 			else
-				Warning += dirEntry.path().filename().string() + " ";
+				Warning += DirEntry.path().filename().string() + " ";
 }
-void ProjectManager::updateEngineFilesLists()
+void ProjectManager::updateProjectFilesLists()
 {
 	CurrentProjectLevels.clear();
 	CurrentProjectObjects.clear();
-	for (const auto& dirEntry : fs::directory_iterator(fs::path(CurrentProject / "engine_files")))
-		if (dirEntry.path().extension() == fs::path(".cpp"))
-			if (fs::exists((dirEntry.path().parent_path() / dirEntry.path().stem()).string() + ".h"))
+	for (const auto& DirEntry : fs::directory_iterator(fs::path(CurrentProjectPath / "engine_files")))
+		if (DirEntry.path().extension() == fs::path(".cpp"))
+			if (fs::exists((DirEntry.path().parent_path() / DirEntry.path().stem()).string() + ".h"))
 			{
-				if (dirEntry.path().stem().string().substr(0, 6) == "level.")
-					CurrentProjectLevels.emplace_back(dirEntry.path().stem().string().substr(6, dirEntry.path().string().length() - 1), dirEntry.path());
-				else if (dirEntry.path().stem().string().substr(0, 7) == "object.")
-					CurrentProjectObjects.emplace_back(dirEntry.path().stem().string().substr(7, dirEntry.path().string().length() - 1), dirEntry.path());
+				std::string DirEntryStemString = DirEntry.path().stem().string();
+				if (DirEntryStemString.substr(0, 6) == "level.")
+					CurrentProjectLevels.emplace_back(DirEntryStemString.substr(6, DirEntry.path().string().length() - 1), DirEntry.path());
+				else if (DirEntryStemString.substr(0, 7) == "object.")
+					CurrentProjectObjects.emplace_back(DirEntryStemString.substr(7, DirEntry.path().string().length() - 1), DirEntry.path());
 			}
 }
-void ProjectManager::displayProjectFiles(std::vector<std::pair<std::string, fs::path>> &test, std::string childName)
+void ProjectManager::displayProjectFiles(std::vector<std::pair<std::string, fs::path>> &ProjectComponent, std::string ChildName)
 {
 	ImGuiWindowFlags window_flags = ImGuiWindowFlags_HorizontalScrollbar;
-	ImGui::BeginChild(childName.c_str(), ImVec2(ImGui::GetWindowContentRegionWidth(), 90), false, window_flags);
+	ImGui::BeginChild(ChildName.c_str(), ImVec2(ImGui::GetWindowContentRegionWidth(), 90), false, window_flags);
 
 	ImVec2 button_sz(180, 80);
 	ImGuiStyle& style = ImGui::GetStyle();
 	float window_visible_x2 = ImGui::GetWindowPos().x + ImGui::GetWindowContentRegionMax().x;
 
-	for (unsigned i = 0; i < test.size(); i++)
+	for (unsigned i = 0; i < ProjectComponent.size(); i++)
 	{
 		ImGui::PushID(i);
-		if (ImGui::Button(test[i].first.c_str(), button_sz))
+		if (ImGui::Button(ProjectComponent[i].first.c_str(), button_sz))
 		{
-			CurrentProject = ProjectList[i];
+			CurrentProjectPath = ProjectList[i];
 			CurrentView = 2;
 		}
 		if (ImGui::BeginPopupContextItem())
 		{
 			if (ImGui::Button("Delete"))
 			{
-				fs::remove(test[i].second);
-				fs::remove((test[i].second.parent_path() / test[i].second.stem()).string() + std::string(".h"));
-				updateEngineFilesLists();
+				fs::remove(ProjectComponent[i].second);
+				fs::remove((ProjectComponent[i].second.parent_path() / ProjectComponent[i].second.stem()).string() + std::string(".h"));
+				updateProjectFilesLists();
 				ImGui::CloseCurrentPopup();
 			}
 			ImGui::EndPopup();
 		}
 		float last_button_x2 = ImGui::GetItemRectMax().x;
 		float next_button_x2 = last_button_x2 + style.ItemSpacing.x + button_sz.x;
-		if (i + 1 < test.size() && next_button_x2 < window_visible_x2)
+		if (i + 1 < ProjectComponent.size() && next_button_x2 < window_visible_x2)
 			ImGui::SameLine();
 		ImGui::PopID();
 	}
@@ -255,7 +178,7 @@ bool ProjectManager::createFiles(std::string Type, std::string Name)
 {
 	std::transform(Name.begin(), Name.end(), Name.begin(), ::tolower);
 	std::string Name_h, Name_cpp;
-	std::string BasePath = CurrentProject.string();
+	std::string BasePath = CurrentProjectPath.string();
 	if (Type == "Level")
 	{
 		Name_h = BasePath + "/engine_files/level." + Name + ".h";
@@ -299,10 +222,12 @@ bool ProjectManager::createFiles(std::string Type, std::string Name)
 	}
 	fclose(NewFileCpp);
 	fclose(NewFileH);
-	updateEngineFilesLists();
+	updateProjectFilesLists();
 	return 0;
 }
+
 //VIEW FUNCTIONS WHICH ARE BEING STORED IN viewFunctions ARRAY
+
 void ProjectManager::landingPage()
 {
 	static bool ErrorMsg = false;
@@ -352,7 +277,7 @@ void ProjectManager::allProjectsPage()
 		ImGui::PushID(i);
 		if (ImGui::Button(ProjectList[i].filename().string().c_str(), button_sz))
 		{
-			CurrentProject = ProjectList[i];
+			CurrentProjectPath = ProjectList[i];
 			CurrentView = 2;
 		}
 		if (ImGui::BeginPopupContextItem())
@@ -392,11 +317,11 @@ void ProjectManager::allProjectsPage()
 
 		if (ImGui::Button("Create", ImVec2(120, 0)))
 		{
-			CurrentProject = GamePath + std::string("/") + std::string(NewProjectName);
-			if (fs::create_directory(CurrentProject))
+			CurrentProjectPath = GamePath + std::string("/") + std::string(NewProjectName);
+			if (fs::create_directory(CurrentProjectPath))
 			{
 				updateProjectList();
-				fs::create_directory(CurrentProject / fs::path("engine_files"));
+				fs::create_directory(CurrentProjectPath / fs::path("engine_files"));
 				createFiles("UserInit");
 				memset(NewProjectName, 0, sizeof(NewProjectName));
 				memset(ErrorMsg, 0, sizeof(ErrorMsg));
@@ -416,7 +341,7 @@ void ProjectManager::allProjectsPage()
 		ImGui::EndPopup();
 	}
 }
-void ProjectManager::currentProjectPage()
+void ProjectManager::selectedProjectPage()
 {
 	//Not relevant outside this so though it was better to declare these here
 	static bool NewObjectError;
@@ -426,7 +351,7 @@ void ProjectManager::currentProjectPage()
 	static char NewObjectName[1024];
 	static char NewLevelName[1024];
 	if (EngineFilesScanned == false) {
-		updateEngineFilesLists(Warning);
+		updateProjectFilesLists(Warning);
 		EngineFilesScanned = true;
 	}
 	if (!Warning.empty()) {
@@ -455,7 +380,7 @@ void ProjectManager::currentProjectPage()
 	ImGui::SameLine();
 	ImGui::Text("Current Project- ");
 	ImGui::SameLine();
-	ImGui::Text(CurrentProject.string().c_str());
+	ImGui::Text(CurrentProjectPath.string().c_str());
 	ImGui::Dummy(ImVec2(0.0f, 8.0f));
 	ImGui::Text("Levels-");
 	ImGui::Dummy(ImVec2(0.0f, 5.0f));
@@ -493,23 +418,100 @@ void ProjectManager::currentProjectPage()
 	ImGui::Dummy(ImVec2(0.0f, 5.0f));
 	if (ImGui::Button("USE THIS PROJECT"))
 	{
-		std::string Command("cmake -D_PROJECT=" + CurrentProject.stem().string() + " ");
+		std::string Command("cmake -D_PROJECT=" + CurrentProjectPath.stem().string() + " ");
 		Command.append(RootPath);
 		system(Command.c_str());
 	}
 	ImGui::SameLine();
 	if (ImGui::Button("DEV MODE"))
 	{
-		std::string Command("cmake -D_DEV=1 -D_PROJECT=" + CurrentProject.stem().string() + " ");
+		std::string Command("cmake -D_DEV=1 -D_PROJECT=" + CurrentProjectPath.stem().string() + " ");
 		Command.append(RootPath);
 		system(Command.c_str());
 	}
 	ImGui::Text("Look at the command windows after pressing above buttons and ignore warning related\nto unused variables");
 }
 
+int ProjectManager::init()
+{
+	if (!glfwInit())
+		return -1;
+
+	window = glfwCreateWindow(640, 480, "Rubeus Project Manager", NULL, NULL);
+	if (!window)
+	{
+		glfwTerminate();
+		return -1;
+	}
+
+	glfwMakeContextCurrent(window);
+
+	if (glewInit() != GLEW_OK)
+	{
+		std::cout << "GLEW initialisation failed";
+
+		return false;
+	}
+
+	ImGui::CreateContext();
+	ImGui_ImplGlfw_InitForOpenGL(window, true);
+	ImGui_ImplOpenGL3_Init("#version 130");
+	ImGui::StyleColorsDark();
+	bool show_project_window = false;
+	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+	ImGuiStyle& style = ImGui::GetStyle();
+	style.WindowPadding = ImVec2(20, 20);
+	style.WindowRounding = 0.0f;
+	style.WindowBorderSize = 0.0f;
+	style.WindowMinSize = ImVec2(100, 200);
+	style.WindowTitleAlign = ImVec2(0.2f, 0.5f);
+}
+
+void ProjectManager::run()
+{
+	while (!glfwWindowShouldClose(window))
+	{
+		glClear(GL_COLOR_BUFFER_BIT);
+
+		ImGui_ImplOpenGL3_NewFrame();
+		ImGui_ImplGlfw_NewFrame();
+		ImGui::NewFrame();
+
+		if (ProjectWindow)
+		{
+			static bool WindowLocationInit = false;
+			ImGui::Begin("Rubeus Project Manager", &ProjectWindow, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoSavedSettings | ImGuiWindowFlags_NoTitleBar);
+			ImGui::SetWindowSize(ImVec2((float)640, (float)480));
+			if (!WindowLocationInit)
+			{
+				ImGui::SetWindowPos(ImVec2(0, 0));
+				WindowLocationInit = true;
+			}
+			viewFunctions[CurrentView]();
+			ImGui::End();
+		}
+
+		ImGui::Render();
+		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
+		glfwSwapBuffers(window);
+		glfwPollEvents();
+
+	}
+
+}
+
+void ProjectManager::end()
+{
+	glfwTerminate();
+}
+
 
 int main(void)
 {
 	ProjectManager PM;
+	PM.init();
+	PM.run();
+	PM.end();
 	return 0;
 }
