@@ -37,12 +37,12 @@ add_executable (RubeusCore "RubeusCore.cpp" "RubeusCore.h" ${RUBEUS_SOURCES} ${H
 include_directories(PUBLIC
     ${OPENGL_INCLUDE_DIRS}
     ../vendor/include/
-	../vendor/source/
+    ../vendor/source/
 )
 
 target_include_directories(RubeusCore PUBLIC
     ./Game
-	./Source/Architecture
+    ./Source/Architecture
     ./Source/AudioComponents
     ./Source/Awerere
     ./Source/GraphicComponents
@@ -59,7 +59,7 @@ target_include_directories(RubeusCore PUBLIC
 if(WIN32)
     # Remove this line if you want to remove Visual Leak Detection(VLD) reports in Debug mode.
     # Keep this line if you want to have VLD reports to detect memory leaks  
-	# add_definitions(-DVLD) 
+	add_definitions(-DVLD) 
 
     target_link_libraries(RubeusCore PUBLIC
         ${OPENGL_LIBRARIES}
