@@ -441,16 +441,17 @@ void ProjectManager::selectedProjectPage()
 	ImGui::Text("Look at the command window after pressing above buttons and ignore warning related\nto unused variables");
 }
 
-int ProjectManager::init()
+bool ProjectManager::init()
 {
+	glfwSetErrorCallback([](int, const char* err_str){std::cout << "GLFW Error: " << err_str << std::endl;});
 	if (!glfwInit())
-		return -1;
+		return false;
 
 	window = glfwCreateWindow(640, 480, "Rubeus Project Manager", NULL, NULL);
 	if (!window)
 	{
 		glfwTerminate();
-		return -1;
+		return false;
 	}
 
 	glfwMakeContextCurrent(window);
@@ -458,7 +459,6 @@ int ProjectManager::init()
 	if (glewInit() != GLEW_OK)
 	{
 		std::cout << "GLEW initialisation failed";
-
 		return false;
 	}
 
@@ -518,7 +518,8 @@ void ProjectManager::end()
 int main(void)
 {
 	ProjectManager PM;
-	PM.init();
+	if (!PM.init())
+		exit(1);
 	PM.run();
 	PM.end();
 	return 0;
