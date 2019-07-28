@@ -2,7 +2,7 @@
 
 #include "../../RubeusCore.h"
 
-class play_level : public Rubeus::RLevel
+class Lplay_level : public Rubeus::RLevel
 {
-	REGISTERLEVELCLASS(play_level)
+	REGISTERLEVELCLASS(Lplay_level)
 };

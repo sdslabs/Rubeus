@@ -2,7 +2,7 @@
 
 #include "../../RubeusCore.h"
 
-class paddle : public Rubeus::RGameObject
+class Opaddle : public Rubeus::RGameObject
 {
-	REGISTERGAMECLASS(paddle)
+	REGISTEROBJECTCLASS(Opaddle)
 };
