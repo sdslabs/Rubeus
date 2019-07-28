@@ -10,7 +10,7 @@
 #include <initializer_list>
 
 // Rubeus Macros
-#define REGISTERGAMECLASS(x)																									  \
+#define REGISTEROBJECTCLASS(x)																									  \
 public:x(																														  \
 	std::string name,																											  \
 	Rubeus::RLevel * levelName,																									  \

@@ -124,7 +124,7 @@ public:
 	 *
 	 * @brief	Initialises GLFW window and ImGui
 	 */
-	int init();
+	bool init();
 	/**
 	 * @fn		run();
 	 *
