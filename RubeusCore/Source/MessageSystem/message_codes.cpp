@@ -1,45 +1,47 @@
 #include <message_codes.h>
-#include <message_system.h>
-#include <game.h>
+#include <engine.h>
+#include <iterator>
 
 namespace Rubeus
 {
+	RMailingList MailBox;
 
-	SignalSignature::SignalSignature(RMasterComponent * Receiver, void * (func(var)))
-		: m_Receiver(Receiver), foo(*func)
+	SignalSignature::SignalSignature(RMasterComponent * Receiver, std::function<void(var)> func)
+		: m_Receiver(Receiver), foo(func)
 	{
-
 	}
 
 	SignalSignature::~SignalSignature()
 	{
 	}
 
-	void RMailBox::sendSignal(std::string command, var data)
+	RMailingList::RMailingList()
 	{
-		std::map<std::string, SignalSignature>::iterator check;
-		check = CommandsMap.find(command);
-		if(check != CommandsMap.end())
+	}
+
+	RMailingList::~RMailingList()
+	{
+	}
+
+	void RMailingList::sendSignal(std::string command, var data)
+	{
+		for (auto chec : MailBox.CommandsMap)
 		{
-			RMessageSystem::addMessage(check->second.m_Receiver,command,data);
-		}
-		else
-		{
-			ERRORLOG("no such command exists");
+			if (chec.first == command)
+			{
+				RMessageSystem::addMessage(chec.second->m_Receiver,command,data);
+			}
+			else
+			{
+				ERRORLOG("no such command exists"); 
+			}
 		}
 	}
 
-	void RMailBox::RegisterCommand(RMasterComponent * m_Receiver, std::string your_commamd_here, void * functoexecute(var))
+	void RMailingList::addEngineCommands()
 	{
-		SignalSignature * newcommand = new SignalSignature(m_Receiver, functoexecute);
-		CommandsMap.insert(std::pair<std::string, SignalSignature>(your_commamd_here, *newcommand));
-	}
-
-	void RMailBox::addEngineCommands()
-	{
-		// an example of hardcoding engine commands
-
-		SignalSignature * newcommand = new SignalSignature(Rubeus::RGame::getEngine()->getCurrentWindow(), change_window_title);
-		CommandsMap.insert(std::pair<std::string, SignalSignature>("changetitle", *newcommand));
+		SignalSignature* newcommand = new SignalSignature(Rubeus::RGame::getEngine()->getCurrentWindow(), std::bind(&GraphicComponents::RWindowComponent::change_window_title, Rubeus::RGame::getEngine()->getCurrentWindow(), std::placeholders::_1));
+		MailBox.CommandsMap.insert(std::pair<std::string,Rubeus::SignalSignature*>{"changetitle", newcommand});
 	}
 }
+

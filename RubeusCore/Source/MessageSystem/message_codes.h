@@ -8,8 +8,10 @@
 
 #include <logger_component.h>
 #include <message_object.h>
+#include <map>
 
 #include <any>
+#include <functional>
 
 typedef std::any var;
 
@@ -20,28 +22,32 @@ namespace Rubeus
 	struct SignalSignature
 	{
 		RMasterComponent * m_Receiver;
-		void * foo(var);
+		std::function<void(var)> foo;
 
-		SignalSignature(RMasterComponent * Receiver, void *(func(var data)));
+		SignalSignature(RMasterComponent * Receiver, std::function<void(var)> func);
 
 		~SignalSignature();
 
 	};
 
-	class RMailBox
+#define RegisterCommand(m_Receiver, m_FuncName, m_Function)                                                               \
+SignalSignature* newcommand = new SignalSignature(m_Receiver, std::bind(&m_Function, m_Receiver, std::placeholders::_1)); \
+MailBox.CommandsMap.insert(std::pair<std::string, Rubeus::SignalSignature*>{m_FuncName, newcommand});                     \
+
+	class RMailingList
 	{
 	public:
+
+		RMailingList();
+		~RMailingList();
 		
-		static std::map<std::string, SignalSignature> CommandsMap;
+		std::map<std::string, SignalSignature*> CommandsMap;
 
 		void sendSignal(std::string command, var data = NULL);
-
-		void RegisterCommand(RMasterComponent * m_Receiver, std::string your_commamd_here, void * funcfoo(var));
-
 		void addEngineCommands();
 	};
 
-
+	extern RMailingList MailBox;
 
 
 	/**

@@ -9,6 +9,7 @@
 namespace Rubeus
 {
 	RMessageSystem RMasterComponent::m_MessageSystem;
+	RMailingList RMasterComponent::m_mailbox;
 	unsigned int RMasterComponent::componentsInitialised = 0;
 
 	RMasterComponent::RMasterComponent()
