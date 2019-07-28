@@ -1,13 +1,10 @@
 #include "ProjectManager.h"
 
 ProjectManager::ProjectManager() :CurrentView(0)
-{
-	//ImGuiStyle& style = ImGui::GetStyle();
-
-
+{	 
 	memset(RootPath, 0, sizeof(RootPath));
 
-	GameFiles.insert({ "UserInitH", R"V0G0N("#pragma once
+	GameFiles.insert({ "UserInitH", R"V0G0N(#pragma once
 // Include Game levels here as
 // #include "game_name/engine_files/level.level_name.h")V0G0N" });
 
@@ -29,37 +26,37 @@ ProjectManager::ProjectManager() :CurrentView(0)
 
 	GameFiles.insert({ "LevelH", R"V0G0N(#pragma once
 #include "../../RubeusCore.h"
-class %s : public Rubeus::RLevel
+class L%s : public Rubeus::RLevel
 {
-REGISTERLEVELCLASS(%s)
+REGISTERLEVELCLASS(L%s)
 };)V0G0N" });
 
 	GameFiles.insert({ "LevelCpp", R"V0G0N(#include "level.%s.h"
-void %s::begin()
+void L%s::begin()
 {
 }
-void %s::onEnd()
+void L%s::onEnd()
 {
 })V0G0N" });
 
 	GameFiles.insert({ "ObjectH", R"V0G0N(#pragma once
 #include "../../RubeusCore.h"
-class %s : public Rubeus::RGameObject
+class O%s : public Rubeus::RGameObject
 {
-REGISTEROBJECTCLASS(%s)
+REGISTEROBJECTCLASS(O%s)
 };)V0G0N" });
 
 	GameFiles.insert({ "ObjectCpp", R"V0G0N(#include "object.%s.h"
-void %s::begin()
+void O%s::begin()
 {
 }
-void %s::onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awerere::ACollideData & collisionData)
+void O%s::onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awerere::ACollideData & collisionData)
 {
 }
-void %s::tick()
+void O%s::tick()
 {
 }
-void %s::onMessage(Rubeus::Message * msg)
+void O%s::onMessage(Rubeus::Message * msg)
 {
 })V0G0N" });
 
@@ -446,6 +443,7 @@ bool ProjectManager::init()
 	style.WindowBorderSize = 0.0f;
 	style.WindowMinSize = ImVec2(100, 200);
 	style.WindowTitleAlign = ImVec2(0.2f, 0.5f);
+	return true;
 }
 
 void ProjectManager::run()
