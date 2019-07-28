@@ -1,13 +1,13 @@
 #include "user_init.h"
-#include "../RubeusCore.h"
+#include "../../RubeusCore.h"
 
 class PingPong : Rubeus::RGame
 {
 protected:
 	Rubeus::RLevel* playLevel;
-	paddle* leftPaddle;
-	paddle* rightPaddle;
-	ball* matchBall;
+	Opaddle* leftPaddle;
+	Opaddle* rightPaddle;
+	Oball* matchBall;
 	Rubeus::GraphicComponents::RTexture* texture1;
 	Rubeus::GraphicComponents::RTexture* texture2;
 	Rubeus::GraphicComponents::RTexture* texture3;
@@ -22,7 +22,7 @@ protected:
 		using namespace Rubeus::Awerere;
 		using namespace Rubeus::GraphicComponents;
 
-		playLevel = new play_level("play_level");
+		playLevel = new Lplay_level("play_level");
 
 		texture1 = new RTexture("Assets/test9.png");
 		texture2 = new RTexture("Assets/test9.png");
@@ -31,7 +31,7 @@ protected:
 		sprite2 = new RSprite(0.0f, 0.0f, 0.5f, 3.0f, texture2);
 		sprite3 = new RSprite(0.0f, 0.0f, 0.5f, 3.0f, texture3);
 
-		leftPaddle = new paddle(
+		leftPaddle = new Opaddle(
 			"left_paddle",
 			playLevel,
 			*sprite1,
@@ -42,7 +42,7 @@ protected:
 			true
 		);
 
-		rightPaddle = new paddle(
+		rightPaddle = new Opaddle(
 			"right_paddle",
 			playLevel,
 			*sprite2,
@@ -53,7 +53,7 @@ protected:
 			true
 		);
 
-		matchBall = new ball(
+		matchBall = new Oball(
 			"ball",
 			playLevel,
 			*sprite3,

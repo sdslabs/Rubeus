@@ -39,5 +39,33 @@ if (UNIX)
     MESSAGE(STATUS "Unix platform detected")
 endif (UNIX)
 
+add_definitions(-DIMGUI_IMPL_OPENGL_LOADER_GLEW)
+
+file(GLOB_RECURSE VENDOR_WIN_LIBRARIES
+	./vendor/libraries/Win/*.lib
+)
+
+file(GLOB_RECURSE VENDOR_LINUX_LIBRARIES
+	./vendor/libraries/Linux/*.a
+)
+
+add_definitions(-DGLEW_STATIC)
+add_definitions(-DGLFW_DLL)
+
+include_directories(PUBLIC
+    ${OPENGL_INCLUDE_DIRS}
+    ./vendor/include/
+	./vendor/source/
+)
+
 # Include sub - projects.
-add_subdirectory ("RubeusCore")
+if(DEFINED _DEV)
+    add_subdirectory ("RubeusCore")
+    add_subdirectory ("RubeusCore/ProjectManager")
+    unset(_DEV CACHE)
+elseif(DEFINED _PROJECTMANAGER)
+    add_subdirectory ("RubeusCore/ProjectManager")
+    unset(_PROJECTMANAGER CACHE)
+else()
+    add_subdirectory ("RubeusCore")
+endif()

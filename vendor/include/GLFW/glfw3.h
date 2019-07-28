@@ -2340,7 +2340,7 @@ GLFWAPI void glfwMaximizeWindow(GLFWwindow* window);
  *
  *  @ingroup window
  */
-GLFWAPI void glfwShowWindow(GLFWwindow* window);
+GLFWAPI void glfwrun(GLFWwindow* window);
 
 /*! @brief Hides the specified window.
  *
@@ -2356,7 +2356,7 @@ GLFWAPI void glfwShowWindow(GLFWwindow* window);
  *  @thread_safety This function must only be called from the main thread.
  *
  *  @sa @ref window_hide
- *  @sa glfwShowWindow
+ *  @sa glfwrun
  *
  *  @since Added in version 3.0.
  *

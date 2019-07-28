@@ -197,7 +197,7 @@ namespace Rubeus
 			 *
 			 * @param	msg	The message object received.
 			 */
-			void onMessage(Message * msg) override;
+			virtual void onMessage(Message * msg) override;
 
 		protected:
 		};
