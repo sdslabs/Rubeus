@@ -107,11 +107,15 @@ namespace Rubeus
 		}
 
 		// Add default system_ok message to the Message_System 
-		m_MessageSystem->addMessage(Rubeus::RGame::getEngine(), "engine_ok");
+	//	m_MessageSystem->addMessage(Rubeus::RGame::getEngine(), "engine_ok");
+		m_mailbox->addEngineCommands();
+		RegisterCommand(RGame::getEngine()->getCurrentWindow(),"change_window_title", GraphicComponents::RWindowComponent::change_window_title)
+		m_mailbox->sendSignal("change_window_title","ooh la la");
 
 		// Send load level calls asynchronously
-		std::thread th(&RMessageSystem::evaluateMessages, *m_MessageSystem);
-		th.detach();
+		//std::thread th(&RMessageSystem::evaluateMessages, *m_MessageSystem);
+	 	//th.detach();
+		m_MessageSystem->evaluateMessages();
 
 		m_Timer->setFrameCounter();
 

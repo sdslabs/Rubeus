@@ -56,7 +56,7 @@ namespace Rubeus
 		~Message();
 	};
 
-	
+
 	typedef Message RAsyncMessage;
 	typedef Message RSyncMessage;
 

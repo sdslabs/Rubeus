@@ -49,6 +49,7 @@ namespace Rubeus
 
 		/** @brief The ref to message system */
 		RMessageSystem * m_MessageSystem = NULL;
+		RMailingList * m_mailbox = NULL;
 
 		friend class RLevel;
 

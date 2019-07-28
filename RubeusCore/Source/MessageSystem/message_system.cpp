@@ -13,24 +13,27 @@ namespace Rubeus
 
 	void RMessageSystem::evaluateMessages()
 	{
-		if(!m_MessageBus.m_MessageQueue.empty())
+		if (!m_MessageBus.m_MessageQueue.empty())
 		{
-			for(size_t i = 0; i < m_MessageBus.m_MessageQueue.size(); ++i)
+			for (size_t i = 0; i < m_MessageBus.m_MessageQueue.size(); ++i)
 			{
 				auto temp = m_MessageBus.pop();
-
-				std::map<std::string, SignalSignature>::iterator message = RMailBox::CommandsMap.find(temp->m_Command);
-				message->second.foo(temp->m_Data);
-				LOG(temp->m_Receiver->getName() + " received message ");
-
-				delete temp;
+				for (auto message : MailBox.CommandsMap)
+				{
+					if (message.first == temp->m_Command)
+					{
+						message.second->foo(temp->m_Data);
+						LOG(temp->m_Receiver->getName() + " received message ");
+						delete temp;
+					}
+				}
 			}
 		}
 	}
 
 	void RMessageSystem::addMessage(RMasterComponent * receiver, std::string command, var data)
 	{
-		Message * message = new Message(receiver, command, data);
+		Message * message = new Message(receiver, command, data); 
 		m_MessageBus.post(message);
 	}
 }

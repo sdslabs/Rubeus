@@ -23,6 +23,7 @@ namespace Rubeus
 	public:
 		/** @brief	The message bus, common to all message systems */
 		static RMessageBus m_MessageBus;
+		
 
 		/**
 		 * @fn		void evaluateMessages()

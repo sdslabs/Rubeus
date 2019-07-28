@@ -33,6 +33,7 @@ namespace Rubeus
 	public:
 		/** @brief	The message system to send messages */
 		static RMessageSystem m_MessageSystem;
+		static RMailingList m_mailbox;
 
 		/** @brief	The number of components initialised */
 		static unsigned int componentsInitialised;
