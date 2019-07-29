@@ -22,7 +22,7 @@ namespace Rubeus
 				{
 					if (message.first == temp->m_Command)
 					{
-						message.second->foo(temp->m_Data);
+						message.second->function(temp->m_Data);
 						LOG(temp->m_Receiver->getName() + " received message ");
 						delete temp;
 					}

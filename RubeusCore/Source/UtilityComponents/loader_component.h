@@ -91,7 +91,14 @@ namespace Rubeus
 			 */
 			static void deleteImage();
 
-			void load_image(var data = NULL);
+			/**
+			 * @fn		void load_image(var data)
+			 *
+			 * @brief	Load an image and receive a reply with the image data in the form of a byte array
+			 *
+			 * @param	data		The image
+			 */
+			void load_image(var data);
 
 		protected:
 		};

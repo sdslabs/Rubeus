@@ -163,8 +163,22 @@ namespace Rubeus
 		 */
 		inline RWorld * getWorld() const { return m_CurrentLevel->m_World; }
 
-		void load_level(var data = NULL);
+		/**
+		 * @fn		void load_level(var data)
+		 *
+		 * @brief	 Loads the specified level name
+		 *
+		 * @param   data	Level name
+		 */
+		void load_level(var data);
 
+		/**
+		 * @fn		void engine_ok(var data = NULL)
+		 *
+		 * @brief	Checks if engine is ready for use.
+		 *
+		 * @param   data	NULL
+		 */
 		void engine_ok(var data = NULL);
 	};
 }
