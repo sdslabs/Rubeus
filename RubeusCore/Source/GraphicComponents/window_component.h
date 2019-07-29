@@ -189,8 +189,22 @@ namespace Rubeus
 			 */
 			inline const int & getHeight() const { return m_Height; }
 
+			/**
+			 * @fn		void change_window_title(var data)
+			 *
+			 * @brief	Changes the title of the window
+			 *
+			 * @param   data	The title
+			 */
 			void change_window_title(var data);
 
+			/**
+			 * @fn		void get_loaded_image(var data)
+			 *
+			 * @brief	Receive the reply to an earlier message sent with the command, `change_window_title`
+			 *
+			 * @param   data	The image
+			 */
 			void get_loaded_image(var data);
 
 		protected:

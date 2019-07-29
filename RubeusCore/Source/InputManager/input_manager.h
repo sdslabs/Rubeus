@@ -252,6 +252,13 @@ namespace Rubeus
 		 */
 		inline void disable() { m_IsEnabled = false; }
 
+		/**
+		 * @fn		void InputManager_ok(var data = NULL)
+		 *
+		 * @brief	Checks if input manager is ready for use
+		 *
+		 * @param	data	NULL
+		 */
 		void InputManager_ok(var data = NULL);
 
 	protected:

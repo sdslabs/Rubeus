@@ -156,6 +156,13 @@ namespace Rubeus
 		 */
 		RGameObject & add(RGameObject * gameObject);
 
+		/**
+		 * @fn		gameobject_ok(var data = NULL)
+		 *
+		 * @brief	Checks the state of game object
+		 *
+		 * @param	data	NULL
+		 */
 		void gameobject_ok(var data = NULL);
 
 		friend class ACollisionEngine;
