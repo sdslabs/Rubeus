@@ -78,19 +78,10 @@ namespace Rubeus
 			);
 		}
 
-		void RLoaderComponent::onMessage(Message * msg)
+		void RLoaderComponent::load_image(var data)
 		{
-			switch(msg->m_Type)
-			{
-				case load_image:
-				{
-					GraphicComponents::Image temp = loadImageFile(std::any_cast<const char *>(msg->m_Data));
-					m_MessageSystem.addMessage(this, msg->m_Sender, get_loaded_image, temp);
-				}
-				break;
-				default:
-					LOG("Loader component received a misdirected message");
-			}
+			GraphicComponents::Image temp = loadImageFile(std::any_cast<const char *>(data));
+			m_MessageSystem.addMessage(this, "get_loaded_image", temp);
 		}
 
 		inline void RLoaderComponent::initImageLoader()

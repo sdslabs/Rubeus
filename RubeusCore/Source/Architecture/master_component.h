@@ -33,6 +33,7 @@ namespace Rubeus
 	public:
 		/** @brief	The message system to send messages */
 		static RMessageSystem m_MessageSystem;
+		static RMailingList m_mailbox;
 
 		/** @brief	The number of components initialised */
 		static unsigned int componentsInitialised;
@@ -77,16 +78,6 @@ namespace Rubeus
 		 * @return	The name.
 		 */
 		friend std::ostream & operator<<(std::ostream & stream, RMasterComponent & component);
-
-		/**
-		 * @fn		virtual void onMessage(Message * msg)
-		 *
-		 * @brief	Handles message from messaging system
-		 * @warning	Not intended to be used by the user, it may be overriden by child classes
-		 *
-		 * @param	msg	The message object received.
-		 */
-		virtual void onMessage(Message * msg);
 
 	protected:
 	};

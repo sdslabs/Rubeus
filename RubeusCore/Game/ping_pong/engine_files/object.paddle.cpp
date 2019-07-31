@@ -33,7 +33,3 @@ void Opaddle::tick()
 		this->m_PhysicsObject->m_Collider->m_Momentum.y = 0.0f;
 	}
 }
-
-void Opaddle::onMessage(Rubeus::Message * msg)
-{
-}

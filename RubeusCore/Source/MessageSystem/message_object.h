@@ -28,29 +28,25 @@ namespace Rubeus
 	 */
 	struct Message
 	{
-		/** @brief	The sender's address */
-		RMasterComponent * m_Sender;
-
 		/** @brief	The receiver's address */
 		RMasterComponent * m_Receiver;
 
 		/** @brief	The type of this message */
-		EMessageCode m_Type;
+		std::string m_Command;
 
 		/** @brief	The data union to be sent with this message */
 		var m_Data;
 
 		/**
-		 * @fn		Message(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, var data = NULL)
+		 * @fn		Message(RMasterComponent * receiver, EMessageCode type, var data = NULL)
 		 *
 		 * @brief	Constructor
 		 *
-		 * @param	sender	The sender's address.
 		 * @param	receiver	The receiver's address.
 		 * @param	type		The type of message.
 		 * @param	data		The data to be transmitted.
 		 */
-		Message(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, var data = NULL);
+		Message(RMasterComponent * receiver, std::string command, var data = NULL);
 
 		/**
 		 * @fn		~Message()
@@ -59,6 +55,7 @@ namespace Rubeus
 		 */
 		~Message();
 	};
+
 
 	typedef Message RAsyncMessage;
 	typedef Message RSyncMessage;

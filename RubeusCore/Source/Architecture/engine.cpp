@@ -7,6 +7,7 @@
 #include <engine.h>
 
 #include <any>
+#include<thread>
 
 namespace Rubeus
 {
@@ -105,20 +106,25 @@ namespace Rubeus
 			item->begin();
 		}
 
-		// TODO: Add Message system and send load level calls asynchronously
-
+		// Initialise CommandsMap
+		m_mailbox->addEngineCommands();
+		
+		// Send load level calls asynchronously
+		std::thread th(&RMessageSystem::evaluateMessages, *m_MessageSystem);
+	 	th.detach();
+		
 		m_Timer->setFrameCounter();
 
-        float lastFrameEndTime = (float)glfwGetTime();
+		float lastFrameEndTime = (float)glfwGetTime();
 
 		// Main game loop
 		while (m_Window->closed() == false)
 		{
-            while(true)
-            {
-                if(glfwGetTime() - lastFrameEndTime >= 1.0f / 60.0f)
-                break;
-            }
+			while(true)
+			{
+				if(glfwGetTime() - lastFrameEndTime >= 1.0f / 60.0f)
+				break;
+			}
 
 			// Clear window buffer
 			m_Window->clearWindow();
@@ -144,7 +150,7 @@ namespace Rubeus
 				break;
 			}
 
-            lastFrameEndTime = (float)glfwGetTime();
+			lastFrameEndTime = (float)glfwGetTime();
 
 			for (auto & item : m_CurrentLevel->getWorld()->getActiveObjects())
 			{
@@ -165,44 +171,36 @@ namespace Rubeus
 		m_StartupLevelName = "";
 	}
 
-	void REngine::onMessage(Message * msg)
+	void REngine::engine_ok(var data)
 	{
-		switch (msg->m_Type)
+		LOG("Running Engine checks...");
+		if (m_PhysicsEngine == NULL ||
+			m_Window == NULL ||
+			m_GameScene == NULL ||
+			m_Timer == NULL ||
+			m_Loader == NULL)
 		{
-			case system_ok:
-			{
-				LOG("Running Engine checks...");
-				if (m_PhysicsEngine == NULL ||
-					m_Window == NULL ||
-					m_GameScene == NULL ||
-					m_Timer == NULL ||
-					m_Loader == NULL)
-				{
-					ERRORLOG("Core systems not active");
-				}
-				else
-				{
-					SUCCESS("All systems initialised");
-				}
-			}
-			break;
+			ERRORLOG("Core systems not active");
+		}
+		else
+		{
+			SUCCESS("All systems initialised");
+		}
+	}
 
-			case load_level:
-			{
-				LOG("Loading level: " + std::string(getCurrentLevel()->getName()));
+	void REngine::load_level(var data)
+	{
+		LOG("Loading level: " + std::string(getCurrentLevel()->getName()));
 
-				auto search = RLevel::InstantiatedLevels.find(std::any_cast<std::string>(msg->m_Data));
+		auto search = RLevel::InstantiatedLevels.find(std::any_cast<std::string>(data));
 
-				if (search != RLevel::InstantiatedLevels.end())
-				{
-					this->load(*search->second);
-				}
-				else
-				{
-					ERRORLOG("Level " + search->first + "not Found");
-				}
-			}
-			break;
+		if (search != RLevel::InstantiatedLevels.end())
+		{
+			this->load(*search->second);
+		}
+		else
+		{
+			ERRORLOG("Level " + search->first + "not Found");
 		}
 	}
 }

@@ -190,14 +190,23 @@ namespace Rubeus
 			inline const int & getHeight() const { return m_Height; }
 
 			/**
-			 * @fn		void onMessage(Message * msg) override
+			 * @fn		void change_window_title(var data)
 			 *
-			 * @brief	Handles the message received
-			 * @warning	Only to be used by the message system
+			 * @brief	Changes the title of the window
 			 *
-			 * @param	msg	The message object received.
+			 * @param   data	The title
 			 */
-			virtual void onMessage(Message * msg) override;
+
+			void change_window_title(var data);
+
+			/**
+			 * @fn		void get_loaded_image(var data)
+			 *
+			 * @brief	Receive the reply to an earlier message sent with the command, `change_window_title`
+			 *
+			 * @param   data	The image
+			 */
+			void get_loaded_image(var data);
 
 		protected:
 		};

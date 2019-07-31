@@ -9,6 +9,7 @@
 namespace Rubeus
 {
 	RMessageSystem RMasterComponent::m_MessageSystem;
+	RMailingList RMasterComponent::m_mailbox;
 	unsigned int RMasterComponent::componentsInitialised = 0;
 
 	RMasterComponent::RMasterComponent()
@@ -24,11 +25,6 @@ namespace Rubeus
 	unsigned int RMasterComponent::getComponentID() const
 	{
 		return m_ComponentID;
-	}
-
-	void RMasterComponent::onMessage(Message * msg)
-	{
-		ERRORLOG("Master component was messaged");
 	}
 
 	std::ostream & operator<<(std::ostream & stream, RMasterComponent & component)

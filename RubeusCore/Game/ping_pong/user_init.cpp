@@ -11,7 +11,6 @@ protected:
 	Rubeus::GraphicComponents::RTexture* texture1;
 	Rubeus::GraphicComponents::RTexture* texture2;
 	Rubeus::GraphicComponents::RTexture* texture3;
-
 	Rubeus::GraphicComponents::RSprite* sprite1;
 	Rubeus::GraphicComponents::RSprite* sprite2;
 	Rubeus::GraphicComponents::RSprite* sprite3;

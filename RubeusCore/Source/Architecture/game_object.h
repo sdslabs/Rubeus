@@ -157,14 +157,13 @@ namespace Rubeus
 		RGameObject & add(RGameObject * gameObject);
 
 		/**
-		 * @fn		virtual void onMessage(Message * msg)
+		 * @fn		gameobject_ok(var data = NULL)
 		 *
-		 * @brief	Handles message sent by Message system
-		 * @warning	Async invokation only
+		 * @brief	Checks the state of game object
 		 *
-		 * @param	msg	The message data.
+		 * @param	data	NULL
 		 */
-		virtual void onMessage(Message * msg) override;
+		void gameobject_ok(var data = NULL);
 
 		friend class ACollisionEngine;
 		friend class REngine;

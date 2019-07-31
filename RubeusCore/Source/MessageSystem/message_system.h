@@ -23,6 +23,7 @@ namespace Rubeus
 	public:
 		/** @brief	The message bus, common to all message systems */
 		static RMessageBus m_MessageBus;
+		
 
 		/**
 		 * @fn		void evaluateMessages()
@@ -37,11 +38,10 @@ namespace Rubeus
 		 *
 		 * @brief	Adds a message to the message queue
 		 *
-		 * @param	sender	Pointer to the sender.
 		 * @param	receiver	Pointer to the receiver.
-		 * @param	type		Type of message command.
+		 * @param	command		Type of message command.
 		 * @param	data		The data object to be sent. See 'var' typedef for transmittable data
 		 */
-		void addMessage(RMasterComponent * sender, RMasterComponent * receiver, EMessageCode type, var data = NULL);
+		static void addMessage(RMasterComponent * receiver, std::string command, var data = NULL);
 	};
 }

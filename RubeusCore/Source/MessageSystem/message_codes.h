@@ -7,46 +7,74 @@
 #pragma once
 
 #include <logger_component.h>
+#include <message_object.h>
+#include <map>
+
+#include <any>
+#include <functional>
+
+typedef std::any var;
 
 namespace Rubeus
 {
+	class RMasterComponent;
+
 	/**
-	 * @enum		EMessageCode
+	 * @struct	SignalStructure
 	 *
-	 * @brief	Defines all message codes the game requires.
+	 * @brief	Contains object and function name for commands.
 	 */
-	enum EMessageCode
+	struct SignalSignature
 	{
-		// Check if the system is ready for use(Only for debugging purposes)
-		// Handled by : All systems ideally
-		system_ok,
+		RMasterComponent * m_Receiver;
+		std::function<void(var)> function;
 
-		// Change the window title to the string provided
-		// Handled by: RWindowComponent
-		change_window_title,
+		SignalSignature(RMasterComponent * Receiver, std::function<void(var)> command_func);
 
-		// Load an image and receive a reply with the image data in the form of a byte array
-		// Handled by: RLoaderComponent
-		load_image,
+		~SignalSignature();
 
-		// Receive the reply to an earlier message sent with the command, `change_window_title`
-		// Handled by: RWindowComponent
-		get_loaded_image,
-
-		// Modifies the music playing every frame according to AudioModifierCommand
-		// Handled by: RSymphony
-		modify_audio,
-
-		// Loads the specified level name (level needs to be registered in REngine first)
-		// Handled by: REngine
-		load_level
 	};
 
-	// Define any functions needed to be sent as message data below. Make sure to mark them as inline for performance.
-	// Example:
-	//
-	// inline void dummyFunction()
-	// {
-	//   	LOG("Dummy function was called");
-	// }
+#define RegisterCommand(m_Receiver, m_FuncName, m_Function)                                                               \
+SignalSignature* newcommand = new SignalSignature(m_Receiver, std::bind(&m_Function, m_Receiver, std::placeholders::_1)); \
+MailBox.CommandsMap.insert(std::pair<std::string, Rubeus::SignalSignature*>{m_FuncName, newcommand});                     \
+
+	/**
+	 * @class	RMailingList
+	 *
+	 * @brief	A class that handles all the message commands.
+	 */
+	class RMailingList
+	{
+	public:
+
+		RMailingList();
+		~RMailingList();
+		
+		/**
+	     * @map		CommandsMap
+	     *
+	     * @brief	Contains all the message commands.
+	     */
+		std::map<std::string, SignalSignature*> CommandsMap;
+
+		/**
+		 * @fn		void sendSignal(std::string command, var data = NULL)
+		 *
+		 * @brief	Runs a command
+		 *
+		 * @param	command		Name of message command.
+		 * @param	data		The data that need to pass to corresponding function.
+		 */
+		void sendSignal(std::string command, var data = NULL);
+
+		/**
+		 * @fn		void addEngineCommands()
+		 *
+		 * @brief	Adds engine commands to CommandsMap
+		 */
+		void addEngineCommands();
+	};
+
+	extern RMailingList MailBox;
 }

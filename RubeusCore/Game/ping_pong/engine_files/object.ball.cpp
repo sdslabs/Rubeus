@@ -13,7 +13,3 @@ void Oball::onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awerer
 void Oball::tick()
 {
 }
-
-void Oball::onMessage(Rubeus::Message * msg)
-{
-}

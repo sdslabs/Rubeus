@@ -47,6 +47,10 @@ namespace Rubeus
 		/** @brief	The level currently in play */
 		RLevel * m_CurrentLevel = NULL;
 
+		/** @brief The ref to message system */
+		RMessageSystem * m_MessageSystem = NULL;
+		RMailingList * m_mailbox = NULL;
+
 		friend class RLevel;
 
 	public:
@@ -160,13 +164,21 @@ namespace Rubeus
 		inline RWorld * getWorld() const { return m_CurrentLevel->m_World; }
 
 		/**
-		 * @fn		void onMessage(Message * msg) override
+		 * @fn		void load_level(var data)
 		 *
-		 * @brief	Message handler of the engine
-		 * @warning	Handles engine's asynchronous calls
+		 * @brief	 Loads the specified level name
 		 *
-		 * @param	msg	The message object sent across.
+		 * @param   data	Level name
 		 */
-		void onMessage(Message * msg) override;
+		void load_level(var data);
+
+		/**
+		 * @fn		void engine_ok(var data = NULL)
+		 *
+		 * @brief	Checks if engine is ready for use.
+		 *
+		 * @param   data	NULL
+		 */
+		void engine_ok(var data = NULL);
 	};
 }
