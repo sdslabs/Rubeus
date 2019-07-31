@@ -196,6 +196,7 @@ namespace Rubeus
 			 *
 			 * @param   data	The title
 			 */
+
 			void change_window_title(var data);
 
 			/**

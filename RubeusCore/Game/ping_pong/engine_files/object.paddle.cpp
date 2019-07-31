@@ -1,6 +1,6 @@
 #include "object.paddle.h"
 
-void paddle::begin()
+void Opaddle::begin()
 {
 	this->m_PhysicsObject->m_Collider->m_PhysicsMaterial.m_Gravity.y = 0.0f;
 
@@ -14,11 +14,11 @@ void paddle::begin()
 	this->m_ThisTicks = true;
 }
 
-void paddle::onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awerere::ACollideData & collisionData)
+void Opaddle::onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awerere::ACollideData & collisionData)
 {
 }
 
-void paddle::tick()
+void Opaddle::tick()
 {
 	if (Rubeus::RGame::getEngine()->getCurrentLevelInputManager()->isKeyBindingPressed("Ascend"))
 	{
@@ -33,4 +33,3 @@ void paddle::tick()
 		this->m_PhysicsObject->m_Collider->m_Momentum.y = 0.0f;
 	}
 }
-

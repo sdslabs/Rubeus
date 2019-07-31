@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../RubeusCore.h"
+#include "../../RubeusCore.h"
 
-class ball : public Rubeus::RGameObject
+class Oball : public Rubeus::RGameObject
 {
-	REGISTERGAMECLASS(ball)
+	REGISTEROBJECTCLASS(Oball);
 };

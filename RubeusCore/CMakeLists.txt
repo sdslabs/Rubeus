@@ -3,10 +3,17 @@
 
 cmake_minimum_required (VERSION 3.8)
 
-file(GLOB_RECURSE RUBEUS_SOURCES
-    Source/*.cpp
-    Game/*.cpp
-)
+if(DEFINED _PROJECT)
+    file(GLOB_RECURSE RUBEUS_SOURCES
+        Source/*.cpp
+        Game/${_PROJECT}/*.cpp
+    )
+else()
+    file(GLOB_RECURSE RUBEUS_SOURCES
+        Source/*.cpp
+        Game/ping_pong/*.cpp
+    )
+endif()
 
 file(GLOB_RECURSE HEADERS
     Source/**
@@ -24,9 +31,14 @@ file(GLOB_RECURSE VENDOR_LINUX_LIBRARIES
 
 add_definitions(-DGLEW_STATIC)
 add_definitions(-DGLFW_DLL)
-
-# This adds the source to this project's executable.
+#This adds the source to this project's executable.
 add_executable (RubeusCore "RubeusCore.cpp" "RubeusCore.h" ${RUBEUS_SOURCES} ${HEADERS})
+
+include_directories(PUBLIC
+    ${OPENGL_INCLUDE_DIRS}
+    ../vendor/include/
+    ../vendor/source/
+)
 
 target_include_directories(RubeusCore PUBLIC
     ./Game
@@ -42,6 +54,8 @@ target_include_directories(RubeusCore PUBLIC
     ../vendor/include/
 )
 
+
+
 if(WIN32)
     # Remove this line if you want to remove Visual Leak Detection(VLD) reports in Debug mode.
     # Keep this line if you want to have VLD reports to detect memory leaks  
@@ -50,7 +64,6 @@ if(WIN32)
     target_link_libraries(RubeusCore PUBLIC
         ${OPENGL_LIBRARIES}
 		${VENDOR_WIN_LIBRARIES}
-        -lstdc++fs
     )
 
 	add_custom_command(TARGET RubeusCore POST_BUILD
@@ -72,6 +85,7 @@ if(UNIX)
         ${VENDOR_LINUX_LIBRARIES}
         -lstdc++fs
     )
+
 endif(UNIX)
 
 # TODO: Add tests and install targets if needed.

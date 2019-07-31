@@ -20,6 +20,7 @@
 
 #include <game.h>
 
+
 // TODO: Remove logger before shipping
 
 #ifndef LOGS
@@ -34,7 +35,7 @@ namespace Rubeus
 		/**
 		 * @class	RLogger
 		 *
-		 * @brief	A contaier class that contains all logger utilities.
+		 * @brief	A container class that contains all logger utilities.
 		 */
 		class RLogger
 		{
@@ -54,13 +55,6 @@ namespace Rubeus
 
 		public:
 
-			/**
-			 * @fn		RLogger()
-			 *
-			 * @brief	The logger constructor
-			 *
-			 * @warning	Do not make multiple copies of the logger
-			 */
 			RLogger() = delete;
 
 			/**
