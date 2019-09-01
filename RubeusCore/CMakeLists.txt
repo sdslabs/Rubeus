@@ -84,6 +84,7 @@ if(UNIX)
         ${ILU_LIBRARIES}
         ${VENDOR_LINUX_LIBRARIES}
         -lstdc++fs
+        -pthread
     )
 
 endif(UNIX)
