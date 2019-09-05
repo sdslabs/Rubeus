@@ -16,8 +16,7 @@ $ git clone git@github.com:sdslabs/Rubeus.git
 ```
 
 ## Initialising CMake
-1. Navigate to the repository: `cd Rubeus`
-2. Run `cmake ./`
+Use the ProjectManager.exe GUI to run the relevant cmake as show in [this tutorial](https://github.com/sdslabs/Rubeus/wiki/Making-a-ping-pong-game#2-setting-up-project-manager)
 
 ## Setting up Rubeus source in Visual Studio 2017
 1. Open the newly generated `RubeusCore.sln` in the repository root folder inside Visual Studio. Right click on `RubeusCore` in Solution Explorer and select `Set as StartUp project`. [Screenshot](https://imgur.com/a/xadxwsG)

@@ -24,18 +24,28 @@ $ hash -r
 ```
 
 ## Initialising CMake
+First build the Project Manager
 1. Navigate to Rubeus' cloned repository
-2. Run `cmake ./`
+2. Run `cmake -D_PROJECTMANAGER=1 ./`
 _Note: Rubeus uses an in-source CMake build_
+
+In case you want to build both Rubeus Engine and Project Manager in one go without the GUI
+Run `cmake -D_DEV=1 ./`
+_Ignore warnings related to unused variables_
+_Note: The engine would be built with the previous project it was built or in case of the first run, with the ping pong example game_
+
+After buildig the Project Manager once you may use it's GUI to run the relevanct CMake as shown in [this tutorial](https://github.com/sdslabs/Rubeus/wiki/Making-a-ping-pong-game#2-setting-up-project-manager)
 
 ## Building Rubeus using Makefiles
 1. After running CMake, you will find that CMake has generated a Makefile. To use this Makefile to build Rubeus, just run this in `Rubeus/`:
 ```shell
 $ make
 ```
-2. This will generate a binary in the `RubeusCore/` directory by the name `RubeusCore`. Run it using:
+2. This will generate a binary in the `RubeusCore/ProjectManager/` directory by the name `ProjectManager`. Run it using:
 ```shell
-$ cd RubeusCore/ && ./RubeusCore
+$ cd RubeusCore/ProjectManager/ && ./ProjectManager
 ```
+
+Use the Project Manager GUI to further configure your Engine build
 
 We are done! Remember to go through the [contribution guidelines](CONTRIBUTING.md) for further guidance.
