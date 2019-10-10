@@ -7,364 +7,386 @@
     <includes refid="renderable__object_8h" local="no">renderable_object.h</includes>
     <includes refid="index__buffer__object_8h" local="no">index_buffer_object.h</includes>
     <includedby refid="_rubeus_core_8h" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/RubeusCore.h</includedby>
-    <includedby refid="group__object_8h" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/group_object.h</includedby>
-    <includedby refid="layer__object_8h" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/layer_object.h</includedby>
-    <includedby refid="guerrilla__renderer__component_8cpp" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/guerrilla_renderer_component.cpp</includedby>
+    <includedby refid="guerrilla__renderer__component_8cpp" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.cpp</includedby>
+    <includedby refid="layer__object_8h" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/layer_object.h</includedby>
     <incdepgraph>
-      <node id="1006">
-        <label>renderer_component.h</label>
-        <link refid="renderer__component_8h"/>
-        <childnode refid="1007" relation="include">
-        </childnode>
-        <childnode refid="1008" relation="include">
-        </childnode>
-        <childnode refid="1011" relation="include">
-        </childnode>
+      <node id="2415">
+        <label>functional</label>
       </node>
-      <node id="1032">
-        <label>loader_component.h</label>
-        <link refid="loader__component_8h"/>
-        <childnode refid="1017" relation="include">
-        </childnode>
-        <childnode refid="1012" relation="include">
-        </childnode>
-        <childnode refid="1033" relation="include">
-        </childnode>
-        <childnode refid="1018" relation="include">
-        </childnode>
-        <childnode refid="1019" relation="include">
-        </childnode>
-        <childnode refid="1016" relation="include">
-        </childnode>
-        <childnode refid="1011" relation="include">
-        </childnode>
-        <childnode refid="1024" relation="include">
-        </childnode>
-      </node>
-      <node id="1018">
-        <label>IL/il.h</label>
-      </node>
-      <node id="1019">
-        <label>IL/ilu.h</label>
-      </node>
-      <node id="1022">
-        <label>message_object.h</label>
-        <link refid="message__object_8h"/>
-        <childnode refid="1012" relation="include">
-        </childnode>
-        <childnode refid="1023" relation="include">
-        </childnode>
-        <childnode refid="1024" relation="include">
-        </childnode>
-        <childnode refid="1025" relation="include">
-        </childnode>
-      </node>
-      <node id="1012">
-        <label>string</label>
-      </node>
-      <node id="1007">
-        <label>GL/glew.h</label>
-      </node>
-      <node id="1008">
-        <label>rubeus_maths_library.h</label>
-        <link refid="rubeus__maths__library_8h"/>
-        <childnode refid="1009" relation="include">
-        </childnode>
-        <childnode refid="1010" relation="include">
-        </childnode>
-      </node>
-      <node id="1034">
-        <label>shader_component.h</label>
-        <link refid="shader__component_8h"/>
-        <childnode refid="1021" relation="include">
-        </childnode>
-        <childnode refid="1007" relation="include">
-        </childnode>
-        <childnode refid="1011" relation="include">
-        </childnode>
-        <childnode refid="1032" relation="include">
-        </childnode>
-        <childnode refid="1008" relation="include">
-        </childnode>
-      </node>
-      <node id="1020">
-        <label>message_system.h</label>
-        <link refid="message__system_8h"/>
-        <childnode refid="1021" relation="include">
-        </childnode>
-        <childnode refid="1022" relation="include">
-        </childnode>
-        <childnode refid="1026" relation="include">
-        </childnode>
-      </node>
-      <node id="1023">
-        <label>boost/any.hpp</label>
-      </node>
-      <node id="1025">
-        <label>message_codes.h</label>
-        <link refid="message__codes_8h"/>
-        <childnode refid="1016" relation="include">
-        </childnode>
-      </node>
-      <node id="1024">
-        <label>image_object.h</label>
-        <link refid="image__object_8h"/>
-        <childnode refid="1012" relation="include">
-        </childnode>
-        <childnode refid="1018" relation="include">
-        </childnode>
-      </node>
-      <node id="1030">
-        <label>vertex_array_object.h</label>
-        <link refid="vertex__array__object_8h"/>
-        <childnode refid="1007" relation="include">
-        </childnode>
-        <childnode refid="1021" relation="include">
-        </childnode>
-        <childnode refid="1028" relation="include">
-        </childnode>
-      </node>
-      <node id="1026">
-        <label>message_bus.h</label>
-        <link refid="message__bus_8h"/>
-        <childnode refid="1021" relation="include">
-        </childnode>
-        <childnode refid="1022" relation="include">
-        </childnode>
-      </node>
-      <node id="1017">
-        <label>string.h</label>
-      </node>
-      <node id="1014">
-        <label>typeinfo</label>
-      </node>
-      <node id="1021">
-        <label>vector</label>
-      </node>
-      <node id="1027">
-        <label>renderable_object.h</label>
-        <link refid="renderable__object_8h"/>
-        <childnode refid="1007" relation="include">
-        </childnode>
-        <childnode refid="1008" relation="include">
-        </childnode>
-        <childnode refid="1028" relation="include">
-        </childnode>
-        <childnode refid="1029" relation="include">
-        </childnode>
-        <childnode refid="1030" relation="include">
-        </childnode>
-        <childnode refid="1031" relation="include">
-        </childnode>
-        <childnode refid="1034" relation="include">
-        </childnode>
-        <childnode refid="1006" relation="include">
-        </childnode>
-      </node>
-      <node id="1029">
-        <label>index_buffer_object.h</label>
-        <link refid="index__buffer__object_8h"/>
-        <childnode refid="1007" relation="include">
-        </childnode>
-        <childnode refid="1016" relation="include">
-        </childnode>
-      </node>
-      <node id="1009">
-        <label>math.h</label>
-      </node>
-      <node id="1033">
-        <label>cstdlib</label>
-      </node>
-      <node id="1028">
+      <node id="2418">
         <label>buffer_object.h</label>
         <link refid="buffer__object_8h"/>
-        <childnode refid="1007" relation="include">
+        <childnode refid="2391" relation="include">
         </childnode>
-        <childnode refid="1016" relation="include">
-        </childnode>
-      </node>
-      <node id="1010">
-        <label>iostream</label>
-      </node>
-      <node id="1011">
-        <label>master_component.h</label>
-        <link refid="master__component_8h"/>
-        <childnode refid="1012" relation="include">
-        </childnode>
-        <childnode refid="1013" relation="include">
-        </childnode>
-        <childnode refid="1014" relation="include">
-        </childnode>
-        <childnode refid="1015" relation="include">
-        </childnode>
-        <childnode refid="1016" relation="include">
-        </childnode>
-        <childnode refid="1020" relation="include">
+        <childnode refid="2400" relation="include">
         </childnode>
       </node>
-      <node id="1005">
-        <label>cstddef</label>
+      <node id="2390">
+        <label>renderer_component.h</label>
+        <link refid="renderer__component_8h"/>
+        <childnode refid="2391" relation="include">
+        </childnode>
+        <childnode refid="2392" relation="include">
+        </childnode>
+        <childnode refid="2395" relation="include">
+        </childnode>
       </node>
-      <node id="1013">
-        <label>unordered_map</label>
+      <node id="2424">
+        <label>shader_component.h</label>
+        <link refid="shader__component_8h"/>
+        <childnode refid="2410" relation="include">
+        </childnode>
+        <childnode refid="2391" relation="include">
+        </childnode>
+        <childnode refid="2395" relation="include">
+        </childnode>
+        <childnode refid="2422" relation="include">
+        </childnode>
+        <childnode refid="2392" relation="include">
+        </childnode>
       </node>
-      <node id="1031">
+      <node id="2406">
+        <label>IL/il.h</label>
+      </node>
+      <node id="2421">
         <label>texture_object.h</label>
         <link refid="texture__object_8h"/>
-        <childnode refid="1007" relation="include">
+        <childnode refid="2391" relation="include">
         </childnode>
-        <childnode refid="1032" relation="include">
-        </childnode>
-      </node>
-      <node id="1004">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h</label>
-        <link refid="guerrilla__renderer__component_8h"/>
-        <childnode refid="1005" relation="include">
-        </childnode>
-        <childnode refid="1006" relation="include">
-        </childnode>
-        <childnode refid="1027" relation="include">
-        </childnode>
-        <childnode refid="1029" relation="include">
+        <childnode refid="2422" relation="include">
         </childnode>
       </node>
-      <node id="1015">
-        <label>memory</label>
+      <node id="2407">
+        <label>IL/ilu.h</label>
       </node>
-      <node id="1016">
+      <node id="2396">
+        <label>string</label>
+      </node>
+      <node id="2420">
+        <label>vertex_array_object.h</label>
+        <link refid="vertex__array__object_8h"/>
+        <childnode refid="2391" relation="include">
+        </childnode>
+        <childnode refid="2410" relation="include">
+        </childnode>
+        <childnode refid="2418" relation="include">
+        </childnode>
+      </node>
+      <node id="2391">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="2402">
+        <label>map</label>
+      </node>
+      <node id="2400">
         <label>logger_component.h</label>
         <link refid="logger__component_8h"/>
-        <childnode refid="1010" relation="include">
+        <childnode refid="2394" relation="include">
         </childnode>
-        <childnode refid="1017" relation="include">
+        <childnode refid="2401" relation="include">
         </childnode>
-        <childnode refid="1012" relation="include">
+        <childnode refid="2396" relation="include">
         </childnode>
-        <childnode refid="1007" relation="include">
+        <childnode refid="2402" relation="include">
         </childnode>
-        <childnode refid="1018" relation="include">
+        <childnode refid="2403" relation="include">
         </childnode>
-        <childnode refid="1019" relation="include">
+        <childnode refid="2404" relation="include">
         </childnode>
+        <childnode refid="2405" relation="include">
+        </childnode>
+        <childnode refid="2391" relation="include">
+        </childnode>
+        <childnode refid="2406" relation="include">
+        </childnode>
+        <childnode refid="2407" relation="include">
+        </childnode>
+        <childnode refid="2408" relation="include">
+        </childnode>
+      </node>
+      <node id="2403">
+        <label>fstream</label>
+      </node>
+      <node id="2422">
+        <label>loader_component.h</label>
+        <link refid="loader__component_8h"/>
+        <childnode refid="2401" relation="include">
+        </childnode>
+        <childnode refid="2396" relation="include">
+        </childnode>
+        <childnode refid="2423" relation="include">
+        </childnode>
+        <childnode refid="2406" relation="include">
+        </childnode>
+        <childnode refid="2407" relation="include">
+        </childnode>
+        <childnode refid="2400" relation="include">
+        </childnode>
+        <childnode refid="2395" relation="include">
+        </childnode>
+        <childnode refid="2413" relation="include">
+        </childnode>
+      </node>
+      <node id="2413">
+        <label>image_object.h</label>
+        <link refid="image__object_8h"/>
+        <childnode refid="2396" relation="include">
+        </childnode>
+        <childnode refid="2406" relation="include">
+        </childnode>
+      </node>
+      <node id="2411">
+        <label>message_object.h</label>
+        <link refid="message__object_8h"/>
+        <childnode refid="2396" relation="include">
+        </childnode>
+        <childnode refid="2412" relation="include">
+        </childnode>
+        <childnode refid="2413" relation="include">
+        </childnode>
+        <childnode refid="2414" relation="include">
+        </childnode>
+      </node>
+      <node id="2412">
+        <label>any</label>
+      </node>
+      <node id="2395">
+        <label>master_component.h</label>
+        <link refid="master__component_8h"/>
+        <childnode refid="2396" relation="include">
+        </childnode>
+        <childnode refid="2397" relation="include">
+        </childnode>
+        <childnode refid="2398" relation="include">
+        </childnode>
+        <childnode refid="2399" relation="include">
+        </childnode>
+        <childnode refid="2400" relation="include">
+        </childnode>
+        <childnode refid="2409" relation="include">
+        </childnode>
+      </node>
+      <node id="2392">
+        <label>rubeus_maths_library.h</label>
+        <link refid="rubeus__maths__library_8h"/>
+        <childnode refid="2393" relation="include">
+        </childnode>
+        <childnode refid="2394" relation="include">
+        </childnode>
+      </node>
+      <node id="2401">
+        <label>string.h</label>
+      </node>
+      <node id="2414">
+        <label>message_codes.h</label>
+        <link refid="message__codes_8h"/>
+        <childnode refid="2400" relation="include">
+        </childnode>
+        <childnode refid="2411" relation="include">
+        </childnode>
+        <childnode refid="2402" relation="include">
+        </childnode>
+        <childnode refid="2412" relation="include">
+        </childnode>
+        <childnode refid="2415" relation="include">
+        </childnode>
+      </node>
+      <node id="2398">
+        <label>typeinfo</label>
+      </node>
+      <node id="2404">
+        <label>ctime</label>
+      </node>
+      <node id="2419">
+        <label>index_buffer_object.h</label>
+        <link refid="index__buffer__object_8h"/>
+        <childnode refid="2391" relation="include">
+        </childnode>
+        <childnode refid="2400" relation="include">
+        </childnode>
+      </node>
+      <node id="2410">
+        <label>vector</label>
+      </node>
+      <node id="2417">
+        <label>renderable_object.h</label>
+        <link refid="renderable__object_8h"/>
+        <childnode refid="2391" relation="include">
+        </childnode>
+        <childnode refid="2392" relation="include">
+        </childnode>
+        <childnode refid="2418" relation="include">
+        </childnode>
+        <childnode refid="2419" relation="include">
+        </childnode>
+        <childnode refid="2420" relation="include">
+        </childnode>
+        <childnode refid="2421" relation="include">
+        </childnode>
+        <childnode refid="2424" relation="include">
+        </childnode>
+        <childnode refid="2390" relation="include">
+        </childnode>
+      </node>
+      <node id="2393">
+        <label>math.h</label>
+      </node>
+      <node id="2423">
+        <label>cstdlib</label>
+      </node>
+      <node id="2416">
+        <label>message_bus.h</label>
+        <link refid="message__bus_8h"/>
+        <childnode refid="2410" relation="include">
+        </childnode>
+        <childnode refid="2411" relation="include">
+        </childnode>
+      </node>
+      <node id="2394">
+        <label>iostream</label>
+      </node>
+      <node id="2389">
+        <label>cstddef</label>
+      </node>
+      <node id="2397">
+        <label>unordered_map</label>
+      </node>
+      <node id="2409">
+        <label>message_system.h</label>
+        <link refid="message__system_8h"/>
+        <childnode refid="2410" relation="include">
+        </childnode>
+        <childnode refid="2411" relation="include">
+        </childnode>
+        <childnode refid="2416" relation="include">
+        </childnode>
+      </node>
+      <node id="2388">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h</label>
+        <link refid="guerrilla__renderer__component_8h"/>
+        <childnode refid="2389" relation="include">
+        </childnode>
+        <childnode refid="2390" relation="include">
+        </childnode>
+        <childnode refid="2417" relation="include">
+        </childnode>
+        <childnode refid="2419" relation="include">
+        </childnode>
+      </node>
+      <node id="2408">
+        <label>game.h</label>
+        <link refid="game_8h"/>
+        <childnode refid="2396" relation="include">
+        </childnode>
+      </node>
+      <node id="2399">
+        <label>memory</label>
+      </node>
+      <node id="2405">
+        <label>experimental/filesystem</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="1049">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/ui_layer_object.cpp</label>
-        <link refid="ui__layer__object_8cpp"/>
+      <node id="2439">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.cpp</label>
+        <link refid="main__layer_8cpp"/>
       </node>
-      <node id="1048">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/ui_layer_object.h</label>
-        <link refid="ui__layer__object_8h"/>
-        <childnode refid="1036" relation="include">
-        </childnode>
-        <childnode refid="1042" relation="include">
-        </childnode>
-        <childnode refid="1049" relation="include">
-        </childnode>
+      <node id="2436">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.cpp</label>
+        <link refid="level_8cpp"/>
       </node>
-      <node id="1042">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/layer_composition_object.h</label>
-        <link refid="layer__composition__object_8h"/>
-        <childnode refid="1043" relation="include">
+      <node id="2431">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.h</label>
+        <link refid="main__layer_8h"/>
+        <childnode refid="2426" relation="include">
         </childnode>
-        <childnode refid="1046" relation="include">
+        <childnode refid="2432" relation="include">
+        </childnode>
+        <childnode refid="2439" relation="include">
         </childnode>
       </node>
-      <node id="1036">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/RubeusCore.h</label>
-        <link refid="_rubeus_core_8h"/>
-        <childnode refid="1037" relation="include">
-        </childnode>
-        <childnode refid="1038" relation="include">
-        </childnode>
-      </node>
-      <node id="1039">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/group_object.h</label>
-        <link refid="group__object_8h"/>
-        <childnode refid="1040" relation="include">
-        </childnode>
-        <childnode refid="1050" relation="include">
-        </childnode>
-      </node>
-      <node id="1046">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/layer_composition_object.cpp</label>
-        <link refid="layer__composition__object_8cpp"/>
-      </node>
-      <node id="1044">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/engine.cpp</label>
-        <link refid="engine_8cpp"/>
-      </node>
-      <node id="1047">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/scene_layer_object.cpp</label>
-        <link refid="scene__layer__object_8cpp"/>
-      </node>
-      <node id="1040">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/layer_object.h</label>
-        <link refid="layer__object_8h"/>
-        <childnode refid="1041" relation="include">
-        </childnode>
-        <childnode refid="1048" relation="include">
-        </childnode>
-      </node>
-      <node id="1037">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp</label>
+      <node id="2427">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp</label>
         <link refid="user__init_8cpp"/>
       </node>
-      <node id="1051">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/guerrilla_renderer_component.cpp</label>
+      <node id="2429">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.cpp</label>
         <link refid="guerrilla__renderer__component_8cpp"/>
       </node>
-      <node id="1038">
+      <node id="2437">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.cpp</label>
+        <link refid="message__codes_8cpp"/>
+      </node>
+      <node id="2435">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.cpp</label>
+        <link refid="game_8cpp"/>
+      </node>
+      <node id="2426">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/RubeusCore.h</label>
+        <link refid="_rubeus_core_8h"/>
+        <childnode refid="2427" relation="include">
+        </childnode>
+        <childnode refid="2428" relation="include">
+        </childnode>
+      </node>
+      <node id="2428">
         <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/RubeusCore.cpp</label>
         <link refid="_rubeus_core_8cpp"/>
       </node>
-      <node id="1045">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/level.cpp</label>
-        <link refid="level_8cpp"/>
+      <node id="2434">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.cpp</label>
+        <link refid="engine_8cpp"/>
       </node>
-      <node id="1043">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h</label>
-        <link refid="engine_8h"/>
-        <childnode refid="1036" relation="include">
-        </childnode>
-        <childnode refid="1044" relation="include">
-        </childnode>
-        <childnode refid="1045" relation="include">
+      <node id="2430">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/layer_object.h</label>
+        <link refid="layer__object_8h"/>
+        <childnode refid="2431" relation="include">
         </childnode>
       </node>
-      <node id="1041">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/scene_layer_object.h</label>
-        <link refid="scene__layer__object_8h"/>
-        <childnode refid="1042" relation="include">
-        </childnode>
-        <childnode refid="1047" relation="include">
-        </childnode>
-      </node>
-      <node id="1050">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/group_object.cpp</label>
-        <link refid="group__object_8cpp"/>
-      </node>
-      <node id="1035">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h</label>
+      <node id="2425">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h</label>
         <link refid="guerrilla__renderer__component_8h"/>
-        <childnode refid="1036" relation="include">
+        <childnode refid="2426" relation="include">
         </childnode>
-        <childnode refid="1039" relation="include">
+        <childnode refid="2429" relation="include">
         </childnode>
-        <childnode refid="1040" relation="include">
+        <childnode refid="2430" relation="include">
         </childnode>
-        <childnode refid="1051" relation="include">
+      </node>
+      <node id="2433">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h</label>
+        <link refid="engine_8h"/>
+        <childnode refid="2426" relation="include">
         </childnode>
+        <childnode refid="2434" relation="include">
+        </childnode>
+        <childnode refid="2435" relation="include">
+        </childnode>
+        <childnode refid="2436" relation="include">
+        </childnode>
+        <childnode refid="2437" relation="include">
+        </childnode>
+      </node>
+      <node id="2432">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.h</label>
+        <link refid="game__scene_8h"/>
+        <childnode refid="2433" relation="include">
+        </childnode>
+        <childnode refid="2438" relation="include">
+        </childnode>
+      </node>
+      <node id="2438">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.cpp</label>
+        <link refid="game__scene_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component" prot="public">Rubeus::GraphicComponents::RGuerrillaRendererComponent</innerclass>
     <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
     <innernamespace refid="namespace_rubeus_1_1_graphic_components">Rubeus::GraphicComponents</innernamespace>
     <briefdescription>
-<para>Declares the guerrilla renderer component class. </para>    </briefdescription>
+    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h"/>
   </compounddef>
 </doxygen>

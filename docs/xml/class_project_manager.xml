@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_project_manager" kind="class" language="C++" prot="public">
+    <compoundname>ProjectManager</compoundname>
+    <includes refid="_project_manager_8h" local="no">ProjectManager.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_project_manager_1a8154f4db53d39c9878092e51a739fe0e" prot="private" static="no" mutable="no">
+        <type>GLFWwindow *</type>
+        <definition>GLFWwindow* ProjectManager::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <briefdescription>
+<para>The pointer to the window object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="33" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_project_manager_1af2e1bf97bb7ee36fb2b566ddb8009fd5" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; ProjectManager::GameFiles</definition>
+        <argsstring></argsstring>
+        <name>GameFiles</name>
+        <briefdescription>
+<para>Map containing templates of all game files. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="35" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_project_manager_1a05bdc99e23ff49a7c583ebef8a0d8ceb" prot="private" static="no" mutable="no">
+        <type>std::array&lt; std::function&lt; void(void)&gt;, 3 &gt;</type>
+        <definition>std::array&lt; std::function&lt;void(void)&gt;, 3&gt; ProjectManager::viewFunctions</definition>
+        <argsstring></argsstring>
+        <name>viewFunctions</name>
+        <briefdescription>
+<para>Array of functions which contain code of the GUI to be disaplayed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="37" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_project_manager_1a5b5ac147b1a3003d7130f40fadc0b563" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ProjectManager::ProjectWindow</definition>
+        <argsstring></argsstring>
+        <name>ProjectWindow</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Ref of this is used by ImGui to show status of sub-window. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="39" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_project_manager_1ae370e2b1f238389760caa537174a73a2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ProjectManager::CurrentView</definition>
+        <argsstring></argsstring>
+        <name>CurrentView</name>
+        <briefdescription>
+<para>used to control ProjectManager::GameFiles </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="41" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_project_manager_1ac22becd761b9e45f4b68534b3f957414" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ProjectManager::RootPath[1024]</definition>
+        <argsstring>[1024]</argsstring>
+        <name>RootPath</name>
+        <briefdescription>
+<para>Stores the absolute path of <ref refid="namespace_rubeus" kindref="compound">Rubeus</ref> repo. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="43" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_project_manager_1af35466fb366d54259dc06304f0fa4be4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ProjectManager::GamePath</definition>
+        <argsstring></argsstring>
+        <name>GamePath</name>
+        <briefdescription>
+<para>Stores the absolute path of Game directory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="45" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_project_manager_1a093d1d55ea547fd9145f16bd1a596cd0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; fs::path &gt;</type>
+        <definition>std::vector&lt;fs::path&gt; ProjectManager::ProjectList</definition>
+        <argsstring></argsstring>
+        <name>ProjectList</name>
+        <briefdescription>
+<para>Stores the absolute paths of Projects in Game directory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="47" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_project_manager_1a108abd7ae4170dee7c0709879ba3dae0" prot="private" static="no" mutable="no">
+        <type>fs::path</type>
+        <definition>fs::path ProjectManager::CurrentProjectPath</definition>
+        <argsstring></argsstring>
+        <name>CurrentProjectPath</name>
+        <briefdescription>
+<para>Stores the absolute path of Current Project directory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="49" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_project_manager_1acc13617e70d40c4364e0fce2ffea820a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; std::string, fs::path &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;std::string, fs::path&gt; &gt; ProjectManager::CurrentProjectObjects</definition>
+        <argsstring></argsstring>
+        <name>CurrentProjectObjects</name>
+        <briefdescription>
+<para>Stores name and absolute path of Object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="51" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_project_manager_1a284d61ee8ec5ed1b6cf86859482258c1" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; std::string, fs::path &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;std::string, fs::path&gt; &gt; ProjectManager::CurrentProjectLevels</definition>
+        <argsstring></argsstring>
+        <name>CurrentProjectLevels</name>
+        <briefdescription>
+<para>Stores name and absolute path of Level. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="53" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_project_manager_1aeaa56a2000fb80cee1e65642d05159a2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectManager::updateProjectList</definition>
+        <argsstring>()</argsstring>
+        <name>updateProjectList</name>
+        <briefdescription>
+<para>Helper Function to update List of projects in case of creation/deletion of project. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="60" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.cpp" bodystart="72" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project_manager_1ad497df35b7dc4c912c37b29a0fd5a7b7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectManager::updateProjectFilesLists</definition>
+        <argsstring>(std::string &amp;Warning)</argsstring>
+        <name>updateProjectFilesLists</name>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>Warning</declname>
+        </param>
+        <briefdescription>
+<para>updates level/object files list on landing on a project&apos;s page and checks for the presence of .h file for each .cpp file </para>        </briefdescription>
+        <detaileddescription>
+<para>updates level/object files list in case of creation/deletion of level/object and checks for the presence of .h file for each .cpp file</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Warning</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Contains warning message in case of missing .h files for .cpp files</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ProjectComponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of pairs consisting of name of object/level and absolute path of that object/level&apos;s .cpp file </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="68" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.cpp" bodystart="79" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project_manager_1aee29ba3b65edb23b7ea5f26502186e42" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectManager::updateProjectFilesLists</definition>
+        <argsstring>()</argsstring>
+        <name>updateProjectFilesLists</name>
+        <briefdescription>
+<para>updates level/object files list in case of creation/deletion of level/object </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="74" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.cpp" bodystart="96" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project_manager_1a0a2062fd19aa6b44916d68675bdc884d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectManager::displayProjectFiles</definition>
+        <argsstring>(std::vector&lt; std::pair&lt; std::string, fs::path &gt;&gt; &amp;ProjectComponent, std::string childName)</argsstring>
+        <name>displayProjectFiles</name>
+        <param>
+          <type>std::vector&lt; std::pair&lt; std::string, fs::path &gt;&gt; &amp;</type>
+          <declname>ProjectComponent</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>childName</declname>
+        </param>
+        <briefdescription>
+<para>ImGui API calls for displaying levels/objects. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ProjectComponent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of pairs consisting of name of object/level and absolute path of that object/level&apos;s .cpp file </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="82" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.cpp" bodystart="111" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project_manager_1a464d2e0bb9d677b88848db08b5dc1fd2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ProjectManager::createFiles</definition>
+        <argsstring>(std::string Type, std::string Name=&quot;&quot;)</argsstring>
+        <name>createFiles</name>
+        <param>
+          <type>std::string</type>
+          <declname>Type</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>Name</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="90" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.cpp" bodystart="147" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project_manager_1a123003cdeef4b5b39c581e6aeaa21e86" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectManager::landingPage</definition>
+        <argsstring>()</argsstring>
+        <name>landingPage</name>
+        <briefdescription>
+<para>ImGui API calls for GUI of landing page, part of viewFunctions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="96" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.cpp" bodystart="201" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project_manager_1acfa8ed1ca27964cd7b28841b2f84cc0e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectManager::allProjectsPage</definition>
+        <argsstring>()</argsstring>
+        <name>allProjectsPage</name>
+        <briefdescription>
+<para>ImGui API calls for GUI of All Projects page, part of viewFunctions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="102" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.cpp" bodystart="226" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project_manager_1a5f0b9997d15754967ae536f2bf1fe8fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProjectManager::selectedProjectPage</definition>
+        <argsstring>()</argsstring>
+        <name>selectedProjectPage</name>
+        <briefdescription>
+<para>ImGui API calls for GUI of Selected Project page, part of viewFunctions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="108" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.cpp" bodystart="323" bodyend="412"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_project_manager_1af91771060ffbb786055aa2f1a9486ad0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ProjectManager::ProjectManager</definition>
+        <argsstring>()</argsstring>
+        <name>ProjectManager</name>
+        <briefdescription>
+<para>Constructor for <ref refid="class_project_manager" kindref="compound">ProjectManager</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="115" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.cpp" bodystart="3" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project_manager_1ac127c8454c7c2caa948ad270930efa86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ProjectManager::~ProjectManager</definition>
+        <argsstring>()</argsstring>
+        <name>~ProjectManager</name>
+        <briefdescription>
+<para>Destructor for <ref refid="class_project_manager" kindref="compound">ProjectManager</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="121" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.cpp" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project_manager_1a0492ac2ab729b68953a5d414a7273b63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>ProjectManager::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>Initialises GLFW window and ImGui. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="127" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.cpp" bodystart="414" bodyend="447"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project_manager_1a86025df75d125233d81da3cb77e0da35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>ProjectManager::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+<para>Runs the rendering loop and ImGui API calls take place here. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="133" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.cpp" bodystart="449" bodyend="481"/>
+      </memberdef>
+      <memberdef kind="function" id="class_project_manager_1a5233d71ff1c64e52e1a05d74889d9d5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>ProjectManager::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+<para>Terminates the window. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="139" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.cpp" bodystart="483" bodyend="486"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A single instantiated class to generate the <ref refid="class_project_manager" kindref="compound">ProjectManager</ref> GUI. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" line="31" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/ProjectManager/ProjectManager.h" bodystart="30" bodyend="140"/>
+    <listofallmembers>
+      <member refid="class_project_manager_1acfa8ed1ca27964cd7b28841b2f84cc0e" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>allProjectsPage</name></member>
+      <member refid="class_project_manager_1a464d2e0bb9d677b88848db08b5dc1fd2" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>createFiles</name></member>
+      <member refid="class_project_manager_1a284d61ee8ec5ed1b6cf86859482258c1" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>CurrentProjectLevels</name></member>
+      <member refid="class_project_manager_1acc13617e70d40c4364e0fce2ffea820a" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>CurrentProjectObjects</name></member>
+      <member refid="class_project_manager_1a108abd7ae4170dee7c0709879ba3dae0" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>CurrentProjectPath</name></member>
+      <member refid="class_project_manager_1ae370e2b1f238389760caa537174a73a2" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>CurrentView</name></member>
+      <member refid="class_project_manager_1a0a2062fd19aa6b44916d68675bdc884d" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>displayProjectFiles</name></member>
+      <member refid="class_project_manager_1a5233d71ff1c64e52e1a05d74889d9d5a" prot="public" virt="non-virtual"><scope>ProjectManager</scope><name>end</name></member>
+      <member refid="class_project_manager_1af2e1bf97bb7ee36fb2b566ddb8009fd5" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>GameFiles</name></member>
+      <member refid="class_project_manager_1af35466fb366d54259dc06304f0fa4be4" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>GamePath</name></member>
+      <member refid="class_project_manager_1a0492ac2ab729b68953a5d414a7273b63" prot="public" virt="non-virtual"><scope>ProjectManager</scope><name>init</name></member>
+      <member refid="class_project_manager_1a123003cdeef4b5b39c581e6aeaa21e86" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>landingPage</name></member>
+      <member refid="class_project_manager_1a093d1d55ea547fd9145f16bd1a596cd0" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>ProjectList</name></member>
+      <member refid="class_project_manager_1af91771060ffbb786055aa2f1a9486ad0" prot="public" virt="non-virtual"><scope>ProjectManager</scope><name>ProjectManager</name></member>
+      <member refid="class_project_manager_1a5b5ac147b1a3003d7130f40fadc0b563" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>ProjectWindow</name></member>
+      <member refid="class_project_manager_1ac22becd761b9e45f4b68534b3f957414" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>RootPath</name></member>
+      <member refid="class_project_manager_1a86025df75d125233d81da3cb77e0da35" prot="public" virt="non-virtual"><scope>ProjectManager</scope><name>run</name></member>
+      <member refid="class_project_manager_1a5f0b9997d15754967ae536f2bf1fe8fa" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>selectedProjectPage</name></member>
+      <member refid="class_project_manager_1ad497df35b7dc4c912c37b29a0fd5a7b7" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>updateProjectFilesLists</name></member>
+      <member refid="class_project_manager_1aee29ba3b65edb23b7ea5f26502186e42" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>updateProjectFilesLists</name></member>
+      <member refid="class_project_manager_1aeaa56a2000fb80cee1e65642d05159a2" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>updateProjectList</name></member>
+      <member refid="class_project_manager_1a05bdc99e23ff49a7c583ebef8a0d8ceb" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>viewFunctions</name></member>
+      <member refid="class_project_manager_1a8154f4db53d39c9878092e51a739fe0e" prot="private" virt="non-virtual"><scope>ProjectManager</scope><name>window</name></member>
+      <member refid="class_project_manager_1ac127c8454c7c2caa948ad270930efa86" prot="public" virt="non-virtual"><scope>ProjectManager</scope><name>~ProjectManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

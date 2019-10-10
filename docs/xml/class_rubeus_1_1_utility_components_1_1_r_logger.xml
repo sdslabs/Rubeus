@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_rubeus_1_1_utility_components_1_1_r_logger" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::UtilityComponents::RLogger</compoundname>
+    <includes refid="logger__component_8h" local="no">logger_component.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_utility_components_1_1_r_logger_1af2f8ba15bc538e2df6de94bf8fd69b72" prot="private" static="yes" mutable="no">
+        <type>std::ofstream *</type>
+        <definition>std::ofstream * Rubeus::UtilityComponents::RLogger::LogFile</definition>
+        <argsstring></argsstring>
+        <name>LogFile</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>The ref to Log file in use. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.h" line="45" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_utility_components_1_1_r_logger_1ad013e590ecf1ed2af4f0b86b4676799e" prot="private" static="yes" mutable="no">
+        <type>std::map&lt; std::string, short &gt; *</type>
+        <definition>std::map&lt; std::string, short &gt; * Rubeus::UtilityComponents::RLogger::ForegroundColorMap</definition>
+        <argsstring></argsstring>
+        <name>ForegroundColorMap</name>
+        <briefdescription>
+<para>Map containing foreground bash color formatting codes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.h" line="48" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_utility_components_1_1_r_logger_1ac170c86515be44b560f242c537e1fd83" prot="private" static="yes" mutable="no">
+        <type>std::map&lt; std::string, short &gt; *</type>
+        <definition>std::map&lt; std::string, short &gt; * Rubeus::UtilityComponents::RLogger::BackgroundColorMap</definition>
+        <argsstring></argsstring>
+        <name>BackgroundColorMap</name>
+        <briefdescription>
+<para>Map containing background bash color formatting codes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.h" line="51" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_utility_components_1_1_r_logger_1aa221d9620a398284e4d11551a0bcc2be" prot="private" static="yes" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt; *</type>
+        <definition>std::map&lt; std::string, std::string &gt; * Rubeus::UtilityComponents::RLogger::SeverityMap</definition>
+        <argsstring></argsstring>
+        <name>SeverityMap</name>
+        <briefdescription>
+<para>Map containing colors corresponding to severity levels. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.h" line="54" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_utility_components_1_1_r_logger_1ac7d76babddda27518d9f6e48555477ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::UtilityComponents::RLogger::RLogger</definition>
+        <argsstring>()=delete</argsstring>
+        <name>RLogger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.h" line="58" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_rubeus_1_1_utility_components_1_1_r_logger_1a9aec8a5e7d640f73c780ab25f508da77" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::UtilityComponents::RLogger::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+<para>Initialises LogFile. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.h" line="65" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.cpp" bodystart="45" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_utility_components_1_1_r_logger_1a18377bcc2623c3e09e5ae53a40727ff7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::UtilityComponents::RLogger::PrintLog</definition>
+        <argsstring>(std::string logMessage)</argsstring>
+        <name>PrintLog</name>
+        <param>
+          <type>std::string</type>
+          <declname>logMessage</declname>
+        </param>
+        <briefdescription>
+<para>prints brief log without color formatting </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>logMessage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The log message to be printed. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.h" line="74" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.cpp" bodystart="76" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_utility_components_1_1_r_logger_1ac47cadcce21131a3dbe5c188f9c6cffd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::UtilityComponents::RLogger::PrintExtendedLog</definition>
+        <argsstring>(std::string logMessage, std::string file, int line)</argsstring>
+        <name>PrintExtendedLog</name>
+        <param>
+          <type>std::string</type>
+          <declname>logMessage</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+<para>prints brief extended log without color formatting </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>logMessage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The log message to be printed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file in which this log macro is called(<bold>FILE</bold>). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The line in which this log macro is called(<bold>LINE</bold>). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.h" line="85" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.cpp" bodystart="85" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_utility_components_1_1_r_logger_1ac9643798cf4b10c3c8ea75139701e35c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::UtilityComponents::RLogger::PrintExtendedLog</definition>
+        <argsstring>(std::string logMessage, std::string severity, std::string file, int line)</argsstring>
+        <name>PrintExtendedLog</name>
+        <param>
+          <type>std::string</type>
+          <declname>logMessage</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>severity</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+<para>prints brief extended log with color formatting </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>logMessage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The log message to be printed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>severity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The severity level of the log to be printed, sould be in compliance with the severityMap. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file in which this log macro is called(<bold>FILE</bold>). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The line in which this log macro is called(<bold>LINE</bold>). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.h" line="97" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.cpp" bodystart="94" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_utility_components_1_1_r_logger_1a4c43b6904e50e743399647fa6f80a148" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Rubeus::UtilityComponents::RLogger::CreateLogFile</definition>
+        <argsstring>()</argsstring>
+        <name>CreateLogFile</name>
+        <briefdescription>
+<para>Creates Log file and folder. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Do not make multiple log files in one run </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.h" line="106" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.cpp" bodystart="103" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_utility_components_1_1_r_logger_1abcdc057ae50485ee53ed9ba5fb14a5fd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Rubeus::UtilityComponents::RLogger::CloseLogFile</definition>
+        <argsstring>()</argsstring>
+        <name>CloseLogFile</name>
+        <briefdescription>
+<para>Closes Log file and deleted the pointer to it. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Do not make multiple log files in one run </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.h" line="115" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.cpp" bodystart="148" bodyend="156"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A container class that contains all logger utilities. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.h" line="41" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.h" bodystart="40" bodyend="116"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_utility_components_1_1_r_logger_1ac170c86515be44b560f242c537e1fd83" prot="private" virt="non-virtual"><scope>Rubeus::UtilityComponents::RLogger</scope><name>BackgroundColorMap</name></member>
+      <member refid="class_rubeus_1_1_utility_components_1_1_r_logger_1abcdc057ae50485ee53ed9ba5fb14a5fd" prot="public" virt="non-virtual"><scope>Rubeus::UtilityComponents::RLogger</scope><name>CloseLogFile</name></member>
+      <member refid="class_rubeus_1_1_utility_components_1_1_r_logger_1a4c43b6904e50e743399647fa6f80a148" prot="public" virt="non-virtual"><scope>Rubeus::UtilityComponents::RLogger</scope><name>CreateLogFile</name></member>
+      <member refid="class_rubeus_1_1_utility_components_1_1_r_logger_1ad013e590ecf1ed2af4f0b86b4676799e" prot="private" virt="non-virtual"><scope>Rubeus::UtilityComponents::RLogger</scope><name>ForegroundColorMap</name></member>
+      <member refid="class_rubeus_1_1_utility_components_1_1_r_logger_1a9aec8a5e7d640f73c780ab25f508da77" prot="public" virt="non-virtual"><scope>Rubeus::UtilityComponents::RLogger</scope><name>Init</name></member>
+      <member refid="class_rubeus_1_1_utility_components_1_1_r_logger_1af2f8ba15bc538e2df6de94bf8fd69b72" prot="private" virt="non-virtual"><scope>Rubeus::UtilityComponents::RLogger</scope><name>LogFile</name></member>
+      <member refid="class_rubeus_1_1_utility_components_1_1_r_logger_1ac47cadcce21131a3dbe5c188f9c6cffd" prot="public" virt="non-virtual"><scope>Rubeus::UtilityComponents::RLogger</scope><name>PrintExtendedLog</name></member>
+      <member refid="class_rubeus_1_1_utility_components_1_1_r_logger_1ac9643798cf4b10c3c8ea75139701e35c" prot="public" virt="non-virtual"><scope>Rubeus::UtilityComponents::RLogger</scope><name>PrintExtendedLog</name></member>
+      <member refid="class_rubeus_1_1_utility_components_1_1_r_logger_1a18377bcc2623c3e09e5ae53a40727ff7" prot="public" virt="non-virtual"><scope>Rubeus::UtilityComponents::RLogger</scope><name>PrintLog</name></member>
+      <member refid="class_rubeus_1_1_utility_components_1_1_r_logger_1ac7d76babddda27518d9f6e48555477ff" prot="public" virt="non-virtual"><scope>Rubeus::UtilityComponents::RLogger</scope><name>RLogger</name></member>
+      <member refid="class_rubeus_1_1_utility_components_1_1_r_logger_1aa221d9620a398284e4d11551a0bcc2be" prot="private" virt="non-virtual"><scope>Rubeus::UtilityComponents::RLogger</scope><name>SeverityMap</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

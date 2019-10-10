@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object" kind="class" language="C++" prot="public">
     <compoundname>Rubeus::GraphicComponents::RRenderableObject</compoundname>
-    <derivedcompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_group" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RGroup</derivedcompoundref>
     <derivedcompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_sprite" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RSprite</derivedcompoundref>
     <derivedcompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_static_sprite" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RStaticSprite</derivedcompoundref>
     <includes refid="renderable__object_8h" local="no">renderable_object.h</includes>
@@ -18,11 +17,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" line="56" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="56" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" line="56" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" bodystart="56" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a5770c9834b02a4d8f268e70d750d67d8" prot="public" static="no" mutable="no">
-        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref> &amp;</type>
-        <definition>RML::Vector3D&amp; Rubeus::GraphicComponents::RRenderableObject::m_Position</definition>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a4d61c37c7bb047c327c55df69965c282" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref> *</type>
+        <definition>RML::Vector3D* Rubeus::GraphicComponents::RRenderableObject::m_Position</definition>
         <argsstring></argsstring>
         <name>m_Position</name>
         <briefdescription>
@@ -31,11 +30,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" line="59" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="59" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" line="59" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" bodystart="59" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1addcfcad62f68ff3167f4e2b12d91b978" prot="public" static="no" mutable="no">
-        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &amp;</type>
-        <definition>RML::Vector2D&amp; Rubeus::GraphicComponents::RRenderableObject::m_Size</definition>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a1f8caca3db20f86f15919c892034974d" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> *</type>
+        <definition>RML::Vector2D* Rubeus::GraphicComponents::RRenderableObject::m_Size</definition>
         <argsstring></argsstring>
         <name>m_Size</name>
         <briefdescription>
@@ -44,11 +43,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" line="62" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="62" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" line="62" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" bodystart="62" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1adfcd0cddfb5f5a0ab448a41be7234eac" prot="public" static="no" mutable="no">
-        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">RML::Vector4D</ref> &amp;</type>
-        <definition>RML::Vector4D&amp; Rubeus::GraphicComponents::RRenderableObject::m_Color</definition>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a5c9e444e105ee993d284cfad0807d24b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">RML::Vector4D</ref> *</type>
+        <definition>RML::Vector4D* Rubeus::GraphicComponents::RRenderableObject::m_Color</definition>
         <argsstring></argsstring>
         <name>m_Color</name>
         <briefdescription>
@@ -57,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" line="65" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="65" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" line="65" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" bodystart="65" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a8ce71902e92e9fe8a932782fc8b0366d" prot="public" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &gt;</type>
@@ -70,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" line="68" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="68" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" line="68" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" bodystart="68" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a4b1bdda7f4751a83973aabaab6c09ea4" prot="public" static="no" mutable="no">
         <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_texture" kindref="compound">RTexture</ref> *</type>
@@ -83,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" line="71" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="71" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" line="71" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" bodystart="71" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -132,7 +131,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" line="83" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/renderable_object.cpp" bodystart="13" bodyend="17"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" line="83" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.cpp" bodystart="13" bodyend="17"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a521bcff95a9ddd4dfd63e9d059dea3e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -145,14 +144,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" line="90" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/renderable_object.cpp" bodystart="19" bodyend="21"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" line="90" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.cpp" bodystart="19" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a54805529c6a3b5473918f7e46b20eddd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void Rubeus::GraphicComponents::RRenderableObject::submit</definition>
         <argsstring>(RRendererComponent &amp;renderer) const</argsstring>
         <name>submit</name>
-        <reimplementedby refid="class_rubeus_1_1_graphic_components_1_1_r_group_1afba570254211098554f5975619c28ec8">submit</reimplementedby>
         <param>
           <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component" kindref="compound">RRendererComponent</ref> &amp;</type>
           <declname>renderer</declname>
@@ -171,7 +169,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" line="99" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/renderable_object.cpp" bodystart="23" bodyend="26"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" line="99" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.cpp" bodystart="26" bodyend="29"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a89dc97d0d5037e1602bec587a3aba786" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref> &amp;</type>
@@ -185,7 +183,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" line="108" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="108" bodyend="108"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" line="108" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" bodystart="108" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1aee29b6de589c14179b43bd0dcb517765" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &amp;</type>
@@ -199,7 +197,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" line="117" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="117" bodyend="117"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" line="117" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" bodystart="117" bodyend="117"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a27b261ef20f2e511e717d8f0d2518848" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">RML::Vector4D</ref> &amp;</type>
@@ -213,7 +211,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" line="126" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="126" bodyend="126"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" line="126" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" bodystart="126" bodyend="126"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a67c746390cad14ed636bc695da4fd0b4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const std::vector&lt; <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &gt; &amp;</type>
@@ -227,7 +225,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" line="135" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="135" bodyend="135"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" line="135" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" bodystart="135" bodyend="135"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1aecc1218deec48c318f3f440d5958f662" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const GLuint</type>
@@ -241,61 +239,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" line="144" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="144" bodyend="144"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" line="144" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" bodystart="144" bodyend="144"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
-      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a14ec9d1379d83088f798abd14af739a0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>Rubeus::GraphicComponents::RRenderableObject::RRenderableObject</definition>
-        <argsstring>(RML::Vector3D position=RML::Vector3D(0.0f, 0.0f, 0.0f), RML::Vector2D size=RML::Vector2D(0.0f, 0.0f), RML::Vector4D color=RML::Vector4D(0.0f, 0.0f, 0.0f, 0.0f))</argsstring>
-        <name>RRenderableObject</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref></type>
-          <declname>position</declname>
-          <defval><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref>(0.0f, 0.0f, 0.0f)</defval>
-        </param>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref></type>
-          <declname>size</declname>
-          <defval><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref>(0.0f, 0.0f)</defval>
-        </param>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">RML::Vector4D</ref></type>
-          <declname>color</declname>
-          <defval><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">RML::Vector4D</ref>(0.0f, 0.0f, 0.0f, 0.0f)</defval>
-        </param>
-        <briefdescription>
-<para>Constructor. </para>        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="warning"><para>To be called only by child classes</para></simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>position</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The default position </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>size</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The default size </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>color</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The default color </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" line="159" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/renderable_object.cpp" bodystart="28" bodyend="35"/>
-      </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1af37b1e80d9c832c6c8e7ccc7337a90f8" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void Rubeus::GraphicComponents::RRenderableObject::setUV</definition>
@@ -307,7 +254,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" line="168" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/renderable_object.cpp" bodystart="37" bodyend="43"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" line="152" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.cpp" bodystart="31" bodyend="37"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -315,78 +262,71 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="252">
+      <node id="303">
         <label>Rubeus::GraphicComponents::RSprite</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_sprite"/>
-        <childnode refid="250" relation="public-inheritance">
+        <childnode refid="302" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="250">
+      <node id="302">
         <label>Rubeus::GraphicComponents::RRenderableObject</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
       </node>
-      <node id="253">
+      <node id="304">
         <label>Rubeus::GraphicComponents::RStaticSprite</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_static_sprite"/>
-        <childnode refid="250" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="251">
-        <label>Rubeus::GraphicComponents::RGroup</label>
-        <link refid="class_rubeus_1_1_graphic_components_1_1_r_group"/>
-        <childnode refid="250" relation="public-inheritance">
+        <childnode refid="302" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="255">
+      <node id="306">
         <label>RML::Vector4D</label>
         <link refid="struct_r_m_l_1_1_vector4_d"/>
       </node>
-      <node id="258">
+      <node id="309">
         <label>RML::Vector3D</label>
         <link refid="struct_r_m_l_1_1_vector3_d"/>
       </node>
-      <node id="256">
+      <node id="307">
         <label>Rubeus::GraphicComponents::RTexture</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_texture"/>
       </node>
-      <node id="257">
+      <node id="308">
         <label>RML::Vector2D</label>
         <link refid="struct_r_m_l_1_1_vector2_d"/>
       </node>
-      <node id="254">
+      <node id="305">
         <label>Rubeus::GraphicComponents::RRenderableObject</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
-        <childnode refid="255" relation="usage">
+        <childnode refid="306" relation="usage">
           <edgelabel>m_Color</edgelabel>
         </childnode>
-        <childnode refid="256" relation="usage">
+        <childnode refid="307" relation="usage">
           <edgelabel>m_Texture</edgelabel>
         </childnode>
-        <childnode refid="257" relation="usage">
+        <childnode refid="308" relation="usage">
           <edgelabel>m_Size</edgelabel>
         </childnode>
-        <childnode refid="258" relation="usage">
+        <childnode refid="309" relation="usage">
           <edgelabel>m_Position</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" line="50" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h" bodystart="49" bodyend="169"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" line="50" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h" bodystart="49" bodyend="153"/>
     <listofallmembers>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a27b261ef20f2e511e717d8f0d2518848" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>getColor</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a89dc97d0d5037e1602bec587a3aba786" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>getPosition</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1aee29b6de589c14179b43bd0dcb517765" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>getSize</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1aecc1218deec48c318f3f440d5958f662" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>getTextureID</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a67c746390cad14ed636bc695da4fd0b4" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>getUV</name></member>
-      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1adfcd0cddfb5f5a0ab448a41be7234eac" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>m_Color</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a5c9e444e105ee993d284cfad0807d24b" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>m_Color</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a386b0ee3b6e0a3a673be6dedf0ab0cf2" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>m_ObjectID</name></member>
-      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a5770c9834b02a4d8f268e70d750d67d8" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>m_Position</name></member>
-      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1addcfcad62f68ff3167f4e2b12d91b978" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>m_Size</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a4d61c37c7bb047c327c55df69965c282" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>m_Position</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a1f8caca3db20f86f15919c892034974d" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>m_Size</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a4b1bdda7f4751a83973aabaab6c09ea4" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>m_Texture</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a8ce71902e92e9fe8a932782fc8b0366d" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>m_UV</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1aca73d049bccb157e84e053b07b58cdee" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>RRenderableObject</name></member>
-      <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a14ec9d1379d83088f798abd14af739a0" prot="protected" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>RRenderableObject</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1af37b1e80d9c832c6c8e7ccc7337a90f8" prot="protected" virt="non-virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>setUV</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a54805529c6a3b5473918f7e46b20eddd" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>submit</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object_1a521bcff95a9ddd4dfd63e9d059dea3e5" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RRenderableObject</scope><name>~RRenderableObject</name></member>

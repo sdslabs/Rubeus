@@ -5,37 +5,37 @@
     <includes local="no">cstring</includes>
     <includes refid="rubeus__maths__library_8h" local="no">rubeus_maths_library.h</includes>
     <incdepgraph>
-      <node id="3834">
+      <node id="4252">
         <label>rubeus_maths_library.h</label>
         <link refid="rubeus__maths__library_8h"/>
-        <childnode refid="3835" relation="include">
+        <childnode refid="4253" relation="include">
         </childnode>
-        <childnode refid="3836" relation="include">
+        <childnode refid="4254" relation="include">
         </childnode>
       </node>
-      <node id="3835">
+      <node id="4253">
         <label>math.h</label>
       </node>
-      <node id="3836">
+      <node id="4254">
         <label>iostream</label>
       </node>
-      <node id="3832">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp</label>
+      <node id="4250">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp</label>
         <link refid="rubeus__maths__library_8cpp"/>
-        <childnode refid="3833" relation="include">
+        <childnode refid="4251" relation="include">
         </childnode>
-        <childnode refid="3834" relation="include">
+        <childnode refid="4252" relation="include">
         </childnode>
       </node>
-      <node id="3833">
+      <node id="4251">
         <label>cstring</label>
       </node>
     </incdepgraph>
     <innernamespace refid="namespace_r_m_l">RML</innernamespace>
     <briefdescription>
-<para>Implements the <ref refid="namespace_r_m_l" kindref="compound">RML</ref> (<ref refid="namespace_rubeus" kindref="compound">Rubeus</ref> Maths Library) </para>    </briefdescription>
+    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp"/>
   </compounddef>
 </doxygen>

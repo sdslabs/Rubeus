@@ -2,9 +2,9 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="object_8paddle_8h" kind="file" language="C++">
     <compoundname>object.paddle.h</compoundname>
-    <includes local="yes">../RubeusCore.h</includes>
+    <includes local="yes">../../RubeusCore.h</includes>
     <includedby refid="object_8paddle_8cpp" local="yes">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/engine_files/object.paddle.cpp</includedby>
-    <includedby refid="user__init_8h" local="yes">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.h</includedby>
+    <includedby refid="user__init_8h" local="yes">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.h</includedby>
     <incdepgraph>
       <node id="32">
         <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/engine_files/object.paddle.h</label>
@@ -13,7 +13,7 @@
         </childnode>
       </node>
       <node id="33">
-        <label>../RubeusCore.h</label>
+        <label>../../RubeusCore.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
@@ -26,7 +26,7 @@
         </childnode>
       </node>
       <node id="37">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp</label>
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp</label>
         <link refid="user__init_8cpp"/>
       </node>
       <node id="35">
@@ -34,13 +34,13 @@
         <link refid="object_8paddle_8cpp"/>
       </node>
       <node id="36">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.h</label>
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.h</label>
         <link refid="user__init_8h"/>
         <childnode refid="37" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
-    <innerclass refid="classpaddle" prot="public">paddle</innerclass>
+    <innerclass refid="class_opaddle" prot="public">Opaddle</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

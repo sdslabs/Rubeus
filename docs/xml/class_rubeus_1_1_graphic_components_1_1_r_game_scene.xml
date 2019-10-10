@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_rubeus_1_1_graphic_components_1_1_r_game_scene" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::GraphicComponents::RGameScene</compoundname>
+    <includes refid="game__scene_8h" local="no">game_scene.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_game_scene_1ae26000f245e1c745925c5e0878dd25d9" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component" kindref="compound">RShaderComponent</ref> *</type>
+        <definition>RShaderComponent* Rubeus::GraphicComponents::RGameScene::m_ProgramShader</definition>
+        <argsstring></argsstring>
+        <name>m_ProgramShader</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>The game&apos;s current shader. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.h" line="29" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_game_scene_1a2d624de1c92ffd4c46242beffa2ca5f4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_main_layer" kindref="compound">RMainLayer</ref> *</type>
+        <definition>RMainLayer* Rubeus::GraphicComponents::RGameScene::m_RenderableScene</definition>
+        <argsstring></argsstring>
+        <name>m_RenderableScene</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>The scene graph of the game. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.h" line="32" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_game_scene_1a492af6356bcadd6b7b40e4c62d38a22f" prot="private" static="no" mutable="no">
+        <type>GLint</type>
+        <definition>GLint Rubeus::GraphicComponents::RGameScene::m_TextureIDs[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>m_TextureIDs</name>
+        <briefdescription>
+<para>Texture IDs to be used by both UI and Scene shaders. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.h" line="35" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_rubeus_1_1_graphic_components_1_1_r_game_scene_1abbd9bc577675917336fd07ab54e0580c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class REngine</definition>
+        <argsstring></argsstring>
+        <name>REngine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.h" line="37" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_game_scene_1a8930ba395286d4e07af9761123037174" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RGameScene::RGameScene</definition>
+        <argsstring>(const char *vShaderPath, const char *fShaderPath)</argsstring>
+        <name>RGameScene</name>
+        <param>
+          <type>const char *</type>
+          <declname>vShaderPath</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fShaderPath</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vshaderPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to vertex shader. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fshaderPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to fragment shader. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.h" line="49" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.cpp" bodystart="13" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_game_scene_1aa2c9ab4d14a58c067100e8ad4a975818" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RGameScene::~RGameScene</definition>
+        <argsstring>()</argsstring>
+        <name>~RGameScene</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.h" line="56" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.cpp" bodystart="29" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_game_scene_1a4218e450e997fdf25a55be94c15d8379" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RGameScene::add</definition>
+        <argsstring>(RGameObject *gameObject)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref> *</type>
+          <declname>gameObject</declname>
+        </param>
+        <briefdescription>
+<para>Add a gameobject to the layers. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Select a layer with the second parameter</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the game object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.h" line="66" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_game_scene_1a14b79a434b7ff6e6a91d73f1de2b0409" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RGameScene::draw</definition>
+        <argsstring>()</argsstring>
+        <name>draw</name>
+        <briefdescription>
+<para>Draw all layers to screen. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.h" line="73" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.cpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains the entire scene on display. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.h" line="25" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.h" bodystart="24" bodyend="74"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_game_scene_1a4218e450e997fdf25a55be94c15d8379" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGameScene</scope><name>add</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_game_scene_1a14b79a434b7ff6e6a91d73f1de2b0409" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGameScene</scope><name>draw</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_game_scene_1ae26000f245e1c745925c5e0878dd25d9" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGameScene</scope><name>m_ProgramShader</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_game_scene_1a2d624de1c92ffd4c46242beffa2ca5f4" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGameScene</scope><name>m_RenderableScene</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_game_scene_1a492af6356bcadd6b7b40e4c62d38a22f" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGameScene</scope><name>m_TextureIDs</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_game_scene_1abbd9bc577675917336fd07ab54e0580c" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGameScene</scope><name>REngine</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_game_scene_1a8930ba395286d4e07af9761123037174" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGameScene</scope><name>RGameScene</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_game_scene_1aa2c9ab4d14a58c067100e8ad4a975818" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RGameScene</scope><name>~RGameScene</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

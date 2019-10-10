@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_physics_object.h" line="28" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_physics_object.h" bodystart="28" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_object.h" line="28" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_object.h" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_physics_object_1acb748500cb67c70f5c51429dd6d7a9fb" prot="public" static="no" mutable="no">
         <type><ref refid="class_rubeus_1_1_awerere_1_1_a_collider" kindref="compound">ACollider</ref> *</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_physics_object.h" line="31" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_physics_object.h" bodystart="31" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_object.h" line="31" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_object.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_physics_object_1a3befb2eabe3183074752a15ba914c27f" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_physics_object.h" line="34" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_physics_object.h" bodystart="34" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_object.h" line="34" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_object.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_physics_object_1aaf51f63d4f7d3f8a0c3f6e3b240b13ac" prot="public" static="no" mutable="no">
         <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_sprite" kindref="compound">GraphicComponents::RSprite</ref> *</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_physics_object.h" line="37" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_physics_object.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_object.h" line="37" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_object.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -70,12 +70,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_physics_object.h" line="44" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_physics_object.cpp" bodystart="19" bodyend="22"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_object.h" line="44" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_object.cpp" bodystart="19" bodyend="22"/>
       </memberdef>
-      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_physics_object_1a71c408fe1e7d2a70616cf2182fe36bdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_physics_object_1a05b5921d22a48ba276e2d7deebd0b2a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>Rubeus::Awerere::APhysicsObject::APhysicsObject</definition>
-        <argsstring>(const APhysicsMaterial &amp;material, const bool &amp;enablePhysics=false, const EColliderType &amp;type=EColliderType::NO_COLLIDER, ACollider *collider=NULL, GraphicComponents::RSprite *sprite=NULL)</argsstring>
+        <argsstring>(const APhysicsMaterial &amp;material, const bool &amp;enablePhysics=false, ACollider *collider=NULL, GraphicComponents::RSprite *sprite=NULL)</argsstring>
         <name>APhysicsObject</name>
         <param>
           <type>const <ref refid="class_rubeus_1_1_awerere_1_1_a_physics_material" kindref="compound">APhysicsMaterial</ref> &amp;</type>
@@ -85,11 +85,6 @@
           <type>const bool &amp;</type>
           <declname>enablePhysics</declname>
           <defval>false</defval>
-        </param>
-        <param>
-          <type>const <ref refid="namespace_rubeus_1_1_awerere_1aa31f43f0fcc41516bb0aa51cb1d88a08" kindref="member">EColliderType</ref> &amp;</type>
-          <declname>type</declname>
-          <defval><ref refid="namespace_rubeus_1_1_awerere_1aa31f43f0fcc41516bb0aa51cb1d88a08a80cda54f91e5930408b152ed0f86b797" kindref="member">EColliderType::NO_COLLIDER</ref></defval>
         </param>
         <param>
           <type><ref refid="class_rubeus_1_1_awerere_1_1_a_collider" kindref="compound">ACollider</ref> *</type>
@@ -120,13 +115,6 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>type</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Type of collider to be used. Default is NO_COLLIDER </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
 <parametername>collider</parametername>
 </parameternamelist>
 <parameterdescription>
@@ -143,7 +131,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_physics_object.h" line="57" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_physics_object.cpp" bodystart="24" bodyend="44"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_object.h" line="56" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_object.cpp" bodystart="24" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_physics_object_1ad76109ec8bc4dee45053f97a4c7068a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -156,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_physics_object.h" line="64" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_physics_object.cpp" bodystart="46" bodyend="49"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_object.h" line="63" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_object.cpp" bodystart="46" bodyend="49"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -187,11 +175,9 @@
           <edgelabel>m_PhysicsMaterial</edgelabel>
         </childnode>
         <childnode refid="42" relation="usage">
+          <edgelabel>m_Position</edgelabel>
           <edgelabel>m_Force</edgelabel>
           <edgelabel>m_Momentum</edgelabel>
-        </childnode>
-        <childnode refid="43" relation="usage">
-          <edgelabel>m_Position</edgelabel>
         </childnode>
       </node>
       <node id="40">
@@ -243,10 +229,10 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_physics_object.h" line="25" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_physics_object.h" bodystart="24" bodyend="65"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_object.h" line="25" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_object.h" bodystart="24" bodyend="64"/>
     <listofallmembers>
       <member refid="class_rubeus_1_1_awerere_1_1_a_physics_object_1a32ca2ddb5fb333c0238ec9ffa75e2f49" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsObject</scope><name>APhysicsObject</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_object_1a71c408fe1e7d2a70616cf2182fe36bdb" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsObject</scope><name>APhysicsObject</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_physics_object_1a05b5921d22a48ba276e2d7deebd0b2a9" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsObject</scope><name>APhysicsObject</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_physics_object_1acb748500cb67c70f5c51429dd6d7a9fb" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsObject</scope><name>m_Collider</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_physics_object_1a3befb2eabe3183074752a15ba914c27f" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsObject</scope><name>m_EnablePhysics</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_physics_object_1a22f2c15b78965bc7306d50eeea3cee48" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::APhysicsObject</scope><name>m_PhysicsMaterial</name></member>

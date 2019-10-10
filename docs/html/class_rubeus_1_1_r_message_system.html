@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Rubeus::RMessageSystem class | Rubeus</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
-  <link rel="stylesheet" href="m-dark+doxygen.compiled.css" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
   <link rel="icon" href="favicon.png" type="image/png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#22272e" />
@@ -15,8 +15,8 @@
     <div class="m-row">
       <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Rubeus</a>
       <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
-        <a href="#search" class="m-dox-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-          <path d="m6 0c-3.3144 0-6 2.6856-6 6 0 3.3144 2.6856 6 6 6 1.4858 0 2.8463-0.54083 3.8945-1.4355-0.0164 0.33797 0.14734 0.75854 0.5 1.1504l3.2227 3.7891c0.55185 0.6139 1.4517 0.66544 2.002 0.11524 0.55022-0.55022 0.49866-1.4501-0.11524-2.002l-3.7891-3.2246c-0.39184-0.35266-0.81242-0.51469-1.1504-0.5 0.89472-1.0482 1.4355-2.4088 1.4355-3.8945 0-3.3128-2.6856-5.998-6-5.998zm0 1.5625a4.4375 4.4375 0 0 1 4.4375 4.4375 4.4375 4.4375 0 0 1-4.4375 4.4375 4.4375 4.4375 0 0 1-4.4375-4.4375 4.4375 4.4375 0 0 1 4.4375-4.4375z"/>
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
         </svg></a>
         <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
         <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
@@ -30,8 +30,8 @@
           <ol class="m-col-t-6 m-col-m-none" start="3">
             <li><a href="annotated.html">Classes</a></li>
             <li><a href="files.html">Files</a></li>
-            <li class="m-show-m"><a href="#search" class="m-dox-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-              <path d="m6 0c-3.3144 0-6 2.6856-6 6 0 3.3144 2.6856 6 6 6 1.4858 0 2.8463-0.54083 3.8945-1.4355-0.0164 0.33797 0.14734 0.75854 0.5 1.1504l3.2227 3.7891c0.55185 0.6139 1.4517 0.66544 2.002 0.11524 0.55022-0.55022 0.49866-1.4501-0.11524-2.002l-3.7891-3.2246c-0.39184-0.35266-0.81242-0.51469-1.1504-0.5 0.89472-1.0482 1.4355-2.4088 1.4355-3.8945 0-3.3128-2.6856-5.998-6-5.998zm0 1.5625a4.4375 4.4375 0 0 1 4.4375 4.4375 4.4375 4.4375 0 0 1-4.4375 4.4375 4.4375 4.4375 0 0 1-4.4375-4.4375 4.4375 4.4375 0 0 1 4.4375-4.4375z"/>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
             </svg></a></li>
           </ol>
         </div>
@@ -54,6 +54,7 @@
               Reference
               <ul>
                 <li><a href="#pub-static-attribs">Public static variables</a></li>
+                <li><a href="#pub-static-methods">Public static functions</a></li>
                 <li><a href="#pub-methods">Public functions</a></li>
               </ul>
             </li>
@@ -61,42 +62,40 @@
         </div>
         <section id="pub-static-attribs">
           <h2><a href="#pub-static-attribs">Public static variables</a></h2>
-          <dl class="m-dox">
-            <dt>static <a href="class_rubeus_1_1_r_message_bus.html" class="m-dox">RMessageBus</a> <a href="#ae17ea62568f2c703b42bb23add39bf05" class="m-dox-self" name="ae17ea62568f2c703b42bb23add39bf05">m_MessageBus</a></dt>
+          <dl class="m-doc">
+            <dt id="ae17ea62568f2c703b42bb23add39bf05">
+              static <a href="class_rubeus_1_1_r_message_bus.html" class="m-doc">RMessageBus</a> <a href="#ae17ea62568f2c703b42bb23add39bf05" class="m-doc-self">m_MessageBus</a>
+            </dt>
             <dd>The message bus, common to all message systems.</dd>
           </dl>
         </section>
-        <section id="pub-methods">
-          <h2><a href="#pub-methods">Public functions</a></h2>
-          <dl class="m-dox">
+        <section id="pub-static-methods">
+          <h2><a href="#pub-static-methods">Public static functions</a></h2>
+          <dl class="m-doc">
             <dt>
-              <span class="m-dox-wrap-bumper">void <a href="#af27c32001557d581e8160ca18d547dce" class="m-dox">evaluateMessages</a>(</span><span class="m-dox-wrap">)</span>
-            </dt>
-            <dd>Pops messages from the message queue and sends them to their respective destinations.</dd>
-            <dt>
-              <span class="m-dox-wrap-bumper">void <a href="#a45cc05c73a0c3b90964690607ccd0847" class="m-dox">addMessage</a>(</span><span class="m-dox-wrap"><a href="class_rubeus_1_1_r_master_component.html" class="m-dox">RMasterComponent</a>* sender,
-              <a href="class_rubeus_1_1_r_master_component.html" class="m-dox">RMasterComponent</a>* receiver,
-              <a href="namespace_rubeus.html#a82d14ec7bd46347068de3bc5c03a8136" class="m-dox">EMessageCode</a> type,
-              <a href="message__object_8h.html#aa1f422da0e0c2bd47d96464982aac6a4" class="m-dox">var</a> data = NULL)</span>
+              <span class="m-doc-wrap-bumper">static void <a href="#af3903e235c3ee6afcdf219118ae71056" class="m-doc">addMessage</a>(</span><span class="m-doc-wrap"><a href="class_rubeus_1_1_r_master_component.html" class="m-doc">RMasterComponent</a>* receiver,
+              std::string command,
+              <a href="message__codes_8h.html#a69899082fd1cf504645a65a3cc00c9e5" class="m-doc">var</a> data = NULL)</span>
             </dt>
             <dd>Adds a message to the message queue.</dd>
           </dl>
         </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#af27c32001557d581e8160ca18d547dce" class="m-doc">evaluateMessages</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd>Pops messages from the message queue and sends them to their respective destinations.</dd>
+          </dl>
+        </section>
         <section>
           <h2>Function documentation</h2>
-          <section class="m-dox-details" id="af27c32001557d581e8160ca18d547dce"><div>
+          <section class="m-doc-details" id="af3903e235c3ee6afcdf219118ae71056"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">void Rubeus::<wbr />RMessageSystem::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#af27c32001557d581e8160ca18d547dce" class="m-dox-self">evaluateMessages</a>(</span><span class="m-dox-wrap">)</span></span>
-            </h3>
-            <p>Pops messages from the message queue and sends them to their respective destinations.</p>
-<aside class="m-note m-danger"><h4>Warning</h4><p>Use only once per frame</p></aside>
-          </div></section>
-          <section class="m-dox-details" id="a45cc05c73a0c3b90964690607ccd0847"><div>
-            <h3>
-              <span class="m-dox-wrap-bumper">void Rubeus::<wbr />RMessageSystem::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#a45cc05c73a0c3b90964690607ccd0847" class="m-dox-self">addMessage</a>(</span><span class="m-dox-wrap"><a href="class_rubeus_1_1_r_master_component.html" class="m-dox">RMasterComponent</a>* sender,
-              <a href="class_rubeus_1_1_r_master_component.html" class="m-dox">RMasterComponent</a>* receiver,
-              <a href="namespace_rubeus.html#a82d14ec7bd46347068de3bc5c03a8136" class="m-dox">EMessageCode</a> type,
-              <a href="message__object_8h.html#aa1f422da0e0c2bd47d96464982aac6a4" class="m-dox">var</a> data = NULL)</span></span>
+              <span class="m-doc-wrap-bumper">static void Rubeus::<wbr />RMessageSystem::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af3903e235c3ee6afcdf219118ae71056" class="m-doc-self">addMessage</a>(</span><span class="m-doc-wrap"><a href="class_rubeus_1_1_r_master_component.html" class="m-doc">RMasterComponent</a>* receiver,
+              std::string command,
+              <a href="message__codes_8h.html#a69899082fd1cf504645a65a3cc00c9e5" class="m-doc">var</a> data = NULL)</span></span>
             </h3>
             <p>Adds a message to the message queue.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -105,15 +104,11 @@
               </thead>
               <tbody>
                 <tr>
-                  <td style="width: 1%">sender</td>
-                  <td>Pointer to the sender.</td>
-                </tr>
-                <tr>
-                  <td>receiver</td>
+                  <td style="width: 1%">receiver</td>
                   <td>Pointer to the receiver.</td>
                 </tr>
                 <tr>
-                  <td>type</td>
+                  <td>command</td>
                   <td>Type of message command.</td>
                 </tr>
                 <tr>
@@ -123,30 +118,44 @@
               </tbody>
             </table>
           </div></section>
+          <section class="m-doc-details" id="af27c32001557d581e8160ca18d547dce"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void Rubeus::<wbr />RMessageSystem::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af27c32001557d581e8160ca18d547dce" class="m-doc-self">evaluateMessages</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <p>Pops messages from the message queue and sends them to their respective destinations.</p>
+<aside class="m-note m-danger"><h4>Warning</h4><p>Use only once per frame</p></aside>
+          </div></section>
         </section>
       </div>
     </div>
   </div>
 </article></main>
-<div class="m-dox-search" id="search">
+<div class="m-doc-search" id="search">
   <a href="#!" onclick="return hideSearch()"></a>
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-m-8 m-push-m-2">
-        <div class="m-dox-search-header m-text m-small">
+        <div class="m-doc-search-header m-text m-small">
           <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
           <div id="search-symbolcount">&hellip;</div>
         </div>
-        <div class="m-dox-search-content">
-          <input type="search" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" />
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
           <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
           <div id="search-help" class="m-text m-dim m-text-center">
-            Search for symbols, directories, files, pages or modules. You can omit any
-            prefix from the symbol or file path; adding a <code>:</code> or <code>/</code>
-            suffix lists all members of given symbol or directory. Navigate through the
-            list using <span class="m-label m-dim">&darr;</span> and
-            <span class="m-label m-dim">&uarr;</span>, press
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
             <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
           </div>
           <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
           <ul id="search-results"></ul>
@@ -155,13 +164,13 @@
     </div>
   </div>
 </div>
-<script src="search.js"></script>
-<script src="searchdata.js" async="async"></script>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
 <footer><nav>
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
-        <p>Rubeus. Created by <a href="https://doxygen.org/">Doxygen</a> 1.8.15 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+        <p>Rubeus. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.15 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
       </div>
     </div>
   </div>

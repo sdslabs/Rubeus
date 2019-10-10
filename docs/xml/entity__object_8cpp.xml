@@ -3,28 +3,34 @@
   <compounddef id="entity__object_8cpp" kind="file" language="C++">
     <compoundname>entity_object.cpp</compoundname>
     <includes refid="entity__object_8h" local="no">entity_object.h</includes>
+    <includes local="no">typeinfo</includes>
     <incdepgraph>
-      <node id="3396">
-        <label>string</label>
-      </node>
-      <node id="3395">
+      <node id="448">
         <label>entity_object.h</label>
         <link refid="entity__object_8h"/>
-        <childnode refid="3396" relation="include">
+        <childnode refid="449" relation="include">
         </childnode>
       </node>
-      <node id="3394">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/entity_object.cpp</label>
+      <node id="447">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/entity_object.cpp</label>
         <link refid="entity__object_8cpp"/>
-        <childnode refid="3395" relation="include">
+        <childnode refid="448" relation="include">
         </childnode>
+        <childnode refid="450" relation="include">
+        </childnode>
+      </node>
+      <node id="449">
+        <label>string</label>
+      </node>
+      <node id="450">
+        <label>typeinfo</label>
       </node>
     </incdepgraph>
     <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
     <briefdescription>
-<para>Defines the Entity class. </para>    </briefdescription>
+    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/entity_object.cpp"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/entity_object.cpp"/>
   </compounddef>
 </doxygen>

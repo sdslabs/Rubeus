@@ -4,61 +4,89 @@
     <compoundname>index_buffer_object.cpp</compoundname>
     <includes refid="index__buffer__object_8h" local="no">index_buffer_object.h</includes>
     <incdepgraph>
-      <node id="3533">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/index_buffer_object.cpp</label>
-        <link refid="index__buffer__object_8cpp"/>
-        <childnode refid="3534" relation="include">
-        </childnode>
-      </node>
-      <node id="3540">
+      <node id="2527">
         <label>IL/il.h</label>
       </node>
-      <node id="3541">
+      <node id="2528">
         <label>IL/ilu.h</label>
       </node>
-      <node id="3539">
+      <node id="2522">
         <label>string</label>
       </node>
-      <node id="3535">
+      <node id="2518">
         <label>GL/glew.h</label>
       </node>
-      <node id="3538">
-        <label>string.h</label>
+      <node id="2523">
+        <label>map</label>
       </node>
-      <node id="3534">
-        <label>index_buffer_object.h</label>
-        <link refid="index__buffer__object_8h"/>
-        <childnode refid="3535" relation="include">
-        </childnode>
-        <childnode refid="3536" relation="include">
-        </childnode>
-      </node>
-      <node id="3537">
-        <label>iostream</label>
-      </node>
-      <node id="3536">
+      <node id="2519">
         <label>logger_component.h</label>
         <link refid="logger__component_8h"/>
-        <childnode refid="3537" relation="include">
+        <childnode refid="2520" relation="include">
         </childnode>
-        <childnode refid="3538" relation="include">
+        <childnode refid="2521" relation="include">
         </childnode>
-        <childnode refid="3539" relation="include">
+        <childnode refid="2522" relation="include">
         </childnode>
-        <childnode refid="3535" relation="include">
+        <childnode refid="2523" relation="include">
         </childnode>
-        <childnode refid="3540" relation="include">
+        <childnode refid="2524" relation="include">
         </childnode>
-        <childnode refid="3541" relation="include">
+        <childnode refid="2525" relation="include">
         </childnode>
+        <childnode refid="2526" relation="include">
+        </childnode>
+        <childnode refid="2518" relation="include">
+        </childnode>
+        <childnode refid="2527" relation="include">
+        </childnode>
+        <childnode refid="2528" relation="include">
+        </childnode>
+        <childnode refid="2529" relation="include">
+        </childnode>
+      </node>
+      <node id="2524">
+        <label>fstream</label>
+      </node>
+      <node id="2521">
+        <label>string.h</label>
+      </node>
+      <node id="2525">
+        <label>ctime</label>
+      </node>
+      <node id="2517">
+        <label>index_buffer_object.h</label>
+        <link refid="index__buffer__object_8h"/>
+        <childnode refid="2518" relation="include">
+        </childnode>
+        <childnode refid="2519" relation="include">
+        </childnode>
+      </node>
+      <node id="2516">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/index_buffer_object.cpp</label>
+        <link refid="index__buffer__object_8cpp"/>
+        <childnode refid="2517" relation="include">
+        </childnode>
+      </node>
+      <node id="2520">
+        <label>iostream</label>
+      </node>
+      <node id="2529">
+        <label>game.h</label>
+        <link refid="game_8h"/>
+        <childnode refid="2522" relation="include">
+        </childnode>
+      </node>
+      <node id="2526">
+        <label>experimental/filesystem</label>
       </node>
     </incdepgraph>
     <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
     <innernamespace refid="namespace_rubeus_1_1_graphic_components">Rubeus::GraphicComponents</innernamespace>
     <briefdescription>
-<para>Implements the index buffer class. </para>    </briefdescription>
+    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/index_buffer_object.cpp"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/index_buffer_object.cpp"/>
   </compounddef>
 </doxygen>

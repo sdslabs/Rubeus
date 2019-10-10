@@ -1,0 +1,452 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_ping_pong" kind="class" language="C++" prot="public">
+    <compoundname>PingPong</compoundname>
+    <basecompoundref refid="class_rubeus_1_1_r_game" prot="private" virt="non-virtual">Rubeus::RGame</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_ping_pong_1a4faf5531fa9a515cc479661d3e0b5753" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_r_level" kindref="compound">Rubeus::RLevel</ref> *</type>
+        <definition>Rubeus::RLevel* PingPong::playLevel</definition>
+        <argsstring></argsstring>
+        <name>playLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" line="7" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ping_pong_1a16a033bf3adece480414c994be354adf" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_opaddle" kindref="compound">Opaddle</ref> *</type>
+        <definition>Opaddle* PingPong::leftPaddle</definition>
+        <argsstring></argsstring>
+        <name>leftPaddle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" line="8" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ping_pong_1a00988dfc544babdb6755e8a7d3c48a45" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_opaddle" kindref="compound">Opaddle</ref> *</type>
+        <definition>Opaddle* PingPong::rightPaddle</definition>
+        <argsstring></argsstring>
+        <name>rightPaddle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" line="9" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ping_pong_1ab680209946f789c7725cc6dead7d9d19" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_oball" kindref="compound">Oball</ref> *</type>
+        <definition>Oball* PingPong::matchBall</definition>
+        <argsstring></argsstring>
+        <name>matchBall</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" line="10" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ping_pong_1a32a09994d5c6cc68fa80f483e58b66c2" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_texture" kindref="compound">Rubeus::GraphicComponents::RTexture</ref> *</type>
+        <definition>Rubeus::GraphicComponents::RTexture* PingPong::texture1</definition>
+        <argsstring></argsstring>
+        <name>texture1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" line="11" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ping_pong_1a88ff67071655294a84cc47cde082a45e" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_texture" kindref="compound">Rubeus::GraphicComponents::RTexture</ref> *</type>
+        <definition>Rubeus::GraphicComponents::RTexture* PingPong::texture2</definition>
+        <argsstring></argsstring>
+        <name>texture2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" line="12" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ping_pong_1aed0b182b81c6b206d7cbd917ff633816" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_texture" kindref="compound">Rubeus::GraphicComponents::RTexture</ref> *</type>
+        <definition>Rubeus::GraphicComponents::RTexture* PingPong::texture3</definition>
+        <argsstring></argsstring>
+        <name>texture3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" line="13" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ping_pong_1a75d8a07ea342bdc860980ac48e4bc85d" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_sprite" kindref="compound">Rubeus::GraphicComponents::RSprite</ref> *</type>
+        <definition>Rubeus::GraphicComponents::RSprite* PingPong::sprite1</definition>
+        <argsstring></argsstring>
+        <name>sprite1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" line="14" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ping_pong_1a35ee50890c8375c80dc740563f00011d" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_sprite" kindref="compound">Rubeus::GraphicComponents::RSprite</ref> *</type>
+        <definition>Rubeus::GraphicComponents::RSprite* PingPong::sprite2</definition>
+        <argsstring></argsstring>
+        <name>sprite2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" line="15" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ping_pong_1ac003f54dffa77de795e733213dcb5489" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_sprite" kindref="compound">Rubeus::GraphicComponents::RSprite</ref> *</type>
+        <definition>Rubeus::GraphicComponents::RSprite* PingPong::sprite3</definition>
+        <argsstring></argsstring>
+        <name>sprite3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" line="16" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_ping_pong_1a2974aeca717d1c07895e22a029d76d01" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void PingPong::init</definition>
+        <argsstring>() override</argsstring>
+        <name>init</name>
+        <reimplements refid="class_rubeus_1_1_r_game_1ab1cfe034d8d52a40e69aa3be5cd25ccb">init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" line="18" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" bodystart="18" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ping_pong_1af40e44cbfd84e5f52abac1d4d786476f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void PingPong::end</definition>
+        <argsstring>() override</argsstring>
+        <name>end</name>
+        <reimplements refid="class_rubeus_1_1_r_game_1a2c5b9c5d2d82fd12962492e1eaeebbdd">end</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" line="68" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" bodystart="68" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ping_pong_1a59a766071f68aa0a2e8c3eef16e4959c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PingPong::PingPong</definition>
+        <argsstring>()</argsstring>
+        <name>PingPong</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" line="82" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="148">
+        <label>PingPong</label>
+        <link refid="class_ping_pong"/>
+        <childnode refid="149" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="149">
+        <label>Rubeus::RGame</label>
+        <link refid="class_rubeus_1_1_r_game"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="170">
+        <label>Rubeus::Awerere::APhysicsObject</label>
+        <link refid="class_rubeus_1_1_awerere_1_1_a_physics_object"/>
+        <childnode refid="162" relation="usage">
+          <edgelabel>m_Sprite</edgelabel>
+        </childnode>
+        <childnode refid="171" relation="usage">
+          <edgelabel>m_Collider</edgelabel>
+        </childnode>
+        <childnode refid="172" relation="usage">
+          <edgelabel>m_PhysicsMaterial</edgelabel>
+        </childnode>
+      </node>
+      <node id="158">
+        <label>Rubeus::AudioComponents::RSymphony</label>
+        <link refid="class_rubeus_1_1_audio_components_1_1_r_symphony"/>
+        <childnode refid="153" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="150">
+        <label>PingPong</label>
+        <link refid="class_ping_pong"/>
+        <childnode refid="151" relation="private-inheritance">
+        </childnode>
+        <childnode refid="162" relation="usage">
+          <edgelabel>sprite1</edgelabel>
+          <edgelabel>sprite2</edgelabel>
+          <edgelabel>sprite3</edgelabel>
+        </childnode>
+        <childnode refid="167" relation="usage">
+          <edgelabel>rightPaddle</edgelabel>
+          <edgelabel>leftPaddle</edgelabel>
+        </childnode>
+        <childnode refid="165" relation="usage">
+          <edgelabel>texture1</edgelabel>
+          <edgelabel>texture2</edgelabel>
+          <edgelabel>texture3</edgelabel>
+        </childnode>
+        <childnode refid="174" relation="usage">
+          <edgelabel>matchBall</edgelabel>
+        </childnode>
+        <childnode refid="157" relation="usage">
+          <edgelabel>playLevel</edgelabel>
+        </childnode>
+      </node>
+      <node id="173">
+        <label>RML::Matrix4</label>
+        <link refid="struct_r_m_l_1_1_matrix4"/>
+        <childnode refid="164" relation="usage">
+          <edgelabel>columns</edgelabel>
+        </childnode>
+      </node>
+      <node id="159">
+        <label>Rubeus::RInputManager</label>
+        <link refid="class_rubeus_1_1_r_input_manager"/>
+        <childnode refid="153" relation="public-inheritance">
+        </childnode>
+        <childnode refid="160" relation="usage">
+          <edgelabel>MouseScroll</edgelabel>
+          <edgelabel>MousePosition</edgelabel>
+        </childnode>
+      </node>
+      <node id="154">
+        <label>Rubeus::RMailingList</label>
+        <link refid="class_rubeus_1_1_r_mailing_list"/>
+      </node>
+      <node id="169">
+        <label>Rubeus::REntity</label>
+        <link refid="class_rubeus_1_1_r_entity"/>
+      </node>
+      <node id="171">
+        <label>Rubeus::Awerere::ACollider</label>
+        <link refid="class_rubeus_1_1_awerere_1_1_a_collider"/>
+        <childnode refid="162" relation="usage">
+          <edgelabel>m_Sprite</edgelabel>
+        </childnode>
+        <childnode refid="172" relation="usage">
+          <edgelabel>m_PhysicsMaterial</edgelabel>
+        </childnode>
+        <childnode refid="160" relation="usage">
+          <edgelabel>m_Position</edgelabel>
+          <edgelabel>m_Force</edgelabel>
+          <edgelabel>m_Momentum</edgelabel>
+        </childnode>
+      </node>
+      <node id="164">
+        <label>RML::Vector4D</label>
+        <link refid="struct_r_m_l_1_1_vector4_d"/>
+      </node>
+      <node id="162">
+        <label>Rubeus::GraphicComponents::RSprite</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_sprite"/>
+        <childnode refid="163" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="152">
+        <label>Rubeus::REngine</label>
+        <link refid="class_rubeus_1_1_r_engine"/>
+        <childnode refid="153" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="161">
+        <label>Rubeus::RWorld</label>
+        <link refid="class_rubeus_1_1_r_world"/>
+      </node>
+      <node id="166">
+        <label>RML::Vector3D</label>
+        <link refid="struct_r_m_l_1_1_vector3_d"/>
+      </node>
+      <node id="165">
+        <label>Rubeus::GraphicComponents::RTexture</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_texture"/>
+      </node>
+      <node id="160">
+        <label>RML::Vector2D</label>
+        <link refid="struct_r_m_l_1_1_vector2_d"/>
+      </node>
+      <node id="174">
+        <label>Oball</label>
+        <link refid="class_oball"/>
+        <childnode refid="168" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="151">
+        <label>Rubeus::RGame</label>
+        <link refid="class_rubeus_1_1_r_game"/>
+        <childnode refid="152" relation="usage">
+          <edgelabel>m_Engine</edgelabel>
+        </childnode>
+        <childnode refid="151" relation="usage">
+          <edgelabel>CurrentGame</edgelabel>
+        </childnode>
+        <childnode refid="157" relation="usage">
+          <edgelabel>CurrentLevel</edgelabel>
+        </childnode>
+      </node>
+      <node id="163">
+        <label>Rubeus::GraphicComponents::RRenderableObject</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
+        <childnode refid="164" relation="usage">
+          <edgelabel>m_Color</edgelabel>
+        </childnode>
+        <childnode refid="165" relation="usage">
+          <edgelabel>m_Texture</edgelabel>
+        </childnode>
+        <childnode refid="160" relation="usage">
+          <edgelabel>m_Size</edgelabel>
+        </childnode>
+        <childnode refid="166" relation="usage">
+          <edgelabel>m_Position</edgelabel>
+        </childnode>
+      </node>
+      <node id="156">
+        <label>Rubeus::RMessageBus</label>
+        <link refid="class_rubeus_1_1_r_message_bus"/>
+      </node>
+      <node id="155">
+        <label>Rubeus::RMessageSystem</label>
+        <link refid="class_rubeus_1_1_r_message_system"/>
+        <childnode refid="156" relation="usage">
+          <edgelabel>m_MessageBus</edgelabel>
+        </childnode>
+      </node>
+      <node id="168">
+        <label>Rubeus::RGameObject</label>
+        <link refid="class_rubeus_1_1_r_game_object"/>
+        <childnode refid="169" relation="public-inheritance">
+        </childnode>
+        <childnode refid="153" relation="public-inheritance">
+        </childnode>
+        <childnode refid="170" relation="usage">
+          <edgelabel>m_PhysicsObject</edgelabel>
+        </childnode>
+        <childnode refid="162" relation="usage">
+          <edgelabel>m_Sprite</edgelabel>
+        </childnode>
+        <childnode refid="168" relation="usage">
+          <edgelabel>m_Parent</edgelabel>
+        </childnode>
+        <childnode refid="173" relation="usage">
+          <edgelabel>m_TransformationMatrix</edgelabel>
+        </childnode>
+        <childnode refid="157" relation="usage">
+          <edgelabel>m_ParentLevel</edgelabel>
+        </childnode>
+      </node>
+      <node id="153">
+        <label>Rubeus::RMasterComponent</label>
+        <link refid="class_rubeus_1_1_r_master_component"/>
+        <childnode refid="154" relation="usage">
+          <edgelabel>m_mailbox</edgelabel>
+        </childnode>
+        <childnode refid="155" relation="usage">
+          <edgelabel>m_MessageSystem</edgelabel>
+        </childnode>
+      </node>
+      <node id="167">
+        <label>Opaddle</label>
+        <link refid="class_opaddle"/>
+        <childnode refid="168" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="157">
+        <label>Rubeus::RLevel</label>
+        <link refid="class_rubeus_1_1_r_level"/>
+        <childnode refid="158" relation="usage">
+          <edgelabel>m_AudioManager</edgelabel>
+        </childnode>
+        <childnode refid="159" relation="usage">
+          <edgelabel>m_InputManager</edgelabel>
+        </childnode>
+        <childnode refid="161" relation="usage">
+          <edgelabel>m_World</edgelabel>
+        </childnode>
+      </node>
+      <node id="172">
+        <label>Rubeus::Awerere::APhysicsMaterial</label>
+        <link refid="class_rubeus_1_1_awerere_1_1_a_physics_material"/>
+        <childnode refid="172" relation="usage">
+          <edgelabel>DefaultMaterial</edgelabel>
+        </childnode>
+        <childnode refid="160" relation="usage">
+          <edgelabel>m_Gravity</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" line="5" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp" bodystart="4" bodyend="86"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_r_game_1a33c11ae1b625e473f080b17ff8598764" prot="private" virt="non-virtual"><scope>PingPong</scope><name>CurrentGame</name></member>
+      <member refid="class_rubeus_1_1_r_game_1acb5b535e9592433911a6a1547311c6a3" prot="private" virt="non-virtual"><scope>PingPong</scope><name>CurrentLevel</name></member>
+      <member refid="class_ping_pong_1af40e44cbfd84e5f52abac1d4d786476f" prot="protected" virt="virtual"><scope>PingPong</scope><name>end</name></member>
+      <member refid="class_rubeus_1_1_r_game_1a6a8aaf5782cc577570ea632ab6526b3f" prot="private" virt="non-virtual"><scope>PingPong</scope><name>getActiveGame</name></member>
+      <member refid="class_rubeus_1_1_r_game_1a1a494cfeb303fffde5cc00c793876f39" prot="private" virt="non-virtual"><scope>PingPong</scope><name>getActiveLevel</name></member>
+      <member refid="class_rubeus_1_1_r_game_1a27cc9da76daecbcf7c9aac0a460be328" prot="private" virt="non-virtual"><scope>PingPong</scope><name>getEngine</name></member>
+      <member refid="class_ping_pong_1a2974aeca717d1c07895e22a029d76d01" prot="protected" virt="virtual"><scope>PingPong</scope><name>init</name></member>
+      <member refid="class_ping_pong_1a16a033bf3adece480414c994be354adf" prot="protected" virt="non-virtual"><scope>PingPong</scope><name>leftPaddle</name></member>
+      <member refid="class_rubeus_1_1_r_game_1a906da7ba26d716f62845031f94ffbf14" prot="private" virt="non-virtual"><scope>PingPong</scope><name>m_Engine</name></member>
+      <member refid="class_rubeus_1_1_r_game_1a4bacfc9ce11453af49a35178f94f04ca" prot="private" virt="non-virtual"><scope>PingPong</scope><name>m_StartupLevel</name></member>
+      <member refid="class_ping_pong_1ab680209946f789c7725cc6dead7d9d19" prot="protected" virt="non-virtual"><scope>PingPong</scope><name>matchBall</name></member>
+      <member refid="class_ping_pong_1a59a766071f68aa0a2e8c3eef16e4959c" prot="public" virt="non-virtual"><scope>PingPong</scope><name>PingPong</name></member>
+      <member refid="class_ping_pong_1a4faf5531fa9a515cc479661d3e0b5753" prot="protected" virt="non-virtual"><scope>PingPong</scope><name>playLevel</name></member>
+      <member refid="class_rubeus_1_1_r_game_1a0d9300002340845eefaf9df52c116bf3" prot="private" virt="non-virtual"><scope>PingPong</scope><name>RGame</name></member>
+      <member refid="class_ping_pong_1a00988dfc544babdb6755e8a7d3c48a45" prot="protected" virt="non-virtual"><scope>PingPong</scope><name>rightPaddle</name></member>
+      <member refid="class_ping_pong_1a75d8a07ea342bdc860980ac48e4bc85d" prot="protected" virt="non-virtual"><scope>PingPong</scope><name>sprite1</name></member>
+      <member refid="class_ping_pong_1a35ee50890c8375c80dc740563f00011d" prot="protected" virt="non-virtual"><scope>PingPong</scope><name>sprite2</name></member>
+      <member refid="class_ping_pong_1ac003f54dffa77de795e733213dcb5489" prot="protected" virt="non-virtual"><scope>PingPong</scope><name>sprite3</name></member>
+      <member refid="class_ping_pong_1a32a09994d5c6cc68fa80f483e58b66c2" prot="protected" virt="non-virtual"><scope>PingPong</scope><name>texture1</name></member>
+      <member refid="class_ping_pong_1a88ff67071655294a84cc47cde082a45e" prot="protected" virt="non-virtual"><scope>PingPong</scope><name>texture2</name></member>
+      <member refid="class_ping_pong_1aed0b182b81c6b206d7cbd917ff633816" prot="protected" virt="non-virtual"><scope>PingPong</scope><name>texture3</name></member>
+      <member refid="class_rubeus_1_1_r_game_1a6468de70f44f2db947f064546d1aa4b2" prot="private" virt="non-virtual"><scope>PingPong</scope><name>~RGame</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

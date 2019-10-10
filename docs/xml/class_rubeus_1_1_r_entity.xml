@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/entity_object.h" line="17" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/entity_object.h" bodystart="17" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/entity_object.h" line="17" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/entity_object.h" bodystart="17" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/entity_object.h" line="20" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/entity_object.h" bodystart="20" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/entity_object.h" line="20" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/entity_object.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -41,8 +41,6 @@
         <definition>void Rubeus::REntity::tick</definition>
         <argsstring>()</argsstring>
         <name>tick</name>
-        <reimplementedby refid="classpaddle_1aff95a6b014b08259d1c2b3c19df4dd25">tick</reimplementedby>
-        <reimplementedby refid="classball_1a8507b463ed52e9d713be2ac078a8dc1f">tick</reimplementedby>
         <reimplementedby refid="class_rubeus_1_1_r_game_object_1ade6d964c655301870cb762c1b9c02966">tick</reimplementedby>
         <briefdescription>
 <para>Tick function. </para>        </briefdescription>
@@ -51,7 +49,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/entity_object.h" line="28" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/entity_object.cpp" bodystart="13" bodyend="15"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/entity_object.h" line="28" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/entity_object.cpp" bodystart="15" bodyend="17"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_entity_1a5e9533e6bf1e3c9e5a3af285065d4441" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -64,7 +62,7 @@
 <para>Destructor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/entity_object.h" line="35" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/entity_object.cpp" bodystart="17" bodyend="20"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/entity_object.h" line="35" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/entity_object.cpp" bodystart="19" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_entity_1aef39429d45d98fccaa2633799360e24d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -77,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/entity_object.h" line="42" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/entity_object.cpp" bodystart="22" bodyend="25"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/entity_object.h" line="42" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/entity_object.cpp" bodystart="24" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_entity_1a711b39f7080c54161c642770ae7c73eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
@@ -91,7 +89,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/entity_object.h" line="49" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/entity_object.cpp" bodystart="27" bodyend="30"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/entity_object.h" line="49" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/entity_object.cpp" bodystart="29" bodyend="32"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -99,36 +97,30 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="142">
+      <node id="186">
         <label>Rubeus::REntity</label>
         <link refid="class_rubeus_1_1_r_entity"/>
       </node>
-      <node id="144">
-        <label>ball</label>
-        <link refid="classball"/>
-        <childnode refid="143" relation="public-inheritance">
+      <node id="188">
+        <label>Oball</label>
+        <link refid="class_oball"/>
+        <childnode refid="187" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="145">
-        <label>paddle</label>
-        <link refid="classpaddle"/>
-        <childnode refid="143" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="143">
+      <node id="187">
         <label>Rubeus::RGameObject</label>
         <link refid="class_rubeus_1_1_r_game_object"/>
-        <childnode refid="142" relation="public-inheritance">
+        <childnode refid="186" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="146">
-        <label>Rubeus::GraphicComponents::RGroup</label>
-        <link refid="class_rubeus_1_1_graphic_components_1_1_r_group"/>
-        <childnode refid="143" relation="public-inheritance">
+      <node id="189">
+        <label>Opaddle</label>
+        <link refid="class_opaddle"/>
+        <childnode refid="187" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/entity_object.h" line="14" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/entity_object.h" bodystart="13" bodyend="52"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/entity_object.h" line="14" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/entity_object.h" bodystart="13" bodyend="52"/>
     <listofallmembers>
       <member refid="class_rubeus_1_1_r_entity_1ade850425733b077ca98bf9f1fbc49eaa" prot="public" virt="non-virtual"><scope>Rubeus::REntity</scope><name>entityCount</name></member>
       <member refid="class_rubeus_1_1_r_entity_1a711b39f7080c54161c642770ae7c73eb" prot="public" virt="non-virtual"><scope>Rubeus::REntity</scope><name>getName</name></member>

@@ -7,6 +7,468 @@
     <innerclass refid="struct_r_m_l_1_1_vector3_d" prot="public">RML::Vector3D</innerclass>
     <innerclass refid="struct_r_m_l_1_1_vector4_d" prot="public">RML::Vector4D</innerclass>
       <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_r_m_l_1a6550131c9d0f0580eb2468d24ae7ff79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; RML::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;stream, const Vector2D &amp;vector)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="123" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="123" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1a6c19c973936ffecbb94b252839227e57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+        <definition>Vector2D&amp; RML::operator+</definition>
+        <argsstring>(Vector2D left, const Vector2D &amp;right)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="129" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="129" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1a50b7983bc16b7d43f021217408a24fa7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+        <definition>Vector2D RML::operator-</definition>
+        <argsstring>(Vector2D left, const Vector2D &amp;right)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="134" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="134" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1a41e6ad1bb1b97efe4da45cb02e2cd33a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+        <definition>Vector2D&amp; RML::operator*</definition>
+        <argsstring>(Vector2D left, const Vector2D &amp;right)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="139" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="139" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1a9291a2400bb4179b98f6542c1984f4ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+        <definition>Vector2D&amp; RML::operator*</definition>
+        <argsstring>(Vector2D left, const float &amp;right)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="144" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="144" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1a43d082c2eb2bd85870840b2741b57a61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float RML::operator*</definition>
+        <argsstring>(Vector2D &amp;left, const Vector2D &amp;right)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="149" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="149" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1a6e11bb7a6a8954ab6fd0d511aa5975ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+        <definition>Vector2D&amp; RML::operator/</definition>
+        <argsstring>(Vector2D left, const Vector2D &amp;right)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="154" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="154" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1a9d0517074a4a8e8bf0c9a8eec12744c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; RML::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;stream, const Vector3D &amp;vector)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="349" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="349" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1a05bb9635d4405d621bd1046181551bb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
+        <definition>Vector3D&amp; RML::operator+</definition>
+        <argsstring>(Vector3D left, const Vector3D &amp;right)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="355" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="355" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1a60093c81a882d49951a2f77245f1393b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
+        <definition>Vector3D&amp; RML::operator-</definition>
+        <argsstring>(Vector3D left, const Vector3D &amp;right)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="360" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="360" bodyend="363"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1a60f2c3eff36ddba3f129a5fd5a0c7f0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
+        <definition>Vector3D&amp; RML::operator*</definition>
+        <argsstring>(Vector3D left, const Vector3D &amp;right)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="365" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="365" bodyend="368"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1ab7a466d7c202f6763ef4b1d0421e46f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
+        <definition>Vector3D&amp; RML::operator*</definition>
+        <argsstring>(Vector3D vector, const float &amp;other)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref></type>
+          <declname>vector</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="370" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="370" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1a20756463d1df49baf44bb053c6142536" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
+        <definition>Vector3D&amp; RML::operator/</definition>
+        <argsstring>(Vector3D vector, const float &amp;other)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref></type>
+          <declname>vector</declname>
+        </param>
+        <param>
+          <type>const float &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="375" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="375" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1a71c84db9193eae62863a1ec5406e4d3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
+        <definition>Vector3D&amp; RML::operator/</definition>
+        <argsstring>(Vector3D left, const Vector3D &amp;right)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="380" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="380" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1ad648be1ac30c7f3b71a2e90651214103" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; RML::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;stream, const Vector4D &amp;vector)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="485" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="485" bodyend="489"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1acd5984a11d22a4cdb36fe1049b254aa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+        <definition>Vector4D&amp; RML::operator+</definition>
+        <argsstring>(Vector4D left, const Vector4D &amp;right)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="491" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="491" bodyend="494"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1a9520e86f92592667bf98542015d4f05d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+        <definition>Vector4D&amp; RML::operator-</definition>
+        <argsstring>(Vector4D left, const Vector4D &amp;right)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="496" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="496" bodyend="499"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1ac62e10f995a158fb948ad2df8d86cf01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+        <definition>Vector4D&amp; RML::operator*</definition>
+        <argsstring>(Vector4D left, const Vector4D &amp;right)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="501" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="501" bodyend="504"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1afeb2433bedb1b7765faa502e4b43032d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+        <definition>Vector4D&amp; RML::operator/</definition>
+        <argsstring>(Vector4D left, const Vector4D &amp;right)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="506" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="506" bodyend="509"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1a9ca4bf63de3a4636fbc1a926ef147d4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; RML::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;stream, const Matrix4 &amp;matrix)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref> &amp;</type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="582" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="582" bodyend="590"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1a0c6665e8f62a19e52e8a38d3a17cc9b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref></type>
+        <definition>Matrix4 RML::operator*</definition>
+        <argsstring>(Matrix4 left, const Matrix4 &amp;right)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="592" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="592" bodyend="595"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_r_m_l_1a8e2354d1d8e723ba00857c886efe4858" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref></type>
+        <definition>Vector3D RML::operator*</definition>
+        <argsstring>(Matrix4 &amp;matrix, const Vector3D &amp;vector)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref> &amp;</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="597" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" bodystart="597" bodyend="600"/>
+      </memberdef>
       <memberdef kind="function" id="namespace_r_m_l_1a172fe5f30b4f649cacce7e1b110e46c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
         <definition>float RML::degreeToRadians</definition>
@@ -31,475 +493,13 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="28" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/rubeus_maths_library.h" bodystart="28" bodyend="31"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1a6550131c9d0f0580eb2468d24ae7ff79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>std::ostream &amp;</type>
-        <definition>std::ostream&amp; RML::operator&lt;&lt;</definition>
-        <argsstring>(std::ostream &amp;stream, const Vector2D &amp;vector)</argsstring>
-        <name>operator&lt;&lt;</name>
-        <param>
-          <type>std::ostream &amp;</type>
-          <declname>stream</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
-          <declname>vector</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="123" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="123" bodyend="127"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1a6c19c973936ffecbb94b252839227e57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
-        <definition>Vector2D&amp; RML::operator+</definition>
-        <argsstring>(Vector2D left, const Vector2D &amp;right)</argsstring>
-        <name>operator+</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
-          <declname>left</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
-          <declname>right</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="129" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="129" bodyend="132"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1a50b7983bc16b7d43f021217408a24fa7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
-        <definition>Vector2D RML::operator-</definition>
-        <argsstring>(Vector2D left, const Vector2D &amp;right)</argsstring>
-        <name>operator-</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
-          <declname>left</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
-          <declname>right</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="134" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="134" bodyend="137"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1a41e6ad1bb1b97efe4da45cb02e2cd33a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
-        <definition>Vector2D&amp; RML::operator*</definition>
-        <argsstring>(Vector2D left, const Vector2D &amp;right)</argsstring>
-        <name>operator*</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
-          <declname>left</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
-          <declname>right</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="139" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="139" bodyend="142"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1a9291a2400bb4179b98f6542c1984f4ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
-        <definition>Vector2D&amp; RML::operator*</definition>
-        <argsstring>(Vector2D left, const float &amp;right)</argsstring>
-        <name>operator*</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
-          <declname>left</declname>
-        </param>
-        <param>
-          <type>const float &amp;</type>
-          <declname>right</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="144" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="144" bodyend="147"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1a43d082c2eb2bd85870840b2741b57a61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>float</type>
-        <definition>float RML::operator*</definition>
-        <argsstring>(Vector2D &amp;left, const Vector2D &amp;right)</argsstring>
-        <name>operator*</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
-          <declname>left</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
-          <declname>right</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="149" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="149" bodyend="152"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1a6e11bb7a6a8954ab6fd0d511aa5975ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
-        <definition>Vector2D&amp; RML::operator/</definition>
-        <argsstring>(Vector2D left, const Vector2D &amp;right)</argsstring>
-        <name>operator/</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref></type>
-          <declname>left</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">Vector2D</ref> &amp;</type>
-          <declname>right</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="154" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="154" bodyend="157"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1a9d0517074a4a8e8bf0c9a8eec12744c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>std::ostream &amp;</type>
-        <definition>std::ostream&amp; RML::operator&lt;&lt;</definition>
-        <argsstring>(std::ostream &amp;stream, const Vector3D &amp;vector)</argsstring>
-        <name>operator&lt;&lt;</name>
-        <param>
-          <type>std::ostream &amp;</type>
-          <declname>stream</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
-          <declname>vector</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="337" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="337" bodyend="341"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1a05bb9635d4405d621bd1046181551bb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
-        <definition>Vector3D&amp; RML::operator+</definition>
-        <argsstring>(Vector3D left, const Vector3D &amp;right)</argsstring>
-        <name>operator+</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref></type>
-          <declname>left</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
-          <declname>right</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="343" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="343" bodyend="346"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1a60093c81a882d49951a2f77245f1393b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
-        <definition>Vector3D&amp; RML::operator-</definition>
-        <argsstring>(Vector3D left, const Vector3D &amp;right)</argsstring>
-        <name>operator-</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref></type>
-          <declname>left</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
-          <declname>right</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="348" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="348" bodyend="351"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1a60f2c3eff36ddba3f129a5fd5a0c7f0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
-        <definition>Vector3D&amp; RML::operator*</definition>
-        <argsstring>(Vector3D left, const Vector3D &amp;right)</argsstring>
-        <name>operator*</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref></type>
-          <declname>left</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
-          <declname>right</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="353" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="353" bodyend="356"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1ab7a466d7c202f6763ef4b1d0421e46f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
-        <definition>Vector3D&amp; RML::operator*</definition>
-        <argsstring>(Vector3D vector, const float &amp;other)</argsstring>
-        <name>operator*</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref></type>
-          <declname>vector</declname>
-        </param>
-        <param>
-          <type>const float &amp;</type>
-          <declname>other</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="358" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="358" bodyend="361"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1a20756463d1df49baf44bb053c6142536" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
-        <definition>Vector3D&amp; RML::operator/</definition>
-        <argsstring>(Vector3D vector, const float &amp;other)</argsstring>
-        <name>operator/</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref></type>
-          <declname>vector</declname>
-        </param>
-        <param>
-          <type>const float &amp;</type>
-          <declname>other</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="363" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="363" bodyend="366"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1a71c84db9193eae62863a1ec5406e4d3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
-        <definition>Vector3D&amp; RML::operator/</definition>
-        <argsstring>(Vector3D left, const Vector3D &amp;right)</argsstring>
-        <name>operator/</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref></type>
-          <declname>left</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
-          <declname>right</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="368" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="368" bodyend="371"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1ad648be1ac30c7f3b71a2e90651214103" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>std::ostream &amp;</type>
-        <definition>std::ostream&amp; RML::operator&lt;&lt;</definition>
-        <argsstring>(std::ostream &amp;stream, const Vector4D &amp;vector)</argsstring>
-        <name>operator&lt;&lt;</name>
-        <param>
-          <type>std::ostream &amp;</type>
-          <declname>stream</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
-          <declname>vector</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="473" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="473" bodyend="477"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1acd5984a11d22a4cdb36fe1049b254aa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
-        <definition>Vector4D&amp; RML::operator+</definition>
-        <argsstring>(Vector4D left, const Vector4D &amp;right)</argsstring>
-        <name>operator+</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref></type>
-          <declname>left</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
-          <declname>right</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="479" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="479" bodyend="482"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1a9520e86f92592667bf98542015d4f05d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
-        <definition>Vector4D&amp; RML::operator-</definition>
-        <argsstring>(Vector4D left, const Vector4D &amp;right)</argsstring>
-        <name>operator-</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref></type>
-          <declname>left</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
-          <declname>right</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="484" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="484" bodyend="487"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1ac62e10f995a158fb948ad2df8d86cf01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
-        <definition>Vector4D&amp; RML::operator*</definition>
-        <argsstring>(Vector4D left, const Vector4D &amp;right)</argsstring>
-        <name>operator*</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref></type>
-          <declname>left</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
-          <declname>right</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="489" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="489" bodyend="492"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1afeb2433bedb1b7765faa502e4b43032d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
-        <definition>Vector4D&amp; RML::operator/</definition>
-        <argsstring>(Vector4D left, const Vector4D &amp;right)</argsstring>
-        <name>operator/</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref></type>
-          <declname>left</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector4_d" kindref="compound">Vector4D</ref> &amp;</type>
-          <declname>right</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="494" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="494" bodyend="497"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1a9ca4bf63de3a4636fbc1a926ef147d4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>std::ostream &amp;</type>
-        <definition>std::ostream&amp; RML::operator&lt;&lt;</definition>
-        <argsstring>(std::ostream &amp;stream, const Matrix4 &amp;matrix)</argsstring>
-        <name>operator&lt;&lt;</name>
-        <param>
-          <type>std::ostream &amp;</type>
-          <declname>stream</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref> &amp;</type>
-          <declname>matrix</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="570" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="570" bodyend="578"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1a0c6665e8f62a19e52e8a38d3a17cc9b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref></type>
-        <definition>Matrix4 RML::operator*</definition>
-        <argsstring>(Matrix4 left, const Matrix4 &amp;right)</argsstring>
-        <name>operator*</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref></type>
-          <declname>left</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref> &amp;</type>
-          <declname>right</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="580" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="580" bodyend="583"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_r_m_l_1a8e2354d1d8e723ba00857c886efe4858" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref></type>
-        <definition>Vector3D RML::operator*</definition>
-        <argsstring>(Matrix4 &amp;matrix, const Vector3D &amp;vector)</argsstring>
-        <name>operator*</name>
-        <param>
-          <type><ref refid="struct_r_m_l_1_1_matrix4" kindref="compound">Matrix4</ref> &amp;</type>
-          <declname>matrix</declname>
-        </param>
-        <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">Vector3D</ref> &amp;</type>
-          <declname>vector</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" line="585" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/rubeus_maths_library.cpp" bodystart="585" bodyend="588"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.h" line="28" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.h" bodystart="28" bodyend="31"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>The <ref refid="namespace_rubeus" kindref="compound">Rubeus</ref> Maths Library for <ref refid="namespace_rubeus" kindref="compound">Rubeus</ref> Engine namespace. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/rubeus_maths_library.h" line="14" column="1"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/RML/rubeus_maths_library.cpp" line="12" column="1"/>
   </compounddef>
 </doxygen>

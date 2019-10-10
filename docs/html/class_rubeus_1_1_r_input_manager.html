@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Rubeus::RInputManager class | Rubeus</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
-  <link rel="stylesheet" href="m-dark+doxygen.compiled.css" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
   <link rel="icon" href="favicon.png" type="image/png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#22272e" />
@@ -15,8 +15,8 @@
     <div class="m-row">
       <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Rubeus</a>
       <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
-        <a href="#search" class="m-dox-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-          <path d="m6 0c-3.3144 0-6 2.6856-6 6 0 3.3144 2.6856 6 6 6 1.4858 0 2.8463-0.54083 3.8945-1.4355-0.0164 0.33797 0.14734 0.75854 0.5 1.1504l3.2227 3.7891c0.55185 0.6139 1.4517 0.66544 2.002 0.11524 0.55022-0.55022 0.49866-1.4501-0.11524-2.002l-3.7891-3.2246c-0.39184-0.35266-0.81242-0.51469-1.1504-0.5 0.89472-1.0482 1.4355-2.4088 1.4355-3.8945 0-3.3128-2.6856-5.998-6-5.998zm0 1.5625a4.4375 4.4375 0 0 1 4.4375 4.4375 4.4375 4.4375 0 0 1-4.4375 4.4375 4.4375 4.4375 0 0 1-4.4375-4.4375 4.4375 4.4375 0 0 1 4.4375-4.4375z"/>
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
         </svg></a>
         <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
         <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
@@ -30,8 +30,8 @@
           <ol class="m-col-t-6 m-col-m-none" start="3">
             <li><a href="annotated.html">Classes</a></li>
             <li><a href="files.html">Files</a></li>
-            <li class="m-show-m"><a href="#search" class="m-dox-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-              <path d="m6 0c-3.3144 0-6 2.6856-6 6 0 3.3144 2.6856 6 6 6 1.4858 0 2.8463-0.54083 3.8945-1.4355-0.0164 0.33797 0.14734 0.75854 0.5 1.1504l3.2227 3.7891c0.55185 0.6139 1.4517 0.66544 2.002 0.11524 0.55022-0.55022 0.49866-1.4501-0.11524-2.002l-3.7891-3.2246c-0.39184-0.35266-0.81242-0.51469-1.1504-0.5 0.89472-1.0482 1.4355-2.4088 1.4355-3.8945 0-3.3128-2.6856-5.998-6-5.998zm0 1.5625a4.4375 4.4375 0 0 1 4.4375 4.4375 4.4375 4.4375 0 0 1-4.4375 4.4375 4.4375 4.4375 0 0 1-4.4375-4.4375 4.4375 4.4375 0 0 1 4.4375-4.4375z"/>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
             </svg></a></li>
           </ol>
         </div>
@@ -63,99 +63,107 @@
         </div>
         <section id="base-classes">
           <h2><a href="#base-classes">Base classes</a></h2>
-          <dl class="m-dox">
+          <dl class="m-doc">
             <dt>
-              class <a href="class_rubeus_1_1_r_master_component.html" class="m-dox">RMasterComponent</a>
+              class <a href="class_rubeus_1_1_r_master_component.html" class="m-doc">RMasterComponent</a>
             </dt>
             <dd>A master component. Serves as parent class for all components.</dd>
           </dl>
         </section>
         <section id="pub-static-attribs">
           <h2><a href="#pub-static-attribs">Public static variables</a></h2>
-          <dl class="m-dox">
-            <dt>static std::unordered_map&lt;int, bool&gt; <a href="#a24465d5ea96a03afe4b76af7dfb98d71" class="m-dox-self" name="a24465d5ea96a03afe4b76af7dfb98d71">KeyMap</a></dt>
+          <dl class="m-doc">
+            <dt id="a24465d5ea96a03afe4b76af7dfb98d71">
+              static std::unordered_map&lt;int, bool&gt; <a href="#a24465d5ea96a03afe4b76af7dfb98d71" class="m-doc-self">KeyMap</a>
+            </dt>
             <dd>Mapping of all keys and the bool value of whether they are being pressed.</dd>
-            <dt>static std::unordered_map&lt;int, bool&gt; <a href="#a3f9fdd7afa2ce249eb6a08097962ed4e" class="m-dox-self" name="a3f9fdd7afa2ce249eb6a08097962ed4e">MouseButtonMap</a></dt>
+            <dt id="a3f9fdd7afa2ce249eb6a08097962ed4e">
+              static std::unordered_map&lt;int, bool&gt; <a href="#a3f9fdd7afa2ce249eb6a08097962ed4e" class="m-doc-self">MouseButtonMap</a>
+            </dt>
             <dd>Mapping of all mouse buttons and the bool value of whether they are being pressed.</dd>
-            <dt>static <a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a> <a href="#a85fe446c1eea7a58362f59dd4f5c4776" class="m-dox-self" name="a85fe446c1eea7a58362f59dd4f5c4776">MousePosition</a></dt>
+            <dt id="a85fe446c1eea7a58362f59dd4f5c4776">
+              static <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a> <a href="#a85fe446c1eea7a58362f59dd4f5c4776" class="m-doc-self">MousePosition</a>
+            </dt>
             <dd>Mouse position of the current active cursor.</dd>
-            <dt>static <a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a> <a href="#a696b2437a850d2f2089766b0d0ad46e8" class="m-dox-self" name="a696b2437a850d2f2089766b0d0ad46e8">MouseScroll</a></dt>
+            <dt id="a696b2437a850d2f2089766b0d0ad46e8">
+              static <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a> <a href="#a696b2437a850d2f2089766b0d0ad46e8" class="m-doc-self">MouseScroll</a>
+            </dt>
             <dd>Scroll value being inputted to input manager.</dd>
           </dl>
         </section>
         <section id="typeless-methods">
           <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
-          <dl class="m-dox">
+          <dl class="m-doc">
             <dt>
-              <span class="m-dox-wrap-bumper"><a href="#af61b188e07c8e9aa70c0fd185e4242fd" class="m-dox">RInputManager</a>(</span><span class="m-dox-wrap">const <a href="class_rubeus_1_1_graphic_components_1_1_r_window_component.html" class="m-dox">GraphicComponents::<wbr />RWindowComponent</a>&amp; window)</span>
+              <span class="m-doc-wrap-bumper"><a href="#ade3ea578d33400cf967e410272cd0565" class="m-doc">RInputManager</a>(</span><span class="m-doc-wrap">const <a href="class_rubeus_1_1_graphic_components_1_1_r_window_component.html" class="m-doc">GraphicComponents::<wbr />RWindowComponent</a>* window)</span>
             </dt>
             <dd>Constructor.</dd>
-            <dt>
-              <span class="m-dox-wrap-bumper"><a href="#aae4dcfbc07a13854788e9b22f4bbef17" class="m-dox-self" name="aae4dcfbc07a13854788e9b22f4bbef17">~RInputManager</a>(</span><span class="m-dox-wrap">)</span>
+            <dt id="aae4dcfbc07a13854788e9b22f4bbef17">
+              <span class="m-doc-wrap-bumper"><a href="#aae4dcfbc07a13854788e9b22f4bbef17" class="m-doc-self">~RInputManager</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd>Destructor.</dd>
           </dl>
         </section>
         <section id="pub-methods">
           <h2><a href="#pub-methods">Public functions</a></h2>
-          <dl class="m-dox">
+          <dl class="m-doc">
             <dt>
-              <span class="m-dox-wrap-bumper">void <a href="#afbfc89b14cd629acb8860f63ea8fde33" class="m-dox">addKeyToKeyBinding</a>(</span><span class="m-dox-wrap">const std::string&amp; keyBinding,
-              const <a href="namespace_rubeus.html#ac846721ec08ebc254d389a992230f305" class="m-dox">EKeyboardKeys</a>&amp; keyName)</span>
+              <span class="m-doc-wrap-bumper">void <a href="#afbfc89b14cd629acb8860f63ea8fde33" class="m-doc">addKeyToKeyBinding</a>(</span><span class="m-doc-wrap">const std::string&amp; keyBinding,
+              const <a href="namespace_rubeus.html#ac846721ec08ebc254d389a992230f305" class="m-doc">EKeyboardKeys</a>&amp; keyName)</span>
             </dt>
             <dd>Add a key to a keybinding.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">void <a href="#a9e8b9f9a738d2ff367b289ffcbde9d32" class="m-dox">addKeysToKeyBinding</a>(</span><span class="m-dox-wrap">const std::string&amp; keyBinding,
-              const std::vector&lt;<a href="namespace_rubeus.html#ac846721ec08ebc254d389a992230f305" class="m-dox">EKeyboardKeys</a>&gt;&amp; keyNames)</span>
+              <span class="m-doc-wrap-bumper">void <a href="#a9e8b9f9a738d2ff367b289ffcbde9d32" class="m-doc">addKeysToKeyBinding</a>(</span><span class="m-doc-wrap">const std::string&amp; keyBinding,
+              const std::vector&lt;<a href="namespace_rubeus.html#ac846721ec08ebc254d389a992230f305" class="m-doc">EKeyboardKeys</a>&gt;&amp; keyNames)</span>
             </dt>
             <dd>Add an array of keys to a keybinding.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">void <a href="#aeb7117ef5b3b07cdfe8c356dd5aeca6d" class="m-dox">activate</a>(</span><span class="m-dox-wrap">const std::string&amp; keyBinding)</span>
+              <span class="m-doc-wrap-bumper">void <a href="#aeb7117ef5b3b07cdfe8c356dd5aeca6d" class="m-doc">activate</a>(</span><span class="m-doc-wrap">const std::string&amp; keyBinding)</span>
             </dt>
             <dd>Activate a keybinding.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">void <a href="#a2cc2fd66220fe8ca02f5321c524eb13b" class="m-dox">deactivate</a>(</span><span class="m-dox-wrap">const std::string&amp; keyBinding)</span>
+              <span class="m-doc-wrap-bumper">void <a href="#a2cc2fd66220fe8ca02f5321c524eb13b" class="m-doc">deactivate</a>(</span><span class="m-doc-wrap">const std::string&amp; keyBinding)</span>
             </dt>
             <dd>Deactivate a keybinding.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">auto <a href="#ac5a50fe841938b99b67f29113be7eba4" class="m-dox">isKeyBindingPressed</a>(</span><span class="m-dox-wrap">const std::string&amp; keyBinding) -&gt; bool</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#ac5a50fe841938b99b67f29113be7eba4" class="m-doc">isKeyBindingPressed</a>(</span><span class="m-doc-wrap">const std::string&amp; keyBinding) -&gt; bool</span>
             </dt>
             <dd>Check if a key corresponding to a keybinding is being used.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">auto <a href="#a437e6b620a3121a02cf775e25e2eea26" class="m-dox">isKeyPressed</a>(</span><span class="m-dox-wrap">const <a href="namespace_rubeus.html#ac846721ec08ebc254d389a992230f305" class="m-dox">EKeyboardKeys</a>&amp; keyName) -&gt; bool</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a437e6b620a3121a02cf775e25e2eea26" class="m-doc">isKeyPressed</a>(</span><span class="m-doc-wrap">const <a href="namespace_rubeus.html#ac846721ec08ebc254d389a992230f305" class="m-doc">EKeyboardKeys</a>&amp; keyName) -&gt; bool</span>
             </dt>
             <dd>Check whether a key is being pressed.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">auto <a href="#aaa241d9afe13dcef04a22423c78f3a30" class="m-dox">isMouseButtonPressed</a>(</span><span class="m-dox-wrap">const <a href="namespace_rubeus.html#ac04ea80a8fa238524f8582b0a66efdce" class="m-dox">EMouseButtons</a>&amp; buttonName) -&gt; bool</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#aaa241d9afe13dcef04a22423c78f3a30" class="m-doc">isMouseButtonPressed</a>(</span><span class="m-doc-wrap">const <a href="namespace_rubeus.html#ac04ea80a8fa238524f8582b0a66efdce" class="m-doc">EMouseButtons</a>&amp; buttonName) -&gt; bool</span>
             </dt>
             <dd>Check whether a mouse button is being pressed.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">auto <a href="#a0e3b50d7deb6568ba309509503ec7d3b" class="m-dox">getMousePosition</a>(</span><span class="m-dox-wrap">) const -&gt; const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a>&amp;</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a0e3b50d7deb6568ba309509503ec7d3b" class="m-doc">getMousePosition</a>(</span><span class="m-doc-wrap">) const -&gt; const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>&amp;</span>
             </dt>
             <dd>Get the current mouse position.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">auto <a href="#a8680633194478de3b2b3e47a85d221b2" class="m-dox">getMouseScroll</a>(</span><span class="m-dox-wrap">) const -&gt; const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a>&amp;</span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a8680633194478de3b2b3e47a85d221b2" class="m-doc">getMouseScroll</a>(</span><span class="m-doc-wrap">) const -&gt; const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>&amp;</span>
             </dt>
             <dd>Get the current mouse scroll values.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">void <a href="#ae20636f7b9df7cb3f5c0cfcde2fa2c4d" class="m-dox">enable</a>(</span><span class="m-dox-wrap">)</span>
+              <span class="m-doc-wrap-bumper">void <a href="#ae20636f7b9df7cb3f5c0cfcde2fa2c4d" class="m-doc">enable</a>(</span><span class="m-doc-wrap">)</span>
             </dt>
             <dd>Enable the Input Manager. All input queries will function normally.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">void <a href="#a52c9396b8a5ee8cc4df2904d246709db" class="m-dox">disable</a>(</span><span class="m-dox-wrap">)</span>
+              <span class="m-doc-wrap-bumper">void <a href="#a52c9396b8a5ee8cc4df2904d246709db" class="m-doc">disable</a>(</span><span class="m-doc-wrap">)</span>
             </dt>
             <dd>Disable the Input Manager. All input queries will return false.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">void <a href="#a5439f24e8e7324484a2ba50a7d9764ad" class="m-dox">onMessage</a>(</span><span class="m-dox-wrap"><a href="struct_rubeus_1_1_message.html" class="m-dox">Message</a>* msg) override <span class="m-label m-flat m-warning">virtual</span></span>
+              <span class="m-doc-wrap-bumper">void <a href="#ac278fe0ca8274aad3c45856332d56857" class="m-doc">InputManager_ok</a>(</span><span class="m-doc-wrap"><a href="message__codes_8h.html#a69899082fd1cf504645a65a3cc00c9e5" class="m-doc">var</a> data = NULL)</span>
             </dt>
-            <dd>Handles messages sent by <a href="struct_rubeus_1_1_message.html" class="m-dox">Message</a> system asynchronously.</dd>
+            <dd>Checks if input manager is ready for use.</dd>
           </dl>
         </section>
         <section>
           <h2>Function documentation</h2>
-          <section class="m-dox-details" id="af61b188e07c8e9aa70c0fd185e4242fd"><div>
+          <section class="m-doc-details" id="ade3ea578d33400cf967e410272cd0565"><div>
             <h3>
-              <span class="m-dox-wrap-bumper"> Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#af61b188e07c8e9aa70c0fd185e4242fd" class="m-dox-self">RInputManager</a>(</span><span class="m-dox-wrap">const <a href="class_rubeus_1_1_graphic_components_1_1_r_window_component.html" class="m-dox">GraphicComponents::<wbr />RWindowComponent</a>&amp; window)</span></span>
+              <span class="m-doc-wrap-bumper"> Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ade3ea578d33400cf967e410272cd0565" class="m-doc-self">RInputManager</a>(</span><span class="m-doc-wrap">const <a href="class_rubeus_1_1_graphic_components_1_1_r_window_component.html" class="m-doc">GraphicComponents::<wbr />RWindowComponent</a>* window)</span></span>
             </h3>
             <p>Constructor.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -170,10 +178,10 @@
               </tbody>
             </table>
           </div></section>
-          <section class="m-dox-details" id="afbfc89b14cd629acb8860f63ea8fde33"><div>
+          <section class="m-doc-details" id="afbfc89b14cd629acb8860f63ea8fde33"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">void Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#afbfc89b14cd629acb8860f63ea8fde33" class="m-dox-self">addKeyToKeyBinding</a>(</span><span class="m-dox-wrap">const std::string&amp; keyBinding,
-              const <a href="namespace_rubeus.html#ac846721ec08ebc254d389a992230f305" class="m-dox">EKeyboardKeys</a>&amp; keyName)</span></span>
+              <span class="m-doc-wrap-bumper">void Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#afbfc89b14cd629acb8860f63ea8fde33" class="m-doc-self">addKeyToKeyBinding</a>(</span><span class="m-doc-wrap">const std::string&amp; keyBinding,
+              const <a href="namespace_rubeus.html#ac846721ec08ebc254d389a992230f305" class="m-doc">EKeyboardKeys</a>&amp; keyName)</span></span>
             </h3>
             <p>Add a key to a keybinding.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -193,10 +201,10 @@
             </table>
 <aside class="m-note m-danger"><h4>Warning</h4><p>Beware of case-sensitivity</p></aside>
           </div></section>
-          <section class="m-dox-details" id="a9e8b9f9a738d2ff367b289ffcbde9d32"><div>
+          <section class="m-doc-details" id="a9e8b9f9a738d2ff367b289ffcbde9d32"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">void Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#a9e8b9f9a738d2ff367b289ffcbde9d32" class="m-dox-self">addKeysToKeyBinding</a>(</span><span class="m-dox-wrap">const std::string&amp; keyBinding,
-              const std::vector&lt;<a href="namespace_rubeus.html#ac846721ec08ebc254d389a992230f305" class="m-dox">EKeyboardKeys</a>&gt;&amp; keyNames)</span></span>
+              <span class="m-doc-wrap-bumper">void Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a9e8b9f9a738d2ff367b289ffcbde9d32" class="m-doc-self">addKeysToKeyBinding</a>(</span><span class="m-doc-wrap">const std::string&amp; keyBinding,
+              const std::vector&lt;<a href="namespace_rubeus.html#ac846721ec08ebc254d389a992230f305" class="m-doc">EKeyboardKeys</a>&gt;&amp; keyNames)</span></span>
             </h3>
             <p>Add an array of keys to a keybinding.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -216,9 +224,9 @@
             </table>
 <aside class="m-note m-danger"><h4>Warning</h4><p>Beware of case-sensitivity</p></aside>
           </div></section>
-          <section class="m-dox-details" id="aeb7117ef5b3b07cdfe8c356dd5aeca6d"><div>
+          <section class="m-doc-details" id="aeb7117ef5b3b07cdfe8c356dd5aeca6d"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">void Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#aeb7117ef5b3b07cdfe8c356dd5aeca6d" class="m-dox-self">activate</a>(</span><span class="m-dox-wrap">const std::string&amp; keyBinding)</span></span>
+              <span class="m-doc-wrap-bumper">void Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aeb7117ef5b3b07cdfe8c356dd5aeca6d" class="m-doc-self">activate</a>(</span><span class="m-doc-wrap">const std::string&amp; keyBinding)</span></span>
             </h3>
             <p>Activate a keybinding.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -234,9 +242,9 @@
             </table>
 <aside class="m-note m-danger"><h4>Warning</h4><p>All keybindings are activated by default on startup</p></aside>
           </div></section>
-          <section class="m-dox-details" id="a2cc2fd66220fe8ca02f5321c524eb13b"><div>
+          <section class="m-doc-details" id="a2cc2fd66220fe8ca02f5321c524eb13b"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">void Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#a2cc2fd66220fe8ca02f5321c524eb13b" class="m-dox-self">deactivate</a>(</span><span class="m-dox-wrap">const std::string&amp; keyBinding)</span></span>
+              <span class="m-doc-wrap-bumper">void Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a2cc2fd66220fe8ca02f5321c524eb13b" class="m-doc-self">deactivate</a>(</span><span class="m-doc-wrap">const std::string&amp; keyBinding)</span></span>
             </h3>
             <p>Deactivate a keybinding.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -252,9 +260,9 @@
             </table>
 <aside class="m-note m-danger"><h4>Warning</h4><p>All keybindings are activated by default on startup</p></aside>
           </div></section>
-          <section class="m-dox-details" id="ac5a50fe841938b99b67f29113be7eba4"><div>
+          <section class="m-doc-details" id="ac5a50fe841938b99b67f29113be7eba4"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">bool Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#ac5a50fe841938b99b67f29113be7eba4" class="m-dox-self">isKeyBindingPressed</a>(</span><span class="m-dox-wrap">const std::string&amp; keyBinding)</span></span>
+              <span class="m-doc-wrap-bumper">bool Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ac5a50fe841938b99b67f29113be7eba4" class="m-doc-self">isKeyBindingPressed</a>(</span><span class="m-doc-wrap">const std::string&amp; keyBinding)</span></span>
             </h3>
             <p>Check if a key corresponding to a keybinding is being used.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -275,9 +283,9 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-dox-details" id="a437e6b620a3121a02cf775e25e2eea26"><div>
+          <section class="m-doc-details" id="a437e6b620a3121a02cf775e25e2eea26"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">bool Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#a437e6b620a3121a02cf775e25e2eea26" class="m-dox-self">isKeyPressed</a>(</span><span class="m-dox-wrap">const <a href="namespace_rubeus.html#ac846721ec08ebc254d389a992230f305" class="m-dox">EKeyboardKeys</a>&amp; keyName)</span></span>
+              <span class="m-doc-wrap-bumper">bool Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a437e6b620a3121a02cf775e25e2eea26" class="m-doc-self">isKeyPressed</a>(</span><span class="m-doc-wrap">const <a href="namespace_rubeus.html#ac846721ec08ebc254d389a992230f305" class="m-doc">EKeyboardKeys</a>&amp; keyName)</span></span>
             </h3>
             <p>Check whether a key is being pressed.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -298,9 +306,9 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-dox-details" id="aaa241d9afe13dcef04a22423c78f3a30"><div>
+          <section class="m-doc-details" id="aaa241d9afe13dcef04a22423c78f3a30"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">bool Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#aaa241d9afe13dcef04a22423c78f3a30" class="m-dox-self">isMouseButtonPressed</a>(</span><span class="m-dox-wrap">const <a href="namespace_rubeus.html#ac04ea80a8fa238524f8582b0a66efdce" class="m-dox">EMouseButtons</a>&amp; buttonName)</span></span>
+              <span class="m-doc-wrap-bumper">bool Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aaa241d9afe13dcef04a22423c78f3a30" class="m-doc-self">isMouseButtonPressed</a>(</span><span class="m-doc-wrap">const <a href="namespace_rubeus.html#ac04ea80a8fa238524f8582b0a66efdce" class="m-doc">EMouseButtons</a>&amp; buttonName)</span></span>
             </h3>
             <p>Check whether a mouse button is being pressed.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -321,9 +329,9 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-dox-details" id="a0e3b50d7deb6568ba309509503ec7d3b"><div>
+          <section class="m-doc-details" id="a0e3b50d7deb6568ba309509503ec7d3b"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a>&amp; Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#a0e3b50d7deb6568ba309509503ec7d3b" class="m-dox-self">getMousePosition</a>(</span><span class="m-dox-wrap">) const</span></span>
+              <span class="m-doc-wrap-bumper">const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>&amp; Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a0e3b50d7deb6568ba309509503ec7d3b" class="m-doc-self">getMousePosition</a>(</span><span class="m-doc-wrap">) const</span></span>
             </h3>
             <p>Get the current mouse position.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -335,9 +343,9 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-dox-details" id="a8680633194478de3b2b3e47a85d221b2"><div>
+          <section class="m-doc-details" id="a8680633194478de3b2b3e47a85d221b2"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a>&amp; Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#a8680633194478de3b2b3e47a85d221b2" class="m-dox-self">getMouseScroll</a>(</span><span class="m-dox-wrap">) const</span></span>
+              <span class="m-doc-wrap-bumper">const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>&amp; Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a8680633194478de3b2b3e47a85d221b2" class="m-doc-self">getMouseScroll</a>(</span><span class="m-doc-wrap">) const</span></span>
             </h3>
             <p>Get the current mouse scroll values.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -349,62 +357,68 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-dox-details" id="ae20636f7b9df7cb3f5c0cfcde2fa2c4d"><div>
+          <section class="m-doc-details" id="ae20636f7b9df7cb3f5c0cfcde2fa2c4d"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">void Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#ae20636f7b9df7cb3f5c0cfcde2fa2c4d" class="m-dox-self">enable</a>(</span><span class="m-dox-wrap">)</span></span>
+              <span class="m-doc-wrap-bumper">void Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae20636f7b9df7cb3f5c0cfcde2fa2c4d" class="m-doc-self">enable</a>(</span><span class="m-doc-wrap">)</span></span>
             </h3>
             <p>Enable the Input Manager. All input queries will function normally.</p>
 <aside class="m-note m-danger"><h4>Warning</h4><p>Enabled by default on startup</p></aside>
           </div></section>
-          <section class="m-dox-details" id="a52c9396b8a5ee8cc4df2904d246709db"><div>
+          <section class="m-doc-details" id="a52c9396b8a5ee8cc4df2904d246709db"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">void Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#a52c9396b8a5ee8cc4df2904d246709db" class="m-dox-self">disable</a>(</span><span class="m-dox-wrap">)</span></span>
+              <span class="m-doc-wrap-bumper">void Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a52c9396b8a5ee8cc4df2904d246709db" class="m-doc-self">disable</a>(</span><span class="m-doc-wrap">)</span></span>
             </h3>
             <p>Disable the Input Manager. All input queries will return false.</p>
 <aside class="m-note m-danger"><h4>Warning</h4><p>Input Manager is enabled by default on startup</p></aside>
           </div></section>
-          <section class="m-dox-details" id="a5439f24e8e7324484a2ba50a7d9764ad"><div>
+          <section class="m-doc-details" id="ac278fe0ca8274aad3c45856332d56857"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">void Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#a5439f24e8e7324484a2ba50a7d9764ad" class="m-dox-self">onMessage</a>(</span><span class="m-dox-wrap"><a href="struct_rubeus_1_1_message.html" class="m-dox">Message</a>* msg) override <span class="m-label m-warning">virtual</span></span></span>
+              <span class="m-doc-wrap-bumper">void Rubeus::<wbr />RInputManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ac278fe0ca8274aad3c45856332d56857" class="m-doc-self">InputManager_ok</a>(</span><span class="m-doc-wrap"><a href="message__codes_8h.html#a69899082fd1cf504645a65a3cc00c9e5" class="m-doc">var</a> data = NULL)</span></span>
             </h3>
-            <p>Handles messages sent by <a href="struct_rubeus_1_1_message.html" class="m-dox">Message</a> system asynchronously.</p>
+            <p>Checks if input manager is ready for use.</p>
             <table class="m-table m-fullwidth m-flat">
               <thead>
                 <tr><th colspan="2">Parameters</th></tr>
               </thead>
               <tbody>
                 <tr>
-                  <td style="width: 1%">msg</td>
-                  <td>The message sent across.</td>
+                  <td style="width: 1%">data</td>
+                  <td>NULL</td>
                 </tr>
               </tbody>
             </table>
-<aside class="m-note m-danger"><h4>Warning</h4><p>Do not call manually</p></aside>
           </div></section>
         </section>
       </div>
     </div>
   </div>
 </article></main>
-<div class="m-dox-search" id="search">
+<div class="m-doc-search" id="search">
   <a href="#!" onclick="return hideSearch()"></a>
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-m-8 m-push-m-2">
-        <div class="m-dox-search-header m-text m-small">
+        <div class="m-doc-search-header m-text m-small">
           <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
           <div id="search-symbolcount">&hellip;</div>
         </div>
-        <div class="m-dox-search-content">
-          <input type="search" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" />
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
           <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
           <div id="search-help" class="m-text m-dim m-text-center">
-            Search for symbols, directories, files, pages or modules. You can omit any
-            prefix from the symbol or file path; adding a <code>:</code> or <code>/</code>
-            suffix lists all members of given symbol or directory. Navigate through the
-            list using <span class="m-label m-dim">&darr;</span> and
-            <span class="m-label m-dim">&uarr;</span>, press
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
             <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
           </div>
           <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
           <ul id="search-results"></ul>
@@ -413,13 +427,13 @@
     </div>
   </div>
 </div>
-<script src="search.js"></script>
-<script src="searchdata.js" async="async"></script>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
 <footer><nav>
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
-        <p>Rubeus. Created by <a href="https://doxygen.org/">Doxygen</a> 1.8.15 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+        <p>Rubeus. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.15 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
       </div>
     </div>
   </div>

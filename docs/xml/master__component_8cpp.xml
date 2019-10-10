@@ -4,127 +4,166 @@
     <compoundname>master_component.cpp</compoundname>
     <includes refid="master__component_8h" local="no">master_component.h</includes>
     <incdepgraph>
-      <node id="3743">
+      <node id="900">
+        <label>functional</label>
+      </node>
+      <node id="891">
         <label>IL/il.h</label>
       </node>
-      <node id="3744">
+      <node id="892">
         <label>IL/ilu.h</label>
       </node>
-      <node id="3747">
-        <label>message_object.h</label>
-        <link refid="message__object_8h"/>
-        <childnode refid="3735" relation="include">
-        </childnode>
-        <childnode refid="3748" relation="include">
-        </childnode>
-        <childnode refid="3749" relation="include">
-        </childnode>
-        <childnode refid="3750" relation="include">
-        </childnode>
-      </node>
-      <node id="3733">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/master_component.cpp</label>
-        <link refid="master__component_8cpp"/>
-        <childnode refid="3734" relation="include">
-        </childnode>
-      </node>
-      <node id="3735">
+      <node id="879">
         <label>string</label>
       </node>
-      <node id="3742">
+      <node id="890">
         <label>GL/glew.h</label>
       </node>
-      <node id="3745">
-        <label>message_system.h</label>
-        <link refid="message__system_8h"/>
-        <childnode refid="3746" relation="include">
-        </childnode>
-        <childnode refid="3747" relation="include">
-        </childnode>
-        <childnode refid="3751" relation="include">
-        </childnode>
+      <node id="886">
+        <label>map</label>
       </node>
-      <node id="3748">
-        <label>boost/any.hpp</label>
-      </node>
-      <node id="3750">
-        <label>message_codes.h</label>
-        <link refid="message__codes_8h"/>
-        <childnode refid="3739" relation="include">
-        </childnode>
-      </node>
-      <node id="3749">
-        <label>image_object.h</label>
-        <link refid="image__object_8h"/>
-        <childnode refid="3735" relation="include">
-        </childnode>
-        <childnode refid="3743" relation="include">
-        </childnode>
-      </node>
-      <node id="3751">
-        <label>message_bus.h</label>
-        <link refid="message__bus_8h"/>
-        <childnode refid="3746" relation="include">
-        </childnode>
-        <childnode refid="3747" relation="include">
-        </childnode>
-      </node>
-      <node id="3741">
-        <label>string.h</label>
-      </node>
-      <node id="3737">
-        <label>typeinfo</label>
-      </node>
-      <node id="3746">
-        <label>vector</label>
-      </node>
-      <node id="3740">
-        <label>iostream</label>
-      </node>
-      <node id="3734">
-        <label>master_component.h</label>
-        <link refid="master__component_8h"/>
-        <childnode refid="3735" relation="include">
-        </childnode>
-        <childnode refid="3736" relation="include">
-        </childnode>
-        <childnode refid="3737" relation="include">
-        </childnode>
-        <childnode refid="3738" relation="include">
-        </childnode>
-        <childnode refid="3739" relation="include">
-        </childnode>
-        <childnode refid="3745" relation="include">
-        </childnode>
-      </node>
-      <node id="3736">
-        <label>unordered_map</label>
-      </node>
-      <node id="3738">
-        <label>memory</label>
-      </node>
-      <node id="3739">
+      <node id="883">
         <label>logger_component.h</label>
         <link refid="logger__component_8h"/>
-        <childnode refid="3740" relation="include">
+        <childnode refid="884" relation="include">
         </childnode>
-        <childnode refid="3741" relation="include">
+        <childnode refid="885" relation="include">
         </childnode>
-        <childnode refid="3735" relation="include">
+        <childnode refid="879" relation="include">
         </childnode>
-        <childnode refid="3742" relation="include">
+        <childnode refid="886" relation="include">
         </childnode>
-        <childnode refid="3743" relation="include">
+        <childnode refid="887" relation="include">
         </childnode>
-        <childnode refid="3744" relation="include">
+        <childnode refid="888" relation="include">
         </childnode>
+        <childnode refid="889" relation="include">
+        </childnode>
+        <childnode refid="890" relation="include">
+        </childnode>
+        <childnode refid="891" relation="include">
+        </childnode>
+        <childnode refid="892" relation="include">
+        </childnode>
+        <childnode refid="893" relation="include">
+        </childnode>
+      </node>
+      <node id="887">
+        <label>fstream</label>
+      </node>
+      <node id="898">
+        <label>image_object.h</label>
+        <link refid="image__object_8h"/>
+        <childnode refid="879" relation="include">
+        </childnode>
+        <childnode refid="891" relation="include">
+        </childnode>
+      </node>
+      <node id="896">
+        <label>message_object.h</label>
+        <link refid="message__object_8h"/>
+        <childnode refid="879" relation="include">
+        </childnode>
+        <childnode refid="897" relation="include">
+        </childnode>
+        <childnode refid="898" relation="include">
+        </childnode>
+        <childnode refid="899" relation="include">
+        </childnode>
+      </node>
+      <node id="897">
+        <label>any</label>
+      </node>
+      <node id="878">
+        <label>master_component.h</label>
+        <link refid="master__component_8h"/>
+        <childnode refid="879" relation="include">
+        </childnode>
+        <childnode refid="880" relation="include">
+        </childnode>
+        <childnode refid="881" relation="include">
+        </childnode>
+        <childnode refid="882" relation="include">
+        </childnode>
+        <childnode refid="883" relation="include">
+        </childnode>
+        <childnode refid="894" relation="include">
+        </childnode>
+      </node>
+      <node id="885">
+        <label>string.h</label>
+      </node>
+      <node id="899">
+        <label>message_codes.h</label>
+        <link refid="message__codes_8h"/>
+        <childnode refid="883" relation="include">
+        </childnode>
+        <childnode refid="896" relation="include">
+        </childnode>
+        <childnode refid="886" relation="include">
+        </childnode>
+        <childnode refid="897" relation="include">
+        </childnode>
+        <childnode refid="900" relation="include">
+        </childnode>
+      </node>
+      <node id="881">
+        <label>typeinfo</label>
+      </node>
+      <node id="888">
+        <label>ctime</label>
+      </node>
+      <node id="895">
+        <label>vector</label>
+      </node>
+      <node id="877">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.cpp</label>
+        <link refid="master__component_8cpp"/>
+        <childnode refid="878" relation="include">
+        </childnode>
+      </node>
+      <node id="901">
+        <label>message_bus.h</label>
+        <link refid="message__bus_8h"/>
+        <childnode refid="895" relation="include">
+        </childnode>
+        <childnode refid="896" relation="include">
+        </childnode>
+      </node>
+      <node id="884">
+        <label>iostream</label>
+      </node>
+      <node id="880">
+        <label>unordered_map</label>
+      </node>
+      <node id="894">
+        <label>message_system.h</label>
+        <link refid="message__system_8h"/>
+        <childnode refid="895" relation="include">
+        </childnode>
+        <childnode refid="896" relation="include">
+        </childnode>
+        <childnode refid="901" relation="include">
+        </childnode>
+      </node>
+      <node id="893">
+        <label>game.h</label>
+        <link refid="game_8h"/>
+        <childnode refid="879" relation="include">
+        </childnode>
+      </node>
+      <node id="882">
+        <label>memory</label>
+      </node>
+      <node id="889">
+        <label>experimental/filesystem</label>
       </node>
     </incdepgraph>
     <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
     <briefdescription>
-<para>Implements the master class. </para>    </briefdescription>
+    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/master_component.cpp"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.cpp"/>
   </compounddef>
 </doxygen>

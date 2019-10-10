@@ -2,8 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="class_rubeus_1_1_graphic_components_1_1_r_layer" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>Rubeus::GraphicComponents::RLayer</compoundname>
-    <derivedcompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RSceneLayer</derivedcompoundref>
-    <derivedcompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_u_i_layer" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RUILayer</derivedcompoundref>
+    <derivedcompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_main_layer" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RMainLayer</derivedcompoundref>
     <includes refid="layer__object_8h" local="no">layer_object.h</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_layer_1a53f1797a973a90568b5ad2e5a5fd3e1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -17,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/layer_object.h" line="33" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/layer_object.h" line="33" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_layer_1a7ff5ad86d9ca6a2a3509689a19b68917" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -31,44 +30,42 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/layer_object.h" line="41" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/layer_object.h" line="41" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_layer_1a5412320eee522831c6d48c85030cc0bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_layer_1a1f6987a44bfeb2e561fd520146be4da0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_layer" kindref="compound">RLayer</ref> &amp;</type>
-        <definition>RLayer &amp; Rubeus::GraphicComponents::RLayer::addGroup</definition>
-        <argsstring>(RGroup &amp;group)=0</argsstring>
-        <name>addGroup</name>
-        <reimplementedby refid="class_rubeus_1_1_graphic_components_1_1_r_u_i_layer_1aba951fa894f61bba07fb8a0936f84926">addGroup</reimplementedby>
-        <reimplementedby refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1a427f6377ce52bd5fd30f8b71fe228126">addGroup</reimplementedby>
+        <definition>RLayer &amp; Rubeus::GraphicComponents::RLayer::addGameObject</definition>
+        <argsstring>(RGameObject *gameObject)=0</argsstring>
+        <name>addGameObject</name>
+        <reimplementedby refid="class_rubeus_1_1_graphic_components_1_1_r_main_layer_1ab0d62afce2079d92f02bd6045952da54">addGameObject</reimplementedby>
         <param>
-          <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_group" kindref="compound">RGroup</ref> &amp;</type>
-          <declname>group</declname>
+          <type><ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref> *</type>
+          <declname>gameObject</declname>
         </param>
         <briefdescription>
-<para>Adds a group object to this layer. </para>        </briefdescription>
+<para>Adds a game object to this layer. </para>        </briefdescription>
         <detaileddescription>
 <para><simplesect kind="warning"><para>No removal capability.</para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>group</parametername>
+<parametername>gameObject</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The group object to pass in.</para></parameterdescription>
+<para>The game object to pass in.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>Reference to this layer. Provides chaining group additions. E.g. layer.addgroup(g1).addgroup(g2); </para></simplesect>
+<simplesect kind="return"><para>Reference to this layer. Provides chaining group additions. E.g. layer.addGameObject(g1).addGameObject(g2); </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/layer_object.h" line="53" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/layer_object.h" line="53" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_layer_1a1d3a0a6fc1caf1739dceec82d7d1d90c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
         <definition>void Rubeus::GraphicComponents::RLayer::draw</definition>
         <argsstring>()=0</argsstring>
         <name>draw</name>
-        <reimplementedby refid="class_rubeus_1_1_graphic_components_1_1_r_u_i_layer_1a4f5faf43773b85b191239d330e099635">draw</reimplementedby>
-        <reimplementedby refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer_1aa4824826a3597540690fb67ba6f53d78">draw</reimplementedby>
+        <reimplementedby refid="class_rubeus_1_1_graphic_components_1_1_r_main_layer_1accb84a0268723b18fb6cd70caaaff2ea">draw</reimplementedby>
         <briefdescription>
 <para>Draw the complete layer. </para>        </briefdescription>
         <detaileddescription>
@@ -76,7 +73,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/layer_object.h" line="61" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/layer_object.h" line="61" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -85,26 +82,20 @@
 <para><simplesect kind="warning"><para>Contains no remove group feature </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="207">
-        <label>Rubeus::GraphicComponents::RUILayer</label>
-        <link refid="class_rubeus_1_1_graphic_components_1_1_r_u_i_layer"/>
-        <childnode refid="205" relation="public-inheritance">
+      <node id="251">
+        <label>Rubeus::GraphicComponents::RMainLayer</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_main_layer"/>
+        <childnode refid="250" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="206">
-        <label>Rubeus::GraphicComponents::RSceneLayer</label>
-        <link refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer"/>
-        <childnode refid="205" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="205">
+      <node id="250">
         <label>Rubeus::GraphicComponents::RLayer</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_layer"/>
       </node>
     </inheritancegraph>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/layer_object.h" line="25" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/layer_object.h" bodystart="24" bodyend="62"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/layer_object.h" line="25" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/layer_object.h" bodystart="24" bodyend="62"/>
     <listofallmembers>
-      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a5412320eee522831c6d48c85030cc0bd" prot="public" virt="pure-virtual"><scope>Rubeus::GraphicComponents::RLayer</scope><name>addGroup</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a1f6987a44bfeb2e561fd520146be4da0" prot="public" virt="pure-virtual"><scope>Rubeus::GraphicComponents::RLayer</scope><name>addGameObject</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a1d3a0a6fc1caf1739dceec82d7d1d90c" prot="public" virt="pure-virtual"><scope>Rubeus::GraphicComponents::RLayer</scope><name>draw</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a53f1797a973a90568b5ad2e5a5fd3e1b" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RLayer</scope><name>RLayer</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a7ff5ad86d9ca6a2a3509689a19b68917" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RLayer</scope><name>~RLayer</name></member>

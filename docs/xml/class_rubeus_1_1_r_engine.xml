@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="33" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" bodystart="33" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="33" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_engine_1a7b2906d84cde076a521acb60329b47ff" prot="private" static="no" mutable="no">
         <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" kindref="compound">GraphicComponents::RWindowComponent</ref> *</type>
@@ -31,13 +31,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="36" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" bodystart="36" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="36" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" bodystart="36" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_rubeus_1_1_r_engine_1a5edbd73e84ed929cf9da289ab6cbf7b0" prot="private" static="no" mutable="no">
-        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_layer_composition" kindref="compound">GraphicComponents::RLayerComposition</ref> *</type>
-        <definition>GraphicComponents::RLayerComposition* Rubeus::REngine::m_LayerComposition</definition>
+      <memberdef kind="variable" id="class_rubeus_1_1_r_engine_1ae58815dbc1f0baa284eb9ff91d27c23b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_game_scene" kindref="compound">GraphicComponents::RGameScene</ref> *</type>
+        <definition>GraphicComponents::RGameScene* Rubeus::REngine::m_GameScene</definition>
         <argsstring></argsstring>
-        <name>m_LayerComposition</name>
+        <name>m_GameScene</name>
         <initializer>= NULL</initializer>
         <briefdescription>
 <para>The ref to layers in use (for renderering) </para>        </briefdescription>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="39" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" bodystart="39" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="39" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_engine_1a3c84c5f50101595fb8daa40dc319de57" prot="private" static="no" mutable="no">
         <type><ref refid="class_rubeus_1_1_utility_components_1_1_r_timer" kindref="compound">UtilityComponents::RTimer</ref> *</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="42" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" bodystart="42" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="42" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_engine_1a188455276c9660a1129a64efb1a9fd6c" prot="private" static="no" mutable="no">
         <type><ref refid="class_rubeus_1_1_utility_components_1_1_r_loader_component" kindref="compound">UtilityComponents::RLoaderComponent</ref> *</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="45" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" bodystart="45" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="45" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_engine_1a9a85a193f8ede8ba2b60115a3040dd79" prot="private" static="no" mutable="no">
         <type><ref refid="class_rubeus_1_1_r_level" kindref="compound">RLevel</ref> *</type>
@@ -87,7 +87,35 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="48" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" bodystart="48" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="48" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_r_engine_1a994a9ef88e6d3c8820046a7e2f7d1a34" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_r_message_system" kindref="compound">RMessageSystem</ref> *</type>
+        <definition>RMessageSystem* Rubeus::REngine::m_MessageSystem</definition>
+        <argsstring></argsstring>
+        <name>m_MessageSystem</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+<para>The ref to message system. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="51" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_r_engine_1a892280cc06ed8fedac61164a104d0ccc" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_r_mailing_list" kindref="compound">RMailingList</ref> *</type>
+        <definition>RMailingList* Rubeus::REngine::m_mailbox</definition>
+        <argsstring></argsstring>
+        <name>m_mailbox</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="52" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -102,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="50" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" bodystart="50" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="54" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" bodystart="54" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -118,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="55" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" bodystart="55" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="59" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" bodystart="59" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -134,7 +162,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="64" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/engine.cpp" bodystart="20" bodyend="39"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="68" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.cpp" bodystart="19" bodyend="36"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_engine_1ae612f395826983550d3dd7f83ad8c931" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -148,7 +176,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="73" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/engine.cpp" bodystart="41" bodyend="48"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="77" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.cpp" bodystart="38" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_engine_1a0fac1c188393ed4504edec0576e7f33b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -173,7 +201,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="82" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/engine.cpp" bodystart="50" bodyend="98"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="86" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.cpp" bodystart="47" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_engine_1ac7fc60525b690b592fb87b64102788fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -186,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="89" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/engine.cpp" bodystart="100" bodyend="146"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="93" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.cpp" bodystart="96" bodyend="162"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_engine_1ad0c92a36a8be9e070a4b4dbcac82e14d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -199,7 +227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="96" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/engine.cpp" bodystart="148" bodyend="152"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="100" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.cpp" bodystart="164" bodyend="167"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_engine_1a06ef27f79fde13dfb6932cb723007912" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -212,7 +240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="103" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/engine.cpp" bodystart="154" bodyend="157"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="107" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.cpp" bodystart="169" bodyend="172"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_engine_1ab82dd59fb74f5fc9a29032165cb94519" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_rubeus_1_1_utility_components_1_1_r_loader_component" kindref="compound">UtilityComponents::RLoaderComponent</ref> *</type>
@@ -227,7 +255,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="113" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" bodystart="113" bodyend="113"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="117" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" bodystart="117" bodyend="117"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_engine_1af233294e50e57419763d0af502b5bd45" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_rubeus_1_1_r_level" kindref="compound">RLevel</ref> *</type>
@@ -241,7 +269,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="122" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" bodystart="122" bodyend="122"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="126" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" bodystart="126" bodyend="126"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_engine_1a6c008a9a9a4b422740f8e948b90aca8d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" kindref="compound">GraphicComponents::RWindowComponent</ref> *</type>
@@ -255,7 +283,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="131" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" bodystart="131" bodyend="131"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="135" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" bodystart="135" bodyend="135"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_engine_1a2904459651c39133c79900971a624e6a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony" kindref="compound">AudioComponents::RSymphony</ref> *</type>
@@ -269,7 +297,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="140" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" bodystart="140" bodyend="140"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="144" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" bodystart="144" bodyend="144"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_engine_1ac06499662aa41473c66966346afef7ee" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_rubeus_1_1_r_input_manager" kindref="compound">RInputManager</ref> *</type>
@@ -284,7 +312,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="150" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" bodystart="150" bodyend="150"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="154" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" bodystart="154" bodyend="154"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_engine_1a917653e80eaaeb9b7f38d55a0e62ee65" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_rubeus_1_1_r_world" kindref="compound">RWorld</ref> *</type>
@@ -299,34 +327,58 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="160" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" bodystart="160" bodyend="160"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="164" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" bodystart="164" bodyend="164"/>
       </memberdef>
-      <memberdef kind="function" id="class_rubeus_1_1_r_engine_1a6e8d3d3fa2558e64a2ed2f3aea06f59b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="class_rubeus_1_1_r_engine_1adf74b8ed65fa367e349f3fd7f564ad35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Rubeus::REngine::onMessage</definition>
-        <argsstring>(Message *msg) override</argsstring>
-        <name>onMessage</name>
-        <reimplements refid="class_rubeus_1_1_r_master_component_1a129a5b04db723423b40cfd4780adcd35">onMessage</reimplements>
+        <definition>void Rubeus::REngine::load_level</definition>
+        <argsstring>(var data)</argsstring>
+        <name>load_level</name>
         <param>
-          <type><ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref> *</type>
-          <declname>msg</declname>
+          <type><ref refid="message__codes_8h_1a69899082fd1cf504645a65a3cc00c9e5" kindref="member">var</ref></type>
+          <declname>data</declname>
         </param>
         <briefdescription>
-<para><ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref> handler of the engine. </para>        </briefdescription>
+<para>Loads the specified level name. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="warning"><para>Handles engine&apos;s asynchronous calls</para></simplesect>
-<parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>msg</parametername>
+<parametername>data</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The message object sent across. </para></parameterdescription>
+<para>Level name </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="170" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/engine.cpp" bodystart="159" bodyend="198"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="173" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.cpp" bodystart="191" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_engine_1a086d5466fe903239f9d4152a55d6d0c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::REngine::engine_ok</definition>
+        <argsstring>(var data=NULL)</argsstring>
+        <name>engine_ok</name>
+        <param>
+          <type><ref refid="message__codes_8h_1a69899082fd1cf504645a65a3cc00c9e5" kindref="member">var</ref></type>
+          <declname>data</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Checks if engine is ready for use. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NULL </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="182" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.cpp" bodystart="174" bodyend="189"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -334,47 +386,55 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="136">
+      <node id="179">
         <label>Rubeus::REngine</label>
         <link refid="class_rubeus_1_1_r_engine"/>
-        <childnode refid="137" relation="public-inheritance">
+        <childnode refid="180" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="137">
+      <node id="180">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="138">
+      <node id="183">
+        <label>Rubeus::RMailingList</label>
+        <link refid="class_rubeus_1_1_r_mailing_list"/>
+      </node>
+      <node id="181">
         <label>Rubeus::REngine</label>
         <link refid="class_rubeus_1_1_r_engine"/>
-        <childnode refid="139" relation="public-inheritance">
+        <childnode refid="182" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="141">
+      <node id="185">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="140">
+      <node id="184">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="141" relation="usage">
+        <childnode refid="185" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="139">
+      <node id="182">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="140" relation="usage">
+        <childnode refid="183" relation="usage">
+          <edgelabel>m_mailbox</edgelabel>
+        </childnode>
+        <childnode refid="184" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="29" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" bodystart="28" bodyend="171"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" line="29" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h" bodystart="28" bodyend="183"/>
     <listofallmembers>
       <member refid="class_rubeus_1_1_r_master_component_1aa8456741bb2402650fc8726cd6768803" prot="public" virt="non-virtual"><scope>Rubeus::REngine</scope><name>componentsInitialised</name></member>
       <member refid="class_rubeus_1_1_r_engine_1a06ef27f79fde13dfb6932cb723007912" prot="public" virt="non-virtual"><scope>Rubeus::REngine</scope><name>end</name></member>
+      <member refid="class_rubeus_1_1_r_engine_1a086d5466fe903239f9d4152a55d6d0c1" prot="public" virt="non-virtual"><scope>Rubeus::REngine</scope><name>engine_ok</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1ada4b85021d96ac2c2153e613d5f14097" prot="public" virt="non-virtual"><scope>Rubeus::REngine</scope><name>getComponentID</name></member>
       <member refid="class_rubeus_1_1_r_engine_1af233294e50e57419763d0af502b5bd45" prot="public" virt="non-virtual"><scope>Rubeus::REngine</scope><name>getCurrentLevel</name></member>
       <member refid="class_rubeus_1_1_r_engine_1a2904459651c39133c79900971a624e6a" prot="public" virt="non-virtual"><scope>Rubeus::REngine</scope><name>getCurrentLevelAudioManager</name></member>
@@ -385,16 +445,17 @@
       <member refid="class_rubeus_1_1_r_engine_1a917653e80eaaeb9b7f38d55a0e62ee65" prot="public" virt="non-virtual"><scope>Rubeus::REngine</scope><name>getWorld</name></member>
       <member refid="class_rubeus_1_1_r_engine_1ad0c92a36a8be9e070a4b4dbcac82e14d" prot="public" virt="non-virtual"><scope>Rubeus::REngine</scope><name>killAliveLevel</name></member>
       <member refid="class_rubeus_1_1_r_engine_1a0fac1c188393ed4504edec0576e7f33b" prot="public" virt="non-virtual"><scope>Rubeus::REngine</scope><name>load</name></member>
+      <member refid="class_rubeus_1_1_r_engine_1adf74b8ed65fa367e349f3fd7f564ad35" prot="public" virt="non-virtual"><scope>Rubeus::REngine</scope><name>load_level</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1a838bceba7935bb3b11a5b69def0f0fc0" prot="protected" virt="non-virtual"><scope>Rubeus::REngine</scope><name>m_ComponentID</name></member>
       <member refid="class_rubeus_1_1_r_engine_1a9a85a193f8ede8ba2b60115a3040dd79" prot="private" virt="non-virtual"><scope>Rubeus::REngine</scope><name>m_CurrentLevel</name></member>
-      <member refid="class_rubeus_1_1_r_engine_1a5edbd73e84ed929cf9da289ab6cbf7b0" prot="private" virt="non-virtual"><scope>Rubeus::REngine</scope><name>m_LayerComposition</name></member>
+      <member refid="class_rubeus_1_1_r_engine_1ae58815dbc1f0baa284eb9ff91d27c23b" prot="private" virt="non-virtual"><scope>Rubeus::REngine</scope><name>m_GameScene</name></member>
       <member refid="class_rubeus_1_1_r_engine_1a188455276c9660a1129a64efb1a9fd6c" prot="private" virt="non-virtual"><scope>Rubeus::REngine</scope><name>m_Loader</name></member>
-      <member refid="class_rubeus_1_1_r_master_component_1aedb604c4ddfb8d2ba72ff493a74b7025" prot="public" virt="non-virtual"><scope>Rubeus::REngine</scope><name>m_MessageSystem</name></member>
+      <member refid="class_rubeus_1_1_r_engine_1a892280cc06ed8fedac61164a104d0ccc" prot="private" virt="non-virtual"><scope>Rubeus::REngine</scope><name>m_mailbox</name></member>
+      <member refid="class_rubeus_1_1_r_engine_1a994a9ef88e6d3c8820046a7e2f7d1a34" prot="private" virt="non-virtual"><scope>Rubeus::REngine</scope><name>m_MessageSystem</name></member>
       <member refid="class_rubeus_1_1_r_engine_1ac9798b56ae13af014e7d974faf9c05b2" prot="private" virt="non-virtual"><scope>Rubeus::REngine</scope><name>m_PhysicsEngine</name></member>
       <member refid="class_rubeus_1_1_r_engine_1a37d3668492df805a64d806169e04cc86" prot="public" virt="non-virtual"><scope>Rubeus::REngine</scope><name>m_StartupLevelName</name></member>
       <member refid="class_rubeus_1_1_r_engine_1a3c84c5f50101595fb8daa40dc319de57" prot="private" virt="non-virtual"><scope>Rubeus::REngine</scope><name>m_Timer</name></member>
       <member refid="class_rubeus_1_1_r_engine_1a7b2906d84cde076a521acb60329b47ff" prot="private" virt="non-virtual"><scope>Rubeus::REngine</scope><name>m_Window</name></member>
-      <member refid="class_rubeus_1_1_r_engine_1a6e8d3d3fa2558e64a2ed2f3aea06f59b" prot="public" virt="virtual"><scope>Rubeus::REngine</scope><name>onMessage</name></member>
       <member refid="class_rubeus_1_1_r_engine_1aa3a19f74767ace1164f7148303874ad1" prot="public" virt="non-virtual"><scope>Rubeus::REngine</scope><name>REngine</name></member>
       <member refid="class_rubeus_1_1_r_engine_1ae263a47872912f29007306dff3a03ac5" prot="private" virt="non-virtual"><scope>Rubeus::REngine</scope><name>RLevel</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1aecd982f5c7361dbb23bcc8ac5ec6481c" prot="public" virt="non-virtual"><scope>Rubeus::REngine</scope><name>RMasterComponent</name></member>

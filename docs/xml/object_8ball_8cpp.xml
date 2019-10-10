@@ -4,9 +4,6 @@
     <compoundname>object.ball.cpp</compoundname>
     <includes refid="object_8ball_8h" local="yes">object.ball.h</includes>
     <incdepgraph>
-      <node id="20">
-        <label>../RubeusCore.h</label>
-      </node>
       <node id="19">
         <label>object.ball.h</label>
         <link refid="object_8ball_8h"/>
@@ -18,6 +15,9 @@
         <link refid="object_8ball_8cpp"/>
         <childnode refid="19" relation="include">
         </childnode>
+      </node>
+      <node id="20">
+        <label>../../RubeusCore.h</label>
       </node>
     </incdepgraph>
     <briefdescription>

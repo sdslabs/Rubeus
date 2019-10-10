@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_rubeus_1_1_r_mailing_list" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::RMailingList</compoundname>
+    <includes refid="message__codes_8h" local="no">message_codes.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_r_mailing_list_1a26c2f63fa8afe1fb0e78bc1fe6e6968f" prot="public" static="no" mutable="no">
+        <type>std::map&lt; std::string, <ref refid="struct_rubeus_1_1_signal_signature" kindref="compound">SignalSignature</ref> * &gt;</type>
+        <definition>std::map&lt;std::string, SignalSignature*&gt; Rubeus::RMailingList::CommandsMap</definition>
+        <argsstring></argsstring>
+        <name>CommandsMap</name>
+        <briefdescription>
+<para>Contains all the message commands. </para>        </briefdescription>
+        <detaileddescription>
+<para>CommandsMap </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.h" line="59" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_r_mailing_list_1aa704c30254046c4b18a9229fbe83e02a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::RMailingList::RMailingList</definition>
+        <argsstring>()</argsstring>
+        <name>RMailingList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.h" line="51" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_mailing_list_1a61fffdcb1f3cc7fa21f5dba98409046a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::RMailingList::~RMailingList</definition>
+        <argsstring>()</argsstring>
+        <name>~RMailingList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.h" line="52" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.cpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_mailing_list_1add3366a5d6a326629b58f1d52f59fcfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::RMailingList::sendSignal</definition>
+        <argsstring>(std::string command, var data=NULL)</argsstring>
+        <name>sendSignal</name>
+        <param>
+          <type>std::string</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type><ref refid="message__codes_8h_1a69899082fd1cf504645a65a3cc00c9e5" kindref="member">var</ref></type>
+          <declname>data</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Runs a command. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of message command. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data that need to pass to corresponding function. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.h" line="69" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.cpp" bodystart="26" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_mailing_list_1acf992abceebefd27b9feb1bb3f451e5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::RMailingList::addEngineCommands</definition>
+        <argsstring>()</argsstring>
+        <name>addEngineCommands</name>
+        <briefdescription>
+<para>Adds engine commands to CommandsMap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.h" line="76" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.cpp" bodystart="41" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class that handles all the message commands. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.h" line="48" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.h" bodystart="47" bodyend="77"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_r_mailing_list_1acf992abceebefd27b9feb1bb3f451e5b" prot="public" virt="non-virtual"><scope>Rubeus::RMailingList</scope><name>addEngineCommands</name></member>
+      <member refid="class_rubeus_1_1_r_mailing_list_1a26c2f63fa8afe1fb0e78bc1fe6e6968f" prot="public" virt="non-virtual"><scope>Rubeus::RMailingList</scope><name>CommandsMap</name></member>
+      <member refid="class_rubeus_1_1_r_mailing_list_1aa704c30254046c4b18a9229fbe83e02a" prot="public" virt="non-virtual"><scope>Rubeus::RMailingList</scope><name>RMailingList</name></member>
+      <member refid="class_rubeus_1_1_r_mailing_list_1add3366a5d6a326629b58f1d52f59fcfe" prot="public" virt="non-virtual"><scope>Rubeus::RMailingList</scope><name>sendSignal</name></member>
+      <member refid="class_rubeus_1_1_r_mailing_list_1a61fffdcb1f3cc7fa21f5dba98409046a" prot="public" virt="non-virtual"><scope>Rubeus::RMailingList</scope><name>~RMailingList</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

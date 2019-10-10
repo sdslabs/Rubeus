@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_lplay__level" kind="class" language="C++" prot="public">
+    <compoundname>Lplay_level</compoundname>
+    <basecompoundref refid="class_rubeus_1_1_r_level" prot="public" virt="non-virtual">Rubeus::RLevel</basecompoundref>
+    <includes refid="level_8play__level_8h" local="no">level.play_level.h</includes>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="77">
+        <label>Lplay_level</label>
+        <link refid="class_lplay__level"/>
+        <childnode refid="78" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>Rubeus::RLevel</label>
+        <link refid="class_rubeus_1_1_r_level"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="81">
+        <label>Rubeus::AudioComponents::RSymphony</label>
+        <link refid="class_rubeus_1_1_audio_components_1_1_r_symphony"/>
+        <childnode refid="82" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>Rubeus::RInputManager</label>
+        <link refid="class_rubeus_1_1_r_input_manager"/>
+        <childnode refid="82" relation="public-inheritance">
+        </childnode>
+        <childnode refid="87" relation="usage">
+          <edgelabel>MouseScroll</edgelabel>
+          <edgelabel>MousePosition</edgelabel>
+        </childnode>
+      </node>
+      <node id="83">
+        <label>Rubeus::RMailingList</label>
+        <link refid="class_rubeus_1_1_r_mailing_list"/>
+      </node>
+      <node id="88">
+        <label>Rubeus::RWorld</label>
+        <link refid="class_rubeus_1_1_r_world"/>
+      </node>
+      <node id="87">
+        <label>RML::Vector2D</label>
+        <link refid="struct_r_m_l_1_1_vector2_d"/>
+      </node>
+      <node id="85">
+        <label>Rubeus::RMessageBus</label>
+        <link refid="class_rubeus_1_1_r_message_bus"/>
+      </node>
+      <node id="84">
+        <label>Rubeus::RMessageSystem</label>
+        <link refid="class_rubeus_1_1_r_message_system"/>
+        <childnode refid="85" relation="usage">
+          <edgelabel>m_MessageBus</edgelabel>
+        </childnode>
+      </node>
+      <node id="82">
+        <label>Rubeus::RMasterComponent</label>
+        <link refid="class_rubeus_1_1_r_master_component"/>
+        <childnode refid="83" relation="usage">
+          <edgelabel>m_mailbox</edgelabel>
+        </childnode>
+        <childnode refid="84" relation="usage">
+          <edgelabel>m_MessageSystem</edgelabel>
+        </childnode>
+      </node>
+      <node id="79">
+        <label>Lplay_level</label>
+        <link refid="class_lplay__level"/>
+        <childnode refid="80" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>Rubeus::RLevel</label>
+        <link refid="class_rubeus_1_1_r_level"/>
+        <childnode refid="81" relation="usage">
+          <edgelabel>m_AudioManager</edgelabel>
+        </childnode>
+        <childnode refid="86" relation="usage">
+          <edgelabel>m_InputManager</edgelabel>
+        </childnode>
+        <childnode refid="88" relation="usage">
+          <edgelabel>m_World</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/engine_files/level.play_level.h" line="6" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/engine_files/level.play_level.h" bodystart="5" bodyend="8"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_r_level_1a2c0545a3e9a6c78f586dc9118ae17b9f" prot="public" virt="non-virtual"><scope>Lplay_level</scope><name>addGameObject</name></member>
+      <member refid="class_rubeus_1_1_r_level_1accfb4374e3deeffc74d45d8d03d3556b" prot="public" virt="virtual"><scope>Lplay_level</scope><name>begin</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a83010fe62326dc0767a7a041aeff411e" prot="public" virt="non-virtual"><scope>Lplay_level</scope><name>getInputManager</name></member>
+      <member refid="class_rubeus_1_1_r_level_1aa664e7c62a62134aeff17d50428a543d" prot="public" virt="non-virtual"><scope>Lplay_level</scope><name>getName</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a8d08d9e54f8732f6043c02593d9279c8" prot="public" virt="non-virtual"><scope>Lplay_level</scope><name>getSoundManager</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a488936e1ca061f8deb49d8ed06cd9373" prot="public" virt="non-virtual"><scope>Lplay_level</scope><name>getWorld</name></member>
+      <member refid="class_rubeus_1_1_r_level_1aac94ae19fc45918278ba69d126c74cc3" prot="public" virt="non-virtual"><scope>Lplay_level</scope><name>InstantiatedLevels</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a262dcbba989ac479eb7c6b66d7ce220a" prot="protected" virt="non-virtual"><scope>Lplay_level</scope><name>m_AudioManager</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a332056e3e49dbbde32a3153d46c628a9" prot="protected" virt="non-virtual"><scope>Lplay_level</scope><name>m_InputManager</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a62b53a50f4afadf234f3d67e01488cea" prot="protected" virt="non-virtual"><scope>Lplay_level</scope><name>m_Name</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a2523b175190f46fac69ba69e79ec2c2e" prot="protected" virt="non-virtual"><scope>Lplay_level</scope><name>m_World</name></member>
+      <member refid="class_rubeus_1_1_r_level_1a1a8159f166bbe90cb22425136609fb5e" prot="public" virt="virtual"><scope>Lplay_level</scope><name>onEnd</name></member>
+      <member refid="class_rubeus_1_1_r_level_1aa6315e5321bcfca5282201a6d64e7d15" prot="public" virt="non-virtual"><scope>Lplay_level</scope><name>RLevel</name></member>
+      <member refid="class_rubeus_1_1_r_level_1aa5dd147b213fb9d63a31a4aa4ba9a1e2" prot="public" virt="virtual"><scope>Lplay_level</scope><name>~RLevel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

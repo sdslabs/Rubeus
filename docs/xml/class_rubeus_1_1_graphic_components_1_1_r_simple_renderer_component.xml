@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/simple_renderer_component.h" line="28" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/simple_renderer_component.h" bodystart="28" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/simple_renderer_component.h" line="28" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/simple_renderer_component.h" bodystart="28" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -44,7 +44,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/simple_renderer_component.h" line="39" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/simple_renderer_component.cpp" bodystart="13" bodyend="17"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/simple_renderer_component.h" line="39" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/simple_renderer_component.cpp" bodystart="13" bodyend="17"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_simple_renderer_component_1a12cb23fa1c2aea044b239f85767c372c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/simple_renderer_component.h" line="46" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/simple_renderer_component.cpp" bodystart="19" bodyend="35"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/simple_renderer_component.h" line="46" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/simple_renderer_component.cpp" bodystart="19" bodyend="35"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -66,65 +66,72 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="279">
+      <node id="328">
         <label>Rubeus::GraphicComponents::RRendererComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component"/>
-        <childnode refid="280" relation="public-inheritance">
+        <childnode refid="329" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="278">
+      <node id="327">
         <label>Rubeus::GraphicComponents::RSimpleRendererComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_simple_renderer_component"/>
-        <childnode refid="279" relation="public-inheritance">
+        <childnode refid="328" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="280">
+      <node id="329">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="282">
+      <node id="331">
         <label>Rubeus::GraphicComponents::RRendererComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component"/>
-        <childnode refid="283" relation="public-inheritance">
+        <childnode refid="332" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="285">
+      <node id="333">
+        <label>Rubeus::RMailingList</label>
+        <link refid="class_rubeus_1_1_r_mailing_list"/>
+      </node>
+      <node id="335">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="284">
+      <node id="334">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="285" relation="usage">
+        <childnode refid="335" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="281">
+      <node id="330">
         <label>Rubeus::GraphicComponents::RSimpleRendererComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_simple_renderer_component"/>
-        <childnode refid="282" relation="public-inheritance">
+        <childnode refid="331" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="283">
+      <node id="332">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="284" relation="usage">
+        <childnode refid="333" relation="usage">
+          <edgelabel>m_mailbox</edgelabel>
+        </childnode>
+        <childnode refid="334" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/simple_renderer_component.h" line="25" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/simple_renderer_component.h" bodystart="24" bodyend="47"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/simple_renderer_component.h" line="25" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/simple_renderer_component.h" bodystart="24" bodyend="47"/>
     <listofallmembers>
       <member refid="class_rubeus_1_1_r_master_component_1aa8456741bb2402650fc8726cd6768803" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSimpleRendererComponent</scope><name>componentsInitialised</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_simple_renderer_component_1a12cb23fa1c2aea044b239f85767c372c" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RSimpleRendererComponent</scope><name>flush</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1ada4b85021d96ac2c2153e613d5f14097" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSimpleRendererComponent</scope><name>getComponentID</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1ad3c9003c4bc64661ed9ae5961c8cf3fa" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSimpleRendererComponent</scope><name>getName</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1a838bceba7935bb3b11a5b69def0f0fc0" prot="protected" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSimpleRendererComponent</scope><name>m_ComponentID</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1adcb2a179fd09797acff84882cbfdea15" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSimpleRendererComponent</scope><name>m_mailbox</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1aedb604c4ddfb8d2ba72ff493a74b7025" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSimpleRendererComponent</scope><name>m_MessageSystem</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_simple_renderer_component_1a4a4e81d6867018fafa97e6e1d632f4df" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RSimpleRendererComponent</scope><name>m_RenderQueue</name></member>
-      <member refid="class_rubeus_1_1_r_master_component_1a129a5b04db723423b40cfd4780adcd35" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RSimpleRendererComponent</scope><name>onMessage</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component_1aba9f2cd2a076a88e9efe46d477a7ce4d" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RSimpleRendererComponent</scope><name>pop</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component_1a9ec9a422aeb7e69635a36aaef668141b" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RSimpleRendererComponent</scope><name>push</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component_1a731ea8a502134a13c059fa9ef1b9fc87" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RSimpleRendererComponent</scope><name>pushOverride</name></member>

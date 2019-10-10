@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_rubeus_1_1_graphic_components_1_1_r_main_layer" kind="class" language="C++" prot="public">
+    <compoundname>Rubeus::GraphicComponents::RMainLayer</compoundname>
+    <basecompoundref refid="class_rubeus_1_1_graphic_components_1_1_r_layer" prot="public" virt="non-virtual">Rubeus::GraphicComponents::RLayer</basecompoundref>
+    <includes refid="main__layer_8h" local="no">main_layer.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_main_layer_1a7f9bec1e5b1f32b0bd04fadb4bd358f5" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component" kindref="compound">RGuerrillaRendererComponent</ref> *</type>
+        <definition>RGuerrillaRendererComponent* Rubeus::GraphicComponents::RMainLayer::m_Renderer</definition>
+        <argsstring></argsstring>
+        <name>m_Renderer</name>
+        <briefdescription>
+<para>The renderer alloted to this layer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.h" line="30" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_main_layer_1a53c0c53947bba4163c6fdf78defa203c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref> * &gt;</type>
+        <definition>std::vector&lt;RGameObject *&gt; Rubeus::GraphicComponents::RMainLayer::m_GameObjects</definition>
+        <argsstring></argsstring>
+        <name>m_GameObjects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.h" line="32" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_main_layer_1a62462827b3a98b0d618610a89968882a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component" kindref="compound">RShaderComponent</ref> &amp;</type>
+        <definition>RShaderComponent&amp; Rubeus::GraphicComponents::RMainLayer::m_Shader</definition>
+        <argsstring></argsstring>
+        <name>m_Shader</name>
+        <briefdescription>
+<para>The shader for this layer to use. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.h" line="35" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_main_layer_1a012190a3907698f02762042704d3dfdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RMainLayer::RMainLayer</definition>
+        <argsstring>(RShaderComponent &amp;shader)</argsstring>
+        <name>RMainLayer</name>
+        <param>
+          <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component" kindref="compound">RShaderComponent</ref> &amp;</type>
+          <declname>shader</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. Initialises the layer&apos;s shader. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Do not pass in dereferenced pointers</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>shader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The shader to be alloted to this layer. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.h" line="46" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.cpp" bodystart="15" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_main_layer_1ae8f31337f61fc640cee64d8128f3fd05" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>Rubeus::GraphicComponents::RMainLayer::~RMainLayer</definition>
+        <argsstring>()</argsstring>
+        <name>~RMainLayer</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.h" line="53" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.cpp" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_main_layer_1ab0d62afce2079d92f02bd6045952da54" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_rubeus_1_1_graphic_components_1_1_r_layer" kindref="compound">RLayer</ref> &amp;</type>
+        <definition>RLayer &amp; Rubeus::GraphicComponents::RMainLayer::addGameObject</definition>
+        <argsstring>(RGameObject *gameObject) override</argsstring>
+        <name>addGameObject</name>
+        <reimplements refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a1f6987a44bfeb2e561fd520146be4da0">addGameObject</reimplements>
+        <param>
+          <type><ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref> *</type>
+          <declname>gameObject</declname>
+        </param>
+        <briefdescription>
+<para>Adds a game object to this layer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>No removal capability.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gameObject</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The game object to pass in.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this layer. Provides chaining group additions. E.g. layer.addGameObject(g1).addGameObject(g2); </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.h" line="55" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.cpp" bodystart="28" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_main_layer_1accb84a0268723b18fb6cd70caaaff2ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RMainLayer::draw</definition>
+        <argsstring>() override</argsstring>
+        <name>draw</name>
+        <reimplements refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a1d3a0a6fc1caf1739dceec82d7d1d90c">draw</reimplements>
+        <briefdescription>
+<para>Draws the layer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Call only once per frame </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.h" line="63" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.cpp" bodystart="35" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Rendering Layer used for drawing UI elements to the screen. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="275">
+        <label>Rubeus::GraphicComponents::RMainLayer</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_main_layer"/>
+        <childnode refid="276" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="276">
+        <label>Rubeus::GraphicComponents::RLayer</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_layer"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="277">
+        <label>Rubeus::GraphicComponents::RMainLayer</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_main_layer"/>
+        <childnode refid="278" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="278">
+        <label>Rubeus::GraphicComponents::RLayer</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_layer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.h" line="27" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.h" bodystart="26" bodyend="66"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_main_layer_1ab0d62afce2079d92f02bd6045952da54" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RMainLayer</scope><name>addGameObject</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_main_layer_1accb84a0268723b18fb6cd70caaaff2ea" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RMainLayer</scope><name>draw</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_main_layer_1a53c0c53947bba4163c6fdf78defa203c" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RMainLayer</scope><name>m_GameObjects</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_main_layer_1a7f9bec1e5b1f32b0bd04fadb4bd358f5" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RMainLayer</scope><name>m_Renderer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_main_layer_1a62462827b3a98b0d618610a89968882a" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RMainLayer</scope><name>m_Shader</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a53f1797a973a90568b5ad2e5a5fd3e1b" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RMainLayer</scope><name>RLayer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_main_layer_1a012190a3907698f02762042704d3dfdb" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RMainLayer</scope><name>RMainLayer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_layer_1a7ff5ad86d9ca6a2a3509689a19b68917" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RMainLayer</scope><name>~RLayer</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_main_layer_1ae8f31337f61fc640cee64d8128f3fd05" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RMainLayer</scope><name>~RMainLayer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

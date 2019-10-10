@@ -2,7 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="class_rubeus_1_1_r_level" kind="class" language="C++" prot="public">
     <compoundname>Rubeus::RLevel</compoundname>
-    <derivedcompoundref refid="classplay__level" prot="public" virt="non-virtual">play_level</derivedcompoundref>
+    <derivedcompoundref refid="class_lplay__level" prot="public" virt="non-virtual">Lplay_level</derivedcompoundref>
     <includes refid="level_8h" local="no">level.h</includes>
       <sectiondef kind="protected-attrib">
       <memberdef kind="variable" id="class_rubeus_1_1_r_level_1a2523b175190f46fac69ba69e79ec2c2e" prot="protected" static="no" mutable="no">
@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" line="26" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" bodystart="26" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" line="26" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_level_1a332056e3e49dbbde32a3153d46c628a9" prot="protected" static="no" mutable="no">
         <type><ref refid="class_rubeus_1_1_r_input_manager" kindref="compound">RInputManager</ref> *</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" line="29" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" bodystart="29" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" line="29" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_level_1a262dcbba989ac479eb7c6b66d7ce220a" prot="protected" static="no" mutable="no">
         <type><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony" kindref="compound">AudioComponents::RSymphony</ref> *</type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" line="32" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" bodystart="32" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" line="32" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_level_1a62b53a50f4afadf234f3d67e01488cea" prot="protected" static="no" mutable="no">
         <type>std::string</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" line="35" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" bodystart="35" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" line="35" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" line="37" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" line="37" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-attrib">
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" line="42" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" bodystart="42" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" line="42" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -112,9 +112,9 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" line="51" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/level.cpp" bodystart="15" bodyend="23"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" line="51" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.cpp" bodystart="16" bodyend="24"/>
       </memberdef>
-      <memberdef kind="function" id="class_rubeus_1_1_r_level_1aa5dd147b213fb9d63a31a4aa4ba9a1e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_rubeus_1_1_r_level_1aa5dd147b213fb9d63a31a4aa4ba9a1e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
         <definition>Rubeus::RLevel::~RLevel</definition>
         <argsstring>()</argsstring>
@@ -125,48 +125,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" line="58" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/level.cpp" bodystart="25" bodyend="32"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" line="58" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.cpp" bodystart="26" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_level_1accfb4374e3deeffc74d45d8d03d3556b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void Rubeus::RLevel::begin</definition>
         <argsstring>()</argsstring>
         <name>begin</name>
-        <reimplementedby refid="classplay__level_1a24e80f7d1618ec1b968ee1ba023a9fdf">begin</reimplementedby>
         <briefdescription>
 <para>User overridable on startup script for this level. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" line="65" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/level.cpp" bodystart="34" bodyend="36"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" line="65" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.cpp" bodystart="35" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_level_1a1a8159f166bbe90cb22425136609fb5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>void Rubeus::RLevel::onEnd</definition>
         <argsstring>()</argsstring>
         <name>onEnd</name>
-        <reimplementedby refid="classplay__level_1a3f32749e94c27cdecbcee71394c8e8ce">onEnd</reimplementedby>
         <briefdescription>
 <para>User overridable script called on end of this level. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" line="72" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/level.cpp" bodystart="46" bodyend="48"/>
-      </memberdef>
-      <memberdef kind="function" id="class_rubeus_1_1_r_level_1a4776b19d0f8313a3d785910e7b39e502" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Rubeus::RLevel::killAliveObjects</definition>
-        <argsstring>()</argsstring>
-        <name>killAliveObjects</name>
-        <briefdescription>
-<para>Delete active objects. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" line="79" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/level.cpp" bodystart="38" bodyend="44"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" line="72" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.cpp" bodystart="39" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_level_1a2c0545a3e9a6c78f586dc9118ae17b9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -192,7 +177,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" line="89" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/level.cpp" bodystart="50" bodyend="53"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" line="82" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.cpp" bodystart="43" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_level_1aa664e7c62a62134aeff17d50428a543d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
@@ -206,7 +191,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" line="98" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" bodystart="98" bodyend="98"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" line="91" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" bodystart="91" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_level_1a488936e1ca061f8deb49d8ed06cd9373" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_rubeus_1_1_r_world" kindref="compound">RWorld</ref> *</type>
@@ -220,7 +205,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" line="107" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" bodystart="107" bodyend="107"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" line="100" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" bodystart="100" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_level_1a83010fe62326dc0767a7a041aeff411e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_rubeus_1_1_r_input_manager" kindref="compound">RInputManager</ref> *</type>
@@ -234,7 +219,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" line="116" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" bodystart="116" bodyend="116"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" line="109" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" bodystart="109" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_level_1a8d08d9e54f8732f6043c02593d9279c8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="class_rubeus_1_1_audio_components_1_1_r_symphony" kindref="compound">AudioComponents::RSymphony</ref> *</type>
@@ -248,7 +233,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" line="125" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" bodystart="125" bodyend="125"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" line="118" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" bodystart="118" bodyend="118"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -256,75 +241,82 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="212">
-        <label>play_level</label>
-        <link refid="classplay__level"/>
-        <childnode refid="211" relation="public-inheritance">
+      <node id="254">
+        <label>Lplay_level</label>
+        <link refid="class_lplay__level"/>
+        <childnode refid="253" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="211">
+      <node id="253">
         <label>Rubeus::RLevel</label>
         <link refid="class_rubeus_1_1_r_level"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="214">
+      <node id="256">
         <label>Rubeus::AudioComponents::RSymphony</label>
         <link refid="class_rubeus_1_1_audio_components_1_1_r_symphony"/>
-        <childnode refid="215" relation="public-inheritance">
+        <childnode refid="257" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="218">
+      <node id="261">
         <label>Rubeus::RInputManager</label>
         <link refid="class_rubeus_1_1_r_input_manager"/>
-        <childnode refid="215" relation="public-inheritance">
+        <childnode refid="257" relation="public-inheritance">
         </childnode>
-        <childnode refid="219" relation="usage">
+        <childnode refid="262" relation="usage">
           <edgelabel>MouseScroll</edgelabel>
           <edgelabel>MousePosition</edgelabel>
         </childnode>
       </node>
-      <node id="220">
+      <node id="258">
+        <label>Rubeus::RMailingList</label>
+        <link refid="class_rubeus_1_1_r_mailing_list"/>
+      </node>
+      <node id="263">
         <label>Rubeus::RWorld</label>
         <link refid="class_rubeus_1_1_r_world"/>
       </node>
-      <node id="219">
+      <node id="262">
         <label>RML::Vector2D</label>
         <link refid="struct_r_m_l_1_1_vector2_d"/>
       </node>
-      <node id="217">
+      <node id="260">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="216">
+      <node id="259">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="217" relation="usage">
+        <childnode refid="260" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="215">
+      <node id="257">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="216" relation="usage">
+        <childnode refid="258" relation="usage">
+          <edgelabel>m_mailbox</edgelabel>
+        </childnode>
+        <childnode refid="259" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>
-      <node id="213">
+      <node id="255">
         <label>Rubeus::RLevel</label>
         <link refid="class_rubeus_1_1_r_level"/>
-        <childnode refid="214" relation="usage">
+        <childnode refid="256" relation="usage">
           <edgelabel>m_AudioManager</edgelabel>
         </childnode>
-        <childnode refid="218" relation="usage">
+        <childnode refid="261" relation="usage">
           <edgelabel>m_InputManager</edgelabel>
         </childnode>
-        <childnode refid="220" relation="usage">
+        <childnode refid="263" relation="usage">
           <edgelabel>m_World</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" line="23" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h" bodystart="22" bodyend="126"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" line="23" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h" bodystart="22" bodyend="119"/>
     <listofallmembers>
       <member refid="class_rubeus_1_1_r_level_1a2c0545a3e9a6c78f586dc9118ae17b9f" prot="public" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>addGameObject</name></member>
       <member refid="class_rubeus_1_1_r_level_1accfb4374e3deeffc74d45d8d03d3556b" prot="public" virt="virtual"><scope>Rubeus::RLevel</scope><name>begin</name></member>
@@ -333,7 +325,6 @@
       <member refid="class_rubeus_1_1_r_level_1a8d08d9e54f8732f6043c02593d9279c8" prot="public" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>getSoundManager</name></member>
       <member refid="class_rubeus_1_1_r_level_1a488936e1ca061f8deb49d8ed06cd9373" prot="public" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>getWorld</name></member>
       <member refid="class_rubeus_1_1_r_level_1aac94ae19fc45918278ba69d126c74cc3" prot="public" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>InstantiatedLevels</name></member>
-      <member refid="class_rubeus_1_1_r_level_1a4776b19d0f8313a3d785910e7b39e502" prot="public" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>killAliveObjects</name></member>
       <member refid="class_rubeus_1_1_r_level_1a262dcbba989ac479eb7c6b66d7ce220a" prot="protected" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>m_AudioManager</name></member>
       <member refid="class_rubeus_1_1_r_level_1a332056e3e49dbbde32a3153d46c628a9" prot="protected" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>m_InputManager</name></member>
       <member refid="class_rubeus_1_1_r_level_1a62b53a50f4afadf234f3d67e01488cea" prot="protected" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>m_Name</name></member>
@@ -341,7 +332,7 @@
       <member refid="class_rubeus_1_1_r_level_1a1a8159f166bbe90cb22425136609fb5e" prot="public" virt="virtual"><scope>Rubeus::RLevel</scope><name>onEnd</name></member>
       <member refid="class_rubeus_1_1_r_level_1abbd9bc577675917336fd07ab54e0580c" prot="protected" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>REngine</name></member>
       <member refid="class_rubeus_1_1_r_level_1aa6315e5321bcfca5282201a6d64e7d15" prot="public" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>RLevel</name></member>
-      <member refid="class_rubeus_1_1_r_level_1aa5dd147b213fb9d63a31a4aa4ba9a1e2" prot="public" virt="non-virtual"><scope>Rubeus::RLevel</scope><name>~RLevel</name></member>
+      <member refid="class_rubeus_1_1_r_level_1aa5dd147b213fb9d63a31a4aa4ba9a1e2" prot="public" virt="virtual"><scope>Rubeus::RLevel</scope><name>~RLevel</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

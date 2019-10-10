@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Rubeus</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
-  <link rel="stylesheet" href="m-dark+doxygen.compiled.css" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
   <link rel="icon" href="favicon.png" type="image/png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#22272e" />
@@ -15,8 +15,8 @@
     <div class="m-row">
       <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Rubeus</a>
       <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
-        <a href="#search" class="m-dox-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-          <path d="m6 0c-3.3144 0-6 2.6856-6 6 0 3.3144 2.6856 6 6 6 1.4858 0 2.8463-0.54083 3.8945-1.4355-0.0164 0.33797 0.14734 0.75854 0.5 1.1504l3.2227 3.7891c0.55185 0.6139 1.4517 0.66544 2.002 0.11524 0.55022-0.55022 0.49866-1.4501-0.11524-2.002l-3.7891-3.2246c-0.39184-0.35266-0.81242-0.51469-1.1504-0.5 0.89472-1.0482 1.4355-2.4088 1.4355-3.8945 0-3.3128-2.6856-5.998-6-5.998zm0 1.5625a4.4375 4.4375 0 0 1 4.4375 4.4375 4.4375 4.4375 0 0 1-4.4375 4.4375 4.4375 4.4375 0 0 1-4.4375-4.4375 4.4375 4.4375 0 0 1 4.4375-4.4375z"/>
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
         </svg></a>
         <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
         <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
@@ -30,8 +30,8 @@
           <ol class="m-col-t-6 m-col-m-none" start="3">
             <li><a href="annotated.html" id="m-navbar-current">Classes</a></li>
             <li><a href="files.html">Files</a></li>
-            <li class="m-show-m"><a href="#search" class="m-dox-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-              <path d="m6 0c-3.3144 0-6 2.6856-6 6 0 3.3144 2.6856 6 6 6 1.4858 0 2.8463-0.54083 3.8945-1.4355-0.0164 0.33797 0.14734 0.75854 0.5 1.1504l3.2227 3.7891c0.55185 0.6139 1.4517 0.66544 2.002 0.11524 0.55022-0.55022 0.49866-1.4501-0.11524-2.002l-3.7891-3.2246c-0.39184-0.35266-0.81242-0.51469-1.1504-0.5 0.89472-1.0482 1.4355-2.4088 1.4355-3.8945 0-3.3128-2.6856-5.998-6-5.998zm0 1.5625a4.4375 4.4375 0 0 1 4.4375 4.4375 4.4375 4.4375 0 0 1-4.4375 4.4375 4.4375 4.4375 0 0 1-4.4375-4.4375 4.4375 4.4375 0 0 1 4.4375-4.4375z"/>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
             </svg></a></li>
           </ol>
         </div>
@@ -44,130 +44,134 @@
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <h1>Classes</h2>
-        <ul class="m-dox">
-          <li class="m-dox-collapsible">
-            <a href="#" onclick="return toggle(this)">namespace</a> <a href="namespace_r_m_l.html" class="m-dox">RML</a> <span class="m-dox">The <a href="namespace_rubeus.html" class="m-dox">Rubeus</a> Maths Library for <a href="namespace_rubeus.html" class="m-dox">Rubeus</a> Engine namespace.</span>
-            <ul class="m-dox">
-              <li>struct <a href="struct_r_m_l_1_1_matrix4.html" class="m-dox">Matrix4</a> <span class="m-dox">A matrix 4.</span></li>
-              <li>struct <a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">Vector2D</a> <span class="m-dox">A vector in 2D.</span></li>
-              <li>struct <a href="struct_r_m_l_1_1_vector3_d.html" class="m-dox">Vector3D</a> <span class="m-dox">A vector 3d.</span></li>
-              <li>struct <a href="struct_r_m_l_1_1_vector4_d.html" class="m-dox">Vector4D</a> <span class="m-dox">A vector in 4d.</span></li>
-
+        <ul class="m-doc">
+          <li class="m-doc-collapsible">
+            <a href="#" onclick="return toggle(this)">namespace</a> <a href="namespace_r_m_l.html" class="m-doc">RML</a> <span class="m-doc">The <a href="namespace_rubeus.html" class="m-doc">Rubeus</a> Maths Library for <a href="namespace_rubeus.html" class="m-doc">Rubeus</a> Engine namespace.</span>
+            <ul class="m-doc">
+              <li>struct <a href="struct_r_m_l_1_1_matrix4.html" class="m-doc">Matrix4</a> <span class="m-doc">A matrix 4.</span></li>
+              <li>struct <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">Vector2D</a> <span class="m-doc">A vector in 2D.</span></li>
+              <li>struct <a href="struct_r_m_l_1_1_vector3_d.html" class="m-doc">Vector3D</a> <span class="m-doc">A vector 3d.</span></li>
+              <li>struct <a href="struct_r_m_l_1_1_vector4_d.html" class="m-doc">Vector4D</a> <span class="m-doc">A vector in 4d.</span></li>
             </ul>
           </li>
-          <li class="m-dox-collapsible">
-            <a href="#" onclick="return toggle(this)">namespace</a> <a href="namespace_rubeus.html" class="m-dox">Rubeus</a> <span class="m-dox">The <a href="namespace_rubeus.html" class="m-dox">Rubeus</a> Engine namespace.</span>
-            <ul class="m-dox">
-              <li class="m-dox-collapsible collapsed">
-                <a href="#" onclick="return toggle(this)">namespace</a> <a href="namespace_rubeus_1_1_audio_components.html" class="m-dox">AudioComponents</a> <span class="m-dox">The Symphony Audio Engine.</span>
-                <ul class="m-dox">
-                  <li>class <a href="class_rubeus_1_1_audio_components_1_1_r_symphony.html" class="m-dox">RSymphony</a> <span class="m-dox">Manages audio loading, cueing and audio effects.</span></li>
-
+          <li class="m-doc-collapsible">
+            <a href="#" onclick="return toggle(this)">namespace</a> <a href="namespace_rubeus.html" class="m-doc">Rubeus</a> <span class="m-doc">The <a href="namespace_rubeus.html" class="m-doc">Rubeus</a> Engine namespace.</span>
+            <ul class="m-doc">
+              <li class="m-doc-collapsible collapsed">
+                <a href="#" onclick="return toggle(this)">namespace</a> <a href="namespace_rubeus_1_1_audio_components.html" class="m-doc">AudioComponents</a> <span class="m-doc">The Symphony Audio Engine.</span>
+                <ul class="m-doc">
+                  <li>class <a href="class_rubeus_1_1_audio_components_1_1_r_symphony.html" class="m-doc">RSymphony</a> <span class="m-doc">Manages audio loading, cueing and audio effects.</span></li>
                 </ul>
               </li>
-              <li class="m-dox-collapsible collapsed">
-                <a href="#" onclick="return toggle(this)">namespace</a> <a href="namespace_rubeus_1_1_awerere.html" class="m-dox">Awerere</a> <span class="m-dox">The <a href="namespace_rubeus_1_1_awerere.html" class="m-dox">Awerere</a> Physics Engine namespace.</span>
-                <ul class="m-dox">
-                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_box_collider.html" class="m-dox">ABoxCollider</a> <span class="m-dox">A box collider attached to a Game object through a Physics object.</span></li>
-                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_collide_data.html" class="m-dox">ACollideData</a> <span class="m-dox">A container holding information related to detected collisions.</span></li>
-                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_collider.html" class="m-dox">ACollider</a> <span class="m-dox">A simple collider. Used to resolve collisions.</span></li>
-                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_collision_engine.html" class="m-dox">ACollisionEngine</a> <span class="m-dox">The collision engine responsible for resolution of collisions and generating hit events.</span></li>
-                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_flag.html" class="m-dox">AFlag</a> <span class="m-dox">Array based collection of collision flag used in grid based resolution.</span></li>
-                  <li>class <a href="struct_rubeus_1_1_awerere_1_1_a_hit_event_list.html" class="m-dox">AHitEventList</a> <span class="m-dox">List of generated Hit events by collision engine.</span></li>
-                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_physics_engine.html" class="m-dox">APhysicsEngine</a> <span class="m-dox">Apply physics behaviours to gameobjects.</span></li>
-                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html" class="m-dox">APhysicsMaterial</a> <span class="m-dox">A physics material used to characterise physics objects.</span></li>
-                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_physics_object.html" class="m-dox">APhysicsObject</a> <span class="m-dox">A Physics Object that is used for all collision detection and responses.</span></li>
-                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_plane_collider.html" class="m-dox">APlaneCollider</a> <span class="m-dox">A 2D plane collider, equivalent to a straight line on a 2D screen.</span></li>
-                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_sphere_collider.html" class="m-dox">ASphereCollider</a> <span class="m-dox">A Sphere Collider for handling spherical collisions.</span></li>
-                  <li>struct <a href="struct_rubeus_1_1_awerere_1_1_collision_grid.html" class="m-dox">CollisionGrid</a> <span class="m-dox">Grid of cells arranged in a 2D matrix fashion.</span></li>
-
+              <li class="m-doc-collapsible collapsed">
+                <a href="#" onclick="return toggle(this)">namespace</a> <a href="namespace_rubeus_1_1_awerere.html" class="m-doc">Awerere</a> <span class="m-doc">The <a href="namespace_rubeus_1_1_awerere.html" class="m-doc">Awerere</a> Physics Engine namespace.</span>
+                <ul class="m-doc">
+                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_box_collider.html" class="m-doc">ABoxCollider</a> <span class="m-doc">A box collider attached to a Game object through a Physics object.</span></li>
+                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_collide_data.html" class="m-doc">ACollideData</a> <span class="m-doc">A container holding information related to detected collisions.</span></li>
+                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_collider.html" class="m-doc">ACollider</a> <span class="m-doc">A simple collider. Used to resolve collisions.</span></li>
+                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_collision_engine.html" class="m-doc">ACollisionEngine</a> <span class="m-doc">The collision engine responsible for resolution of collisions and generating hit events.</span></li>
+                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_flag.html" class="m-doc">AFlag</a> <span class="m-doc">Array based collection of collision flag used in grid based resolution.</span></li>
+                  <li>class <a href="struct_rubeus_1_1_awerere_1_1_a_hit_event_list.html" class="m-doc">AHitEventList</a> <span class="m-doc">List of generated Hit events by collision engine.</span></li>
+                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_physics_engine.html" class="m-doc">APhysicsEngine</a> <span class="m-doc">Apply physics behaviours to gameobjects.</span></li>
+                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html" class="m-doc">APhysicsMaterial</a> <span class="m-doc">A physics material used to characterise physics objects.</span></li>
+                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_physics_object.html" class="m-doc">APhysicsObject</a> <span class="m-doc">A Physics Object that is used for all collision detection and responses.</span></li>
+                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_plane_collider.html" class="m-doc">APlaneCollider</a> <span class="m-doc">A 2D plane collider, equivalent to a straight line on a 2D screen.</span></li>
+                  <li>class <a href="class_rubeus_1_1_awerere_1_1_a_sphere_collider.html" class="m-doc">ASphereCollider</a> <span class="m-doc">A Sphere Collider for handling spherical collisions.</span></li>
+                  <li>struct <a href="struct_rubeus_1_1_awerere_1_1_collision_grid.html" class="m-doc">CollisionGrid</a> <span class="m-doc">Grid of cells arranged in a 2D matrix fashion.</span></li>
                 </ul>
               </li>
-              <li class="m-dox-collapsible collapsed">
-                <a href="#" onclick="return toggle(this)">namespace</a> <a href="namespace_rubeus_1_1_graphic_components.html" class="m-dox">GraphicComponents</a> <span class="m-dox">The Graphic Components of <a href="namespace_rubeus.html" class="m-dox">Rubeus</a> Engine namespace.</span>
-                <ul class="m-dox">
-                  <li>struct <a href="struct_rubeus_1_1_graphic_components_1_1_image.html" class="m-dox">Image</a> <span class="m-dox">A collection of the image data and its features.</span></li>
-                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_buffer.html" class="m-dox">RBuffer</a> <span class="m-dox">A buffer class that handles generating and binding OpenGL buffers.</span></li>
-                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_group.html" class="m-dox">RGroup</a> <span class="m-dox">A group of objects in a family based hierarchy.</span></li>
-                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component.html" class="m-dox">RGuerrillaRendererComponent</a> <span class="m-dox">A guerrilla renderer component. Made for increased performance. Default renderer. Use instead of simple renderer.</span></li>
-                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_index_buffer.html" class="m-dox">RIndexBuffer</a> <span class="m-dox">A buffer class that handles generating and binding OpenGL index buffers.</span></li>
-                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_layer.html" class="m-dox">RLayer</a> <span class="m-dox">A layer class. Manages layer renders and groups.</span></li>
-                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_layer_composition.html" class="m-dox">RLayerComposition</a> <span class="m-dox">A wrapper around UI and Scene layers of the screen.</span></li>
-                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_renderable_object.html" class="m-dox">RRenderableObject</a> <span class="m-dox">A renderable object. Allows specifying the position, size and color of the renderable object.</span></li>
-                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_renderer_component.html" class="m-dox">RRendererComponent</a> <span class="m-dox">A renderer component abstraction.</span></li>
-                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_scene_layer.html" class="m-dox">RSceneLayer</a> <span class="m-dox">Rendering Layer used for drawing the game scene (non-UI) to the screen.</span></li>
-                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_shader_component.html" class="m-dox">RShaderComponent</a> <span class="m-dox">A shader class. Allows shader code to be sent to OpenGL.</span></li>
-                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_simple_renderer_component.html" class="m-dox">RSimpleRendererComponent</a> <span class="m-dox">A simple renderer. Only for testing purposes.</span></li>
-                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_sprite.html" class="m-dox">RSprite</a> <span class="m-dox">A sprite compatible with guerrilla renderer.</span></li>
-                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_static_sprite.html" class="m-dox">RStaticSprite</a> <span class="m-dox">A static positioned sprite.</span></li>
-                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_texture.html" class="m-dox">RTexture</a> <span class="m-dox">A texture class containing all OpenGL abstractions for implementing textures.</span></li>
-                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_u_i_layer.html" class="m-dox">RUILayer</a> <span class="m-dox">Rendering Layer used for drawing UI elements to the screen.</span></li>
-                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_vertex_array.html" class="m-dox">RVertexArray</a> <span class="m-dox">A vertex array class that handles vertex and index buffer bindings.</span></li>
-                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_window_component.html" class="m-dox">RWindowComponent</a> <span class="m-dox">A window component that bridges GLFW function calls to handle <a href="namespace_rubeus.html" class="m-dox">Rubeus</a> game window.</span></li>
-                  <li>struct <a href="struct_rubeus_1_1_graphic_components_1_1_vertex_data.html" class="m-dox">VertexData</a> <span class="m-dox">A structure holding vertex data to be sent to OpenGL.</span></li>
-
+              <li class="m-doc-collapsible collapsed">
+                <a href="#" onclick="return toggle(this)">namespace</a> <a href="namespace_rubeus_1_1_graphic_components.html" class="m-doc">GraphicComponents</a> <span class="m-doc">The Graphic Components of <a href="namespace_rubeus.html" class="m-doc">Rubeus</a> Engine namespace.</span>
+                <ul class="m-doc">
+                  <li>struct <a href="struct_rubeus_1_1_graphic_components_1_1_image.html" class="m-doc">Image</a> <span class="m-doc">A collection of the image data and its features.</span></li>
+                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_buffer.html" class="m-doc">RBuffer</a> <span class="m-doc">A buffer class that handles generating and binding OpenGL buffers.</span></li>
+                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_game_scene.html" class="m-doc">RGameScene</a> <span class="m-doc">Contains the entire scene on display.</span></li>
+                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component.html" class="m-doc">RGuerrillaRendererComponent</a> <span class="m-doc">A guerrilla renderer component. Made for increased performance. Default renderer. Use instead of simple renderer.</span></li>
+                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_index_buffer.html" class="m-doc">RIndexBuffer</a> <span class="m-doc">A buffer class that handles generating and binding OpenGL index buffers.</span></li>
+                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_layer.html" class="m-doc">RLayer</a> <span class="m-doc">A layer class. Manages layer renders and groups.</span></li>
+                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_main_layer.html" class="m-doc">RMainLayer</a> <span class="m-doc">Rendering Layer used for drawing UI elements to the screen.</span></li>
+                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_renderable_object.html" class="m-doc">RRenderableObject</a> <span class="m-doc">A renderable object. Allows specifying the position, size and color of the renderable object.</span></li>
+                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_renderer_component.html" class="m-doc">RRendererComponent</a> <span class="m-doc">A renderer component abstraction.</span></li>
+                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_shader_component.html" class="m-doc">RShaderComponent</a> <span class="m-doc">A shader class. Allows shader code to be sent to OpenGL.</span></li>
+                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_simple_renderer_component.html" class="m-doc">RSimpleRendererComponent</a> <span class="m-doc">A simple renderer. Only for testing purposes.</span></li>
+                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_sprite.html" class="m-doc">RSprite</a> <span class="m-doc">A sprite compatible with guerrilla renderer.</span></li>
+                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_static_sprite.html" class="m-doc">RStaticSprite</a> <span class="m-doc">A static positioned sprite.</span></li>
+                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_texture.html" class="m-doc">RTexture</a> <span class="m-doc">A texture class containing all OpenGL abstractions for implementing textures.</span></li>
+                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_vertex_array.html" class="m-doc">RVertexArray</a> <span class="m-doc">A vertex array class that handles vertex and index buffer bindings.</span></li>
+                  <li>class <a href="class_rubeus_1_1_graphic_components_1_1_r_window_component.html" class="m-doc">RWindowComponent</a> <span class="m-doc">A window component that bridges GLFW function calls to handle <a href="namespace_rubeus.html" class="m-doc">Rubeus</a> game window.</span></li>
+                  <li>struct <a href="struct_rubeus_1_1_graphic_components_1_1_vertex_data.html" class="m-doc">VertexData</a> <span class="m-doc">A structure holding vertex data to be sent to OpenGL.</span></li>
                 </ul>
               </li>
-              <li class="m-dox-collapsible collapsed">
-                <a href="#" onclick="return toggle(this)">namespace</a> <a href="namespace_rubeus_1_1_utility_components.html" class="m-dox">UtilityComponents</a> <span class="m-dox">The Utility Components of <a href="namespace_rubeus.html" class="m-dox">Rubeus</a> Engine namespace.</span>
-                <ul class="m-dox">
-                  <li>class <a href="class_rubeus_1_1_utility_components_1_1_r_loader_component.html" class="m-dox">RLoaderComponent</a> <span class="m-dox">A loader component. Useful for file I/O.</span></li>
-                  <li>class <a href="class_rubeus_1_1_utility_components_1_1_r_timer.html" class="m-dox">RTimer</a> <span class="m-dox">A timer component. Allows marking timepoints at runtime. Allows frame counting.</span></li>
-
+              <li class="m-doc-collapsible collapsed">
+                <a href="#" onclick="return toggle(this)">namespace</a> <a href="namespace_rubeus_1_1_utility_components.html" class="m-doc">UtilityComponents</a> <span class="m-doc">The Utility Components of <a href="namespace_rubeus.html" class="m-doc">Rubeus</a> Engine namespace.</span>
+                <ul class="m-doc">
+                  <li>class <a href="class_rubeus_1_1_utility_components_1_1_r_loader_component.html" class="m-doc">RLoaderComponent</a> <span class="m-doc">A loader component. Useful for file I/O.</span></li>
+                  <li>class <a href="class_rubeus_1_1_utility_components_1_1_r_logger.html" class="m-doc">RLogger</a> <span class="m-doc">A container class that contains all logger utilities.</span></li>
+                  <li>class <a href="class_rubeus_1_1_utility_components_1_1_r_timer.html" class="m-doc">RTimer</a> <span class="m-doc">A timer component. Allows marking timepoints at runtime. Allows frame counting.</span></li>
                 </ul>
               </li>
-              <li>struct <a href="struct_rubeus_1_1_audio_modifier.html" class="m-dox">AudioModifier</a> <span class="m-dox">Custom POD structure to be sent with messages as audio commands.</span></li>
-              <li>struct <a href="struct_rubeus_1_1_message.html" class="m-dox">Message</a> <span class="m-dox">Declares the message objects that systems use to communicate.</span></li>
-              <li>class <a href="class_rubeus_1_1_r_engine.html" class="m-dox">REngine</a> <span class="m-dox">A class the contains all components that make up <a href="namespace_rubeus.html" class="m-dox">Rubeus</a>.</span></li>
-              <li>class <a href="class_rubeus_1_1_r_game_object.html" class="m-dox">RGameObject</a> <span class="m-dox">A game object. Main class responsible for player interactions.</span></li>
-              <li>class <a href="class_rubeus_1_1_r_input_manager.html" class="m-dox">RInputManager</a> <span class="m-dox">The Input manager. Manages key strokes, mouse buttons, and cursor/scroll inputs.</span></li>
-              <li>class <a href="class_rubeus_1_1_r_level.html" class="m-dox">RLevel</a> <span class="m-dox">A single container from all access to a level&#x27;s contents.</span></li>
-              <li>class <a href="class_rubeus_1_1_r_master_component.html" class="m-dox">RMasterComponent</a> <span class="m-dox">A master component. Serves as parent class for all components.</span></li>
-              <li>class <a href="class_rubeus_1_1_r_message_system.html" class="m-dox">RMessageSystem</a> <span class="m-dox">A message system class that handles message posting and adding.</span></li>
-              <li>class <a href="class_rubeus_1_1_r_world.html" class="m-dox">RWorld</a> <span class="m-dox">The container for all gameobjects. Synonymous to Scene graph.</span></li>
-
+              <li>struct <a href="struct_rubeus_1_1_audio_modifier.html" class="m-doc">AudioModifier</a> <span class="m-doc">Custom POD structure to be sent with messages as audio commands.</span></li>
+              <li>struct <a href="struct_rubeus_1_1_message.html" class="m-doc">Message</a> <span class="m-doc">Declares the message objects that systems use to communicate.</span></li>
+              <li>class <a href="class_rubeus_1_1_r_engine.html" class="m-doc">REngine</a> <span class="m-doc">A class the contains all components that make up <a href="namespace_rubeus.html" class="m-doc">Rubeus</a>.</span></li>
+              <li>class <a href="class_rubeus_1_1_r_game_object.html" class="m-doc">RGameObject</a> <span class="m-doc">A game object. Main class responsible for player interactions.</span></li>
+              <li>class <a href="class_rubeus_1_1_r_input_manager.html" class="m-doc">RInputManager</a> <span class="m-doc">The Input manager. Manages key strokes, mouse buttons, and cursor/scroll inputs.</span></li>
+              <li>class <a href="class_rubeus_1_1_r_level.html" class="m-doc">RLevel</a> <span class="m-doc">A single container from all access to a level&#x27;s contents.</span></li>
+              <li>class <a href="class_rubeus_1_1_r_mailing_list.html" class="m-doc">RMailingList</a> <span class="m-doc">A class that handles all the message commands.</span></li>
+              <li>class <a href="class_rubeus_1_1_r_master_component.html" class="m-doc">RMasterComponent</a> <span class="m-doc">A master component. Serves as parent class for all components.</span></li>
+              <li>class <a href="class_rubeus_1_1_r_message_system.html" class="m-doc">RMessageSystem</a> <span class="m-doc">A message system class that handles message posting and adding.</span></li>
+              <li>class <a href="class_rubeus_1_1_r_world.html" class="m-doc">RWorld</a> <span class="m-doc">The container for all gameobjects. Synonymous to Scene graph.</span></li>
             </ul>
           </li>
-          <li>class <a href="class_e_track_type.html" class="m-dox">ETrackType</a> <span class="m-dox">List of audio track types available.</span></li>
+          <li>class <a href="class_e_track_type.html" class="m-doc">ETrackType</a> <span class="m-doc">List of audio track types available.</span></li>
+          <li>class <a href="class_project_manager.html" class="m-doc">ProjectManager</a> <span class="m-doc">A single instantiated class to generate the <a href="class_project_manager.html" class="m-doc">ProjectManager</a> GUI.</span></li>
+          <li>struct <a href="struct_signal_structure.html" class="m-doc">SignalStructure</a> <span class="m-doc">Contains object and function name for commands.</span></li>
         </ul>
         <script>
         function toggle(e) {
-            e.parentElement.className = e.parentElement.className == 'm-dox-collapsible' ?
-                'm-dox-expansible' : 'm-dox-collapsible';
+            e.parentElement.className = e.parentElement.className == 'm-doc-collapsible' ?
+                'm-doc-expansible' : 'm-doc-collapsible';
             return false;
         }
-        /* Collapse all nodes marked as such. Doing it via JS instead of directly in
-           markup so disabling it doesn't harm usability. The list is somehow
-           regenerated on every iteration and shrinks as I change the classes. It's not
-           documented anywhere and I'm not sure if this is the same across browsers, so
-           I am going backwards in that list to be sure.  */
+        /* Collapse all nodes marked as such. Doing it via JS instead of
+           directly in markup so disabling it doesn't harm usability. The list
+           is somehow regenerated on every iteration and shrinks as I change
+           the classes. It's not documented anywhere and I'm not sure if this
+           is the same across browsers, so I am going backwards in that list to
+           be sure. */
         var collapsed = document.getElementsByClassName("collapsed");
         for(var i = collapsed.length - 1; i >= 0; --i)
-            collapsed[i].className = 'm-dox-expansible';
+            collapsed[i].className = 'm-doc-expansible';
         </script>
       </div>
     </div>
   </div>
 </article></main>
-<div class="m-dox-search" id="search">
+<div class="m-doc-search" id="search">
   <a href="#!" onclick="return hideSearch()"></a>
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-m-8 m-push-m-2">
-        <div class="m-dox-search-header m-text m-small">
+        <div class="m-doc-search-header m-text m-small">
           <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
           <div id="search-symbolcount">&hellip;</div>
         </div>
-        <div class="m-dox-search-content">
-          <input type="search" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" />
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
           <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
           <div id="search-help" class="m-text m-dim m-text-center">
-            Search for symbols, directories, files, pages or modules. You can omit any
-            prefix from the symbol or file path; adding a <code>:</code> or <code>/</code>
-            suffix lists all members of given symbol or directory. Navigate through the
-            list using <span class="m-label m-dim">&darr;</span> and
-            <span class="m-label m-dim">&uarr;</span>, press
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
             <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
           </div>
           <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
           <ul id="search-results"></ul>
@@ -176,13 +180,13 @@
     </div>
   </div>
 </div>
-<script src="search.js"></script>
-<script src="searchdata.js" async="async"></script>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
 <footer><nav>
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
-        <p>Rubeus. Created by <a href="https://doxygen.org/">Doxygen</a> 1.8.15 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+        <p>Rubeus. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.15 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
       </div>
     </div>
   </div>

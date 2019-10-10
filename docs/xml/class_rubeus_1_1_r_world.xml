@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/world.h" line="24" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/world.h" bodystart="24" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.h" line="24" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.h" bodystart="24" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/world.h" line="32" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/world.cpp" bodystart="5" bodyend="7"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.h" line="32" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.cpp" bodystart="5" bodyend="7"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_world_1ab2158d21d66ff18ab59c6c1f1299128f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -55,7 +55,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/world.h" line="41" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/world.cpp" bodystart="9" bodyend="12"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.h" line="41" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.cpp" bodystart="9" bodyend="12"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_world_1a054d7f2e214cf1767cff0e7c7c0d5ce3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/world.h" line="48" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/world.cpp" bodystart="25" bodyend="28"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.h" line="48" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.cpp" bodystart="25" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_world_1a2a10fa62234ccd19046cb8c244674171" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -81,15 +81,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/world.h" line="55" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/world.cpp" bodystart="14" bodyend="23"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.h" line="55" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.cpp" bodystart="14" bodyend="23"/>
       </memberdef>
-      <memberdef kind="function" id="class_rubeus_1_1_r_world_1ae935db3dfaa9f8dc3b82cb60470f2fd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_rubeus_1_1_r_world_1acb2dbcf97265e94f01ac09622c7bfafc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void Rubeus::RWorld::add</definition>
-        <argsstring>(RGameObject &amp;gameObject)</argsstring>
+        <argsstring>(RGameObject *gameObject)</argsstring>
         <name>add</name>
         <param>
-          <type><ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref> &amp;</type>
+          <type><ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref> *</type>
           <declname>gameObject</declname>
         </param>
         <briefdescription>
@@ -106,7 +106,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/world.h" line="64" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/world.cpp" bodystart="30" bodyend="33"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.h" line="64" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.cpp" bodystart="30" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_world_1a2cbd561e846ab4aed11b502582c6649b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -131,7 +131,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/world.h" line="73" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/world.cpp" bodystart="35" bodyend="41"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.h" line="73" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.cpp" bodystart="35" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_world_1a4cc8ab3e46cb4fc5e9d428384231a809" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -156,11 +156,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/world.h" line="82" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/world.cpp" bodystart="43" bodyend="46"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.h" line="82" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.cpp" bodystart="43" bodyend="46"/>
       </memberdef>
-      <memberdef kind="function" id="class_rubeus_1_1_r_world_1a91e730bb4e177d4d59c2c6c6fd04ccda" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>std::vector&lt; <ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref> * &gt; &amp;</type>
-        <definition>std::vector&lt; RGameObject * &gt; &amp; Rubeus::RWorld::getActiveObjects</definition>
+      <memberdef kind="function" id="class_rubeus_1_1_r_world_1ac5ac07097c1b651100b9cb15b5509c06" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref> * &gt; &amp;</type>
+        <definition>const std::vector&lt; RGameObject * &gt; &amp; Rubeus::RWorld::getActiveObjects</definition>
         <argsstring>() const</argsstring>
         <name>getActiveObjects</name>
         <briefdescription>
@@ -170,18 +170,18 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/world.h" line="91" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/world.h" bodystart="91" bodyend="91"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.h" line="91" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.h" bodystart="91" bodyend="91"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>The container for all gameobjects. Synonymous to Scene graph. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/world.h" line="21" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/world.h" bodystart="20" bodyend="94"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.h" line="21" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.h" bodystart="20" bodyend="94"/>
     <listofallmembers>
-      <member refid="class_rubeus_1_1_r_world_1ae935db3dfaa9f8dc3b82cb60470f2fd4" prot="public" virt="non-virtual"><scope>Rubeus::RWorld</scope><name>add</name></member>
+      <member refid="class_rubeus_1_1_r_world_1acb2dbcf97265e94f01ac09622c7bfafc" prot="public" virt="non-virtual"><scope>Rubeus::RWorld</scope><name>add</name></member>
       <member refid="class_rubeus_1_1_r_world_1a2cbd561e846ab4aed11b502582c6649b" prot="public" virt="non-virtual"><scope>Rubeus::RWorld</scope><name>add</name></member>
-      <member refid="class_rubeus_1_1_r_world_1a91e730bb4e177d4d59c2c6c6fd04ccda" prot="public" virt="non-virtual"><scope>Rubeus::RWorld</scope><name>getActiveObjects</name></member>
+      <member refid="class_rubeus_1_1_r_world_1ac5ac07097c1b651100b9cb15b5509c06" prot="public" virt="non-virtual"><scope>Rubeus::RWorld</scope><name>getActiveObjects</name></member>
       <member refid="class_rubeus_1_1_r_world_1ab98fffdd0ae2cf38ae9c91ef8b8942d7" prot="private" virt="non-virtual"><scope>Rubeus::RWorld</scope><name>m_ActiveGameObjects</name></member>
       <member refid="class_rubeus_1_1_r_world_1a81d955b1a3c3effc3846af9a4b961e1a" prot="public" virt="non-virtual"><scope>Rubeus::RWorld</scope><name>RWorld</name></member>
       <member refid="class_rubeus_1_1_r_world_1ab2158d21d66ff18ab59c6c1f1299128f" prot="public" virt="non-virtual"><scope>Rubeus::RWorld</scope><name>RWorld</name></member>

@@ -5,9 +5,9 @@
     <basecompoundref refid="class_rubeus_1_1_awerere_1_1_a_collider" prot="public" virt="non-virtual">Rubeus::Awerere::ACollider</basecompoundref>
     <includes refid="awerere__box__collider__object_8h" local="no">awerere_box_collider_object.h</includes>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a76725863d20593af6992d496fc083045" prot="public" static="no" mutable="no">
-        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref></type>
-        <definition>RML::Vector3D Rubeus::Awerere::ABoxCollider::m_MinExtent</definition>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1ab860c1457f4476d5dae63bd83c60fd32" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref></type>
+        <definition>RML::Vector2D Rubeus::Awerere::ABoxCollider::m_MinExtent</definition>
         <argsstring></argsstring>
         <name>m_MinExtent</name>
         <briefdescription>
@@ -16,11 +16,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="49" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" bodystart="49" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" line="49" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" bodystart="49" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a5deaee32ade54cb23e886cdc1b8dbe8f" prot="public" static="no" mutable="no">
-        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref></type>
-        <definition>RML::Vector3D Rubeus::Awerere::ABoxCollider::m_MaxExtent</definition>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1ae62674d1f2d5b3a2d1af89978de1fdc0" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref></type>
+        <definition>RML::Vector2D Rubeus::Awerere::ABoxCollider::m_MaxExtent</definition>
         <argsstring></argsstring>
         <name>m_MaxExtent</name>
         <briefdescription>
@@ -29,21 +29,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="52" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" bodystart="52" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" line="52" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
-      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1afa46e372158fa8d50dc3fa29ed21ced6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref></type>
-        <definition>RML::Vector3D Rubeus::Awerere::ABoxCollider::calculateCenter</definition>
-        <argsstring>(const RML::Vector3D &amp;ll, const RML::Vector3D &amp;ur)</argsstring>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1af5d4c587053e1fc5dc53f6ecb72966ee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref></type>
+        <definition>RML::Vector2D Rubeus::Awerere::ABoxCollider::calculateCenter</definition>
+        <argsstring>(const RML::Vector2D &amp;ll, const RML::Vector2D &amp;ur)</argsstring>
         <name>calculateCenter</name>
         <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref> &amp;</type>
+          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &amp;</type>
           <declname>ll</declname>
         </param>
         <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref> &amp;</type>
+          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &amp;</type>
           <declname>ur</declname>
         </param>
         <briefdescription>
@@ -69,21 +69,21 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="45" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_box_collider_object.cpp" bodystart="17" bodyend="20"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" line="45" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.cpp" bodystart="17" bodyend="20"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1af82f5a293450e3d45b962ec0ac7a9018" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a73271e94afeaad39ecf1c5a96c2d5f22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>Rubeus::Awerere::ABoxCollider::ABoxCollider</definition>
-        <argsstring>(RML::Vector3D &amp;minExtent, const RML::Vector3D &amp;maxExtent)</argsstring>
+        <argsstring>(const RML::Vector2D &amp;minExtent, const RML::Vector2D &amp;maxExtent)</argsstring>
         <name>ABoxCollider</name>
         <param>
-          <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref> &amp;</type>
+          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &amp;</type>
           <declname>minExtent</declname>
         </param>
         <param>
-          <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref> &amp;</type>
+          <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref> &amp;</type>
           <declname>maxExtent</declname>
         </param>
         <briefdescription>
@@ -107,7 +107,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="62" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_box_collider_object.cpp" bodystart="22" bodyend="26"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" line="62" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.cpp" bodystart="22" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a5b3d61f82c3629649a8d2f92595bf838" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -120,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="69" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_box_collider_object.cpp" bodystart="28" bodyend="30"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" line="69" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.cpp" bodystart="28" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a9cb8b9a6d310ffd4c1eb7341b7fa660c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -158,7 +158,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="80" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_box_collider_object.cpp" bodystart="32" bodyend="39"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" line="80" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.cpp" bodystart="32" bodyend="39"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a07938b065f35454887ec6f728ae8a55d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data" kindref="compound">ACollideData</ref></type>
@@ -204,7 +204,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="91" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_box_collider_object.cpp" bodystart="41" bodyend="127"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" line="91" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.cpp" bodystart="41" bodyend="127"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a6ce8d043e6d69c4e01596bfd51c35e14" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data" kindref="compound">ACollideData</ref></type>
@@ -232,7 +232,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="102" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_box_collider_object.cpp" bodystart="129" bodyend="132"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" line="102" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.cpp" bodystart="129" bodyend="132"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a33ff855764ca01bc28021162c652ede3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data" kindref="compound">ACollideData</ref></type>
@@ -260,11 +260,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="113" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_box_collider_object.cpp" bodystart="134" bodyend="182"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" line="113" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.cpp" bodystart="134" bodyend="178"/>
       </memberdef>
-      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1abe7fc5858243e7db418809d7a781f590" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref></type>
-        <definition>const RML::Vector3D Rubeus::Awerere::ABoxCollider::getLowerLeftBound</definition>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a9cd30156ec94d0627e720decf0302ea0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref></type>
+        <definition>const RML::Vector2D Rubeus::Awerere::ABoxCollider::getLowerLeftBound</definition>
         <argsstring>() const</argsstring>
         <name>getLowerLeftBound</name>
         <briefdescription>
@@ -274,11 +274,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="122" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" bodystart="122" bodyend="122"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" line="122" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" bodystart="122" bodyend="122"/>
       </memberdef>
-      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1af9e0aaed35f689a6acc8da115c51d647" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>const <ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref></type>
-        <definition>const RML::Vector3D Rubeus::Awerere::ABoxCollider::getUpperRightBound</definition>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a7dafa75d4db800e25632d4f125f54608" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref></type>
+        <definition>const RML::Vector2D Rubeus::Awerere::ABoxCollider::getUpperRightBound</definition>
         <argsstring>() const</argsstring>
         <name>getUpperRightBound</name>
         <briefdescription>
@@ -288,11 +288,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="131" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" bodystart="131" bodyend="131"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" line="131" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" bodystart="131" bodyend="131"/>
       </memberdef>
-      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a7891f0d698ca55f899f34ebffdb84524" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref></type>
-        <definition>const RML::Vector3D Rubeus::Awerere::ABoxCollider::getUpperLeftBound</definition>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a5e7256002df2e4fc3e42bc31f6cce333" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref></type>
+        <definition>const RML::Vector2D Rubeus::Awerere::ABoxCollider::getUpperLeftBound</definition>
         <argsstring>() const</argsstring>
         <name>getUpperLeftBound</name>
         <briefdescription>
@@ -302,11 +302,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="140" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" bodystart="140" bodyend="140"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" line="140" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" bodystart="140" bodyend="140"/>
       </memberdef>
-      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a9337b5b543f7157f1fc49bea74e77287" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="struct_r_m_l_1_1_vector3_d" kindref="compound">RML::Vector3D</ref></type>
-        <definition>const RML::Vector3D Rubeus::Awerere::ABoxCollider::getLowerRightBound</definition>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_box_collider_1a6229203e89448e4aa1fcc40ebeb91a10" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_r_m_l_1_1_vector2_d" kindref="compound">RML::Vector2D</ref></type>
+        <definition>const RML::Vector2D Rubeus::Awerere::ABoxCollider::getLowerRightBound</definition>
         <argsstring>() const</argsstring>
         <name>getLowerRightBound</name>
         <briefdescription>
@@ -316,7 +316,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="149" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" bodystart="149" bodyend="149"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" line="149" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" bodystart="149" bodyend="149"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -346,11 +346,9 @@
           <edgelabel>m_PhysicsMaterial</edgelabel>
         </childnode>
         <childnode refid="8" relation="usage">
+          <edgelabel>m_Position</edgelabel>
           <edgelabel>m_Force</edgelabel>
           <edgelabel>m_Momentum</edgelabel>
-        </childnode>
-        <childnode refid="9" relation="usage">
-          <edgelabel>m_Position</edgelabel>
         </childnode>
       </node>
       <node id="6">
@@ -380,7 +378,7 @@
         <link refid="class_rubeus_1_1_awerere_1_1_a_box_collider"/>
         <childnode refid="3" relation="public-inheritance">
         </childnode>
-        <childnode refid="9" relation="usage">
+        <childnode refid="8" relation="usage">
           <edgelabel>m_MinExtent</edgelabel>
           <edgelabel>m_MaxExtent</edgelabel>
         </childnode>
@@ -412,34 +410,37 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" line="32" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h" bodystart="31" bodyend="150"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" line="32" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h" bodystart="31" bodyend="150"/>
     <listofallmembers>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1af82f5a293450e3d45b962ec0ac7a9018" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>ABoxCollider</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a0584d41544674acb77f11cfe038fd1ea" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>ACollider</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a7868c1b6467867bc7eea95c8cc7e450c" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>ACollider</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a73271e94afeaad39ecf1c5a96c2d5f22" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>ABoxCollider</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a0375929e54054cb405e7f893a8278836" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>ACollider</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a081f70dad27cdd3c22f727b8fce4cd0c" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>ACollider</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1af4393723cdffa3620d8e3deb3e3fe92f" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>addForce</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a0f91e5056fe7e045865ac60149b83498" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>addImpulse</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1ac65dfdf1c393552fe031af59af2a76cf" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>addMomentum</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1afa46e372158fa8d50dc3fa29ed21ced6" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>calculateCenter</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1abe7fc5858243e7db418809d7a781f590" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getLowerLeftBound</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a9337b5b543f7157f1fc49bea74e77287" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getLowerRightBound</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1af5d4c587053e1fc5dc53f6ecb72966ee" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>calculateCenter</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a9cd30156ec94d0627e720decf0302ea0" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getLowerLeftBound</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a6229203e89448e4aa1fcc40ebeb91a10" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getLowerRightBound</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1af7297ef1a5bcc7a82a8c8110a707d37a" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getMomentum</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1add6aa6d6bf8e9c47bb5f9262c048d3e3" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getPosition</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1aa27892e6a9b0705899cd99ef5e891497" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getPosition</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a8d4f849d8d22325ac84e8f9d3ecaa74b" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getType</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a7891f0d698ca55f899f34ebffdb84524" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getUpperLeftBound</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1af9e0aaed35f689a6acc8da115c51d647" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getUpperRightBound</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a5e7256002df2e4fc3e42bc31f6cce333" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getUpperLeftBound</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a7dafa75d4db800e25632d4f125f54608" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getUpperRightBound</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a7ec684e4dc6e20edec21599d7fa51cdd" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>getZIndex</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a3aea1286d1c31ff389717b07edfe391c" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_Force</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a5deaee32ade54cb23e886cdc1b8dbe8f" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_MaxExtent</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a76725863d20593af6992d496fc083045" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_MinExtent</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1ae62674d1f2d5b3a2d1af89978de1fdc0" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_MaxExtent</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1ab860c1457f4476d5dae63bd83c60fd32" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_MinExtent</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a55dd70e134b80d3e64dc3ee5df5388fc" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_Momentum</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1abb9155531aa52189943aae04d7a506c2" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_PhysicsMaterial</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1ae241ea4b4d3139f06356e5eb522cdb0c" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_Position</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a4b7bf3af1c943b1caee1e225f93f5779" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_Position</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a929eacdcc3a29b8b598666085560b442" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_Sprite</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1afac145eb6d70d70e822923b92f1f56d6" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_Type</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a12f7a624fce277e6fb956a4ceb1a784b" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>m_ZIndex</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a9cb8b9a6d310ffd4c1eb7341b7fa660c" prot="public" virt="virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>selfUpdate</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1afc3bb37605b7032fa75164eea443a199" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>setMaterial</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a0293d08639bec4bdd80700da27962855" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>setMomentum</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1aebc1dbcdc45a252b38415d3bf23be6b3" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>setPosition</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1ae9f4a75a38feebd333e4f9fefacb5117" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>setPosition</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collider_1a13f5fe3d240e030b4e2b00314864f1ee" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>setZIndex</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a07938b065f35454887ec6f728ae8a55d" prot="public" virt="virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>tryIntersect</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a6ce8d043e6d69c4e01596bfd51c35e14" prot="public" virt="virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>tryIntersect</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_box_collider_1a33ff855764ca01bc28021162c652ede3" prot="public" virt="virtual"><scope>Rubeus::Awerere::ABoxCollider</scope><name>tryIntersect</name></member>

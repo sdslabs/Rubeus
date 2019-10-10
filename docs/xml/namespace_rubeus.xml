@@ -6,13 +6,16 @@
     <innerclass refid="struct_rubeus_1_1_message" prot="public">Rubeus::Message</innerclass>
     <innerclass refid="class_rubeus_1_1_r_engine" prot="public">Rubeus::REngine</innerclass>
     <innerclass refid="class_rubeus_1_1_r_entity" prot="public">Rubeus::REntity</innerclass>
+    <innerclass refid="class_rubeus_1_1_r_game" prot="public">Rubeus::RGame</innerclass>
     <innerclass refid="class_rubeus_1_1_r_game_object" prot="public">Rubeus::RGameObject</innerclass>
     <innerclass refid="class_rubeus_1_1_r_input_manager" prot="public">Rubeus::RInputManager</innerclass>
     <innerclass refid="class_rubeus_1_1_r_level" prot="public">Rubeus::RLevel</innerclass>
+    <innerclass refid="class_rubeus_1_1_r_mailing_list" prot="public">Rubeus::RMailingList</innerclass>
     <innerclass refid="class_rubeus_1_1_r_master_component" prot="public">Rubeus::RMasterComponent</innerclass>
     <innerclass refid="class_rubeus_1_1_r_message_bus" prot="public">Rubeus::RMessageBus</innerclass>
     <innerclass refid="class_rubeus_1_1_r_message_system" prot="public">Rubeus::RMessageSystem</innerclass>
     <innerclass refid="class_rubeus_1_1_r_world" prot="public">Rubeus::RWorld</innerclass>
+    <innerclass refid="struct_rubeus_1_1_signal_signature" prot="public">Rubeus::SignalSignature</innerclass>
     <innernamespace refid="namespace_rubeus_1_1_audio_components">Rubeus::AudioComponents</innernamespace>
     <innernamespace refid="namespace_rubeus_1_1_awerere">Rubeus::Awerere</innernamespace>
     <innernamespace refid="namespace_rubeus_1_1_graphic_components">Rubeus::GraphicComponents</innernamespace>
@@ -123,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/keys.h" line="17" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/keys.h" bodystart="16" bodyend="30"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/InputManager/keys.h" line="17" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/InputManager/keys.h" bodystart="16" bodyend="30"/>
       </memberdef>
       <memberdef kind="enum" id="namespace_rubeus_1ac846721ec08ebc254d389a992230f305" prot="public" static="no" strong="yes">
         <type></type>
@@ -1118,60 +1121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/keys.h" line="38" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/keys.h" bodystart="37" bodyend="166"/>
-      </memberdef>
-      <memberdef kind="enum" id="namespace_rubeus_1a82d14ec7bd46347068de3bc5c03a8136" prot="public" static="no" strong="no">
-        <type></type>
-        <name>EMessageCode</name>
-        <enumvalue id="namespace_rubeus_1a82d14ec7bd46347068de3bc5c03a8136a3294d58c419911fbd2f74272f2c003a1" prot="public">
-          <name>system_ok</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="namespace_rubeus_1a82d14ec7bd46347068de3bc5c03a8136a44604123c3a732c9ccbf038630324845" prot="public">
-          <name>change_window_title</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="namespace_rubeus_1a82d14ec7bd46347068de3bc5c03a8136a90597347ef0c417e74f6ebe2a56e4642" prot="public">
-          <name>load_image</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="namespace_rubeus_1a82d14ec7bd46347068de3bc5c03a8136a4fb5e214b2cfce7e037b402d4751008b" prot="public">
-          <name>get_loaded_image</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="namespace_rubeus_1a82d14ec7bd46347068de3bc5c03a8136ae8f437bd38e0a44dc12fe701ef06dd0b" prot="public">
-          <name>modify_audio</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="namespace_rubeus_1a82d14ec7bd46347068de3bc5c03a8136adc852a8c5943c264fcc65be19cb9f46b" prot="public">
-          <name>load_level</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <briefdescription>
-<para>Defines all message codes the game requires. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_codes.h" line="19" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_codes.h" bodystart="18" bodyend="43"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/InputManager/keys.h" line="38" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/InputManager/keys.h" bodystart="37" bodyend="166"/>
       </memberdef>
       <memberdef kind="enum" id="namespace_rubeus_1ae1270b4aff91ea4ec19282d79b4da20a" prot="public" static="no" strong="no">
         <type></type>
@@ -1196,7 +1146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" line="72" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" bodystart="71" bodyend="78"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_object.h" line="69" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_object.h" bodystart="68" bodyend="75"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -1211,7 +1161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" line="63" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" bodystart="63" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_object.h" line="60" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_object.h" bodystart="60" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespace_rubeus_1a5c62010c7a09ffdfbbeced800697c075" prot="public" static="no">
         <type><ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref></type>
@@ -1224,7 +1174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" line="64" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_object.h" bodystart="64" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_object.h" line="61" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_object.h" bodystart="61" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -1240,24 +1190,44 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" line="17" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" bodystart="17" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" line="17" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" bodystart="17" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="namespace_rubeus_1a6271515c042526fd0df332714c1d843f" prot="public" static="no" mutable="no">
-        <type><ref refid="class_rubeus_1_1_r_engine" kindref="compound">REngine</ref> *const</type>
-        <definition>REngine *const Rubeus::Engine</definition>
+      <memberdef kind="variable" id="namespace_rubeus_1a6d1d316a3c22d7a5e7354ba45ef4f4f0" prot="public" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_r_mailing_list" kindref="compound">RMailingList</ref></type>
+        <definition>RMailingList Rubeus::MailBox</definition>
         <argsstring></argsstring>
-        <name>Engine</name>
-        <initializer>= new <ref refid="class_rubeus_1_1_r_engine" kindref="compound">REngine</ref>()</initializer>
+        <name>MailBox</name>
         <briefdescription>
-<para>The entirety of the <ref refid="namespace_rubeus" kindref="compound">Rubeus</ref> Engine functionalities. </para>        </briefdescription>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h" line="174" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/engine.cpp" bodystart="13" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.cpp" line="7" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.cpp" bodystart="7" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_rubeus_1ad9e32b5851bed8632841e7730ee25acb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; Rubeus::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;stream, RMasterComponent &amp;component)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type><ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref> &amp;</type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.cpp" line="30" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.cpp" bodystart="30" bodyend="34"/>
+      </memberdef>
       <memberdef kind="function" id="namespace_rubeus_1aacfcb5d781b426a6e1b57f5e68274e33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void Rubeus::mouseButtonCallback</definition>
@@ -1315,7 +1285,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="39" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/input_manager.cpp" bodystart="13" bodyend="16"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/InputManager/input_manager.cpp" line="13" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/InputManager/input_manager.cpp" bodystart="13" bodyend="16"/>
       </memberdef>
       <memberdef kind="function" id="namespace_rubeus_1a769307f85758c7d5e45ff3bed4f37bd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1363,7 +1333,55 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="51" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/input_manager.cpp" bodystart="18" bodyend="22"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/InputManager/input_manager.cpp" line="18" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/InputManager/input_manager.cpp" bodystart="18" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_rubeus_1a5a2e4612469f7116f7713e8431673013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::cursorPositionCallback</definition>
+        <argsstring>(GLFWwindow *window, double xpos, double ypos)</argsstring>
+        <name>cursorPositionCallback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>xpos</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ypos</declname>
+        </param>
+        <briefdescription>
+<para>Callback function which sets mouse position value. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Called only by GLFW when state of a key changes.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GLFW specified window object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>xpos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X value of position </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ypos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y value of position </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/InputManager/input_manager.cpp" line="24" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/InputManager/input_manager.cpp" bodystart="24" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="namespace_rubeus_1a5dd263446a456f7c3894d2b491522ee8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1426,76 +1444,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="64" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/input_manager.cpp" bodystart="30" bodyend="33"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_rubeus_1a5a2e4612469f7116f7713e8431673013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Rubeus::cursorPositionCallback</definition>
-        <argsstring>(GLFWwindow *window, double xpos, double ypos)</argsstring>
-        <name>cursorPositionCallback</name>
-        <param>
-          <type>GLFWwindow *</type>
-          <declname>window</declname>
-        </param>
-        <param>
-          <type>double</type>
-          <declname>xpos</declname>
-        </param>
-        <param>
-          <type>double</type>
-          <declname>ypos</declname>
-        </param>
-        <briefdescription>
-<para>Callback function which sets mouse position value. </para>        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="warning"><para>Called only by GLFW when state of a key changes.</para></simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>window</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>GLFW specified window object. </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>xpos</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>X value of position </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>ypos</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Y value of position </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/input_manager.h" line="76" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/input_manager.cpp" bodystart="24" bodyend="28"/>
-      </memberdef>
-      <memberdef kind="function" id="namespace_rubeus_1ad9e32b5851bed8632841e7730ee25acb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>std::ostream &amp;</type>
-        <definition>std::ostream&amp; Rubeus::operator&lt;&lt;</definition>
-        <argsstring>(std::ostream &amp;stream, RMasterComponent &amp;component)</argsstring>
-        <name>operator&lt;&lt;</name>
-        <param>
-          <type>std::ostream &amp;</type>
-          <declname>stream</declname>
-        </param>
-        <param>
-          <type><ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref> &amp;</type>
-          <declname>component</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/master_component.cpp" line="34" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/master_component.cpp" bodystart="34" bodyend="38"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/InputManager/input_manager.cpp" line="30" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/InputManager/input_manager.cpp" bodystart="30" bodyend="33"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1503,6 +1452,6 @@
     <detaileddescription>
 <para><simplesect kind="warning"><para>All <ref refid="namespace_rubeus" kindref="compound">Rubeus</ref> classes start with a capital &apos;R&apos;. Structs are an exception. </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/audio_manager_component.h" line="16" column="1"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.cpp" line="13" column="1"/>
   </compounddef>
 </doxygen>

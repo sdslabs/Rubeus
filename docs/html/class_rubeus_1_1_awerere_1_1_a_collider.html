@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Rubeus::Awerere::ACollider class | Rubeus</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
-  <link rel="stylesheet" href="m-dark+doxygen.compiled.css" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
   <link rel="icon" href="favicon.png" type="image/png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#22272e" />
@@ -15,8 +15,8 @@
     <div class="m-row">
       <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Rubeus</a>
       <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
-        <a href="#search" class="m-dox-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-          <path d="m6 0c-3.3144 0-6 2.6856-6 6 0 3.3144 2.6856 6 6 6 1.4858 0 2.8463-0.54083 3.8945-1.4355-0.0164 0.33797 0.14734 0.75854 0.5 1.1504l3.2227 3.7891c0.55185 0.6139 1.4517 0.66544 2.002 0.11524 0.55022-0.55022 0.49866-1.4501-0.11524-2.002l-3.7891-3.2246c-0.39184-0.35266-0.81242-0.51469-1.1504-0.5 0.89472-1.0482 1.4355-2.4088 1.4355-3.8945 0-3.3128-2.6856-5.998-6-5.998zm0 1.5625a4.4375 4.4375 0 0 1 4.4375 4.4375 4.4375 4.4375 0 0 1-4.4375 4.4375 4.4375 4.4375 0 0 1-4.4375-4.4375 4.4375 4.4375 0 0 1 4.4375-4.4375z"/>
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
         </svg></a>
         <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
         <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
@@ -30,8 +30,8 @@
           <ol class="m-col-t-6 m-col-m-none" start="3">
             <li><a href="annotated.html">Classes</a></li>
             <li><a href="files.html">Files</a></li>
-            <li class="m-show-m"><a href="#search" class="m-dox-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
-              <path d="m6 0c-3.3144 0-6 2.6856-6 6 0 3.3144 2.6856 6 6 6 1.4858 0 2.8463-0.54083 3.8945-1.4355-0.0164 0.33797 0.14734 0.75854 0.5 1.1504l3.2227 3.7891c0.55185 0.6139 1.4517 0.66544 2.002 0.11524 0.55022-0.55022 0.49866-1.4501-0.11524-2.002l-3.7891-3.2246c-0.39184-0.35266-0.81242-0.51469-1.1504-0.5 0.89472-1.0482 1.4355-2.4088 1.4355-3.8945 0-3.3128-2.6856-5.998-6-5.998zm0 1.5625a4.4375 4.4375 0 0 1 4.4375 4.4375 4.4375 4.4375 0 0 1-4.4375 4.4375 4.4375 4.4375 0 0 1-4.4375-4.4375 4.4375 4.4375 0 0 1 4.4375-4.4375z"/>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
             </svg></a></li>
           </ol>
         </div>
@@ -63,130 +63,156 @@
         </div>
         <section id="derived-classes">
           <h2><a href="#derived-classes">Derived classes</a></h2>
-          <dl class="m-dox">
+          <dl class="m-doc">
             <dt>
-              class <a href="class_rubeus_1_1_awerere_1_1_a_box_collider.html" class="m-dox">ABoxCollider</a>
+              class <a href="class_rubeus_1_1_awerere_1_1_a_box_collider.html" class="m-doc">ABoxCollider</a>
             </dt>
             <dd>A box collider attached to a Game object through a Physics object.</dd>
             <dt>
-              class <a href="class_rubeus_1_1_awerere_1_1_a_plane_collider.html" class="m-dox">APlaneCollider</a>
+              class <a href="class_rubeus_1_1_awerere_1_1_a_plane_collider.html" class="m-doc">APlaneCollider</a>
             </dt>
             <dd>A 2D plane collider, equivalent to a straight line on a 2D screen.</dd>
             <dt>
-              class <a href="class_rubeus_1_1_awerere_1_1_a_sphere_collider.html" class="m-dox">ASphereCollider</a>
+              class <a href="class_rubeus_1_1_awerere_1_1_a_sphere_collider.html" class="m-doc">ASphereCollider</a>
             </dt>
             <dd>A Sphere Collider for handling spherical collisions.</dd>
           </dl>
         </section>
         <section id="typeless-methods">
           <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
-          <dl class="m-dox">
-            <dt>
-              <span class="m-dox-wrap-bumper"><a href="#a0584d41544674acb77f11cfe038fd1ea" class="m-dox-self" name="a0584d41544674acb77f11cfe038fd1ea">ACollider</a>(</span><span class="m-dox-wrap"><a href="struct_r_m_l_1_1_vector3_d.html" class="m-dox">RML::<wbr />Vector3D</a> position = <a href="struct_r_m_l_1_1_vector3_d.html" class="m-dox">RML::<wbr />Vector3D</a>(0.0f, 0.0f, 0.0f))</span>
+          <dl class="m-doc">
+            <dt id="a0375929e54054cb405e7f893a8278836">
+              <span class="m-doc-wrap-bumper"><a href="#a0375929e54054cb405e7f893a8278836" class="m-doc-self">ACollider</a>(</span><span class="m-doc-wrap"><a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a> position = <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>(0.0f, 0.0f))</span>
             </dt>
             <dd>Constructor.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper"><a href="#a7868c1b6467867bc7eea95c8cc7e450c" class="m-dox">ACollider</a>(</span><span class="m-dox-wrap">const <a href="struct_r_m_l_1_1_vector3_d.html" class="m-dox">RML::<wbr />Vector3D</a>&amp; position,
-              const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a>&amp; velocity,
-              const <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html" class="m-dox">APhysicsMaterial</a>&amp; physicsMat = <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html#ab8d56cee82fd88c7dcd302256ec6185f" class="m-dox">APhysicsMaterial::<wbr />DefaultMaterial</a>)</span>
+              <span class="m-doc-wrap-bumper"><a href="#a081f70dad27cdd3c22f727b8fce4cd0c" class="m-doc">ACollider</a>(</span><span class="m-doc-wrap">const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>&amp; position,
+              const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>&amp; velocity,
+              const <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html" class="m-doc">APhysicsMaterial</a>&amp; physicsMat = <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html#ab8d56cee82fd88c7dcd302256ec6185f" class="m-doc">APhysicsMaterial::<wbr />DefaultMaterial</a>,
+              const int&amp; zIndex = 0)</span>
             </dt>
             <dd>Constructor.</dd>
-            <dt>
-              <span class="m-dox-wrap-bumper"><a href="#a10873a3ab1cc36d56b4bf72a9a4c82f4" class="m-dox-self" name="a10873a3ab1cc36d56b4bf72a9a4c82f4">~ACollider</a>(</span><span class="m-dox-wrap">) <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="a10873a3ab1cc36d56b4bf72a9a4c82f4">
+              <span class="m-doc-wrap-bumper"><a href="#a10873a3ab1cc36d56b4bf72a9a4c82f4" class="m-doc-self">~ACollider</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd>Destructor.</dd>
           </dl>
         </section>
         <section id="pub-methods">
           <h2><a href="#pub-methods">Public functions</a></h2>
-          <dl class="m-dox">
+          <dl class="m-doc">
             <dt>
-              <span class="m-dox-wrap-bumper">auto <a href="#a0c1bf6dacc6f411a4073843d61458c7f" class="m-dox">tryIntersect</a>(</span><span class="m-dox-wrap"><a href="class_rubeus_1_1_awerere_1_1_a_collider.html" class="m-dox">ACollider</a>&amp; collider) -&gt; <a href="class_rubeus_1_1_awerere_1_1_a_collide_data.html" class="m-dox">ACollideData</a></span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a0c1bf6dacc6f411a4073843d61458c7f" class="m-doc">tryIntersect</a>(</span><span class="m-doc-wrap"><a href="class_rubeus_1_1_awerere_1_1_a_collider.html" class="m-doc">ACollider</a>&amp; collider) -&gt; <a href="class_rubeus_1_1_awerere_1_1_a_collide_data.html" class="m-doc">ACollideData</a></span>
             </dt>
             <dd>Generate collision status data object to see if object collides with another.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">auto <a href="#ac9295068ab11ba7b11e7d18f453298bc" class="m-dox">tryIntersect</a>(</span><span class="m-dox-wrap"><a href="class_rubeus_1_1_awerere_1_1_a_box_collider.html" class="m-dox">ABoxCollider</a>&amp; box) -&gt; <a href="class_rubeus_1_1_awerere_1_1_a_collide_data.html" class="m-dox">ACollideData</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
+              <span class="m-doc-wrap-bumper">auto <a href="#ac9295068ab11ba7b11e7d18f453298bc" class="m-doc">tryIntersect</a>(</span><span class="m-doc-wrap"><a href="class_rubeus_1_1_awerere_1_1_a_box_collider.html" class="m-doc">ABoxCollider</a>&amp; box) -&gt; <a href="class_rubeus_1_1_awerere_1_1_a_collide_data.html" class="m-doc">ACollideData</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd>Query collision status with another box type collider.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">auto <a href="#a5a6b4e7886914d394913e570ecbf1fb4" class="m-dox">tryIntersect</a>(</span><span class="m-dox-wrap"><a href="class_rubeus_1_1_awerere_1_1_a_sphere_collider.html" class="m-dox">ASphereCollider</a>&amp; sphere) -&gt; <a href="class_rubeus_1_1_awerere_1_1_a_collide_data.html" class="m-dox">ACollideData</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a5a6b4e7886914d394913e570ecbf1fb4" class="m-doc">tryIntersect</a>(</span><span class="m-doc-wrap"><a href="class_rubeus_1_1_awerere_1_1_a_sphere_collider.html" class="m-doc">ASphereCollider</a>&amp; sphere) -&gt; <a href="class_rubeus_1_1_awerere_1_1_a_collide_data.html" class="m-doc">ACollideData</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd>Query collision status with another sphere type collider.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">auto <a href="#a18c5893ff435d68cb7495f9c9ddd6d48" class="m-dox">tryIntersect</a>(</span><span class="m-dox-wrap"><a href="class_rubeus_1_1_awerere_1_1_a_plane_collider.html" class="m-dox">APlaneCollider</a>&amp; plane) -&gt; <a href="class_rubeus_1_1_awerere_1_1_a_collide_data.html" class="m-dox">ACollideData</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a18c5893ff435d68cb7495f9c9ddd6d48" class="m-doc">tryIntersect</a>(</span><span class="m-doc-wrap"><a href="class_rubeus_1_1_awerere_1_1_a_plane_collider.html" class="m-doc">APlaneCollider</a>&amp; plane) -&gt; <a href="class_rubeus_1_1_awerere_1_1_a_collide_data.html" class="m-doc">ACollideData</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd>Query collision status with another plane type collider.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">void <a href="#a5f81c81e2a0675319f56a73e30a34e92" class="m-dox">update</a>(</span><span class="m-dox-wrap">const float&amp; deltaTime)</span>
+              <span class="m-doc-wrap-bumper">void <a href="#a5f81c81e2a0675319f56a73e30a34e92" class="m-doc">update</a>(</span><span class="m-doc-wrap">const float&amp; deltaTime)</span>
             </dt>
             <dd>Update the collider member positions.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">void <a href="#ab0088d47ab69b3ecb0b0a020de8c33d6" class="m-dox">selfUpdate</a>(</span><span class="m-dox-wrap">float deltaX,
+              <span class="m-doc-wrap-bumper">void <a href="#ab0088d47ab69b3ecb0b0a020de8c33d6" class="m-doc">selfUpdate</a>(</span><span class="m-doc-wrap">float deltaX,
               float deltaY) <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd>Update the collider position for members specific to a collider type.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">void <a href="#a0f91e5056fe7e045865ac60149b83498" class="m-dox">addImpulse</a>(</span><span class="m-dox-wrap"><a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a>&amp; impulse)</span>
+              <span class="m-doc-wrap-bumper">void <a href="#a0f91e5056fe7e045865ac60149b83498" class="m-doc">addImpulse</a>(</span><span class="m-doc-wrap"><a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>&amp; impulse)</span>
             </dt>
             <dd>Add an impulse to this object.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">auto <a href="#add6aa6d6bf8e9c47bb5f9262c048d3e3" class="m-dox">getPosition</a>(</span><span class="m-dox-wrap">) const -&gt; <a href="struct_r_m_l_1_1_vector3_d.html" class="m-dox">RML::<wbr />Vector3D</a></span>
+              <span class="m-doc-wrap-bumper">auto <a href="#aa27892e6a9b0705899cd99ef5e891497" class="m-doc">getPosition</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a></span>
             </dt>
             <dd>Returns the position of this collider.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">auto <a href="#af7297ef1a5bcc7a82a8c8110a707d37a" class="m-dox">getMomentum</a>(</span><span class="m-dox-wrap">) const -&gt; <a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a></span>
+              <span class="m-doc-wrap-bumper">auto <a href="#af7297ef1a5bcc7a82a8c8110a707d37a" class="m-doc">getMomentum</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a></span>
             </dt>
             <dd>Returns the momentum of this position.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">auto <a href="#a8d4f849d8d22325ac84e8f9d3ecaa74b" class="m-dox">getType</a>(</span><span class="m-dox-wrap">) const -&gt; <a href="namespace_rubeus_1_1_awerere.html#aa31f43f0fcc41516bb0aa51cb1d88a08" class="m-dox">EColliderType</a></span>
+              <span class="m-doc-wrap-bumper">auto <a href="#a8d4f849d8d22325ac84e8f9d3ecaa74b" class="m-doc">getType</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="namespace_rubeus_1_1_awerere.html#aa31f43f0fcc41516bb0aa51cb1d88a08" class="m-doc">EColliderType</a></span>
             </dt>
             <dd>Returns the type of this collider.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">void <a href="#aebc1dbcdc45a252b38415d3bf23be6b3" class="m-dox">setPosition</a>(</span><span class="m-dox-wrap">const <a href="struct_r_m_l_1_1_vector3_d.html" class="m-dox">RML::<wbr />Vector3D</a>&amp; position)</span>
+              <span class="m-doc-wrap-bumper">void <a href="#ae9f4a75a38feebd333e4f9fefacb5117" class="m-doc">setPosition</a>(</span><span class="m-doc-wrap">const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>&amp; position)</span>
             </dt>
             <dd>Set the position of this collider.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">void <a href="#a0293d08639bec4bdd80700da27962855" class="m-dox">setMomentum</a>(</span><span class="m-dox-wrap">const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a>&amp; momentum)</span>
+              <span class="m-doc-wrap-bumper">void <a href="#a0293d08639bec4bdd80700da27962855" class="m-doc">setMomentum</a>(</span><span class="m-doc-wrap">const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>&amp; momentum)</span>
             </dt>
             <dd>Set the momentum of this collider.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">void <a href="#afc3bb37605b7032fa75164eea443a199" class="m-dox">setMaterial</a>(</span><span class="m-dox-wrap">const <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html" class="m-dox">APhysicsMaterial</a>&amp; physicsMat)</span>
+              <span class="m-doc-wrap-bumper">void <a href="#afc3bb37605b7032fa75164eea443a199" class="m-doc">setMaterial</a>(</span><span class="m-doc-wrap">const <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html" class="m-doc">APhysicsMaterial</a>&amp; physicsMat)</span>
             </dt>
             <dd>Set a custom physics material for this collider.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">void <a href="#af4393723cdffa3620d8e3deb3e3fe92f" class="m-dox">addForce</a>(</span><span class="m-dox-wrap"><a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a>&amp; force)</span>
+              <span class="m-doc-wrap-bumper">void <a href="#af4393723cdffa3620d8e3deb3e3fe92f" class="m-doc">addForce</a>(</span><span class="m-doc-wrap"><a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>&amp; force)</span>
             </dt>
             <dd>Add a force on this collider.</dd>
             <dt>
-              <span class="m-dox-wrap-bumper">void <a href="#ac65dfdf1c393552fe031af59af2a76cf" class="m-dox">addMomentum</a>(</span><span class="m-dox-wrap"><a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a>&amp; momentum)</span>
+              <span class="m-doc-wrap-bumper">void <a href="#ac65dfdf1c393552fe031af59af2a76cf" class="m-doc">addMomentum</a>(</span><span class="m-doc-wrap"><a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>&amp; momentum)</span>
             </dt>
             <dd>Add momentum to this collider.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#a13f5fe3d240e030b4e2b00314864f1ee" class="m-doc">setZIndex</a>(</span><span class="m-doc-wrap">const unsigned int&amp; zindex)</span>
+            </dt>
+            <dd>Sets z-index of collider.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a7ec684e4dc6e20edec21599d7fa51cdd" class="m-doc">getZIndex</a>(</span><span class="m-doc-wrap">) -&gt; unsigned int</span>
+            </dt>
+            <dd>Returns the z-index of this collider.</dd>
           </dl>
         </section>
         <section id="pub-attribs">
           <h2><a href="#pub-attribs">Public variables</a></h2>
-          <dl class="m-dox">
-            <dt><a href="struct_r_m_l_1_1_vector3_d.html" class="m-dox">RML::<wbr />Vector3D</a> <a href="#ae241ea4b4d3139f06356e5eb522cdb0c" class="m-dox-self" name="ae241ea4b4d3139f06356e5eb522cdb0c">m_Position</a></dt>
+          <dl class="m-doc">
+            <dt id="a4b7bf3af1c943b1caee1e225f93f5779">
+              <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a> <a href="#a4b7bf3af1c943b1caee1e225f93f5779" class="m-doc-self">m_Position</a>
+            </dt>
             <dd>The central position of the collider.</dd>
-            <dt><a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a> <a href="#a55dd70e134b80d3e64dc3ee5df5388fc" class="m-dox-self" name="a55dd70e134b80d3e64dc3ee5df5388fc">m_Momentum</a></dt>
+            <dt id="a55dd70e134b80d3e64dc3ee5df5388fc">
+              <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a> <a href="#a55dd70e134b80d3e64dc3ee5df5388fc" class="m-doc-self">m_Momentum</a>
+            </dt>
             <dd>Momentum of the collider in 2D space.</dd>
-            <dt><a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a> <a href="#a3aea1286d1c31ff389717b07edfe391c" class="m-dox-self" name="a3aea1286d1c31ff389717b07edfe391c">m_Force</a></dt>
+            <dt id="a3aea1286d1c31ff389717b07edfe391c">
+              <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a> <a href="#a3aea1286d1c31ff389717b07edfe391c" class="m-doc-self">m_Force</a>
+            </dt>
             <dd>The force being applied on this collider.</dd>
-            <dt><a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html" class="m-dox">APhysicsMaterial</a> <a href="#abb9155531aa52189943aae04d7a506c2" class="m-dox-self" name="abb9155531aa52189943aae04d7a506c2">m_PhysicsMaterial</a></dt>
+            <dt id="abb9155531aa52189943aae04d7a506c2">
+              <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html" class="m-doc">APhysicsMaterial</a> <a href="#abb9155531aa52189943aae04d7a506c2" class="m-doc-self">m_PhysicsMaterial</a>
+            </dt>
             <dd>The physical constants describing the material of this collider.</dd>
-            <dt><a href="namespace_rubeus_1_1_awerere.html#aa31f43f0fcc41516bb0aa51cb1d88a08" class="m-dox">EColliderType</a> <a href="#afac145eb6d70d70e822923b92f1f56d6" class="m-dox-self" name="afac145eb6d70d70e822923b92f1f56d6">m_Type</a></dt>
+            <dt id="afac145eb6d70d70e822923b92f1f56d6">
+              <a href="namespace_rubeus_1_1_awerere.html#aa31f43f0fcc41516bb0aa51cb1d88a08" class="m-doc">EColliderType</a> <a href="#afac145eb6d70d70e822923b92f1f56d6" class="m-doc-self">m_Type</a>
+            </dt>
             <dd>Type of the collider.</dd>
-            <dt><a href="class_rubeus_1_1_graphic_components_1_1_r_sprite.html" class="m-dox">GraphicComponents::<wbr />RSprite</a>* <a href="#a929eacdcc3a29b8b598666085560b442" class="m-dox-self" name="a929eacdcc3a29b8b598666085560b442">m_Sprite</a></dt>
+            <dt id="a929eacdcc3a29b8b598666085560b442">
+              <a href="class_rubeus_1_1_graphic_components_1_1_r_sprite.html" class="m-doc">GraphicComponents::<wbr />RSprite</a>* <a href="#a929eacdcc3a29b8b598666085560b442" class="m-doc-self">m_Sprite</a>
+            </dt>
             <dd>The sprite linked to this collider.</dd>
+            <dt id="a12f7a624fce277e6fb956a4ceb1a784b">
+              unsigned int <a href="#a12f7a624fce277e6fb956a4ceb1a784b" class="m-doc-self">m_ZIndex</a>
+            </dt>
+            <dd>z-index of this collider</dd>
           </dl>
         </section>
         <section>
           <h2>Function documentation</h2>
-          <section class="m-dox-details" id="a7868c1b6467867bc7eea95c8cc7e450c"><div>
+          <section class="m-doc-details" id="a081f70dad27cdd3c22f727b8fce4cd0c"><div>
             <h3>
-              <span class="m-dox-wrap-bumper"> Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#a7868c1b6467867bc7eea95c8cc7e450c" class="m-dox-self">ACollider</a>(</span><span class="m-dox-wrap">const <a href="struct_r_m_l_1_1_vector3_d.html" class="m-dox">RML::<wbr />Vector3D</a>&amp; position,
-              const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a>&amp; velocity,
-              const <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html" class="m-dox">APhysicsMaterial</a>&amp; physicsMat = <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html#ab8d56cee82fd88c7dcd302256ec6185f" class="m-dox">APhysicsMaterial::<wbr />DefaultMaterial</a>)</span></span>
+              <span class="m-doc-wrap-bumper"> Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a081f70dad27cdd3c22f727b8fce4cd0c" class="m-doc-self">ACollider</a>(</span><span class="m-doc-wrap">const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>&amp; position,
+              const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>&amp; velocity,
+              const <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html" class="m-doc">APhysicsMaterial</a>&amp; physicsMat = <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html#ab8d56cee82fd88c7dcd302256ec6185f" class="m-doc">APhysicsMaterial::<wbr />DefaultMaterial</a>,
+              const int&amp; zIndex = 0)</span></span>
             </h3>
             <p>Constructor.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -206,12 +232,16 @@
                   <td>physicsMat</td>
                   <td>The physics material of this collider. Default is DefualtMaterial</td>
                 </tr>
+                <tr>
+                  <td>zIndex</td>
+                  <td></td>
+                </tr>
               </tbody>
             </table>
           </div></section>
-          <section class="m-dox-details" id="a0c1bf6dacc6f411a4073843d61458c7f"><div>
+          <section class="m-doc-details" id="a0c1bf6dacc6f411a4073843d61458c7f"><div>
             <h3>
-              <span class="m-dox-wrap-bumper"><a href="class_rubeus_1_1_awerere_1_1_a_collide_data.html" class="m-dox">ACollideData</a> Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#a0c1bf6dacc6f411a4073843d61458c7f" class="m-dox-self">tryIntersect</a>(</span><span class="m-dox-wrap"><a href="class_rubeus_1_1_awerere_1_1_a_collider.html" class="m-dox">ACollider</a>&amp; collider)</span></span>
+              <span class="m-doc-wrap-bumper"><a href="class_rubeus_1_1_awerere_1_1_a_collide_data.html" class="m-doc">ACollideData</a> Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a0c1bf6dacc6f411a4073843d61458c7f" class="m-doc-self">tryIntersect</a>(</span><span class="m-doc-wrap"><a href="class_rubeus_1_1_awerere_1_1_a_collider.html" class="m-doc">ACollider</a>&amp; collider)</span></span>
             </h3>
             <p>Generate collision status data object to see if object collides with another.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -232,9 +262,9 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-dox-details" id="ac9295068ab11ba7b11e7d18f453298bc"><div>
+          <section class="m-doc-details" id="ac9295068ab11ba7b11e7d18f453298bc"><div>
             <h3>
-              <span class="m-dox-wrap-bumper"><a href="class_rubeus_1_1_awerere_1_1_a_collide_data.html" class="m-dox">ACollideData</a> Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#ac9295068ab11ba7b11e7d18f453298bc" class="m-dox-self">tryIntersect</a>(</span><span class="m-dox-wrap"><a href="class_rubeus_1_1_awerere_1_1_a_box_collider.html" class="m-dox">ABoxCollider</a>&amp; box) <span class="m-label m-warning">pure virtual</span></span></span>
+              <span class="m-doc-wrap-bumper"><a href="class_rubeus_1_1_awerere_1_1_a_collide_data.html" class="m-doc">ACollideData</a> Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ac9295068ab11ba7b11e7d18f453298bc" class="m-doc-self">tryIntersect</a>(</span><span class="m-doc-wrap"><a href="class_rubeus_1_1_awerere_1_1_a_box_collider.html" class="m-doc">ABoxCollider</a>&amp; box) <span class="m-label m-warning">pure virtual</span></span></span>
             </h3>
             <p>Query collision status with another box type collider.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -256,9 +286,9 @@
             </table>
 <aside class="m-note m-danger"><h4>Warning</h4><p>Requires a 2D box collider</p></aside>
           </div></section>
-          <section class="m-dox-details" id="a5a6b4e7886914d394913e570ecbf1fb4"><div>
+          <section class="m-doc-details" id="a5a6b4e7886914d394913e570ecbf1fb4"><div>
             <h3>
-              <span class="m-dox-wrap-bumper"><a href="class_rubeus_1_1_awerere_1_1_a_collide_data.html" class="m-dox">ACollideData</a> Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#a5a6b4e7886914d394913e570ecbf1fb4" class="m-dox-self">tryIntersect</a>(</span><span class="m-dox-wrap"><a href="class_rubeus_1_1_awerere_1_1_a_sphere_collider.html" class="m-dox">ASphereCollider</a>&amp; sphere) <span class="m-label m-warning">pure virtual</span></span></span>
+              <span class="m-doc-wrap-bumper"><a href="class_rubeus_1_1_awerere_1_1_a_collide_data.html" class="m-doc">ACollideData</a> Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5a6b4e7886914d394913e570ecbf1fb4" class="m-doc-self">tryIntersect</a>(</span><span class="m-doc-wrap"><a href="class_rubeus_1_1_awerere_1_1_a_sphere_collider.html" class="m-doc">ASphereCollider</a>&amp; sphere) <span class="m-label m-warning">pure virtual</span></span></span>
             </h3>
             <p>Query collision status with another sphere type collider.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -280,9 +310,9 @@
             </table>
 <aside class="m-note m-danger"><h4>Warning</h4><p>Requires a 3D sphere collider (circle colliders will work too)</p></aside>
           </div></section>
-          <section class="m-dox-details" id="a18c5893ff435d68cb7495f9c9ddd6d48"><div>
+          <section class="m-doc-details" id="a18c5893ff435d68cb7495f9c9ddd6d48"><div>
             <h3>
-              <span class="m-dox-wrap-bumper"><a href="class_rubeus_1_1_awerere_1_1_a_collide_data.html" class="m-dox">ACollideData</a> Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#a18c5893ff435d68cb7495f9c9ddd6d48" class="m-dox-self">tryIntersect</a>(</span><span class="m-dox-wrap"><a href="class_rubeus_1_1_awerere_1_1_a_plane_collider.html" class="m-dox">APlaneCollider</a>&amp; plane) <span class="m-label m-warning">pure virtual</span></span></span>
+              <span class="m-doc-wrap-bumper"><a href="class_rubeus_1_1_awerere_1_1_a_collide_data.html" class="m-doc">ACollideData</a> Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a18c5893ff435d68cb7495f9c9ddd6d48" class="m-doc-self">tryIntersect</a>(</span><span class="m-doc-wrap"><a href="class_rubeus_1_1_awerere_1_1_a_plane_collider.html" class="m-doc">APlaneCollider</a>&amp; plane) <span class="m-label m-warning">pure virtual</span></span></span>
             </h3>
             <p>Query collision status with another plane type collider.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -304,9 +334,9 @@
             </table>
 <aside class="m-note m-danger"><h4>Warning</h4><p>Requires a 2D plane collider (straight line)</p></aside>
           </div></section>
-          <section class="m-dox-details" id="a5f81c81e2a0675319f56a73e30a34e92"><div>
+          <section class="m-doc-details" id="a5f81c81e2a0675319f56a73e30a34e92"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">void Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#a5f81c81e2a0675319f56a73e30a34e92" class="m-dox-self">update</a>(</span><span class="m-dox-wrap">const float&amp; deltaTime)</span></span>
+              <span class="m-doc-wrap-bumper">void Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5f81c81e2a0675319f56a73e30a34e92" class="m-doc-self">update</a>(</span><span class="m-doc-wrap">const float&amp; deltaTime)</span></span>
             </h3>
             <p>Update the collider member positions.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -321,9 +351,9 @@
               </tbody>
             </table>
           </div></section>
-          <section class="m-dox-details" id="ab0088d47ab69b3ecb0b0a020de8c33d6"><div>
+          <section class="m-doc-details" id="ab0088d47ab69b3ecb0b0a020de8c33d6"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">void Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#ab0088d47ab69b3ecb0b0a020de8c33d6" class="m-dox-self">selfUpdate</a>(</span><span class="m-dox-wrap">float deltaX,
+              <span class="m-doc-wrap-bumper">void Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab0088d47ab69b3ecb0b0a020de8c33d6" class="m-doc-self">selfUpdate</a>(</span><span class="m-doc-wrap">float deltaX,
               float deltaY) <span class="m-label m-warning">pure virtual</span></span></span>
             </h3>
             <p>Update the collider position for members specific to a collider type.</p>
@@ -344,9 +374,9 @@
             </table>
 <aside class="m-note m-danger"><h4>Warning</h4><p>Defined differently for each collider</p></aside>
           </div></section>
-          <section class="m-dox-details" id="a0f91e5056fe7e045865ac60149b83498"><div>
+          <section class="m-doc-details" id="a0f91e5056fe7e045865ac60149b83498"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">void Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#a0f91e5056fe7e045865ac60149b83498" class="m-dox-self">addImpulse</a>(</span><span class="m-dox-wrap"><a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a>&amp; impulse)</span></span>
+              <span class="m-doc-wrap-bumper">void Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a0f91e5056fe7e045865ac60149b83498" class="m-doc-self">addImpulse</a>(</span><span class="m-doc-wrap"><a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>&amp; impulse)</span></span>
             </h3>
             <p>Add an impulse to this object.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -361,9 +391,9 @@
               </tbody>
             </table>
           </div></section>
-          <section class="m-dox-details" id="add6aa6d6bf8e9c47bb5f9262c048d3e3"><div>
+          <section class="m-doc-details" id="aa27892e6a9b0705899cd99ef5e891497"><div>
             <h3>
-              <span class="m-dox-wrap-bumper"><a href="struct_r_m_l_1_1_vector3_d.html" class="m-dox">RML::<wbr />Vector3D</a> Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#add6aa6d6bf8e9c47bb5f9262c048d3e3" class="m-dox-self">getPosition</a>(</span><span class="m-dox-wrap">) const</span></span>
+              <span class="m-doc-wrap-bumper"><a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a> Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aa27892e6a9b0705899cd99ef5e891497" class="m-doc-self">getPosition</a>(</span><span class="m-doc-wrap">) const</span></span>
             </h3>
             <p>Returns the position of this collider.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -375,9 +405,9 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-dox-details" id="af7297ef1a5bcc7a82a8c8110a707d37a"><div>
+          <section class="m-doc-details" id="af7297ef1a5bcc7a82a8c8110a707d37a"><div>
             <h3>
-              <span class="m-dox-wrap-bumper"><a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a> Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#af7297ef1a5bcc7a82a8c8110a707d37a" class="m-dox-self">getMomentum</a>(</span><span class="m-dox-wrap">) const</span></span>
+              <span class="m-doc-wrap-bumper"><a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a> Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af7297ef1a5bcc7a82a8c8110a707d37a" class="m-doc-self">getMomentum</a>(</span><span class="m-doc-wrap">) const</span></span>
             </h3>
             <p>Returns the momentum of this position.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -389,9 +419,9 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-dox-details" id="a8d4f849d8d22325ac84e8f9d3ecaa74b"><div>
+          <section class="m-doc-details" id="a8d4f849d8d22325ac84e8f9d3ecaa74b"><div>
             <h3>
-              <span class="m-dox-wrap-bumper"><a href="namespace_rubeus_1_1_awerere.html#aa31f43f0fcc41516bb0aa51cb1d88a08" class="m-dox">EColliderType</a> Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#a8d4f849d8d22325ac84e8f9d3ecaa74b" class="m-dox-self">getType</a>(</span><span class="m-dox-wrap">) const</span></span>
+              <span class="m-doc-wrap-bumper"><a href="namespace_rubeus_1_1_awerere.html#aa31f43f0fcc41516bb0aa51cb1d88a08" class="m-doc">EColliderType</a> Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a8d4f849d8d22325ac84e8f9d3ecaa74b" class="m-doc-self">getType</a>(</span><span class="m-doc-wrap">) const</span></span>
             </h3>
             <p>Returns the type of this collider.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -403,9 +433,9 @@
               </tfoot>
             </table>
           </div></section>
-          <section class="m-dox-details" id="aebc1dbcdc45a252b38415d3bf23be6b3"><div>
+          <section class="m-doc-details" id="ae9f4a75a38feebd333e4f9fefacb5117"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">void Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#aebc1dbcdc45a252b38415d3bf23be6b3" class="m-dox-self">setPosition</a>(</span><span class="m-dox-wrap">const <a href="struct_r_m_l_1_1_vector3_d.html" class="m-dox">RML::<wbr />Vector3D</a>&amp; position)</span></span>
+              <span class="m-doc-wrap-bumper">void Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae9f4a75a38feebd333e4f9fefacb5117" class="m-doc-self">setPosition</a>(</span><span class="m-doc-wrap">const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>&amp; position)</span></span>
             </h3>
             <p>Set the position of this collider.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -420,9 +450,9 @@
               </tbody>
             </table>
           </div></section>
-          <section class="m-dox-details" id="a0293d08639bec4bdd80700da27962855"><div>
+          <section class="m-doc-details" id="a0293d08639bec4bdd80700da27962855"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">void Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#a0293d08639bec4bdd80700da27962855" class="m-dox-self">setMomentum</a>(</span><span class="m-dox-wrap">const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a>&amp; momentum)</span></span>
+              <span class="m-doc-wrap-bumper">void Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a0293d08639bec4bdd80700da27962855" class="m-doc-self">setMomentum</a>(</span><span class="m-doc-wrap">const <a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>&amp; momentum)</span></span>
             </h3>
             <p>Set the momentum of this collider.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -437,9 +467,9 @@
               </tbody>
             </table>
           </div></section>
-          <section class="m-dox-details" id="afc3bb37605b7032fa75164eea443a199"><div>
+          <section class="m-doc-details" id="afc3bb37605b7032fa75164eea443a199"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">void Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#afc3bb37605b7032fa75164eea443a199" class="m-dox-self">setMaterial</a>(</span><span class="m-dox-wrap">const <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html" class="m-dox">APhysicsMaterial</a>&amp; physicsMat)</span></span>
+              <span class="m-doc-wrap-bumper">void Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#afc3bb37605b7032fa75164eea443a199" class="m-doc-self">setMaterial</a>(</span><span class="m-doc-wrap">const <a href="class_rubeus_1_1_awerere_1_1_a_physics_material.html" class="m-doc">APhysicsMaterial</a>&amp; physicsMat)</span></span>
             </h3>
             <p>Set a custom physics material for this collider.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -454,9 +484,9 @@
               </tbody>
             </table>
           </div></section>
-          <section class="m-dox-details" id="af4393723cdffa3620d8e3deb3e3fe92f"><div>
+          <section class="m-doc-details" id="af4393723cdffa3620d8e3deb3e3fe92f"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">void Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#af4393723cdffa3620d8e3deb3e3fe92f" class="m-dox-self">addForce</a>(</span><span class="m-dox-wrap"><a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a>&amp; force)</span></span>
+              <span class="m-doc-wrap-bumper">void Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af4393723cdffa3620d8e3deb3e3fe92f" class="m-doc-self">addForce</a>(</span><span class="m-doc-wrap"><a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>&amp; force)</span></span>
             </h3>
             <p>Add a force on this collider.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -471,9 +501,9 @@
               </tbody>
             </table>
           </div></section>
-          <section class="m-dox-details" id="ac65dfdf1c393552fe031af59af2a76cf"><div>
+          <section class="m-doc-details" id="ac65dfdf1c393552fe031af59af2a76cf"><div>
             <h3>
-              <span class="m-dox-wrap-bumper">void Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#ac65dfdf1c393552fe031af59af2a76cf" class="m-dox-self">addMomentum</a>(</span><span class="m-dox-wrap"><a href="struct_r_m_l_1_1_vector2_d.html" class="m-dox">RML::<wbr />Vector2D</a>&amp; momentum)</span></span>
+              <span class="m-doc-wrap-bumper">void Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ac65dfdf1c393552fe031af59af2a76cf" class="m-doc-self">addMomentum</a>(</span><span class="m-doc-wrap"><a href="struct_r_m_l_1_1_vector2_d.html" class="m-doc">RML::<wbr />Vector2D</a>&amp; momentum)</span></span>
             </h3>
             <p>Add momentum to this collider.</p>
             <table class="m-table m-fullwidth m-flat">
@@ -488,30 +518,68 @@
               </tbody>
             </table>
           </div></section>
+          <section class="m-doc-details" id="a13f5fe3d240e030b4e2b00314864f1ee"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a13f5fe3d240e030b4e2b00314864f1ee" class="m-doc-self">setZIndex</a>(</span><span class="m-doc-wrap">const unsigned int&amp; zindex)</span></span>
+            </h3>
+            <p>Sets z-index of collider.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">zindex</td>
+                  <td>z-index to be assigned.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a7ec684e4dc6e20edec21599d7fa51cdd"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">unsigned int Rubeus::<wbr />Awerere::<wbr />ACollider::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7ec684e4dc6e20edec21599d7fa51cdd" class="m-doc-self">getZIndex</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <p>Returns the z-index of this collider.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>z-index of this collider</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
         </section>
       </div>
     </div>
   </div>
 </article></main>
-<div class="m-dox-search" id="search">
+<div class="m-doc-search" id="search">
   <a href="#!" onclick="return hideSearch()"></a>
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-m-8 m-push-m-2">
-        <div class="m-dox-search-header m-text m-small">
+        <div class="m-doc-search-header m-text m-small">
           <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
           <div id="search-symbolcount">&hellip;</div>
         </div>
-        <div class="m-dox-search-content">
-          <input type="search" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" />
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
           <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
           <div id="search-help" class="m-text m-dim m-text-center">
-            Search for symbols, directories, files, pages or modules. You can omit any
-            prefix from the symbol or file path; adding a <code>:</code> or <code>/</code>
-            suffix lists all members of given symbol or directory. Navigate through the
-            list using <span class="m-label m-dim">&darr;</span> and
-            <span class="m-label m-dim">&uarr;</span>, press
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
             <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
           </div>
           <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
           <ul id="search-results"></ul>
@@ -520,13 +588,13 @@
     </div>
   </div>
 </div>
-<script src="search.js"></script>
-<script src="searchdata.js" async="async"></script>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
 <footer><nav>
   <div class="m-container">
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
-        <p>Rubeus. Created by <a href="https://doxygen.org/">Doxygen</a> 1.8.15 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+        <p>Rubeus. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.15 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
       </div>
     </div>
   </div>

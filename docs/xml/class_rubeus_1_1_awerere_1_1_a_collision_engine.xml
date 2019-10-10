@@ -15,11 +15,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" line="33" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" bodystart="33" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" line="33" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" bodystart="33" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a0cc178f2ff620f890469c894520855eb" prot="private" static="no" mutable="no">
-        <type>std::vector&lt; <ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref> * &gt;</type>
-        <definition>std::vector&lt;RGameObject *&gt; Rubeus::Awerere::ACollisionEngine::m_GameObjects</definition>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a6ef8c4193613552c8284fd354a84e502" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref> * &gt; *</type>
+        <definition>std::vector&lt;RGameObject *&gt;* Rubeus::Awerere::ACollisionEngine::m_GameObjects</definition>
         <argsstring></argsstring>
         <name>m_GameObjects</name>
         <briefdescription>
@@ -28,11 +28,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" line="36" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" bodystart="36" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" line="36" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" bodystart="36" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a195fb2d2610222f8e87a294561b9e3cf" prot="private" static="no" mutable="no">
-        <type>std::vector&lt; <ref refid="class_rubeus_1_1_awerere_1_1_a_flag" kindref="compound">AFlag</ref> &gt;</type>
-        <definition>std::vector&lt;AFlag&gt; Rubeus::Awerere::ACollisionEngine::m_XFlags</definition>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a00151a20fe7c5beb9899151cd65ca2c1" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_rubeus_1_1_awerere_1_1_a_flag" kindref="compound">AFlag</ref> * &gt;</type>
+        <definition>std::vector&lt;AFlag *&gt; Rubeus::Awerere::ACollisionEngine::m_XFlags</definition>
         <argsstring></argsstring>
         <name>m_XFlags</name>
         <briefdescription>
@@ -41,11 +41,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" line="39" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" bodystart="39" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" line="39" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" bodystart="39" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a3addb06f0dca03463a0fa2b3a4aaad84" prot="private" static="no" mutable="no">
-        <type>std::vector&lt; <ref refid="class_rubeus_1_1_awerere_1_1_a_flag" kindref="compound">AFlag</ref> &gt;</type>
-        <definition>std::vector&lt;AFlag&gt; Rubeus::Awerere::ACollisionEngine::m_YFlags</definition>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a99848831937a1171af7103e6167780e0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_rubeus_1_1_awerere_1_1_a_flag" kindref="compound">AFlag</ref> * &gt;</type>
+        <definition>std::vector&lt;AFlag *&gt; Rubeus::Awerere::ACollisionEngine::m_YFlags</definition>
         <argsstring></argsstring>
         <name>m_YFlags</name>
         <briefdescription>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" line="42" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" bodystart="42" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" line="42" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -69,17 +69,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" line="44" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" bodystart="44" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" line="44" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_collision_engine_1ae32f0c7d77c6ec909d87d1d713f041d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a9a43b405e797ef03e824b44d44f7d1d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>Rubeus::Awerere::ACollisionEngine::ACollisionEngine</definition>
-        <argsstring>(std::vector&lt; RGameObject *&gt; &amp;gameObjects, const float &amp;gridHeight, const float &amp;gridWidth, const float &amp;cellHeight, const float &amp;cellWidth)</argsstring>
+        <argsstring>(const std::vector&lt; RGameObject *&gt; &amp;gameObjects, const float &amp;gridHeight, const float &amp;gridWidth, const float &amp;cellHeight, const float &amp;cellWidth)</argsstring>
         <name>ACollisionEngine</name>
         <param>
-          <type>std::vector&lt; <ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref> *&gt; &amp;</type>
+          <type>const std::vector&lt; <ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref> *&gt; &amp;</type>
           <declname>gameObjects</declname>
         </param>
         <param>
@@ -140,7 +140,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" line="59" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_collision_engine.cpp" bodystart="17" bodyend="37"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" line="59" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.cpp" bodystart="17" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a2936d5dc03b4aaa5fdfb3ee09549156b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -153,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" line="66" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_collision_engine.cpp" bodystart="39" bodyend="41"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" line="66" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.cpp" bodystart="39" bodyend="50"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_collision_engine_1affca621eb858280450ef062113489db8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -179,7 +179,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" line="76" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_collision_engine.cpp" bodystart="43" bodyend="56"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" line="76" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.cpp" bodystart="52" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a7cbbee2bec17e37f9a81932014cafd99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -204,7 +204,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" line="85" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_collision_engine.cpp" bodystart="58" bodyend="98"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" line="85" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.cpp" bodystart="67" bodyend="107"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a3264d72341c146ad798917e3c99ba7af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -217,7 +217,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" line="92" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_collision_engine.cpp" bodystart="100" bodyend="112"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" line="92" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.cpp" bodystart="109" bodyend="123"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a43d66552404118da1e887932f59f5511" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -253,7 +253,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" line="102" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_collision_engine.cpp" bodystart="114" bodyend="269"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" line="102" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.cpp" bodystart="125" bodyend="280"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a5746ede74951390f775e2eeb8c917056" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_rubeus_1_1_awerere_1_1_a_collide_data" kindref="compound">ACollideData</ref></type>
@@ -313,15 +313,15 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" line="117" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_collision_engine.cpp" bodystart="271" bodyend="320"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" line="117" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.cpp" bodystart="282" bodyend="331"/>
       </memberdef>
-      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_collision_engine_1ac0e5a4aefa5601396a77a88c108b14f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a3255526d3d15fd23a5464ac1e2cf271b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
         <definition>void Rubeus::Awerere::ACollisionEngine::setGameObjectArray</definition>
-        <argsstring>(std::vector&lt; RGameObject *&gt; gameObjects)</argsstring>
+        <argsstring>(std::vector&lt; RGameObject *&gt; &amp;gameObjects)</argsstring>
         <name>setGameObjectArray</name>
         <param>
-          <type>std::vector&lt; <ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref> *&gt;</type>
+          <type>std::vector&lt; <ref refid="class_rubeus_1_1_r_game_object" kindref="compound">RGameObject</ref> *&gt; &amp;</type>
           <declname>gameObjects</declname>
         </param>
         <briefdescription>
@@ -330,26 +330,26 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" line="126" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" bodystart="126" bodyend="126"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" line="126" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" bodystart="126" bodyend="126"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>The collision engine responsible for resolution of collisions and generating hit events. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" line="29" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h" bodystart="28" bodyend="130"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" line="29" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h" bodystart="28" bodyend="130"/>
     <listofallmembers>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_collision_engine_1ae32f0c7d77c6ec909d87d1d713f041d2" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ACollisionEngine</scope><name>ACollisionEngine</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a9a43b405e797ef03e824b44d44f7d1d2" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ACollisionEngine</scope><name>ACollisionEngine</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collision_engine_1aa17d5b7de6294890084566c09b7d5f3f" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::ACollisionEngine</scope><name>APhysicsEngine</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a7cbbee2bec17e37f9a81932014cafd99" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ACollisionEngine</scope><name>checkCollisions</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a3264d72341c146ad798917e3c99ba7af" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ACollisionEngine</scope><name>collisionResolution</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collision_engine_1ac659a15d829c9d14f1cd9142c93a175b" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::ACollisionEngine</scope><name>m_CollisionGrid</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a0cc178f2ff620f890469c894520855eb" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::ACollisionEngine</scope><name>m_GameObjects</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a195fb2d2610222f8e87a294561b9e3cf" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::ACollisionEngine</scope><name>m_XFlags</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a3addb06f0dca03463a0fa2b3a4aaad84" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::ACollisionEngine</scope><name>m_YFlags</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a6ef8c4193613552c8284fd354a84e502" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::ACollisionEngine</scope><name>m_GameObjects</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a00151a20fe7c5beb9899151cd65ca2c1" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::ACollisionEngine</scope><name>m_XFlags</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a99848831937a1171af7103e6167780e0" prot="private" virt="non-virtual"><scope>Rubeus::Awerere::ACollisionEngine</scope><name>m_YFlags</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a5746ede74951390f775e2eeb8c917056" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ACollisionEngine</scope><name>multiplexColliders</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a43d66552404118da1e887932f59f5511" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ACollisionEngine</scope><name>narrowPhaseResolution</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_collision_engine_1ac0e5a4aefa5601396a77a88c108b14f6" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ACollisionEngine</scope><name>setGameObjectArray</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a3255526d3d15fd23a5464ac1e2cf271b" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ACollisionEngine</scope><name>setGameObjectArray</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collision_engine_1affca621eb858280450ef062113489db8" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ACollisionEngine</scope><name>updateAndAssignFlags</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_collision_engine_1a2936d5dc03b4aaa5fdfb3ee09549156b" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::ACollisionEngine</scope><name>~ACollisionEngine</name></member>
     </listofallmembers>

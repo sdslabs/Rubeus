@@ -5,56 +5,86 @@
     <includes refid="logger__component_8h" local="no">logger_component.h</includes>
     <includes local="no">math.h</includes>
     <incdepgraph>
-      <node id="3729">
+      <node id="4432">
         <label>IL/il.h</label>
       </node>
-      <node id="3730">
+      <node id="4433">
         <label>IL/ilu.h</label>
       </node>
-      <node id="3727">
+      <node id="4422">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.cpp</label>
+        <link refid="logger__component_8cpp"/>
+        <childnode refid="4423" relation="include">
+        </childnode>
+        <childnode refid="4435" relation="include">
+        </childnode>
+      </node>
+      <node id="4426">
         <label>string</label>
       </node>
-      <node id="3728">
+      <node id="4431">
         <label>GL/glew.h</label>
       </node>
-      <node id="3726">
-        <label>string.h</label>
+      <node id="4427">
+        <label>map</label>
       </node>
-      <node id="3723">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/logger_component.cpp</label>
-        <link refid="logger__component_8cpp"/>
-        <childnode refid="3724" relation="include">
-        </childnode>
-        <childnode refid="3731" relation="include">
-        </childnode>
-      </node>
-      <node id="3731">
-        <label>math.h</label>
-      </node>
-      <node id="3725">
-        <label>iostream</label>
-      </node>
-      <node id="3724">
+      <node id="4423">
         <label>logger_component.h</label>
         <link refid="logger__component_8h"/>
-        <childnode refid="3725" relation="include">
+        <childnode refid="4424" relation="include">
         </childnode>
-        <childnode refid="3726" relation="include">
+        <childnode refid="4425" relation="include">
         </childnode>
-        <childnode refid="3727" relation="include">
+        <childnode refid="4426" relation="include">
         </childnode>
-        <childnode refid="3728" relation="include">
+        <childnode refid="4427" relation="include">
         </childnode>
-        <childnode refid="3729" relation="include">
+        <childnode refid="4428" relation="include">
         </childnode>
-        <childnode refid="3730" relation="include">
+        <childnode refid="4429" relation="include">
+        </childnode>
+        <childnode refid="4430" relation="include">
+        </childnode>
+        <childnode refid="4431" relation="include">
+        </childnode>
+        <childnode refid="4432" relation="include">
+        </childnode>
+        <childnode refid="4433" relation="include">
+        </childnode>
+        <childnode refid="4434" relation="include">
         </childnode>
       </node>
+      <node id="4428">
+        <label>fstream</label>
+      </node>
+      <node id="4425">
+        <label>string.h</label>
+      </node>
+      <node id="4429">
+        <label>ctime</label>
+      </node>
+      <node id="4435">
+        <label>math.h</label>
+      </node>
+      <node id="4424">
+        <label>iostream</label>
+      </node>
+      <node id="4434">
+        <label>game.h</label>
+        <link refid="game_8h"/>
+        <childnode refid="4426" relation="include">
+        </childnode>
+      </node>
+      <node id="4430">
+        <label>experimental/filesystem</label>
+      </node>
     </incdepgraph>
+    <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
+    <innernamespace refid="namespace_rubeus_1_1_utility_components">Rubeus::UtilityComponents</innernamespace>
       <sectiondef kind="func">
-      <memberdef kind="function" id="logger__component_8cpp_1a299d6947bc18d65c9e2b83ec1c38dbf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="logger__component_8cpp_1a5eca9f3b145e0d6a208c67c80493804e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
-        <definition>int toHex</definition>
+        <definition>static int toHex</definition>
         <argsstring>(int decimal)</argsstring>
         <name>toHex</name>
         <param>
@@ -76,11 +106,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/logger_component.cpp" line="10" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/logger_component.cpp" bodystart="10" bodyend="21"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.cpp" line="11" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.cpp" bodystart="11" bodyend="22"/>
       </memberdef>
-      <memberdef kind="function" id="logger__component_8cpp_1a6103a9a9cceabf330103f2502f088649" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="logger__component_8cpp_1ab05574ce178db83adf89cd74ee93fdf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void GLClearError</definition>
+        <definition>static void GLClearError</definition>
         <argsstring>()</argsstring>
         <name>GLClearError</name>
         <briefdescription>
@@ -89,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/logger_component.cpp" line="23" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/logger_component.cpp" bodystart="23" bodyend="27"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.cpp" line="24" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.cpp" bodystart="24" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="logger__component_8cpp_1a3f5bf6cd6f7b15ed36da100f3ee029ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -102,13 +132,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/logger_component.cpp" line="29" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/logger_component.cpp" bodystart="29" bodyend="33"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.cpp" line="30" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.cpp" bodystart="30" bodyend="34"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Implements the logger component functions. </para>    </briefdescription>
+    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/logger_component.cpp"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/logger_component.cpp"/>
   </compounddef>
 </doxygen>

@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="struct_rubeus_1_1_signal_signature" kind="struct" language="C++" prot="public">
+    <compoundname>Rubeus::SignalSignature</compoundname>
+    <includes refid="message__codes_8h" local="no">message_codes.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_rubeus_1_1_signal_signature_1a59b9df0625f74ac49418d4fa295be6c5" prot="public" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref> *</type>
+        <definition>RMasterComponent* Rubeus::SignalSignature::m_Receiver</definition>
+        <argsstring></argsstring>
+        <name>m_Receiver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.h" line="29" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_rubeus_1_1_signal_signature_1a49acc4bbb7f22b7acd5969a2b80228da" prot="public" static="no" mutable="no">
+        <type>std::function&lt; void(<ref refid="message__codes_8h_1a69899082fd1cf504645a65a3cc00c9e5" kindref="member">var</ref>)&gt;</type>
+        <definition>std::function&lt;void(var)&gt; Rubeus::SignalSignature::function</definition>
+        <argsstring></argsstring>
+        <name>function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.h" line="30" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_rubeus_1_1_signal_signature_1a162bfaf2e0f9cd2512489d68830ee9aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::SignalSignature::SignalSignature</definition>
+        <argsstring>(RMasterComponent *Receiver, std::function&lt; void(var)&gt; command_func)</argsstring>
+        <name>SignalSignature</name>
+        <param>
+          <type><ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref> *</type>
+          <declname>Receiver</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void(<ref refid="message__codes_8h_1a69899082fd1cf504645a65a3cc00c9e5" kindref="member">var</ref>)&gt;</type>
+          <declname>command_func</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.h" line="32" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.cpp" bodystart="9" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_rubeus_1_1_signal_signature_1aa02abd4951ac1752fc0581b9a0f2c386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::SignalSignature::~SignalSignature</definition>
+        <argsstring>()</argsstring>
+        <name>~SignalSignature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.h" line="34" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="380">
+        <label>Rubeus::SignalSignature</label>
+        <link refid="struct_rubeus_1_1_signal_signature"/>
+        <childnode refid="381" relation="usage">
+          <edgelabel>m_Receiver</edgelabel>
+        </childnode>
+      </node>
+      <node id="382">
+        <label>Rubeus::RMailingList</label>
+        <link refid="class_rubeus_1_1_r_mailing_list"/>
+      </node>
+      <node id="384">
+        <label>Rubeus::RMessageBus</label>
+        <link refid="class_rubeus_1_1_r_message_bus"/>
+      </node>
+      <node id="383">
+        <label>Rubeus::RMessageSystem</label>
+        <link refid="class_rubeus_1_1_r_message_system"/>
+        <childnode refid="384" relation="usage">
+          <edgelabel>m_MessageBus</edgelabel>
+        </childnode>
+      </node>
+      <node id="381">
+        <label>Rubeus::RMasterComponent</label>
+        <link refid="class_rubeus_1_1_r_master_component"/>
+        <childnode refid="382" relation="usage">
+          <edgelabel>m_mailbox</edgelabel>
+        </childnode>
+        <childnode refid="383" relation="usage">
+          <edgelabel>m_MessageSystem</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.h" line="28" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.h" bodystart="27" bodyend="36"/>
+    <listofallmembers>
+      <member refid="struct_rubeus_1_1_signal_signature_1a49acc4bbb7f22b7acd5969a2b80228da" prot="public" virt="non-virtual"><scope>Rubeus::SignalSignature</scope><name>function</name></member>
+      <member refid="struct_rubeus_1_1_signal_signature_1a59b9df0625f74ac49418d4fa295be6c5" prot="public" virt="non-virtual"><scope>Rubeus::SignalSignature</scope><name>m_Receiver</name></member>
+      <member refid="struct_rubeus_1_1_signal_signature_1a162bfaf2e0f9cd2512489d68830ee9aa" prot="public" virt="non-virtual"><scope>Rubeus::SignalSignature</scope><name>SignalSignature</name></member>
+      <member refid="struct_rubeus_1_1_signal_signature_1aa02abd4951ac1752fc0581b9a0f2c386" prot="public" virt="non-virtual"><scope>Rubeus::SignalSignature</scope><name>~SignalSignature</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

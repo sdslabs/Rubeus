@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/master_component.h" line="31" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/master_component.h" bodystart="31" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.h" line="31" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-attrib">
@@ -39,7 +39,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/master_component.h" line="35" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/master_component.h" bodystart="35" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.h" line="35" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_r_master_component_1adcb2a179fd09797acff84882cbfdea15" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_rubeus_1_1_r_mailing_list" kindref="compound">RMailingList</ref></type>
+        <definition>RMailingList Rubeus::RMasterComponent::m_mailbox</definition>
+        <argsstring></argsstring>
+        <name>m_mailbox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.h" line="36" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_r_master_component_1aa8456741bb2402650fc8726cd6768803" prot="public" static="yes" mutable="no">
         <type>unsigned int</type>
@@ -53,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/master_component.h" line="38" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/master_component.h" bodystart="38" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.h" line="39" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -68,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/master_component.h" line="45" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/master_component.cpp" bodystart="14" bodyend="18"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.h" line="46" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.cpp" bodystart="15" bodyend="19"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_master_component_1a03a8ba150ef34447b3c7d22f10dca93a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -81,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/master_component.h" line="52" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/master_component.cpp" bodystart="20" bodyend="22"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.h" line="53" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.cpp" bodystart="21" bodyend="23"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_master_component_1ada4b85021d96ac2c2153e613d5f14097" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -94,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/master_component.h" line="61" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/master_component.cpp" bodystart="24" bodyend="27"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.h" line="62" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.cpp" bodystart="25" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_r_master_component_1ad3c9003c4bc64661ed9ae5961c8cf3fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>std::string</type>
@@ -108,41 +121,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/master_component.h" line="70" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/master_component.h" bodystart="70" bodyend="70"/>
-      </memberdef>
-      <memberdef kind="function" id="class_rubeus_1_1_r_master_component_1a129a5b04db723423b40cfd4780adcd35" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void Rubeus::RMasterComponent::onMessage</definition>
-        <argsstring>(Message *msg)</argsstring>
-        <name>onMessage</name>
-        <reimplementedby refid="classpaddle_1a07ed2362c3bbc53782eb46d711f94474">onMessage</reimplementedby>
-        <reimplementedby refid="classball_1a45ebc6576d95df0ce805464d63e79806">onMessage</reimplementedby>
-        <reimplementedby refid="class_rubeus_1_1_utility_components_1_1_r_loader_component_1a2ca4414ddba0b63415a14b2844d8a5a6">onMessage</reimplementedby>
-        <reimplementedby refid="class_rubeus_1_1_r_game_object_1aa066422f65deb25b9d75dac94f46ca50">onMessage</reimplementedby>
-        <reimplementedby refid="class_rubeus_1_1_r_engine_1a6e8d3d3fa2558e64a2ed2f3aea06f59b">onMessage</reimplementedby>
-        <reimplementedby refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a55b12b3208217709e571d6e7811de756">onMessage</reimplementedby>
-        <reimplementedby refid="class_rubeus_1_1_r_input_manager_1a5439f24e8e7324484a2ba50a7d9764ad">onMessage</reimplementedby>
-        <reimplementedby refid="class_rubeus_1_1_audio_components_1_1_r_symphony_1a7878d51e9364d7ae2268a9d11b0a8a31">onMessage</reimplementedby>
-        <param>
-          <type><ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref> *</type>
-          <declname>msg</declname>
-        </param>
-        <briefdescription>
-<para>Handles message from messaging system. </para>        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="warning"><para>Not intended to be used by the user, it may be overriden by child classes</para></simplesect>
-<parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>msg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The message object received. </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/master_component.h" line="89" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/master_component.cpp" bodystart="29" bodyend="32"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.h" line="71" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.h" bodystart="71" bodyend="71"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -166,7 +145,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/master_component.h" line="79" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/master_component.cpp" bodystart="34" bodyend="38"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.h" line="80" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.cpp" bodystart="30" bodyend="34"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -174,123 +153,124 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="229">
+      <node id="281">
         <label>Rubeus::GraphicComponents::RRendererComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component"/>
-        <childnode refid="227" relation="public-inheritance">
+        <childnode refid="279" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="228">
+      <node id="280">
         <label>Rubeus::AudioComponents::RSymphony</label>
         <link refid="class_rubeus_1_1_audio_components_1_1_r_symphony"/>
-        <childnode refid="227" relation="public-inheritance">
+        <childnode refid="279" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="230">
+      <node id="282">
         <label>Rubeus::GraphicComponents::RGuerrillaRendererComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component"/>
-        <childnode refid="229" relation="public-inheritance">
+        <childnode refid="281" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="239">
+      <node id="290">
         <label>Rubeus::RInputManager</label>
         <link refid="class_rubeus_1_1_r_input_manager"/>
-        <childnode refid="227" relation="public-inheritance">
+        <childnode refid="279" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="234">
+      <node id="286">
         <label>Rubeus::REngine</label>
         <link refid="class_rubeus_1_1_r_engine"/>
-        <childnode refid="227" relation="public-inheritance">
+        <childnode refid="279" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="240">
+      <node id="291">
         <label>Rubeus::UtilityComponents::RLoaderComponent</label>
         <link refid="class_rubeus_1_1_utility_components_1_1_r_loader_component"/>
-        <childnode refid="227" relation="public-inheritance">
+        <childnode refid="279" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="241">
+      <node id="292">
         <label>Rubeus::UtilityComponents::RTimer</label>
         <link refid="class_rubeus_1_1_utility_components_1_1_r_timer"/>
-        <childnode refid="227" relation="public-inheritance">
+        <childnode refid="279" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="236">
-        <label>ball</label>
-        <link refid="classball"/>
-        <childnode refid="235" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="233">
+      <node id="285">
         <label>Rubeus::GraphicComponents::RWindowComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_window_component"/>
-        <childnode refid="227" relation="public-inheritance">
+        <childnode refid="279" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="237">
-        <label>paddle</label>
-        <link refid="classpaddle"/>
-        <childnode refid="235" relation="public-inheritance">
+      <node id="288">
+        <label>Oball</label>
+        <link refid="class_oball"/>
+        <childnode refid="287" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="232">
+      <node id="284">
         <label>Rubeus::GraphicComponents::RShaderComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component"/>
-        <childnode refid="227" relation="public-inheritance">
+        <childnode refid="279" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="235">
+      <node id="287">
         <label>Rubeus::RGameObject</label>
         <link refid="class_rubeus_1_1_r_game_object"/>
-        <childnode refid="227" relation="public-inheritance">
+        <childnode refid="279" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="231">
+      <node id="283">
         <label>Rubeus::GraphicComponents::RSimpleRendererComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_simple_renderer_component"/>
-        <childnode refid="229" relation="public-inheritance">
+        <childnode refid="281" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="227">
+      <node id="279">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
       </node>
-      <node id="238">
-        <label>Rubeus::GraphicComponents::RGroup</label>
-        <link refid="class_rubeus_1_1_graphic_components_1_1_r_group"/>
-        <childnode refid="235" relation="public-inheritance">
+      <node id="289">
+        <label>Opaddle</label>
+        <link refid="class_opaddle"/>
+        <childnode refid="287" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="244">
+      <node id="294">
+        <label>Rubeus::RMailingList</label>
+        <link refid="class_rubeus_1_1_r_mailing_list"/>
+      </node>
+      <node id="296">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="243">
+      <node id="295">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="244" relation="usage">
+        <childnode refid="296" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="242">
+      <node id="293">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="243" relation="usage">
+        <childnode refid="294" relation="usage">
+          <edgelabel>m_mailbox</edgelabel>
+        </childnode>
+        <childnode refid="295" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/master_component.h" line="28" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/master_component.h" bodystart="27" bodyend="92"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.h" line="28" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/master_component.h" bodystart="27" bodyend="83"/>
     <listofallmembers>
       <member refid="class_rubeus_1_1_r_master_component_1aa8456741bb2402650fc8726cd6768803" prot="public" virt="non-virtual"><scope>Rubeus::RMasterComponent</scope><name>componentsInitialised</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1ada4b85021d96ac2c2153e613d5f14097" prot="public" virt="non-virtual"><scope>Rubeus::RMasterComponent</scope><name>getComponentID</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1ad3c9003c4bc64661ed9ae5961c8cf3fa" prot="public" virt="non-virtual"><scope>Rubeus::RMasterComponent</scope><name>getName</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1a838bceba7935bb3b11a5b69def0f0fc0" prot="protected" virt="non-virtual"><scope>Rubeus::RMasterComponent</scope><name>m_ComponentID</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1adcb2a179fd09797acff84882cbfdea15" prot="public" virt="non-virtual"><scope>Rubeus::RMasterComponent</scope><name>m_mailbox</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1aedb604c4ddfb8d2ba72ff493a74b7025" prot="public" virt="non-virtual"><scope>Rubeus::RMasterComponent</scope><name>m_MessageSystem</name></member>
-      <member refid="class_rubeus_1_1_r_master_component_1a129a5b04db723423b40cfd4780adcd35" prot="public" virt="virtual"><scope>Rubeus::RMasterComponent</scope><name>onMessage</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1a15e635fbf472c83463147b4f277eb492" prot="public" virt="non-virtual"><scope>Rubeus::RMasterComponent</scope><name>operator&lt;&lt;</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1aecd982f5c7361dbb23bcc8ac5ec6481c" prot="public" virt="non-virtual"><scope>Rubeus::RMasterComponent</scope><name>RMasterComponent</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1a03a8ba150ef34447b3c7d22f10dca93a" prot="public" virt="virtual"><scope>Rubeus::RMasterComponent</scope><name>~RMasterComponent</name></member>

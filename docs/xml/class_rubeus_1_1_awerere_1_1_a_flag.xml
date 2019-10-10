@@ -4,9 +4,22 @@
     <compoundname>Rubeus::Awerere::AFlag</compoundname>
     <includes refid="awerere__flag_8h" local="no">awerere_flag.h</includes>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_flag_1a4eb75ebb0c7559becf2fd5948ea6a250" prot="public" static="no" mutable="no">
-        <type>std::vector&lt; bool &gt;</type>
-        <definition>std::vector&lt;bool&gt; Rubeus::Awerere::AFlag::m_Data</definition>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_flag_1a5e1af1fd349a0a6822cacaa5bbd211d1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Rubeus::Awerere::AFlag::m_Size</definition>
+        <argsstring></argsstring>
+        <name>m_Size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_flag.h" line="25" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_flag.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_rubeus_1_1_awerere_1_1_a_flag_1a6de72d3d845758bf02da1c37dbd14706" prot="public" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* Rubeus::Awerere::AFlag::m_Data</definition>
         <argsstring></argsstring>
         <name>m_Data</name>
         <briefdescription>
@@ -15,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_flag.h" line="25" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_flag.h" bodystart="25" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_flag.h" line="26" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_flag.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -44,7 +57,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_flag.h" line="37" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_flag.cpp" bodystart="14" bodyend="20"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_flag.h" line="38" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_flag.cpp" bodystart="14" bodyend="17"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_flag_1a0e9eb803d966b6dd1dfa019c51a4edd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -57,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_flag.h" line="44" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_flag.cpp" bodystart="22" bodyend="24"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_flag.h" line="45" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_flag.cpp" bodystart="19" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_flag_1a187b8287e5ac2734b5e0fecc0a965b8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -84,11 +97,11 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_flag.h" line="56" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_flag.cpp" bodystart="26" bodyend="36"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_flag.h" line="57" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_flag.cpp" bodystart="24" bodyend="34"/>
       </memberdef>
-      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_flag_1a8a1dee9787d492dfb1f053d9727a3100" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
-        <type>const size_t &amp;</type>
-        <definition>const size_t &amp; Rubeus::Awerere::AFlag::getLength</definition>
+      <memberdef kind="function" id="class_rubeus_1_1_awerere_1_1_a_flag_1ac159f217a2a65b12586a43d578cc138c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Rubeus::Awerere::AFlag::getLength</definition>
         <argsstring>() const</argsstring>
         <name>getLength</name>
         <briefdescription>
@@ -98,18 +111,19 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_flag.h" line="65" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_flag.h" bodystart="65" bodyend="65"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_flag.h" line="66" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_flag.h" bodystart="66" bodyend="66"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Array based collection of collision flag used in grid based resolution. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_flag.h" line="21" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_flag.h" bodystart="20" bodyend="66"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_flag.h" line="21" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_flag.h" bodystart="20" bodyend="67"/>
     <listofallmembers>
       <member refid="class_rubeus_1_1_awerere_1_1_a_flag_1a5bf7736d7a10fd256a626ab46e393b11" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::AFlag</scope><name>AFlag</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_flag_1a8a1dee9787d492dfb1f053d9727a3100" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::AFlag</scope><name>getLength</name></member>
-      <member refid="class_rubeus_1_1_awerere_1_1_a_flag_1a4eb75ebb0c7559becf2fd5948ea6a250" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::AFlag</scope><name>m_Data</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_flag_1ac159f217a2a65b12586a43d578cc138c" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::AFlag</scope><name>getLength</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_flag_1a6de72d3d845758bf02da1c37dbd14706" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::AFlag</scope><name>m_Data</name></member>
+      <member refid="class_rubeus_1_1_awerere_1_1_a_flag_1a5e1af1fd349a0a6822cacaa5bbd211d1" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::AFlag</scope><name>m_Size</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_flag_1a187b8287e5ac2734b5e0fecc0a965b8b" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::AFlag</scope><name>operator*</name></member>
       <member refid="class_rubeus_1_1_awerere_1_1_a_flag_1a0e9eb803d966b6dd1dfa019c51a4edd7" prot="public" virt="non-virtual"><scope>Rubeus::Awerere::AFlag</scope><name>~AFlag</name></member>
     </listofallmembers>

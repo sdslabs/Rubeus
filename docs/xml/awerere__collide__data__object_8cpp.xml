@@ -4,39 +4,39 @@
     <compoundname>awerere_collide_data_object.cpp</compoundname>
     <includes refid="awerere__collide__data__object_8h" local="no">awerere_collide_data_object.h</includes>
     <incdepgraph>
-      <node id="3025">
-        <label>rubeus_maths_library.h</label>
-        <link refid="rubeus__maths__library_8h"/>
-        <childnode refid="3026" relation="include">
-        </childnode>
-        <childnode refid="3027" relation="include">
-        </childnode>
-      </node>
-      <node id="3026">
-        <label>math.h</label>
-      </node>
-      <node id="3023">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_collide_data_object.cpp</label>
-        <link refid="awerere__collide__data__object_8cpp"/>
-        <childnode refid="3024" relation="include">
-        </childnode>
-      </node>
-      <node id="3027">
-        <label>iostream</label>
-      </node>
-      <node id="3024">
+      <node id="1268">
         <label>awerere_collide_data_object.h</label>
         <link refid="awerere__collide__data__object_8h"/>
-        <childnode refid="3025" relation="include">
+        <childnode refid="1269" relation="include">
         </childnode>
+      </node>
+      <node id="1267">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collide_data_object.cpp</label>
+        <link refid="awerere__collide__data__object_8cpp"/>
+        <childnode refid="1268" relation="include">
+        </childnode>
+      </node>
+      <node id="1269">
+        <label>rubeus_maths_library.h</label>
+        <link refid="rubeus__maths__library_8h"/>
+        <childnode refid="1270" relation="include">
+        </childnode>
+        <childnode refid="1271" relation="include">
+        </childnode>
+      </node>
+      <node id="1270">
+        <label>math.h</label>
+      </node>
+      <node id="1271">
+        <label>iostream</label>
       </node>
     </incdepgraph>
     <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
     <innernamespace refid="namespace_rubeus_1_1_awerere">Rubeus::Awerere</innernamespace>
     <briefdescription>
-<para>Defines the Collide data class. </para>    </briefdescription>
+    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_collide_data_object.cpp"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collide_data_object.cpp"/>
   </compounddef>
 </doxygen>

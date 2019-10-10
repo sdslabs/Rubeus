@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_rubeus_1_1_r_game" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Rubeus::RGame</compoundname>
+    <derivedcompoundref refid="class_ping_pong" prot="private" virt="non-virtual">PingPong</derivedcompoundref>
+    <includes refid="game_8h" local="no">game.h</includes>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_r_game_1a33c11ae1b625e473f080b17ff8598764" prot="protected" static="yes" mutable="no">
+        <type><ref refid="class_rubeus_1_1_r_game" kindref="compound">RGame</ref> *</type>
+        <definition>RGame * Rubeus::RGame::CurrentGame</definition>
+        <argsstring></argsstring>
+        <name>CurrentGame</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" line="13" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_r_game_1a906da7ba26d716f62845031f94ffbf14" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_rubeus_1_1_r_engine" kindref="compound">REngine</ref> *</type>
+        <definition>REngine* Rubeus::RGame::m_Engine</definition>
+        <argsstring></argsstring>
+        <name>m_Engine</name>
+        <briefdescription>
+<para>The entirety of the <ref refid="namespace_rubeus" kindref="compound">Rubeus</ref> Engine. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" line="16" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_r_game_1acb5b535e9592433911a6a1547311c6a3" prot="public" static="yes" mutable="no">
+        <type><ref refid="class_rubeus_1_1_r_level" kindref="compound">RLevel</ref> *</type>
+        <definition>RLevel * Rubeus::RGame::CurrentLevel</definition>
+        <argsstring></argsstring>
+        <name>CurrentLevel</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" line="19" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_rubeus_1_1_r_game_1a4bacfc9ce11453af49a35178f94f04ca" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Rubeus::RGame::m_StartupLevel</definition>
+        <argsstring></argsstring>
+        <name>m_StartupLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" line="20" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_rubeus_1_1_r_game_1ab1cfe034d8d52a40e69aa3be5cd25ccb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Rubeus::RGame::init</definition>
+        <argsstring>()=0</argsstring>
+        <name>init</name>
+        <reimplementedby refid="class_ping_pong_1a2974aeca717d1c07895e22a029d76d01">init</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_game_1a2c5b9c5d2d82fd12962492e1eaeebbdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Rubeus::RGame::end</definition>
+        <argsstring>()=0</argsstring>
+        <name>end</name>
+        <reimplementedby refid="class_ping_pong_1af40e44cbfd84e5f52abac1d4d786476f">end</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_game_1a0d9300002340845eefaf9df52c116bf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::RGame::RGame</definition>
+        <argsstring>()</argsstring>
+        <name>RGame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" line="25" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.cpp" bodystart="10" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_game_1a6468de70f44f2db947f064546d1aa4b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Rubeus::RGame::~RGame</definition>
+        <argsstring>()</argsstring>
+        <name>~RGame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" line="26" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.cpp" bodystart="18" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_rubeus_1_1_r_game_1a6a8aaf5782cc577570ea632ab6526b3f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_rubeus_1_1_r_game" kindref="compound">RGame</ref> *</type>
+        <definition>static RGame* Rubeus::RGame::getActiveGame</definition>
+        <argsstring>()</argsstring>
+        <name>getActiveGame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" line="28" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_game_1a1a494cfeb303fffde5cc00c793876f39" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_rubeus_1_1_r_level" kindref="compound">RLevel</ref> *</type>
+        <definition>static RLevel* Rubeus::RGame::getActiveLevel</definition>
+        <argsstring>()</argsstring>
+        <name>getActiveLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" line="29" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_r_game_1a27cc9da76daecbcf7c9aac0a460be328" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_rubeus_1_1_r_engine" kindref="compound">REngine</ref> *const</type>
+        <definition>static REngine* const Rubeus::RGame::getEngine</definition>
+        <argsstring>()</argsstring>
+        <name>getEngine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" line="30" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="192">
+        <label>PingPong</label>
+        <link refid="class_ping_pong"/>
+        <childnode refid="191" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="191">
+        <label>Rubeus::RGame</label>
+        <link refid="class_rubeus_1_1_r_game"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="200">
+        <label>Rubeus::AudioComponents::RSymphony</label>
+        <link refid="class_rubeus_1_1_audio_components_1_1_r_symphony"/>
+        <childnode refid="195" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="201">
+        <label>Rubeus::RInputManager</label>
+        <link refid="class_rubeus_1_1_r_input_manager"/>
+        <childnode refid="195" relation="public-inheritance">
+        </childnode>
+        <childnode refid="202" relation="usage">
+          <edgelabel>MouseScroll</edgelabel>
+          <edgelabel>MousePosition</edgelabel>
+        </childnode>
+      </node>
+      <node id="196">
+        <label>Rubeus::RMailingList</label>
+        <link refid="class_rubeus_1_1_r_mailing_list"/>
+      </node>
+      <node id="194">
+        <label>Rubeus::REngine</label>
+        <link refid="class_rubeus_1_1_r_engine"/>
+        <childnode refid="195" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="203">
+        <label>Rubeus::RWorld</label>
+        <link refid="class_rubeus_1_1_r_world"/>
+      </node>
+      <node id="202">
+        <label>RML::Vector2D</label>
+        <link refid="struct_r_m_l_1_1_vector2_d"/>
+      </node>
+      <node id="193">
+        <label>Rubeus::RGame</label>
+        <link refid="class_rubeus_1_1_r_game"/>
+        <childnode refid="194" relation="usage">
+          <edgelabel>m_Engine</edgelabel>
+        </childnode>
+        <childnode refid="193" relation="usage">
+          <edgelabel>CurrentGame</edgelabel>
+        </childnode>
+        <childnode refid="199" relation="usage">
+          <edgelabel>CurrentLevel</edgelabel>
+        </childnode>
+      </node>
+      <node id="198">
+        <label>Rubeus::RMessageBus</label>
+        <link refid="class_rubeus_1_1_r_message_bus"/>
+      </node>
+      <node id="197">
+        <label>Rubeus::RMessageSystem</label>
+        <link refid="class_rubeus_1_1_r_message_system"/>
+        <childnode refid="198" relation="usage">
+          <edgelabel>m_MessageBus</edgelabel>
+        </childnode>
+      </node>
+      <node id="195">
+        <label>Rubeus::RMasterComponent</label>
+        <link refid="class_rubeus_1_1_r_master_component"/>
+        <childnode refid="196" relation="usage">
+          <edgelabel>m_mailbox</edgelabel>
+        </childnode>
+        <childnode refid="197" relation="usage">
+          <edgelabel>m_MessageSystem</edgelabel>
+        </childnode>
+      </node>
+      <node id="199">
+        <label>Rubeus::RLevel</label>
+        <link refid="class_rubeus_1_1_r_level"/>
+        <childnode refid="200" relation="usage">
+          <edgelabel>m_AudioManager</edgelabel>
+        </childnode>
+        <childnode refid="201" relation="usage">
+          <edgelabel>m_InputManager</edgelabel>
+        </childnode>
+        <childnode refid="203" relation="usage">
+          <edgelabel>m_World</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" line="11" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.h" bodystart="10" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_r_game_1a33c11ae1b625e473f080b17ff8598764" prot="protected" virt="non-virtual"><scope>Rubeus::RGame</scope><name>CurrentGame</name></member>
+      <member refid="class_rubeus_1_1_r_game_1acb5b535e9592433911a6a1547311c6a3" prot="public" virt="non-virtual"><scope>Rubeus::RGame</scope><name>CurrentLevel</name></member>
+      <member refid="class_rubeus_1_1_r_game_1a2c5b9c5d2d82fd12962492e1eaeebbdd" prot="public" virt="pure-virtual"><scope>Rubeus::RGame</scope><name>end</name></member>
+      <member refid="class_rubeus_1_1_r_game_1a6a8aaf5782cc577570ea632ab6526b3f" prot="public" virt="non-virtual"><scope>Rubeus::RGame</scope><name>getActiveGame</name></member>
+      <member refid="class_rubeus_1_1_r_game_1a1a494cfeb303fffde5cc00c793876f39" prot="public" virt="non-virtual"><scope>Rubeus::RGame</scope><name>getActiveLevel</name></member>
+      <member refid="class_rubeus_1_1_r_game_1a27cc9da76daecbcf7c9aac0a460be328" prot="public" virt="non-virtual"><scope>Rubeus::RGame</scope><name>getEngine</name></member>
+      <member refid="class_rubeus_1_1_r_game_1ab1cfe034d8d52a40e69aa3be5cd25ccb" prot="public" virt="pure-virtual"><scope>Rubeus::RGame</scope><name>init</name></member>
+      <member refid="class_rubeus_1_1_r_game_1a906da7ba26d716f62845031f94ffbf14" prot="protected" virt="non-virtual"><scope>Rubeus::RGame</scope><name>m_Engine</name></member>
+      <member refid="class_rubeus_1_1_r_game_1a4bacfc9ce11453af49a35178f94f04ca" prot="public" virt="non-virtual"><scope>Rubeus::RGame</scope><name>m_StartupLevel</name></member>
+      <member refid="class_rubeus_1_1_r_game_1a0d9300002340845eefaf9df52c116bf3" prot="public" virt="non-virtual"><scope>Rubeus::RGame</scope><name>RGame</name></member>
+      <member refid="class_rubeus_1_1_r_game_1a6468de70f44f2db947f064546d1aa4b2" prot="public" virt="non-virtual"><scope>Rubeus::RGame</scope><name>~RGame</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

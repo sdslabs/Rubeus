@@ -4,450 +4,462 @@
     <compoundname>index_buffer_object.h</compoundname>
     <includes local="no">GL/glew.h</includes>
     <includes refid="logger__component_8h" local="no">logger_component.h</includes>
-    <includedby refid="guerrilla__renderer__component_8h" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h</includedby>
-    <includedby refid="renderable__object_8h" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h</includedby>
-    <includedby refid="index__buffer__object_8cpp" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/index_buffer_object.cpp</includedby>
+    <includedby refid="guerrilla__renderer__component_8h" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h</includedby>
+    <includedby refid="index__buffer__object_8cpp" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/index_buffer_object.cpp</includedby>
+    <includedby refid="renderable__object_8h" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h</includedby>
     <incdepgraph>
-      <node id="1130">
+      <node id="2541">
         <label>IL/il.h</label>
       </node>
-      <node id="1131">
+      <node id="2542">
         <label>IL/ilu.h</label>
       </node>
-      <node id="1129">
+      <node id="2536">
         <label>string</label>
       </node>
-      <node id="1125">
+      <node id="2532">
         <label>GL/glew.h</label>
       </node>
-      <node id="1128">
-        <label>string.h</label>
+      <node id="2537">
+        <label>map</label>
       </node>
-      <node id="1124">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/index_buffer_object.h</label>
-        <link refid="index__buffer__object_8h"/>
-        <childnode refid="1125" relation="include">
-        </childnode>
-        <childnode refid="1126" relation="include">
-        </childnode>
-      </node>
-      <node id="1127">
-        <label>iostream</label>
-      </node>
-      <node id="1126">
+      <node id="2533">
         <label>logger_component.h</label>
         <link refid="logger__component_8h"/>
-        <childnode refid="1127" relation="include">
+        <childnode refid="2534" relation="include">
         </childnode>
-        <childnode refid="1128" relation="include">
+        <childnode refid="2535" relation="include">
         </childnode>
-        <childnode refid="1129" relation="include">
+        <childnode refid="2536" relation="include">
         </childnode>
-        <childnode refid="1125" relation="include">
+        <childnode refid="2537" relation="include">
         </childnode>
-        <childnode refid="1130" relation="include">
+        <childnode refid="2538" relation="include">
         </childnode>
-        <childnode refid="1131" relation="include">
+        <childnode refid="2539" relation="include">
         </childnode>
+        <childnode refid="2540" relation="include">
+        </childnode>
+        <childnode refid="2532" relation="include">
+        </childnode>
+        <childnode refid="2541" relation="include">
+        </childnode>
+        <childnode refid="2542" relation="include">
+        </childnode>
+        <childnode refid="2543" relation="include">
+        </childnode>
+      </node>
+      <node id="2538">
+        <label>fstream</label>
+      </node>
+      <node id="2535">
+        <label>string.h</label>
+      </node>
+      <node id="2539">
+        <label>ctime</label>
+      </node>
+      <node id="2531">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/index_buffer_object.h</label>
+        <link refid="index__buffer__object_8h"/>
+        <childnode refid="2532" relation="include">
+        </childnode>
+        <childnode refid="2533" relation="include">
+        </childnode>
+      </node>
+      <node id="2534">
+        <label>iostream</label>
+      </node>
+      <node id="2543">
+        <label>game.h</label>
+        <link refid="game_8h"/>
+        <childnode refid="2536" relation="include">
+        </childnode>
+      </node>
+      <node id="2540">
+        <label>experimental/filesystem</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="1174">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/sprite_object.cpp</label>
-        <link refid="sprite__object_8cpp"/>
-      </node>
-      <node id="1147">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/ui_layer_object.cpp</label>
-        <link refid="ui__layer__object_8cpp"/>
-      </node>
-      <node id="1173">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_sphere_collider_object.h</label>
-        <link refid="awerere__sphere__collider__object_8h"/>
-        <childnode refid="1134" relation="include">
+      <node id="2573">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collider_object.h</label>
+        <link refid="awerere__collider__object_8h"/>
+        <childnode refid="2546" relation="include">
         </childnode>
-        <childnode refid="1154" relation="include">
+        <childnode refid="2564" relation="include">
         </childnode>
-        <childnode refid="1155" relation="include">
+        <childnode refid="2574" relation="include">
         </childnode>
-        <childnode refid="1156" relation="include">
+        <childnode refid="2570" relation="include">
         </childnode>
-        <childnode refid="1157" relation="include">
+        <childnode refid="2576" relation="include">
         </childnode>
-        <childnode refid="1158" relation="include">
+        <childnode refid="2579" relation="include">
         </childnode>
-        <childnode refid="1159" relation="include">
+        <childnode refid="2584" relation="include">
+        </childnode>
+        <childnode refid="2585" relation="include">
         </childnode>
       </node>
-      <node id="1146">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/ui_layer_object.h</label>
-        <link refid="ui__layer__object_8h"/>
-        <childnode refid="1134" relation="include">
-        </childnode>
-        <childnode refid="1140" relation="include">
-        </childnode>
-        <childnode refid="1147" relation="include">
-        </childnode>
-      </node>
-      <node id="1154">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_box_collider_object.cpp</label>
-        <link refid="awerere__box__collider__object_8cpp"/>
-      </node>
-      <node id="1180">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/index_buffer_object.cpp</label>
-        <link refid="index__buffer__object_8cpp"/>
-      </node>
-      <node id="1151">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/sprite_object.h</label>
-        <link refid="sprite__object_8h"/>
-        <childnode refid="1134" relation="include">
-        </childnode>
-        <childnode refid="1152" relation="include">
-        </childnode>
-        <childnode refid="1161" relation="include">
-        </childnode>
-        <childnode refid="1139" relation="include">
-        </childnode>
-        <childnode refid="1146" relation="include">
-        </childnode>
-        <childnode refid="1174" relation="include">
-        </childnode>
-      </node>
-      <node id="1178">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/static_sprite_object.cpp</label>
-        <link refid="static__sprite__object_8cpp"/>
-      </node>
-      <node id="1172">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_plane_collider_object.h</label>
-        <link refid="awerere__plane__collider__object_8h"/>
-        <childnode refid="1134" relation="include">
-        </childnode>
-        <childnode refid="1154" relation="include">
-        </childnode>
-        <childnode refid="1155" relation="include">
-        </childnode>
-        <childnode refid="1156" relation="include">
-        </childnode>
-        <childnode refid="1157" relation="include">
-        </childnode>
-        <childnode refid="1158" relation="include">
-        </childnode>
-        <childnode refid="1159" relation="include">
-        </childnode>
-      </node>
-      <node id="1160">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_physics_object.h</label>
-        <link refid="awerere__physics__object_8h"/>
-        <childnode refid="1134" relation="include">
-        </childnode>
-        <childnode refid="1161" relation="include">
-        </childnode>
-        <childnode refid="1168" relation="include">
-        </childnode>
-        <childnode refid="1157" relation="include">
-        </childnode>
-        <childnode refid="1167" relation="include">
-        </childnode>
-      </node>
-      <node id="1140">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/layer_composition_object.h</label>
-        <link refid="layer__composition__object_8h"/>
-        <childnode refid="1141" relation="include">
-        </childnode>
-        <childnode refid="1144" relation="include">
-        </childnode>
-      </node>
-      <node id="1165">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/level.h</label>
-        <link refid="level_8h"/>
-        <childnode refid="1141" relation="include">
-        </childnode>
-        <childnode refid="1143" relation="include">
-        </childnode>
-      </node>
-      <node id="1169">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collision_engine.h</label>
-        <link refid="awerere__collision__engine_8h"/>
-        <childnode refid="1134" relation="include">
-        </childnode>
-        <childnode refid="1163" relation="include">
-        </childnode>
-        <childnode refid="1161" relation="include">
-        </childnode>
-        <childnode refid="1156" relation="include">
-        </childnode>
-      </node>
-      <node id="1176">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/simple_renderer_component.h</label>
-        <link refid="simple__renderer__component_8h"/>
-        <childnode refid="1134" relation="include">
-        </childnode>
-        <childnode refid="1177" relation="include">
-        </childnode>
-      </node>
-      <node id="1168">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h</label>
-        <link refid="window__component_8h"/>
-        <childnode refid="1134" relation="include">
-        </childnode>
-        <childnode refid="1169" relation="include">
-        </childnode>
-        <childnode refid="1141" relation="include">
-        </childnode>
-        <childnode refid="1170" relation="include">
-        </childnode>
-        <childnode refid="1171" relation="include">
-        </childnode>
-      </node>
-      <node id="1134">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/RubeusCore.h</label>
-        <link refid="_rubeus_core_8h"/>
-        <childnode refid="1135" relation="include">
-        </childnode>
-        <childnode refid="1136" relation="include">
-        </childnode>
-      </node>
-      <node id="1158">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_plane_collider_object.cpp</label>
-        <link refid="awerere__plane__collider__object_8cpp"/>
-      </node>
-      <node id="1163">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_physics_engine.h</label>
-        <link refid="awerere__physics__engine_8h"/>
-        <childnode refid="1134" relation="include">
-        </childnode>
-        <childnode refid="1141" relation="include">
-        </childnode>
-        <childnode refid="1155" relation="include">
-        </childnode>
-        <childnode refid="1164" relation="include">
-        </childnode>
-      </node>
-      <node id="1137">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/group_object.h</label>
-        <link refid="group__object_8h"/>
-        <childnode refid="1138" relation="include">
-        </childnode>
-        <childnode refid="1148" relation="include">
-        </childnode>
-      </node>
-      <node id="1144">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/layer_composition_object.cpp</label>
-        <link refid="layer__composition__object_8cpp"/>
-      </node>
-      <node id="1142">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/engine.cpp</label>
-        <link refid="engine_8cpp"/>
-      </node>
-      <node id="1177">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/simple_renderer_component.cpp</label>
-        <link refid="simple__renderer__component_8cpp"/>
-      </node>
-      <node id="1162">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/world.h</label>
-        <link refid="world_8h"/>
-        <childnode refid="1134" relation="include">
-        </childnode>
-        <childnode refid="1163" relation="include">
-        </childnode>
-        <childnode refid="1141" relation="include">
-        </childnode>
-        <childnode refid="1165" relation="include">
-        </childnode>
-        <childnode refid="1166" relation="include">
-        </childnode>
-      </node>
-      <node id="1145">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/scene_layer_object.cpp</label>
-        <link refid="scene__layer__object_8cpp"/>
-      </node>
-      <node id="1138">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/layer_object.h</label>
-        <link refid="layer__object_8h"/>
-        <childnode refid="1139" relation="include">
-        </childnode>
-        <childnode refid="1146" relation="include">
-        </childnode>
-      </node>
-      <node id="1135">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp</label>
-        <link refid="user__init_8cpp"/>
-      </node>
-      <node id="1164">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_physics_engine.cpp</label>
+      <node id="2571">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_engine.cpp</label>
         <link refid="awerere__physics__engine_8cpp"/>
       </node>
-      <node id="1170">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/input_manager.cpp</label>
-        <link refid="input__manager_8cpp"/>
+      <node id="2559">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.cpp</label>
+        <link refid="main__layer_8cpp"/>
       </node>
-      <node id="1171">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/window_component.cpp</label>
-        <link refid="window__component_8cpp"/>
+      <node id="2585">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_sphere_collider_object.h</label>
+        <link refid="awerere__sphere__collider__object_8h"/>
+        <childnode refid="2546" relation="include">
+        </childnode>
+        <childnode refid="2575" relation="include">
+        </childnode>
+        <childnode refid="2570" relation="include">
+        </childnode>
+        <childnode refid="2572" relation="include">
+        </childnode>
+        <childnode refid="2576" relation="include">
+        </childnode>
+        <childnode refid="2577" relation="include">
+        </childnode>
+        <childnode refid="2578" relation="include">
+        </childnode>
       </node>
-      <node id="1149">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/guerrilla_renderer_component.cpp</label>
+      <node id="2572">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.cpp</label>
+        <link refid="awerere__collision__engine_8cpp"/>
+      </node>
+      <node id="2568">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.cpp</label>
+        <link refid="world_8cpp"/>
+      </node>
+      <node id="2563">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/sprite_object.h</label>
+        <link refid="sprite__object_8h"/>
+        <childnode refid="2546" relation="include">
+        </childnode>
+        <childnode refid="2564" relation="include">
+        </childnode>
+        <childnode refid="2573" relation="include">
+        </childnode>
+        <childnode refid="2551" relation="include">
+        </childnode>
+        <childnode refid="2586" relation="include">
+        </childnode>
+      </node>
+      <node id="2575">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.cpp</label>
+        <link refid="awerere__box__collider__object_8cpp"/>
+      </node>
+      <node id="2556">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.cpp</label>
+        <link refid="level_8cpp"/>
+      </node>
+      <node id="2586">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/sprite_object.cpp</label>
+        <link refid="sprite__object_8cpp"/>
+      </node>
+      <node id="2590">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/static_sprite_object.cpp</label>
+        <link refid="static__sprite__object_8cpp"/>
+      </node>
+      <node id="2588">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/simple_renderer_component.h</label>
+        <link refid="simple__renderer__component_8h"/>
+        <childnode refid="2546" relation="include">
+        </childnode>
+        <childnode refid="2589" relation="include">
+        </childnode>
+      </node>
+      <node id="2551">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/main_layer.h</label>
+        <link refid="main__layer_8h"/>
+        <childnode refid="2546" relation="include">
+        </childnode>
+        <childnode refid="2552" relation="include">
+        </childnode>
+        <childnode refid="2559" relation="include">
+        </childnode>
+      </node>
+      <node id="2579">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_object.h</label>
+        <link refid="awerere__physics__object_8h"/>
+        <childnode refid="2546" relation="include">
+        </childnode>
+        <childnode refid="2565" relation="include">
+        </childnode>
+        <childnode refid="2564" relation="include">
+        </childnode>
+        <childnode refid="2576" relation="include">
+        </childnode>
+        <childnode refid="2580" relation="include">
+        </childnode>
+      </node>
+      <node id="2547">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp</label>
+        <link refid="user__init_8cpp"/>
+      </node>
+      <node id="2549">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.cpp</label>
         <link refid="guerrilla__renderer__component_8cpp"/>
       </node>
-      <node id="1136">
+      <node id="2557">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.cpp</label>
+        <link refid="message__codes_8cpp"/>
+      </node>
+      <node id="2577">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_plane_collider_object.cpp</label>
+        <link refid="awerere__plane__collider__object_8cpp"/>
+      </node>
+      <node id="2570">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collider_object.cpp</label>
+        <link refid="awerere__collider__object_8cpp"/>
+      </node>
+      <node id="2555">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.cpp</label>
+        <link refid="game_8cpp"/>
+      </node>
+      <node id="2546">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/RubeusCore.h</label>
+        <link refid="_rubeus_core_8h"/>
+        <childnode refid="2547" relation="include">
+        </childnode>
+        <childnode refid="2548" relation="include">
+        </childnode>
+      </node>
+      <node id="2567">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.h</label>
+        <link refid="level_8h"/>
+        <childnode refid="2546" relation="include">
+        </childnode>
+        <childnode refid="2553" relation="include">
+        </childnode>
+        <childnode refid="2556" relation="include">
+        </childnode>
+      </node>
+      <node id="2576">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_object.cpp</label>
+        <link refid="awerere__physics__object_8cpp"/>
+      </node>
+      <node id="2583">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/InputManager/input_manager.cpp</label>
+        <link refid="input__manager_8cpp"/>
+      </node>
+      <node id="2582">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp</label>
+        <link refid="window__component_8cpp"/>
+      </node>
+      <node id="2580">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h</label>
+        <link refid="window__component_8h"/>
+        <childnode refid="2546" relation="include">
+        </childnode>
+        <childnode refid="2553" relation="include">
+        </childnode>
+        <childnode refid="2581" relation="include">
+        </childnode>
+        <childnode refid="2582" relation="include">
+        </childnode>
+        <childnode refid="2583" relation="include">
+        </childnode>
+      </node>
+      <node id="2581">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_collision_engine.h</label>
+        <link refid="awerere__collision__engine_8h"/>
+        <childnode refid="2546" relation="include">
+        </childnode>
+        <childnode refid="2564" relation="include">
+        </childnode>
+        <childnode refid="2572" relation="include">
+        </childnode>
+        <childnode refid="2569" relation="include">
+        </childnode>
+      </node>
+      <node id="2584">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_plane_collider_object.h</label>
+        <link refid="awerere__plane__collider__object_8h"/>
+        <childnode refid="2546" relation="include">
+        </childnode>
+        <childnode refid="2575" relation="include">
+        </childnode>
+        <childnode refid="2570" relation="include">
+        </childnode>
+        <childnode refid="2572" relation="include">
+        </childnode>
+        <childnode refid="2576" relation="include">
+        </childnode>
+        <childnode refid="2577" relation="include">
+        </childnode>
+        <childnode refid="2578" relation="include">
+        </childnode>
+      </node>
+      <node id="2544">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/index_buffer_object.h</label>
+        <link refid="index__buffer__object_8h"/>
+        <childnode refid="2545" relation="include">
+        </childnode>
+        <childnode refid="2560" relation="include">
+        </childnode>
+        <childnode refid="2561" relation="include">
+        </childnode>
+      </node>
+      <node id="2548">
         <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/RubeusCore.cpp</label>
         <link refid="_rubeus_core_8cpp"/>
       </node>
-      <node id="1159">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_sphere_collider_object.cpp</label>
+      <node id="2587">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/static_sprite_object.h</label>
+        <link refid="static__sprite__object_8h"/>
+        <childnode refid="2546" relation="include">
+        </childnode>
+        <childnode refid="2588" relation="include">
+        </childnode>
+        <childnode refid="2590" relation="include">
+        </childnode>
+      </node>
+      <node id="2554">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.cpp</label>
+        <link refid="engine_8cpp"/>
+      </node>
+      <node id="2578">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_sphere_collider_object.cpp</label>
         <link refid="awerere__sphere__collider__object_8cpp"/>
       </node>
-      <node id="1166">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/world.cpp</label>
-        <link refid="world_8cpp"/>
+      <node id="2589">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/simple_renderer_component.cpp</label>
+        <link refid="simple__renderer__component_8cpp"/>
       </node>
-      <node id="1143">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/level.cpp</label>
-        <link refid="level_8cpp"/>
-      </node>
-      <node id="1141">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h</label>
-        <link refid="engine_8h"/>
-        <childnode refid="1134" relation="include">
-        </childnode>
-        <childnode refid="1142" relation="include">
-        </childnode>
-        <childnode refid="1143" relation="include">
+      <node id="2550">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/layer_object.h</label>
+        <link refid="layer__object_8h"/>
+        <childnode refid="2551" relation="include">
         </childnode>
       </node>
-      <node id="1150">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/renderable_object.h</label>
+      <node id="2561">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.h</label>
         <link refid="renderable__object_8h"/>
-        <childnode refid="1134" relation="include">
+        <childnode refid="2546" relation="include">
         </childnode>
-        <childnode refid="1137" relation="include">
+        <childnode refid="2545" relation="include">
         </childnode>
-        <childnode refid="1133" relation="include">
+        <childnode refid="2550" relation="include">
         </childnode>
-        <childnode refid="1138" relation="include">
+        <childnode refid="2562" relation="include">
         </childnode>
-        <childnode refid="1151" relation="include">
+        <childnode refid="2563" relation="include">
         </childnode>
-        <childnode refid="1175" relation="include">
-        </childnode>
-        <childnode refid="1179" relation="include">
+        <childnode refid="2587" relation="include">
         </childnode>
       </node>
-      <node id="1161">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/game_object.h</label>
-        <link refid="game__object_8h"/>
-        <childnode refid="1134" relation="include">
-        </childnode>
-        <childnode refid="1137" relation="include">
-        </childnode>
-        <childnode refid="1162" relation="include">
-        </childnode>
-        <childnode refid="1156" relation="include">
-        </childnode>
-        <childnode refid="1164" relation="include">
-        </childnode>
-        <childnode refid="1167" relation="include">
-        </childnode>
+      <node id="2560">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/index_buffer_object.cpp</label>
+        <link refid="index__buffer__object_8cpp"/>
       </node>
-      <node id="1153">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_box_collider_object.h</label>
-        <link refid="awerere__box__collider__object_8h"/>
-        <childnode refid="1134" relation="include">
-        </childnode>
-        <childnode refid="1154" relation="include">
-        </childnode>
-        <childnode refid="1155" relation="include">
-        </childnode>
-        <childnode refid="1156" relation="include">
-        </childnode>
-        <childnode refid="1157" relation="include">
-        </childnode>
-        <childnode refid="1158" relation="include">
-        </childnode>
-        <childnode refid="1159" relation="include">
-        </childnode>
-      </node>
-      <node id="1132">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/index_buffer_object.h</label>
-        <link refid="index__buffer__object_8h"/>
-        <childnode refid="1133" relation="include">
-        </childnode>
-        <childnode refid="1150" relation="include">
-        </childnode>
-        <childnode refid="1180" relation="include">
-        </childnode>
-      </node>
-      <node id="1155">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_collider_object.cpp</label>
-        <link refid="awerere__collider__object_8cpp"/>
-      </node>
-      <node id="1157">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_physics_object.cpp</label>
-        <link refid="awerere__physics__object_8cpp"/>
-      </node>
-      <node id="1179">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/renderable_object.cpp</label>
+      <node id="2562">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/renderable_object.cpp</label>
         <link refid="renderable__object_8cpp"/>
       </node>
-      <node id="1139">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/scene_layer_object.h</label>
-        <link refid="scene__layer__object_8h"/>
-        <childnode refid="1140" relation="include">
+      <node id="2564">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game_object.h</label>
+        <link refid="game__object_8h"/>
+        <childnode refid="2546" relation="include">
         </childnode>
-        <childnode refid="1145" relation="include">
+        <childnode refid="2565" relation="include">
         </childnode>
-      </node>
-      <node id="1148">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/group_object.cpp</label>
-        <link refid="group__object_8cpp"/>
-      </node>
-      <node id="1133">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h</label>
-        <link refid="guerrilla__renderer__component_8h"/>
-        <childnode refid="1134" relation="include">
+        <childnode refid="2566" relation="include">
         </childnode>
-        <childnode refid="1137" relation="include">
+        <childnode refid="2572" relation="include">
         </childnode>
-        <childnode refid="1138" relation="include">
+        <childnode refid="2571" relation="include">
         </childnode>
-        <childnode refid="1149" relation="include">
+        <childnode refid="2550" relation="include">
+        </childnode>
+        <childnode refid="2559" relation="include">
         </childnode>
       </node>
-      <node id="1152">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/awerere_collider_object.h</label>
-        <link refid="awerere__collider__object_8h"/>
-        <childnode refid="1134" relation="include">
-        </childnode>
-        <childnode refid="1153" relation="include">
-        </childnode>
-        <childnode refid="1160" relation="include">
-        </childnode>
-        <childnode refid="1172" relation="include">
-        </childnode>
-        <childnode refid="1173" relation="include">
-        </childnode>
-        <childnode refid="1161" relation="include">
-        </childnode>
-        <childnode refid="1155" relation="include">
-        </childnode>
-        <childnode refid="1157" relation="include">
-        </childnode>
-      </node>
-      <node id="1167">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/game_object.cpp</label>
+      <node id="2565">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game_object.cpp</label>
         <link refid="game__object_8cpp"/>
       </node>
-      <node id="1156">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_collision_engine.cpp</label>
-        <link refid="awerere__collision__engine_8cpp"/>
+      <node id="2545">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h</label>
+        <link refid="guerrilla__renderer__component_8h"/>
+        <childnode refid="2546" relation="include">
+        </childnode>
+        <childnode refid="2549" relation="include">
+        </childnode>
+        <childnode refid="2550" relation="include">
+        </childnode>
       </node>
-      <node id="1175">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/static_sprite_object.h</label>
-        <link refid="static__sprite__object_8h"/>
-        <childnode refid="1134" relation="include">
+      <node id="2569">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_physics_engine.h</label>
+        <link refid="awerere__physics__engine_8h"/>
+        <childnode refid="2546" relation="include">
         </childnode>
-        <childnode refid="1176" relation="include">
+        <childnode refid="2553" relation="include">
         </childnode>
-        <childnode refid="1178" relation="include">
+        <childnode refid="2570" relation="include">
+        </childnode>
+        <childnode refid="2571" relation="include">
+        </childnode>
+      </node>
+      <node id="2566">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/world.h</label>
+        <link refid="world_8h"/>
+        <childnode refid="2546" relation="include">
+        </childnode>
+        <childnode refid="2553" relation="include">
+        </childnode>
+        <childnode refid="2567" relation="include">
+        </childnode>
+        <childnode refid="2568" relation="include">
+        </childnode>
+        <childnode refid="2569" relation="include">
+        </childnode>
+      </node>
+      <node id="2553">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h</label>
+        <link refid="engine_8h"/>
+        <childnode refid="2546" relation="include">
+        </childnode>
+        <childnode refid="2554" relation="include">
+        </childnode>
+        <childnode refid="2555" relation="include">
+        </childnode>
+        <childnode refid="2556" relation="include">
+        </childnode>
+        <childnode refid="2557" relation="include">
+        </childnode>
+      </node>
+      <node id="2552">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.h</label>
+        <link refid="game__scene_8h"/>
+        <childnode refid="2553" relation="include">
+        </childnode>
+        <childnode refid="2558" relation="include">
+        </childnode>
+      </node>
+      <node id="2558">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/game_scene.cpp</label>
+        <link refid="game__scene_8cpp"/>
+      </node>
+      <node id="2574">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_box_collider_object.h</label>
+        <link refid="awerere__box__collider__object_8h"/>
+        <childnode refid="2546" relation="include">
+        </childnode>
+        <childnode refid="2575" relation="include">
+        </childnode>
+        <childnode refid="2570" relation="include">
+        </childnode>
+        <childnode refid="2572" relation="include">
+        </childnode>
+        <childnode refid="2576" relation="include">
+        </childnode>
+        <childnode refid="2577" relation="include">
+        </childnode>
+        <childnode refid="2578" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -455,9 +467,9 @@
     <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
     <innernamespace refid="namespace_rubeus_1_1_graphic_components">Rubeus::GraphicComponents</innernamespace>
     <briefdescription>
-<para>Declares the Index buffer class. </para>    </briefdescription>
+    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/index_buffer_object.h"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/index_buffer_object.h"/>
   </compounddef>
 </doxygen>

@@ -6,309 +6,348 @@
     <includes refid="awerere__plane__collider__object_8h" local="no">awerere_plane_collider_object.h</includes>
     <includes refid="awerere__box__collider__object_8h" local="no">awerere_box_collider_object.h</includes>
     <incdepgraph>
-      <node id="3316">
-        <label>renderer_component.h</label>
-        <link refid="renderer__component_8h"/>
-        <childnode refid="3292" relation="include">
-        </childnode>
-        <childnode refid="3284" relation="include">
-        </childnode>
-        <childnode refid="3305" relation="include">
-        </childnode>
-      </node>
-      <node id="3283">
-        <label>awerere_sphere_collider_object.h</label>
-        <link refid="awerere__sphere__collider__object_8h"/>
-        <childnode refid="3284" relation="include">
-        </childnode>
-        <childnode refid="3287" relation="include">
-        </childnode>
-        <childnode refid="3288" relation="include">
-        </childnode>
-      </node>
-      <node id="3303">
-        <label>loader_component.h</label>
-        <link refid="loader__component_8h"/>
-        <childnode refid="3295" relation="include">
-        </childnode>
-        <childnode refid="3296" relation="include">
-        </childnode>
-        <childnode refid="3304" relation="include">
-        </childnode>
-        <childnode refid="3297" relation="include">
-        </childnode>
-        <childnode refid="3298" relation="include">
-        </childnode>
-        <childnode refid="3294" relation="include">
-        </childnode>
-        <childnode refid="3305" relation="include">
-        </childnode>
-        <childnode refid="3312" relation="include">
-        </childnode>
-      </node>
-      <node id="3297">
-        <label>IL/il.h</label>
-      </node>
-      <node id="3298">
-        <label>IL/ilu.h</label>
-      </node>
-      <node id="3290">
-        <label>sprite_object.h</label>
-        <link refid="sprite__object_8h"/>
-        <childnode refid="3291" relation="include">
-        </childnode>
-      </node>
-      <node id="3310">
-        <label>message_object.h</label>
-        <link refid="message__object_8h"/>
-        <childnode refid="3296" relation="include">
-        </childnode>
-        <childnode refid="3311" relation="include">
-        </childnode>
-        <childnode refid="3312" relation="include">
-        </childnode>
-        <childnode refid="3313" relation="include">
-        </childnode>
-      </node>
-      <node id="3296">
-        <label>string</label>
-      </node>
-      <node id="3292">
-        <label>GL/glew.h</label>
-      </node>
-      <node id="3317">
-        <label>awerere_plane_collider_object.h</label>
-        <link refid="awerere__plane__collider__object_8h"/>
-        <childnode refid="3318" relation="include">
-        </childnode>
-        <childnode refid="3284" relation="include">
-        </childnode>
-        <childnode refid="3287" relation="include">
-        </childnode>
-        <childnode refid="3288" relation="include">
-        </childnode>
-      </node>
-      <node id="3284">
-        <label>rubeus_maths_library.h</label>
-        <link refid="rubeus__maths__library_8h"/>
-        <childnode refid="3285" relation="include">
-        </childnode>
-        <childnode refid="3286" relation="include">
-        </childnode>
-      </node>
-      <node id="3315">
-        <label>shader_component.h</label>
-        <link refid="shader__component_8h"/>
-        <childnode refid="3301" relation="include">
-        </childnode>
-        <childnode refid="3292" relation="include">
-        </childnode>
-        <childnode refid="3305" relation="include">
-        </childnode>
-        <childnode refid="3303" relation="include">
-        </childnode>
-        <childnode refid="3284" relation="include">
-        </childnode>
-      </node>
-      <node id="3309">
-        <label>message_system.h</label>
-        <link refid="message__system_8h"/>
-        <childnode refid="3301" relation="include">
-        </childnode>
-        <childnode refid="3310" relation="include">
-        </childnode>
-        <childnode refid="3314" relation="include">
-        </childnode>
-      </node>
-      <node id="3311">
-        <label>boost/any.hpp</label>
-      </node>
-      <node id="3313">
-        <label>message_codes.h</label>
-        <link refid="message__codes_8h"/>
-        <childnode refid="3294" relation="include">
-        </childnode>
-      </node>
-      <node id="3312">
-        <label>image_object.h</label>
-        <link refid="image__object_8h"/>
-        <childnode refid="3296" relation="include">
-        </childnode>
-        <childnode refid="3297" relation="include">
-        </childnode>
-      </node>
-      <node id="3300">
-        <label>vertex_array_object.h</label>
-        <link refid="vertex__array__object_8h"/>
-        <childnode refid="3292" relation="include">
-        </childnode>
-        <childnode refid="3301" relation="include">
-        </childnode>
-        <childnode refid="3293" relation="include">
-        </childnode>
-      </node>
-      <node id="3314">
-        <label>message_bus.h</label>
-        <link refid="message__bus_8h"/>
-        <childnode refid="3301" relation="include">
-        </childnode>
-        <childnode refid="3310" relation="include">
-        </childnode>
-      </node>
-      <node id="3295">
-        <label>string.h</label>
-      </node>
-      <node id="3307">
-        <label>typeinfo</label>
-      </node>
-      <node id="3301">
-        <label>vector</label>
-      </node>
-      <node id="3282">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_sphere_collider_object.cpp</label>
-        <link refid="awerere__sphere__collider__object_8cpp"/>
-        <childnode refid="3283" relation="include">
-        </childnode>
-        <childnode refid="3317" relation="include">
-        </childnode>
-        <childnode refid="3319" relation="include">
-        </childnode>
-      </node>
-      <node id="3289">
-        <label>awerere_physics_material.h</label>
-        <link refid="awerere__physics__material_8h"/>
-        <childnode refid="3284" relation="include">
-        </childnode>
-      </node>
-      <node id="3291">
-        <label>renderable_object.h</label>
-        <link refid="renderable__object_8h"/>
-        <childnode refid="3292" relation="include">
-        </childnode>
-        <childnode refid="3284" relation="include">
-        </childnode>
-        <childnode refid="3293" relation="include">
-        </childnode>
-        <childnode refid="3299" relation="include">
-        </childnode>
-        <childnode refid="3300" relation="include">
-        </childnode>
-        <childnode refid="3302" relation="include">
-        </childnode>
-        <childnode refid="3315" relation="include">
-        </childnode>
-        <childnode refid="3316" relation="include">
-        </childnode>
-      </node>
-      <node id="3319">
-        <label>awerere_box_collider_object.h</label>
-        <link refid="awerere__box__collider__object_8h"/>
-        <childnode refid="3284" relation="include">
-        </childnode>
-        <childnode refid="3287" relation="include">
-        </childnode>
-        <childnode refid="3288" relation="include">
-        </childnode>
-      </node>
-      <node id="3299">
-        <label>index_buffer_object.h</label>
-        <link refid="index__buffer__object_8h"/>
-        <childnode refid="3292" relation="include">
-        </childnode>
-        <childnode refid="3294" relation="include">
-        </childnode>
-      </node>
-      <node id="3285">
-        <label>math.h</label>
-      </node>
-      <node id="3304">
-        <label>cstdlib</label>
-      </node>
-      <node id="3293">
-        <label>buffer_object.h</label>
-        <link refid="buffer__object_8h"/>
-        <childnode refid="3292" relation="include">
-        </childnode>
-        <childnode refid="3294" relation="include">
-        </childnode>
-      </node>
-      <node id="3286">
-        <label>iostream</label>
-      </node>
-      <node id="3305">
-        <label>master_component.h</label>
-        <link refid="master__component_8h"/>
-        <childnode refid="3296" relation="include">
-        </childnode>
-        <childnode refid="3306" relation="include">
-        </childnode>
-        <childnode refid="3307" relation="include">
-        </childnode>
-        <childnode refid="3308" relation="include">
-        </childnode>
-        <childnode refid="3294" relation="include">
-        </childnode>
-        <childnode refid="3309" relation="include">
-        </childnode>
-      </node>
-      <node id="3306">
-        <label>unordered_map</label>
-      </node>
-      <node id="3302">
-        <label>texture_object.h</label>
-        <link refid="texture__object_8h"/>
-        <childnode refid="3292" relation="include">
-        </childnode>
-        <childnode refid="3303" relation="include">
-        </childnode>
-      </node>
-      <node id="3288">
+      <node id="2059">
         <label>awerere_collider_object.h</label>
         <link refid="awerere__collider__object_8h"/>
-        <childnode refid="3284" relation="include">
+        <childnode refid="2055" relation="include">
         </childnode>
-        <childnode refid="3289" relation="include">
+        <childnode refid="2060" relation="include">
         </childnode>
-        <childnode refid="3287" relation="include">
+        <childnode refid="2058" relation="include">
         </childnode>
-        <childnode refid="3290" relation="include">
+        <childnode refid="2061" relation="include">
         </childnode>
       </node>
-      <node id="3318">
-        <label>algorithm</label>
+      <node id="2090">
+        <label>functional</label>
       </node>
-      <node id="3287">
+      <node id="2054">
+        <label>awerere_sphere_collider_object.h</label>
+        <link refid="awerere__sphere__collider__object_8h"/>
+        <childnode refid="2055" relation="include">
+        </childnode>
+        <childnode refid="2058" relation="include">
+        </childnode>
+        <childnode refid="2059" relation="include">
+        </childnode>
+      </node>
+      <node id="2064">
+        <label>buffer_object.h</label>
+        <link refid="buffer__object_8h"/>
+        <childnode refid="2063" relation="include">
+        </childnode>
+        <childnode refid="2065" relation="include">
+        </childnode>
+      </node>
+      <node id="2093">
+        <label>renderer_component.h</label>
+        <link refid="renderer__component_8h"/>
+        <childnode refid="2063" relation="include">
+        </childnode>
+        <childnode refid="2055" relation="include">
+        </childnode>
+        <childnode refid="2081" relation="include">
+        </childnode>
+      </node>
+      <node id="2061">
+        <label>sprite_object.h</label>
+        <link refid="sprite__object_8h"/>
+        <childnode refid="2062" relation="include">
+        </childnode>
+      </node>
+      <node id="2092">
+        <label>shader_component.h</label>
+        <link refid="shader__component_8h"/>
+        <childnode refid="2077" relation="include">
+        </childnode>
+        <childnode refid="2063" relation="include">
+        </childnode>
+        <childnode refid="2081" relation="include">
+        </childnode>
+        <childnode refid="2079" relation="include">
+        </childnode>
+        <childnode refid="2055" relation="include">
+        </childnode>
+      </node>
+      <node id="2072">
+        <label>IL/il.h</label>
+      </node>
+      <node id="2058">
         <label>awerere_collide_data_object.h</label>
         <link refid="awerere__collide__data__object_8h"/>
-        <childnode refid="3284" relation="include">
+        <childnode refid="2055" relation="include">
         </childnode>
       </node>
-      <node id="3308">
-        <label>memory</label>
+      <node id="2078">
+        <label>texture_object.h</label>
+        <link refid="texture__object_8h"/>
+        <childnode refid="2063" relation="include">
+        </childnode>
+        <childnode refid="2079" relation="include">
+        </childnode>
       </node>
-      <node id="3294">
+      <node id="2073">
+        <label>IL/ilu.h</label>
+      </node>
+      <node id="2067">
+        <label>string</label>
+      </node>
+      <node id="2076">
+        <label>vertex_array_object.h</label>
+        <link refid="vertex__array__object_8h"/>
+        <childnode refid="2063" relation="include">
+        </childnode>
+        <childnode refid="2077" relation="include">
+        </childnode>
+        <childnode refid="2064" relation="include">
+        </childnode>
+      </node>
+      <node id="2063">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="2068">
+        <label>map</label>
+      </node>
+      <node id="2060">
+        <label>awerere_physics_material.h</label>
+        <link refid="awerere__physics__material_8h"/>
+        <childnode refid="2055" relation="include">
+        </childnode>
+      </node>
+      <node id="2065">
         <label>logger_component.h</label>
         <link refid="logger__component_8h"/>
-        <childnode refid="3286" relation="include">
+        <childnode refid="2057" relation="include">
         </childnode>
-        <childnode refid="3295" relation="include">
+        <childnode refid="2066" relation="include">
         </childnode>
-        <childnode refid="3296" relation="include">
+        <childnode refid="2067" relation="include">
         </childnode>
-        <childnode refid="3292" relation="include">
+        <childnode refid="2068" relation="include">
         </childnode>
-        <childnode refid="3297" relation="include">
+        <childnode refid="2069" relation="include">
         </childnode>
-        <childnode refid="3298" relation="include">
+        <childnode refid="2070" relation="include">
         </childnode>
+        <childnode refid="2071" relation="include">
+        </childnode>
+        <childnode refid="2063" relation="include">
+        </childnode>
+        <childnode refid="2072" relation="include">
+        </childnode>
+        <childnode refid="2073" relation="include">
+        </childnode>
+        <childnode refid="2074" relation="include">
+        </childnode>
+      </node>
+      <node id="2069">
+        <label>fstream</label>
+      </node>
+      <node id="2079">
+        <label>loader_component.h</label>
+        <link refid="loader__component_8h"/>
+        <childnode refid="2066" relation="include">
+        </childnode>
+        <childnode refid="2067" relation="include">
+        </childnode>
+        <childnode refid="2080" relation="include">
+        </childnode>
+        <childnode refid="2072" relation="include">
+        </childnode>
+        <childnode refid="2073" relation="include">
+        </childnode>
+        <childnode refid="2065" relation="include">
+        </childnode>
+        <childnode refid="2081" relation="include">
+        </childnode>
+        <childnode refid="2088" relation="include">
+        </childnode>
+      </node>
+      <node id="2088">
+        <label>image_object.h</label>
+        <link refid="image__object_8h"/>
+        <childnode refid="2067" relation="include">
+        </childnode>
+        <childnode refid="2072" relation="include">
+        </childnode>
+      </node>
+      <node id="2086">
+        <label>message_object.h</label>
+        <link refid="message__object_8h"/>
+        <childnode refid="2067" relation="include">
+        </childnode>
+        <childnode refid="2087" relation="include">
+        </childnode>
+        <childnode refid="2088" relation="include">
+        </childnode>
+        <childnode refid="2089" relation="include">
+        </childnode>
+      </node>
+      <node id="2087">
+        <label>any</label>
+      </node>
+      <node id="2081">
+        <label>master_component.h</label>
+        <link refid="master__component_8h"/>
+        <childnode refid="2067" relation="include">
+        </childnode>
+        <childnode refid="2082" relation="include">
+        </childnode>
+        <childnode refid="2083" relation="include">
+        </childnode>
+        <childnode refid="2084" relation="include">
+        </childnode>
+        <childnode refid="2065" relation="include">
+        </childnode>
+        <childnode refid="2085" relation="include">
+        </childnode>
+      </node>
+      <node id="2055">
+        <label>rubeus_maths_library.h</label>
+        <link refid="rubeus__maths__library_8h"/>
+        <childnode refid="2056" relation="include">
+        </childnode>
+        <childnode refid="2057" relation="include">
+        </childnode>
+      </node>
+      <node id="2066">
+        <label>string.h</label>
+      </node>
+      <node id="2089">
+        <label>message_codes.h</label>
+        <link refid="message__codes_8h"/>
+        <childnode refid="2065" relation="include">
+        </childnode>
+        <childnode refid="2086" relation="include">
+        </childnode>
+        <childnode refid="2068" relation="include">
+        </childnode>
+        <childnode refid="2087" relation="include">
+        </childnode>
+        <childnode refid="2090" relation="include">
+        </childnode>
+      </node>
+      <node id="2083">
+        <label>typeinfo</label>
+      </node>
+      <node id="2070">
+        <label>ctime</label>
+      </node>
+      <node id="2094">
+        <label>awerere_plane_collider_object.h</label>
+        <link refid="awerere__plane__collider__object_8h"/>
+        <childnode refid="2095" relation="include">
+        </childnode>
+        <childnode refid="2055" relation="include">
+        </childnode>
+        <childnode refid="2058" relation="include">
+        </childnode>
+        <childnode refid="2059" relation="include">
+        </childnode>
+      </node>
+      <node id="2075">
+        <label>index_buffer_object.h</label>
+        <link refid="index__buffer__object_8h"/>
+        <childnode refid="2063" relation="include">
+        </childnode>
+        <childnode refid="2065" relation="include">
+        </childnode>
+      </node>
+      <node id="2077">
+        <label>vector</label>
+      </node>
+      <node id="2053">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_sphere_collider_object.cpp</label>
+        <link refid="awerere__sphere__collider__object_8cpp"/>
+        <childnode refid="2054" relation="include">
+        </childnode>
+        <childnode refid="2094" relation="include">
+        </childnode>
+        <childnode refid="2096" relation="include">
+        </childnode>
+      </node>
+      <node id="2062">
+        <label>renderable_object.h</label>
+        <link refid="renderable__object_8h"/>
+        <childnode refid="2063" relation="include">
+        </childnode>
+        <childnode refid="2055" relation="include">
+        </childnode>
+        <childnode refid="2064" relation="include">
+        </childnode>
+        <childnode refid="2075" relation="include">
+        </childnode>
+        <childnode refid="2076" relation="include">
+        </childnode>
+        <childnode refid="2078" relation="include">
+        </childnode>
+        <childnode refid="2092" relation="include">
+        </childnode>
+        <childnode refid="2093" relation="include">
+        </childnode>
+      </node>
+      <node id="2056">
+        <label>math.h</label>
+      </node>
+      <node id="2080">
+        <label>cstdlib</label>
+      </node>
+      <node id="2091">
+        <label>message_bus.h</label>
+        <link refid="message__bus_8h"/>
+        <childnode refid="2077" relation="include">
+        </childnode>
+        <childnode refid="2086" relation="include">
+        </childnode>
+      </node>
+      <node id="2057">
+        <label>iostream</label>
+      </node>
+      <node id="2082">
+        <label>unordered_map</label>
+      </node>
+      <node id="2085">
+        <label>message_system.h</label>
+        <link refid="message__system_8h"/>
+        <childnode refid="2077" relation="include">
+        </childnode>
+        <childnode refid="2086" relation="include">
+        </childnode>
+        <childnode refid="2091" relation="include">
+        </childnode>
+      </node>
+      <node id="2095">
+        <label>algorithm</label>
+      </node>
+      <node id="2074">
+        <label>game.h</label>
+        <link refid="game_8h"/>
+        <childnode refid="2067" relation="include">
+        </childnode>
+      </node>
+      <node id="2084">
+        <label>memory</label>
+      </node>
+      <node id="2096">
+        <label>awerere_box_collider_object.h</label>
+        <link refid="awerere__box__collider__object_8h"/>
+        <childnode refid="2055" relation="include">
+        </childnode>
+        <childnode refid="2058" relation="include">
+        </childnode>
+        <childnode refid="2059" relation="include">
+        </childnode>
+      </node>
+      <node id="2071">
+        <label>experimental/filesystem</label>
       </node>
     </incdepgraph>
     <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
     <innernamespace refid="namespace_rubeus_1_1_awerere">Rubeus::Awerere</innernamespace>
     <briefdescription>
-<para>Defines the Sphere Collider class. </para>    </briefdescription>
+    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/awerere_sphere_collider_object.cpp"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Awerere/awerere_sphere_collider_object.cpp"/>
   </compounddef>
 </doxygen>

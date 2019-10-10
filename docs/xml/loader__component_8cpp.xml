@@ -4,151 +4,190 @@
     <compoundname>loader_component.cpp</compoundname>
     <includes refid="loader__component_8h" local="no">loader_component.h</includes>
     <incdepgraph>
-      <node id="3702">
-        <label>loader_component.h</label>
-        <link refid="loader__component_8h"/>
-        <childnode refid="3703" relation="include">
-        </childnode>
-        <childnode refid="3704" relation="include">
-        </childnode>
-        <childnode refid="3705" relation="include">
-        </childnode>
-        <childnode refid="3706" relation="include">
-        </childnode>
-        <childnode refid="3707" relation="include">
-        </childnode>
-        <childnode refid="3708" relation="include">
-        </childnode>
-        <childnode refid="3711" relation="include">
-        </childnode>
-        <childnode refid="3719" relation="include">
-        </childnode>
+      <node id="4341">
+        <label>functional</label>
       </node>
-      <node id="3706">
+      <node id="4321">
         <label>IL/il.h</label>
       </node>
-      <node id="3707">
+      <node id="4322">
         <label>IL/ilu.h</label>
       </node>
-      <node id="3717">
-        <label>message_object.h</label>
-        <link refid="message__object_8h"/>
-        <childnode refid="3704" relation="include">
-        </childnode>
-        <childnode refid="3718" relation="include">
-        </childnode>
-        <childnode refid="3719" relation="include">
-        </childnode>
-        <childnode refid="3720" relation="include">
-        </childnode>
-      </node>
-      <node id="3704">
+      <node id="4319">
         <label>string</label>
       </node>
-      <node id="3710">
+      <node id="4329">
         <label>GL/glew.h</label>
       </node>
-      <node id="3715">
-        <label>message_system.h</label>
-        <link refid="message__system_8h"/>
-        <childnode refid="3716" relation="include">
-        </childnode>
-        <childnode refid="3717" relation="include">
-        </childnode>
-        <childnode refid="3721" relation="include">
-        </childnode>
+      <node id="4325">
+        <label>map</label>
       </node>
-      <node id="3718">
-        <label>boost/any.hpp</label>
-      </node>
-      <node id="3720">
-        <label>message_codes.h</label>
-        <link refid="message__codes_8h"/>
-        <childnode refid="3708" relation="include">
-        </childnode>
-      </node>
-      <node id="3719">
-        <label>image_object.h</label>
-        <link refid="image__object_8h"/>
-        <childnode refid="3704" relation="include">
-        </childnode>
-        <childnode refid="3706" relation="include">
-        </childnode>
-      </node>
-      <node id="3721">
-        <label>message_bus.h</label>
-        <link refid="message__bus_8h"/>
-        <childnode refid="3716" relation="include">
-        </childnode>
-        <childnode refid="3717" relation="include">
-        </childnode>
-      </node>
-      <node id="3703">
-        <label>string.h</label>
-      </node>
-      <node id="3713">
-        <label>typeinfo</label>
-      </node>
-      <node id="3716">
-        <label>vector</label>
-      </node>
-      <node id="3705">
-        <label>cstdlib</label>
-      </node>
-      <node id="3701">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/loader_component.cpp</label>
-        <link refid="loader__component_8cpp"/>
-        <childnode refid="3702" relation="include">
-        </childnode>
-      </node>
-      <node id="3709">
-        <label>iostream</label>
-      </node>
-      <node id="3711">
-        <label>master_component.h</label>
-        <link refid="master__component_8h"/>
-        <childnode refid="3704" relation="include">
-        </childnode>
-        <childnode refid="3712" relation="include">
-        </childnode>
-        <childnode refid="3713" relation="include">
-        </childnode>
-        <childnode refid="3714" relation="include">
-        </childnode>
-        <childnode refid="3708" relation="include">
-        </childnode>
-        <childnode refid="3715" relation="include">
-        </childnode>
-      </node>
-      <node id="3712">
-        <label>unordered_map</label>
-      </node>
-      <node id="3714">
-        <label>memory</label>
-      </node>
-      <node id="3708">
+      <node id="4323">
         <label>logger_component.h</label>
         <link refid="logger__component_8h"/>
-        <childnode refid="3709" relation="include">
+        <childnode refid="4324" relation="include">
         </childnode>
-        <childnode refid="3703" relation="include">
+        <childnode refid="4318" relation="include">
         </childnode>
-        <childnode refid="3704" relation="include">
+        <childnode refid="4319" relation="include">
         </childnode>
-        <childnode refid="3710" relation="include">
+        <childnode refid="4325" relation="include">
         </childnode>
-        <childnode refid="3706" relation="include">
+        <childnode refid="4326" relation="include">
         </childnode>
-        <childnode refid="3707" relation="include">
+        <childnode refid="4327" relation="include">
         </childnode>
+        <childnode refid="4328" relation="include">
+        </childnode>
+        <childnode refid="4329" relation="include">
+        </childnode>
+        <childnode refid="4321" relation="include">
+        </childnode>
+        <childnode refid="4322" relation="include">
+        </childnode>
+        <childnode refid="4330" relation="include">
+        </childnode>
+      </node>
+      <node id="4326">
+        <label>fstream</label>
+      </node>
+      <node id="4317">
+        <label>loader_component.h</label>
+        <link refid="loader__component_8h"/>
+        <childnode refid="4318" relation="include">
+        </childnode>
+        <childnode refid="4319" relation="include">
+        </childnode>
+        <childnode refid="4320" relation="include">
+        </childnode>
+        <childnode refid="4321" relation="include">
+        </childnode>
+        <childnode refid="4322" relation="include">
+        </childnode>
+        <childnode refid="4323" relation="include">
+        </childnode>
+        <childnode refid="4331" relation="include">
+        </childnode>
+        <childnode refid="4339" relation="include">
+        </childnode>
+      </node>
+      <node id="4339">
+        <label>image_object.h</label>
+        <link refid="image__object_8h"/>
+        <childnode refid="4319" relation="include">
+        </childnode>
+        <childnode refid="4321" relation="include">
+        </childnode>
+      </node>
+      <node id="4337">
+        <label>message_object.h</label>
+        <link refid="message__object_8h"/>
+        <childnode refid="4319" relation="include">
+        </childnode>
+        <childnode refid="4338" relation="include">
+        </childnode>
+        <childnode refid="4339" relation="include">
+        </childnode>
+        <childnode refid="4340" relation="include">
+        </childnode>
+      </node>
+      <node id="4338">
+        <label>any</label>
+      </node>
+      <node id="4331">
+        <label>master_component.h</label>
+        <link refid="master__component_8h"/>
+        <childnode refid="4319" relation="include">
+        </childnode>
+        <childnode refid="4332" relation="include">
+        </childnode>
+        <childnode refid="4333" relation="include">
+        </childnode>
+        <childnode refid="4334" relation="include">
+        </childnode>
+        <childnode refid="4323" relation="include">
+        </childnode>
+        <childnode refid="4335" relation="include">
+        </childnode>
+      </node>
+      <node id="4318">
+        <label>string.h</label>
+      </node>
+      <node id="4340">
+        <label>message_codes.h</label>
+        <link refid="message__codes_8h"/>
+        <childnode refid="4323" relation="include">
+        </childnode>
+        <childnode refid="4337" relation="include">
+        </childnode>
+        <childnode refid="4325" relation="include">
+        </childnode>
+        <childnode refid="4338" relation="include">
+        </childnode>
+        <childnode refid="4341" relation="include">
+        </childnode>
+      </node>
+      <node id="4333">
+        <label>typeinfo</label>
+      </node>
+      <node id="4327">
+        <label>ctime</label>
+      </node>
+      <node id="4336">
+        <label>vector</label>
+      </node>
+      <node id="4316">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/loader_component.cpp</label>
+        <link refid="loader__component_8cpp"/>
+        <childnode refid="4317" relation="include">
+        </childnode>
+      </node>
+      <node id="4320">
+        <label>cstdlib</label>
+      </node>
+      <node id="4342">
+        <label>message_bus.h</label>
+        <link refid="message__bus_8h"/>
+        <childnode refid="4336" relation="include">
+        </childnode>
+        <childnode refid="4337" relation="include">
+        </childnode>
+      </node>
+      <node id="4324">
+        <label>iostream</label>
+      </node>
+      <node id="4332">
+        <label>unordered_map</label>
+      </node>
+      <node id="4335">
+        <label>message_system.h</label>
+        <link refid="message__system_8h"/>
+        <childnode refid="4336" relation="include">
+        </childnode>
+        <childnode refid="4337" relation="include">
+        </childnode>
+        <childnode refid="4342" relation="include">
+        </childnode>
+      </node>
+      <node id="4330">
+        <label>game.h</label>
+        <link refid="game_8h"/>
+        <childnode refid="4319" relation="include">
+        </childnode>
+      </node>
+      <node id="4334">
+        <label>memory</label>
+      </node>
+      <node id="4328">
+        <label>experimental/filesystem</label>
       </node>
     </incdepgraph>
     <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
     <innernamespace refid="namespace_rubeus_1_1_utility_components">Rubeus::UtilityComponents</innernamespace>
     <briefdescription>
-<para>Implements the loader component class. </para>    </briefdescription>
+    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/loader_component.cpp"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/loader_component.cpp"/>
   </compounddef>
 </doxygen>

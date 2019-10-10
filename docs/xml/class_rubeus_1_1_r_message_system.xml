@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_system.h" line="25" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_system.h" bodystart="25" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_system.h" line="25" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_system.h" bodystart="25" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -31,27 +31,25 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_system.h" line="33" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/message_system.cpp" bodystart="14" bodyend="28"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_system.h" line="34" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_system.cpp" bodystart="14" bodyend="32"/>
       </memberdef>
-      <memberdef kind="function" id="class_rubeus_1_1_r_message_system_1a45cc05c73a0c3b90964690607ccd0847" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_rubeus_1_1_r_message_system_1af3903e235c3ee6afcdf219118ae71056" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void Rubeus::RMessageSystem::addMessage</definition>
-        <argsstring>(RMasterComponent *sender, RMasterComponent *receiver, EMessageCode type, var data=NULL)</argsstring>
+        <argsstring>(RMasterComponent *receiver, std::string command, var data=NULL)</argsstring>
         <name>addMessage</name>
-        <param>
-          <type><ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref> *</type>
-          <declname>sender</declname>
-        </param>
         <param>
           <type><ref refid="class_rubeus_1_1_r_master_component" kindref="compound">RMasterComponent</ref> *</type>
           <declname>receiver</declname>
         </param>
         <param>
-          <type><ref refid="namespace_rubeus_1a82d14ec7bd46347068de3bc5c03a8136" kindref="member">EMessageCode</ref></type>
-          <declname>type</declname>
+          <type>std::string</type>
+          <declname>command</declname>
         </param>
         <param>
-          <type><ref refid="message__object_8h_1aa1f422da0e0c2bd47d96464982aac6a4" kindref="member">var</ref></type>
+          <type><ref refid="message__codes_8h_1a69899082fd1cf504645a65a3cc00c9e5" kindref="member">var</ref></type>
           <declname>data</declname>
           <defval>NULL</defval>
         </param>
@@ -60,13 +58,6 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>sender</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Pointer to the sender. </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
 <parametername>receiver</parametername>
 </parameternamelist>
 <parameterdescription>
@@ -74,7 +65,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>type</parametername>
+<parametername>command</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>Type of message command. </para></parameterdescription>
@@ -90,7 +81,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_system.h" line="45" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/message_system.cpp" bodystart="30" bodyend="34"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_system.h" line="45" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_system.cpp" bodystart="34" bodyend="38"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -98,21 +89,21 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="249">
+      <node id="301">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="248">
+      <node id="300">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="249" relation="usage">
+        <childnode refid="301" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_system.h" line="22" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/message_system.h" bodystart="21" bodyend="46"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_system.h" line="22" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_system.h" bodystart="21" bodyend="46"/>
     <listofallmembers>
-      <member refid="class_rubeus_1_1_r_message_system_1a45cc05c73a0c3b90964690607ccd0847" prot="public" virt="non-virtual"><scope>Rubeus::RMessageSystem</scope><name>addMessage</name></member>
+      <member refid="class_rubeus_1_1_r_message_system_1af3903e235c3ee6afcdf219118ae71056" prot="public" virt="non-virtual"><scope>Rubeus::RMessageSystem</scope><name>addMessage</name></member>
       <member refid="class_rubeus_1_1_r_message_system_1af27c32001557d581e8160ca18d547dce" prot="public" virt="non-virtual"><scope>Rubeus::RMessageSystem</scope><name>evaluateMessages</name></member>
       <member refid="class_rubeus_1_1_r_message_system_1ae17ea62568f2c703b42bb23add39bf05" prot="public" virt="non-virtual"><scope>Rubeus::RMessageSystem</scope><name>m_MessageBus</name></member>
     </listofallmembers>

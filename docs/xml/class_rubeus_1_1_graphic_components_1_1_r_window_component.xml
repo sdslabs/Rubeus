@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="58" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" bodystart="58" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="58" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a9a3f42fa87ca955a4429c31f3f9dd0a9" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="61" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" bodystart="61" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="61" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" bodystart="61" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a0d1afba9343d29f0bd05268f53b9e32f" prot="private" static="no" mutable="no">
         <type>const char *</type>
@@ -42,50 +42,50 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="64" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" bodystart="64" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="64" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-attrib">
-      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a24b6c4ff6c8558619dd5f97e1a8cfea3" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a71366ac1b2916de88f6f311117b4eccd" prot="public" static="yes" mutable="no">
         <type>int</type>
-        <definition>int Rubeus::GraphicComponents::RWindowComponent::m_X</definition>
+        <definition>int Rubeus::GraphicComponents::RWindowComponent::MouseX</definition>
         <argsstring></argsstring>
-        <name>m_X</name>
+        <name>MouseX</name>
         <briefdescription>
 <para>Mouse positions. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="68" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" bodystart="68" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="68" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" bodystart="68" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a9be5974b59890f9d7dfacb10a0169fe2" prot="public" static="yes" mutable="no">
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a7ad1063a094bfc683bea25712a6fbdf6" prot="public" static="yes" mutable="no">
         <type>int</type>
-        <definition>int Rubeus::GraphicComponents::RWindowComponent::m_Y</definition>
+        <definition>int Rubeus::GraphicComponents::RWindowComponent::Y</definition>
         <argsstring></argsstring>
-        <name>m_Y</name>
+        <name>Y</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="68" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" bodystart="68" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="68" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" bodystart="68" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
-      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1af445e2e41ff6c10dbcffbb8ffa7959dd" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a1f9ac8d84730a2654f27ab48afe2f786" prot="public" static="no" mutable="no">
         <type>GLFWwindow *</type>
-        <definition>GLFWwindow* Rubeus::GraphicComponents::RWindowComponent::m_Window</definition>
+        <definition>GLFWwindow* Rubeus::GraphicComponents::RWindowComponent::m_GLFWWindow</definition>
         <argsstring></argsstring>
-        <name>m_Window</name>
+        <name>m_GLFWWindow</name>
         <briefdescription>
 <para>GLFW Window object. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="71" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" bodystart="71" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="71" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" bodystart="71" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -159,7 +159,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="87" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/window_component.cpp" bodystart="100" bodyend="188"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="87" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp" bodystart="103" bodyend="191"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ac61828b6b57dfb3aa398fd0cd5f34224" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -242,7 +242,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="104" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/window_component.cpp" bodystart="34" bodyend="54"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="104" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp" bodystart="36" bodyend="56"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ab56619ea64ad8ebec5f0059a7a5c6638" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -255,7 +255,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="111" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/window_component.cpp" bodystart="82" bodyend="86"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="111" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp" bodystart="85" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ab7c5724af3c2d6f3c3db226eb0757263" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -268,7 +268,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="118" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/window_component.cpp" bodystart="88" bodyend="92"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="118" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp" bodystart="91" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1af65024825d2b929e9e322570f48aad81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -281,7 +281,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="127" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/window_component.cpp" bodystart="94" bodyend="98"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="127" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp" bodystart="97" bodyend="101"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a47a71ace6fce39d9e9213c914b9be2f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -295,7 +295,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="136" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/window_component.cpp" bodystart="56" bodyend="59"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="136" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp" bodystart="58" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a279b5589ab679da9f44d34a47bcc3966" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -320,7 +320,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="145" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/window_component.cpp" bodystart="61" bodyend="65"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="145" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp" bodystart="63" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ac79eb96ca24e529ab82411e58c81ccdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -342,7 +342,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="148" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/window_component.cpp" bodystart="67" bodyend="80"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="148" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp" bodystart="69" bodyend="83"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a002c157c066b4f5040cf140a593850a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -355,7 +355,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="151" column="1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="151" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a789cf8e623651ca942d89c952d43ee22" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const int &amp;</type>
@@ -369,7 +369,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="181" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" bodystart="181" bodyend="181"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="181" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" bodystart="181" bodyend="181"/>
       </memberdef>
       <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a5dde4e474f3c987392f5153da10e3610" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const int &amp;</type>
@@ -383,34 +383,57 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="190" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" bodystart="190" bodyend="190"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="190" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" bodystart="190" bodyend="190"/>
       </memberdef>
-      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a55b12b3208217709e571d6e7811de756" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a987de724a65152a1cd83903119ac0903" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Rubeus::GraphicComponents::RWindowComponent::onMessage</definition>
-        <argsstring>(Message *msg) override</argsstring>
-        <name>onMessage</name>
-        <reimplements refid="class_rubeus_1_1_r_master_component_1a129a5b04db723423b40cfd4780adcd35">onMessage</reimplements>
+        <definition>void Rubeus::GraphicComponents::RWindowComponent::change_window_title</definition>
+        <argsstring>(var data)</argsstring>
+        <name>change_window_title</name>
         <param>
-          <type><ref refid="struct_rubeus_1_1_message" kindref="compound">Message</ref> *</type>
-          <declname>msg</declname>
+          <type><ref refid="message__codes_8h_1a69899082fd1cf504645a65a3cc00c9e5" kindref="member">var</ref></type>
+          <declname>data</declname>
         </param>
         <briefdescription>
-<para>Handles the message received. </para>        </briefdescription>
+<para>Changes the title of the window. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="warning"><para>Only to be used by the message system</para></simplesect>
-<parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>msg</parametername>
+<parametername>data</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The message object recieved. </para></parameterdescription>
+<para>The title </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="200" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/window_component.cpp" bodystart="190" bodyend="222"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="200" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp" bodystart="193" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a429ab6f3c6342a3237c5d15a906977ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Rubeus::GraphicComponents::RWindowComponent::get_loaded_image</definition>
+        <argsstring>(var data)</argsstring>
+        <name>get_loaded_image</name>
+        <param>
+          <type><ref refid="message__codes_8h_1a69899082fd1cf504645a65a3cc00c9e5" kindref="member">var</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Receive the reply to an earlier message sent with the command, <computeroutput>change_window_title</computeroutput> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The image </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="209" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp" bodystart="198" bodyend="202"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -437,7 +460,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="160" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/window_component.cpp" bodystart="23" bodyend="26"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="160" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp" bodystart="25" bodyend="28"/>
       </memberdef>
       <memberdef kind="friend" id="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a01e52489c6643d63f4fbca88df2d9c9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>friend void</type>
@@ -484,7 +507,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="171" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/window_component.cpp" bodystart="28" bodyend="32"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="171" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp" bodystart="30" bodyend="34"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -492,62 +515,70 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="322">
+      <node id="370">
         <label>Rubeus::GraphicComponents::RWindowComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_window_component"/>
-        <childnode refid="323" relation="public-inheritance">
+        <childnode refid="371" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="323">
+      <node id="371">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="324">
+      <node id="374">
+        <label>Rubeus::RMailingList</label>
+        <link refid="class_rubeus_1_1_r_mailing_list"/>
+      </node>
+      <node id="372">
         <label>Rubeus::GraphicComponents::RWindowComponent</label>
         <link refid="class_rubeus_1_1_graphic_components_1_1_r_window_component"/>
-        <childnode refid="325" relation="public-inheritance">
+        <childnode refid="373" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="327">
+      <node id="376">
         <label>Rubeus::RMessageBus</label>
         <link refid="class_rubeus_1_1_r_message_bus"/>
       </node>
-      <node id="326">
+      <node id="375">
         <label>Rubeus::RMessageSystem</label>
         <link refid="class_rubeus_1_1_r_message_system"/>
-        <childnode refid="327" relation="usage">
+        <childnode refid="376" relation="usage">
           <edgelabel>m_MessageBus</edgelabel>
         </childnode>
       </node>
-      <node id="325">
+      <node id="373">
         <label>Rubeus::RMasterComponent</label>
         <link refid="class_rubeus_1_1_r_master_component"/>
-        <childnode refid="326" relation="usage">
+        <childnode refid="374" relation="usage">
+          <edgelabel>m_mailbox</edgelabel>
+        </childnode>
+        <childnode refid="375" relation="usage">
           <edgelabel>m_MessageSystem</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="54" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" bodystart="53" bodyend="203"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="54" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" bodystart="53" bodyend="212"/>
     <listofallmembers>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a987de724a65152a1cd83903119ac0903" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>change_window_title</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ab7c5724af3c2d6f3c3db226eb0757263" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>clearWindow</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a47a71ace6fce39d9e9213c914b9be2f3" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>closed</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1aa8456741bb2402650fc8726cd6768803" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>componentsInitialised</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a429ab6f3c6342a3237c5d15a906977ad" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>get_loaded_image</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1ada4b85021d96ac2c2153e613d5f14097" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>getComponentID</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a5dde4e474f3c987392f5153da10e3610" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>getHeight</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1ad3c9003c4bc64661ed9ae5961c8cf3fa" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>getName</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a789cf8e623651ca942d89c952d43ee22" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>getWidth</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a7de46dcdb635adfd4324e7ca5da1b3f0" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>initWindow</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1a838bceba7935bb3b11a5b69def0f0fc0" prot="protected" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_ComponentID</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a1f9ac8d84730a2654f27ab48afe2f786" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_GLFWWindow</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a9a3f42fa87ca955a4429c31f3f9dd0a9" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_Height</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1adcb2a179fd09797acff84882cbfdea15" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_mailbox</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1aedb604c4ddfb8d2ba72ff493a74b7025" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_MessageSystem</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a0d1afba9343d29f0bd05268f53b9e32f" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_Title</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ac83926cc8f53c1d8453b90934eef9e22" prot="private" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_Width</name></member>
-      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1af445e2e41ff6c10dbcffbb8ffa7959dd" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_Window</name></member>
-      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a24b6c4ff6c8558619dd5f97e1a8cfea3" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_X</name></member>
-      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a9be5974b59890f9d7dfacb10a0169fe2" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>m_Y</name></member>
-      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a55b12b3208217709e571d6e7811de756" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>onMessage</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a71366ac1b2916de88f6f311117b4eccd" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>MouseX</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1aecd982f5c7361dbb23bcc8ac5ec6481c" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>RMasterComponent</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ac61828b6b57dfb3aa398fd0cd5f34224" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>RWindowComponent</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ac79eb96ca24e529ab82411e58c81ccdc" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>setWindowIcon</name></member>
@@ -556,6 +587,7 @@
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1af65024825d2b929e9e322570f48aad81" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>updateWindow</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a49b73f0aabec271c81a81efa0f9aacc2" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>windowCloseCallback</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a01e52489c6643d63f4fbca88df2d9c9f" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>windowResizeCallback</name></member>
+      <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1a7ad1063a094bfc683bea25712a6fbdf6" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>Y</name></member>
       <member refid="class_rubeus_1_1_r_master_component_1a03a8ba150ef34447b3c7d22f10dca93a" prot="public" virt="virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>~RMasterComponent</name></member>
       <member refid="class_rubeus_1_1_graphic_components_1_1_r_window_component_1ab56619ea64ad8ebec5f0059a7a5c6638" prot="public" virt="non-virtual"><scope>Rubeus::GraphicComponents::RWindowComponent</scope><name>~RWindowComponent</name></member>
     </listofallmembers>

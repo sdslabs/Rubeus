@@ -6,179 +6,230 @@
     <includes refid="master__component_8h" local="no">master_component.h</includes>
     <includes refid="logger__component_8h" local="no">logger_component.h</includes>
     <includedby refid="_rubeus_core_8h" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/RubeusCore.h</includedby>
-    <includedby refid="engine_8h" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h</includedby>
-    <includedby refid="timer__component_8cpp" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/timer_component.cpp</includedby>
+    <includedby refid="engine_8h" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h</includedby>
+    <includedby refid="timer__component_8cpp" local="no">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/timer_component.cpp</includedby>
     <incdepgraph>
-      <node id="2559">
+      <node id="4575">
+        <label>functional</label>
+      </node>
+      <node id="4566">
         <label>IL/il.h</label>
       </node>
-      <node id="2560">
+      <node id="4567">
         <label>IL/ilu.h</label>
       </node>
-      <node id="2563">
-        <label>message_object.h</label>
-        <link refid="message__object_8h"/>
-        <childnode refid="2551" relation="include">
-        </childnode>
-        <childnode refid="2564" relation="include">
-        </childnode>
-        <childnode refid="2565" relation="include">
-        </childnode>
-        <childnode refid="2566" relation="include">
-        </childnode>
-      </node>
-      <node id="2551">
+      <node id="4554">
         <label>string</label>
       </node>
-      <node id="2558">
+      <node id="4565">
         <label>GL/glew.h</label>
       </node>
-      <node id="2561">
-        <label>message_system.h</label>
-        <link refid="message__system_8h"/>
-        <childnode refid="2562" relation="include">
-        </childnode>
-        <childnode refid="2563" relation="include">
-        </childnode>
-        <childnode refid="2567" relation="include">
-        </childnode>
+      <node id="4561">
+        <label>map</label>
       </node>
-      <node id="2564">
-        <label>boost/any.hpp</label>
-      </node>
-      <node id="2566">
-        <label>message_codes.h</label>
-        <link refid="message__codes_8h"/>
-        <childnode refid="2555" relation="include">
-        </childnode>
-      </node>
-      <node id="2565">
-        <label>image_object.h</label>
-        <link refid="image__object_8h"/>
-        <childnode refid="2551" relation="include">
-        </childnode>
-        <childnode refid="2559" relation="include">
-        </childnode>
-      </node>
-      <node id="2567">
-        <label>message_bus.h</label>
-        <link refid="message__bus_8h"/>
-        <childnode refid="2562" relation="include">
-        </childnode>
-        <childnode refid="2563" relation="include">
-        </childnode>
-      </node>
-      <node id="2557">
-        <label>string.h</label>
-      </node>
-      <node id="2553">
-        <label>typeinfo</label>
-      </node>
-      <node id="2562">
-        <label>vector</label>
-      </node>
-      <node id="2556">
-        <label>iostream</label>
-      </node>
-      <node id="2550">
-        <label>master_component.h</label>
-        <link refid="master__component_8h"/>
-        <childnode refid="2551" relation="include">
-        </childnode>
-        <childnode refid="2552" relation="include">
-        </childnode>
-        <childnode refid="2553" relation="include">
-        </childnode>
-        <childnode refid="2554" relation="include">
-        </childnode>
-        <childnode refid="2555" relation="include">
-        </childnode>
-        <childnode refid="2561" relation="include">
-        </childnode>
-      </node>
-      <node id="2552">
-        <label>unordered_map</label>
-      </node>
-      <node id="2549">
-        <label>chrono</label>
-      </node>
-      <node id="2548">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/timer_component.h</label>
-        <link refid="timer__component_8h"/>
-        <childnode refid="2549" relation="include">
-        </childnode>
-        <childnode refid="2550" relation="include">
-        </childnode>
-        <childnode refid="2555" relation="include">
-        </childnode>
-      </node>
-      <node id="2554">
-        <label>memory</label>
-      </node>
-      <node id="2555">
+      <node id="4558">
         <label>logger_component.h</label>
         <link refid="logger__component_8h"/>
-        <childnode refid="2556" relation="include">
+        <childnode refid="4559" relation="include">
         </childnode>
-        <childnode refid="2557" relation="include">
+        <childnode refid="4560" relation="include">
         </childnode>
-        <childnode refid="2551" relation="include">
+        <childnode refid="4554" relation="include">
         </childnode>
-        <childnode refid="2558" relation="include">
+        <childnode refid="4561" relation="include">
         </childnode>
-        <childnode refid="2559" relation="include">
+        <childnode refid="4562" relation="include">
         </childnode>
-        <childnode refid="2560" relation="include">
+        <childnode refid="4563" relation="include">
         </childnode>
+        <childnode refid="4564" relation="include">
+        </childnode>
+        <childnode refid="4565" relation="include">
+        </childnode>
+        <childnode refid="4566" relation="include">
+        </childnode>
+        <childnode refid="4567" relation="include">
+        </childnode>
+        <childnode refid="4568" relation="include">
+        </childnode>
+      </node>
+      <node id="4562">
+        <label>fstream</label>
+      </node>
+      <node id="4573">
+        <label>image_object.h</label>
+        <link refid="image__object_8h"/>
+        <childnode refid="4554" relation="include">
+        </childnode>
+        <childnode refid="4566" relation="include">
+        </childnode>
+      </node>
+      <node id="4571">
+        <label>message_object.h</label>
+        <link refid="message__object_8h"/>
+        <childnode refid="4554" relation="include">
+        </childnode>
+        <childnode refid="4572" relation="include">
+        </childnode>
+        <childnode refid="4573" relation="include">
+        </childnode>
+        <childnode refid="4574" relation="include">
+        </childnode>
+      </node>
+      <node id="4572">
+        <label>any</label>
+      </node>
+      <node id="4551">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/timer_component.h</label>
+        <link refid="timer__component_8h"/>
+        <childnode refid="4552" relation="include">
+        </childnode>
+        <childnode refid="4553" relation="include">
+        </childnode>
+        <childnode refid="4558" relation="include">
+        </childnode>
+      </node>
+      <node id="4553">
+        <label>master_component.h</label>
+        <link refid="master__component_8h"/>
+        <childnode refid="4554" relation="include">
+        </childnode>
+        <childnode refid="4555" relation="include">
+        </childnode>
+        <childnode refid="4556" relation="include">
+        </childnode>
+        <childnode refid="4557" relation="include">
+        </childnode>
+        <childnode refid="4558" relation="include">
+        </childnode>
+        <childnode refid="4569" relation="include">
+        </childnode>
+      </node>
+      <node id="4560">
+        <label>string.h</label>
+      </node>
+      <node id="4574">
+        <label>message_codes.h</label>
+        <link refid="message__codes_8h"/>
+        <childnode refid="4558" relation="include">
+        </childnode>
+        <childnode refid="4571" relation="include">
+        </childnode>
+        <childnode refid="4561" relation="include">
+        </childnode>
+        <childnode refid="4572" relation="include">
+        </childnode>
+        <childnode refid="4575" relation="include">
+        </childnode>
+      </node>
+      <node id="4556">
+        <label>typeinfo</label>
+      </node>
+      <node id="4563">
+        <label>ctime</label>
+      </node>
+      <node id="4570">
+        <label>vector</label>
+      </node>
+      <node id="4576">
+        <label>message_bus.h</label>
+        <link refid="message__bus_8h"/>
+        <childnode refid="4570" relation="include">
+        </childnode>
+        <childnode refid="4571" relation="include">
+        </childnode>
+      </node>
+      <node id="4559">
+        <label>iostream</label>
+      </node>
+      <node id="4555">
+        <label>unordered_map</label>
+      </node>
+      <node id="4552">
+        <label>chrono</label>
+      </node>
+      <node id="4569">
+        <label>message_system.h</label>
+        <link refid="message__system_8h"/>
+        <childnode refid="4570" relation="include">
+        </childnode>
+        <childnode refid="4571" relation="include">
+        </childnode>
+        <childnode refid="4576" relation="include">
+        </childnode>
+      </node>
+      <node id="4568">
+        <label>game.h</label>
+        <link refid="game_8h"/>
+        <childnode refid="4554" relation="include">
+        </childnode>
+      </node>
+      <node id="4557">
+        <label>memory</label>
+      </node>
+      <node id="4564">
+        <label>experimental/filesystem</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2569">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/RubeusCore.h</label>
-        <link refid="_rubeus_core_8h"/>
-        <childnode refid="2570" relation="include">
-        </childnode>
-        <childnode refid="2571" relation="include">
-        </childnode>
-      </node>
-      <node id="2573">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/engine.cpp</label>
-        <link refid="engine_8cpp"/>
-      </node>
-      <node id="2570">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp</label>
-        <link refid="user__init_8cpp"/>
-      </node>
-      <node id="2575">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/timer_component.cpp</label>
+      <node id="4586">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/timer_component.cpp</label>
         <link refid="timer__component_8cpp"/>
       </node>
-      <node id="2571">
+      <node id="4584">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/level.cpp</label>
+        <link refid="level_8cpp"/>
+      </node>
+      <node id="4579">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp</label>
+        <link refid="user__init_8cpp"/>
+      </node>
+      <node id="4585">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/MessageSystem/message_codes.cpp</label>
+        <link refid="message__codes_8cpp"/>
+      </node>
+      <node id="4583">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/game.cpp</label>
+        <link refid="game_8cpp"/>
+      </node>
+      <node id="4578">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/RubeusCore.h</label>
+        <link refid="_rubeus_core_8h"/>
+        <childnode refid="4579" relation="include">
+        </childnode>
+        <childnode refid="4580" relation="include">
+        </childnode>
+      </node>
+      <node id="4577">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/timer_component.h</label>
+        <link refid="timer__component_8h"/>
+        <childnode refid="4578" relation="include">
+        </childnode>
+        <childnode refid="4581" relation="include">
+        </childnode>
+        <childnode refid="4586" relation="include">
+        </childnode>
+      </node>
+      <node id="4580">
         <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/RubeusCore.cpp</label>
         <link refid="_rubeus_core_8cpp"/>
       </node>
-      <node id="2574">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/level.cpp</label>
-        <link refid="level_8cpp"/>
+      <node id="4582">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.cpp</label>
+        <link refid="engine_8cpp"/>
       </node>
-      <node id="2572">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/engine.h</label>
+      <node id="4581">
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/Architecture/engine.h</label>
         <link refid="engine_8h"/>
-        <childnode refid="2569" relation="include">
+        <childnode refid="4578" relation="include">
         </childnode>
-        <childnode refid="2573" relation="include">
+        <childnode refid="4582" relation="include">
         </childnode>
-        <childnode refid="2574" relation="include">
+        <childnode refid="4583" relation="include">
         </childnode>
-      </node>
-      <node id="2568">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/timer_component.h</label>
-        <link refid="timer__component_8h"/>
-        <childnode refid="2569" relation="include">
+        <childnode refid="4584" relation="include">
         </childnode>
-        <childnode refid="2572" relation="include">
-        </childnode>
-        <childnode refid="2575" relation="include">
+        <childnode refid="4585" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -186,9 +237,9 @@
     <innernamespace refid="namespace_rubeus">Rubeus</innernamespace>
     <innernamespace refid="namespace_rubeus_1_1_utility_components">Rubeus::UtilityComponents</innernamespace>
     <briefdescription>
-<para>Declares the timer component class. </para>    </briefdescription>
+    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/timer_component.h"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/UtilityComponents/timer_component.h"/>
   </compounddef>
 </doxygen>

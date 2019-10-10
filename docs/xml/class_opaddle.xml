@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_opaddle" kind="class" language="C++" prot="public">
+    <compoundname>Opaddle</compoundname>
+    <basecompoundref refid="class_rubeus_1_1_r_game_object" prot="public" virt="non-virtual">Rubeus::RGameObject</basecompoundref>
+    <includes refid="object_8paddle_8h" local="no">object.paddle.h</includes>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="125">
+        <label>Rubeus::REntity</label>
+        <link refid="class_rubeus_1_1_r_entity"/>
+      </node>
+      <node id="124">
+        <label>Rubeus::RGameObject</label>
+        <link refid="class_rubeus_1_1_r_game_object"/>
+        <childnode refid="125" relation="public-inheritance">
+        </childnode>
+        <childnode refid="126" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="126">
+        <label>Rubeus::RMasterComponent</label>
+        <link refid="class_rubeus_1_1_r_master_component"/>
+      </node>
+      <node id="123">
+        <label>Opaddle</label>
+        <link refid="class_opaddle"/>
+        <childnode refid="124" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="134">
+        <label>Rubeus::Awerere::APhysicsObject</label>
+        <link refid="class_rubeus_1_1_awerere_1_1_a_physics_object"/>
+        <childnode refid="135" relation="usage">
+          <edgelabel>m_Sprite</edgelabel>
+        </childnode>
+        <childnode refid="141" relation="usage">
+          <edgelabel>m_Collider</edgelabel>
+        </childnode>
+        <childnode refid="142" relation="usage">
+          <edgelabel>m_PhysicsMaterial</edgelabel>
+        </childnode>
+      </node>
+      <node id="145">
+        <label>Rubeus::AudioComponents::RSymphony</label>
+        <link refid="class_rubeus_1_1_audio_components_1_1_r_symphony"/>
+        <childnode refid="130" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="146">
+        <label>Rubeus::RInputManager</label>
+        <link refid="class_rubeus_1_1_r_input_manager"/>
+        <childnode refid="130" relation="public-inheritance">
+        </childnode>
+        <childnode refid="139" relation="usage">
+          <edgelabel>MouseScroll</edgelabel>
+          <edgelabel>MousePosition</edgelabel>
+        </childnode>
+      </node>
+      <node id="143">
+        <label>RML::Matrix4</label>
+        <link refid="struct_r_m_l_1_1_matrix4"/>
+        <childnode refid="137" relation="usage">
+          <edgelabel>columns</edgelabel>
+        </childnode>
+      </node>
+      <node id="131">
+        <label>Rubeus::RMailingList</label>
+        <link refid="class_rubeus_1_1_r_mailing_list"/>
+      </node>
+      <node id="129">
+        <label>Rubeus::REntity</label>
+        <link refid="class_rubeus_1_1_r_entity"/>
+      </node>
+      <node id="141">
+        <label>Rubeus::Awerere::ACollider</label>
+        <link refid="class_rubeus_1_1_awerere_1_1_a_collider"/>
+        <childnode refid="135" relation="usage">
+          <edgelabel>m_Sprite</edgelabel>
+        </childnode>
+        <childnode refid="142" relation="usage">
+          <edgelabel>m_PhysicsMaterial</edgelabel>
+        </childnode>
+        <childnode refid="139" relation="usage">
+          <edgelabel>m_Position</edgelabel>
+          <edgelabel>m_Force</edgelabel>
+          <edgelabel>m_Momentum</edgelabel>
+        </childnode>
+      </node>
+      <node id="137">
+        <label>RML::Vector4D</label>
+        <link refid="struct_r_m_l_1_1_vector4_d"/>
+      </node>
+      <node id="135">
+        <label>Rubeus::GraphicComponents::RSprite</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_sprite"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="147">
+        <label>Rubeus::RWorld</label>
+        <link refid="class_rubeus_1_1_r_world"/>
+      </node>
+      <node id="140">
+        <label>RML::Vector3D</label>
+        <link refid="struct_r_m_l_1_1_vector3_d"/>
+      </node>
+      <node id="138">
+        <label>Rubeus::GraphicComponents::RTexture</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_texture"/>
+      </node>
+      <node id="139">
+        <label>RML::Vector2D</label>
+        <link refid="struct_r_m_l_1_1_vector2_d"/>
+      </node>
+      <node id="136">
+        <label>Rubeus::GraphicComponents::RRenderableObject</label>
+        <link refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object"/>
+        <childnode refid="137" relation="usage">
+          <edgelabel>m_Color</edgelabel>
+        </childnode>
+        <childnode refid="138" relation="usage">
+          <edgelabel>m_Texture</edgelabel>
+        </childnode>
+        <childnode refid="139" relation="usage">
+          <edgelabel>m_Size</edgelabel>
+        </childnode>
+        <childnode refid="140" relation="usage">
+          <edgelabel>m_Position</edgelabel>
+        </childnode>
+      </node>
+      <node id="133">
+        <label>Rubeus::RMessageBus</label>
+        <link refid="class_rubeus_1_1_r_message_bus"/>
+      </node>
+      <node id="132">
+        <label>Rubeus::RMessageSystem</label>
+        <link refid="class_rubeus_1_1_r_message_system"/>
+        <childnode refid="133" relation="usage">
+          <edgelabel>m_MessageBus</edgelabel>
+        </childnode>
+      </node>
+      <node id="128">
+        <label>Rubeus::RGameObject</label>
+        <link refid="class_rubeus_1_1_r_game_object"/>
+        <childnode refid="129" relation="public-inheritance">
+        </childnode>
+        <childnode refid="130" relation="public-inheritance">
+        </childnode>
+        <childnode refid="134" relation="usage">
+          <edgelabel>m_PhysicsObject</edgelabel>
+        </childnode>
+        <childnode refid="135" relation="usage">
+          <edgelabel>m_Sprite</edgelabel>
+        </childnode>
+        <childnode refid="128" relation="usage">
+          <edgelabel>m_Parent</edgelabel>
+        </childnode>
+        <childnode refid="143" relation="usage">
+          <edgelabel>m_TransformationMatrix</edgelabel>
+        </childnode>
+        <childnode refid="144" relation="usage">
+          <edgelabel>m_ParentLevel</edgelabel>
+        </childnode>
+      </node>
+      <node id="130">
+        <label>Rubeus::RMasterComponent</label>
+        <link refid="class_rubeus_1_1_r_master_component"/>
+        <childnode refid="131" relation="usage">
+          <edgelabel>m_mailbox</edgelabel>
+        </childnode>
+        <childnode refid="132" relation="usage">
+          <edgelabel>m_MessageSystem</edgelabel>
+        </childnode>
+      </node>
+      <node id="127">
+        <label>Opaddle</label>
+        <link refid="class_opaddle"/>
+        <childnode refid="128" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="144">
+        <label>Rubeus::RLevel</label>
+        <link refid="class_rubeus_1_1_r_level"/>
+        <childnode refid="145" relation="usage">
+          <edgelabel>m_AudioManager</edgelabel>
+        </childnode>
+        <childnode refid="146" relation="usage">
+          <edgelabel>m_InputManager</edgelabel>
+        </childnode>
+        <childnode refid="147" relation="usage">
+          <edgelabel>m_World</edgelabel>
+        </childnode>
+      </node>
+      <node id="142">
+        <label>Rubeus::Awerere::APhysicsMaterial</label>
+        <link refid="class_rubeus_1_1_awerere_1_1_a_physics_material"/>
+        <childnode refid="142" relation="usage">
+          <edgelabel>DefaultMaterial</edgelabel>
+        </childnode>
+        <childnode refid="139" relation="usage">
+          <edgelabel>m_Gravity</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/engine_files/object.paddle.h" line="6" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/engine_files/object.paddle.h" bodystart="5" bodyend="8"/>
+    <listofallmembers>
+      <member refid="class_rubeus_1_1_r_game_object_1a520b9d359776f4980ed63fc4a065f74c" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>add</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1a92f2fe2f062e45a168f45db52a7f35c7" prot="public" virt="virtual"><scope>Opaddle</scope><name>begin</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1aa8456741bb2402650fc8726cd6768803" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>componentsInitialised</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1aef241e54bceb79e7a538bcc57a4425d7" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>enableTick</name></member>
+      <member refid="class_rubeus_1_1_r_entity_1ade850425733b077ca98bf9f1fbc49eaa" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>entityCount</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1a673401c09883b42b27c4ea03eb612351" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>gameobject_ok</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1ada4b85021d96ac2c2153e613d5f14097" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>getComponentID</name></member>
+      <member refid="class_rubeus_1_1_r_entity_1a711b39f7080c54161c642770ae7c73eb" prot="public" virt="non-virtual" ambiguityscope="Rubeus::"><scope>Opaddle</scope><name>getName</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1ad3c9003c4bc64661ed9ae5961c8cf3fa" prot="public" virt="non-virtual" ambiguityscope="Rubeus::RMasterComponent::"><scope>Opaddle</scope><name>getName</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1ac91bd9c106e663ce0aeb3a594ad09985" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>InstantiatedGameObjects</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1a0803695c8de12d6ed1c7fc15f92a9818" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>m_Children</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1a838bceba7935bb3b11a5b69def0f0fc0" prot="protected" virt="non-virtual"><scope>Opaddle</scope><name>m_ComponentID</name></member>
+      <member refid="class_rubeus_1_1_r_entity_1a4a6b38c0f88052f8867d8591cbd776d5" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>m_EntityID</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1aa8d364e2a65f0bef7b5a90037c46d5ec" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>m_GeneratesHit</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1aa903a9044d22b660f502953e66f084b6" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>m_HasPhysics</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1a37dfcb0ff063ffa0e204b5970fa9d2fa" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>m_IsGroup</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1a8b3321521395ae77df18167538406b9f" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>m_IsSubmitted</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1adcb2a179fd09797acff84882cbfdea15" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>m_mailbox</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1aedb604c4ddfb8d2ba72ff493a74b7025" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>m_MessageSystem</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1ad679990c2ce2ab7d7ee9edebcc679dff" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>m_Name</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1aa52b67c889afdd9d9a15e81ce897e9dd" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>m_Parent</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1af0b3e8e7692e91f3fe8f5cb0ba0eafde" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>m_ParentLevel</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1a381c5fbf3aabddacb98c9d70100143ea" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>m_PhysicsObject</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1a141774d17214b4a86e8f4d2ada078574" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>m_Sprite</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1a30c59cd4fa242595ab2980f31dfd0f31" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>m_ThisTicks</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1a1376dcb251d444fea7f387c994e0928c" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>m_TransformationMatrix</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1a9dc72644b5d8b96240763913e767b885" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>m_UsesTexture</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1aa137a57fa68332f4966574f123c9944e" prot="public" virt="virtual"><scope>Opaddle</scope><name>onHit</name></member>
+      <member refid="class_rubeus_1_1_r_entity_1a5e9533e6bf1e3c9e5a3af285065d4441" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>REntity</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1a38321002250a752da28d6107bca50a3a" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>RGameObject</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1a3a512ae142f34273d5cfac0177c58a11" prot="protected" virt="non-virtual"><scope>Opaddle</scope><name>RGameObject</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1aecd982f5c7361dbb23bcc8ac5ec6481c" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>RMasterComponent</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1a2e1f13a065dc24dac3b2d36c8890fa4c" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>submit</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1ade6d964c655301870cb762c1b9c02966" prot="public" virt="virtual"><scope>Opaddle</scope><name>tick</name></member>
+      <member refid="class_rubeus_1_1_r_entity_1aef39429d45d98fccaa2633799360e24d" prot="public" virt="virtual"><scope>Opaddle</scope><name>~REntity</name></member>
+      <member refid="class_rubeus_1_1_r_game_object_1a4c60d9f9133a6f321c50d39b2f2a096e" prot="public" virt="non-virtual"><scope>Opaddle</scope><name>~RGameObject</name></member>
+      <member refid="class_rubeus_1_1_r_master_component_1a03a8ba150ef34447b3c7d22f10dca93a" prot="public" virt="virtual"><scope>Opaddle</scope><name>~RMasterComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

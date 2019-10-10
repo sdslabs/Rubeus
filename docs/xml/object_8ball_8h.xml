@@ -2,27 +2,27 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
   <compounddef id="object_8ball_8h" kind="file" language="C++">
     <compoundname>object.ball.h</compoundname>
-    <includes local="yes">../RubeusCore.h</includes>
+    <includes local="yes">../../RubeusCore.h</includes>
     <includedby refid="object_8ball_8cpp" local="yes">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/engine_files/object.ball.cpp</includedby>
-    <includedby refid="user__init_8h" local="yes">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.h</includedby>
+    <includedby refid="user__init_8h" local="yes">/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.h</includedby>
     <incdepgraph>
-      <node id="23">
-        <label>../RubeusCore.h</label>
-      </node>
       <node id="22">
         <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/engine_files/object.ball.h</label>
         <link refid="object_8ball_8h"/>
         <childnode refid="23" relation="include">
         </childnode>
       </node>
+      <node id="23">
+        <label>../../RubeusCore.h</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
       <node id="27">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.cpp</label>
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.cpp</label>
         <link refid="user__init_8cpp"/>
       </node>
       <node id="26">
-        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/user_init.h</label>
+        <label>/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Game/ping_pong/user_init.h</label>
         <link refid="user__init_8h"/>
         <childnode refid="27" relation="include">
         </childnode>
@@ -40,7 +40,7 @@
         <link refid="object_8ball_8cpp"/>
       </node>
     </invincdepgraph>
-    <innerclass refid="classball" prot="public">ball</innerclass>
+    <innerclass refid="class_oball" prot="public">Oball</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

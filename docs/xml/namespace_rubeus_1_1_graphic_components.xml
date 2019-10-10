@@ -4,20 +4,18 @@
     <compoundname>Rubeus::GraphicComponents</compoundname>
     <innerclass refid="struct_rubeus_1_1_graphic_components_1_1_image" prot="public">Rubeus::GraphicComponents::Image</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_buffer" prot="public">Rubeus::GraphicComponents::RBuffer</innerclass>
-    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_group" prot="public">Rubeus::GraphicComponents::RGroup</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_game_scene" prot="public">Rubeus::GraphicComponents::RGameScene</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_guerrilla_renderer_component" prot="public">Rubeus::GraphicComponents::RGuerrillaRendererComponent</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_index_buffer" prot="public">Rubeus::GraphicComponents::RIndexBuffer</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_layer" prot="public">Rubeus::GraphicComponents::RLayer</innerclass>
-    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_layer_composition" prot="public">Rubeus::GraphicComponents::RLayerComposition</innerclass>
+    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_main_layer" prot="public">Rubeus::GraphicComponents::RMainLayer</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_renderable_object" prot="public">Rubeus::GraphicComponents::RRenderableObject</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_renderer_component" prot="public">Rubeus::GraphicComponents::RRendererComponent</innerclass>
-    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_scene_layer" prot="public">Rubeus::GraphicComponents::RSceneLayer</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_shader_component" prot="public">Rubeus::GraphicComponents::RShaderComponent</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_simple_renderer_component" prot="public">Rubeus::GraphicComponents::RSimpleRendererComponent</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_sprite" prot="public">Rubeus::GraphicComponents::RSprite</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_static_sprite" prot="public">Rubeus::GraphicComponents::RStaticSprite</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_texture" prot="public">Rubeus::GraphicComponents::RTexture</innerclass>
-    <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_u_i_layer" prot="public">Rubeus::GraphicComponents::RUILayer</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_vertex_array" prot="public">Rubeus::GraphicComponents::RVertexArray</innerclass>
     <innerclass refid="class_rubeus_1_1_graphic_components_1_1_r_window_component" prot="public">Rubeus::GraphicComponents::RWindowComponent</innerclass>
     <innerclass refid="struct_rubeus_1_1_graphic_components_1_1_vertex_data" prot="public">Rubeus::GraphicComponents::VertexData</innerclass>
@@ -59,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="31" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" bodystart="30" bodyend="36"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" line="31" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.h" bodystart="30" bodyend="36"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -75,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="19" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="19" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" line="19" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_rubeus_1_1_graphic_components_1adaedec10fdd3d6003f9fbd600003c7ef" prot="public" static="no" mutable="no">
         <type>constexpr long</type>
@@ -89,7 +87,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="20" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="20" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" line="20" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_rubeus_1_1_graphic_components_1a522a63dca03ca331ffc4b39c8c4857b6" prot="public" static="no" mutable="no">
         <type>constexpr long</type>
@@ -103,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="21" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="21" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" line="21" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_rubeus_1_1_graphic_components_1aac58a92009c8dd5bbcb7b75852026ba1" prot="public" static="no" mutable="no">
         <type>constexpr long</type>
@@ -117,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="22" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="22" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" line="22" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_rubeus_1_1_graphic_components_1a1124508ac5466bcc8221e830644bc815" prot="public" static="no" mutable="no">
         <type>constexpr long</type>
@@ -131,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="23" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="23" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" line="23" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_rubeus_1_1_graphic_components_1a4c30b8c0f6fdebeeee9c5ab7c8110fd1" prot="public" static="no" mutable="no">
         <type>constexpr int</type>
@@ -145,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="25" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="25" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" line="25" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" bodystart="25" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_rubeus_1_1_graphic_components_1ab26f4cde1d0e0df0eef27e3d34e59a21" prot="public" static="no" mutable="no">
         <type>constexpr int</type>
@@ -159,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="26" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="26" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" line="26" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_rubeus_1_1_graphic_components_1a6fbebba935b1e789388d35d56e977660" prot="public" static="no" mutable="no">
         <type>constexpr int</type>
@@ -173,7 +171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="27" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="27" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" line="27" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_rubeus_1_1_graphic_components_1a28c2414a40cf42a059e7aeda7167f82e" prot="public" static="no" mutable="no">
         <type>constexpr int</type>
@@ -187,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="28" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="28" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" line="28" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" bodystart="28" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_rubeus_1_1_graphic_components_1ab748d6754111ebe7bdf55804f2df6157" prot="public" static="no" mutable="no">
         <type>constexpr int</type>
@@ -201,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" line="30" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/guerrilla_renderer_component.h" bodystart="30" bodyend="-1"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" line="30" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/guerrilla_renderer_component.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -239,7 +237,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/window_component.h" line="46" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/window_component.cpp" bodystart="18" bodyend="21"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp" line="20" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp" bodystart="20" bodyend="23"/>
       </memberdef>
       <memberdef kind="function" id="namespace_rubeus_1_1_graphic_components_1a2668090315cc223e175f10bf0d1dfd9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -256,7 +254,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/window_component.cpp" line="23" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/window_component.cpp" bodystart="23" bodyend="26"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp" line="25" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp" bodystart="25" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="namespace_rubeus_1_1_graphic_components_1a8bc002d3ec48e267ef31c030a34a02ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -281,13 +279,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/window_component.cpp" line="28" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/window_component.cpp" bodystart="28" bodyend="32"/>
+        <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp" line="30" column="1" bodyfile="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/window_component.cpp" bodystart="30" bodyend="34"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>The Graphic Components of <ref refid="namespace_rubeus" kindref="compound">Rubeus</ref> Engine namespace. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Include/buffer_object.h" line="15" column="1"/>
+    <location file="/home/serious/Desktop/SDSLabs/Rubeus/RubeusCore/Source/GraphicComponents/buffer_object.cpp" line="12" column="1"/>
   </compounddef>
 </doxygen>
