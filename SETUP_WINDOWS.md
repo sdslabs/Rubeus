@@ -16,7 +16,17 @@ $ git clone git@github.com:sdslabs/Rubeus.git
 ```
 
 ## Initialising CMake
-Start by building the Rubeus Project Manager by running `cmake . -D_DEV=1` in repository root directory. Use the ProjectManager.exe GUI as show in [this tutorial](https://github.com/sdslabs/Rubeus/wiki/Making-a-ping-pong-game#2-setting-up-project-manager)
+First build the Project Manager
+1. Navigate to Rubeus' cloned repository
+2. Run `cmake -D_PROJECTMANAGER=1 ./`
+_Note: Rubeus uses an in-source CMake build_
+
+In case you want to build both Rubeus Engine and Project Manager in one go without the GUI
+Run `cmake -D_DEV=1 ./`
+_Ignore warnings related to unused variables_
+_Note: The engine would be built with the previous project it was built or in case of the first run, with the ping pong example game_
+
+Use the ProjectManager.exe GUI as show in [this tutorial](https://github.com/sdslabs/Rubeus/wiki/Making-a-ping-pong-game#2-setting-up-project-manager)
 
 ## Setting up Rubeus source in Visual Studio 2017
 1. Open the newly generated `RubeusCore.sln` in the repository root folder inside Visual Studio. Right click on `RubeusCore` in Solution Explorer and select `Set as StartUp project`. [Screenshot](https://imgur.com/a/xadxwsG)
