@@ -10,7 +10,7 @@ Every large scale project is incomplete without an exhaustive, and efficient doc
 
 Getting started: https://github.com/sdslabs/Rubeus/wiki
 
-API documentation: https://blog.sdslabs.co/Rubeus/
+API documentation: https://blog.sdslabs.co/Rubeus-Docs
 
 ## Workflow
 Rubeus uses Java-Doc style commenting and uses a combination of Doxygen and Moxygen to gather
