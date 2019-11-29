@@ -43,7 +43,7 @@ Read the [Getting Started guide](https://github.com/sdslabs/Rubeus/wiki) and pre
 Rubeus v1.0 and v2.0 are available for use. For using Rubeus for your project, follow the [Getting Started guide](https://github.com/sdslabs/Rubeus/wiki). We also invite you to contribute to this engine along with us. Head [here](CONTRIBUTING.md) to read the contributing guidelines. You can also talk to all the fellow contributors at <a href="https://chat.sdslabs.co">SDSLabs' chat hookup</a>.
 
 ## <a name=why>Why is Rubeus?
-Rubeus was at first an initiative by SDSLabs to inculcate the spirit of game development amongst the members of this organisation. But after Rubeus achieved a slightly mature state, we realised that it would be best for the development of this project if we get inputs from game engine developers across the open source community, and build this together.
+Rubeus was at first an initiative by SDSLabs to inculcate the spirit of game development amongst the members of this organization. But after Rubeus achieved a slightly mature state, we realised that it would be best for the development of this project if we get inputs from game engine developers across the open source community, and build this together.
 
 As previously said, we do not expect to have any monetary gains off making this project open-source, nor from any of the games that we might be developing on Rubeus.
 
