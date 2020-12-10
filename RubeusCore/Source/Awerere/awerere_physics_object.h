@@ -24,11 +24,9 @@ namespace Rubeus
 		class APhysicsObject
 		{
 		public:
-			/** @brief	Physics Material defining a physics object */
-			APhysicsMaterial m_PhysicsMaterial;
 
 			/** @brief	A collider in charge of handling collision algorithms */
-			ACollider * m_Collider;
+			ACollider * m_Collider = NULL;
 
 			/** @brief	Whether physics should be enabled for a game object */
 			bool m_EnablePhysics = false;

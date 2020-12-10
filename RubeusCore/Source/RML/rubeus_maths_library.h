@@ -224,7 +224,7 @@ namespace RML
 		friend std::ostream& operator<<(std::ostream& stream, const Vector2D& vector);
 
 		/**
-			* @fn	friend Vector2D& operator+(Vector2D left, const Vector2D &right);
+			* @fn	friend Vector2D operator+(Vector2D left, const Vector2D &right);
 			*
 			* @brief	Addition operator
 			*
@@ -233,7 +233,7 @@ namespace RML
 			*
 			* @return	The result of the operation.
 			*/
-		friend Vector2D& operator+(Vector2D left, const Vector2D &right);
+		friend Vector2D operator+(Vector2D left, const Vector2D &right);
 
 		/**
 			* @fn	friend Vector2D operator-(Vector2D left, const Vector2D &right);
@@ -257,10 +257,10 @@ namespace RML
 			*
 			* @return	The result of the operation.
 			*/
-		friend Vector2D& operator*(Vector2D left, const Vector2D &right);
+		friend Vector2D operator*(Vector2D left, const Vector2D &right);
 
 		/**
-			* @fn	friend Vector2D& operator*(Vector2D left, const float &right);
+			* @fn	friend Vector2D operator*(Vector2D left, const float &right);
 			*
 			* @brief	Float multiplication operator
 			*
@@ -269,7 +269,7 @@ namespace RML
 			*
 			* @return	The result of the operation.
 			*/
-		friend Vector2D& operator*(Vector2D left, const float &right);
+		friend Vector2D operator*(Vector2D left, const float &right);
 
 		/**
 			* @fn	friendd float operator*(Vector2D & left, const Vector2D & right);
@@ -284,7 +284,7 @@ namespace RML
 		friend float operator*(Vector2D & left, const Vector2D & right);
 
 		/**
-			* @fn	Vector2D& operator/(Vector2D left, const Vector2D &right);
+			* @fn	Vector2D operator/(Vector2D left, const Vector2D &right);
 			*
 			* @brief	Division operator
 			*
@@ -293,7 +293,7 @@ namespace RML
 			*
 			* @return	The result of the operation.
 			*/
-		friend Vector2D& operator/(Vector2D left, const Vector2D &right);
+		friend Vector2D operator/(Vector2D left, const Vector2D &right);
 
 		/**
 			* @fn	bool operator==(const Vector2D &other);
@@ -543,7 +543,7 @@ namespace RML
 		friend std::ostream& operator<<(std::ostream& stream, const Vector3D& vector);
 
 		/**
-			* @fn	Vector3D& operator+(Vector3D left, const Vector3D &right);
+			* @fn	Vector3D operator+(Vector3D left, const Vector3D &right);
 			*
 			* @brief	Addition operator
 			*
@@ -552,10 +552,10 @@ namespace RML
 			*
 			* @return	The result of the operation.
 			*/
-		friend Vector3D& operator+(Vector3D left, const Vector3D &right);
+		friend Vector3D operator+(Vector3D left, const Vector3D &right);
 
 		/**
-			* @fn	Vector3D& operator-(Vector3D left, const Vector3D &right);
+			* @fn	Vector3D operator-(Vector3D left, const Vector3D &right);
 			*
 			* @brief	Subtraction operator
 			*
@@ -564,10 +564,10 @@ namespace RML
 			*
 			* @return	The result of the operation.
 			*/
-		friend Vector3D& operator-(Vector3D left, const Vector3D &right);
+		friend Vector3D operator-(Vector3D left, const Vector3D &right);
 
 		/**
-			* @fn	Vector3D& operator*(Vector3D left, const Vector3D &right);
+			* @fn	Vector3D operator*(Vector3D left, const Vector3D &right);
 			*
 			* @brief	Multiplication operator
 			*
@@ -576,10 +576,10 @@ namespace RML
 			*
 			* @return	The result of the operation.
 			*/
-		friend Vector3D& operator*(Vector3D left, const Vector3D &right);
+		friend Vector3D operator*(Vector3D left, const Vector3D &right);
 
 		/**
-			* @fn	friend Vector3D& operator*(const Vector3D vector, const float &other)
+			* @fn	friend Vector3D operator*(const Vector3D vector, const float &other)
 			*
 			* @brief	Float multiplication operator. (Scaling)
 			*
@@ -588,10 +588,10 @@ namespace RML
 			*
 			* @return	The result of the operation.
 			*/
-		friend Vector3D& operator*(const Vector3D vector, const float &other);
+		friend Vector3D operator*(const Vector3D vector, const float &other);
 
 		/**
-			* @fn	friend Vector3D& operator/(Vector3D left, const Vector3D &right);
+			* @fn	friend Vector3D operator/(Vector3D left, const Vector3D &right);
 			*
 			* @brief	Division operator
 			*
@@ -600,10 +600,10 @@ namespace RML
 			*
 			* @return	The result of the operation.
 			*/
-		friend Vector3D& operator/(Vector3D left, const Vector3D &right);
+		friend Vector3D operator/(Vector3D left, const Vector3D &right);
 
 		/**
-			* @fn	friend Vector3D& operator/(const Vector3D vector, const float &other);
+			* @fn	friend Vector3D operator/(const Vector3D vector, const float &other);
 			*
 			* @brief	Float division operator. (Down scaling)
 			*
@@ -612,7 +612,7 @@ namespace RML
 			*
 			* @return	The result of the operation.
 			*/
-		friend Vector3D& operator/(const Vector3D vector, const float &other);
+		friend Vector3D operator/(const Vector3D vector, const float &other);
 
 		/**
 			* @fn	bool operator==(const Vector3D &other);
@@ -819,7 +819,7 @@ namespace RML
 		friend std::ostream& operator<<(std::ostream& stream, const Vector4D& vector);
 
 		/**
-			* @fn	Vector4D& operator+(Vector4D left, const Vector4D &right);
+			* @fn	Vector4D operator+(Vector4D left, const Vector4D &right);
 			*
 			* @brief	Addition operator
 			*
@@ -828,10 +828,10 @@ namespace RML
 			*
 			* @return	The result of the operation.
 			*/
-		friend Vector4D& operator+(Vector4D left, const Vector4D &right);
+		friend Vector4D operator+(Vector4D left, const Vector4D &right);
 
 		/**
-			* @fn	Vector4D& operator-(Vector4D left, const Vector4D &right);
+			* @fn	Vector4D operator-(Vector4D left, const Vector4D &right);
 			*
 			* @brief	Subtraction operator
 			*
@@ -840,10 +840,10 @@ namespace RML
 			*
 			* @return	The result of the operation.
 			*/
-		friend Vector4D& operator-(Vector4D left, const Vector4D &right);
+		friend Vector4D operator-(Vector4D left, const Vector4D &right);
 
 		/**
-			* @fn	Vector4D& operator*(Vector4D left, const Vector4D &right);
+			* @fn	Vector4D operator*(Vector4D left, const Vector4D &right);
 			*
 			* @brief	Multiplication operator
 			*
@@ -852,10 +852,10 @@ namespace RML
 			*
 			* @return	The result of the operation.
 			*/
-		friend Vector4D& operator*(Vector4D left, const Vector4D &right);
+		friend Vector4D operator*(Vector4D left, const Vector4D &right);
 
 		/**
-			* @fn	Vector4D& operator/(Vector4D left, const Vector4D &right);
+			* @fn	Vector4D operator/(Vector4D left, const Vector4D &right);
 			*
 			* @brief	Division operator
 			*
@@ -864,7 +864,7 @@ namespace RML
 			*
 			* @return	The result of the operation.
 			*/
-		friend Vector4D& operator/(Vector4D left, const Vector4D &right);
+		friend Vector4D operator/(Vector4D left, const Vector4D &right);
 
 		/**
 			* @fn	bool operator==(const Vector4D &other);
