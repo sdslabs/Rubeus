@@ -8,6 +8,9 @@ void Oball::begin()
 
 void Oball::onHit(RGameObject * hammer, RGameObject * nail, const Rubeus::Awerere::ACollideData & collisionData)
 {
+	static float velocity = 1;
+    velocity *= -1;
+    this->m_PhysicsObject->m_Collider->m_Momentum.x = velocity;
 }
 
 void Oball::tick()

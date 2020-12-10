@@ -56,9 +56,9 @@ protected:
 			"ball",
 			playLevel,
 			*sprite3,
-			RML::Matrix4::translation(RML::Vector3D(7.0f, 0.0f, 0.0f)),
+			RML::Matrix4::translation(RML::Vector3D(3.0f, 0.0f, 0.0f)),
 			true,
-			new ABoxCollider(RML::Vector2D(7.0f, 0.0f),
+			new ABoxCollider(RML::Vector2D(3.0f, 0.0f),
 				RML::Vector2D(7.5f, 3.0f)),
 			true,
 			APhysicsMaterial::DefaultMaterial
