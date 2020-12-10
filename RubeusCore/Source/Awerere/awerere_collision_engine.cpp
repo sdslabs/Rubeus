@@ -108,9 +108,9 @@ namespace Rubeus
 
 		void ACollisionEngine::collisionResolution()
 		{
-			for (size_t i = 0; i < (*m_GameObjects).size(); i++)
+			for (size_t i = 0; i < m_GameObjects->size(); i++)
 			{
-				for (size_t j = i + 1; j < (*m_GameObjects).size(); j++)
+				for (size_t j = i + 1; j < m_GameObjects->size(); j++)
 				{
 					if (((*m_XFlags[i]) * (*m_XFlags[j])) &&
 						((*m_YFlags[i]) * (*m_YFlags[j])) &&
@@ -131,7 +131,6 @@ namespace Rubeus
 
 			if (cache.getIsIntersect() == true)
 			{
-				LOG("Hit");
 				if (!left.m_HasPhysics && !right.m_HasPhysics)
 				{
 					// Code copied from the end of this function for maximum performance.
@@ -169,6 +168,7 @@ namespace Rubeus
 				RML::Vector2D v1_parallel = normal * v1.multiplyDot(normal);
 				v1_parallel.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
 
+
 				RML::Vector2D v1_perp = v1 - v1_parallel;
 				v1_perp.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
 
@@ -177,6 +177,7 @@ namespace Rubeus
 
 				RML::Vector2D v2_perp = v2 - v2_parallel;
 				v2_perp.roundTo(0.0f, 1.0e-5f, 0.0f, 1.0e-5f);
+
 
 				RML::Vector2D rel_parallel = v1_parallel - v2_parallel;
 
@@ -236,6 +237,7 @@ namespace Rubeus
 					v2_parallelFinal.x = -1.0f * v2_parallel.x;
 					v2_parallelFinal.y = -1.0f * v2_parallel.y;
 				}
+
 
 				if (right.m_HasPhysics)
 				{

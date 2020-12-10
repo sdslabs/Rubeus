@@ -44,7 +44,7 @@ namespace Rubeus
 		GraphicComponents::RSprite * m_Sprite;
 
 		/** @brief	Physics object that handles collisions/response */
-		Awerere::APhysicsObject * m_PhysicsObject;
+		Awerere::APhysicsObject * m_PhysicsObject = NULL;
 
 		/** @brief	The transform used to place the children of this game object */
 		RML::Matrix4 m_TransformationMatrix;

@@ -126,7 +126,7 @@ namespace RML
 		return stream;
 	}
 
-	Vector2D & operator+(Vector2D left, const Vector2D &right)
+	Vector2D operator+(Vector2D left, const Vector2D &right)
 	{
 		return left.add(right);
 	}
@@ -136,12 +136,12 @@ namespace RML
 		return left.subtract(right);
 	}
 
-	Vector2D & operator*(Vector2D left, const Vector2D &right)
+	Vector2D operator*(Vector2D left, const Vector2D &right)
 	{
 		return left.multiply(right);
 	}
 
-	Vector2D & operator*(Vector2D left, const float & right)
+	Vector2D operator*(Vector2D left, const float & right)
 	{
 		return left.multiplyFloat(right);
 	}
@@ -151,7 +151,7 @@ namespace RML
 		return left.multiplyDot(right);
 	}
 
-	Vector2D & operator/(Vector2D left, const Vector2D &right)
+	Vector2D operator/(Vector2D left, const Vector2D &right)
 	{
 		return left.divide(right);
 	}
@@ -352,32 +352,32 @@ namespace RML
 		return stream;
 	}
 
-	Vector3D & operator+(Vector3D left, const Vector3D &right)
+	Vector3D operator+(Vector3D left, const Vector3D &right)
 	{
 		return left.add(right);
 	}
 
-	Vector3D & operator-(Vector3D left, const Vector3D &right)
+	Vector3D operator-(Vector3D left, const Vector3D &right)
 	{
 		return left.subtract(right);
 	}
 
-	Vector3D & operator*(Vector3D left, const Vector3D &right)
+	Vector3D operator*(Vector3D left, const Vector3D &right)
 	{
 		return left.multiply(right);
 	}
 
-	Vector3D & operator*(Vector3D vector, const float & other)
+	Vector3D operator*(Vector3D vector, const float & other)
 	{
 		return vector.multiplyFloat(other);
 	}
 
-	Vector3D & operator/(Vector3D vector, const float & other)
+	Vector3D operator/(Vector3D vector, const float & other)
 	{
 		return vector.multiplyFloat(1.0f / other);
 	}
 
-	Vector3D & operator/(Vector3D left, const Vector3D &right)
+	Vector3D operator/(Vector3D left, const Vector3D &right)
 	{
 		return left.divide(right);
 	}
@@ -488,22 +488,22 @@ namespace RML
 		return stream;
 	}
 
-	Vector4D & operator+(Vector4D left, const Vector4D &right)
+	Vector4D operator+(Vector4D left, const Vector4D &right)
 	{
 		return left.add(right);
 	}
 
-	Vector4D & operator-(Vector4D left, const Vector4D &right)
+	Vector4D operator-(Vector4D left, const Vector4D &right)
 	{
 		return left.subtract(right);
 	}
 
-	Vector4D & operator*(Vector4D left, const Vector4D &right)
+	Vector4D operator*(Vector4D left, const Vector4D &right)
 	{
 		return left.multiply(right);
 	}
 
-	Vector4D & operator/(Vector4D left, const Vector4D &right)
+	Vector4D operator/(Vector4D left, const Vector4D &right)
 	{
 		return left.divide(right);
 	}
