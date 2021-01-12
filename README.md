@@ -1,5 +1,5 @@
 ![Build Status](https://ci.appveyor.com/api/projects/status/9o0hca3aoeeyj5un/branch/master?retina=true&svg=true)
-[![](https://discordapp.com/api/guilds/568806860816252929/embed.png)](https://discord.gg/Cva2VFQ)
+[![Discord](https://discordapp.com/api/guilds/758961084337618944/embed.png)](https://discord.gg/dXkVEgTPu9)
 
 <p align=center>
 <img src="ReadmeAssets/rubeus_light.png">
@@ -67,7 +67,7 @@ Follow the [Getting Started guide](https://github.com/sdslabs/Rubeus/wiki).
 Setup instructions for Rubeus are explained [here](SETUP.md). Also make sure to read the [contribution guidelines](CONTRIBUTING.md). A good start would be trying to build Rubeus on your personal systems. Join our Discord server: https://discord.gg/Cva2VFQ.
 
 ## <a name=how>How can I contribute?
-Everyone reading this is invited to contribute to Rubeus either through opening issues on Github, making pull requests, adding [Wiki pages](https://github.com/sdslabs/Rubeus/wiki) and talking to us at our [Discord server](https://discord.gg/Cva2VFQ), or [our chat hookup](https://chat.sdslabs.co) to talk to SDSLabs. Make sure to read the [contribution guidelines](CONTRIBUTING.md) to ease your way in.
+Everyone reading this is invited to contribute to Rubeus either through opening issues on Github, making pull requests, adding [Wiki pages](https://github.com/sdslabs/Rubeus/wiki) and talking to us at our [Discord server](https://discord.gg/dXkVEgTPu9), or [our chat hookup](https://chat.sdslabs.co) to talk to SDSLabs. Make sure to read the [contribution guidelines](CONTRIBUTING.md) to ease your way in.
 
 ## <a name=remarks>Remarks
 
