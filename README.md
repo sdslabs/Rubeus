@@ -11,7 +11,7 @@ Created by SDSLabs with :heart:
 
 ## Maintenance Notice
 
-Rubeus Engine is not being maintained.
+Rubeus Engine is not being maintained. Reach out to us at our Discord server linked above for any questions you may have.
 
 ## Contents
 
