@@ -9,6 +9,10 @@
 Created by SDSLabs with :heart:
 </p>
 
+## Maintenance Notice
+
+Rubeus Engine is not being maintained.
+
 ## Contents
 
 * [What is Rubeus?](#what)
