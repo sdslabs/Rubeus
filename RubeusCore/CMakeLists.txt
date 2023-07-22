@@ -63,7 +63,8 @@ if(WIN32)
 
     target_link_libraries(RubeusCore PUBLIC
         ${OPENGL_LIBRARIES}
-		${VENDOR_WIN_LIBRARIES}
+	${VENDOR_WIN_LIBRARIES}
+	${GLFW_STATIC_LIBRARIES}
     )
 
 	add_custom_command(TARGET RubeusCore POST_BUILD
@@ -79,7 +80,7 @@ if(UNIX)
         ${OPENGL_LIBRARIES}
         -lGLEW
         ${SFML_LIBRARIES}
-        ${GLFW_LIBRARIES}
+        ${GLFW_STATIC_LIBRARIES}
         ${IL_LIBRARIES}
         ${ILU_LIBRARIES}
         ${VENDOR_LINUX_LIBRARIES}

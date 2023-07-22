@@ -39,7 +39,7 @@ if(UNIX)
     target_link_libraries(ProjectManager PUBLIC
         ${OPENGL_LIBRARIES}
         -lGLEW
-        ${GLFW_LIBRARIES}
+        ${GLFW_STATIC_LIBRARIES}
         ${VENDOR_LINUX_LIBRARIES}
         -lstdc++fs
 		imgui

@@ -5,6 +5,7 @@
  */
 
 #include <awerere_flag.h>
+#include <cstddef>
 
 namespace Rubeus
 {
